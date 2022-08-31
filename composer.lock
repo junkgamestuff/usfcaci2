@@ -1259,12 +1259,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "f4cd7bcd17056a026fea68c8b87a2fd405f4995e"
+                "reference": "d564c054229ca7decb6b04bc2af692f6c79b27c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/f4cd7bcd17056a026fea68c8b87a2fd405f4995e",
-                "reference": "f4cd7bcd17056a026fea68c8b87a2fd405f4995e",
+                "url": "https://api.github.com/repos/drupal/core/zipball/d564c054229ca7decb6b04bc2af692f6c79b27c2",
+                "reference": "d564c054229ca7decb6b04bc2af692f6c79b27c2",
                 "shasum": ""
             },
             "require": {
@@ -1418,7 +1418,7 @@
             "support": {
                 "source": "https://github.com/drupal/core/tree/9.5.x"
             },
-            "time": "2022-08-30T13:26:30+00:00"
+            "time": "2022-08-30T18:45:05+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
