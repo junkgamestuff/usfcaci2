@@ -1,0 +1,10 @@
+uuid: c5b0d8d5-003c-40ae-b6cd-79f23f8200e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - workbench_access
+id: access_scheme.token
+label: Token
+targetEntityType: access_scheme
+cache: true
