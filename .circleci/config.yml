@@ -66,7 +66,7 @@ jobs:
           # https://github.com/pantheon-systems/docker-build-tools-ci/blob/6.x/scripts/set-environment
           name: setup-environment-vars
           command: /build-tools-ci/scripts/set-environment
-
+      
       - run:
           name: clone-bash-env
           command: cp $BASH_ENV bash_env.txt
@@ -77,22 +77,21 @@ jobs:
           paths:
             - bash_env.txt
 
-      #- run:
-      #    name: Install Gulp
-      #    command: sudo npm install -g gulp
-
+  build_theme:
+    <<: *defaults
+      
       - run:
           name: Install Deps
           command: cd web/themes/custom/usfca && npm install
-
-      - save_cache:
-          key: dependency-cache-{{ checksum "web/themes/custom/myusf/package.json" }}
-          paths:
-            - ./web/themes/custom/usfca/node_modules
-
+          
       - run:
           name: Compile assets
           command: cd web/themes/custom/usfca && npm ci
+
+      - save_cache:
+          key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
+            paths:
+              - ./web/themes/custom/usfca/node_modules
 
   static_tests:
     <<: *defaults
@@ -166,9 +165,9 @@ jobs:
           name: prepare for Behat testing
           command: ./.ci/test/behat/initialize
 
-      - run:
-          name: run acceptance tests with Behat
-          command: ./.ci/test/behat/run
+      #- run:
+          #name: run acceptance tests with Behat
+          #command: ./.ci/test/behat/run
 
       - run:
           # Uncomment line 13 in .ci/test/behat/cleanup to restore a backup
