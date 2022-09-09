@@ -66,7 +66,7 @@ jobs:
           # https://github.com/pantheon-systems/docker-build-tools-ci/blob/6.x/scripts/set-environment
           name: setup-environment-vars
           command: /build-tools-ci/scripts/set-environment
-      
+
       - run:
           name: clone-bash-env
           command: cp $BASH_ENV bash_env.txt
@@ -76,18 +76,6 @@ jobs:
           root: .
           paths:
             - bash_env.txt
-
-  build_theme:
-    <<: *defaults
-
-    steps:
-      - run:
-        name: Install Deps
-        command: cd web/themes/custom/usfca && npm install
-          
-      - run:
-        name: Compile assets
-        command: cd web/themes/custom/usfca && npm ci
 
   static_tests:
     <<: *defaults
@@ -106,9 +94,9 @@ jobs:
           name: setup-environment-vars
           command: /build-tools-ci/scripts/set-environment
 
-      #- run:
-      #    name: run static tests
-      #    command: ./.ci/test/static/run
+      - run:
+          name: run static tests
+          command: ./.ci/test/static/run
 
       - save_cache:
           key: composer-cache-{{ checksum "composer.lock" }}
@@ -161,9 +149,9 @@ jobs:
           name: prepare for Behat testing
           command: ./.ci/test/behat/initialize
 
-      #- run:
-          #name: run acceptance tests with Behat
-          #command: ./.ci/test/behat/run
+      - run:
+          name: run acceptance tests with Behat
+          command: ./.ci/test/behat/run
 
       - run:
           # Uncomment line 13 in .ci/test/behat/cleanup to restore a backup
