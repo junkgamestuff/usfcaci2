@@ -86,13 +86,13 @@ jobs:
           command: cd web/themes/custom/usfca && npm install
 
       - save_cache:
-            key: dependency-cache-{{ checksum "web/themes/custom/myusf/package.json" }}
-            paths:
-              - ./web/themes/custom/usfca/node_modules
+          key: dependency-cache-{{ checksum "web/themes/custom/myusf/package.json" }}
+          paths:
+            - ./web/themes/custom/usfca/node_modules
 
-      #- run:
-      #    name: Compile assets
-      #   command: cd web/themes/custom/usfca && npm ci
+      - run:
+          name: Compile assets
+          command: cd web/themes/custom/usfca && npm ci
 
   static_tests:
     <<: *defaults
