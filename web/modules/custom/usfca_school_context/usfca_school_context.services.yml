@@ -1,0 +1,6 @@
+services:
+  usfca_school_context.school_context:
+    class: Drupal\usfca_school_context\ContextProvider\SchoolContextProvider
+    arguments: ['@current_route_match']
+    tags:
+      - { name: 'context_provider' }

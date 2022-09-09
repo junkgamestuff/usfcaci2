@@ -1,0 +1,1 @@
+The USFCA Twig Helper module serializes some field types for easier use in Twig templates. See the DP Twig Helper module for the api that invokes these (theme-level) hooks.

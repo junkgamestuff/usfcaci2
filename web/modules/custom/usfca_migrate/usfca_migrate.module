@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains usfca_migrate.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function usfca_migrate_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the usfca_migrate module.
+    case 'help.page.usfca_migrate':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Migrate USFCA D7 content types to D9') . '</p>';
+      return $output;
+
+    default:
+  }
+}

@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * USFCA School Context module.
+ */
+
+use Drupal\Component\Utility\Html;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function usfca_school_context_preprocess_html(&$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof NodeInterface && $node->hasField('field_school') && !$node->field_school->isEmpty()) {
+    if ($node->field_school->entity) {
+      $variables['attributes']['class'][] = 'school-' . Html::getClass($node->field_school->entity->getName());
+    }
+  }
+}

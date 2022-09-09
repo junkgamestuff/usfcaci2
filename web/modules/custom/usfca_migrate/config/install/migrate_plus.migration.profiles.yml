@@ -1,0 +1,287 @@
+id: profiles
+label: Profiles
+audit: true
+migration_group: usfca
+migration_tags:
+  - USFCA
+deriver: Drupal\node\Plugin\migrate\D7NodeDeriver
+source:
+  plugin: usfca_migrate_node
+  node_type: faculty_details
+process:
+  uid:
+    plugin: default_value
+    default_value: 1
+  type:
+    plugin: default_value
+    default_value: profile
+  status: status
+  moderation_state:
+    plugin: static_map
+    source: status
+    map:
+      0: draft
+      1: published
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+
+  # Simple fields
+  title:
+    plugin: null_coalesce
+    source:
+      - field_display_title/0/value
+      - title
+  field_first_name: 'field_first_name/0/value'
+  field_middle_name: 'field_middle_initial/0/value'
+  field_last_name: 'field_last_name/0/value'
+  field_suffix: 'field_name_suffix/0/value'
+  field_professional_title: 'field_professional_title/0/value'
+  field_phone: 'field_phone/0/value'
+  field_email: 'field_email_address/0/email'
+  field_office: 'field_location/0/value'
+
+  # Full-text
+  field_bio:
+    plugin: sub_process
+    source: body
+    process:
+      value:
+        - plugin: skip_on_empty
+          method: row
+          source: value
+          message: 'Field body is missing'
+        -
+          plugin: parse_body
+          source: value
+      format:
+        plugin: default_value
+        default_value: full_html
+
+  field__information_label/value:
+    plugin: default_value
+    default_value: 'Additional Information'
+
+  field_additional_information/value: 'field_additional_info/0/value'
+  field_additional_information/format:
+    plugin: default_value
+    default_value: full_html
+
+  # Image
+  field_image/0/target_id:
+    plugin: migration_lookup
+    migration: media_image
+    source: 'field_image/0/fid'
+    no_stub: true
+
+  # Imploded values
+  field_education/value:
+    plugin: concat_multifield
+    source: field_past_education
+    source_key: 'value'
+    prefix: '<ul><li>'
+    suffix: '</li></ul>'
+    separator: '</li><li>'
+  field_education/format:
+    plugin: default_value
+    default_value: full_html
+
+  field_appointments/value:
+    plugin: concat_multifield
+    source: field_appointments
+    source_key: 'value'
+    prefix: '<ul><li>'
+    suffix: '</li></ul>'
+    separator: '</li><li>'
+  field_appointments/format:
+    plugin: default_value
+    default_value: full_html
+
+  field_research_areas/value:
+    plugin: concat_multifield
+    source: field_research_areas
+    source_key: 'value'
+    prefix: '<ul><li>'
+    suffix: '</li></ul>'
+    separator: '</li><li>'
+  field_research_areas/format:
+    plugin: default_value
+    default_value: full_html
+
+  field_selected_publications/value:
+    plugin: concat_multifield
+    source: field_publications
+    source_key: 'value'
+    prefix: '<ul><li>'
+    suffix: '</li></ul>'
+    separator: '</li><li>'
+  field_selected_publications/format:
+    plugin: default_value
+    default_value: full_html
+
+  field_awards_distinctions/value:
+    plugin: concat_multifield
+    source: field_awards_and_distinctions
+    source_key: 'value'
+    prefix: '<ul><li>'
+    suffix: '</li></ul>'
+    separator: '</li><li>'
+  field_awards_distinctions/format:
+    plugin: default_value
+    default_value: full_html
+
+  field_expertise/value:
+    plugin: concat_multifield
+    source: field_expertise
+    source_key: 'value'
+    prefix: '<ul><li>'
+    suffix: '</li></ul>'
+    separator: '</li><li>'
+  field_expertise/format:
+    plugin: default_value
+    default_value: full_html
+
+  field_prior_experience/value:
+    plugin: concat_multifield
+    source: field_prior_experience
+    source_key: 'value'
+    prefix: '<ul><li>'
+    suffix: '</li></ul>'
+    separator: '</li><li>'
+  field_prior_experience/format:
+    plugin: default_value
+    default_value: full_html
+
+  # CV
+  field_cv/uri:
+    - 
+      plugin: migration_lookup
+      source: 'field_cv/0/fid'
+      migration: files_cv
+      no_stub: true
+    - plugin: file_uri
+
+  # SSRN
+  field_ssrn_link/uri:
+    - plugin: skip_on_empty
+      method: process
+      source: field_ssrn/0/value
+    - plugin: concat
+      source:
+      - constants/ssrn_url
+      - field_ssrn/0/value
+
+  # Social links
+  field_twitter:
+    - 
+      plugin: parse_social
+      source: field_social_links
+      social_type: 'twitter'
+    -
+      plugin: sub_process
+      process:
+        title: title
+        uri: url
+
+  field_linkedin:
+    - 
+      plugin: parse_social
+      source: field_social_links
+      social_type: 'linkedin'
+    -
+      plugin: sub_process
+      process:
+        title: title
+        uri: url
+
+  field_links:
+    - 
+      plugin: parse_social
+      source: field_social_links
+      social_type: 'extra'
+    -
+      plugin: sub_process
+      process:
+        title: title
+        uri: url
+
+  # Taxonomy
+  field_school:
+    - plugin: skip_on_condition
+      condition: 
+        plugin: empty
+        negate: true
+      method: process
+      source: field_faculty_school/1/tid
+    - plugin: static_map
+      source: field_faculty_school/0/tid
+      map:
+        85: 22
+        86: 17
+        87: 18
+        88: 19
+        89: 20
+      bypass: TRUE
+  field_schools:
+    plugin: static_map
+    source: field_faculty_school/0/tid
+    map:
+      85: 22
+      86: 17
+      87: 18
+      88: 19
+      89: 20
+    bypass: TRUE
+  field_school_roles:
+    plugin: sub_process
+    source: field_positions
+    process:
+      target_id:
+        - plugin: skip_on_empty
+          method: process
+          source: value
+          message: 'Field value is missing'
+        - plugin: static_map
+          source: value
+          map:
+            10: 665
+            150: 666
+            20: 667
+            30: 668
+            40: 669
+            50: 670
+            60: 671
+            70: 672
+            80: 673
+            90: 674
+            100: 675
+            110: 676
+            120: 677
+            130: 678
+            160: 679
+            140: 680
+          bypass: TRUE
+  field_programs:
+    plugin: migration_lookup
+    source: field_faculty_program
+    migration: taxonomy_programs
+    no_stub: true
+  field_department:
+    plugin: migration_lookup
+    source: field_faculty_departments
+    migration: taxonomy_departments
+    no_stub: true
+  field_program_director:
+    plugin: migration_lookup
+    source: field_program_director
+    migration: taxonomy_program_director
+    no_stub: true
+
+  # Path alias
+  path/pathauto:
+    plugin: default_value
+    default_value: 0
+  path/alias: alias
+
+destination:
+  plugin: entity:node

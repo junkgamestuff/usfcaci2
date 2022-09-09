@@ -1,0 +1,35 @@
+id: paragraph_intro_text_news
+label: USFCA — Paragraph — Intro Text (News)
+migration_group: usfca
+source:
+  plugin: usfca_migrate_node
+  node_type: news
+keys:
+  - nid
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: intro_text
+process:
+  uid:
+    plugin: default_value
+    default_value: 1
+  field_intro_text:
+    plugin: sub_process
+    source: body
+    process:
+      value:
+        - plugin: skip_on_empty
+          method: row
+          source: value
+          message: 'Body value is missing'
+        -
+          plugin: parse_intro
+          source: value
+          type: 'article'
+      format:
+        plugin: default_value
+        default_value: full_html
+dependencies:
+  enforced:
+    module:
+      - usfca_migrate

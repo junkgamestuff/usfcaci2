@@ -1,0 +1,7 @@
+name: 'USFCA Minisite Nav'
+description: 'Allows selection of a menu root and display of menu for minisites.'
+type: module
+core_version_requirement: ^8 || ^9
+package: USFCA
+dependencies:
+  - extra_field

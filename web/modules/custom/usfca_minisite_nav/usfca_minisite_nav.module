@@ -1,0 +1,81 @@
+<?php
+
+/**
+ * @file
+ * Contains usfca_minisite_nav.module.
+ */
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\usfca_minisite_nav\MinisiteNavRootField;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+
+/**
+ * Implements hook_form_menu_edit_form_alter().
+ */
+function usfca_minisite_nav_form_menu_edit_form_alter(&$form, FormStateInterface $form_state) {
+  $menu = $form_state->getFormObject()->getEntity();
+
+  $menus = [
+    'main',
+    'college-of-arts-and-sciences',
+    'school-of-education',
+    'school-of-law',
+    'school-of-management',
+    'school-of-nursing',
+  ];
+
+  if (!in_array($menu->id(), $menus)) {
+    return;
+  }
+
+  $minisite_nav_root_field = \Drupal::classResolver(MinisiteNavRootField::class);
+  $minisite_nav_root_field->alter($form, $form_state);
+
+  if (!empty($form['actions']['submit']['#submit'])) {
+    $form['actions']['submit']['#submit'][] = [$minisite_nav_root_field, 'submit'];
+  }
+}
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function usfca_minisite_nav_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+
+  if ($entity_type->id() == 'menu_link_content') {
+    $fields['is_root'] = BaseFieldDefinition::create('boolean')
+      ->setLabel(t('Is menu tree root'))
+      ->setDisplayOptions('form', [
+        'type' => 'boolean_checkbox',
+        'settings' => [
+          'display_label' => TRUE,
+        ],
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDescription(t('Indicates whether to use this menu item as menu tree root e.g. for Minisite Nav.'));
+  }
+
+  return $fields;
+}
+
+/**
+ * Implements hook_preprocess_views_view_unformatted().
+ */
+function usfca_minisite_nav_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  // The date filter creates timestamp based on exposed input.
+  // The problem is that it uses "00:00:00". I.e. '08/23/2021' will be transformed 
+  // to timestamp of '08/23/2021 00:00:00' which makes impossible to use '<=' condition.
+  // In order to save "human" logic we need to add one more day (86400) to input value.
+  if ($view->id() == 'news_listing') {
+    foreach ($query->getWhere() as &$condition_group) {
+      foreach ($condition_group['conditions'] as &$condition) {
+        if ($condition[0] == 'created' && $condition[2] == '<=') {
+          $condition[1] += 86400;
+        }
+      }
+    }
+  }
+}

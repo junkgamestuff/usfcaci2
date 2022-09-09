@@ -1,0 +1,21 @@
+id: usfca
+label: USFCA migrations
+description: D7 data migrations.
+source_type: D7 Database
+dependencies:
+  enforced:
+    module:
+      - migrate_conditions
+      - migrate_plus
+      - usfca_migrate
+
+shared_configuration:
+  source:
+    constants:
+      slash: '/'
+      ptag_open: '<p>'
+      ptag_close: '</p>'
+      image_source_uri: /var/www/html/web/sites/default/files/migration_files/files_live
+      image_dest_uri: 'public://migrated'
+      ssrn_url: 'https://ssrn.com/author='
+      profile_url_prefix: '/faculty'

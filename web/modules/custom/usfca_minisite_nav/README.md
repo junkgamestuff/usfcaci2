@@ -1,0 +1,1 @@
+The USFCA Minisite Nav module provides an "Extra Field" plugin that attaches to certain node types and automatically outputs a themable nav from the current node's menu position. This module also includes a "Root Field" item attached ot Menu Item bundles in the CMS, allowing editors to specify arbitrary menu items as being the "root" of minisite navs.

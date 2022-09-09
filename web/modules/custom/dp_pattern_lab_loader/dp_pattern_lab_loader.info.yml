@@ -1,0 +1,5 @@
+name: DigitalPulp Pattern Lab Loader
+type: module
+description: DigitalPulp Pattern Lab Loader
+core_version_requirement: ^8.8 || ^9
+package: DigitalPulp

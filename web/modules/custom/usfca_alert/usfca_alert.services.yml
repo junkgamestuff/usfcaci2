@@ -1,0 +1,6 @@
+services:
+  usfca_alert.normalizer.content_entity:
+    class: Drupal\usfca_alert\Normalizer\RenderedNormalizer
+    tags:
+      - { name: normalizer, priority: 11 }
+    arguments: ['@entity_type.manager', '@entity_type.repository', '@entity_field.manager', '@renderer']

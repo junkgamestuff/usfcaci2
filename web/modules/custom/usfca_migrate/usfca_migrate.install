@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Contains usfca_migrate.install.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function usfca_migrate_uninstall() {
+  $configs = [
+    'migrate_plus.migration.news',
+    'migrate_plus.migration.taxonomy_departments',
+    'migrate_plus.migration.taxonomy_news_category',
+    'migrate_plus.migration.taxonomy_news_terms',
+    'migrate_plus.migration.taxonomy_programs',
+    'migrate_plus.migration.taxonomy_school',
+  ];
+
+  foreach ($configs as $config) {
+    \Drupal::database()->delete('config')
+      ->condition('name', $config)
+      ->execute();
+  }
+
+  drupal_flush_all_caches();
+}

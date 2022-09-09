@@ -1,0 +1,517 @@
+<?php
+
+/**
+ * @file
+ * DP Pattern Lab Integration.
+ */
+
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
+use Drupal\Core\Field\FieldItemInterface;
+use Drupal\Core\Url;
+use Drupal\views\Plugin\views\pager\None;
+use Drupal\views\Plugin\views\pager\Some;
+use Drupal\views\Plugin\views\row\EntityRow;
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function dp_twig_helper_preprocess_node(&$variables) {
+  $node = $variables['elements']['#node'];
+  $node_type = $node->bundle();
+  $view_mode = $variables['elements']['#view_mode'];
+
+  // @todo propagate any global settings down to the helper methods.
+  $twig_config = NULL;
+
+  // Providing entity meta-data.
+  $variables['id'] = $node->id();
+  $variables['url'] = $node->toUrl()->toString();
+  $variables['type'] = $node->bundle();
+  $variables['authored_timestamp'] = $node->getCreatedTime();
+  $variables['authored_date'] = date('c', $node->getCreatedTime());
+  // Providing fields.
+  $variables['fields'] = _dp_twig_helper_build_fields_variable($node, 'node', $node_type, ($view_mode !== 'full' ? $view_mode : 'default'), $variables, $twig_config);
+  // Backward compatibility - old version had these values inside fields variable.
+  $variables['fields']['id'] = $variables['id'];
+  $variables['fields']['url'] = $variables['url'];
+  $variables['fields']['type'] = $variables['type'];
+  $variables['fields']['authored_timestamp'] = $variables['authored_timestamp'];
+  $variables['fields']['authored_date'] = $variables['authored_date'];
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function dp_twig_helper_preprocess_paragraph(&$variables) {
+  $paragraph = $variables['elements']['#paragraph'];
+  $paragraph_type = $paragraph->bundle();
+  $view_mode = $variables['elements']['#view_mode'];
+
+  // @todo propagate any global settings down to the helper methods.
+  $twig_config = NULL;
+
+  $variables['fields'] = _dp_twig_helper_build_fields_variable($paragraph, 'paragraph', $paragraph_type, $view_mode, $variables, $twig_config);
+  $hook = "pl_component_fields_{$paragraph_type}_alter";
+  Drupal::moduleHandler()->invokeAll($hook, [
+    &$variables,
+    $paragraph,
+  ]);
+}
+
+/**
+ * Build an array representing the value/s of the entity's fields.
+ */
+function _dp_twig_helper_build_fields_variable($entity, $type, $bundle, $view_mode, &$variables, $twig_config, $level = 0) {
+  // @todo pull max recursion from a global:
+  if ($level <= 10) {
+    $fields_variable = [];
+
+    $entityFieldManager = \Drupal::service('entity_field.manager');
+
+    $field_definitions = $entityFieldManager->getFieldDefinitions($type, $bundle);
+
+    $display = EntityViewDisplay::load($type . '.' . $bundle . '.' . $view_mode);
+
+    if (!empty($display)) {
+      $components = $display->getComponents();
+
+      foreach ($components as $ref_field_name => $config) {
+        $definition = !empty($field_definitions[$ref_field_name]) ? $field_definitions[$ref_field_name] : NULL;
+
+        if (!empty($definition) && !empty($definition->getLabel())) {
+          $field_type = $definition->getType();
+          $field_name = $definition->getName();
+          $cardinality = $definition->getFieldStorageDefinition()->getCardinality();
+          $multiple = $cardinality != 1;
+
+          $field_renamed = _dp_twig_helper_field_rename($field_name);
+
+          if ($field_renamed) {
+            $hook = 'field_item_squash_' . $field_type . '_value';
+            $alter_hook = $hook . '_alter';
+
+            $implementations = \Drupal::moduleHandler()->getImplementations($hook);
+
+            if (!empty($implementations)) {
+              $module = reset($implementations);
+
+              if ($multiple) {
+                $fields_variable[$field_renamed] = [];
+
+                if (!empty($entity->{$field_name})) {
+                  foreach ($entity->{$field_name} as $field_item) {
+                    if (!empty($field_item)) {
+                      $field_item_value = \Drupal::moduleHandler()->invoke($module, $hook, [
+                        &$variables,
+                        $display,
+                        $field_name,
+                        $field_item,
+                        $twig_config,
+                        $level,
+                      ]);
+
+                      \Drupal::moduleHandler()->invokeAll($alter_hook, [
+                        &$field_item_value,
+                        $variables,
+                        $display,
+                        $field_name,
+                        $field_item,
+                        $twig_config,
+                        $level,
+                      ]);
+
+                      $fields_variable[$field_renamed][] = $field_item_value;
+                    }
+                  }
+                }
+              }
+              else {
+                if (!empty($entity->{$field_name}[0])) {
+                  $field_item_value = \Drupal::moduleHandler()->invoke($module, $hook, [
+                    &$variables,
+                    $display,
+                    $field_name,
+                    $entity->{$field_name}[0],
+                    $twig_config,
+                    $level,
+                  ]);
+
+                  \Drupal::moduleHandler()->invokeAll($alter_hook, [
+                    &$field_item_value,
+                    $variables,
+                    $display,
+                    $field_name,
+                    $entity->{$field_name}[0],
+                    $twig_config,
+                    $level,
+                  ]);
+
+                  $fields_variable[$field_renamed] = $field_item_value;
+                }
+              }
+            }
+            else {
+              $fields_variable[$field_renamed] = 'TKTK — Not Implemented — ' . $field_type;
+            }
+          }
+        }
+      }
+    }
+
+    return $fields_variable;
+  }
+}
+
+/**
+ * Implements hook_field_item_squash_boolean_value().
+ */
+function dp_twig_helper_field_item_squash_boolean_value(&$variables, $display, $field_name, $field_item, $twig_config, $level) {
+  return $field_item->value;
+}
+
+/**
+ * Implements hook_field_item_squash_string_value().
+ */
+function dp_twig_helper_field_item_squash_string_value(&$variables, $display, $field_name, $field_item, $twig_config, $level) {
+  return $field_item->value;
+}
+
+/**
+ * Implements hook_field_item_squash_string_long_value().
+ */
+function dp_twig_helper_field_item_squash_string_long_value(&$variables, $display, $field_name, $field_item, $twig_config, $level) {
+  return $field_item->value;
+}
+
+/**
+ * Implements hook_field_item_squash_text_value().
+ */
+function dp_twig_helper_field_item_squash_text_value(&$variables, $display, $field_name, $field_item, $twig_config, $level) {
+  return _dp_twig_helper_build_formatted_text($field_item);
+}
+
+/**
+ * Implements hook_field_item_squash_text_long_value().
+ */
+function dp_twig_helper_field_item_squash_text_long_value(&$variables, EntityViewDisplay $display, $field_name, $field_item, $twig_config, $level) {
+  return _dp_twig_helper_build_formatted_text($field_item);
+}
+
+/**
+ * Implements hook_field_item_squash_text_with_summary_value().
+ */
+function dp_twig_helper_field_item_squash_text_with_summary_value(&$variables, EntityViewDisplay $display, $field_name, $field_item, $twig_config, $level) {
+  return _dp_twig_helper_build_formatted_text($field_item);
+}
+
+/**
+ * Helper function - internal.
+ *
+ * @param \Drupal\Core\Field\FieldItemInterface $field_item
+ *   The field item.
+ *
+ * @return \Drupal\Component\Render\MarkupInterface|mixed
+ *   Processed text.
+ */
+function _dp_twig_helper_build_formatted_text(FieldItemInterface $field_item) {
+  $accepted_ids = [
+    'text' => TRUE,
+    'text_long' => TRUE,
+    'text_with_summary' => TRUE,
+  ];
+  if (!isset($accepted_ids[$field_item->getFieldDefinition()->getType()]) || empty($field_item->format)) {
+    return $field_item->value;
+  }
+  return check_markup($field_item->value, $field_item->format, $field_item->getLangcode());
+}
+
+/**
+ * Implements hook_field_item_squash_list_string_value().
+ */
+function dp_twig_helper_field_item_squash_list_string_value(&$variables, $display, $field_name, $field_item, $twig_config, $level) {
+  return $field_item->value;
+}
+
+/**
+ * Implements hook_field_item_squash_telephone_value().
+ */
+function dp_twig_helper_field_item_squash_telephone_value(&$variables, $display, $field_name, $field_item, $twig_config, $level) {
+  return $field_item->value;
+}
+
+/**
+ * Implements hook_field_item_squash_email_value().
+ */
+function dp_twig_helper_field_item_squash_email_value(&$variables, $display, $field_name, $field_item, $twig_config, $level) {
+  return $field_item->value;
+}
+
+/**
+ * Implements hook_field_item_squash_link_value().
+ */
+function dp_twig_helper_field_item_squash_link_value(&$variables, $display, $field_name, $field_item, $twig_config, $level) {
+  $link_attrs = [];
+  if (\Drupal::moduleHandler()->moduleExists('link_attributes')) {
+    $options = $field_item->getProperties()['options']->getValue();
+    if (isset($options['attributes'])) {
+      foreach ($options['attributes'] as $attribute => $value) {
+        $link_attrs[str_replace('-', '_', $attribute)] = $value;
+      }
+    }
+  }
+
+  $return = [
+    'url' => $field_item->getUrl()->toString(),
+    'title' => $field_item->title,
+    'isExternal' => $field_item->getUrl()->isExternal(),
+  ];
+
+  if ($link_attrs) {
+    $return['attributes'] = $link_attrs;
+  }
+
+  return $return;
+}
+
+/**
+ * Implements hook_field_item_squash_datetime_value().
+ */
+function dp_twig_helper_field_item_squash_datetime_value(&$variables, $display, $field_name, $field_item, $twig_config, $level) {
+  return [
+    'date' => $field_item->date->format('c'),
+    'timestamp' => $field_item->date->getTimestamp(),
+  ];
+}
+
+/**
+ * Implements hook_field_item_squash_entity_reference_value().
+ */
+function dp_twig_helper_field_item_squash_entity_reference_value(&$variables, EntityViewDisplay $display, $field_name, $field_item, $twig_config, $level) {
+  $item_value = [];
+
+  if (!$field_item->isEmpty()) {
+    $ref_entity = $field_item->entity;
+    if (!empty($ref_entity) && $ref_entity->access('view')) {
+      $ref_type = $ref_entity->getEntityTypeId();
+      $ref_bundle = $ref_entity->bundle();
+
+      if ($ref_type == 'media' && $ref_bundle == 'image') {
+        return _dp_twig_helper_media_field_item_build_image_fields($field_item, $ref_entity);
+      }
+
+      $renderer = $display->getRenderer($field_name);
+      $pluginId = $renderer->getPluginId();
+
+      // @todo necessary to handle other field formatters?  "entity_label"?
+      if ($pluginId == 'entity_reference_entity_view') {
+        $item_value['id'] = $ref_entity->id();
+        $item_value['type'] = $ref_bundle;
+        $item_value['url'] = $ref_entity->toUrl()->toString();
+        $field_display_settings = $renderer->getSettings();
+        $ref_view_mode = $field_display_settings['view_mode'];
+
+        $item_value['fields'] = _dp_twig_helper_build_fields_variable($ref_entity, $ref_type, $ref_bundle, $ref_view_mode, $variables, $twig_config, $level + 1);
+        $item_value['fields']['id'] = $item_value['id'];
+        $item_value['fields']['url'] = $item_value['url'];
+        $item_value['fields']['type'] = $ref_bundle;
+
+        if ($ref_type == 'node') {
+          $item_value['authored_date'] = date('c', $ref_entity->getCreatedTime());
+          $item_value['authored_timestamp'] = $ref_entity->getCreatedTime();
+          $item_value['fields']['authored_date'] = $item_value['authored_date'];
+          $item_value['fields']['authored_timestamp'] = $item_value['authored_timestamp'];
+        }
+      }
+      elseif ($pluginId == 'entity_reference_label') {
+        $definitions = $display->getPluginCollections();
+        $label = $ref_entity->label();
+        /** @var \Drupal\Core\Field\Plugin\Field\FieldFormatter\EntityReferenceLabelFormatter $x */
+        if (!empty($definitions['formatters']->get('entity_reference_label')->getSettings()['link'])) {
+          $link = $ref_entity->toUrl()->toString();
+          $item_value = ['label' => $label, 'link' => $link];
+        }
+        else {
+          $item_value = $label;
+        }
+      }
+    }
+  }
+
+  return $item_value;
+}
+
+/**
+ * Builds the fields variable for a media entity of type image.
+ */
+function _dp_twig_helper_media_field_item_build_image_fields($media_field_item, $media_entity, $media_type = 'media', $media_image_bundle = 'image') {
+  $fields = [];
+
+  $entityFieldManager = \Drupal::service('entity_field.manager');
+
+  $field_definitions = $entityFieldManager->getFieldDefinitions($media_type, $media_image_bundle);
+
+  $file_field_name = NULL;
+
+  foreach ($field_definitions as $ref_field_name => $field_definition) {
+    $ref_field_type = $field_definition->getType();
+
+    if ($ref_field_type == 'image' && $ref_field_name !== 'thumbnail') {
+      $file_field_name = $ref_field_name;
+    }
+  }
+
+  if ($file_field_name !== NULL) {
+    $file_field_item = $media_entity->{$file_field_name}[0];
+
+    if (!empty($file_field_item)) {
+      $file_target_id = $file_field_item->getValue()['target_id'];
+
+      if (!empty($file_target_id)) {
+        $file_field_item_settings = $file_field_item->getFieldDefinition()->getSettings();
+
+        $file_field_type = $file_field_item_settings['target_type'];
+
+        $file_entity = \Drupal::entityTypeManager()->getStorage($file_field_type)->load($file_target_id);
+
+        $fields['id'] = $file_target_id;
+        $fields['alt'] = $file_field_item->getValue()['alt'];
+        $fields['title'] = $file_field_item->getValue()['title'];
+
+        if (!empty($file_entity)) {
+          $fields['url'] = $file_entity->createFileUrl(FALSE);
+          $fields['uri'] = $file_entity->getFileUri();
+        }
+
+        $file_entity = NULL;
+      }
+    }
+  }
+
+  $fields['fields'] = _dp_twig_helper_build_fields_variable(
+    $media_entity,
+    $media_entity->getEntityTypeId(),
+    $media_entity->bundle(),
+    'default',
+    $variables,
+    NULL);
+
+  return $fields;
+}
+
+/**
+ * Implements hook_field_item_squash_entity_reference_revisions_value().
+ */
+function dp_twig_helper_field_item_squash_entity_reference_revisions_value(&$variables, $display, $field_name, $field_item, $twig_config, $level) {
+  $item_value = [];
+
+  $ref_entity = $field_item->entity;
+
+  if (!empty($ref_entity)) {
+    $ref_type = $ref_entity->getEntityTypeId();
+    $ref_bundle = $ref_entity->bundle();
+
+    /** @var \Drupal\entity_reference_revisions\Plugin\Field\FieldFormatter\EntityReferenceRevisionsEntityFormatter $renderer */
+    $renderer = $display->getRenderer($field_name);
+
+    $pluginId = $renderer->getPluginId();
+
+    if ($pluginId == 'entity_reference_revisions_entity_view') {
+      $field_display_settings = $renderer->getSettings();
+
+      $ref_view_mode = $field_display_settings['view_mode'];
+
+      $item_value['id'] = $ref_entity->id();
+      $item_value['type'] = $ref_bundle;
+      $item_value['fields'] = _dp_twig_helper_build_fields_variable($ref_entity, $ref_type, $ref_bundle, $ref_view_mode, $variables, $twig_config, $level + 1);
+    }
+
+    if ($ref_type === 'paragraph') {
+      $hook = 'pl_component_fields_' . $ref_bundle . '_alter';
+
+      \Drupal::moduleHandler()->invokeAll($hook, [
+        &$item_value,
+        $ref_entity,
+        $field_name,
+        $display,
+        $level,
+      ]);
+    }
+  }
+
+  return $item_value;
+}
+
+/**
+ * Implements hook_field_item_squash_entity_reference_revisions_value().
+ */
+function dp_twig_helper_field_item_squash_viewsreference_value(&$variables, $display, $field_name, $field_item, $twig_config, $level) {
+  $item_values = [];
+
+  // Checking if the result of the executed view is avaliable in variables.
+  if (!empty($variables['content'][$field_name][$field_item->getName()]['contents']['#view'])) {
+    $view = $variables['content'][$field_name][$field_item->getName()]['contents']['#view'];
+    $pager = $view->getPager();
+    // Support for only "Display specific number of items" or "Display all".
+    if (!$pager instanceof Some && !$pager instanceof None) {
+      return $item_values;
+    }
+    // Support for "Show: Content" only.
+    if (empty($view->rowPlugin) || !$view->rowPlugin instanceof EntityRow) {
+      return $item_values;
+    }
+    // Iterating through results.
+    if (!empty($view->result)) {
+      if (!empty($view->build_info['title'])) {
+        $item_values['title'] = $view->build_info['title'];
+      }
+      $display = !empty($view->rowPlugin->options['view_mode']) ? $view->rowPlugin->options['view_mode'] : 'default';
+      foreach ($view->result as $result) {
+        if (!empty($result->_entity)) {
+          $entity = $result->_entity;
+          $item_value = [];
+          $item_value['id'] = $entity->id();
+          $item_value['url'] = $entity->toUrl()->toString();
+          $item_value['type'] = $entity->bundle();
+          $item_value['fields'] = _dp_twig_helper_build_fields_variable(
+            $entity,
+            $entity->getEntityTypeId(),
+            $entity->bundle(),
+            $display,
+            $variables,
+            $twig_config,
+            $level + 1
+          );
+          $item_value['fields']['id'] = $item_value['id'];
+          $item_value['fields']['url'] = $item_value['url'];
+          $item_value['fields']['type'] = $item_value['type'];
+          if ($entity->getEntityTypeId() == 'node') {
+            $item_value['authored_timestamp'] = $entity->getCreatedTime();
+            $item_value['fields']['authored_timestamp'] = $item_value['authored_timestamp'];
+            $item_value['authored_date'] = date('c', $entity->getCreatedTime());
+            $item_value['fields']['authored_date'] = $item_value['authored_date'];
+          }
+          $item_values['entities'][] = $item_value;
+        }
+      }
+    }
+  }
+
+  return $item_values;
+}
+
+/**
+ * Rename a field by stripping the 'field_' prefix.
+ */
+function _dp_twig_helper_field_rename($field_name) {
+  $renamed = FALSE;
+
+  // @todo support custom / other rename schemes.
+  if (strpos($field_name, 'field_') === 0) {
+    $renamed = substr($field_name, 6);
+  }
+  elseif (in_array($field_name, ['title', 'name'])) {
+    $renamed = $field_name;
+  }
+
+  return $renamed;
+}

@@ -1,0 +1,34 @@
+id: paragraph_gallery_slide
+label: USFCA — Paragraph — Gallery Slide
+migration_group: usfca
+source:
+  plugin: usfca_image_reference_field
+  field_name: field_in_content_carousel_images
+  bundles:
+    - news
+keys:
+  - fid
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: image_gallery_slide
+process:
+  uid:
+    plugin: default_value
+    default_value: 1
+  field_caption:
+    plugin: null_coalesce
+    source:
+      - media_title
+      - title
+      - media_alt
+      - alt
+  field_image/0/target_id:
+    - plugin: migration_lookup
+      migration: media_gallery
+      no_stub: true
+      source: fid
+
+dependencies:
+  enforced:
+    module:
+      - usfca_migrate

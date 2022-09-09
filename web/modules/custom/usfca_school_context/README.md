@@ -1,0 +1,1 @@
+The USFCA School Context module provides a block context based on the current "School" taxonomy of the current node.

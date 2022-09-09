@@ -1,0 +1,1 @@
+The USFCA Migrate module contains code used to migrate the Drupal 7 USFCA website content to Drupal 9. This module may be deleted after running the migration/s in production as the code is only required to run the migration, not for any other purpose.

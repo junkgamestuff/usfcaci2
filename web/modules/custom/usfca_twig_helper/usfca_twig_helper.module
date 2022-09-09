@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * USFCA Twig Helper functions.
+ */
+
+/**
+ * Implements hook_field_item_squash_address_value().
+ */
+function usfca_twig_helper_field_item_squash_address_value(&$variables, $display, $field_name, $field_item, $twig_config, $level) {
+  return [
+    'address_line1' => $field_item->address_line1,
+    'address_line2' => $field_item->address_line2,
+    'locality' => $field_item->locality,
+    'administrative_area' => $field_item->administrative_area,
+    'postal_code' => $field_item->postal_code,
+  ];
+}
+
+/**
+ * Implements usfca_twig_helper_field_item_squash_geolocation_value().
+ */
+function usfca_twig_helper_field_item_squash_geolocation_value(&$variables, $display, $field_name, $field_item, $twig_config, $level) {
+  return [
+    'lat' => $field_item->lat,
+    'lng' => $field_item->lng,
+  ];
+}
+
+/**
+ * Implements usfca_twig_helper_field_item_squash_integer_value().
+ */
+function usfca_twig_helper_field_item_squash_integer_value(&$variables, $display, $field_name, $field_item, $twig_config, $level) {
+  return $field_item->value;
+}

@@ -1,0 +1,50 @@
+id: files_cv
+label: USFCA — Files — CV
+migration_group: usfca
+source:
+  plugin: usfca_file_reference_field
+  field_name: field_cv
+  bundles:
+    - faculty_details
+keys:
+  - fid
+destination:
+  plugin: entity:file
+process:
+  uid:
+    plugin: default_value
+    default_value: 1
+  file_source:
+
+    - plugin: skip_on_empty
+      method: row
+      source: filename
+
+    - plugin: concat
+      delimiter: /
+      source:
+      - constants/image_source_uri
+      - filename
+
+    - plugin: urlencode
+
+  file_dest:
+    - plugin: concat
+      delimiter: /
+      source:
+      - constants/image_dest_uri
+      - filename
+    - plugin: urlencode
+
+  uri:
+    plugin: file_copy
+    source:
+    - '@file_source'
+    - '@file_dest'
+
+  filename: filename
+
+dependencies:
+  enforced:
+    module:
+      - usfca_migrate

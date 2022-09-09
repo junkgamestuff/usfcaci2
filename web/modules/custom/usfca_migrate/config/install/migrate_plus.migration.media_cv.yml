@@ -1,0 +1,26 @@
+id: media_cv
+label: USFCA — Media — CV
+migration_group: usfca
+source:
+  plugin: usfca_file_reference_field
+  field_name: field_cv
+  bundles:
+    - faculty_details
+keys:
+  - fid
+destination:
+  plugin: entity:media
+process:
+  bundle:
+    plugin: default_value
+    default_value: document
+  name: filename
+  'field_media_file/target_id':
+    - plugin: migration_lookup
+      migration: files_cv
+      no_stub: true
+      source: fid
+dependencies:
+  enforced:
+    module:
+      - usfca_migrate
