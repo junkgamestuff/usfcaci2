@@ -79,19 +79,20 @@ jobs:
 
   build_theme:
     <<: *defaults
-      
+
+    steps:
       - run:
-          name: Install Deps
-          command: cd web/themes/custom/usfca && npm install
+        name: Install Deps
+        command: cd web/themes/custom/usfca && npm install
           
       - run:
-          name: Compile assets
-          command: cd web/themes/custom/usfca && npm ci
+        name: Compile assets
+        command: cd web/themes/custom/usfca && npm ci
 
       - save_cache:
-          key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
-            paths:
-              - ./web/themes/custom/usfca/node_modules
+        key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
+          paths:
+            - ./web/themes/custom/usfca/node_modules
 
   static_tests:
     <<: *defaults
