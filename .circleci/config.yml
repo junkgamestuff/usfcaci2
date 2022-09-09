@@ -107,7 +107,7 @@ jobs:
   # could be added here.
       - run:
           name: Install Deps
-          command: cd web/themes/custom/usfca && npm install
+          command: cd web/themes/custom/usfca && npm ci
 
       - save_cache:
           key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
