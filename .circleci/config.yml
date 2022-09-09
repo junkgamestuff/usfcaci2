@@ -107,7 +107,7 @@ jobs:
   # could be added here.
     working_directory: ~/example_drops_8_composer/
     docker:
-      - image: circleci/node:12.14.0-stretch-browsers-legacy
+      - image: circleci/node:14.15.0-stretch-browsers
  
       - restore_cache:
           name: Restore Cache
