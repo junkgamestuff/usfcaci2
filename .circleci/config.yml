@@ -108,28 +108,24 @@ jobs:
   build_theme:
     <<: *defaults
      
-    working_directory: ~/example_drops_8_composer/
-      docker:
-        - image: circleci/node:8-stretch-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
 
-      steps:
-        - checkout
-        - restore_cache:
-            key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
+      - run:
+          name: Install Deps
+          command: cd web/themes/custom/usfca && npm install
 
-        - run:
-            name: Install Deps
-            command: cd web/themes/custom/usfca && npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
+          paths:
+            - ./web/themes/custom/usfca/node_modules
 
-        - save_cache:
-            key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
-            paths:
-              - ./web/themes/custom/usfca/node_modules
-
-        - persist_to_workspace:
-            root: web/themes/custom/usfca
-            paths:
-              - pattern_lab/source/css/style.css
+      - persist_to_workspace:
+          root: web/themes/custom/usfca
+          paths:
+            - pattern_lab/source/css/style.css
 
   deploy_to_pantheon:
     <<: *defaults
