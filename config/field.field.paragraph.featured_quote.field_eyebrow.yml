@@ -1,0 +1,19 @@
+uuid: 1f084295-47a9-4322-99de-681e7131e0bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_eyebrow
+    - paragraphs.paragraphs_type.featured_quote
+id: paragraph.featured_quote.field_eyebrow
+field_name: field_eyebrow
+entity_type: paragraph
+bundle: featured_quote
+label: Eyebrow
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

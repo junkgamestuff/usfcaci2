@@ -1,0 +1,25 @@
+uuid: c357c32d-0320-424c-98b9-f18f8c4cb9f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_address
+    - node.type.event_detail
+  module:
+    - address
+id: node.event_detail.field_event_address
+field_name: field_event_address
+entity_type: node
+bundle: event_detail
+label: 'Event Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides: {  }
+  fields: {  }
+field_type: address

@@ -1,0 +1,10 @@
+uuid: 6e0a4bf2-882b-4d03-b078-37bd5dd02be8
+langcode: en
+status: true
+dependencies: {  }
+id: featured_articles_automatic
+label: 'Featured Articles - Automatic'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

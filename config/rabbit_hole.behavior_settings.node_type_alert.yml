@@ -1,0 +1,16 @@
+uuid: 1cb67d2e-fb11-45bf-8c77-d4698431004e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.alert
+_core:
+  default_config_hash: vnYIjgSqfGKjLMNS2jWabI-IXMt0ImzETK_I7mPpd-I
+id: node_type_alert
+entity_type_id: node_type
+entity_id: alert
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

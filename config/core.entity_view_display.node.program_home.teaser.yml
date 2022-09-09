@@ -1,0 +1,57 @@
+uuid: a2f5fdfa-b57f-4c63-b3a9-aa6ecd3f2d35
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program_home.field_campus
+    - field.field.node.program_home.field_career_goals
+    - field.field.node.program_home.field_components
+    - field.field.node.program_home.field_degree
+    - field.field.node.program_home.field_degree_type
+    - field.field.node.program_home.field_eyebrow
+    - field.field.node.program_home.field_hero_description
+    - field.field.node.program_home.field_image
+    - field.field.node.program_home.field_interests
+    - field.field.node.program_home.field_metatag
+    - field.field.node.program_home.field_program
+    - field.field.node.program_home.field_program_type
+    - field.field.node.program_home.field_school
+    - field.field.node.program_home.field_section
+    - field.field.node.program_home.field_teaser_description
+    - node.type.program_home
+  module:
+    - user
+id: node.program_home.teaser
+targetEntityType: node
+bundle: program_home
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_campus: true
+  field_career_goals: true
+  field_components: true
+  field_degree: true
+  field_degree_type: true
+  field_eyebrow: true
+  field_hero_description: true
+  field_image: true
+  field_interests: true
+  field_metatag: true
+  field_program: true
+  field_program_type: true
+  field_school: true
+  field_section: true
+  field_teaser_description: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,31 @@
+uuid: 83dae5b3-d908-4b7a-9412-da31cc9adf54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_articles_x3
+    - node.type.article
+    - node.type.media_mention
+    - paragraphs.paragraphs_type.article_cards_manual
+id: paragraph.article_cards_manual.field_articles_x3
+field_name: field_articles_x3
+entity_type: paragraph
+bundle: article_cards_manual
+label: Articles
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      media_mention: media_mention
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: article
+field_type: entity_reference

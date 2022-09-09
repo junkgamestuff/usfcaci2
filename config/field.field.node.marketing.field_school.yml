@@ -1,0 +1,29 @@
+uuid: 772a3b60-a01d-4306-938c-18ba54b52f05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_school
+    - node.type.marketing
+    - taxonomy.vocabulary.school
+id: node.marketing.field_school
+field_name: field_school
+entity_type: node
+bundle: marketing
+label: School
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      school: school
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,10 @@
+uuid: f019a7e9-c4ab-44e4-badf-2521adf14543
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.narrow
+label: Narrow
+targetEntityType: paragraph
+cache: true

@@ -1,0 +1,43 @@
+uuid: a8cf2bf5-0c08-4335-84a7-4f2e0a636d0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_media_feed.field_social_links
+    - field.field.paragraph.social_media_feed.field_social_media_feed_id
+    - field.field.paragraph.social_media_feed.field_title
+    - paragraphs.paragraphs_type.social_media_feed
+  module:
+    - entity_reference_revisions
+id: paragraph.social_media_feed.default
+targetEntityType: paragraph
+bundle: social_media_feed
+mode: default
+content:
+  field_social_links:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_social_media_feed_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: f5e34f74-ac3a-424f-b768-1913533b74fc
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 16_9_996x560
+label: '16:9 (996x560)'
+effects:
+  48e19a63-63ca-4a5d-9fa7-791a3dc2df6b:
+    uuid: 48e19a63-63ca-4a5d-9fa7-791a3dc2df6b
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 996
+      height: 560
+      crop_type: focal_point
+  f14573b9-d600-44b8-bf7e-cea2edaff8cb:
+    uuid: f14573b9-d600-44b8-bf7e-cea2edaff8cb
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg

@@ -1,0 +1,76 @@
+uuid: 594b11d7-76bf-46cf-9645-9621404736a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.directory.field_components
+    - field.field.node.directory.field_components_footer
+    - field.field.node.directory.field_metatag
+    - field.field.node.directory.field_section
+    - field.field.node.directory.field_views_reference
+    - node.type.directory
+  module:
+    - entity_reference_revisions
+    - metatag
+    - user
+    - viewsreference
+id: node.directory.default
+targetEntityType: node
+bundle: directory
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_components_footer:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_metatag:
+    type: metatag_empty_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_views_reference:
+    type: viewsreference_formatter
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

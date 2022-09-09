@@ -1,0 +1,10 @@
+uuid: a04b46c4-0a7c-4ab2-a4b1-bbbca1e0ca35
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.faculty_directory
+label: 'Faculty Directory'
+targetEntityType: node
+cache: true

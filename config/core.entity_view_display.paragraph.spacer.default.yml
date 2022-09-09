@@ -1,0 +1,13 @@
+uuid: 8de65233-d705-4868-b921-249bfe4bea44
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.spacer
+id: paragraph.spacer.default
+targetEntityType: paragraph
+bundle: spacer
+mode: default
+content: {  }
+hidden:
+  search_api_excerpt: true

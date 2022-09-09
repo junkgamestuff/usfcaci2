@@ -1,0 +1,10 @@
+uuid: 86628d9a-5e4b-4cf1-a63f-8df1bdfee5c3
+langcode: en
+status: true
+dependencies: {  }
+id: intro_text_title
+label: 'Intro Text & Title'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

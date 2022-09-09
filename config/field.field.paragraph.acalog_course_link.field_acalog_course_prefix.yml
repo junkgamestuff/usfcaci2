@@ -1,0 +1,19 @@
+uuid: a82fb68b-6d08-4e98-a44c-d28150da8c46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_acalog_course_prefix
+    - paragraphs.paragraphs_type.acalog_course_link
+id: paragraph.acalog_course_link.field_acalog_course_prefix
+field_name: field_acalog_course_prefix
+entity_type: paragraph
+bundle: acalog_course_link
+label: 'Acalog Course Prefix'
+description: 'Enter the Course prefix exactly as it appears in Acalog. E.g. "MS".'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,10 @@
+uuid: d9512e8f-1b03-4421-b56e-b0baa9a3d5cb
+langcode: en
+status: true
+dependencies: {  }
+id: contact_box
+label: 'Contact Box'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

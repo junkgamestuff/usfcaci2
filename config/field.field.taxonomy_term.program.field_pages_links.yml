@@ -1,0 +1,23 @@
+uuid: ea75d2fd-9795-4eff-999b-ff3ffb274f2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_pages_links
+    - taxonomy.vocabulary.program
+  module:
+    - link
+id: taxonomy_term.program.field_pages_links
+field_name: field_pages_links
+entity_type: taxonomy_term
+bundle: program
+label: 'Program Hero Links'
+description: 'Input the list of links that should display in the hero area of this Program.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

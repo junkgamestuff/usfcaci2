@@ -1,0 +1,23 @@
+uuid: e326aa62-a670-415a-9973-aae55f608c00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_time
+    - node.type.alert
+_core:
+  default_config_hash: nllNjDUkuoBQeu-WZGqqHGnqo8jHMQaX5KQtXUTRC-g
+id: node.alert.field_date_time
+field_name: field_date_time
+entity_type: node
+bundle: alert
+label: Date/Time
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1614948649
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

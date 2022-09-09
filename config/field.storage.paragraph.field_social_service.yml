@@ -1,0 +1,39 @@
+uuid: 2fef9a87-81af-4d6e-9d62-4c44cf545f71
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_social_service
+field_name: field_social_service
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: facebook
+      label: Facebook
+    -
+      value: instagram
+      label: Instagram
+    -
+      value: linkedin
+      label: LinkedIn
+    -
+      value: twitter
+      label: Twitter
+    -
+      value: youtube
+      label: YouTube
+    -
+      value: tiktok
+      label: TikTok
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

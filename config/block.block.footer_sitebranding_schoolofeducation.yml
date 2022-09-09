@@ -1,0 +1,31 @@
+uuid: daef1132-26e2-4526-89fa-d312d818155a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - usfca_school_context
+  theme:
+    - usfca
+id: footer_sitebranding_schoolofeducation
+theme: usfca
+region: footer_branding
+weight: -16
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Footer Site branding - School of Education'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: false
+  use_site_slogan: false
+visibility:
+  usfca_schoool_context_condition:
+    id: usfca_schoool_context_condition
+    schools:
+      'School of Education': 'School of Education'
+    negate: false
+    context_mapping:
+      school: '@usfca_school_context.school_context:school'

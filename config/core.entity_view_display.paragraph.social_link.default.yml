@@ -1,0 +1,37 @@
+uuid: da549711-9307-4eb5-9c97-d62cc28feb00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_link.field_link
+    - field.field.paragraph.social_link.field_social_service
+    - paragraphs.paragraphs_type.social_link
+  module:
+    - link
+    - options
+id: paragraph.social_link.default
+targetEntityType: paragraph
+bundle: social_link
+mode: default
+content:
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_social_service:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

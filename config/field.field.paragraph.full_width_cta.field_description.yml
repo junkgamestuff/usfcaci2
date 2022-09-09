@@ -1,0 +1,21 @@
+uuid: 2bea6105-4424-467f-83b2-1a29fe612aad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.full_width_cta
+  module:
+    - text
+id: paragraph.full_width_cta.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: full_width_cta
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

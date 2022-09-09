@@ -1,0 +1,29 @@
+uuid: 4517dab6-e947-4a9e-ab21-867cc62a9144
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_school_home
+    - node.type.home
+    - taxonomy.vocabulary.school
+id: taxonomy_term.school.field_school_home
+field_name: field_school_home
+entity_type: taxonomy_term
+bundle: school
+label: 'School Home'
+description: 'Choose the <em>Home</em> page that represents this School. This page will be inserted into the Breadcrumb on pages assigned to this school as the first Breadcrumb link.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      home: home
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

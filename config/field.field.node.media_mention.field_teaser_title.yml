@@ -1,0 +1,19 @@
+uuid: a9250dc3-f19e-4a7d-a165-fcafdb9213ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_title
+    - node.type.media_mention
+id: node.media_mention.field_teaser_title
+field_name: field_teaser_title
+entity_type: node
+bundle: media_mention
+label: 'Teaser Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

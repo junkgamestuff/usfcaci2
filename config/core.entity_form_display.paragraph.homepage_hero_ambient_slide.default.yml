@@ -1,0 +1,43 @@
+uuid: be9532da-2b4d-4c04-8bc8-266074786e7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.homepage_hero_ambient_slide.field_ambient_video_url
+    - field.field.paragraph.homepage_hero_ambient_slide.field_image
+    - field.field.paragraph.homepage_hero_ambient_slide.field_title
+    - paragraphs.paragraphs_type.homepage_hero_ambient_slide
+  module:
+    - link
+    - media_library
+id: paragraph.homepage_hero_ambient_slide.default
+targetEntityType: paragraph
+bundle: homepage_hero_ambient_slide
+mode: default
+content:
+  field_ambient_video_url:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

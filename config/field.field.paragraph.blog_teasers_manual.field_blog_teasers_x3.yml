@@ -1,0 +1,29 @@
+uuid: 0ff8df02-3952-47d6-8597-af2c5347ecef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_blog_teasers_x3
+    - node.type.blog_teaser
+    - paragraphs.paragraphs_type.blog_teasers_manual
+id: paragraph.blog_teasers_manual.field_blog_teasers_x3
+field_name: field_blog_teasers_x3
+entity_type: paragraph
+bundle: blog_teasers_manual
+label: 'Blog Teasers'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      blog_teaser: blog_teaser
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

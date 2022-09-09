@@ -1,0 +1,19 @@
+uuid: b3e86b32-1cbc-43b7-8051-884be58e7314
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_highlight
+    - paragraphs.paragraphs_type.article_cards_featured
+id: paragraph.article_cards_featured.field_title_highlight
+field_name: field_title_highlight
+entity_type: paragraph
+bundle: article_cards_featured
+label: 'Title Highlight'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

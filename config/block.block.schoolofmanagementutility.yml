@@ -1,0 +1,33 @@
+uuid: d56ed7d1-225f-472f-9c1b-40b04ce00dee
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.school-of-management-utility
+  module:
+    - system
+    - usfca_school_context
+  theme:
+    - usfca
+id: schoolofmanagementutility
+theme: usfca
+region: header
+weight: -7
+provider: null
+plugin: 'system_menu_block:school-of-management-utility'
+settings:
+  id: 'system_menu_block:school-of-management-utility'
+  label: 'School of Management Utility'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  usfca_schoool_context_condition:
+    id: usfca_schoool_context_condition
+    schools:
+      'School of Management': 'School of Management'
+    negate: false
+    context_mapping:
+      school: '@usfca_school_context.school_context:school'

@@ -1,0 +1,23 @@
+uuid: ee812461-a719-4c1e-a26d-e32d3f413ad5
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 3_4_960x1280
+label: '3:4 (960x1280)'
+effects:
+  7de7be58-1bce-421a-b8db-5d8ae9cdb0b9:
+    uuid: 7de7be58-1bce-421a-b8db-5d8ae9cdb0b9
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 960
+      height: 1280
+      crop_type: focal_point
+  85907834-456b-4327-8a69-b389e5367da9:
+    uuid: 85907834-456b-4327-8a69-b389e5367da9
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg

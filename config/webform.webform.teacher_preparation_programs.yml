@@ -1,0 +1,453 @@
+uuid: 63543be8-ab02-42fa-bcbe-1c3e62232605
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 17
+template: false
+archive: false
+id: teacher_preparation_programs
+title: 'Teacher Preparation Programs Application'
+description: ''
+category: ''
+elements: |-
+  first_name:
+    '#type': textfield
+    '#title': 'First Name'
+    '#required': true
+  last_name:
+    '#type': textfield
+    '#title': 'Last Name'
+    '#required': true
+  email_address:
+    '#type': email
+    '#title': 'Email Address'
+    '#required': true
+  usf_id_number:
+    '#type': number
+    '#title': 'USF ID Number'
+  mailing_address_permanent:
+    '#type': textarea
+    '#title': 'Mailing Address: Permanent'
+  mailing_address_local:
+    '#type': textarea
+    '#title': 'Mailing Address: Local'
+  phone_number_home_:
+    '#type': tel
+    '#title': 'Phone Number (Home)'
+  phone_number_mobile_:
+    '#type': tel
+    '#title': 'Phone Number (Mobile)'
+  how_did_you_hear_about_our_programs_:
+    '#type': webform_select_other
+    '#title': 'How did you hear about our programs?'
+    '#options':
+      Web: Web
+      Friends/Family: Friends/Family
+      'USF Admissions': 'USF Admissions'
+      'Academic Advising': 'Academic Advising'
+      'High School Counselor': 'High School Counselor'
+      'USF Student or Alumni': 'USF Student or Alumni'
+    '#other__option_label': ''
+    '#other__title': 'If Other, please specify'
+    '#required': true
+  ap_tests_taken_and_scores_if_known_:
+    '#type': textarea
+    '#title': 'AP: Tests Taken and Scores (if known)'
+  intended_major_at_usf:
+    '#type': textfield
+    '#title': 'Intended Major at USF'
+    '#required': true
+  student_status:
+    '#type': select
+    '#title': 'Student Status'
+    '#options':
+      Undecided: Undecided
+      'Committed to USF for the Spring': 'Committed to USF for the Spring'
+      'Committed to USF for the Fall': 'Committed to USF for the Fall'
+      'Current USF Student': 'Current USF Student'
+    '#required': true
+  for_those_interested_in_teaching_middle_high_school_what_foreign:
+    '#type': select
+    '#title': 'For those interested in teaching middle/high school, what foreign language do you plan to take at USF?'
+    '#options':
+      Arabic: Arabic
+      Chinese: Chinese
+      Filipino: Filipino
+      French: French
+      German: German
+      Greek: Greek
+      Hebrew: Hebrew
+      Italian: Italian
+      Japanese: Japanese
+      Latin: Latin
+      Portuguese: Portuguese
+      Spanish: Spanish
+  desired_program:
+    '#type': select
+    '#title': 'Desired Program'
+    '#description': '(Limited majors allowed)'
+    '#options':
+      '4 year BA and Credential': '4 year BA and Credential'
+      '5 year BA/BS, Credential and MA': '5 year BA/BS, Credential and MA'
+      '5 Year BA/BS, Credential and MA and Special Education': '5 Year BA/BS, Credential and MA and Special Education'
+      '6 Year BA/BS, Credential and MA and Special Education': '6 Year BA/BS, Credential and MA and Special Education'
+    '#required': true
+  desired_credential:
+    '#type': select
+    '#title': 'Desired Credential'
+    '#options':
+      'Multiple-Subject: Elementary (k-6)': 'Multiple-Subject: Elementary (k-6)'
+      'Multiple-Subject: Elementary (k-6) and Special Education ': 'Multiple-Subject: Elementary (k-6) and Special Education '
+      'Single-Subject: English (middle/high school)': 'Single-Subject: English (middle/high school)'
+      'Single-Subject: Math (middle/high school)': 'Single-Subject: Math (middle/high school)'
+      'Single-Subject: Science (middle/high school)': 'Single-Subject: Science (middle/high school)'
+      'Single-Subject: Social Science (middle/high school)': 'Single-Subject: Social Science (middle/high school)'
+      'Single-Subject: (middle/high school) and Special Education': 'Single-Subject: (middle/high school) and Special Education'
+    '#required': true
+  essay_intro:
+    '#type': webform_markup
+    '#markup': 'Applicants can submit this form without the essays; essays are due four weeks after submission of this application. After submission of this application, you will be contacted by a UTEC advisor.'
+  essay_1:
+    '#type': textarea
+    '#title': 'Essay 1'
+  essay_2:
+    '#type': textarea
+    '#title': 'Essay 2'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': Submit
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: url
+  confirmation_url: /education/programs/undergraduate/request-info/thank-you
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  test_email:
+    id: email
+    handler_id: test_email
+    label: 'Test Email'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: rayuyang@usfca.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: utec@usfca.edu
+      from_options: {  }
+      from_name: 'Undergraduate Teacher Education Center'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  afjoseph:
+    id: email
+    handler_id: afjoseph
+    label: afjoseph
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: afjoseph@usfca.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Application: Teacher Preparation Programs'
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  utec:
+    id: email
+    handler_id: utec
+    label: UTEC
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: utec@usfca.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Application: Teacher Preparation Programs'
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  mlcoen:
+    id: email
+    handler_id: mlcoen
+    label: mlcoen
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: mlcoen@usfca.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Application: Teacher Preparation Programs'
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

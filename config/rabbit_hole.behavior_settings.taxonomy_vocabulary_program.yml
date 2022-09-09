@@ -1,0 +1,14 @@
+uuid: c449b1f7-2a20-4183-a416-99ebb0c9de12
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.program
+id: taxonomy_vocabulary_program
+entity_type_id: taxonomy_vocabulary
+entity_id: program
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

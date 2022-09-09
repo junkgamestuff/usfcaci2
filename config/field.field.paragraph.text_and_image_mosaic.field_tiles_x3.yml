@@ -1,0 +1,196 @@
+uuid: b73e2088-88aa-4fdf-bbc5-8a8778f946ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tiles_x3
+    - paragraphs.paragraphs_type.text_and_image_mosaic
+    - paragraphs.paragraphs_type.text_and_image_mosaic_tile
+  module:
+    - entity_reference_revisions
+id: paragraph.text_and_image_mosaic.field_tiles_x3
+field_name: field_tiles_x3
+entity_type: paragraph
+bundle: text_and_image_mosaic
+label: Tiles
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      text_and_image_mosaic_tile: text_and_image_mosaic_tile
+    negate: 0
+    target_bundles_drag_drop:
+      50_50_cta_groupings:
+        weight: 57
+        enabled: false
+      50_50_split_cta:
+        weight: 58
+        enabled: false
+      50_50_split_cta_inset:
+        weight: 59
+        enabled: false
+      acalog_example_curriculum:
+        weight: 60
+        enabled: false
+      acalog_link:
+        weight: 61
+        enabled: false
+      acalog_program_learning_outcomes:
+        weight: 62
+        enabled: false
+      accordion:
+        weight: 63
+        enabled: false
+      accordions:
+        weight: 64
+        enabled: false
+      article_cards_featured:
+        weight: 65
+        enabled: false
+      article_cards_manual:
+        weight: 66
+        enabled: false
+      chapter:
+        weight: 67
+        enabled: false
+      embed:
+        weight: 68
+        enabled: false
+      event_cards_automatic:
+        weight: 70
+        enabled: false
+      event_cards_manual:
+        weight: 71
+        enabled: false
+      events_listing:
+        weight: 69
+        enabled: false
+      faculty_directory:
+        weight: 72
+        enabled: false
+      featured_articles:
+        weight: 73
+        enabled: false
+      featured_articles_automatic:
+        weight: 74
+        enabled: false
+      featured_events:
+        weight: 75
+        enabled: false
+      featured_events_manual:
+        weight: 76
+        enabled: false
+      featured_image:
+        weight: 77
+        enabled: false
+      featured_quote:
+        weight: 78
+        enabled: false
+      full_width_cta:
+        weight: 79
+        enabled: false
+      full_width_cta_link:
+        weight: 80
+        enabled: false
+      homepage_hero:
+        weight: 81
+        enabled: false
+      homepage_hero_ambient_video:
+        weight: 82
+        enabled: false
+      homepage_hero_slide:
+        weight: 83
+        enabled: false
+      image_gallery:
+        weight: 84
+        enabled: false
+      image_gallery_slide:
+        weight: 85
+        enabled: false
+      intro_text:
+        weight: 86
+        enabled: false
+      intro_text_title:
+        weight: 87
+        enabled: false
+      link_list:
+        weight: 88
+        enabled: false
+      manual_card_cta_card:
+        weight: 92
+        enabled: false
+      manual_cards_horizontal:
+        weight: 89
+        enabled: false
+      manual_cards_horizontal_card:
+        weight: 90
+        enabled: false
+      manual_cards_w_cta:
+        weight: 91
+        enabled: false
+      manual_cta_grid:
+        weight: 93
+        enabled: false
+      manual_cta_grid_card:
+        weight: 94
+        enabled: false
+      map_with_pins:
+        weight: 95
+        enabled: false
+      news_listing:
+        weight: 96
+        enabled: false
+      program_contact:
+        weight: 97
+        enabled: false
+      program_faculty_listing:
+        weight: 98
+        enabled: false
+      ribbon_carousel:
+        weight: 99
+        enabled: false
+      ribbon_carousel_slide:
+        weight: 100
+        enabled: false
+      rich_text:
+        weight: 101
+        enabled: false
+      slate_form_embed:
+        weight: 102
+        enabled: false
+      social_link:
+        weight: 103
+        enabled: false
+      social_media_feed:
+        weight: 104
+        enabled: false
+      spacer:
+        weight: 105
+        enabled: false
+      stats:
+        weight: 106
+        enabled: false
+      text_and_image_mosaic:
+        weight: 107
+        enabled: false
+      text_and_image_mosaic_tile:
+        weight: 108
+        enabled: true
+      two_column_link_list:
+        weight: 109
+        enabled: false
+      vertical_tabbed_carousel:
+        weight: 110
+        enabled: false
+      vertical_tabbed_carousel_slide:
+        weight: 111
+        enabled: false
+      webform:
+        weight: 112
+        enabled: false
+field_type: entity_reference_revisions

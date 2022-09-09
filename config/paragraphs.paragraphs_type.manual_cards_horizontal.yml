@@ -1,0 +1,10 @@
+uuid: d485b9c1-fad3-4460-94c8-7c7c0b6e4f3c
+langcode: en
+status: true
+dependencies: {  }
+id: manual_cards_horizontal
+label: 'Manual Cards Horizontal'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

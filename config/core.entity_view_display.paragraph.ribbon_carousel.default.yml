@@ -1,0 +1,61 @@
+uuid: ee9dcf94-bb1e-40ec-b385-1c262cb8c16a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ribbon_carousel.field_color_theme
+    - field.field.paragraph.ribbon_carousel.field_description
+    - field.field.paragraph.ribbon_carousel.field_slides
+    - field.field.paragraph.ribbon_carousel.field_title
+    - field.field.paragraph.ribbon_carousel.field_title_highlight
+    - paragraphs.paragraphs_type.ribbon_carousel
+  module:
+    - entity_reference_revisions
+    - options
+    - text
+id: paragraph.ribbon_carousel.default
+targetEntityType: paragraph
+bundle: ribbon_carousel
+mode: default
+content:
+  field_color_theme:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_slides:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title_highlight:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

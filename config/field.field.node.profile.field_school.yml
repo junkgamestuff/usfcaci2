@@ -1,0 +1,29 @@
+uuid: 3e9a1261-dc1a-4978-b9ea-879bab29bc46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_school
+    - node.type.profile
+    - taxonomy.vocabulary.school
+id: node.profile.field_school
+field_name: field_school
+entity_type: node
+bundle: profile
+label: School
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      school: school
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

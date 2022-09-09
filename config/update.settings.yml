@@ -9,5 +9,5 @@ fetch:
   timeout: 30
 notification:
   emails:
-    - mjuarez@coscient.com
+    - usfca-admin@digitalpulp.com
   threshold: all

@@ -1,0 +1,10 @@
+uuid: ed438e78-0a7b-479e-aef9-d9830f05f382
+langcode: en
+status: true
+dependencies: {  }
+id: intro_text
+label: 'Intro Text'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

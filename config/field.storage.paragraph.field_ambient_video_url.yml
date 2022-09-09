@@ -1,0 +1,19 @@
+uuid: ee3740d1-0cd2-48db-8af9-4a8f7317f42d
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_ambient_video_url
+field_name: field_ambient_video_url
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

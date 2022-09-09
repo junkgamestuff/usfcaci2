@@ -1,0 +1,19 @@
+uuid: 84f28f92-3dd9-412a-bfcb-f5c5daddc53b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_eyebrow
+    - node.type.landing
+id: node.landing.field_eyebrow
+field_name: field_eyebrow
+entity_type: node
+bundle: landing
+label: 'Hero Eyebrow'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

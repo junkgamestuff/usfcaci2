@@ -1,0 +1,23 @@
+uuid: 2e9b8442-10e4-4c30-9610-6ae897ad0052
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 16_9_2700x1520
+label: '16:9 (2700x1520)'
+effects:
+  b075689f-2880-4a4f-9e86-d36867b8fdcc:
+    uuid: b075689f-2880-4a4f-9e86-d36867b8fdcc
+    id: image_convert
+    weight: -9
+    data:
+      extension: jpeg
+  23b351aa-1e8f-4131-a6a8-f1ed2d6ccd80:
+    uuid: 23b351aa-1e8f-4131-a6a8-f1ed2d6ccd80
+    id: focal_point_scale_and_crop
+    weight: -10
+    data:
+      width: 2700
+      height: 1520
+      crop_type: focal_point

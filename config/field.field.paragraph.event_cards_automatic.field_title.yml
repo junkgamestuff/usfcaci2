@@ -1,0 +1,19 @@
+uuid: e961b4ed-5c99-4fa1-a2d5-b5b4fbffdad7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.event_cards_automatic
+id: paragraph.event_cards_automatic.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: event_cards_automatic
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

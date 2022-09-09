@@ -1,0 +1,21 @@
+uuid: c5766742-683a-4895-bd5c-1dc3286558c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color
+    - paragraphs.paragraphs_type.full_width_cta_link
+  module:
+    - options
+id: paragraph.full_width_cta_link.field_color
+field_name: field_color
+entity_type: paragraph
+bundle: full_width_cta_link
+label: 'Link Color'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

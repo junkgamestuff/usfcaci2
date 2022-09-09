@@ -1,0 +1,22 @@
+uuid: 46851a1d-0148-468e-86f7-cf1a903153ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.chapter_page
+id: node.chapter_page.promote
+field_name: promote
+entity_type: node
+bundle: chapter_page
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

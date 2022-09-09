@@ -1,0 +1,41 @@
+uuid: f90b6301-d03f-4915-b7e7-8f49a7ab0cc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blog_teasers_automatic.field_title
+    - field.field.paragraph.blog_teasers_automatic.field_title_highlight
+    - field.field.paragraph.blog_teasers_automatic.field_views_reference
+    - paragraphs.paragraphs_type.blog_teasers_automatic
+  module:
+    - viewsreference
+id: paragraph.blog_teasers_automatic.default
+targetEntityType: paragraph
+bundle: blog_teasers_automatic
+mode: default
+content:
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title_highlight:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_views_reference:
+    type: viewsreference_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

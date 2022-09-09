@@ -1,0 +1,85 @@
+uuid: 72c0ee3a-8f22-4bc6-a2a3-38b7b758f6fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_links
+    - paragraphs.paragraphs_type.social_link
+    - paragraphs.paragraphs_type.social_media_feed
+  module:
+    - entity_reference_revisions
+id: paragraph.social_media_feed.field_social_links
+field_name: field_social_links
+entity_type: paragraph
+bundle: social_media_feed
+label: 'Social Links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      social_link: social_link
+    negate: 0
+    target_bundles_drag_drop:
+      event_cards_manual:
+        weight: 21
+        enabled: false
+      featured_articles:
+        weight: 22
+        enabled: false
+      featured_quote:
+        weight: 23
+        enabled: false
+      full_width_cta:
+        weight: 24
+        enabled: false
+      full_width_cta_link:
+        weight: 25
+        enabled: false
+      homepage_hero:
+        weight: 26
+        enabled: false
+      homepage_hero_ambient_video:
+        weight: 27
+        enabled: false
+      homepage_hero_slide:
+        weight: 28
+        enabled: false
+      link_list:
+        weight: 29
+        enabled: false
+      manual_card_cta_card:
+        weight: 30
+        enabled: false
+      manual_cards_w_cta:
+        weight: 31
+        enabled: false
+      map_with_pins:
+        weight: 32
+        enabled: false
+      social_link:
+        weight: 33
+        enabled: true
+      social_media_feed:
+        weight: 20
+        enabled: false
+      stats:
+        weight: 34
+        enabled: false
+      text_and_image_mosaic:
+        weight: 35
+        enabled: false
+      text_and_image_mosaic_tile:
+        weight: 36
+        enabled: false
+      vertical_tabbed_carousel:
+        weight: 37
+        enabled: false
+      vertical_tabbed_carousel_slide:
+        weight: 38
+        enabled: false
+field_type: entity_reference_revisions

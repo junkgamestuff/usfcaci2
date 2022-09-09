@@ -1,0 +1,11 @@
+uuid: fc5e0164-2432-4ba0-8306-e510b2e1b295
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.media_department
+id: taxonomy_term.media_department
+target_entity_type_id: taxonomy_term
+target_bundle: media_department
+default_langcode: site_default
+language_alterable: false

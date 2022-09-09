@@ -1,14 +1,15 @@
 _core:
-  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+  default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
 langcode: en
-uuid: b4d6c2dd-e4c0-48d6-8538-cb6c7085dfea
-name: usfcaci2
-mail: mjuarez@coscient.com
+uuid: 07bb792c-2f88-46f3-b3f1-036823c3e966
+name: 'University of San Francisco'
+mail: website-donotreply@usfca.edu
 slogan: ''
 page:
   403: ''
-  404: ''
-  front: /node
+  404: /node/11779
+  front: /node/1034
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
+mail_notification: ''

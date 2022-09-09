@@ -1,0 +1,29 @@
+uuid: d39e9bc0-110e-4e42-ad2f-9d8ce82b59e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_school
+    - paragraphs.paragraphs_type.school_program_role
+    - taxonomy.vocabulary.school
+id: paragraph.school_program_role.field_school
+field_name: field_school
+entity_type: paragraph
+bundle: school_program_role
+label: School
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      school: school
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

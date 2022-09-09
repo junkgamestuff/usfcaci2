@@ -1,0 +1,36 @@
+uuid: aaddaa3d-1566-4917-9fd3-a0b3f92babd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.stat.field_description
+    - field.field.node.stat.field_display_title
+    - node.type.stat
+  module:
+    - text
+    - user
+id: node.stat.default
+targetEntityType: node
+bundle: stat
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_display_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  content_moderation_control: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: 09ca0712-f94b-491b-8ed5-90ff4269a885
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: kPtJf50pLgVQnJgF3ZJxt9e4aiOCtfNW329uWt6P0a0
+name: Alert
+type: alert
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

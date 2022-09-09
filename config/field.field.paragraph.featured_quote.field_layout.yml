@@ -1,0 +1,23 @@
+uuid: f4b349c8-2054-49c5-836d-9b617be5fd4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_layout
+    - paragraphs.paragraphs_type.featured_quote
+  module:
+    - options
+id: paragraph.featured_quote.field_layout
+field_name: field_layout
+entity_type: paragraph
+bundle: featured_quote
+label: Layout
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

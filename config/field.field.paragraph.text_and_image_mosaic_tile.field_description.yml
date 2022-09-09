@@ -1,0 +1,21 @@
+uuid: b512a912-d335-45f4-a8e9-89667b6e3bb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.text_and_image_mosaic_tile
+  module:
+    - text
+id: paragraph.text_and_image_mosaic_tile.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: text_and_image_mosaic_tile
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

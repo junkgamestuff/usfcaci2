@@ -1,0 +1,52 @@
+uuid: ec60b490-c699-42ee-9ca7-ad7ea2f5ca1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards
+    - paragraphs.paragraphs_type.manual_card_cta_card
+    - paragraphs.paragraphs_type.manual_cards_w_cta
+  module:
+    - entity_reference_revisions
+id: paragraph.manual_cards_w_cta.field_cards
+field_name: field_cards
+entity_type: paragraph
+bundle: manual_cards_w_cta
+label: Cards
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      manual_card_cta_card: manual_card_cta_card
+    negate: 0
+    target_bundles_drag_drop:
+      homepage_hero:
+        weight: 10
+        enabled: false
+      homepage_hero_ambient_video:
+        weight: 11
+        enabled: false
+      homepage_hero_slide:
+        weight: 12
+        enabled: false
+      link_list:
+        weight: 13
+        enabled: false
+      manual_card_cta_card:
+        weight: 14
+        enabled: true
+      manual_cards_w_cta:
+        weight: 9
+        enabled: false
+      vertical_tabbed_carousel:
+        weight: 15
+        enabled: false
+      vertical_tabbed_carousel_slide:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

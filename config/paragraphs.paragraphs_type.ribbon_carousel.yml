@@ -1,0 +1,10 @@
+uuid: 3da51e87-0b29-4b7f-9ba5-d5206c282d84
+langcode: en
+status: true
+dependencies: {  }
+id: ribbon_carousel
+label: 'Ribbon Carousel'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

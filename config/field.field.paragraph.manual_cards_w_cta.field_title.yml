@@ -1,0 +1,19 @@
+uuid: e973bc07-4792-4f95-b2b2-a542685f95b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.manual_cards_w_cta
+id: paragraph.manual_cards_w_cta.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: manual_cards_w_cta
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

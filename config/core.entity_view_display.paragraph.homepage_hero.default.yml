@@ -1,0 +1,25 @@
+uuid: a937796a-859a-4ba2-b983-71dc64877a35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.homepage_hero.field_slides
+    - paragraphs.paragraphs_type.homepage_hero
+  module:
+    - entity_reference_revisions
+id: paragraph.homepage_hero.default
+targetEntityType: paragraph
+bundle: homepage_hero
+mode: default
+content:
+  field_slides:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

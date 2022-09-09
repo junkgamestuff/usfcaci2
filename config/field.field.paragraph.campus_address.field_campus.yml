@@ -1,0 +1,29 @@
+uuid: d12d36b2-a8a7-43b0-afa4-11e8e4cd6de4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_campus
+    - paragraphs.paragraphs_type.campus_address
+    - taxonomy.vocabulary.campus
+id: paragraph.campus_address.field_campus
+field_name: field_campus
+entity_type: paragraph
+bundle: campus_address
+label: Campus
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      campus: campus
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

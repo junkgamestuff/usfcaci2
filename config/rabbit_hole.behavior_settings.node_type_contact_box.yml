@@ -1,0 +1,14 @@
+uuid: c871b305-1a67-4f20-b9f8-de983abc4e5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contact_box
+id: node_type_contact_box
+entity_type_id: node_type
+entity_id: contact_box
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

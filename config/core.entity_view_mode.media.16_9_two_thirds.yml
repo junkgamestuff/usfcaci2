@@ -1,0 +1,10 @@
+uuid: 2515788f-c72b-4e34-924a-ff4fb96be3c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.16_9_two_thirds
+label: '16:9 Two-thirds'
+targetEntityType: media
+cache: true

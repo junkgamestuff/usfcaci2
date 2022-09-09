@@ -1,0 +1,29 @@
+uuid: a9123ccd-bf2a-4426-8ecf-6ca86f9df20c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_department
+    - media.type.document
+    - taxonomy.vocabulary.media_department
+id: media.document.field_media_department
+field_name: field_media_department
+entity_type: media
+bundle: document
+label: 'College / Office'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      media_department: media_department
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

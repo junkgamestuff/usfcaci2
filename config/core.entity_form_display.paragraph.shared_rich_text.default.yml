@@ -1,0 +1,21 @@
+uuid: 6002d1c1-67b7-4327-95e1-7c2979bcca8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.shared_rich_text.field_shared_content
+    - paragraphs.paragraphs_type.shared_rich_text
+id: paragraph.shared_rich_text.default
+targetEntityType: paragraph
+bundle: shared_rich_text
+mode: default
+content:
+  field_shared_content:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

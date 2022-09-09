@@ -1,0 +1,29 @@
+uuid: 8f2024a4-7ed8-4789-91e1-3b8f3494a447
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_subject
+    - media.type.remote_video
+    - taxonomy.vocabulary.media_subject
+id: media.remote_video.field_media_subject
+field_name: field_media_subject
+entity_type: media
+bundle: remote_video
+label: Subject
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      media_subject: media_subject
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

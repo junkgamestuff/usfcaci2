@@ -1,0 +1,19 @@
+uuid: 5af9f38c-17f4-484c-9281-c15f4f859313
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field__information_label
+    - node.type.profile
+id: node.profile.field__information_label
+field_name: field__information_label
+entity_type: node
+bundle: profile
+label: 'Addtional Information Label'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

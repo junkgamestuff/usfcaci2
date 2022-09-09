@@ -1,0 +1,21 @@
+uuid: 640e7c3c-33f4-47ea-a276-736d745de12d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prior_experience
+    - node.type.profile
+  module:
+    - text
+id: node.profile.field_prior_experience
+field_name: field_prior_experience
+entity_type: node
+bundle: profile
+label: 'Prior Experience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

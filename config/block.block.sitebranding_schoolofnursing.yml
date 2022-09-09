@@ -1,0 +1,31 @@
+uuid: 681edcd8-d4d0-44bf-ac8c-337873fbae16
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - usfca_school_context
+  theme:
+    - usfca
+id: sitebranding_schoolofnursing
+theme: usfca
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding - School of Nursing'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility:
+  usfca_schoool_context_condition:
+    id: usfca_schoool_context_condition
+    schools:
+      'School of Nursing & Health Professions': 'School of Nursing & Health Professions'
+    negate: false
+    context_mapping:
+      school: '@usfca_school_context.school_context:school'

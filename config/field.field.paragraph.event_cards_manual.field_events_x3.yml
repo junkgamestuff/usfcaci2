@@ -1,0 +1,29 @@
+uuid: 2f5e721d-465d-4965-899d-e8656b61e27d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_events_x3
+    - node.type.event_detail
+    - paragraphs.paragraphs_type.event_cards_manual
+id: paragraph.event_cards_manual.field_events_x3
+field_name: field_events_x3
+entity_type: paragraph
+bundle: event_cards_manual
+label: Events
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event_detail: event_detail
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

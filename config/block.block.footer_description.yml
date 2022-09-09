@@ -1,0 +1,23 @@
+uuid: d377a06d-661d-474c-9a6f-a8f3d87041ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - usfca
+id: footer_description
+theme: usfca
+region: footer_branding
+weight: -12
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Footer description'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

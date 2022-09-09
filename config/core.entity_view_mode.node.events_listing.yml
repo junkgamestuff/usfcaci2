@@ -1,0 +1,10 @@
+uuid: 07024971-f1d2-4167-b2e3-b62f47167cba
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.events_listing
+label: 'Events Listing'
+targetEntityType: node
+cache: true

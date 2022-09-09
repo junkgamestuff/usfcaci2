@@ -1,0 +1,8 @@
+uuid: 92dca2c8-8a8f-4efe-87fa-cc653b369c64
+langcode: en
+status: true
+dependencies: {  }
+name: Minisite
+vid: minisite
+description: ''
+weight: 0

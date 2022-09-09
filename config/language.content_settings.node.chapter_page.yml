@@ -1,0 +1,11 @@
+uuid: 4c905897-6474-42df-a14e-7281740b21a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.chapter_page
+id: node.chapter_page
+target_entity_type_id: node
+target_bundle: chapter_page
+default_langcode: site_default
+language_alterable: false

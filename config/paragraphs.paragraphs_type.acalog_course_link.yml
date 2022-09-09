@@ -1,0 +1,10 @@
+uuid: 55224d66-be0b-4851-b48c-5b67327c3876
+langcode: en
+status: true
+dependencies: {  }
+id: acalog_course_link
+label: 'Acalog Course Link'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

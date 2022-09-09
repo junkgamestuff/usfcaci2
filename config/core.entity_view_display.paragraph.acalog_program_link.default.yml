@@ -1,0 +1,31 @@
+uuid: e8fe9c51-5e2a-4f4b-aa82-9b0a6a9add68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.acalog_program_link.field_acalog_link_text
+    - field.field.paragraph.acalog_program_link.field_acalog_program_name
+    - paragraphs.paragraphs_type.acalog_program_link
+id: paragraph.acalog_program_link.default
+targetEntityType: paragraph
+bundle: acalog_program_link
+mode: default
+content:
+  field_acalog_link_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_acalog_program_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

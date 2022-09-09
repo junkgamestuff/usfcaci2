@@ -1,0 +1,19 @@
+uuid: f7ae37fc-92b8-4783-9fbf-08bcd2a82e85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_highlight
+    - paragraphs.paragraphs_type.50_50_cta_groupings
+id: paragraph.50_50_cta_groupings.field_title_highlight
+field_name: field_title_highlight
+entity_type: paragraph
+bundle: 50_50_cta_groupings
+label: 'Left Links Title Highlight'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

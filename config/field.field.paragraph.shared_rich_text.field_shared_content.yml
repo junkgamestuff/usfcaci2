@@ -1,0 +1,29 @@
+uuid: 04443eae-959a-4892-8a8f-0ff7c4119b19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_shared_content
+    - node.type.shared_rich_text
+    - paragraphs.paragraphs_type.shared_rich_text
+id: paragraph.shared_rich_text.field_shared_content
+field_name: field_shared_content
+entity_type: paragraph
+bundle: shared_rich_text
+label: 'Shared Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      shared_rich_text: shared_rich_text
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

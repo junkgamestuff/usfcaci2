@@ -1,0 +1,21 @@
+uuid: 85de3574-ec89-402e-b8b5-03ccc75b201c
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.usfca_site_config
+    - field.storage.config_pages.field_acalog_catalog_name
+id: config_pages.usfca_site_config.field_acalog_catalog_name
+field_name: field_acalog_catalog_name
+entity_type: config_pages
+bundle: usfca_site_config
+label: 'Acalog Catalog Name'
+description: 'Set this to the name of the currently active Acalog Catalog Name that should appear on the website (for e.g. Acalog Program Content pages).'
+required: false
+translatable: false
+default_value:
+  -
+    value: '2021-2022 Catalog'
+default_value_callback: ''
+settings: {  }
+field_type: string

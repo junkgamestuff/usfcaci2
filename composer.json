@@ -93,7 +93,8 @@
         "drupal/views_ajax_history": "^1.6",
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/viewsreference": "^2.0@beta",
-        "drupal/mailsystem": "^4.4"
+        "drupal/mailsystem": "^4.4",
+        "drupal/sendgrid_integration": "^2.0@beta"
     },
     "require-dev": {
         "drupal\/core-dev": "^9.2",

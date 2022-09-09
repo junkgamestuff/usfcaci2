@@ -1,0 +1,207 @@
+uuid: eb541dca-bc87-4837-9360-53a9ddc16e66
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.program_faculty_listing
+    - field.field.node.profile.field__information_label
+    - field.field.node.profile.field_additional_information
+    - field.field.node.profile.field_appointments
+    - field.field.node.profile.field_awards_distinctions
+    - field.field.node.profile.field_bio
+    - field.field.node.profile.field_books
+    - field.field.node.profile.field_cv
+    - field.field.node.profile.field_department
+    - field.field.node.profile.field_education
+    - field.field.node.profile.field_email
+    - field.field.node.profile.field_expertise
+    - field.field.node.profile.field_first_name
+    - field.field.node.profile.field_image
+    - field.field.node.profile.field_last_name
+    - field.field.node.profile.field_linkedin
+    - field.field.node.profile.field_links
+    - field.field.node.profile.field_metatag
+    - field.field.node.profile.field_middle_name
+    - field.field.node.profile.field_office
+    - field.field.node.profile.field_phone
+    - field.field.node.profile.field_prior_experience
+    - field.field.node.profile.field_professional_title
+    - field.field.node.profile.field_program_director
+    - field.field.node.profile.field_programs
+    - field.field.node.profile.field_research_areas
+    - field.field.node.profile.field_school
+    - field.field.node.profile.field_school_program_roles
+    - field.field.node.profile.field_school_roles
+    - field.field.node.profile.field_schools
+    - field.field.node.profile.field_section
+    - field.field.node.profile.field_selected_publications
+    - field.field.node.profile.field_ssrn_link
+    - field.field.node.profile.field_suffix
+    - field.field.node.profile.field_twitter
+    - node.type.profile
+  module:
+    - entity_reference_revisions
+    - smart_trim
+    - user
+id: node.profile.program_faculty_listing
+targetEntityType: node
+bundle: profile
+mode: program_faculty_listing
+content:
+  field_bio:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 500
+      trim_type: chars
+      trim_suffix: ...
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
+      trim_options:
+        text: false
+        trim_zero: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_education:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 200
+      trim_type: chars
+      trim_suffix: ...
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
+      trim_options:
+        text: false
+        trim_zero: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_expertise:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 250
+      trim_type: chars
+      trim_suffix: ...
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
+      trim_options:
+        text: false
+        trim_zero: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_first_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_last_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_middle_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_office:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_professional_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_school_program_roles:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_suffix:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+hidden:
+  content_moderation_control: true
+  field__information_label: true
+  field_additional_information: true
+  field_appointments: true
+  field_awards_distinctions: true
+  field_books: true
+  field_cv: true
+  field_department: true
+  field_linkedin: true
+  field_links: true
+  field_metatag: true
+  field_phone: true
+  field_prior_experience: true
+  field_program_director: true
+  field_programs: true
+  field_research_areas: true
+  field_school: true
+  field_school_roles: true
+  field_schools: true
+  field_section: true
+  field_selected_publications: true
+  field_ssrn_link: true
+  field_twitter: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

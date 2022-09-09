@@ -1,0 +1,10 @@
+uuid: 2c66705f-f05d-4bec-bdcf-8962d5a4fde6
+langcode: en
+status: true
+dependencies: {  }
+id: homepage_hero_ambient
+label: 'Homepage Hero Ambient'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

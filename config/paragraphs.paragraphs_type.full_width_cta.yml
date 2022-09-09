@@ -1,0 +1,10 @@
+uuid: 09a07ba6-133e-4623-b566-e95d5d52f344
+langcode: en
+status: true
+dependencies: {  }
+id: full_width_cta
+label: 'Full Width CTA'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,10 @@
+uuid: 74633a4f-02c9-4ca1-802d-10010c8e1fc8
+langcode: en
+status: true
+dependencies: {  }
+id: featured_quote
+label: 'Featured Quote'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

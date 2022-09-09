@@ -1,0 +1,10 @@
+uuid: 288597a3-178a-412c-83ab-bcbc97954543
+langcode: en
+status: true
+dependencies: {  }
+id: faculty_directory
+label: 'Faculty Directory'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

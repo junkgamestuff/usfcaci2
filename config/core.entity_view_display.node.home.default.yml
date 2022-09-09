@@ -1,0 +1,74 @@
+uuid: c807bb72-05b5-4271-a3ad-7a7b9b4c2e21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.home.field_components
+    - field.field.node.home.field_hero
+    - field.field.node.home.field_metatag
+    - field.field.node.home.field_school
+    - field.field.node.home.field_section
+    - node.type.home
+  module:
+    - entity_reference_revisions
+    - metatag
+    - user
+id: node.home.default
+targetEntityType: node
+bundle: home
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_hero:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_metatag:
+    type: metatag_empty_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_school:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

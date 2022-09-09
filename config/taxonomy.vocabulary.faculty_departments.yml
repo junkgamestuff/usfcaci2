@@ -1,0 +1,8 @@
+uuid: 0bf4115b-bb3a-4694-aaca-d6d8f1d6c685
+langcode: en
+status: true
+dependencies: {  }
+name: 'Faculty Departments'
+vid: faculty_departments
+description: ''
+weight: 0

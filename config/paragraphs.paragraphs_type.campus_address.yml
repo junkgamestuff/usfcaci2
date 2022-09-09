@@ -1,0 +1,10 @@
+uuid: a65c4ab7-cb24-4838-9b5f-3391bd8e9b84
+langcode: en
+status: true
+dependencies: {  }
+id: campus_address
+label: 'Campus Address'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

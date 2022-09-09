@@ -1,0 +1,28 @@
+uuid: 5c2ebe8f-240d-4a8c-aa61-f8534dce9b5f
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 16_9_320x180_grayscale
+label: '16:9 (320x180) Grayscale'
+effects:
+  fe685a99-36bb-42b0-9090-1eefe2191d0d:
+    uuid: fe685a99-36bb-42b0-9090-1eefe2191d0d
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 320
+      height: 180
+      crop_type: focal_point
+  eec2df71-8475-49b1-a00a-169b438b1093:
+    uuid: eec2df71-8475-49b1-a00a-169b438b1093
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg
+  67e6f151-17c1-45da-aba1-f13bc844f42b:
+    uuid: 67e6f151-17c1-45da-aba1-f13bc844f42b
+    id: image_desaturate
+    weight: 3
+    data: {  }

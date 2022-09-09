@@ -1,0 +1,10 @@
+uuid: c6019b28-7d70-4fb4-9da1-68ea68dc2d00
+langcode: en
+status: true
+dependencies: {  }
+id: program_faculty_listing
+label: 'Program Faculty Listing'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

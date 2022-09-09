@@ -1,0 +1,378 @@
+uuid: b7a1bf69-6bca-4839-8227-a859ab8b899a
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 18
+template: false
+archive: false
+id: som_application_innovations_in_c
+title: 'SOM - Application - Innovations in Culinary Health Certificate Course'
+description: 'posted on <a href="/management/programs/executive-education/individuals/culinary-health/apply">Apply to the Innovations in Culinary Health Certificate Course</a>'
+category: ''
+elements: |-
+  name:
+    '#type': webform_name
+    '#title': Name
+    '#required': true
+    '#title__access': false
+    '#first__required': true
+    '#middle__access': false
+    '#last__required': true
+    '#suffix__access': false
+    '#degree__access': false
+  email:
+    '#type': email
+    '#title': Email
+    '#required': true
+  markup_02:
+    '#type': webform_markup
+    '#markup': '<h2>Mailing Address</h2>'
+  mailing_address:
+    '#type': address
+    '#title': 'Mailing Address'
+    '#required': true
+    '#field_overrides':
+      givenName: hidden
+      additionalName: hidden
+      familyName: hidden
+      organization: hidden
+      addressLine1: required
+      addressLine2: optional
+      postalCode: required
+      sortingCode: hidden
+      dependentLocality: hidden
+      locality: required
+      administrativeArea: required
+  phone:
+    '#type': tel
+    '#title': Phone
+    '#required': true
+  what_is_your_educational_background_:
+    '#type': textarea
+    '#title': 'What is your educational background? '
+    '#description': 'Please list name of schools, areas of study, and graduation dates.'
+    '#required': true
+  what_is_your_level_of_english_proficiency_:
+    '#type': textfield
+    '#title': 'What is your level of English proficiency?'
+    '#description': |-
+      <br />
+      This program is taught in English, proficiency level e.g. TOEFL, IELTS scores?
+    '#required': true
+  company_name:
+    '#type': textfield
+    '#title': 'Company Name or Organization'
+    '#required': true
+  job_title:
+    '#type': textfield
+    '#title': 'Job Title or Position'
+    '#required': true
+  are_you_usf_alumni_or_a_current_usf_student_:
+    '#type': radios
+    '#title': 'Are you USF alumni or a current USF student?'
+    '#options':
+      Alumni: Alumni
+      Student: Student
+      'No': 'No'
+    '#required': true
+  if_you_are_a_usf_student_or_an_alum_please_provide_the_year_of_y:
+    '#type': textfield
+    '#title': 'If you are a USF student or an alum, please provide the year of your study and degree.'
+  what_industry_profession_are_you_in_:
+    '#type': radios
+    '#title': 'What industry/profession are you in?'
+    '#options':
+      safe_key: Student
+      safe_key1: 'Health conscious individual'
+      safe_key2: 'Hospitality – Chef/Foodservice'
+      safe_key3: 'Hospitality Management'
+      safe_key4: Nursing
+      safe_key5: Nutrition/Dietetics
+      safe_key6: 'Health Coach'
+      safe_key7: Other
+    '#required': true
+  if_you_chose_other_please_specify_the_industry_profession_you_ar:
+    '#type': textfield
+    '#title': 'If you chose Other, please specify the industry/profession you are in.'
+  why_are_you_interested_in_this_lecture_topic_:
+    '#type': radios
+    '#title': 'Why are you interested in this lecture topic?'
+    '#options':
+      safe_key: 'To benefit my personal health'
+      safe_key1: 'To increase my knowledge for work purposes'
+      safe_key2: 'To learn new ways to teach my patients healthy eating'
+      safe_key3: 'To learn new ways to add healthy options to the menu offerings for our clientele'
+      safe_key4: 'To better understand how my food choices can impact the planet'
+      safe_key5: Other
+    '#required': true
+  if_you_chose_other_please_specify_why_you_are_interested_in_this:
+    '#type': textfield
+    '#title': 'If you chose Other, please specify why you are interested in this lecture topic.'
+  do_you_have_access_to_basic_kitchen_equipment_that_will_allow_yo:
+    '#type': radios
+    '#title': 'Do you have access to basic kitchen equipment that will allow you to prepare and taste recipes demonstrated in this class?'
+    '#options':
+      'Yes': 'Yes'
+      'No': 'No'
+    '#required': true
+  have_you_ever_taken_any_formal_classes_in_nutrition_or_cooking_i:
+    '#type': radios
+    '#title': 'Have you ever taken any formal classes in nutrition or cooking in the past?'
+    '#options':
+      safe_key: 'No but I am comfortable with general cooking'
+      safe_key1: 'No, no experience at all'
+      safe_key2: 'Yes, beginner level only'
+      safe_key3: 'Yes, advanced level'
+  what_dietary_pattern_describes_your_typical_eating_style_:
+    '#type': radios
+    '#title': 'What dietary pattern describes your typical eating style?'
+    '#options':
+      safe_key: Omnivore
+      safe_key1: Health-Conscious
+      safe_key2: Vegetarian
+      safe_key3: Vegan
+      safe_key4: 'No special eating-style'
+      safe_key5: Other
+    '#required': true
+  if_you_chose_other_please_specify_the_dietary_pattern_that_best_:
+    '#type': textfield
+    '#title': 'If you chose Other, please specify the dietary pattern that best describes your typical eating style.'
+  how_did_you_hear_about_this_program_:
+    '#type': textfield
+    '#title': 'How did you hear about this program?'
+    '#required': true
+  terms_conditions:
+    '#type': radios
+    '#title': 'Cancellation Policy'
+    '#options':
+      'Yes': 'I agree to the following cancellation policy.'
+    '#required': true
+  markup_01:
+    '#type': webform_markup
+    '#markup': |-
+      <h2>Cancellation Policy</h2>
+
+      <p>If you wish to cancel and receive a full refund, you must submit your request in writing at least 30 days prior to the course start date. If you submit your request 15 to 29 days before the course start date, you will receive a refund equal to 50% of the full course fee. If you submit your request within 14 days of the course start date, you are not eligible to receive a refund. USF Executive Education reserves the right to cancel a course for any reason. This decision will be made 30 days prior to the course start date. If USF Executive Education cancels a course, you will automatically be granted a full refund.</p>
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: url
+  confirmation_url: /management/programs/executive-education/individuals/culinary-health/apply/thank-you
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: Email
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: executiveimmersion@usfca.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: 'Program for Individuals Application'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

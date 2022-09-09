@@ -1,0 +1,25 @@
+uuid: 72acfb0f-4c4b-4af7-b1db-88f8ee2750de
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-academics
+  module:
+    - system
+  theme:
+    - usfca
+id: footer_academics
+theme: usfca
+region: footer_menu
+weight: -5
+provider: null
+plugin: 'system_menu_block:footer-academics'
+settings:
+  id: 'system_menu_block:footer-academics'
+  label: Academics
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

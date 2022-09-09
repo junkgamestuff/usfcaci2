@@ -1,0 +1,25 @@
+uuid: 92c5532d-b3fc-47a4-8ab5-7adc15c03851
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-links
+  module:
+    - system
+  theme:
+    - usfca
+id: footer_links
+theme: usfca
+region: footer_info
+weight: -7
+provider: null
+plugin: 'system_menu_block:footer-links'
+settings:
+  id: 'system_menu_block:footer-links'
+  label: 'Footer Links'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

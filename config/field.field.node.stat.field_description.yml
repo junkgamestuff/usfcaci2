@@ -1,0 +1,21 @@
+uuid: c36443e2-fdb3-4ea9-84c6-98dc038b8694
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.stat
+  module:
+    - text
+id: node.stat.field_description
+field_name: field_description
+entity_type: node
+bundle: stat
+label: Description
+description: 'E.g. "<em>Undergraduates who were the first in their families to attend college</em>"'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

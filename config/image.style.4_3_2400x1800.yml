@@ -1,0 +1,23 @@
+uuid: 7c3c2160-44ed-40e9-ae39-86c566b244c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 4_3_2400x1800
+label: '4:3 (2400x1800)'
+effects:
+  5ec429cf-7fe1-4029-b709-04225465a985:
+    uuid: 5ec429cf-7fe1-4029-b709-04225465a985
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 2400
+      height: 1800
+      crop_type: focal_point
+  56b5f725-6f05-4515-8e35-b4db7c9afa0b:
+    uuid: 56b5f725-6f05-4515-8e35-b4db7c9afa0b
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg

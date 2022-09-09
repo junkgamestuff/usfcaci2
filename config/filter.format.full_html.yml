@@ -1,14 +1,27 @@
-uuid: 353888c7-0c3d-4bdb-bf39-cb192912c163
+uuid: bfa243b0-35fd-4742-b676-b1788fd4577e
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.16_9_full_
+    - core.entity_view_mode.media.16_9_one_third
+    - core.entity_view_mode.media.16_9_quarter
+    - core.entity_view_mode.media.16_9_two_thirds
+    - core.entity_view_mode.media.1_1_full
+    - core.entity_view_mode.media.1_1_mosaic_large
+    - core.entity_view_mode.media.1_1_mosaic_small
+    - core.entity_view_mode.media.2_1_full
+    - core.entity_view_mode.media.3_4_full
+    - core.entity_view_mode.media.3_4_profile
+    - core.entity_view_mode.media.full
   module:
     - editor
-_core:
-  default_config_hash: WNeK5FbcY8pXgEpbD_KgRzlF1-5PL3BJXwqaBctPTqw
+    - linkit
+    - media
+    - token_filter
 name: 'Full HTML'
 format: full_html
-weight: 2
+weight: -10
 filters:
   filter_align:
     id: filter_align
@@ -34,3 +47,49 @@ filters:
     status: true
     weight: 11
     settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <h1> <pre> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <a href hreflang data-entity-substitution data-entity-type data-entity-uuid title class="cta-link"> <ul type class="twoColumnList twoColumnListNoBullet"> <p class="intro-text cta-link cite clear intro-text note">'
+      filter_html_help: true
+      filter_html_nofollow: false
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_view_modes:
+        16_9_full_: 16_9_full_
+        16_9_one_third: 16_9_one_third
+        16_9_quarter: 16_9_quarter
+        16_9_two_thirds: 16_9_two_thirds
+        1_1_full: 1_1_full
+        1_1_mosaic_large: 1_1_mosaic_large
+        1_1_mosaic_small: 1_1_mosaic_small
+        2_1_full: 2_1_full
+        3_4_full: 3_4_full
+        3_4_profile: 3_4_profile
+        full: full
+      allowed_media_types:
+        document: document
+        image: image
+        remote_video: remote_video
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: true
+    weight: 0
+    settings:
+      replace_empty: '0'
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: 0
+    settings:
+      title: true

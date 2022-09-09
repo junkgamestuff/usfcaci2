@@ -1,0 +1,33 @@
+uuid: 14278f80-476d-4741-ac06-98ebaa6b7996
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.college-of-arts-and-sciences
+  module:
+    - system
+    - usfca_school_context
+  theme:
+    - usfca
+id: collegeofartsandsciences
+theme: usfca
+region: header
+weight: -16
+provider: null
+plugin: 'system_menu_block:college-of-arts-and-sciences'
+settings:
+  id: 'system_menu_block:college-of-arts-and-sciences'
+  label: 'College of Arts and Sciences'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 3
+  expand_all_items: true
+visibility:
+  usfca_schoool_context_condition:
+    id: usfca_schoool_context_condition
+    schools:
+      'College of Arts and Sciences': 'College of Arts and Sciences'
+    negate: false
+    context_mapping:
+      school: '@usfca_school_context.school_context:school'

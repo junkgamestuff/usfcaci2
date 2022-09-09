@@ -1,0 +1,29 @@
+uuid: 14ff5e02-9b39-49f7-88ab-1ed89f6edc42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_image
+    - media.type.image
+    - node.type.media_mention
+id: node.media_mention.field_teaser_image
+field_name: field_teaser_image
+entity_type: node
+bundle: media_mention
+label: 'Teaser Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

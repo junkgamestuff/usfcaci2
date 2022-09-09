@@ -1,0 +1,14 @@
+uuid: ac3531bf-a49c-4bdf-8a51-ea46627e4794
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.shared_rich_text
+id: node_type_shared_rich_text
+entity_type_id: node_type
+entity_id: shared_rich_text
+action: access_denied
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

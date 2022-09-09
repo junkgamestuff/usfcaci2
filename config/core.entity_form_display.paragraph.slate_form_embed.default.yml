@@ -1,0 +1,23 @@
+uuid: 71adce9f-9a04-4644-a47a-00111cb9e054
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slate_form_embed.field_embed_code
+    - paragraphs.paragraphs_type.slate_form_embed
+id: paragraph.slate_form_embed.default
+targetEntityType: paragraph
+bundle: slate_form_embed
+mode: default
+content:
+  field_embed_code:
+    type: string_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,19 @@
+uuid: e635a60d-5365-48b9-ac5d-d01d1df93ac5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.50_50_split_cta_inset
+id: paragraph.50_50_split_cta_inset.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: 50_50_split_cta_inset
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

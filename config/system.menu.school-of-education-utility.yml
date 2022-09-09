@@ -1,0 +1,8 @@
+uuid: 0c29b60c-4641-4edf-a028-600156ea9217
+langcode: en
+status: true
+dependencies: {  }
+id: school-of-education-utility
+label: 'School of Education Utility'
+description: ''
+locked: false

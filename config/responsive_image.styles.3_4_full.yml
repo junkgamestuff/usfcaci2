@@ -1,0 +1,41 @@
+uuid: cb2faf4a-fa9d-4262-ba56-50c0df409e8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.3_4_186x248
+    - image.style.3_4_279x372
+    - image.style.3_4_372x496
+    - image.style.3_4_445x593
+    - image.style.3_4_450x600
+    - image.style.3_4_480x640
+    - image.style.3_4_668x890
+    - image.style.3_4_675x900
+    - image.style.3_4_720x960
+    - image.style.3_4_890x1187
+    - image.style.3_4_900x1200
+    - image.style.3_4_960x1280
+id: 3_4_full
+label: '3:4 Full'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: '(min-width:1200px) 50vw, (min-width:768px) 100vw, 100vw'
+      sizes_image_styles:
+        - 3_4_186x248
+        - 3_4_279x372
+        - 3_4_372x496
+        - 3_4_445x593
+        - 3_4_450x600
+        - 3_4_480x640
+        - 3_4_668x890
+        - 3_4_675x900
+        - 3_4_720x960
+        - 3_4_890x1187
+        - 3_4_900x1200
+        - 3_4_960x1280
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+breakpoint_group: responsive_image
+fallback_image_style: 3_4_960x1280

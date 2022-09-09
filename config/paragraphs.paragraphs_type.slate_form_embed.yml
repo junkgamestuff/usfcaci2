@@ -1,0 +1,10 @@
+uuid: e1e601f1-c536-4322-a8d6-bc37ac785cfe
+langcode: en
+status: true
+dependencies: {  }
+id: slate_form_embed
+label: 'Slate Form Embed'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

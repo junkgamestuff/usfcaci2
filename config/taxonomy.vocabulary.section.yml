@@ -1,0 +1,8 @@
+uuid: 1f507336-9fd6-4eae-ae3c-265b7db56fa9
+langcode: en
+status: true
+dependencies: {  }
+name: Section
+vid: section
+description: 'Workbench Access content access control. Not displayed on the website.'
+weight: 0

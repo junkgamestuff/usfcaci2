@@ -1,0 +1,14 @@
+uuid: 485d4ed7-643e-40a0-81d5-bbc1e45ddb7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.degree_type
+id: taxonomy_vocabulary_degree_type
+entity_type_id: taxonomy_vocabulary
+entity_id: degree_type
+action: access_denied
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

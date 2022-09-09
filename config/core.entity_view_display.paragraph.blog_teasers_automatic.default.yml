@@ -1,0 +1,43 @@
+uuid: 8d2a06e5-96e4-40fb-b3af-0ba218314fad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blog_teasers_automatic.field_title
+    - field.field.paragraph.blog_teasers_automatic.field_title_highlight
+    - field.field.paragraph.blog_teasers_automatic.field_views_reference
+    - paragraphs.paragraphs_type.blog_teasers_automatic
+  module:
+    - viewsreference
+id: paragraph.blog_teasers_automatic.default
+targetEntityType: paragraph
+bundle: blog_teasers_automatic
+mode: default
+content:
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title_highlight:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_views_reference:
+    type: viewsreference_formatter
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

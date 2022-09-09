@@ -1,0 +1,19 @@
+uuid: d5622ec3-e03b-46c4-8e54-0445e883db39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.50_50_cta_groupings
+id: paragraph.50_50_cta_groupings.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: 50_50_cta_groupings
+label: 'Left Links Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

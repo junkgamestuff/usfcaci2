@@ -1,0 +1,14 @@
+uuid: a7acb6cc-d12d-4113-a86d-d94f305a55d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.campus
+id: taxonomy_vocabulary_campus
+entity_type_id: taxonomy_vocabulary
+entity_id: campus
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

@@ -1,0 +1,40 @@
+uuid: e6b05348-af2a-445c-8baf-7787bc0ded8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.acalog_course_link.field_acalog_course_code
+    - field.field.paragraph.acalog_course_link.field_acalog_course_prefix
+    - field.field.paragraph.acalog_course_link.field_acalog_link_text
+    - paragraphs.paragraphs_type.acalog_course_link
+id: paragraph.acalog_course_link.default
+targetEntityType: paragraph
+bundle: acalog_course_link
+mode: default
+content:
+  field_acalog_course_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_acalog_course_prefix:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_acalog_link_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

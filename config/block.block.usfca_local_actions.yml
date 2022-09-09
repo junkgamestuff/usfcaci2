@@ -1,0 +1,20 @@
+uuid: 0f3f793c-0453-416c-8a27-64b7cd4d5623
+langcode: en
+status: true
+dependencies:
+  theme:
+    - usfca
+_core:
+  default_config_hash: ABoKnlk20KHqZRw_2Qr4EvaFvH4lnQ2nuhunHeE1JIU
+id: usfca_local_actions
+theme: usfca
+region: content
+weight: -18
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

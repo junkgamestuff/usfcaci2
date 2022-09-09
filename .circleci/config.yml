@@ -77,22 +77,22 @@ jobs:
           paths:
             - bash_env.txt
 
-      - run:
-          name: Install Gulp
-          command: sudo npm install -g gulp
+      #- run:
+      #    name: Install Gulp
+      #    command: sudo npm install -g gulp
 
       - run:
           name: Install Deps
           command: cd web/themes/custom/usfca && npm install
 
-      #- save_cache:
-      #      key: dependency-cache-{{ checksum "web/themes/custom/myusf/package.json" }}
-      #      paths:
-      #        - ./web/themes/custom/myusf/node_modules
-      
-      - run:
-          name: Compile assets
-          command: cd web/themes/custom/usfca && npm ci
+      - save_cache:
+            key: dependency-cache-{{ checksum "web/themes/custom/myusf/package.json" }}
+            paths:
+              - ./web/themes/custom/usfca/node_modules
+
+      #- run:
+      #    name: Compile assets
+      #   command: cd web/themes/custom/usfca && npm ci
 
   static_tests:
     <<: *defaults

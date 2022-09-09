@@ -1,0 +1,19 @@
+uuid: 00e9ad98-fcb5-4eb2-b7e4-73b96574d19b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gps_default_refinement
+    - node.type.search_results
+id: node.search_results.field_gps_default_refinement
+field_name: field_gps_default_refinement
+entity_type: node
+bundle: search_results
+label: 'Google Programmable Search Default Refinement'
+description: "<p>Optionally populate this field to limit search results to a refinement: this must match values already present in the Google Programmable Search Engine back-end. At the present time, valid values for these refinements are the following exact text: \"College of Arts and Sciences\", \"School of Education\", \"School of Law\", \"School of Management\", \"School of Nursing\".</p>\r\n\r\n<p>NOTE: <strong>omit</strong> the quotation marks, place only the text / name of the school into this field.</p>\r\n\r\nIf you leave this field blank then by default all USFCA results will be displayed (e.g. for sitewide search, leave this field blank)."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

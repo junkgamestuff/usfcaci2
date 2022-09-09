@@ -1,0 +1,19 @@
+uuid: b85f123b-6b5a-415e-84d4-b06f47278d8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.manual_cta_grid_card
+id: paragraph.manual_cta_grid_card.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: manual_cta_grid_card
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

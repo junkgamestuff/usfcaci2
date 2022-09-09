@@ -1,0 +1,11 @@
+uuid: ad7a7b66-923e-4d27-94eb-bbdde121bef1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.career_goals
+id: taxonomy_term.career_goals
+target_entity_type_id: taxonomy_term
+target_bundle: career_goals
+default_langcode: site_default
+language_alterable: false

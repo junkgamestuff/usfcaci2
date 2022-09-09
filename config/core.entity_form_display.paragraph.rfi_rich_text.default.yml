@@ -1,0 +1,25 @@
+uuid: 4b5d8687-f3ad-4374-81c8-7edb7e82c771
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.rfi_rich_text.field_rich_text
+    - paragraphs.paragraphs_type.rfi_rich_text
+  module:
+    - text
+id: paragraph.rfi_rich_text.default
+targetEntityType: paragraph
+bundle: rfi_rich_text
+mode: default
+content:
+  field_rich_text:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

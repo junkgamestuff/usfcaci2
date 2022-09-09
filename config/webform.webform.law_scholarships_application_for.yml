@@ -1,0 +1,302 @@
+uuid: 93653f71-39bf-4a51-afa9-7e9da8d2256e
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 21
+template: false
+archive: false
+id: law_scholarships_application_for
+title: 'Law Scholarships Application Form'
+description: ''
+category: ''
+elements: |-
+  heading:
+    '#type': webform_markup
+    '#markup': '<h3>Apply for Scholarships</h3>'
+  daniel_levine_cook_scholarship:
+    '#type': radios
+    '#title': 'Daniel Levine Cook Scholarship'
+    '#options': yes_no
+  daniel_levine_cook:
+    '#type': webform_markup
+    '#markup': 'This scholarship was established by a grant from the Daniel Levine Cook Fund of the Jewish Community Federation Endowment Fund, upon recommendation of David, Phyllis, and Anne Cook, in loving memory of Daniel Cook, Class of 1992. Priority for this scholarship is for a Jewish law student with financial need who shows academic promise. <strong>Award amount is $20,000</strong>. Essay question: Daniel Levine Cook was a sports fanatic, a Dead-Head and a passionate supporter of Israel. Please describe how your goals, interests, and influences may intersect with his experience.'
+  daniel_j_curtin_jr_scholarship:
+    '#type': radios
+    '#title': 'Daniel J. Curtin, Jr. Scholarship'
+    '#options': yes_no
+  daniel_j_curtin_jr:
+    '#type': webform_markup
+    '#markup': 'This scholarship was established in memory of Daniel Curtin, Jr. &#39;57, who was an internationally known land use practitioner, former city attorney, and mentor to countless land use attorneys and planners. The Scholarship is awarded to a second or third year law student(s) with demonstrated interest in municipal or land use law and academic scholarship. <strong>Award amount is up to $11,000 and may be divided between two applicants</strong>. Please submit a one-page typed essay demonstrating applicant&rsquo;s interest in municipal law or land use law.'
+  donald_b_king_class_of_1958_scholarship_for_family_law:
+    '#type': radios
+    '#title': 'Donald B. King Class of 1958 Scholarship for Family Law'
+    '#options': yes_no
+  donald_b_king:
+    '#type': webform_markup
+    '#markup': 'This scholarship was established by The Honorable Donald B. King &#39;58 and his wife, Virginia King, to support one or more continuing law students. The scholarship is open to students in good standing with financial need who show a demonstrated interest in pursuing a career in family law. Please submit a one-page essay demonstrating the applicant&#39;s interest and experience in family law, including any classes taken, work experience in family law, etc. <strong>Award amount is up to $10,000 to $15,000</strong> per recipient, depending on the number of awardees.'
+  agnes_o_brien_smith_scholarship:
+    '#type': radios
+    '#title': 'Agnes O’Brien Smith Scholarship'
+    '#options': yes_no
+  agnes_o_brien:
+    '#type': webform_markup
+    '#markup': 'This scholarship was established in honor of Agnes O&#39;Brien Smith and is awarded to second and third year law students based on financial need, academic scholarship, leadership, and community service. O&#39;Brien Smith, Class of 1941, was an admired jurist and lawyer. <strong>Award amount is $12,000</strong> and may be divided to create multiple awards. One page, typed essay: Which of your life experiences inspired you to go to law school?'
+  douglas_m_raskin_scholarship:
+    '#type': radios
+    '#title': 'Douglas M Raskin Scholarship'
+    '#options': yes_no
+  douglas_m_raskin:
+    '#type': webform_markup
+    '#markup': 'This scholarship was established by classmates and friends of Douglas Michael Raskin, Class of 1987, who died in 1994 at the age of 33 while climbing Mount Fuji in Japan. The scholarship is awarded to student(s) who will have completed at least two full years of Law School by the end of the Spring 2022 semester, and who exemplifies Doug&rsquo;s spirit of adventure, sense of humor, love of life, and caring for others. <strong>Award amount is $4,000</strong>. Two page typed letter addressing how the applicant&rsquo;s own life adheres to the principles that were important to Doug: past travel experiences and adventure, interest in helping others, participation in athletics and recreational activities, importance of friends and family, and scholastic achievement.'
+  john_scully_memorial_trust_scholarship:
+    '#type': radios
+    '#title': 'John Scully Memorial Trust Scholarship'
+    '#options': yes_no
+  john_scully:
+    '#type': webform_markup
+    '#markup': 'Established in memory of John C. Scully &rsquo;91 who was killed in the 101 California Street mass shooting on July 1, 1993, while shielding his wife from gunfire. The fund was established by John&rsquo;s classmates, his wife, Michelle Scully Hobus &lsquo;92, and his parents, Dr. and Mrs. Neil Scully. The scholarship celebrates John&rsquo;s passion for the ocean and outdoors. <strong>Award amount is $8,000</strong>. Please submit a two-page typed letter addressing how you enjoy outdoor activities and how your own life adheres to the values important to John.'
+  paul_w_vapnek_64_ethics_scholarship:
+    '#type': radios
+    '#title': 'Paul W. Vapnek ''64 Ethics Scholarship'
+    '#options': yes_no
+  paul_w_vapnek:
+    '#type': webform_markup
+    '#markup': 'Paul W. Vapnek &#39;64 was an extraordinarily well respected expert in legal ethics, a field that addresses the rules that govern attorney conduct. Legal ethicists educate and advise lawyers about what they may and may not do, represent them when they get into trouble, and help to draft the rules that regulate their behavior. The Paul W. Vapnek &rsquo;64 Ethics Scholarship is awarded each year to a student interested in exploring this field of the law, whether or not the student ultimately decides on it as his or her area of practice. This is a general scholarship for a student with a demonstrated commitment to community service and a record of academic success in law school. A minimum of a 2.9 GPA is required for all applicants. <strong>Award amount is $7,300</strong>. Please write a one-page, typed essay about why this area of the law appeals to you, include a brief discussion of one legal ethics issue you find particularly interesting and a paragraph about your commitment to community service.'
+  first_name:
+    '#type': textfield
+    '#title': 'First Name'
+    '#required': true
+  last_name:
+    '#type': textfield
+    '#title': 'Last Name'
+    '#required': true
+  phone:
+    '#type': textfield
+    '#title': Phone
+    '#required': true
+  email:
+    '#type': email
+    '#title': Email
+    '#required': true
+  street:
+    '#type': textfield
+    '#title': Street
+    '#required': true
+  city:
+    '#type': textfield
+    '#title': City
+    '#required': true
+  state:
+    '#type': select
+    '#title': State
+    '#options': state_names
+    '#required': true
+  zip_code:
+    '#type': textfield
+    '#title': 'Zip Code'
+    '#required': true
+  year:
+    '#type': select
+    '#title': Year
+    '#description': 'Applicants must have completed one year of J.D. study at USF School of Law by the end of Spring 2022, and be enrolled at the School of Law during 2022-23.'
+    '#options':
+      1L: 1L
+      2L: 2L
+      3L: 3L
+    '#required': true
+  student_id:
+    '#type': textfield
+    '#title': 'Student ID'
+    '#required': true
+  i_confirm_that_i_have_a_fafsa_on_file_or_have_made_alternative_a:
+    '#type': radios
+    '#title': 'I confirm that I have a FAFSA on file or have made alternative arrangements with the School of Law Financial Aid Office to satisfy the financial need requirement, and consent to the scholarship committees (made up of alumni, donors, faculty and administrators) reading all of my application materials.'
+    '#options':
+      'Yes': 'Yes'
+    '#required': true
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

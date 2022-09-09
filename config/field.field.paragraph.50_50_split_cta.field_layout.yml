@@ -1,0 +1,23 @@
+uuid: 11b8e2dd-7e9b-4b70-902a-5a28371d70e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_layout
+    - paragraphs.paragraphs_type.50_50_split_cta
+  module:
+    - options
+id: paragraph.50_50_split_cta.field_layout
+field_name: field_layout
+entity_type: paragraph
+bundle: 50_50_split_cta
+label: Layout
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

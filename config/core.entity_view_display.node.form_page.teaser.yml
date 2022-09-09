@@ -1,0 +1,37 @@
+uuid: c6363526-e647-4dd7-b0a4-182451075345
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.form_page.field_components
+    - field.field.node.form_page.field_image
+    - field.field.node.form_page.field_metatag
+    - field.field.node.form_page.field_school
+    - field.field.node.form_page.field_section
+    - node.type.form_page
+  module:
+    - user
+id: node.form_page.teaser
+targetEntityType: node
+bundle: form_page
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_components: true
+  field_image: true
+  field_metatag: true
+  field_school: true
+  field_section: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: d05772cb-969a-4257-bd5d-626b2ce4b577
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_acalog_program_name
+    - paragraphs.paragraphs_type.acalog_program_link
+id: paragraph.acalog_program_link.field_acalog_program_name
+field_name: field_acalog_program_name
+entity_type: paragraph
+bundle: acalog_program_link
+label: 'Acalog Program Name'
+description: 'Enter the Program name exactly as it appears in Acalog. E.g. "Computer Science (4+1), BS/MS".'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

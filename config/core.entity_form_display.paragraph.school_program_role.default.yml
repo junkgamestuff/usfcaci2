@@ -1,0 +1,39 @@
+uuid: c9c0a164-709e-4121-aea2-f7f6d532b939
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.school_program_role.field_program
+    - field.field.paragraph.school_program_role.field_role
+    - field.field.paragraph.school_program_role.field_school
+    - paragraphs.paragraphs_type.school_program_role
+id: paragraph.school_program_role.default
+targetEntityType: paragraph
+bundle: school_program_role
+mode: default
+content:
+  field_program:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_role:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_school:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

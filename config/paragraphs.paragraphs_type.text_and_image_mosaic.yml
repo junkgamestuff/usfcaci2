@@ -1,0 +1,10 @@
+uuid: ecc506a8-7e6f-40f7-be7d-6d631fd68b42
+langcode: en
+status: true
+dependencies: {  }
+id: text_and_image_mosaic
+label: 'Text and Image Mosaic'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

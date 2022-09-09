@@ -1,0 +1,10 @@
+uuid: fcbd09a0-bca4-4a83-b43d-0ca232783669
+langcode: en
+status: true
+dependencies: {  }
+id: featured_events_manual
+label: 'Featured Events - Manual'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

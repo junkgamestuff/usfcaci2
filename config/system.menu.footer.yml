@@ -1,10 +1,10 @@
-uuid: bb9fc6b9-56d7-4c85-9d12-9d1a9aa30f20
+uuid: 78c5d1aa-6e0f-422b-a9c7-0e2ee5a3024c
 langcode: en
 status: true
 dependencies: {  }
 _core:
   default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
 id: footer
-label: Footer
+label: 'Footer - Connect'
 description: 'Site information links'
 locked: true

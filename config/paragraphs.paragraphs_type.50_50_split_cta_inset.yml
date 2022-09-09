@@ -1,0 +1,10 @@
+uuid: 059714b5-13a9-412f-a0b5-88309eafeae5
+langcode: en
+status: true
+dependencies: {  }
+id: 50_50_split_cta_inset
+label: '50-50 Split CTA Inset'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

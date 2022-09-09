@@ -1,0 +1,10 @@
+uuid: 56220aa0-dcef-4f90-b4cc-1f52fbcd746a
+langcode: en
+status: true
+dependencies: {  }
+id: manual_card_cta_card
+label: 'Manual Card CTA Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,29 @@
+uuid: 4ac665f9-e92d-4bb1-859d-d18a4c876be3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_subject
+    - media.type.document
+    - taxonomy.vocabulary.media_subject
+id: media.document.field_media_subject
+field_name: field_media_subject
+entity_type: media
+bundle: document
+label: Subject
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      media_subject: media_subject
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

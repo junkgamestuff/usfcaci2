@@ -1,0 +1,104 @@
+uuid: 103681b1-ee20-4349-9fb4-cfde9a9ab378
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.media_mention.field_category
+    - field.field.node.media_mention.field_featured
+    - field.field.node.media_mention.field_link
+    - field.field.node.media_mention.field_publication
+    - field.field.node.media_mention.field_school
+    - field.field.node.media_mention.field_section
+    - field.field.node.media_mention.field_teaser_description
+    - field.field.node.media_mention.field_teaser_image
+    - field.field.node.media_mention.field_teaser_title
+    - field.field.node.media_mention.field_topics
+    - node.type.media_mention
+  module:
+    - link
+    - text
+    - user
+id: node.media_mention.teaser
+targetEntityType: node
+bundle: media_mention
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_publication:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_teaser_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_teaser_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_teaser_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_topics:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+hidden:
+  field_featured: true
+  field_featured_event: true
+  field_school: true
+  field_section: true
+  langcode: true
+  search_api_excerpt: true

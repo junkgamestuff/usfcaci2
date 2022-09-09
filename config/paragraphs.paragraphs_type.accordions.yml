@@ -1,0 +1,10 @@
+uuid: 3dd2bc7f-19d9-4e9c-bd8f-38e126667070
+langcode: en
+status: true
+dependencies: {  }
+id: accordions
+label: Accordions
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

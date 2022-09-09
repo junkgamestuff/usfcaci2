@@ -1,0 +1,20 @@
+uuid: 6895722c-7aa5-40fb-8b05-49bc93e8b78b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - usfca
+id: breadcrumbs_2
+theme: usfca
+region: content_extra
+weight: -15
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

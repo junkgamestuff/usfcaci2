@@ -1,0 +1,14 @@
+uuid: 0d4d1cab-777b-4ce2-a845-4ebe5589b95c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.minisite_home
+id: node_type_minisite_home
+entity_type_id: node_type
+entity_id: minisite_home
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

@@ -1,0 +1,39 @@
+uuid: d2e7aeaf-12d0-4b07-8705-4ea0b4d71f57
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.contact_box.field_campus_addresses
+    - field.field.node.contact_box.field_contact_name
+    - field.field.node.contact_box.field_email
+    - field.field.node.contact_box.field_hours
+    - field.field.node.contact_box.field_phone
+    - field.field.node.contact_box.field_professional_title
+    - node.type.contact_box
+  module:
+    - user
+id: node.contact_box.teaser
+targetEntityType: node
+bundle: contact_box
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_campus_addresses: true
+  field_contact_name: true
+  field_email: true
+  field_hours: true
+  field_phone: true
+  field_professional_title: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: 6c4e90d3-441f-48c8-a788-1e169ca2c7cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_main_page_link
+    - taxonomy.vocabulary.program
+  module:
+    - link
+id: taxonomy_term.program.field_main_page_link
+field_name: field_main_page_link
+entity_type: taxonomy_term
+bundle: program
+label: 'Program Home'
+description: 'Input the <em>Program Home</em> node associated with this program.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 1
+field_type: link

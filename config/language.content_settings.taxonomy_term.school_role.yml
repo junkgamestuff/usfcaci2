@@ -1,0 +1,11 @@
+uuid: 155852e7-43e5-414d-96e5-d76aa633f076
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.school_role
+id: taxonomy_term.school_role
+target_entity_type_id: taxonomy_term
+target_bundle: school_role
+default_langcode: site_default
+language_alterable: false

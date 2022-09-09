@@ -1,0 +1,21 @@
+uuid: 645601c3-3e27-4199-ba14-b27e68a22216
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_description
+    - node.type.media_mention
+  module:
+    - text
+id: node.media_mention.field_teaser_description
+field_name: field_teaser_description
+entity_type: node
+bundle: media_mention
+label: 'Teaser Description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

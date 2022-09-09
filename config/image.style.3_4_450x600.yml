@@ -1,0 +1,23 @@
+uuid: f14ad589-4515-444f-9c89-aba840d1732a
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 3_4_450x600
+label: '3:4 (450x600)'
+effects:
+  502c09f8-afa4-4476-8e53-0d581cc98bc6:
+    uuid: 502c09f8-afa4-4476-8e53-0d581cc98bc6
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 450
+      height: 600
+      crop_type: focal_point
+  e11b4c92-637d-40ff-bdcc-430802379367:
+    uuid: e11b4c92-637d-40ff-bdcc-430802379367
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg

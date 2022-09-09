@@ -1,0 +1,25 @@
+uuid: 92e9fd4c-df5a-48cd-8d17-5d01f8379c31
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: L1l6K9atQ9wCCaJl8D9d8mLT-A2CLprporNb7ZZas6U
+name: 16_9_1800x1013
+label: '16:9 (1800×1013)'
+effects:
+  14c44656-fb0e-4071-a303-638b112437d7:
+    uuid: 14c44656-fb0e-4071-a303-638b112437d7
+    id: focal_point_scale_and_crop
+    weight: -10
+    data:
+      width: 1800
+      height: 1013
+      crop_type: focal_point
+  9ea5e75e-cf82-4dad-899d-ccbcfe38c621:
+    uuid: 9ea5e75e-cf82-4dad-899d-ccbcfe38c621
+    id: image_convert
+    weight: -9
+    data:
+      extension: jpeg

@@ -1,0 +1,10 @@
+uuid: 953a069a-977f-4ed6-ad2d-6f8d1e3b4f68
+langcode: en
+status: true
+dependencies: {  }
+id: article_cards_manual
+label: 'Article Cards - Manual'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

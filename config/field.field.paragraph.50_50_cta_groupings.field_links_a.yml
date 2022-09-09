@@ -1,0 +1,23 @@
+uuid: f5167319-8426-481e-a145-9dedcc97bf00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_links_a
+    - paragraphs.paragraphs_type.50_50_cta_groupings
+  module:
+    - link
+id: paragraph.50_50_cta_groupings.field_links_a
+field_name: field_links_a
+entity_type: paragraph
+bundle: 50_50_cta_groupings
+label: 'Left Links'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

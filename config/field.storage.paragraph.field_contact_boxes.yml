@@ -1,0 +1,20 @@
+uuid: 857f5d43-7c0e-4b5c-a9b9-a7d32c245b43
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - paragraphs
+id: paragraph.field_contact_boxes
+field_name: field_contact_boxes
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

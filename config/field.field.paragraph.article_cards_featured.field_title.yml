@@ -1,0 +1,19 @@
+uuid: c7c4bf8c-0496-4053-adb0-41a944dc2274
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.article_cards_featured
+id: paragraph.article_cards_featured.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: article_cards_featured
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,72 @@
+uuid: a3a6b5bf-4e5e-44f7-9e42-075edb951312
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - media.type.image
+  module:
+    - feeds_ex
+    - media
+label: 'Blog Media'
+id: blog_media
+description: ''
+help: ''
+import_period: 3600
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: xml
+parser_configuration:
+  context:
+    value: /usfBlogs/item
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+  use_tidy: false
+processor: 'entity:media'
+processor_configuration:
+  values:
+    bundle: image
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  media:
+    label: media
+    machine_name: media
+    value: media
+    raw: false
+    inner: false
+    type: xml
+mappings:
+  -
+    target: field_media_image
+    map:
+      target_id: media
+      alt: ''
+      title: ''
+    settings:
+      language: ''
+      reference_by: fid
+      existing: '2'
+      autocreate: 0
+  -
+    target: name
+    map:
+      value: media
+    settings:
+      language: null
+    unique:
+      value: '1'

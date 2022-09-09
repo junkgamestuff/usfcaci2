@@ -1,0 +1,21 @@
+uuid: f6510720-ccdb-4d3e-ae9b-1f37c7cd9b1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bio
+    - node.type.profile
+  module:
+    - text
+id: node.profile.field_bio
+field_name: field_bio
+entity_type: node
+bundle: profile
+label: Biography
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,23 @@
+uuid: 4ae27dc9-4895-47f9-a3e4-71a321c7bef4
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 2_1_320x160
+label: '2:1 (320x160)'
+effects:
+  f6d7f319-0e6a-4730-98e8-93bbeb7db699:
+    uuid: f6d7f319-0e6a-4730-98e8-93bbeb7db699
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 320
+      height: 160
+      crop_type: focal_point
+  ebea12e1-1430-446d-9722-9ca257f7df05:
+    uuid: ebea12e1-1430-446d-9722-9ca257f7df05
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg

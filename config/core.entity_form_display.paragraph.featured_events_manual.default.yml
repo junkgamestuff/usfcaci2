@@ -1,0 +1,25 @@
+uuid: 69f494e5-07e8-49d1-be30-8299b55baea3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_events_manual.field_events_x4
+    - paragraphs.paragraphs_type.featured_events_manual
+id: paragraph.featured_events_manual.default
+targetEntityType: paragraph
+bundle: featured_events_manual
+mode: default
+content:
+  field_events_x4:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,73 @@
+uuid: 7adfdb3b-f7b9-4dba-b62e-8d37810aed42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_full_width_cta_link
+    - paragraphs.paragraphs_type.full_width_cta
+    - paragraphs.paragraphs_type.full_width_cta_link
+  module:
+    - entity_reference_revisions
+id: paragraph.full_width_cta.field_full_width_cta_link
+field_name: field_full_width_cta_link
+entity_type: paragraph
+bundle: full_width_cta
+label: 'CTA Links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      full_width_cta_link: full_width_cta_link
+    negate: 0
+    target_bundles_drag_drop:
+      featured_quote:
+        weight: 17
+        enabled: false
+      full_width_cta:
+        weight: 16
+        enabled: false
+      full_width_cta_link:
+        weight: 18
+        enabled: true
+      homepage_hero:
+        weight: 19
+        enabled: false
+      homepage_hero_ambient_video:
+        weight: 20
+        enabled: false
+      homepage_hero_slide:
+        weight: 21
+        enabled: false
+      link_list:
+        weight: 22
+        enabled: false
+      manual_card_cta_card:
+        weight: 23
+        enabled: false
+      manual_cards_w_cta:
+        weight: 24
+        enabled: false
+      map_with_pins:
+        weight: 25
+        enabled: false
+      stats:
+        weight: 26
+        enabled: false
+      text_and_image_mosaic:
+        weight: 27
+        enabled: false
+      text_and_image_mosaic_tile:
+        weight: 28
+        enabled: false
+      vertical_tabbed_carousel:
+        weight: 29
+        enabled: false
+      vertical_tabbed_carousel_slide:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

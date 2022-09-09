@@ -1,0 +1,10 @@
+uuid: 77084ce5-8e99-483a-818b-64eb2234adf1
+langcode: en
+status: true
+dependencies: {  }
+id: acalog_example_curriculum
+label: 'Acalog - Example Curriculum'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

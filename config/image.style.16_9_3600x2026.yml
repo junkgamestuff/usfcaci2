@@ -1,0 +1,23 @@
+uuid: 5b8c22e9-88df-40ac-9353-91dc0ddd9ba2
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 16_9_3600x2026
+label: '16:9 (3600x2026)'
+effects:
+  8d284a31-9d32-4c3c-abc4-b07ef96e733c:
+    uuid: 8d284a31-9d32-4c3c-abc4-b07ef96e733c
+    id: image_convert
+    weight: 1
+    data:
+      extension: jpeg
+  1b96647a-d775-439c-aa44-d3a72ccedb69:
+    uuid: 1b96647a-d775-439c-aa44-d3a72ccedb69
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 3600
+      height: 2026
+      crop_type: focal_point

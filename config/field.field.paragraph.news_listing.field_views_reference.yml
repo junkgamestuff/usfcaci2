@@ -1,0 +1,72 @@
+uuid: e4cccdf7-6703-4c0d-86fd-059a148ac681
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_views_reference
+    - paragraphs.paragraphs_type.news_listing
+    - views.view.news_listing
+  module:
+    - viewsreference
+id: paragraph.news_listing.field_views_reference
+field_name: field_views_reference
+entity_type: paragraph
+bundle: news_listing
+label: 'News Listing'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    display_id: default
+    data: 'a:5:{s:8:"argument";N;s:5:"limit";N;s:6:"offset";N;s:5:"title";N;s:5:"pager";N;}'
+    target_uuid: 23de897c-a17d-42cf-88ce-6bc3c5134b06
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    default: default
+    rest_export: 0
+    block: 0
+    page: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    news_listing: news_listing
+    alerts: 0
+    article_cards_featured: 0
+    block_content: 0
+    blog_teasers_automatic: 0
+    content: 0
+    content_recent: 0
+    events_listing: 0
+    event_cards: 0
+    faculty_directory: 0
+    featured_articles: 0
+    featured_events: 0
+    feeds_feed: 0
+    files: 0
+    find_your_program: 0
+    frontpage: 0
+    media: 0
+    media_library: 0
+    moderated_content: 0
+    program_faculty_listing: 0
+    redirect: 0
+    scheduler_scheduled_content: 0
+    taxonomy_term: 0
+    test: 0
+    user_admin_people: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    argument: argument
+    limit: 0
+    offset: 0
+    title: 0
+    pager: 0
+field_type: viewsreference

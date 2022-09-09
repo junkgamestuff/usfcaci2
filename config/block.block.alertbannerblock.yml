@@ -1,0 +1,20 @@
+uuid: 42d254a1-fcc7-456e-a672-3881cb500220
+langcode: en
+status: true
+dependencies:
+  module:
+    - usfca_alert
+  theme:
+    - usfca
+id: alertbannerblock
+theme: usfca
+region: header
+weight: -18
+provider: null
+plugin: alert_banner_block
+settings:
+  id: alert_banner_block
+  label: 'Alert banner block'
+  label_display: '0'
+  provider: usfca_alert
+visibility: {  }

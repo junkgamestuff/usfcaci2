@@ -1,0 +1,31 @@
+uuid: 95890fc2-2ed8-4de0-80f3-960da3563459
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - usfca_school_context
+  theme:
+    - usfca
+id: sitebranding_collegeofartsandsciences
+theme: usfca
+region: header
+weight: -4
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding - College of Arts and Sciences'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: false
+  use_site_slogan: false
+visibility:
+  usfca_schoool_context_condition:
+    id: usfca_schoool_context_condition
+    schools:
+      'College of Arts and Sciences': 'College of Arts and Sciences'
+    negate: false
+    context_mapping:
+      school: '@usfca_school_context.school_context:school'

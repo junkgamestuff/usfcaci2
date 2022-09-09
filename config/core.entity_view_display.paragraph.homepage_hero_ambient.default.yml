@@ -1,0 +1,25 @@
+uuid: 7479c938-cc6c-4d38-b1ea-8c04a35c416c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.homepage_hero_ambient.field_slides
+    - paragraphs.paragraphs_type.homepage_hero_ambient
+  module:
+    - entity_reference_revisions
+id: paragraph.homepage_hero_ambient.default
+targetEntityType: paragraph
+bundle: homepage_hero_ambient
+mode: default
+content:
+  field_slides:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,43 @@
+uuid: 07ae3da9-9f38-43f5-ad91-c80407194b69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.blog_teasers_manual.field_blog_teasers_x3
+    - field.field.paragraph.blog_teasers_manual.field_title
+    - field.field.paragraph.blog_teasers_manual.field_title_highlight
+    - paragraphs.paragraphs_type.blog_teasers_manual
+id: paragraph.blog_teasers_manual.default
+targetEntityType: paragraph
+bundle: blog_teasers_manual
+mode: default
+content:
+  field_blog_teasers_x3:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title_highlight:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

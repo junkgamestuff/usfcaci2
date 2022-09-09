@@ -1,0 +1,8 @@
+uuid: 9e747b5a-3422-4907-929c-1dc170355124
+langcode: en
+status: true
+dependencies: {  }
+id: school-of-nursing
+label: 'School of Nursing'
+description: ''
+locked: false

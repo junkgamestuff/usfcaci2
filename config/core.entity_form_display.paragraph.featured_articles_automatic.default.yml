@@ -1,0 +1,64 @@
+uuid: 7f7110ec-b9f1-45d4-85ae-ce988fe8005f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_articles_automatic.field_link
+    - field.field.paragraph.featured_articles_automatic.field_title
+    - field.field.paragraph.featured_articles_automatic.field_title_highlight
+    - field.field.paragraph.featured_articles_automatic.field_views_reference
+    - paragraphs.paragraphs_type.featured_articles_automatic
+  module:
+    - link_attributes
+    - viewsreference
+id: paragraph.featured_articles_automatic.default
+targetEntityType: paragraph
+bundle: featured_articles_automatic
+mode: default
+content:
+  field_link:
+    type: link_attributes
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        aria-label: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        title: false
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title_highlight:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_views_reference:
+    type: viewsreference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

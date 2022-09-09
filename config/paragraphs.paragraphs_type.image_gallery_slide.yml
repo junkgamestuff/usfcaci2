@@ -1,0 +1,10 @@
+uuid: 3093034f-28b9-4c50-997b-8d5028a7efeb
+langcode: en
+status: true
+dependencies: {  }
+id: image_gallery_slide
+label: 'Image Gallery Slide'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,14 @@
+uuid: 00394f80-b0ad-42ac-b5b3-c78008ed9b79
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.directory
+id: node_type_directory
+entity_type_id: node_type
+entity_id: directory
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

@@ -1,0 +1,10 @@
+uuid: 0fcccf70-7205-4029-8da0-709ed391ba60
+langcode: en
+status: true
+dependencies: {  }
+id: school_program_role
+label: 'School, Program and Role'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,10 @@
+uuid: aa93799c-496b-4844-973e-cc404b06bc34
+langcode: en
+status: true
+dependencies: {  }
+id: vertical_tabbed_carousel_slide
+label: 'Vertical Tabbed Carousel Slide'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

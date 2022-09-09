@@ -1,0 +1,21 @@
+uuid: c35561f1-5649-4adf-9b9d-0493d95e74db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_service
+    - paragraphs.paragraphs_type.social_link
+  module:
+    - options
+id: paragraph.social_link.field_social_service
+field_name: field_social_service
+entity_type: paragraph
+bundle: social_link
+label: Service
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,21 @@
+uuid: 1aaf8dfa-1b36-421a-9a7e-5149f2a41903
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.profile
+  module:
+    - metatag
+id: node.profile.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: profile
+label: Metatag
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

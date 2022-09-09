@@ -1,0 +1,22 @@
+uuid: bbc4b9c5-b7a4-4bf2-a8ff-9767f69dbaa9
+langcode: en
+status: true
+dependencies:
+  config:
+    - config_pages.type.usfca_site_config
+    - field.field.config_pages.usfca_site_config.field_acalog_catalog_name
+id: config_pages.usfca_site_config.default
+targetEntityType: config_pages
+bundle: usfca_site_config
+mode: default
+content:
+  field_acalog_catalog_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

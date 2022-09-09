@@ -1,0 +1,22 @@
+uuid: 51adbdad-2999-4f87-a2a5-0d414a7bfe78
+langcode: en
+status: true
+dependencies:
+  theme:
+    - usfca
+_core:
+  default_config_hash: T0wbI6qVdThbbIqXDZFg_1VZ3_ittXBdEoUH7d7ux_E
+id: usfca_local_tasks
+theme: usfca
+region: content
+weight: -19
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

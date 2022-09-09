@@ -1,0 +1,8 @@
+uuid: e888f925-4956-4f2a-8533-aed343a1e4da
+langcode: en
+status: true
+dependencies: {  }
+name: Publication
+vid: publication
+description: 'Used to display the publication name in Media Mention content.'
+weight: 0

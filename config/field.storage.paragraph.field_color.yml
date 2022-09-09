@@ -1,0 +1,57 @@
+uuid: 4b8fa6e7-5c0e-48d6-82a3-a9a67af766f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_color
+field_name: field_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: lime
+      label: Lime
+    -
+      value: blue
+      label: Blue
+    -
+      value: green
+      label: Green
+    -
+      value: yellow
+      label: Yellow
+    -
+      value: beige
+      label: Beige
+    -
+      value: tan
+      label: Tan
+    -
+      value: moss
+      label: Moss
+    -
+      value: red
+      label: Red
+    -
+      value: orange
+      label: Orange
+    -
+      value: gray
+      label: Gray
+    -
+      value: turquoise
+      label: Turquoise
+    -
+      value: purple
+      label: Purple
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

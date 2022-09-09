@@ -1,0 +1,30 @@
+uuid: 5e9945af-73dc-4d5f-8597-43b61d6714e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.alert.field_date_time
+    - field.field.node.alert.field_description
+    - field.field.node.alert.field_link
+    - node.type.alert
+  module:
+    - user
+_core:
+  default_config_hash: AalVqVwMjYSlMTbhm3AVHh8zSPiEbLPzNPTfcjDClAk
+id: node.alert.teaser
+targetEntityType: node
+bundle: alert
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_date_time: true
+  field_description: true
+  field_link: true
+  langcode: true
+  search_api_excerpt: true

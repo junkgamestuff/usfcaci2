@@ -1,0 +1,56 @@
+uuid: 541da7c3-1723-41e6-810a-22a68881e980
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.event_cards_manual.field_events_x3
+    - field.field.paragraph.event_cards_manual.field_link
+    - field.field.paragraph.event_cards_manual.field_title
+    - field.field.paragraph.event_cards_manual.field_title_highlight
+    - paragraphs.paragraphs_type.event_cards_manual
+  module:
+    - link
+id: paragraph.event_cards_manual.default
+targetEntityType: paragraph
+bundle: event_cards_manual
+mode: default
+content:
+  field_events_x3:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title_highlight:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

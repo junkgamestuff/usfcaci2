@@ -1,0 +1,22 @@
+uuid: 17628db0-fb82-4d1e-954d-9d1fe50b57e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: program_home
+label: 'Program Home'
+type: 'canonical_entities:node'
+pattern: '[node:field_school:entity:field_url_prefix]'
+selection_criteria:
+  0e44c238-c775-4ed4-bb23-d6476bcf332c:
+    id: node_type
+    negate: false
+    uuid: 0e44c238-c775-4ed4-bb23-d6476bcf332c
+    context_mapping:
+      node: node
+    bundles:
+      program_home: program_home
+selection_logic: and
+weight: -5
+relationships: {  }

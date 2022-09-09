@@ -1,0 +1,25 @@
+uuid: daf6669f-de57-4107-a7d3-a7fbf856fd34
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-utility
+  module:
+    - system
+  theme:
+    - usfca
+id: footer_utility
+theme: usfca
+region: footer_menu
+weight: -3
+provider: null
+plugin: 'system_menu_block:footer-utility'
+settings:
+  id: 'system_menu_block:footer-utility'
+  label: Utility
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

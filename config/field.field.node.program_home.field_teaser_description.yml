@@ -1,0 +1,21 @@
+uuid: 587cf469-b933-4ad2-b1e8-6f028972e1a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_description
+    - node.type.program_home
+  module:
+    - text
+id: node.program_home.field_teaser_description
+field_name: field_teaser_description
+entity_type: node
+bundle: program_home
+label: 'Teaser Description'
+description: 'Displayed on the Find Your Program page and teasers for the <em>Program</em> throughout the website.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

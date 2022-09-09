@@ -1,0 +1,74 @@
+uuid: e7a061ab-08ed-4039-887d-f52366d81a09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_views_reference
+    - paragraphs.paragraphs_type.blog_teasers_automatic
+    - views.view.blog_teasers_automatic
+  module:
+    - viewsreference
+id: paragraph.blog_teasers_automatic.field_views_reference
+field_name: field_views_reference
+entity_type: paragraph
+bundle: blog_teasers_automatic
+label: 'Blog Teasers - Automatic'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    options:
+      argument: ''
+    display_id: default
+    data: 'a:5:{s:6:"offset";N;s:8:"argument";s:0:"";s:5:"pager";N;s:5:"limit";N;s:5:"title";N;}'
+    target_uuid: 3c7391dd-c03f-4e4e-9a81-0481c7f73616
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    default: default
+    block: block
+    rest_export: 0
+    page: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    blog_teasers_automatic: blog_teasers_automatic
+    alerts: 0
+    article_cards_featured: 0
+    block_content: 0
+    content: 0
+    content_recent: 0
+    events_listing: 0
+    event_cards: 0
+    faculty_directory: 0
+    featured_articles: 0
+    featured_events: 0
+    feeds_feed: 0
+    files: 0
+    find_your_program: 0
+    frontpage: 0
+    media: 0
+    media_library: 0
+    moderated_content: 0
+    news_listing: 0
+    program_faculty_listing: 0
+    redirect: 0
+    scheduler_scheduled_content: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    argument: argument
+    offset: 0
+    pager: 0
+    limit: 0
+    title: 0
+field_type: viewsreference

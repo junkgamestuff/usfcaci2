@@ -1,0 +1,83 @@
+uuid: ad880297-968b-47fa-bdb8-c05b16b70465
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - media.type.image
+  module:
+    - feeds_ex
+    - feeds_tamper
+    - media
+third_party_settings:
+  feeds_tamper:
+    tampers: {  }
+label: 'Event Media'
+id: event_media
+description: ''
+help: ''
+import_period: 0
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: jsonpath
+parser_configuration:
+  context:
+    value: '$.*'
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+processor: 'entity:media'
+processor_configuration:
+  values:
+    bundle: image
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: true
+  owner_id: 0
+custom_sources:
+  eventmedia:
+    value: eventMedia
+    label: eventMedia
+    machine_name: eventmedia
+    type: json
+  eventmediaalt:
+    value: eventMediaAlt
+    label: eventMediaAlt
+    machine_name: eventmediaalt
+    type: json
+  eventmedia_name:
+    value: eventMedia
+    label: eventMedia
+    machine_name: eventmedia_name
+    type: json
+mappings:
+  -
+    target: field_media_image
+    map:
+      target_id: eventmedia
+      alt: eventmediaalt
+      title: ''
+    settings:
+      language: ''
+      reference_by: fid
+      existing: '2'
+      autocreate: 0
+  -
+    target: name
+    map:
+      value: eventmedia_name
+    settings:
+      language: null
+    unique:
+      value: '1'

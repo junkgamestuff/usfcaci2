@@ -1,0 +1,29 @@
+uuid: 2dff84bf-4e51-4736-a183-3323ac354b65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_school_search
+    - node.type.search_results
+    - taxonomy.vocabulary.school
+id: taxonomy_term.school.field_school_search
+field_name: field_school_search
+entity_type: taxonomy_term
+bundle: school
+label: 'School Search'
+description: 'Choose a <em>Search Results</em> node that should serve search results for this School, or leave empty to default to "/search". Choosing a value here will cause the Search icon in the header of the website to land on the School Search Results page you specify.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      search_results: search_results
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

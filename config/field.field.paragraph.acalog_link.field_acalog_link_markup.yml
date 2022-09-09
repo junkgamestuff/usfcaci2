@@ -1,0 +1,21 @@
+uuid: f42f608e-61d2-4921-9ec1-8e6eeb98086e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_acalog_link_markup
+    - paragraphs.paragraphs_type.acalog_link
+  module:
+    - text
+id: paragraph.acalog_link.field_acalog_link_markup
+field_name: field_acalog_link_markup
+entity_type: paragraph
+bundle: acalog_link
+label: 'Acalog Link Markup'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

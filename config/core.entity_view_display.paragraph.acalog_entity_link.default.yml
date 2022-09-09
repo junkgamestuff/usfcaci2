@@ -1,0 +1,31 @@
+uuid: f9017d2a-5300-432c-9595-3e9cc335adec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.acalog_entity_link.field_acalog_entity_name
+    - field.field.paragraph.acalog_entity_link.field_acalog_link_text
+    - paragraphs.paragraphs_type.acalog_entity_link
+id: paragraph.acalog_entity_link.default
+targetEntityType: paragraph
+bundle: acalog_entity_link
+mode: default
+content:
+  field_acalog_entity_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_acalog_link_text:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

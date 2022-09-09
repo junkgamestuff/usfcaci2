@@ -1,12 +1,12 @@
-uuid: 5394543f-ba87-4ddd-9b7c-942f0f6559f7
+uuid: a33d8e68-33e3-4dac-8c4c-13a04a7e6160
 langcode: en
 status: true
-dependencies: {  }
-_core:
-  default_config_hash: oz6NyPDAB4HB6N9hgH2LwNVtCd-sXbMG1fbn5KsRIDI
+dependencies:
+  module:
+    - token_filter
 name: 'Restricted HTML'
 format: restricted_html
-weight: 1
+weight: -8
 filters:
   filter_html:
     id: filter_html
@@ -30,3 +30,10 @@ filters:
     weight: 0
     settings:
       filter_url_length: 72
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: true
+    weight: 0
+    settings:
+      replace_empty: '0'

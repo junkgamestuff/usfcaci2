@@ -1,0 +1,19 @@
+uuid: 3259e13f-4743-4a80-9e31-b8afa1d72ae7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_url_prefix
+    - taxonomy.vocabulary.school
+id: taxonomy_term.school.field_url_prefix
+field_name: field_url_prefix
+entity_type: taxonomy_term
+bundle: school
+label: 'URL Prefix'
+description: 'URL Prefix for this School - e.g. <em>College of Arts & Sciences</em> may set a URL Prefix of <em>arts-sciences</em>, etc.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

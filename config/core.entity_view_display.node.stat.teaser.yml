@@ -1,0 +1,31 @@
+uuid: 57bf628c-e40b-45f8-b3e2-3c2089826691
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.stat.field_description
+    - field.field.node.stat.field_display_title
+    - node.type.stat
+  module:
+    - user
+id: node.stat.teaser
+targetEntityType: node
+bundle: stat
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  field_display_title: true
+  langcode: true
+  search_api_excerpt: true

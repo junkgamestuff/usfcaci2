@@ -1,0 +1,10 @@
+uuid: adee7eea-a5b4-43b7-af3a-95ffe8fcfa90
+langcode: en
+status: true
+dependencies: {  }
+id: acalog_link
+label: 'Acalog Link'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

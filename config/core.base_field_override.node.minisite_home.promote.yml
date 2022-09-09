@@ -1,0 +1,22 @@
+uuid: 84ea82f5-4d1e-4a79-9286-c2d7b7a1f273
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.minisite_home
+id: node.minisite_home.promote
+field_name: promote
+entity_type: node
+bundle: minisite_home
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
