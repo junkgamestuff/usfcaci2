@@ -1,0 +1,37 @@
+.cc--text-and-images-mosaic {
+  @include maxwidth;
+
+  .f--section-title {
+    text-align: center;
+
+    h2 {
+      @include font-size(36, 36);
+      @include padding(null rem(20));
+      @include margin(null null rem(34));
+
+      @include mq($bp768) {
+        @include font-size(48, 59);
+        @include margin(null null rem(70));
+      }
+    }
+  }
+
+  .f--field-components {
+    @include mq($bp768) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .cc--mosaic-card {
+      @include mq($bp768) {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+
+      @include mq($bp1024) {
+        flex: 0 0 cols(16);
+        width: cols(16);
+      }
+    }
+  }
+}

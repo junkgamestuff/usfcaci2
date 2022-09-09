@@ -1,0 +1,30 @@
+{% extends "base-component" %}
+
+{% set name = "search-form-inverse" %}
+{% set id = "content-search-form" %}
+{% set container_aria_role = 'dialog' %}
+
+
+{% block content %}
+
+  <div class="inner-wrapper">
+
+    <h2 class="visually-hidden" id="dialog-title">Enter a Search Term</h2>
+
+    {% embed "base-form" with { name: "search-form-inverse" } %}
+
+      {% block content %}
+
+        {# <label class="visually-hidden" for="search">Search for:</label> #}
+        <div class="input-wrapper">
+          {% include "base-input-text" with { name: "search", label: "Search:", maxlength: 50, placeholder: "Search the Site" } %}
+        </div>
+        {% include "base-input-submit" with { value: "Search" } %}
+
+      {% endblock %}
+
+    {% endembed %}
+
+  </div>
+
+{% endblock %}

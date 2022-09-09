@@ -1,0 +1,146 @@
+$title-color: $color-secondary;
+
+.cc--accordions {
+  @include margin(null null rem(50));
+
+  @include mq($bp768) {
+    @include margin(null null rem(60));
+  }
+
+  @include mq($bp1024) {
+    @include margin(null null rem(80));
+  }
+
+  .c--accordions {
+    @include maxwidth;
+
+    .tc--landing-page &,
+    .tc--program-page &,
+    .tc--form-page &,
+    .tc--home-page-minisite & {
+      @include padding(null rem(20));
+
+      @include mq($bp768) {
+        @include padding(null cols(6));
+      }
+
+      @include mq($bp1024) {
+        @include padding(null cols(8));
+      }
+    }
+
+    .cc--chapter & {
+      @include padding(null 0);
+    }
+
+    > ul {
+      @include no-bullet;
+      border-top: rem(2) solid $color-supernova;
+
+      > li {
+        border-bottom: rem(2) solid $color-supernova;
+
+        button {
+          @include padding(rem(18) rem(40) rem(17) null);
+          display: block;
+          position: relative;
+          width: 100%;
+          border: 0;
+          border-radius: 0;
+          background: none;
+          color: $title-color;
+          text-align: left;
+
+          @include mq($bp768) {
+            @include padding(rem(32) rem(40) rem(28) null);
+          }
+
+          .item-title {
+            @extend %font-fira-sans-extra-condensed-semibold;
+            @include font-size(24, 28);
+            color: $color-sherpa-blue;
+
+            @include mq($bp768) {
+              @include font-size(30, 36);
+            }
+          }
+
+          &::after {
+            display: block;
+            position: absolute;
+            top: rem(27);
+            right: 0;
+            width: rem(15);
+            height: rem(9);
+            background: url('../images/icons/icon-arrow-down-green.svg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            content: '';
+            transform: rotate(-90deg);
+
+            @include mq($bp768) {
+              top: rem(45);
+            }
+          }
+
+          &.open {
+            &::after {
+              transform: rotate(0);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .f--section-title {
+    h2 {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(30, 36);
+      @include margin(null null rem(17));
+      color: $color-sherpa-blue;
+
+      @include mq($bp768) {
+        @include font-size(48, 56);
+        @include margin(null null rem(22));
+      }
+
+      .highlight {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .f--description {
+    @extend %font-fira-sans-extra-condensed-regular;
+    @include margin(rem(10) null null);
+    @include font-size(18, 18);
+    color: $color-black;
+
+    a {
+      color: $color-sherpa-blue;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  .accordion-panel {
+    @extend %rich-text;
+    @include padding(null null rem(20));
+    display: none;
+
+    .f--link {
+      @include margin(rem(38) null rem(20));
+
+      .link {
+        @include button($secondary: true);
+
+        @include mq($bp768) {
+          min-width: rem(225);
+        }
+      }
+    }
+  }
+}

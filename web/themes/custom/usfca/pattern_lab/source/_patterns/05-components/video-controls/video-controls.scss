@@ -1,0 +1,65 @@
+.video-controls {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+
+  @include mq($bp768) {
+    display: block;
+  }
+
+  .video-controls-inner {
+    display: flex;
+  }
+
+  .video-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(40);
+    height: rem(40);
+
+    // pause button
+    &.video-pause-button {
+      display: flex;
+
+      &.hidden {
+        display: none;
+      }
+    }
+
+    // play button
+    &.video-play-button {
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+    }
+
+    &.video-unmute-button {
+
+      .soundwave {
+        display: none;
+      }
+
+      &.unmuted {
+        .soundwave {
+          display: block;
+        }
+      }
+
+    }
+
+    @include hover {
+      background-color: $color-supernova;
+
+      svg {
+        path {
+          fill: $color-white;
+        }
+      }
+    }
+  }
+}

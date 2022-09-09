@@ -1,0 +1,320 @@
+// gradient overlay
+$overlay-color: rgba($color-black, .3);
+// turn overlay on and off
+$background-color-fallback: $color-primary;
+
+.cc--hero-tabbed-navigation {
+  position: relative;
+
+  .c--hero-tabbed-navigation {
+    position: relative;
+
+    @include mq($bp1800) {
+      @include maxwidth;
+    }
+  }
+
+  .image-text-container {
+    @include maxwidth;
+    position: relative;
+  }
+
+  .image-wrapper {
+    @include mq($bp1800) {
+      position: relative;
+      width: 100vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      background-color: $background-color-fallback;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      max-height: rem(675);
+
+      @include mq($bp768) {
+        aspect-ratio: 768 / 800;
+      }
+
+      @include mq($bp1024) {
+        aspect-ratio: 3 / 2;
+      }
+    }
+
+    @supports not (aspect-ratio: 1 / 1) { // fallback for aspect ratio
+      padding-top: 100%;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      @include mq($bp768) {
+        padding-top: 96%;
+      }
+
+      @include mq($bp1024) {
+        padding-top: 66.6%;
+      }
+    }
+  }
+
+  .text-wrapper {
+    @include padding(null rem(20));
+    @include maxwidth;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-end;
+    bottom: 0;
+    width: 100%;
+    height: rem(170);
+
+    &::before {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent, $overlay-color);
+      content: '';
+
+      @include mq($bp1800) {
+        width: 100vw;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+      }
+    }
+
+    @include mq($bp768) {
+      @include padding(null cols(22) rem(28) cols(2));
+      height: 23%;
+      bottom: 0;
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(17) rem(20) cols(2));
+      height: 17%;
+    }
+
+    .f--category {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(14, 14);
+      @include margin(rem(20) null 0);
+
+      position: relative;
+      color: $color-white;
+      text-shadow: 0 0 rem(25) $color-black;
+      z-index: 10;
+
+      @include mq($bp768) {
+        @include margin(0 null rem(14));
+        @include font-size(16, 16);
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(20));
+      }
+
+      p {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include font-size(14, 14);
+        color: $color-white;
+        text-shadow: 0 0 rem(25) $color-black;
+
+        @include mq($bp768) {
+          @include font-size(16, 16);
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .f--page-title {
+      @include margin(null null rem(20));
+      position: relative;
+
+      @include mq($bp768) {
+        @include margin(null null rem(10));
+      }
+
+      h1 {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include font-size(36, 36);
+        color: $color-white;
+        letter-spacing: 0;
+        text-transform: none;
+        text-shadow: 0 0 rem(25) $color-black;
+
+        @include mq($bp768) {
+          @include font-size(48, 48);
+          letter-spacing: rem(.5);
+        }
+
+        @include mq($bp1024) {
+          @include font-size(60, 60);
+        }
+      }
+    }
+
+    .f--description {
+      position: relative;
+
+      &,
+      p {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include font-size(18, 24);
+        @include margin(0 null rem(9));
+        color: $color-white;
+        text-shadow: 0 0 rem(25) $color-black;
+
+        @include mq($bp768) {
+          @include font-size(20, 20);
+          @include margin(null null rem(12));
+        }
+
+        @include mq($bp1024) {
+          @include font-size(24, 24);
+        }
+      }
+    }
+  }
+
+  .links-container {
+    position: relative;
+    background: $color-sherpa-blue;
+
+    @include mq($bp768) {
+      @include padding(rem(16) cols(1) rem(40));
+      position: absolute;
+      right: cols(2);
+      bottom: rem(-60);
+      width: cols(18);
+    }
+
+    @include mq($bp1024) {
+      right: cols(3);
+      width: cols(12);
+    }
+
+    h3 {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(16, 16);
+      @include margin(null null rem(12));
+      color: $color-white;
+      text-transform: uppercase;
+
+      @include mq($bp768max) {
+        display: none;
+      }
+    }
+
+    .list-toggle {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(16, 16);
+      @include padding(null rem(13) null rem(20));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $color-white;
+      width: 100%;
+      height: rem(50);
+      margin: 0;
+      text-align: left;
+      text-transform: uppercase;
+
+      @include mq($bp768) {
+        display: none;
+      }
+
+      &.open {
+        svg {
+          transform: rotate(-90deg);
+        }
+      }
+
+      svg {
+        width: rem(25);
+        height: rem(25);
+      }
+    }
+
+    .nav-links {
+      @include no-bullet;
+
+      @include mq($bp768max) {
+        @include padding(null rem(20) rem(30));
+        display: flex;
+        flex-wrap: wrap;
+        max-height: rem(50);
+        overflow: hidden;
+        box-shadow: 0 0 rem(3) rgba($color-black, .25);
+
+        &::before {
+          display: inline-block;
+          position: absolute;
+          right: rem(20);
+          top: rem(18);
+          width: rem(12);
+          height: rem(10);
+          background: url('../images/icons-usf/USF_arrow_white.svg') no-repeat right 0;
+          content: '';
+          transform: rotate(0deg);
+        }
+
+        &.open {
+          max-height: rem(350);
+
+          &::before {
+            transform: rotate(90deg);
+          }
+        }
+      }
+
+      .program-nav-item {
+        border-bottom: rem(1) solid $color-supernova;
+        width: 100%;
+
+        .link {
+          @extend %font-fira-sans-extra-condensed-regular;
+          @include padding(rem(15) null);
+          @include font-size(20, 20);
+          color: $color-white;
+          display: inline-block;
+          text-decoration: none;
+
+          @include mq($bp768max) {
+            &.active {
+              font-weight: 600;
+            }
+          }
+
+          @include mq($bp768) {
+            &.active {
+              @include padding(null null null rem(18));
+              background: url('../images/icons-usf/USF_arrow_yellow.svg') no-repeat 0 rem(20);
+              background-size: rem(6);
+              font-weight: 600;
+            }
+          }
+
+          @include hover {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}

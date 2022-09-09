@@ -1,0 +1,18 @@
+.cc--article-teaser-rows {
+  .c--article-teaser-rows {
+    .f--description {
+      p {
+        @include font-size(16, 24);
+        text-align: left;
+
+        @include mq($bp768) {
+          @include font-size(16, 26);
+        }
+
+        @include mq($bp1024) {
+          @include font-size(18, 26);
+        }
+      }
+    }
+  }
+}

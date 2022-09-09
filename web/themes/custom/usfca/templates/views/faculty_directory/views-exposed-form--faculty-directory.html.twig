@@ -1,0 +1,44 @@
+{#
+/**
+* @file
+* Theme override of a views exposed form.
+*
+* Available variables:
+* - form: A render element representing the form.
+*
+* @see template_preprocess_views_exposed_form()
+*/
+#}
+{% if q is not empty %}
+  {#
+    This ensures that, if clean URLs are off, the 'q' is added first,
+    as a hidden form element, so that it shows up first in the POST URL.
+  #}
+  {{ q }}
+{% endif %}
+<div class="fields-container">
+
+  {{ form.keyword }}
+
+  <div class="form-item-wrapper">
+    <h4>By School</h4>
+    {{ form.field_school }}
+  </div>
+
+  <div class="form-item-wrapper">
+    <h4>By Program</h4>
+    {{ form.field_program }}
+  </div>
+
+  <div class="form-item-wrapper">
+    <h4>By Faculty Role</h4>
+    {{ form.field_role }}
+  </div>
+
+  {{ form|without('actions', 'keyword', 'field_school', 'field_program', 'field_role') }}
+
+</div>
+<div class="button-container">
+  {{ form.actions.submit }}
+  {{ form.actions.reset }}
+</div>

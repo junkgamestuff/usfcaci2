@@ -1,0 +1,9 @@
+.fi--form-item {
+  input[type='submit'] {
+    @include padding(null rem(25));
+    @include button($red: true);
+    width: 100%;
+    min-width: rem(160);
+    height: rem(50);
+  }
+}

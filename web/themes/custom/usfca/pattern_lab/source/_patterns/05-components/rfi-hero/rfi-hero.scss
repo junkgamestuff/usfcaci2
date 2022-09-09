@@ -1,0 +1,91 @@
+.cc--rfi-hero {
+  position: relative;
+  background: $color-sherpa-blue;
+
+  &.with-image {
+    @include mq($bp1024) {
+      @include margin(rem(-150) null null);
+    }
+
+    .text-wrapper {
+      position: absolute;
+      bottom: 0;
+
+      @include mq($bp768) {
+        height: 30%;
+      }
+
+      @include mq($bp1024) {
+        height: 40%;
+      }
+
+      &::before {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        background: linear-gradient(to bottom, transparent, $overlay-color);
+        content: '';
+      }
+    }
+  }
+
+  .image-text-container {
+    position: relative;
+  }
+
+  .image-wrapper {
+    @include mq($bp768max) {
+      @include margin(null null rem(20));
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      max-height: rem(350);
+      background-color: $background-color-fallback;
+      object-fit: cover;
+    }
+  }
+
+  .text-wrapper {
+    @include padding(null rem(20) rem(10));
+    @include maxwidth;
+    width: 100%;
+    text-align: center;
+
+    @include mq($bp768) {
+      @include padding(rem(40) cols(2) rem(10));
+      text-align: left;
+    }
+
+    @include mq($bp1024) {
+      @include padding(null null rem(30));
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .f--page-title {
+      position: relative;
+
+      h1 {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include font-size(36, 36);
+        color: $color-white;
+        letter-spacing: rem(-.6);
+
+        @include mq($bp768) {
+          @include font-size(48, 60);
+          text-shadow: 0 0 rem(25) $color-black;
+          letter-spacing: 0;
+        }
+
+        @include mq($bp1024) {
+          @include font-size(60, 60);
+        }
+      }
+    }
+  }
+}

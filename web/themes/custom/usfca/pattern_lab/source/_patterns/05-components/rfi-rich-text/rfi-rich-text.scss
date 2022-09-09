@@ -1,0 +1,78 @@
+.cc--rfi-rich-text {
+  background: $color-sherpa-blue;
+  text-align: center;
+
+  .c--rfi-rich-text {
+    @include padding(rem(10) rem(20));
+
+    @include mq($bp768) {
+      @include padding(rem(40) cols(4));
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(60) cols(8));
+    }
+  }
+
+  .f--description {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    strong,
+    a {
+      color: $color-white;
+    }
+
+    h2 {
+      @include font-size(24, 30);
+      @include margin(null null rem(20));
+      letter-spacing: 0;
+      text-transform: none;
+
+      @include mq($bp768) {
+        @include font-size(48, 50);
+        @include margin(null auto);
+        max-width: rem(480);
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(30));
+        max-width: rem(600);
+      }
+
+      strong {
+        font-weight: 600;
+        text-transform: uppercase;
+
+        @include mq($bp768) {
+          @include font-size(48, 50);
+        }
+      }
+    }
+
+    p {
+      @include margin(null null rem(20));
+
+      @include mq($bp1024) {
+        @include margin(null null rem(40));
+      }
+
+      a {
+        color: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+
+    h4 {
+      @include font-size(20, 24);
+
+      @include mq($bp768) {
+        @include font-size(30, 30);
+      }
+    }
+  }
+}

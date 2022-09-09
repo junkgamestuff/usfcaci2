@@ -1,0 +1,62 @@
+{#
+/**
+* @file
+* Theme override of a views exposed form.
+*
+* Available variables:
+* - form: A render element representing the form.
+*
+* @see template_preprocess_views_exposed_form()
+*/
+#}
+{{ attach_library('usfca/filter_form') }}
+
+{% if q is not empty %}
+  {#
+    This ensures that, if clean URLs are off, the 'q' is added first,
+    as a hidden form element, so that it shows up first in the POST URL.
+  #}
+  {{ q }}
+{% endif %}
+<div class="fields-container">
+
+  {{ form.keyword }}
+
+  <div class="form-item-wrapper">
+    <h4>Degree</h4>
+    {{ form.field_degree }}
+  </div>
+
+  <div class="form-item-wrapper">
+    <h4>School</h4>
+    {{ form.field_school }}
+  </div>
+
+  <div class="form-item-wrapper">
+    <h4>Location</h4>
+    {{ form.field_campus }}
+  </div>
+
+  <div class="form-item-wrapper visually-hidden">
+    <h4>Interests</h4>
+    {{ form.field_interests }}
+  </div>
+
+  <div class="form-item-wrapper visually-hidden">
+    <h4>Career Goals</h4>
+    {{ form.field_career_goals }}
+  </div>
+
+  {{ form|without('actions', 'keyword', 'field_degree', 'field_school', 'field_campus', 'field_interests', 'field_career_goals') }}
+
+</div>
+<div class="button-container">
+  <div class="submit-wrapper">
+    {{ form.actions.submit }}
+  </div>
+  {% if form.actions.reset | render | trim is not empty %}
+  <div class="reset-wrapper">
+  {{ form.actions.reset }}
+  </div>
+  {% endif %}
+</div>

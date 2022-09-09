@@ -1,0 +1,55 @@
+
+.cc--horizontal-event-listing {
+  @include maxwidth;
+
+  .section-wrapper {
+    @include margin(null null rem(27));
+
+    @include mq($bp768) {
+      @include margin(null null rem(48));
+    }
+
+    @include mq($bp1024) {
+      @include margin(null null rem(50));
+    }
+
+    h2 {
+      @include margin(null null rem(13));
+      @include font-size(26, 30);
+      text-align: left;
+
+      @include mq($bp768) {
+        @include margin(null null rem(15));
+        @include font-size(28, 30);
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(20));
+        @include font-size(38, 46);
+      }
+    }
+
+    .f--link {
+      @include margin(rem(30) null null);
+    }
+  }
+
+  .f--link {
+    @include margin(rem(30) null null);
+    display: flex;
+    justify-content: center;
+
+    @include mq($bp768) {
+      @include margin(rem(40) null null);
+    }
+
+    @include mq($bp1024) {
+      @include margin(rem(60) null null);
+    }
+
+    a {
+      @include button($secondary: true);
+      height: rem(50);
+    }
+  }
+}

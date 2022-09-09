@@ -1,0 +1,80 @@
+.cc--intro-text {
+  @include maxwidth;
+
+  .c--intro-text {
+    @include padding(rem(25) cols(3) rem(32));
+
+    @include mq($bp768) {
+      @include padding(rem(50) cols(2) rem(85));
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(80) cols(6) rem(85));
+    }
+
+    .tc--home-page-minisite & {
+      @include padding(rem(25) cols(3) rem(32));
+
+      @include mq($bp768) {
+        @include padding(rem(50) cols(2) rem(85));
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(80) cols(18) rem(85) cols(2));
+      }
+    }
+  }
+
+  .f--section-title {
+    @include margin(null null rem(28));
+    text-align: center;
+
+    .tc--home-page-minisite & {
+      text-align: left;
+
+      @include mq($bp768) {
+        @include padding(null cols(20) null null);
+      }
+    }
+
+    @include mq($bp768) {
+      @include margin(null null rem(40));
+    }
+
+    h2 {
+      @include margin(0);
+    }
+  }
+
+  .f--description {
+    text-align: center;
+
+    @include mq($bp1024) {
+      @include padding(null cols(4, 36));
+    }
+
+    .tc--home-page-minisite & {
+      text-align: left;
+
+      @include mq($bp1024) {
+        @include padding(null 0);
+      }
+    }
+
+    p {
+      @extend %font-ibm-plex-serif-regular;
+      color: $color-black;
+
+      a {
+        color: $color-sherpa-blue;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+
+        @include hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+/*  Centering an element within its parent element
+*
+*   @param {Axis} $axis - x: centers horizontally, y: centers vertically, null: centers both axis
+*
+*   Example Usage:
+*
+*   // Center on both x and y axis
+*   .container {
+*     .link {
+*       @include centered;
+*     }
+*   }
+*
+*   // Center on the X axis
+*   .container {
+*     .link {
+*       @include centered(x);
+*     }
+*   }
+*
+*   // Center on the Y axis
+*   .container {
+*     .link {
+*       @include centered(y);
+*     }
+*   }
+*
+*/
+@mixin centered($axis: null) {
+  position: absolute;
+  @if ($axis == 'x') {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  } @else if ($axis == 'y') {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  } @else {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+/*  Centering within an flex container
+*
+*   @param {Display} $display - inline: display set to inline-flex, else display set to flex
+*
+*
+*   Example Usage:
+*
+*   .container {
+*     @include vertical-align-flex;
+*   }
+*
+*/
+@mixin vertical-align-flex($display: null) {
+  @if ($display == 'inline') {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+  flex-direction: column;
+  justify-content: center;
+}

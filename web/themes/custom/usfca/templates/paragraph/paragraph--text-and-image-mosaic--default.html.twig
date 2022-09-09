@@ -1,0 +1,35 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+
+  {% set title = fields.title %}
+
+  {% if fields.title_highlight %}
+    {% set title = title|replace({(fields.title_highlight): '<span class="highlight">' ~ fields.title_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% set cards = [] %}
+
+  {% for item in fields.tiles_x3 %}
+    {% set cards = cards | merge([
+      {
+        description: item.fields.description,
+        image: item.fields.image is not empty ? {
+          render: drupal_image(item.fields.image.uri, '1_1_mosaic_large', { alt: item.fields.image.alt }, responsive=true),
+          src: item.fields.image.uri | image_style('1_1_600x600'),
+          alt: item.fields.image.alt,
+        } : [],
+        attribution: item.fields.attribution is not empty ? {
+          attributionTitle: item.fields.attribution,
+          attributionDescription: item.fields.attribution_title,
+        } : null,
+      }
+    ]) %}
+  {% endfor %}
+
+  {% include "@pattern_lab/components-text-and-images-mosaic" with {
+    title: title,
+    cards: cards,
+  } only %}
+
+{% endblock content %}

@@ -1,0 +1,23 @@
+name: "contact-block"
+type: "component"
+markup:
+  content:
+  - type: field
+    name: section-title
+    with: title
+  - type: container
+    class: "text-container"
+    content:
+      - type: field
+        name: link
+        with:
+          link: link
+      - type: field
+        name: text
+        with: text
+data:
+  title: "Contact"
+  link:
+    url: "mailto:jlathrop@umass.edu"
+    title: "Janet Lothrop"
+  text: 413-545-0444

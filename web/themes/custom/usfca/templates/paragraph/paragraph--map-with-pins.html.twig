@@ -1,0 +1,46 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {{ attach_library('usfca/map_with_pins') }}
+
+  {% set title = fields.title %}
+  {% if fields.title_highlight %}
+    {% set title = title|replace({(fields.title_highlight): '<span class="highlight">' ~ fields.title_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% set eyebrow = fields.eyebrow %}
+  {% if fields.eyebrow_highlight %}
+    {% set eyebrow = eyebrow|replace({(fields.eyebrow_highlight): '<span class="highlight">' ~ fields.eyebrow_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% set pins = [] %}
+  {% for pin in fields.locations %}
+    {% set pins = pins | merge([{
+      title: pin.fields.title,
+      description: pin.fields.description,
+      link: pin.fields.link is not empty ? {
+        cta: pin.fields.link.title,
+        url: pin.fields.link.url,
+        ariaLabel: pin.fields.link.attributes.aria_label ?? pin.fields.link.title,
+      } : null,
+      image: pin.fields.image.uri ? {
+        url: pin.fields.image.uri | image_style('1_1_768x768'),
+        alt: pin.fields.image.alt,
+        render: drupal_image(pin.fields.image.uri, '1_1_mosaic_small', {alt: pin.fields.image.alt}, responsive=true),
+      } : null,
+      lat: pin.fields.geolocation.lat,
+      lng: pin.fields.geolocation.lng,
+    }]) %}
+  {% endfor %}
+
+  {% include "components-map-with-pins" with {
+    instanceId: 'paragraph-' ~ paragraph.id(),
+    title: title,
+    eyebrow: eyebrow,
+    mapCenter: fields.map_center.lat ~ ',' ~ fields.map_center.lng,
+    mapZoomLevel: fields.map_zoom_level,
+    locations: pins,
+  } only %}
+
+{% endblock content %}

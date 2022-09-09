@@ -1,0 +1,176 @@
+.cc--manual-cards {
+  @include mq($bp1024max) {
+    @include padding(null null rem(40));
+    overflow: hidden;
+  }
+
+  @include mq($bp768-1024) {
+    @include padding(null null rem(80));
+  }
+
+  .c--manual-cards {
+    @include maxwidth;
+
+    .inner-wrapper {
+      position: relative;
+
+      @include mq($bp1024) {
+        display: flex;
+      }
+    }
+
+    .f--field-components {
+      @include margin(rem(80) null null);
+      @include padding(null cols(3));
+      position: relative;
+
+      @include mq($bp768) {
+        @include margin(0 null null);
+        @include padding(null cols(2));
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null null cols(-10));
+        @include padding(rem(80) cols(2) rem(120) null);
+      }
+
+      // Color Theme
+      @include color-theme(
+        $name: 'default-theme',
+        $colors: (
+          'atlantis': $color-atlantis,
+          'caribbean-green': $color-caribbean-green,
+          'carrot-orange': $color-carrot-orange,
+          'chilean-fire': $color-chilean-fire
+        )
+      );
+
+      .cc--manual-card {
+
+        @include mq($bp768) {
+          width: cols(21, 44);
+        }
+
+        @include mq($bp1024) {
+          width: cols(14, 30);
+        }
+
+        &:not(:first-child) {
+          @include mq($bp768max) {
+            @include margin(rem(30) null null);
+          }
+        }
+
+        &:nth-child(n+3) {
+          @include mq($bp768) {
+            @include margin(rem(50) null null null);
+          }
+        }
+
+        @include hover {
+          transform: scale(1.05);
+        }
+
+        .c--manual-card {
+          @include padding(rem(20) cols(3, 42));
+
+          @include mq($bp768) {
+            @include padding(rem(30) cols(1, 21));
+          }
+
+          @include mq($bp1024) {
+            @include padding(rem(30) cols(1, 14));
+          }
+        }
+      }
+    }
+  }
+
+  .image-title-container {
+    position: relative;
+
+    @include mq($bp768) {
+      width: cols(40);
+    }
+
+    @include mq($bp1024) {
+      flex-shrink: 0;
+      width: cols(26);
+    }
+  }
+
+  .title-container {
+    @include padding(rem(40) cols(3) null);
+    position: relative;
+    z-index: 1;
+
+    @include mq($bp768) {
+      @include padding(rem(80) 0 null);
+      left: cols(2, 40);
+      width: cols(18, 40);
+    }
+
+    @include mq($bp1024) {
+      position: absolute;
+      top: rem(80);
+      left: cols(2, 26);
+      width: cols(11, 26);
+    }
+  }
+
+  .f--section-title {
+    h2 {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(48, 50);
+      color: $color-white;
+
+      strong {
+        @extend %font-fira-sans-extra-condensed-semibold;
+      }
+    }
+  }
+
+  .image-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @include mq($bp768-1024) {
+      @include maintain-ratio(17 21);
+    }
+
+    @include mq($bp1024) {
+      height: 100%;
+    }
+
+    .f--image {
+      position: relative;
+
+      @include mq($bp1024) {
+        height: 100%;
+      }
+
+      &::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba($color-black, 0.6082808123249299) 0%, rgba($color-black, 0) 100%);
+        content: '';
+      }
+
+      img {
+
+        @include mq($bp1024) {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

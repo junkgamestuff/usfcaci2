@@ -1,0 +1,98 @@
+.cc--profile-detail {
+  .header-container {
+    @include padding(null null rem(35));
+
+    @include mq($bp768) {
+      @include padding(null null rem(40));
+      @include margin(null null rem(40));
+      border-bottom: rem(1) solid $color-border;
+    }
+
+    @include mq($bp1024) {
+      @include padding(null null rem(50));
+      @include margin(null null rem(50));
+    }
+
+    .title-hero {
+      h1 {
+        @extend %font-fira-sans-extra-condensed-bold;
+        @include margin(null null rem(5));
+        @include font-size(40, 40);
+        letter-spacing: rem(.75);
+        text-transform: none;
+
+        @include mq($bp768) {
+          @include margin(null null rem(10));
+          @include font-size(55, 55);
+          letter-spacing: rem(1);
+        }
+
+        @include mq($bp1024) {
+          @include font-size(80, 80);
+        }
+      }
+
+      p {
+        @include margin(null null rem(20));
+        @include font-size(16, 26);
+
+        @include mq($bp768) {
+          @include font-size(18, 28);
+        }
+
+        @include mq($bp1024) {
+          @include margin(null null rem(30));
+        }
+      }
+    }
+
+    .profile-main-metadata {
+      @include mq($bp768) {
+        display: flex;
+      }
+
+      > div {
+        @include margin(null null rem(15));
+
+        @include mq($bp768-1024) {
+          @include margin(null cols(2, 28) 0 null);
+          flex: 0 0 cols(8, 28);
+          width: cols(8, 28);
+
+          &:last-child {
+            @include margin(null 0 null null);
+          }
+        }
+
+        @include mq($bp1024) {
+          @include padding(null cols(1, 28) null null);
+          @include margin(null 0 null null);
+          flex: 0 0 cols(9, 28);
+          width: cols(9, 28);
+        }
+
+        label {
+          @extend %font-fira-sans-bold;
+          @include margin(null null rem(5));
+          @include font-size(14, 16);
+          display: block;
+
+          @include mq($bp768) {
+            @include margin(null null rem(10));
+          }
+        }
+
+        div,
+        a,
+        p {
+          @include font-size(16, 23);
+        }
+
+        a {
+          @extend %font-fira-sans-regular;
+          display: block;
+        }
+      }
+    }
+  }
+}

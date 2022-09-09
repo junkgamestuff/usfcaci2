@@ -1,0 +1,108 @@
+.lc--two-column {
+  .l--two-column {
+    @include maxwidth;
+
+    .l--two-column-inner {
+      @include padding(rem(50) null rem(60));
+
+      @include mq($bp768) {
+        @include padding(rem(60) null);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(100) null);
+      }
+
+      .f--section-title {
+        flex: 1 1 100%;
+
+        h2 {
+          @extend %font-fira-sans-extra-condensed-regular;
+          @include font-size(36, 36);
+          text-align: center;
+
+          @include mq($bp768max) {
+            @include margin(null null rem(10));
+          }
+
+
+          @include mq($bp768) {
+            @include font-size(48, 59);
+          }
+
+          &.highlight {
+            @extend %font-fira-sans-extra-condensed-semibold;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .lr--sidebar {
+        @include margin(null null rem(20));
+        padding: 0;
+
+        @include mq($bp768) {
+          margin-bottom: 0;
+          width: cols(17);
+        }
+
+        @include mq($bp1024) {
+          width: cols(11);
+        }
+      }
+
+      .lr--main {
+        @include padding(null rem(20));
+
+        @include mq($bp768) {
+          @include padding(null cols(2));
+          width: cols(31);
+        }
+
+        @include mq($bp1024) {
+          @include padding(null cols(3));
+          width: cols(37);
+        }
+      }
+    }
+  }
+
+  .tc--event & {
+    @include margin(rem(-35) null null);
+
+    @include mq($bp768) {
+      @include margin(rem(-30) null null);
+    }
+
+    @include mq($bp1024) {
+      @include margin(rem(-54) null null);
+    }
+
+    .l--two-column {
+      .l--two-column-inner {
+        @include padding(0);
+
+        .lr--sidebar {
+          @include mq($bp768) {
+            width: cols(13);
+          }
+        }
+
+        .lr--main {
+          @include padding(null cols(3));
+          @include mq($bp768) {
+            @include padding(null cols(2) null 0);
+            width: cols(35);
+          }
+
+          @include mq($bp1024) {
+            @include padding(null cols(3) null null);
+          }
+        }
+      }
+    }
+  }
+}

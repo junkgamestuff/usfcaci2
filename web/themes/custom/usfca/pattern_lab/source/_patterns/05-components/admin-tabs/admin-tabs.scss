@@ -1,0 +1,46 @@
+.cc--admin-tabs {
+  .c--admin-tabs {
+    @include maxwidth;
+    @include padding(20px cols(1));
+    display: none;
+
+    @include mq($bp768) {
+
+      display: block;
+
+      > ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+
+        > li {
+          margin: 0 rem(40) 0 0;
+        }
+      }
+    }
+  }
+
+  body.transparent-header & {
+    position: absolute;
+    top: rem(250);
+    right: 0;
+    background-color: $color-white;
+    opacity: .8;
+    z-index: 11;
+
+    .c--admin-tabs {
+      @include padding(rem(20) rem(40));
+
+      > ul {
+        @include padding(0 0);
+        @include margin(0);
+        flex-direction: column;
+        list-style-type: none;
+
+        > li {
+          @include margin(0 0 rem(10) 0);
+        }
+      }
+    }
+  }
+}

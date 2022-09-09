@@ -1,0 +1,47 @@
+{
+  "slides": [
+    {
+      "align": "center",
+      "title": "Change <strong>HEALTHCARE DISPARITIES</strong> from here.",
+      "description": "<p>Opioid addiction, maternal morbidity, COVID… A new program is meeting the nation’s need for nurses who understand the challenges facing undeserved communities.</p>",
+      "link": {
+        "href": "#",
+        "cta": "Read More",
+        "url": "#"
+      },
+      "image": {
+        "src": "https://placeimg.com/2000/2000/people",
+        "alt": "Slide Image"
+      }
+    },
+    {
+      "align": "left",
+      "title": "Change <strong>HEALTHCARE DISPARITIES</strong> from here",
+      "description": "<p>Opioid addiction, maternal morbidity, COVID… A new program is meeting the nation’s need for nurses who understand the challenges facing undeserved communities.</p>",
+      "image": {
+        "src": "https://placeimg.com/2000/2000/people",
+        "alt": "Slide Image"
+      },
+      "link": {
+        "href": "#",
+        "cta": "Read More",
+        "url": "#"
+      },
+      "videoSrc": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+    },
+    {
+      "align": "right",
+      "title": "Change <strong>HEALTHCARE DISPARITIES</strong> from here",
+      "description": "<p>Opioid addiction, maternal morbidity, COVID… A new program is meeting the nation’s need for nurses who understand the challenges facing undeserved communities.</p>",
+      "image": {
+        "src": "https://placeimg.com/1200/800/people",
+        "alt": "Slide Image"
+      },
+      "link": {
+        "href": "#",
+        "cta": "Read More",
+        "url": "#"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{% extends "base-component" %}
+
+{% set name = "quote" %}
+{% set container_element = 'blockquote' %}
+
+{% block content %}
+
+  {% if image is not empty %}
+    {% include "fields-image" with {
+      render: image.render
+    } only %}
+  {% endif %}
+
+  {% if description is not empty %}
+    {% include "fields-description" with {
+      description: description
+    } only %}
+  {% endif %}
+
+  <footer>
+    {% if altImg is not empty %}
+      {% include "fields-image" with {
+        render: altImg.render
+      } only %}
+    {% endif %}
+
+    {% include "fields-attribution" with {
+      fullName: attribution.name,
+      text: attribution.text
+    } only %}
+  </footer>
+
+{% endblock %}

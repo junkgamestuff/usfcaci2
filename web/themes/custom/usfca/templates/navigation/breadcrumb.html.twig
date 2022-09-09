@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+{% if breadcrumb and (breadcrumb | length > 1) and (breadcrumb[1].url != '/node') %}
+
+  {% set homeUrl = '/' %}
+  {% set items = [] %}
+  {% for item in breadcrumb %}
+    {% if item.url == homeUrl %}
+      {% set homeUrl = item.url %}
+    {% elseif item.url %}
+      {% set items = items | merge([{
+        href: item.url,
+        title: item.text,
+        ariaLabel: item.attributes.aria_label ?? item.title,
+      }]) %}
+    {% else %}
+      {% set items = items | merge([{
+        href: FALSE,
+        title: item.text,
+      }]) %}
+    {% endif %}
+  {% endfor %}
+
+  {% include "components-breadcrumbs" with {
+    homeURL: homeUrl,
+    items: items,
+  } only %}
+
+{% endif %}

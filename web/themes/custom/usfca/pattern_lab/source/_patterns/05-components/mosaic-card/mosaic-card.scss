@@ -1,0 +1,211 @@
+$color-text: $color-black;
+$color-attribution: $color-black;
+
+.cc--mosaic-card {
+
+  &:nth-child(even) {
+
+    @include mq($bp768) {
+      .c--mosaic-card {
+        flex-direction: row-reverse;
+      }
+    }
+
+    @include mq($bp1024) {
+      .c--mosaic-card {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  .c--mosaic-card {
+
+    @include mq($bp768) {
+      display: flex;
+      flex-direction: row;
+    }
+
+    @include mq($bp1024) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .image-container {
+    @include mq($bp768) {
+      width: 50%;
+    }
+
+    @include mq($bp1024) {
+      width: 100%;
+    }
+  }
+
+  .text-container {
+    position: relative;
+    background-size: rem(15) auto;
+
+    @include mq($bp768) {
+      width: 50%;
+    }
+
+    @include mq($bp1024) {
+      @include padding(null null 100% null);
+      position: relative;
+      width: 100%;
+      height: 0;
+      background-size: rem(20) auto;
+    }
+
+    .text-inner {
+      @include padding(rem(23) cols(3) rem(30));
+      text-align: center;
+
+      @include mq($bp768) {
+        @include padding(rem(25));
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      @include mq($bp1200) {
+        @include padding(rem(30) cols(2, 16));
+      }
+    }
+
+    .f--description {
+      p {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include margin(null null rem(15));
+        @include font-size(26, 36);
+        color: $color-text;
+        letter-spacing: rem(-.42);
+
+        @include mq($bp768) {
+          @include font-size(28, 36);
+          letter-spacing: rem(-.5);
+        }
+
+        @include mq($bp1024) {
+          @include font-size(26, 32);
+        }
+
+        @include mq($bp1200) {
+          @include font-size(32, 38);
+        }
+
+        @include mq($bp1400) {
+          @include font-size(36, 42);
+        }
+      }
+    }
+
+    .f--attribution {
+      @include margin(rem(23) null null);
+
+      @include mq($bp1400) {
+        @include margin(rem(38) null null);
+      }
+
+      * {
+        color: $color-attribution;
+      }
+
+      h4 {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include font-size(16, 26);
+
+        @include mq($bp768) {
+          @include font-size(20, 26);
+        }
+      }
+
+      p {
+        @extend %font-ibm-plex-serif-regular;
+        @include font-size(14, 26);
+        letter-spacing: rem(-.39);
+
+        @include mq($bp768) {
+          @include font-size(16, 26);
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+
+  &:nth-child(1) {
+    svg {
+      background-color: $color-supernova;
+    }
+
+    .text-container {
+      background-color: $color-supernova;
+    }
+  }
+
+  &:nth-child(2) {
+    svg {
+      transform: rotate(-135deg) translateY(calc(-50% + #{rem(12)}));
+      background-color: $color-carrot-orange;
+
+      @include mq($bp768) {
+        right: rem(-25);
+        left: auto;
+        transform: rotate(-45deg);
+      }
+
+      @include mq($bp1024) {
+        top: auto;
+        right: auto;
+        bottom: rem(-25);
+        left: calc(50% - #{rem(16)});
+        transform: rotate(45deg);
+      }
+    }
+
+    .text-container {
+      background-color: $color-carrot-orange;
+    }
+  }
+
+  &:nth-child(3) {
+    svg {
+      background-color: $color-caribbean-green;
+    }
+
+    .text-container {
+      background-color: $color-caribbean-green;
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: rem(-12);
+    left: calc(50% - #{rem(12)});
+    width: rem(25);
+    height: rem(25);
+    transform: rotate(-135deg) translateY(calc(-50% + #{rem(12)}));
+    z-index: 1;
+
+    @include mq($bp768) {
+      top: calc(50% - #{rem(16)});
+      left: rem(-34);
+      width: rem(50);
+      height: rem(50);
+      transform: rotate(-225deg) translateY(calc(-50% + #{rem(12)}));
+    }
+
+
+    @include mq($bp1024) {
+      top: rem(-34);
+      left: calc(50% - #{rem(16)});
+      transform: rotate(-135deg) translateY(calc(-50% + #{rem(12)}));
+    }
+  }
+
+  @include hover {
+    path {
+      transform: translate3d(rem(6), rem(6), 0px);
+    }
+  }
+}

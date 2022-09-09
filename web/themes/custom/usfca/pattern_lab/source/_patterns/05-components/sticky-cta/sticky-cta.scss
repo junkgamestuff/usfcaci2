@@ -1,0 +1,38 @@
+$section-background-color: $color-light-grey;
+
+.cc--sticky-cta {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $section-background-color;
+  z-index: 5;
+
+  .c--sticky-cta {
+    @include maxwidth;
+
+    .inner-wrapper {
+      @include padding(rem(11) cols(3));
+
+      @include mq($bp768) {
+        @include padding(rem(22) cols(2) rem(20));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  h3 {
+    @include font-size(20, 26);
+
+    @include mq($bp768) {
+      @include margin(null rem(80) null null);
+      @include font-size(24, 29);
+    }
+
+    @include mq($bp1024) {
+      @include font-size(26, 32);
+    }
+  }
+}

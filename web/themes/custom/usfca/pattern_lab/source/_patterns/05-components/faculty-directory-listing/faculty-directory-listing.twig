@@ -1,0 +1,38 @@
+{% extends "base-component" %}
+
+{% set name = "faculty-directory-listing" %}
+
+{% block content %}
+
+  {% embed "base-field" with { name: "field-components" } %}
+
+    {% block content %}
+
+      {% for card in cards %}
+
+        {% include "components-faculty-directory-listing-item" with {
+          image: card.image,
+          title: card.title,
+          link: card.link,
+          label: card.label,
+          category: card.category,
+          description: card.description,
+          email: card.email,
+          location: card.location
+        } only %}
+
+      {% endfor %}
+
+      {% if link is not empty %}
+        {% include "fields-link" with {
+          href: link.href,
+          cta: link.cta,
+          aria: link.ariaLabel
+        } only %}
+      {% endif %}
+
+    {% endblock content %}
+
+  {% endembed %}
+
+{% endblock %}

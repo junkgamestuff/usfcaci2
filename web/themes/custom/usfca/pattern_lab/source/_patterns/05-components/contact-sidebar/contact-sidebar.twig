@@ -1,0 +1,23 @@
+{% extends "base-component" %}
+
+{% set name = "contact-sidebar" %}
+
+{% block content %}
+
+  {% if title is not empty %}
+    {% include "fields-cta-title" with { title: title } only %}
+  {% endif %}
+
+  {% if description is not empty %}
+    {% include "fields-description" with { description: description } only %}
+  {% endif %}
+
+  <ul class="link-list">
+    {% for link in links %}
+
+      <li>{% include "fields-link" with { cta: link.cta, href: link.href, isAlt: true} only %}</li>
+
+    {% endfor %}
+  </ul>
+
+{% endblock %}

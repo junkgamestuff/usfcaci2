@@ -1,0 +1,28 @@
+{% if variant is iterable %}
+  {% set variant_processed = variant|join(' ') %}
+{% else %}
+  {% set variant_processed = variant %}
+{% endif %}
+
+{%
+  set container_element = container_element|default('div')
+%}
+
+{% if background_image_url %}
+
+<{{ container_element }}{% if id %} id="{{ id }}" {% endif %} class="ec--entity-container ec--{{ name }} {{ (variant_processed) ? variant_processed : '' }}" style="background-image: url('{{ background_image_url }}');">
+
+{% else %}
+
+<{{ container_element }} {% if id %} id="{{ id }}" {% endif %} class="ec--entity-container ec--{{ name }} {{ (variant_processed) ? variant_processed : '' }}">
+
+{% endif %}
+
+    <div class="e--entity e--{{ name }} {{ (variant_processed) ? variant_processed : '' }}">
+
+        {% block content %}
+        {% endblock %}
+
+    </div><!-- e--entity e--{{ name }} -->
+
+</{{ container_element }}><!-- ec--entity-container ec--{{ name }} -->

@@ -1,0 +1,21 @@
+{% extends "base-component" %}
+
+{% set name = "text-cta" %}
+
+{% block content %}
+
+  <div class="inner-wrapper">
+    {% if title %}
+      {% include "fields-section-title" with { title: title } %}
+    {% endif %}
+
+    {% if link.href %}
+      {% include "fields-link" with {
+        href: link.href,
+        cta: link.cta,
+        ariaLabel: link.ariaLabel
+      } only %}
+    {% endif %}
+  </div>
+
+{% endblock %}

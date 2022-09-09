@@ -1,0 +1,15 @@
+{% extends "base-field" %}
+
+{% set name = "datetime" %}
+
+{% block content %}
+
+  <time datetime="{{ timestamp|date('c') }}">
+    <span class="date">{{ date|date('l, F j') }}</span>
+    {% if time is not empty %}
+      <span>|</span>
+      <span class="time">{{ time|date('gA') }}</span>
+    {% endif %}
+  </time>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "base-component" %}
+
+{% set name = "program-page-header" %}
+{% set container_element = 'header' %}
+
+{% block content %}
+
+  <div class="image-text-container">
+    <div class="image-wrapper">
+      {% include "fields-image" with {
+        image: bannerImage
+      } only %}
+    </div>
+    <div class="text-wrapper">
+      {% if eyebrow is not empty %}
+        {% include "fields-category" with { category: eyebrow } only %}
+      {% endif %}
+
+      {% include "fields-page-title" with { title: title } only %}
+
+      {% if headline is not empty %}
+        {% include "fields-description" with { description: headline } only %}
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="text-container">
+    <div class="left-wrapper">
+      {% if breadcrumbs.render is not empty %}
+        {{ breadcrumbs.render }}
+      {% else %}
+        {% include "components-breadcrumbs" with { homeURL: breadcrumbs.homeURL, items: breadcrumbs.items } %}
+      {% endif %}
+
+      {% if description is not empty %}
+        {% include "fields-description" with { description: description } only %}
+      {% endif %}
+    </div>
+
+    <div class="links-container">
+      {% if cta_title is not empty %}
+        {% include "fields-cta-title" with { title: cta_title.title, url: cta_title.url } %}
+        <button class="list-toggle">{{ cta_title.title }} <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width="35" height="35" viewBox='0 0 35 35' enable-background='new 0 0 35 35' xml:space='preserve'><polygon fill-rule='evenodd' clip-rule='evenodd' fill='#FFF' points='17.5,20.2 23.7,14 25,15.3 17.5,22.8 10,15.3 11.3,14 '/></svg></button>
+      {% endif %}
+      <div class="links-wrapper">
+        {% if links is not empty %}
+          <ul class="nav-links">
+          {% for link in links %}
+            <li class="program-nav-item">
+              {% include "fields-link" with { cta: link.title, url: link.url, class: link.class } %}
+            </li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+        {% if buttons is not empty %}
+          <div class="buttons-container">
+            {% for button in buttons %}
+              {% include "fields-link" with { cta: button.title, url: button.url } only %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

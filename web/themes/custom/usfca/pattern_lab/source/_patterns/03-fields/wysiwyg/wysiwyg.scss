@@ -1,0 +1,458 @@
+$radius: 0;
+
+.cc--rich-text {
+  @include maxwidth;
+  @include clearfix;
+}
+
+%rich-text {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include margin(null null rem(15));
+    color: $color-sherpa-blue;
+
+    @include mq($bp768) {
+      @include margin(null null rem(20))
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  figure,
+  img {
+    @include margin(null null rem(10));
+
+    @include mq($bp768) {
+      @include margin(null null rem(15))
+    }
+
+    &.align-center {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+
+      article, img {
+        width: 100%;
+      }
+    }
+  }
+
+  .align-left,
+  .align-right {
+    @include mq($bp768) {
+      width: cols(12, 40);
+    }
+
+    @include mq($bp1024) {
+      width: cols(12, 28);
+    }
+  }
+
+  .align-left {
+    @include mq($bp768) {
+      @include margin(null cols(2, 40) null null);
+      float: left;
+    }
+
+    @include mq($bp1024) {
+      @include margin(null cols(2, 28) null null);
+    }
+  }
+
+  .align-right {
+    @include mq($bp768) {
+      @include margin(null null null cols(2, 40));
+      float: right;
+    }
+
+    @include mq($bp1024) {
+      @include margin(null null null cols(2, 28));
+    }
+  }
+
+  article {
+    &.align-center {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  img {
+    @include margin(null null rem(10));
+    display: block;
+    width: auto;
+    max-width: 100%;
+    border-radius: $radius;
+
+    @include mq($bp1024) {
+      @include margin(null null rem(30));
+    }
+  }
+
+  figure {
+    @include margin(null null rem(35));
+
+    @include mq($bp768) {
+      @include margin(null null rem(70));
+    }
+
+    figcaption {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(14, 18);
+      color: $color-black;
+      font-style: normal;
+      text-align: left;
+      text-transform: none;
+
+      a {
+        font-size: inherit;
+        line-height: inherit;
+        font-family: inherit;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    @include font-size(14, 18);
+    color: $color-black;
+    word-break: break-word;
+
+    @include mq($bp768) {
+      @include font-size(16, 24);
+    }
+  }
+
+  a {
+    @include font-size(14, 18);
+    color: $color-sherpa-blue;
+
+    @include mq($bp768) {
+      @include font-size(16, 24);
+    }
+
+    @include hover {
+      color: $color-sherpa-blue;
+      text-decoration: none;
+    }
+
+    &.acalog {
+      @include margin(null null rem(10));
+      display: inline-block;
+    }
+
+    strong,
+    b {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  .cta-link {
+    @include button($secondary: true);
+
+    @include mq($bp768max) {
+      + .cta-link {
+        @include margin(rem(20) null null);
+      }
+    }
+
+    @include mq($bp768) {
+      @include margin(null rem(15) null null);
+    }
+
+    @include mq($bp1024) {
+      @include margin(null rem(20) null null);
+    }
+  }
+
+  strong,
+  b {
+    @extend %font-ibm-plex-serif-bold;
+    @include font-size(16, 26);
+  }
+
+  ul,
+  ol {
+    @include padding(0 null rem(30) 0);
+
+    strong,
+    b {
+      font-size: inherit;
+      line-height: inherit;
+    }
+
+    ol,
+    ul {
+      @include padding(rem(24) null 0);
+    }
+
+    li {
+      @include font-size(14, 18);
+      @include padding(null null null rem(25));
+      @include margin(null null rem(24));
+      position: relative;
+
+      @include mq($bp768) {
+        @include padding(null null null rem(25));
+        @include font-size(16, 24);
+      }
+
+      a {
+        color: $color-sherpa-blue;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+
+        @include hover {
+          color: $color-sherpa-blue;
+        }
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    > li {
+      &::before {
+        display: block;
+        position: absolute;
+        top: rem(6);
+        left: 0;
+        width: rem(8);
+        height: rem(8);
+        line-height: rem(30);
+        border-radius: 50%;
+        background: $color-supernova;
+        content: '';
+
+        @include mq($bp768) {
+          top: rem(8);
+        }
+      }
+    }
+  }
+
+  ol {
+    @include padding(null null null rem(18));
+
+    > li {
+      @include padding(null null null rem(10));
+
+      &::marker {
+        color: $color-supernova;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .video-embed {
+    aspect-ratio: 16 / 9;
+
+    iframe {
+      @include margin(null null rem(40));
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+    }
+
+    @supports not (aspect-ratio: 16 / 9) {
+      position: relative;
+      height: 0;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  blockquote {
+    @include margin(rem(40) 0 0);
+    @include padding(null null rem(40));
+    position: relative;
+    clear: both;
+
+    @include mq($bp768) {
+      @include margin(rem(64) null null);
+      @include padding(null null rem(75));
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      width: rem(36);
+      height: rem(33);
+      background: $color-white url('../images/icons-usf/quote.svg') no-repeat center;
+      background-size: cover;
+      content: '';
+
+      @include mq($bp768) {
+        width: rem(75);
+        height: rem(67);
+      }
+    }
+
+    &,
+    p {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include margin(null null 0);
+      @include font-size(20, 24);
+      color: $color-sherpa-blue;
+
+      @include mq($bp768) {
+        @include font-size(36, 40);
+      }
+
+      a {
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+    }
+
+    p {
+      @include padding(null null null rem(20));
+      @include margin(null null null rem(56));
+      border-left: rem(2) solid $color-supernova;
+
+      @include mq($bp768) {
+        @include padding(null null null rem(48));
+        @include margin(null null null rem(125));
+      }
+    }
+  }
+
+  table:not(.gsc-above-wrapper-area-container) {
+    @include margin(null null rem(20));
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    overflow: auto;
+    word-break: normal;
+    table-layout: fixed;
+
+    thead {
+      background-color: $color-grey-light;
+
+      th {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include padding(rem(15) rem(25));
+        @include font-size(20, 20);
+        border: 0;
+        color: $color-black;
+        text-align: left;
+
+        &:not(:last-child) {
+          border-right: rem(1) solid $color-gainsboro;
+        }
+      }
+    }
+
+    tbody {
+      th,
+      td {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include padding(rem(20) rem(25));
+        @include font-size(16, 20);
+        border: 0;
+        color: $color-black;
+        font-weight: normal;
+
+        &:not(:last-child) {
+          border-right: rem(1) solid $color-gainsboro;
+        }
+
+        @include mq($bp1024) {
+          @include font-size(20, 20);
+        }
+
+        strong {
+          @extend %font-fira-sans-extra-condensed-bold;
+          @include font-size(16, 20);
+
+          @include mq($bp1024) {
+            @include font-size(20, 20);
+          }
+        }
+
+        a {
+          @extend %font-fira-sans-extra-condensed-regular;
+          @include font-size(16, 20);
+          color: $color-sherpa-blue;
+
+          @include mq($bp1024) {
+            @include font-size(20, 20);
+          }
+        }
+      }
+
+      tr {
+        border-bottom: rem(1) solid $color-border;
+
+        &:nth-child(odd) {
+          background: $color-bright-grey;
+        }
+
+        &:first-child {
+          border-top: rem(1) solid $color-border;
+
+          td,
+          th {
+            border-top: rem(1) solid $color-border;
+          }
+        }
+
+        &:last-child {
+          td,
+          th {
+            border-bottom: rem(1) solid $color-border;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    tr {
+      background: none;
+    }
+  }
+
+  .resp-table {
+    @include margin(null null rem(20));
+    width: 100%;
+    overflow-x: auto;
+
+    table {
+      width: auto;
+    }
+  }
+}
+
+div,
+.cc--rich-text {
+  .f--wysiwyg {
+    @extend %rich-text;
+  }
+}

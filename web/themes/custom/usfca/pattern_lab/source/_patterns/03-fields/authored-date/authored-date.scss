@@ -1,0 +1,69 @@
+.f--authored-date {
+  display: flex;
+
+  img {
+    @include margin(null rem(10) null null);
+    width: rem(40);
+    height: rem(40);
+    border-radius: 50%;
+
+    @include mq($bp768) {
+      @include margin(null rem(15) null null);
+      width: rem(50);
+      height: rem(50);
+    }
+
+    @include mq($bp1024) {
+      @include margin(null rem(20) null null);
+      width: rem(60);
+      height: rem(60);
+    }
+  }
+
+  .text-container {
+    @include mq($bp768) {
+      display: flex;
+      align-items: center;
+    }
+
+    p {
+      @extend %font-fira-sans-extra-condensed-bold;
+      @include margin(0);
+      @include font-size(12, 16);
+
+      @include mq($bp768) {
+        @include font-size(14, 19);
+      }
+
+      @include mq($bp1024) {
+        @include font-size(18, 24);
+      }
+
+      &::after {
+
+        @include mq($bp768) {
+          @include margin(null rem(10));
+          display: inline-block;
+          content: '|';
+        }
+
+        @include mq($bp1024) {
+          @include margin(null rem(15));
+        }
+      }
+    }
+
+    time {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(12, 16);
+
+      @include mq($bp768) {
+        @include font-size(14, 19);
+      }
+
+      @include mq($bp1024) {
+        @include font-size(18, 24);
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% set socialLinks = [] %}
+
+  {% for item in fields.social_links %}
+    {% set socialLinks = socialLinks | merge([{
+      href: item.fields.link.url,
+      cta: item.fields.social_service,
+      aria: item.fields.social_service,
+      class: item.fields.social_service,
+    }]) %}
+  {% endfor %}
+
+  {% include "components-social-media-feed" with {
+    title: fields.title,
+    markup: fields.social_media_feed_id is not empty ? '<div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div><script type="text/javascript">(function(){var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";i.src="https://cdn.curator.io/published/' ~ fields.social_media_feed_id ~ '.js";e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);})();</script>' : null,
+    socialLinks: socialLinks,
+  } only %}
+
+{% endblock content %}

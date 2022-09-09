@@ -1,0 +1,72 @@
+@mixin swiper-controls {
+  display: flex;
+  align-items: center;
+
+  .swiper-counter {
+    @extend %font-fira-sans-bold;
+    @include font-size(14, 19);
+    @include margin(null rem(10) null null);
+
+    @include mq($bp768) {
+      @include margin(null rem(20) null null);
+    }
+  }
+
+  .button-container {
+    width: rem(78);
+    height: rem(40);
+    position: relative;
+
+    @include mq($bp768) {
+      width: rem(98);
+      height: rem(50);
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    @include margin(0);
+    @include hide-text;
+    position: absolute;
+    top: 0;
+    width: rem(40);
+    height: rem(40);
+    border: rem(2) solid $color-black;
+    background-color: $color-white;
+    background-size: rem(10);
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 5;
+
+    &:focus {
+      z-index: 10;
+    }
+
+    @include hover {
+      background-color: $color-black;
+    }
+
+    @include mq($bp768) {
+      width: rem(50);
+      height: rem(50);
+    }
+  }
+
+  .swiper-button-next {
+    background-image: url('../images/icons/icon-arrow-right.svg');
+    right: 0;
+
+    @include hover {
+      background-image: url('../images/icons/icon-arrow-right-white.svg');
+    }
+  }
+
+  .swiper-button-prev {
+    background-image: url('../images/icons/icon-arrow-left.svg');
+    left: 0;
+
+    @include hover {
+      background-image: url('../images/icons/icon-arrow-left-white.svg');
+    }
+  }
+}

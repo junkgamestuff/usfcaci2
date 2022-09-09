@@ -1,0 +1,13 @@
+{
+  "title": "Event Title",
+  "date": "Mar 6",
+  "time": "11:00AM - 12:00PM",
+  "location": "At the best location possible",
+  "image": {
+    "src": "https://placeimg.com/1920/1080/nature",
+    "alt": "Alt 4"
+  },
+  "link": {
+    "href": "https://www.example.com/"
+  }
+}

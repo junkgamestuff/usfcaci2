@@ -1,0 +1,49 @@
+.cc--footer-contact {
+  @include mq($bp768max) {
+    @include padding(null null null cols(1.5, 39));
+    flex-basis: 50%;
+  }
+
+  @include mq($bp768) {
+    @include margin(rem(26) null null);
+  }
+
+  @include mq($bp1024) {
+    @include margin(rem(28) null null);
+  }
+
+  @include mq($bp1024) {
+    justify-content: space-between;
+  }
+
+  .c--footer-contact {
+    .f--wysiwyg {
+      @extend %font-ibm-plex-serif-regular;
+      @include font-size(12, 16);
+      letter-spacing: rem(-.19);
+
+      @include mq($bp768) {
+        @include font-size(12, 20);
+      }
+
+      @include mq($bp1024) {
+        @include font-size(14, 24);
+      }
+
+      p {
+        color: $color-white;
+      }
+
+      a {
+        color: $color-white;
+        font-family: inherit;
+        text-decoration: none;
+
+        @include hover {
+          color: $color-white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

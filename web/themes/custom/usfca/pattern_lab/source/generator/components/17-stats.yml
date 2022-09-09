@@ -1,0 +1,41 @@
+name: stats
+type: component
+markup:
+  content:
+    - type: field
+      name: section-title
+      with: title
+    - type: repeater
+      for: stat
+      in: stats
+      name: stats
+      repeat:
+        type: component
+        name: stat
+        with:
+          number: number
+          description: description
+        own: true
+        markup:
+          content:
+            - type: field
+              name: number
+              with:
+                number: number
+            - type: field
+              name: description
+              with:
+                description: description
+data:
+  title: "Facts & Figures"
+  stats:
+    - number: "123"
+      description: "<p>Lorem ipsum dolor</p>"
+    - number: "42"
+      description: "<p>Sit amet consectetur adipiscing elit</p>"
+    - number: "123"
+      description: "<p>Excepteur sint occaecat cupidatat non proident</p>"
+    - number: "123"
+      description: "<p>Sunt in culpa qui officia</p>"
+    - number: "123"
+      description: "<p>Ut enim ad minim veniam</p>"

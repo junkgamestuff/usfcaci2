@@ -1,0 +1,13 @@
+{
+  "date": "Sep 06, 2020",
+  "title": "Lorem Ipsum Dolor",
+  "location": "Student Center",
+  "time": "10:30AM - 11:30AM",
+  "image": {
+    "src": "https://placeimg.com/300/170/people",
+    "alt": "Alt 1"
+  },
+  "link": {
+    "href": "#"
+  }
+}

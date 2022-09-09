@@ -1,0 +1,204 @@
+$link-icon: url('../images/icons/icon-external-link.svg') no-repeat center;
+$play-button: url('../images/icons/icon-play.svg') no-repeat center center / 42px 42px;
+$radius: 0;
+$date-location-color: $color-secondary;
+
+.cc--featured-event-card {
+  @include padding(rem(30) null);
+  border-top: 1px solid $color-border;
+
+  &:first-child {
+    @include padding(0 null null);
+    border-top: 0;
+  }
+
+  &.with-video {
+    .f--image {
+      position: relative;
+
+      &::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: $radius;
+        background: $play-button;
+        content: '';
+      }
+    }
+  }
+
+  .c--featured-event-card {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include mq($bp768) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .date-wrapper {
+    @include padding(rem(10));
+    display: flex;
+    position: absolute;
+    bottom: rem(-30);
+    left: cols(6, 48);
+    align-items: center;
+    justify-content: center;
+    min-width: cols(9, 48);
+    background-color: $color-supernova;
+
+    @include mq($bp768) {
+      top: rem(20);
+      right: cols(-1, 25);
+      bottom: auto;
+      left: auto;
+      min-width: cols(4, 25);
+    }
+
+    @include mq($bp1024) {
+      top: rem(60);
+      right: cols(-1, 28);
+      min-width: cols(4, 28);
+    }
+
+    .f--date-string {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(12, 12);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $date-color;
+      text-transform: uppercase;
+      justify-items: center;
+
+      @include mq($bp768) {
+        @include font-size(16, 16);
+      }
+
+      span {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include margin(null null rem(2) null);
+        @include font-size(36, 36);
+        display: block;
+
+        @include mq($bp768) {
+          @include margin(null null rem(5) null);
+          @include font-size(24, 30);
+        }
+
+        @include mq($bp1024) {
+          @include margin(null null 0);
+          @include font-size(48, 48);
+        }
+      }
+    }
+  }
+
+  .text-container {
+    @include mq($bp768) {
+      @include padding(null cols(2, 28) null null);
+      flex: 0 0 cols(17, 28);
+      width: cols(17, 28);
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(2, 28) null null);
+      flex: 0 0 cols(16, 28);
+      width: cols(16, 28);
+    }
+  }
+
+  .image-container {
+    @include mq($bp768max) {
+      @include margin(null null rem(15));
+    }
+
+    @include mq($bp768) {
+      flex: 0 0 cols(11, 28);
+      width: cols(11, 28);
+    }
+
+    @include mq($bp1024) {
+      flex: 0 0 cols(12, 28);
+      width: cols(12, 28);
+    }
+  }
+
+  .f--category {
+    @include margin(null null rem(6));
+    @include font-size(18, 18);
+
+    @include mq($bp768-1024) {
+      @include font-size(12, 16);
+    }
+  }
+
+  .f--cta-title {
+    @include margin(null null rem(12));
+
+    @include mq($bp768) {
+      @include margin(null null rem(20));
+    }
+
+    @include mq($bp768) {
+      @include margin(null null rem(22));
+    }
+
+    a {
+      @include font-size(30, 30);
+      color: $color-sherpa-blue;
+      text-decoration: none;
+
+      @include mq($bp768) {
+        @include font-size(36, 42);
+      }
+
+      @include mq($bp1024) {
+        @include font-size(48, 54);
+      }
+
+      @include hover {
+        color: $color-sherpa-blue;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .f--description {
+    @include margin(null null rem(6));
+
+    @include mq($bp768) {
+      @include margin(null null rem(16));
+    }
+
+    p {
+      @extend %font-ibm-plex-serif-regular;
+      @include font-size(14, 18);
+
+      @include mq($bp1024) {
+        @include font-size(16, 24);
+      }
+    }
+  }
+
+  .event-location,
+  .f--time-string {
+    @extend %font-fira-sans-extra-condensed-regular;
+    @include font-size(18, 24);
+    color: $description-color;
+
+    @include mq($bp768) {
+      @include font-size(20, 24);
+    }
+  }
+
+  .image-container {
+    img {
+      border-radius: $radius;
+    }
+  }
+}

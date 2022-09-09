@@ -1,0 +1,41 @@
+.cc--contact-sidebar {
+  .f--cta-title {
+    h3 {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(24, 24);
+      @include margin(null null rem(30));
+    }
+  }
+
+  .f--description {
+    @include margin(null null rem(30));
+
+    p {
+      text-align: left;
+    }
+  }
+
+  .link-list {
+    @include no-bullet;
+
+    li {
+      a {
+        @extend %font-fira-sans-bold;
+        @include font-size(16, 16);
+        @include padding(rem(20) null);
+        display: block;
+        border-bottom: rem(1) solid $color-grey;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &::after {
+          @extend %link-alt;
+        }
+
+        &:first-child {
+          border-top: rem(1) solid $color-grey;
+        }
+      }
+    }
+  }
+}

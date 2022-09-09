@@ -1,0 +1,15 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% include "components-featured-image" with {
+    image: fields.image.uri ? {
+      src: fields.image.uri | image_style('2_1_2400x1200'),
+      alt: fields.image.alt,
+      caption: fields.caption,
+      render: drupal_image(fields.image.uri, '2_1_full', { alt: fields.image.alt }, responsive=true),
+      wrapFigure: true,
+    } : null,
+  } only %}
+
+{% endblock content %}

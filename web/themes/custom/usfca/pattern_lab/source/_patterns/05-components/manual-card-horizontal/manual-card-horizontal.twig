@@ -1,0 +1,43 @@
+{% extends "base-component" %}
+
+{% set name = "manual-card-horizontal" %}
+
+{% block content %}
+
+  {% if image is not empty %}
+
+    {% include "fields-image" with {
+      image: image
+    } only %}
+
+  {% endif %}
+
+  <div class="text-container">
+
+    {% if title is not empty %}
+
+      {% include "fields-cta-title" with {
+        href: link.href,
+        title: title
+      } only %}
+
+    {% endif %}
+
+    {% if description is not empty %}
+    {% include "fields-description" with {
+      description: description
+    } only %}
+    {% endif %}
+
+    {% if link is not empty %}
+    {% include "fields-link" with {
+      cta: link.cta,
+      href: link.href,
+      aria: link.ariaLabel,
+      svgAfter: "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 31.7 54\" enable-background=\"new 0 0 31.7 54\" xml:space=\"preserve\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M21,27L0.7,47.8c0,0-1.9,2.3,0.5,4.9C3.6,55.2,6,53.3,6,53.3L31.7,27l0,0l0,0L6,0.7c0,0-2.3-2-4.8,0.5c-2.4,2.5-0.5,4.9-0.5,4.9L21,27z\"/></svg>"
+    } only %}
+    {% endif %}
+
+  </div>
+
+{% endblock %}

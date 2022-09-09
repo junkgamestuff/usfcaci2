@@ -1,0 +1,182 @@
+name: "news-events-promo"
+type: "component"
+markup:
+  content:
+    - type: container
+      class: 'content-hero'
+      content:
+      - type: container
+        class: 'text-container'
+        content:
+        - type: field
+          name: section-title
+          with:
+            title: sectionTitle
+            link: 'null'
+        - type: field
+          name: eyebrow
+          with:
+            text: hero.eyebrow
+        - type: field
+          name: cta-title
+          with:
+            title: hero.title
+            link: hero.link
+        - type: field
+          name: description
+          with:
+            description: hero.description
+      - type: container
+        class: 'image-container'
+        content:
+        - type: field
+          name: image
+          with:
+            image: hero.image
+    - type: container
+      class: 'content-articles'
+      content:
+        - type: repeater
+          for: card
+          in: articles
+          repeat:
+            type: "component"
+            name: "news-events-promo-card-article"
+            own: true
+            markup:
+              content:
+                - type: field
+                  name: image
+                  with: image
+                - type: container
+                  class: 'text-container'
+                  content:
+                    - type: field
+                      name: eyebrow
+                      with: eyebrow
+                    - type: field
+                      name: cta-title
+                      with:
+                        title: title
+                        link: link
+                    - type: field
+                      name: description
+                      with: description
+            with:
+              title: title
+              link: link
+              eyebrow: eyebrow
+              description: description
+              image: image
+    - type: container
+      class: 'content-events'
+      content:
+        - type: repeater
+          for: card
+          in: events
+          repeat:
+            type: "component"
+            name: "news-events-promo-card-event"
+            own: true
+            markup:
+              content:
+                - type: field
+                  name: image
+                  with: image
+                - type: container
+                  class: 'text-container'
+                  content:
+                    - type: field
+                      name: eyebrow
+                      with:
+                        text: eyebrow
+                    - type: field
+                      name: cta-title
+                      with:
+                        title: title
+                        link: link
+                    - type: field
+                      name: description
+                      with: description
+            with:
+              title: title
+              link: link
+              eyebrow: eyebrow
+              description: description
+              image: image
+    - type: container
+      class: 'content-footer'
+      content:
+        - type: field
+          name: button-link
+          with:
+            link: sectionLink
+          condition:
+            sectionLink.url
+data:
+  sectionTitle: "<span class=\"highlight\">UMass </span>News & Events"
+  sectionLink:
+    url: "/news"
+    title: "More News & Events"
+  hero:
+    eyebrow: "Scholar Spotlight"
+    title: "Fighting to Build a Just Society"
+    description: "<p>UMass educator challenges institutions to rethink attitudes rooted in oppression</p>"
+    link:
+      url: "//an-article"
+    image:
+      src: "/images/16_9_1600x900.png"
+      alt: "Promo Image"
+  articles:
+    - image:
+        src: '/images/16_9_320x180.png'
+        alt: 'image'
+      eyebrow: 'Research'
+      title: 'Lunch with a Food Scientist'
+      link:
+        url: '/article'
+      description: '<p>"The biggest change to the food of the future will be not what is on your plate, but the science behind it."</p>'
+    - image:
+        src: '/images/16_9_320x180.png'
+        alt: 'image'
+      eyebrow: 'Sustainability'
+      title: "New Tech Generates Electricity 'Out of Thin Air'"
+      link:
+        url: '/article'
+      description: '<p>Renewable device could help mitigate climate change, power medical devices</p>'
+    - image:
+        src: '/images/16_9_320x180.png'
+        alt: 'image'
+      eyebrow: 'Athletics'
+      title: "Go, Minutewomen!"
+      link:
+        url: '/article'
+      description: "<p>The UMass women's basketball team blazes through a record-setting season</p>"
+  events:
+    - image:
+        src: '/images/16_9_320x180.png'
+        alt: 'image'
+      eyebrow: 'February 16'
+      title: 'Film Screening: The River and the Wall'
+      link:
+        url: '/event'
+      description:
+        '<p>5pm — 7:30pm</p><p>Old Chapel, 2nd Floor</p>'
+    - image:
+        src: '/images/16_9_320x180.png'
+        alt: 'image'
+      eyebrow: 'March 19'
+      title: "Graduate Jazz Composer's Concert"
+      link:
+        url: '/event'
+      description:
+        '<p>7:30pm</p><p>Bezanson Recital Hall</p>'
+    - image:
+        src: '/images/16_9_320x180.png'
+        alt: 'image'
+      eyebrow: 'April 26 — 28'
+      title: 'Exhibit: "Release the Moorings" by Christine Texiera'
+      link:
+        url: '/event'
+      description:
+        '<p>1pm — 6pm</p><p>Hampden Gallery</p>'

@@ -1,0 +1,15 @@
+{
+  "bodyClass": "transparent-header",
+  "topLayouts": null,
+  "layouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "rfi-hero" },
+        { "type": "rfi-rich-text" },
+        { "type": "slate-form" }
+      ]
+    }
+  ],
+  "bottomLayouts": null
+}

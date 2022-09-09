@@ -1,0 +1,19 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% if fields.acalog_course_prefix is not empty and fields.acalog_course_code is not empty %}
+
+  {{ attach_library('usfca/acalog_link') }}
+
+  {% set acalog_link_text = fields.acalog_link_text is not empty ? fields.acalog_link_text : (fields.acalog_course_prefix ~ '-' ~ fields.acalog_course_code) %}
+
+  {% include "components-rich-text" with {
+    variant: 'acalog-link',
+    markup: '<a class="acalog" target="_blank" rel="noopener noreferrer" data-acalog-data="courses" data-acalog-catalog-type="Catalog" data-acalog-course-prefix="' ~ fields.acalog_course_prefix ~ '" data-acalog-course-code="' ~ fields.acalog_course_code ~ '" data-acalog-link-text="' ~ acalog_link_text ~ '">' ~ acalog_link_text ~ '</a>',
+    container_id: 'acalog-link-' ~ paragraph.id(),
+  } only %}
+
+  {% endif %}
+
+{% endblock content %}

@@ -1,0 +1,15 @@
+.cc--news-article-listing {
+  @include maxwidth;
+
+  .c--news-article-listing {
+    @include padding(null cols(3));
+
+    @include mq($bp768) {
+      @include padding(null cols(10));
+    }
+
+    .tc--basic-page & {
+      @include padding(null 0);
+    }
+  }
+}

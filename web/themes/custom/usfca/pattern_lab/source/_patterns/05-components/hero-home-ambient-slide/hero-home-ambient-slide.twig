@@ -1,0 +1,34 @@
+{% extends "base-component" %}
+
+{% set name = "hero-home-ambient-slide" %}
+
+{% block content %}
+  <div class="image-video">
+    {% if videoSrc %}
+      {% include "fields-ambient-video" with { videoSrc: videoSrc } only %}
+      {% include "fields-image" with {
+        image: image
+      } only %}
+      {% include "components-video-controls" %}
+    {% else %}
+      {% include "fields-image" with {
+        image: image
+      } only %}
+    {% endif %}
+  </div>
+
+  <div class="text-container-wrapper">
+    <div class="text-container">
+      <div class="text-container-inner">
+
+        {% if title %}
+          {% include "fields-section-title" with {
+            title: title,
+            url: url
+          } %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

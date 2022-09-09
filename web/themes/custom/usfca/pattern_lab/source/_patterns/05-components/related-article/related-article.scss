@@ -1,0 +1,73 @@
+$image-border-radius: 0;
+$category-color: $color-primary;
+$subtext-color: $color-secondary;
+$description-color: $color-secondary;
+$section-color: $color-white;
+$line-color: $color-primary;
+
+.cc--related-article {
+  @include mq($bp768max) {
+    + .cc--related-article {
+      @include margin(rem(30) null null);
+    }
+  }
+
+  @include mq($bp768) {
+    &:nth-of-type(3) ~ .cc--related-article {
+      @include margin(rem(30) null null);
+    }
+  }
+
+  @include mq($bp1024) {
+    &:nth-of-type(3) ~ .cc--related-article {
+      @include margin(rem(40) null null);
+    }
+  }
+
+  .f--image {
+    @include margin(null null rem(20));
+
+    @include mq($bp1024) {
+      @include margin(null null rem(25));
+    }
+
+    img {
+      border-radius: $image-border-radius;
+    }
+  }
+
+  .text-container {
+    @include mq($bp768) {
+      @include padding(null cols(1, 14));
+    }
+  }
+
+  .f--cta-title {
+    @include margin(null null rem(10));
+
+    a {
+      text-decoration: none;
+
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .f--text {
+    @include margin(null null rem(10));
+    @include font-size(16, 23);
+    color: $subtext-color;
+  }
+
+  .f--description {
+    p {
+      @include font-size(14, 23);
+      color: $description-color;
+
+      &:last-child {
+        @include margin(null null 0);
+      }
+    }
+  }
+}

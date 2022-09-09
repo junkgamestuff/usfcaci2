@@ -1,0 +1,62 @@
+{% extends "base-component" %}
+
+{% set name = "fifty-fifty-cta-groupings" %}
+
+{% block content %}
+
+
+{% if linksLeft is not empty %}
+
+  <div class="links-left">
+    <div class="links-inner">
+      {% if linksLeft.title is not empty %}
+        {% include "fields-section-title" with {
+          title: linksLeft.title
+        } only %}
+      {% endif %}
+
+      {% if linksLeft.links is not empty %}
+        <div class="link-container">
+          {% for link in linksLeft.links %}
+            {% include "fields-link" with {
+              url: link.url,
+              title: link.title,
+              ariaLabel: link.ariaLabel,
+              hasIcon: link.hasIcon,
+              svg: link.svg
+            } only %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+
+{% if linksRight is not empty %}
+
+  <div class="links-right">
+    <div class="links-inner">
+      {% if linksRight.title is not empty %}
+        {% include "fields-section-title" with {
+          title: linksRight.title
+        } only %}
+      {% endif %}
+
+      {% if linksRight.links is not empty %}
+        <div class="link-container">
+          {% for link in linksRight.links %}
+            {% include "fields-link" with {
+              url: link.url,
+              title: link.title,
+              ariaLabel: link.ariaLabel,
+              hasIcon: link.hasIcon,
+              svg: link.svg
+            } only %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+
+{% endblock %}

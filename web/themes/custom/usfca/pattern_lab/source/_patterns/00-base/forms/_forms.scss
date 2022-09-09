@@ -1,0 +1,13 @@
+%input-style {
+  @extend %font-fira-sans-extra-condensed-regular;
+  @include padding(null rem(10));
+  @include font-size(16, 26);
+  position: relative;
+  width: 100%;
+  height: rem(50);
+  border: rem(1) solid $color-border;
+  border-radius: 0;
+  background-color: $color-white;
+  color: $color-secondary;
+  appearance: none;
+}

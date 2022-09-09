@@ -1,0 +1,222 @@
+.cc--filter-form {
+  @include mq($bp768max) {
+    @include padding(rem(20));
+  }
+
+  @include mq($bp768) {
+    box-shadow: 0 0 rem(6) rgba($color-black, .25);
+  }
+
+  .c--filter-form {
+    @include mq($bp768max) {
+      background: $color-white;
+      box-shadow: 0 0 rem(4) rem(2) rgba($color-black, .15);
+    }
+
+    @include mq($bp768) {
+      @include padding(rem(30) cols(2, 17) rem(39) cols(1, 17));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(1, 11) null);
+    }
+  }
+
+  .filter-form-header {
+    .filter-title {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(16, 16);
+      @include margin(null null rem(13));
+      display: none;
+      letter-spacing: rem(.3);
+      text-transform: uppercase;
+
+      @include mq($bp768) {
+        display: block;
+      }
+    }
+
+    .filter-button {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(18, 20);
+      @include padding(rem(15) rem(20));
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      width: 100%;
+      color: $color-black;
+
+      @include mq($bp768) {
+        display: none;
+      }
+
+      &.active {
+        .icon.icon-filter {
+          display: none;
+        }
+
+        .icon.icon-filter-close {
+          display: inline-block;
+        }
+      }
+
+      .icon {
+        width: rem(20);
+        height: rem(20);
+
+        &.icon-filter-close {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .filter-form-content {
+    @include mq($bp768max) {
+      @include padding(rem(20));
+      display: none;
+    }
+  }
+
+  .fi--form-item-text {
+    @include padding(null null rem(30));
+    @include margin(null null rem(22));
+    border-bottom: rem(1) solid $color-atlantis;
+
+    input {
+      @include font-size(16, 16);
+      border: rem(1) solid $color-atlantis;
+      background: url('../images/icons-usf/search-green.svg') no-repeat right rem(14) top rem(14);
+      background-size: rem(21);
+
+      @include placeholder {
+        color: $color-gray-suit;
+      }
+    }
+  }
+
+  .fi--form-item {
+    > label,
+    > legend {
+      @include visuallyhidden;
+    }
+  }
+
+  .form-item-wrapper {
+    @include margin(null null rem(21));
+    border-bottom: rem(1) solid $color-atlantis;
+
+    &.active {
+      h4 {
+        &::after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    &.date-wrapper {
+      input {
+        background: none;
+      }
+    }
+
+    h4 {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(20, 20);
+      @include margin(null null rem(22));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+
+      &::after {
+        display: inline-block;
+        background: url('../images/icons-usf/USF_arrow_green.svg') no-repeat 0 0;
+        width: rem(9);
+        height: rem(16);
+        content: '';
+        transition: transform .2s ease;
+      }
+    }
+
+    .fi--form-item {
+      @include padding(null null rem(30));
+      display: none;
+
+      > label,
+      > legend {
+        @include visuallyhidden;
+      }
+    }
+
+    .form-group {
+      @include padding(null null rem(30));
+      display: none;
+      text-align: center;
+
+      .fi--form-item {
+        display: block;
+        margin: 0;
+        padding: 0;
+
+        input {
+          @extend %font-ibm-plex-serif-regular;
+          @include font-size(16, 20);
+          @include padding(null null null rem(7));
+          border: rem(1) solid $color-atlantis;
+          background-size: rem(21);
+          text-transform: uppercase;
+
+          @include placeholder {
+            color: $color-gray-suit;
+          }
+        }
+      }
+
+      span {
+        @include margin(rem(7) null rem(9));
+        display: inline-block;
+      }
+    }
+  }
+
+  .button-container {
+    @include padding(rem(9) null null);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .submit-wrapper {
+      @include margin(null null rem(7));
+      width: 100%;
+
+      .button {
+        @include button($green: true);
+
+        @include mq($bp768) {
+          width: 100%;
+        }
+
+        @include mq($bp1024) {
+          width: 100%;
+        }
+      }
+    }
+
+    .reset-wrapper {
+      .button {
+        @extend %font-fira-sans-bold;
+        @include padding(rem(14) null);
+        @include font-size(16, 16);
+        color: $color-sherpa-blue;
+        text-transform: uppercase;
+        background: none;
+        border: 0;
+
+        @include hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

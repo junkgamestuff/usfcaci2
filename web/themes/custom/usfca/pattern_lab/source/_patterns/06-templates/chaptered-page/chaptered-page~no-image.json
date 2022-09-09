@@ -1,0 +1,33 @@
+{
+  "bodyClass": "chaptered-page-no-image",
+  "title": "Chaptered Page",
+  "ariaLabel": "Lorem ipsum dolorsit amet",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "title-no-image",
+          "title": "Current <span class='highlight'>students</span>",
+          "eyebrow": "Computer science MS"
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "chapter-content-main" }
+      ]
+    }
+  ],
+  "bottomLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "full-width-cta" }
+      ]
+    }
+  ]
+}

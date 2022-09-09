@@ -1,0 +1,7 @@
+{% extends "base-field" %}
+
+{% set name = "email" %}
+
+{% block content %}
+  <a href="mailto:{{ email }}">{{ email }}</a>
+{% endblock %}

@@ -1,0 +1,66 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul{{ attributes.addClass('m--menu').addClass('m--utility') }}>
+    {% else %}
+      <ul class="submenu">
+    {% endif %}
+    {% for item in items %}
+      {% set classes = [
+        'menu-item',
+        item.is_expanded ? 'menu-item--expanded',
+        item.is_collapsed ? 'menu-item--collapsed',
+        item.in_active_trail ? 'menu-item--active-trail',
+        item.below ? 'menu-item-submenu',
+      ] %}
+      <li{{ item.attributes.addClass(classes) }}>
+        {% if not item.below %}
+          {{ link(item.title, item.url) }}
+        {% else %}
+          <div class="utility-button-wrapper">
+            {% set itemUrl = item.url|render %}
+            <a href="{{ itemUrl ? itemUrl : '#' }}" class="utility-item-link">
+              {{ (item.title ~ '<span class="offset"></span>')|raw }}
+            </a>
+            <button type="button" class="utility-button information-for-toggle" aria-expanded="false" aria-haspopup="true">
+              <svg height="8" viewBox="0 0 12 8" width="12" xmlns="http://www.w3.org/2000/svg"><path d="m1042.84635 67.6884765 4.50871-4.6244374s.43286-.5187496-.11575-1.0922584c-.53027-.5559524-1.06462-.1187146-1.06462-.1187146l-5.69152 5.8329023.00203.00209-.00244.0029261 5.69112 5.8320663s.50704.444344 1.06543-.1182966c.5429-.5450842.11575-1.0935125.11575-1.0935125z" fill="#00543c" fill-rule="evenodd" transform="matrix(0 -1 1 0 -61.689655 1047.689655)"></path></svg>
+            </button>
+            {% if item.below %}
+              {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+            {% endif %}
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

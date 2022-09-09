@@ -1,0 +1,62 @@
+{
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "basic-header",
+          "title": "We can’t find the page you are looking for",
+          "description": "<p>404 Error</p>" },
+        { "type": "spacer" },
+        { "type": "spacer" }
+      ]
+    }
+  ],
+  "layouts": null,
+  "bottomLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "related-articles",
+          "title": "You May Also Like",
+          "link": null,
+          "cards": [
+            {
+              "eyebrow": "Eyebrow",
+              "title": "Card Title",
+              "link": "https://www.example.com/",
+              "subText": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+              "description": null,
+              "image": {
+                "src": "https://placeimg.com/1920/1080/nature",
+                "alt": "Image Alt Text4"
+              }
+            },
+            {
+              "eyebrow": "<a href=\"#\">Performance</a>",
+              "title": "Card Title",
+              "link": "https://www.example.com/",
+              "subText": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+              "description": null,
+              "image": {
+                "src": "https://placeimg.com/1920/1080/nature",
+                "alt": "Image Alt Text4"
+              }
+            },
+            {
+              "eyebrow": "Eyebrow",
+              "title": "Card Title",
+              "link": "https://www.example.com/",
+              "subText": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+              "description": null,
+              "image": {
+                "src": "https://placeimg.com/1920/1080/nature",
+                "alt": "Image Alt Text4"
+              }
+            }
+          ] },
+        { "type": "spacer" },
+        { "type": "spacer" }
+      ]
+    }
+  ]
+}

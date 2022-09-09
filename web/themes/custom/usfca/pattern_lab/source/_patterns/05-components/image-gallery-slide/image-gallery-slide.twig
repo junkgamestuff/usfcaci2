@@ -1,0 +1,14 @@
+{% extends "base-component" %}
+
+{% set name = "image-gallery-slide" %}
+
+{% block content %}
+
+  {% if image is not empty %}
+    {% include "fields-image" with { image: image } only %}
+  {% endif %}
+
+  {% include "fields-description" with { description: description } only %}
+
+
+{% endblock %}

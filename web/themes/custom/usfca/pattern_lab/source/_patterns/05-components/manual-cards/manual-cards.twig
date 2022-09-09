@@ -1,0 +1,51 @@
+{% extends "base-component" %}
+
+{% set name = "manual-cards" %}
+{% set variant = [withArrows ? 'with-arrows'] %}
+
+{% block content %}
+
+  <div class="inner-wrapper">
+
+
+    <div class="image-title-container">
+
+    <div class="title-container">
+      {% if title is not empty %}
+        {% include "fields-section-title" with { title: title } %}
+      {% endif %}
+    </div>
+
+    {% if image.src %}
+      <div class="image-container">
+        {% if image is not empty %}
+          {% include "fields-image" with {
+            image: image
+          } only %}
+        {% endif %}
+      </div>
+    {% endif %}
+
+  </div>
+
+    {% embed "base-field" with { name: "field-components", field_variant: 'default-theme' } %}
+
+      {% block content %}
+
+        {% for card in cards %}
+
+          {% include "components-manual-card" with {
+            title: card.title,
+            description: card.description,
+            link: card.link
+          } only %}
+
+        {% endfor %}
+
+      {% endblock content %}
+
+    {% endembed %}
+
+  </div>
+
+{% endblock %}

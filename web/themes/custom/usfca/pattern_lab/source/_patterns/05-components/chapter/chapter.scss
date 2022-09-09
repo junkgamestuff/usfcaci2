@@ -1,0 +1,39 @@
+.cc--chapter {
+  .c--chapter {
+    > .f--section-title {
+      h2 {
+        @include margin(null null rem(10));
+        @include font-size(36, 36);
+        color: $color-sherpa-blue;
+        letter-spacing: rem(.2);
+
+        .tc--profile & {
+          @extend %font-fira-sans-extra-condensed-semibold;
+          @include font-size(30, 36);
+        }
+
+        @include mq($bp768) {
+          @include margin(null null rem(15));
+          @include font-size(48, 56);
+
+          .tc--profile & {
+            @include font-size(30, 40);
+            @include margin(null null rem(20));
+          }
+        }
+
+        @include mq($bp1024) {
+          .tc--profile & {
+            @include margin(null null rem(20));
+          }
+        }
+      }
+    }
+
+    .cc--component-container:not(.cc--back-to-top) {
+      &:last-of-type {
+        @include margin(null null 0);
+      }
+    }
+  }
+}

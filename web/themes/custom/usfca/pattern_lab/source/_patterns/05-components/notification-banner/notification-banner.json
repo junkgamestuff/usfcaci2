@@ -1,0 +1,10 @@
+{
+  "title": "Emergency Alert",
+  "timestamp": "Monday, September 30, 2021 12:00PM EST",
+  "markup" : "<p>Commodo aute officia laborum eiusmod sunt aute et reprehenderit incididunt ea. Eu voluptate ad magna irure occaecat sit veniam nulla sunt do. <a href='#'>Ullamco cupidatat</a> ipsum aliqua in velit pariatur velit laborum officia fugiat minim aute.</p>",
+  "link": {
+    "cta": "Learn More",
+    "href": "https://www.example.com/",
+    "ariaLabel": "An Example Aria Label for CTA Link"
+  }
+}

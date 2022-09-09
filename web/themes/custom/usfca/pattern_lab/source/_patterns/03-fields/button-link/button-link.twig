@@ -1,0 +1,16 @@
+{% extends "base-field" %}
+
+{% set name="button-link" %}
+
+{% block content %}
+  {% include "base-button" with {
+    "cta": cta,
+    "href": href,
+    "aria": aria,
+    "isAlt": isAlt,
+    "hasIcon": hasIcon,
+    "svg": svg,
+    "targetBlank": targetBlank
+  } %}
+
+{% endblock %}

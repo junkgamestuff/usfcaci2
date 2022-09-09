@@ -1,0 +1,259 @@
+// Miles Colors
+// Primary & Secondary
+$color-primary-purple: #671f75;
+$color-primary-gold: #eac000;
+$color-secondary-purple: #883a9b;
+$color-light-gray: #f0f0f0;
+$color-golden-sand: #F2D966;
+
+
+.cc--header-alt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform $transition-duration-default $transition-easing-default;
+  background-color: $color-white;
+  z-index: 999;
+
+  .jump-links & {
+    position: relative;
+  }
+
+  &.scroll-down {
+    transform: translate3d(0, -100%, 0);
+    box-shadow: none;
+
+    .cc--main-menu .m--menu > li .submenus-wrapper {
+      display: none;
+    }
+  }
+
+  &.scroll-up {
+    transform: none;
+
+    .transparent-header & {
+      background: $color-white;
+      box-shadow: 0 rem(1) rem(20) rgba($color-light-gray, .5);
+
+      .cc--branding-header {
+        a {
+          svg {
+            #banner-border {
+              fill: transparent;
+            }
+
+            #wordmark,
+            #border,
+            #column-base {
+              fill: $color-primary-purple;
+            }
+
+            #banner {
+              fill: $color-secondary-purple;
+            }
+
+            #date,
+            #column-groove-right {
+              fill: $color-white;
+            }
+
+            #flame,
+            #column-groove-left {
+              fill: $color-primary-gold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .transparent-header & {
+    background: none;
+    box-shadow: none;
+  }
+
+  .c--header-alt {
+    .header-wrapper {
+      @include maxwidth;
+      position: relative;
+    }
+  }
+
+  .nav-container {
+    @include padding(rem(133) null rem(50));
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color-white;
+    background-image: url('../images/nav-shield.svg');
+    background-position: right rem(-47) top rem(100);
+    background-size: rem(267);
+    background-repeat: no-repeat;
+
+    @include mq($bp768) {
+      @include padding(rem(220) null null);
+      background-position: right rem(-116) top rem(-25);
+      background-size: rem(500);
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(225) cols(4) rem(50));
+      background-position: right cols(8, 48) bottom 0;
+    }
+  }
+
+  .icon-search {
+    width: rem(50);
+    height: rem(50);
+    background: $color-primary-gold;
+
+    @include mq($bp768) {
+      width: rem(75);
+      height: rem(75);
+    }
+
+    svg {
+      width: rem(16);
+      height: rem(16);
+
+      @include mq($bp768) {
+        width: rem(19);
+        height: rem(19);
+      }
+    }
+
+    .search-close {
+      display: none;
+      width: rem(12);
+      height: rem(12);
+
+      @include mq($bp768) {
+        width: rem(15);
+        height: rem(15);
+      }
+    }
+
+    &.is-active {
+      background: $color-golden-sand;
+
+      .search-open {
+        display: none;
+      }
+
+      .search-close {
+        display: inline-block;
+
+        path {
+          fill: $color-primary-purple;
+        }
+      }
+    }
+  }
+
+  .desktop-nav {
+    display: flex;
+    justify-content: space-between;
+
+    .cc--branding-header {
+      flex-basis: cols(14, 24);
+
+      @include mq($bp768) {
+        flex-basis: cols(20, 48);
+      }
+
+      @include mq($bp1024) {
+        flex-basis: cols(14, 48);
+      }
+    }
+
+    .header-buttons {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      z-index: 10;
+    }
+
+    .mobile-menu-trigger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(50);
+      height: rem(50);
+      border-bottom: rem(1) solid $color-golden-sand;
+      background: $color-primary-gold;
+
+      @include mq($bp768) {
+        width: rem(75);
+        height: rem(75);
+      }
+
+      svg {
+        width: rem(16);
+        height: rem(16);
+
+        &.icon-close {
+          width: rem(12);
+          height: rem(12);
+
+          @include mq($bp768) {
+            width: rem(15);
+            height: rem(15);
+          }
+        }
+      }
+
+      .search-close,
+      .icon-close {
+        display: none;
+      }
+
+      &.is-active {
+        background: $color-primary-purple;
+
+        .search-open,
+        .icon-hamburger {
+          display: none;
+        }
+
+        .search-close,
+        .icon-close {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .mobile-nav {
+    @include mq($bp1024) {
+      display: none;
+    }
+
+    &-topbar-container {
+      @include padding(rem(15) null);
+      display: flex;
+      justify-content: space-between;
+      height: rem(60);
+
+      .mobile-buttons {
+        display: flex;
+      }
+    }
+
+    &-menu-container {
+      display: none;
+      position: fixed;
+      top: rem(60);
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% - #{rem(60)});
+      background-color: rgba($color-black, .8);
+      overflow: auto;
+      z-index: 99;
+    }
+  }
+}

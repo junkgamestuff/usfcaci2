@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Theme override to display an oEmbed resource in an iframe.
+ */
+#}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <css-placeholder token="{{ placeholder_token }}">
+    <title>{{ iframe_title }}</title>
+  </head>
+  <body style="margin: 0">
+    <div role="region" aria-label="Skip to main"><a class="skip-link" href="#main-content">
+      Skip to Content
+    </a></div>
+    <main id="main-content">
+      <h1 class="visually-hidden">{{ iframe_title }}</h1>
+      {{ media|raw }}
+    </main>
+  </body>
+</html>

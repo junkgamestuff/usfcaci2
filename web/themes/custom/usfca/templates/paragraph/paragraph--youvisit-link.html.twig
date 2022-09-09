@@ -1,0 +1,9 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {{ attach_library('usfca/youvisit') }}
+
+  {% include "components-rich-text" with { markup: fields.embed_code, variant: [ 'youvisit', 'youvisit-link' ] } only %}
+
+{% endblock content %}

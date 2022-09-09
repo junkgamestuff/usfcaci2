@@ -1,0 +1,49 @@
+.cc--chapter-content-main {
+  @include maxwidth;
+
+  .c--chapter-content-main {
+    @include mq($bp768) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .cc--chapter-jump-links {
+    @include mq($bp768) {
+      position: sticky;
+      top: rem(30);
+    }
+  }
+
+  .content-sidebar {
+    @include mq($bp768) {
+      width: cols(13);
+    }
+
+    @include mq($bp1024) {
+      width: cols(11, 48);
+    }
+  }
+
+  .content-main {
+    @include padding(rem(10) rem(20) rem(50));
+
+    @include mq($bp768) {
+      @include padding(rem(75) cols(2));
+      width: cols(35);
+
+      .tc--profile & {
+        @include padding(rem(30) null);
+      }
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(4) null cols(2));
+      width: cols(37, 48);
+
+      .tc--profile & {
+        @include padding(null cols(3) null null);
+      }
+    }
+  }
+}

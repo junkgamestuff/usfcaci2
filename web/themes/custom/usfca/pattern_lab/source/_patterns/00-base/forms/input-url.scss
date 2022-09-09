@@ -1,0 +1,5 @@
+.fi--form-item {
+  input[type='url'] {
+    @extend %input-style;
+  }
+}

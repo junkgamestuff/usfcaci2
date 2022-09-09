@@ -1,0 +1,11 @@
+.cc--spacer {
+  @include maxwidth;
+
+  .c--spacer {
+    height: rem(40);
+
+    @include mq($bp768) {
+      height: rem(60);
+    }
+  }
+}

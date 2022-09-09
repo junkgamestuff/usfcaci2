@@ -1,0 +1,7 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% include "components-rfi-rich-text" with { markup: fields.rich_text } only %}
+
+{% endblock content %}

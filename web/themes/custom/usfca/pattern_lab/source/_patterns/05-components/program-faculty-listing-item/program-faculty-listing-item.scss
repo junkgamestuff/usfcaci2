@@ -1,0 +1,206 @@
+.cc--program-faculty-listing-item {
+  .c--program-faculty-listing-item {
+    @include mq($bp768) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .image-container {
+    @include mq($bp768max) {
+      @include margin(null null rem(22));
+    }
+
+    @include mq($bp768) {
+      @include padding(null cols(2, 44) null null);
+      width: cols(17, 44);
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(2, 32) null null);
+      width: cols(12, 32);
+    }
+
+    .f--image {
+      aspect-ratio: 1 / 1;
+
+      @supports not (aspect-ratio: 1 / 1) { // fallback for aspect ratio
+        padding-top: 100%;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .text-container {
+    @include mq($bp768) {
+      width: cols(27, 44);
+    }
+
+    @include mq($bp1024) {
+      width: cols(20, 32);
+    }
+
+    .f--cta-title {
+      @include margin(null null rem(10));
+
+      @include mq($bp768) {
+        @include margin(null null rem(6));
+      }
+
+      h3 {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include font-size(30, 30);
+        letter-spacing: rem(.4);
+
+        @include mq($bp768) {
+          @include font-size(36, 36);
+          letter-spacing: rem(.7);
+        }
+
+        a {
+          color: $color-sherpa-blue;
+          text-decoration: none;
+
+          @include hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .f--label {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include margin(null null rem(20));
+      @include font-size(18, 18);
+
+      @include mq($bp768) {
+        @include margin(null null rem(23));
+        @include font-size(24, 24);
+      }
+    }
+
+    .f--category {
+      @extend %font-ibm-plex-serif-regular-italic;
+      @include font-size(14, 14);
+      @include margin(null null rem(10));
+      text-transform: none;
+
+      @include mq($bp768) {
+        @include font-size(16, 24);
+        @include margin(rem(20) null rem(5));
+      }
+    }
+
+    .f--text {
+      @include margin(null null rem(25));
+
+      @include mq($bp768max) {
+        @include margin(null null rem(15));
+        @include font-size(14, 14);
+      }
+    }
+
+    .f--email {
+      @include padding(null null null rem(35));
+      @include margin(null null rem(10));
+      background: url('../images/icons-usf/email.svg') no-repeat 0 center;
+      background-size: rem(20);
+
+      a {
+        @include font-size(14, 24);
+        color: $color-sherpa-blue;
+
+        @include mq($bp768) {
+          @include font-size(16, 24);
+        }
+
+        @include hover {
+          color: $color-sherpa-blue;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .f--address {
+      @include font-size(14, 24);
+      @include padding(null null null rem(35));
+      @include margin(null null rem(15));
+      background: url('../images/icons-usf/map_pin.svg') no-repeat left rem(3) center;
+      background-size: rem(12);
+
+      @include mq($bp768) {
+        @include font-size(16, 24);
+        @include margin(null null rem(25));
+      }
+    }
+
+    .f--description {
+      @include font-size(14, 18);
+      @include margin(null null rem(15));
+
+      @include mq($bp768) {
+        @include margin(null null rem(20));
+        @include font-size(16, 24);
+      }
+
+      p {
+        @include font-size(14, 18);
+        margin-bottom: 0;
+
+        @include mq($bp768) {
+          @include font-size(16, 24);
+        }
+      }
+
+      a {
+        color: $color-sherpa-blue;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+
+        &:hover {
+          color: $color-sherpa-blue;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .f--wysiwyg {
+      @include margin(null null rem(15));
+      @include font-size(14, 18);
+
+      @include mq($bp768) {
+        @include margin(null null rem(20));
+        @include font-size(16, 24);
+      }
+
+      ul {
+        @include no-bullet;
+        display: inline;
+
+        li {
+          display: inline;
+          padding: 0;
+          margin: 0;
+
+          &:not(:last-child) {
+            &::after {
+              @include margin(null rem(5) null null);
+              content: ',';
+            }
+          }
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

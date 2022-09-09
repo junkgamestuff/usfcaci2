@@ -1,0 +1,15 @@
+{% extends "template-default.twig" %}
+
+{% set template_name = 'form-page' %}
+
+{% block top %}
+
+  {% include "base-layout-list" with { layouts: topLayouts } only %}
+
+{% endblock top %}
+
+{% block content %}
+
+  {% include "base-layout-list" %}
+
+{% endblock content %}

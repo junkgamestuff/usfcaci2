@@ -1,0 +1,30 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% set title = fields.eyebrow %}
+  {% if fields.eyebrow_highlight %}
+    {% set title = title|replace({(fields.eyebrow_highlight): '<span class="highlight">' ~ fields.eyebrow_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% include "components-quote-and-cta" with {
+    eyebrow: title,
+    quote: fields.quote,
+    attribution: {
+      attributionTitle: fields.attribution_title,
+      attributionDescription: fields.attribution,
+    },
+    link: fields.link.url ? {
+      cta: fields.link.title,
+      href: fields.link.url,
+      ariaLabel: fields.link.attributes.aria_label ?? fields.link.title,
+    },
+    image: fields.image.uri ? {
+      src: fields.image.uri | image_style('3_4_960x1280'),
+      alt: fields.image.alt,
+      render: drupal_image(fields.image.uri, '3_4_full', {alt: fields.image.alt}, responsive=true)
+    } : null,
+    reverse: fields.layout == 'reverse',
+  } only %}
+
+{% endblock content %}

@@ -1,0 +1,137 @@
+.cc--events-listing-component {
+  .c--events-listing-component {
+    overflow: hidden;
+
+    @include mq($bp768max) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .image-container {
+    @include mq($bp768max) {
+      @include margin(rem(20) null null);
+    }
+
+    @include mq($bp768) {
+      @include padding(null null null cols(2, 27));
+      width: cols(14, 27);
+      float: right;
+    }
+
+    @include mq($bp1024) {
+      @include padding(null null null cols(2, 32));
+      width: cols(14, 32);
+    }
+  }
+
+  .text-container {
+    .f--date-string {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(16, 16);
+      @include margin(null null rem(10));
+
+      @include mq($bp768max) {
+        font-weight: 600;
+      }
+
+      @include mq($bp768) {
+        @include margin(null null rem(15));
+      }
+
+      @include mq($bp1024) {
+        @include font-size(18, 18);
+        @include margin(null null rem(12));
+      }
+    }
+
+    .f--cta-title {
+      @include margin(null null rem(10));
+
+      @include mq($bp768) {
+        @include margin(null null rem(15));
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(11));
+      }
+
+      h3 {
+        @include font-size(24, 24);
+
+        @include mq($bp768) {
+          @include font-size(24, 30);
+        }
+
+        @include mq($bp1024) {
+          @include font-size(30, 36);
+        }
+
+        a {
+          color: $color-sherpa-blue;
+          text-decoration: none;
+
+          @include hover {
+            color: $color-sherpa-blue;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .f--description {
+      @include mq($bp768max) {
+        @include font-size(14, 18);
+        @include margin(null null rem(10));
+      }
+
+      @include mq($bp768) {
+        @include margin(null null rem(16));
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(20));
+      }
+
+      a {
+        color: $color-sherpa-blue;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+
+        &:hover {
+          color: $color-sherpa-blue;
+        }
+      }
+    }
+
+    .f--time-string {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(18, 20);
+
+      @include mq($bp768) {
+        @include font-size(20, 24);
+      }
+    }
+
+    .event-location {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(18, 20);
+
+      @include mq($bp768) {
+        @include font-size(20, 24);
+      }
+
+      a {
+        color: $color-sherpa-blue;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        
+        &:hover {
+          color: $color-sherpa-blue;
+        }
+      }
+    }
+  }
+}

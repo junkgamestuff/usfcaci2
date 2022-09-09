@@ -1,0 +1,70 @@
+{#
+/**
+ * @file
+ * Theme override of a responsive image.
+ *
+ * Available variables:
+ * - sources: The attributes of the <source> tags for this <picture> tag.
+ * - img_element: The controlling image, with the fallback image in srcset.
+ * - output_image_tag: Whether or not to output an <img> tag instead of a
+ *   <picture> tag.
+ *
+ * @see template_preprocess()
+ * @see template_preprocess_responsive_image()
+ */
+#}
+{% if output_image_tag %}
+  {#
+    @see https://www.drupal.org/project/drupal/issues/3192234
+
+    As of this writing, Drupal 9 does not output width/height attributes for
+    responsive images. However as these attributes may be needed to improve
+    PageSpeed performance, we add these attributes here based on the known
+    aspect ratio imputed from responsive image machine names.
+  #}
+  {% if responsive_image_style_id starts with '16_9' %}
+    {% set dimensions = create_attribute() %}
+
+    {% do dimensions.setAttribute('width', '1600').setAttribute('height', '900') %}
+
+    {% set img_element = img_element | merge({
+      '#attributes': img_element['#attributes'] | merge(dimensions),
+    }) %}
+  {% elseif responsive_image_style_id starts with '3_4' %}
+    {% set dimensions = create_attribute() %}
+
+    {% do dimensions.setAttribute('width', '900').setAttribute('height', '1200') %}
+
+    {% set img_element = img_element | merge({
+      '#attributes': img_element['#attributes'] | merge(dimensions),
+    }) %}
+  {% elseif responsive_image_style_id starts with '1_1' %}
+    {% set dimensions = create_attribute() %}
+
+    {% do dimensions.setAttribute('width', '1000').setAttribute('height', '1000') %}
+
+    {% set img_element = img_element | merge({
+      '#attributes': img_element['#attributes'] | merge(dimensions),
+    }) %}
+  {% elseif responsive_image_style_id starts with '4_3' %}
+    {% set dimensions = create_attribute() %}
+
+    {% do dimensions.setAttribute('width', '1200').setAttribute('height', '900') %}
+
+    {% set img_element = img_element | merge({
+      '#attributes': img_element['#attributes'] | merge(dimensions),
+    }) %}
+  {% endif %}
+
+  {{ img_element }}
+{% else %}
+  <picture>
+    {% if sources %}
+      {% for source_attributes in sources %}
+        <source{{ source_attributes }}/>
+      {% endfor %}
+    {% endif %}
+    {# The controlling image, with the fallback image in srcset. #}
+    {{ img_element }}
+  </picture>
+{% endif %}

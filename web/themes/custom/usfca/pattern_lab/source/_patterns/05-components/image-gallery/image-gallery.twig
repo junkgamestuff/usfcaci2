@@ -1,0 +1,56 @@
+{% extends "base-component" %}
+
+{% set name = "image-gallery" %}
+
+{% set instanceId = instanceId | default(1) %}
+
+{% set container_id = "section-image-gallery-" ~ instanceId %}
+
+{% block content %}
+
+  {% if title is not empty %}
+    <header class="section-header">
+      <div class="inner-wrapper">
+        {% include "fields-section-title" with { title: title } only %}
+      </div>
+    </header>
+  {% endif %}
+
+  <div class="swiper-container gallery-top">
+    <div class="swiper-wrapper">
+
+      {% for slide in slides %}
+
+        {% embed "components-image-gallery-slide" with { image: slide.image, variant: 'swiper-slide' } only %}
+
+        {% endembed %}
+
+      {% endfor %}
+
+    </div>
+  </div>
+
+  <div class="swiper-container gallery-text-bottom swiper-no-swiping">
+    <div class="swiper-wrapper">
+
+      {% for slide in slides %}
+
+        {% embed "components-image-gallery-slide" with { description: slide.description, variant: 'swiper-slide' } only %}
+
+        {% endembed %}
+
+      {% endfor %}
+
+    </div>
+
+    <div class="swiper-button-wrapper">
+      <button type="button" class="swiper-button-prev" aria-controls="{{ container_id }}" aria-label="Go to previous slide">
+        <svg height="16" viewBox="0 0 9 16" width="9" xmlns="http://www.w3.org/2000/svg"><path d="m16.5 19.2142857 6.2142857-6.2142857 1.2857143 1.2857143-7.5 7.5-7.5-7.5 1.2857143-1.2857143z" fill-rule="evenodd" transform="matrix(0 1 -1 0 21.892857 -8.107143)"/></svg>
+      </button>
+      <button type="button" class="swiper-button-next" aria-controls="{{ container_id }}" aria-label="Go to next slide">
+        <svg height="16" viewBox="0 0 9 16" width="9" xmlns="http://www.w3.org/2000/svg"><path d="m16.5 19.2142857 6.2142857-6.2142857 1.2857143 1.2857143-7.5 7.5-7.5-7.5 1.2857143-1.2857143z" fill-rule="evenodd" transform="matrix(0 1 -1 0 21.892857 -8.107143)"/></svg>
+      </button>
+    </div>
+  </div>
+
+{% endblock %}

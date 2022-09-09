@@ -1,0 +1,233 @@
+# Bootstrap
+behaviors-bootstrap:
+  js:
+    js/behaviorsBootstrap.js: { minified: false }
+  dependencies:
+    - core/jquery
+
+# Styles
+pattern-lab-styling:
+  css:
+    theme:
+      pattern_lab/source/css/style.css: {}
+
+# Overrides for admin / preview
+overrides:
+  css:
+    theme:
+      css/overrides.css: { minified: false }
+
+# Vendors
+lazy_sizes:
+  js:
+    pattern_lab/source/js/vendor/lazysizes.min.js: { minified: true }
+
+lazy_config:
+  js:
+    pattern_lab/source/js/configBackgroundImageUnveil.js: { minified: false }
+
+ally:
+  js:
+    pattern_lab/source/js/vendor/ally.min.js: { minified: true }
+
+images_loaded:
+  js:
+    pattern_lab/source/js/vendor/imagesloaded.pkgd.min.js: { minified: true }
+
+swiper:
+  css:
+    theme:
+      pattern_lab/source/css/vendor/swiper-bundle.min.css: {}
+  js:
+    pattern_lab/source/js/vendor/swiper-bundle.min.js: { minified: true }
+
+what-input:
+  js:
+    pattern_lab/source/js/vendor/what-input.min.js: { minified: true }
+
+formstone:
+  js:
+    pattern_lab/source/js/vendor/core.js: { minified: true }
+
+formstone_mediaquery:
+  js:
+    pattern_lab/source/js/vendor/mediaquery.js: { minified: true }
+  dependencies:
+    - usfca/formstone
+
+lity:
+  js:
+    pattern_lab/source/js/vendor/lity.min.js: { minified: true }
+
+hover_intent:
+  js:
+    pattern_lab/source/js/vendor/jquery.hoverIntent.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+
+tinynav:
+  js:
+    pattern_lab/source/js/vendor/tinynav.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+
+# Components
+accordions:
+  js:
+    pattern_lab/source/js/components/accordions.js: { minified: false }
+  dependencies:
+    - usfca/behaviors-bootstrap
+
+chapter-jump-links:
+  js:
+    pattern_lab/source/js/components/chapter-jump-links.js: { minified: false }
+  dependencies:
+    - usfca/behaviors-bootstrap
+
+stats:
+  js:
+    pattern_lab/source/js/components/stats.js: { minified: false }
+  dependencies:
+    - usfca/behaviors-bootstrap
+
+header_with_search:
+  js:
+    pattern_lab/source/js/dist/components/header.min.js: { minified: true }
+    pattern_lab/source/js/dist/components/header-search.min.js: { minified: true }
+    pattern_lab/source/js/dist/components/main-menu.min.js: { minified: true }
+    pattern_lab/source/js/dist/components/mobile-menu.min.js: { minified: true }
+    pattern_lab/source/js/dist/components/utility-menu.min.js: { minified: true }
+    pattern_lab/source/js/dist/components/stickyHeader.min.js: { minified: true }
+  dependencies:
+    - usfca/behaviors-bootstrap
+    - usfca/formstone_mediaquery
+
+vertical_tabbed_carousel:
+  js:
+    pattern_lab/source/js/dist/components/vertical-tabbed-carousel.min.js: { minified: true }
+  dependencies:
+    - usfca/behaviors-bootstrap
+    - usfca/swiper
+
+ribbon_carousel:
+  js:
+    pattern_lab/source/js/dist/components/ribbon-carousel.min.js: { minified: true }
+  dependencies:
+    - usfca/behaviors-bootstrap
+    - usfca/swiper
+
+program_page_header:
+  js:
+    pattern_lab/source/js/dist/components/program-page-header.min.js: { minified: true }
+  dependencies:
+    - usfca/behaviors-bootstrap
+
+add_to_any:
+  js:
+    https://static.addtoany.com/menu/page.js: { type: external, minified: true }
+
+image_gallery:
+  js:
+    pattern_lab/source/js/dist/components/image-gallery.min.js: { minified: true }
+  dependencies:
+    - usfca/behaviors-bootstrap
+    - usfca/swiper
+
+acalog:
+  css:
+    theme:
+      https://catalog.usfca.edu/widget-api/widget-api.min.css: { minified: true }
+  js:
+    https://catalog.usfca.edu/widget-api/widget-api.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+
+acalog_global:
+  js:
+    js/usfcaAcalogGlobal.js: { minified: false }
+  dependencies:
+    - usfca/acalog
+
+acalog_program_content:
+  css:
+    theme:
+      css/usfcaAcalogProgramContent.css: { minified: false }
+  js:
+    js/usfcaAcalogProgramContent.js: { minified: false }
+  dependencies:
+    - usfca/acalog
+
+acalog_link:
+  js:
+    js/usfcaAcalogLink.js: { minified: false }
+  dependencies:
+    - usfca/acalog
+
+filter_form:
+  js:
+    pattern_lab/source/js/components/filter-form.js: { minified: false }
+  dependencies:
+    - usfca/behaviors-bootstrap
+
+homepage_hero:
+  js:
+    pattern_lab/source/js/dist/components/hero-home-slider.min.js: { minified: true }
+  dependencies:
+    - usfca/behaviors-bootstrap
+    - usfca/swiper
+
+video_controls:
+  js:
+    pattern_lab/source/js/dist/components/video-controls.min.js: { minified: true }
+
+homepage_hero_ambient:
+  js:
+    pattern_lab/source/js/dist/components/hero-home-ambient.min.js: { minified: true }
+  dependencies:
+    - usfca/behaviors-bootstrap
+    - usfca/swiper
+    - usfca/video_controls
+
+sticky_ctas:
+  js:
+    pattern_lab/source/js/dist/components/sticky-cta.min.js: { minified: true }
+  dependencies:
+    - usfca/behaviors-bootstrap
+
+minisite_home_hero_nav:
+  js:
+    pattern_lab/source/js/dist/components/minisite-home-hero-nav.min.js: { minified: true }
+  dependencies:
+    - usfca/behaviors-bootstrap
+
+interest_matcher:
+  js:
+    pattern_lab/source/js/dist/components/interest-matcher-drupal.min.js: { minified: true }
+  dependencies:
+    - usfca/behaviors-bootstrap
+
+map_with_pins:
+  js:
+    pattern_lab/source/js/dist/components/map-with-pins.min.js: { minified: true }
+  dependencies:
+    - usfca/behaviors-bootstrap
+
+notification_banner:
+  js:
+    pattern_lab/source/js/dist/components/notification-banner.min.js: { minified: true }
+  dependencies:
+    - usfca/behaviors-bootstrap
+
+rich_text:
+  js:
+    pattern_lab/source/js/dist/components/rich-text.min.js: { minified: true }
+  dependencies:
+    - usfca/behaviors-bootstrap
+
+youvisit:
+  js:
+    https://www.youvisit.com/tour/Embed/js2: { minified: true, attributes: { defer: true, async: true } }
+
+siteimprove:
+  js:
+    https://siteimproveanalytics.com/js/siteanalyze_6518.js: { minified: true, attributes: { async: true } }

@@ -1,0 +1,21 @@
+{% extends "base-layout" %}
+
+{% set layout_name = "two-column-reverse" %}
+
+{% block layout_content %}
+
+  <div class="l--two-column-reverse-inner">
+
+    <div class="lr--layout-region lr--main">
+      {% block content %}
+      {% endblock content %}
+    </div>
+
+    <aside class="lr--layout-region lr--sidebar">
+      {% block sidebar %}
+      {% endblock sidebar %}
+    </aside>
+
+  </div>
+
+{% endblock layout_content %}

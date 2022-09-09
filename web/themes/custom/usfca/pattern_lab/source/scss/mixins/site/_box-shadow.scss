@@ -1,0 +1,4 @@
+@mixin box-shadow {
+  border-collapse: separate;
+  box-shadow: 0 0 rem(4) 0 rgba($color-dark-grey, .25);
+}

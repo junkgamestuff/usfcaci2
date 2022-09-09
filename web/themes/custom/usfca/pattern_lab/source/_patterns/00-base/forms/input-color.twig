@@ -1,0 +1,21 @@
+{% extends "base-form-item" %}
+
+{% block content %}
+
+    {% if label %}
+        <label
+                for="{{ name|default("color") }}"
+        >
+            {{ label }}{% if required %} *{% endif %}
+        </label>
+    {% endif %}
+
+    <input
+            type="color"
+            name="{{ name|default('color') }}"
+            id="{{ name|default('color') }}"
+            {% if disabled %}disabled="disabled"{% endif %}
+            {% if required %}required="required"{% endif %}
+    >
+
+{% endblock %}

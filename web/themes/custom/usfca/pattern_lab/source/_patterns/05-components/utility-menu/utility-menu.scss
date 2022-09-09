@@ -1,0 +1,146 @@
+.cc--utility-menu {
+  position: relative;
+
+  @include mq($bp768max) {
+    @include margin(null rem(20));
+  }
+
+  @include mq($bp768-1024) {
+    @include margin(null cols(1));
+  }
+
+  .c--utility-menu {
+    @include mq($bp1024) {
+      @include padding(rem(55) cols(3, 34) null null);
+    }
+  }
+
+  .m--menu {
+    @include mq($bp1024) {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .utility-button-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .information-for-toggle {
+        width: rem(30);
+      }
+    }
+
+    a {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(24, 36);
+      display: block;
+      color: $color-sherpa-blue;
+      text-decoration: none;
+
+      @include mq($bp768) {
+        @include font-size(30, 45);
+      }
+
+      @include mq($bp1024) {
+        @include font-size(18, 27);
+      }
+
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+
+    > li {
+      @include margin(null 0 rem(13));
+      position: relative;
+
+      @include mq($bp768) {
+        @include margin(null 0 rem(11));
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(15) rem(22));
+
+        &:first-child {
+          @include margin(null null null 0);
+        }
+
+        @include hover {
+          .submenu {
+            display: block;
+          }
+        }
+
+        .utility-button {
+          &:hover {
+            ~ .submenu {
+              display: block;
+            }
+          }
+        }
+      }
+
+      @include mq($bp1200) {
+        @include margin(null null null rem(35));
+      }
+
+      &:first-child,
+      &:nth-child(2) {
+        a {
+          @extend %font-fira-sans-extra-condensed-semibold;
+        }
+      }
+
+      .submenu {
+        @include padding(rem(10) cols(1, 46));
+        display: none;
+        width: 100%;
+        min-width: rem(160);
+
+        @include mq($bp1024) {
+          @include padding(rem(25));
+          position: absolute;
+          top: rem(27);
+          left: 0;
+          background: $color-light-gray;
+          z-index: 1;
+        }
+
+        .menu-item {
+          @include margin(null null rem(3));
+
+          @include mq($bp768) {
+            @include margin(null null rem(10));
+          }
+
+          @include mq($bp1024) {
+            @include margin(null null rem(16));
+          }
+
+          a {
+            @include font-size(18, 45);
+            display: block;
+            position: relative;
+            color: $color-empress;
+            text-decoration: none;
+
+            @include mq($bp768) {
+              @include font-size(24, 45);
+            }
+
+            @include mq($bp1024) {
+              @include font-size(16, 22);
+              color: $color-pure-black;
+            }
+
+            @include hover {
+              color: $color-sherpa-blue;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

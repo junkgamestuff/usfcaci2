@@ -1,0 +1,50 @@
+.lc--two-column {
+  .content-sidebar-main-wrapper {
+    @include maxwidth;
+
+    .content-sidebar-main-wrapper-inner {
+      @include padding(rem(50) null rem(60));
+
+      @include mq($bp768) {
+        @include padding(rem(60) null);
+        display: flex;
+        flex-direction: row;
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(100) null);
+      }
+
+      .cl--left-navigation-component-list {
+        > .cc--component-container:last-child {
+          @include margin(null null 0);
+        }
+      }
+
+      .content-sidebar {
+        @include mq($bp768) {
+          @include padding(null cols(2));
+          width: cols(15);
+        }
+
+        @include mq($bp1024) {
+          width: cols(14);
+        }
+      }
+
+      .content-main {
+        @include padding(null cols(3));
+
+        @include mq($bp768) {
+          @include padding(null cols(2) null cols(3));
+          width: cols(33);
+        }
+
+        @include mq($bp1024) {
+          @include padding(null cols(3));
+          width: cols(34);
+        }
+      }
+    }
+  }
+}

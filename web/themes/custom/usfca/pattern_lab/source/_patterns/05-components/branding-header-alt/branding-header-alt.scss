@@ -1,0 +1,117 @@
+// Miles Colors
+// Primary & Secondary
+$color-primary-purple: #671f75;
+$color-primary-gold: #eac000;
+$color-secondary-purple: #883a9b;
+
+
+.cc--branding-header-alt {
+  position: relative;
+  z-index: 10;
+
+  .c--branding-header-alt {
+    @include padding(rem(13) null null cols(2, 14));
+
+    @include mq($bp768) {
+      @include padding(rem(25) null null cols(4, 20));
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(25) null null cols(4, 14));
+    }
+  }
+
+  a {
+    display: block;
+    font-size: 0;
+    line-height: 1;
+    text-decoration: none;
+
+    svg {
+      width: rem(150);
+      height: auto;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        height: rem(30);
+      }
+
+      @media screen and (-ms-high-contrast: active) and (min-width: 1024px), (-ms-high-contrast: none) and (min-width: 1024px) {
+        height: rem(44);
+      }
+
+      @include mq($bp768) {
+        width: rem(250);
+      }
+
+      #banner-border {
+        fill: transparent;
+      }
+
+      .transparent-header & {
+        #wordmark,
+        #border,
+        #date,
+        #flame,
+        #banner-border,
+        #column-base {
+          fill: $color-white;
+        }
+
+        #column-groove-right,
+        #column-groove-left,
+        #banner {
+          fill: transparent;
+        }
+      }
+
+      .home-page & {
+        #banner-border {
+          fill: transparent;
+        }
+
+        #wordmark,
+        #banner,
+        #flame,
+        #column-groove-right {
+          fill: $color-primary-gold;
+        }
+
+        #date,
+        #column-groove-left {
+          fill: $color-primary-purple;
+        }
+
+        #border,
+        #column-base {
+          fill: $color-white;
+        }
+      }
+
+      .main-menu-open & {
+        #banner-border {
+          fill: transparent;
+        }
+
+        #wordmark,
+        #border,
+        #column-base {
+          fill: $color-primary-purple;
+        }
+
+        #banner {
+          fill: $color-secondary-purple;
+        }
+
+        #date,
+        #column-groove-right {
+          fill: $color-white;
+        }
+
+        #flame,
+        #column-groove-left {
+          fill: $color-primary-gold;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "cards": [
+    {
+      "title": "One Rich Text and Image",
+      "date": "<span>6</span>March",
+      "time": "7:00pm to 9:00pm",
+      "description": "<p>Sit deserunt Lorem sint sit ex non cupidatat ullamco dolore proident laboris dolor ad. Ad adipisicing est nostrud commodo aliqua adipisicing.</p>",
+      "location": "At the best location possible",
+      "isVideo": false,
+      "link": {
+        "href": "#"
+      }
+    },
+    {
+      "title": "Two Rich Text and Image",
+      "date": "<span>6</span>March",
+      "time": "7:00pm to 9:00pm",
+      "description": "<p>Sit deserunt Lorem sint sit ex non cupidatat ullamco dolore proident laboris dolor ad. Ad adipisicing est nostrud commodo aliqua adipisicing.</p>",
+      "location": "At the best location possible",
+      "isVideo": false,
+      "link": {
+        "href": "#"
+      }
+    },
+    {
+      "title": "Three Rich Text and Image",
+      "date": "<span>6</span>March",
+      "time": "7:00pm to 9:00pm",
+      "description": "<p>Sit deserunt Lorem sint sit ex non cupidatat ullamco dolore proident laboris dolor ad. Ad adipisicing est nostrud commodo aliqua adipisicing.</p>",
+      "location": "At the best location possible",
+      "isVideo": false,
+      "image": {
+        "src": "https://placeimg.com/600/338/people",
+        "alt": "Alt 1"
+      },
+      "link": {
+        "href": "#"
+      }
+    },
+    {
+      "title": "Four Rich Text and Image",
+      "date": "<span>6</span>March",
+      "time": "7:00pm to 9:00pm",
+      "description": "<p>Sit deserunt Lorem sint sit ex non cupidatat ullamco dolore proident laboris dolor ad. Ad adipisicing est nostrud commodo aliqua adipisicing.</p>",
+      "location": "At the best location possible",
+      "isVideo": false,
+      "image": {
+        "src": "https://placeimg.com/600/338/people",
+        "alt": "Alt 1"
+      },
+      "link": {
+        "href": "#"
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "image": {
+    "src": "https://placeimg.com/375/375/people",
+    "alt": "Image Alt Text4"
+  },
+  "title": "Jonathan A. Fitzpatrickson",
+  "suffix": "Suffix goes here",
+  "position": "Assistant Professor of Lorem Ipsum",
+  "office": [{
+    "title": "Full-Time Faculty",
+    "places": [
+      {
+        "name": "School of Education"
+      },
+      {
+        "name": "College of Arts & Scineces"
+      },
+      {
+        "name": "College of Nursing & Health Professsions"
+      }
+    ]
+  }],
+  "contacts": {
+    "email": "johnsmith32@usfca.edu",
+    "location": "XARTS 004",
+    "phone": "412-455-3456",
+    "file": {
+      "url": "#",
+      "title": "SSRN"
+    },
+    "links": [
+      {
+        "title": "personalwebsite.org",
+        "url": "personalwebsite.org"
+      },
+      {
+        "title": "myLab.edu",
+        "url": "myLab.edu"
+      },
+      {
+        "title": "myBlog.edu",
+        "url": "myBlog.edu"
+      }
+    ]
+  },
+  "social": [
+    {
+      "url": "#",
+      "network": "twitter"
+    },
+    {
+      "url": "#",
+      "network": "linkedin"
+    },
+    {
+      "url": "#",
+      "network": "cv"
+    }
+  ]
+}

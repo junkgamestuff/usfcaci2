@@ -1,0 +1,115 @@
+{
+  "pageTitle": "Directory",
+  "title": "Directory",
+  "description": "Lorem ipsum dolor sit consectetur adipiscing elit curabitur non nulla sit amet nisl. Lorem ipsum dolor sit consectetur adipiscing elit curabitur non nulla sit amet nisl. Lorem ipsum dolor sit consectetur adipiscing elit curabitur non nulla sit amet nisl.",
+  "hasBasicHeader": true,
+  "topLayouts": null,
+  "layouts": [
+    {
+      "name": "two-column",
+      "sidebar": [
+        {
+          "type": "filter-form",
+          "title": "Filter",
+          "items": [
+            {
+              "type": "text",
+              "label": null,
+              "placeholder": "First Letter / Keyword"
+            },
+            {
+              "type": "checkbox",
+              "namevalue": "degree",
+              "title": "Degree",
+              "options": [
+                {
+                  "id": "major",
+                  "value": "Major",
+                  "text": "Major"
+                },
+                {
+                  "id": "minor",
+                  "value": "Minor",
+                  "text": "Minor"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "namevalue": "school",
+              "title": "School",
+              "options": [
+                {
+                  "id": "college-of-arts-sciences",
+                  "value": "College of Arts & Sciences",
+                  "text": "College of Arts & Sciences"
+                },
+                {
+                  "id": "school-of-education",
+                  "value": "School of Education",
+                  "text": "School of Education"
+                },
+                {
+                  "id": "school-of-law",
+                  "value": "School of Law",
+                  "text": "School of Law"
+                },
+                {
+                  "id": "school-of-management",
+                  "value": "School of Management",
+                  "text": "School of Management"
+                },
+                {
+                  "id": "school-of-nursing-health-professions",
+                  "value": "School of Nursing & Health Professions",
+                  "text": "School of Nursing & Health Professions"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "namevalue": "location",
+              "title": "Location",
+              "options": [
+                {
+                  "id": "business-entrepreneurship",
+                  "value": "Business & Entrepreneurship",
+                  "text": "Business & Entrepreneurship"
+                },
+                {
+                  "id": "education",
+                  "value": "Education",
+                  "text": "Education"
+                },
+                {
+                  "id": "environment",
+                  "value": "Environment",
+                  "text": "Environment"
+                },
+                {
+                  "id": "health",
+                  "value": "Health",
+                  "text": "Health"
+                }
+              ]
+            },
+            {
+              "type": "submit",
+              "value": "Search"
+            },
+            {
+              "type": "reset",
+              "value": "CLEAR SELECTIONS"
+            }
+          ]
+        }
+      ],
+      "content": [
+        {
+          "type": "program-listing"
+        }
+      ]
+    }
+  ],
+  "bottomLayouts": null
+}

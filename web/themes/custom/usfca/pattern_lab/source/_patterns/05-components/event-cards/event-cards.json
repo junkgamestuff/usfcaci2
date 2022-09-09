@@ -1,0 +1,45 @@
+{
+  "title": "Upcoming <span class=\"highlight\">Events</span>",
+  "link": {
+    "href": "https://www.example.com/",
+    "cta": "More Events",
+    "ariaLabel": "An Example Aria Label for CTA Link"
+  },
+  "cards": [
+    {
+      "title": "Event Title",
+      "date": "<span>6</span> March",
+      "time": "11:00AM - 12:00PM",
+      "location": "At the best location possible",
+      "link": {
+        "href": "https://www.example.com/"
+      }
+    },
+    {
+      "title": "Event Title Eu nostrud consectetur pariatur pariatur amet aliqua",
+      "date": "<span>5</span> September",
+      "time": "11:00AM - 12:00PM",
+      "location": "At the best location possible",
+      "image": {
+        "src": "https://placeimg.com/1920/1080/nature",
+        "alt": "Alt 4"
+      },
+      "link": {
+        "href": "https://www.example.com/"
+      }
+    },
+    {
+      "title": "Event Title",
+      "date": "<span>30</span> January",
+      "time": "11:00AM - 12:00PM",
+      "location": "At the best location possible",
+      "image": {
+        "src": "https://placeimg.com/1920/1080/nature",
+        "alt": "Alt 4"
+      },
+      "link": {
+        "href": "https://www.example.com/"
+      }
+    }
+  ]
+}

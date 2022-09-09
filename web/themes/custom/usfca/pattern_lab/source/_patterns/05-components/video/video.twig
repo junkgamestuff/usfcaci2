@@ -1,0 +1,12 @@
+{% extends "base-component" %}
+
+{% set name = "video" %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Video" %}
+
+{% block content %}
+  <div class="video-wrapper">
+    {{ markup|raw }}
+  </div>
+
+{% endblock %}

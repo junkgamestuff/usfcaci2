@@ -1,0 +1,25 @@
+/* Hover mixin for hover states
+*
+*  Note: This mixin has a dependency on what-intent plugin which detects the current input method
+*        https://github.com/ten1seven/what-input
+*
+*  @param {Transition Duration} $transition-duration - the duration of transitions on hover states
+*
+*  Example Usage:
+*
+*     a {
+*       @include hover() {
+*         background-color: red
+*       }
+*     }
+*
+*/
+@mixin hover($transition-duration: $transition-duration-fast) {
+  html[data-whatintent="mouse"] & {
+    transition: all $transition-duration;
+
+    &:hover {
+      @content;
+    }
+  }
+}

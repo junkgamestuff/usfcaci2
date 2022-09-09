@@ -1,0 +1,60 @@
+{
+  "title": "An <strong>Academic Experience</strong> Like No Other",
+  "withArrows": false,
+  "image": {
+    "src": "https://placeimg.com/650/840/nature",
+    "alt": "Image Alt Text4"
+  },
+  "cards": [
+    {
+      "title": "Card Title",
+      "link": {
+        "href": "https://www.example.com/",
+        "cta": "More",
+        "ariaLabel": "This is an Aria Label"
+
+      },
+      "description": "<p>Culpa duis occaecat nulla pariatur minim veniam occaecat adipisicing. Proident non commodo officia proident anim. Aute excepteur officia duis quis tempor exercitation quis do. Occaecat commodo minim nulla in ipsum dolor Lorem do sit. Aliquip ad dolore aute enim irure eu occaecat id ea. Ad velit laboris dolor commodo laborum sint nulla minim ex exercitation reprehenderit voluptate minim.</p>"
+    },
+    {
+      "title": "Card Title",
+      "description": "<p>Culpa duis occaecat nulla pariatur minim veniam occaecat adipisicing. Proident non commodo officia proident anim. Aute excepteur officia duis quis tempor exercitation quis do. Occaecat commodo minim nulla in ipsum dolor Lorem do sit. Aliquip ad dolore aute enim irure eu occaecat id ea. Ad velit laboris dolor commodo laborum sint nulla minim ex exercitation reprehenderit voluptate minim.</p>"
+    },
+    {
+      "title": "Card Title",
+      "link": {
+        "href": "https://www.example.com/",
+        "cta": "More",
+        "ariaLabel": "This is an Aria Label"
+      },
+      "description": "<p>Culpa duis occaecat nulla pariatur minim veniam occaecat adipisicing. Proident non commodo officia proident anim. Aute excepteur officia duis quis tempor exercitation quis do. Occaecat commodo minim nulla in ipsum dolor Lorem do sit. Aliquip ad dolore aute enim irure eu occaecat id ea. Ad velit laboris dolor commodo laborum sint nulla minim ex exercitation reprehenderit voluptate minim.</p>"
+    },
+    {
+      "title": "Card Title",
+      "link": {
+        "href": "https://www.example.com/",
+        "cta": "More",
+        "ariaLabel": "This is an Aria Label"
+      },
+      "description": "<p>Culpa duis occaecat nulla pariatur minim veniam occaecat adipisicing. Proident non commodo officia proident anim. Aute excepteur officia duis quis tempor exercitation quis do. Occaecat commodo minim nulla in ipsum dolor Lorem do sit. Aliquip ad dolore aute enim irure eu occaecat id ea. Ad velit laboris dolor commodo laborum sint nulla minim ex exercitation reprehenderit voluptate minim.</p>"
+    },
+    {
+      "title": "Card Title",
+      "link": {
+        "href": "https://www.example.com/",
+        "cta": "More",
+        "ariaLabel": "This is an Aria Label"
+      },
+      "description": "<p>Culpa duis occaecat nulla pariatur minim veniam occaecat adipisicing. Proident non commodo officia proident anim. Aute excepteur officia duis quis tempor exercitation quis do. Occaecat commodo minim nulla in ipsum dolor Lorem do sit. Aliquip ad dolore aute enim irure eu occaecat id ea. Ad velit laboris dolor commodo laborum sint nulla minim ex exercitation reprehenderit voluptate minim.</p>"
+    },
+    {
+      "title": "Card Title",
+      "link": {
+        "href": "https://www.example.com/",
+        "cta": "More",
+        "ariaLabel": "This is an Aria Label"
+      },
+      "description": "<p>Culpa duis occaecat nulla pariatur minim veniam occaecat adipisicing. Proident non commodo officia proident anim. Aute excepteur officia duis quis tempor exercitation quis do. Occaecat commodo minim nulla in ipsum dolor Lorem do sit. Aliquip ad dolore aute enim irure eu occaecat id ea. Ad velit laboris dolor commodo laborum sint nulla minim ex exercitation reprehenderit voluptate minim.</p>"
+    }
+  ]
+}

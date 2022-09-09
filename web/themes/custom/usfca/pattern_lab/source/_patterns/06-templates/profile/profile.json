@@ -1,0 +1,100 @@
+{
+  "pageTitle": "Person Bio Page",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "profile-header"
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "chapter-content-main",
+          "items": [
+            {
+              "components": [
+                {
+                  "type": "chapter",
+                  "title": "Biography",
+                  "id": "chapter1",
+                  "components": [
+                    {
+                      "type": "rich-text",
+                      "markup": "<p>Desiree Zerquera is an Assistant Professor for Higher Education and Student Affairs in the Department of Leadership Studies. Born and raised in Miami, Florida to Cuban parents, she pursued her bachelor's degree in Mathematics and master's degree in Educational Leadership at the University of Florida before attending Indiana University to pursue her PhD in Higher Education and Student Affairs. Desiree Zerquera has worked as a researcher, student affairs practitioner, and higher education administrator. Her research focuses on how inequalities structure the experiences of underrepresented students in accessing and succeeding in higher education, with expertise in the areas of organizational theory, public policy, financial aid, research methodology, and Latino student experiences.</p><figure role=\"group\" class=\"align-center\"><article><div><div><a href=\"#\"><picture><img data-src=\"https://placeimg.com/1200/675/people\" alt=\"Image Alt Text4\" src=\"https://placeimg.com/1200/675/people\"></picture></a></div></div></article><figcaption>Curabitur aliquet quam id dui posuere blandit. Cras ultricies ligula sed magna dictum porta. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat.</figcaption></figure>"
+                    },
+                    {
+                      "type": "spacer"
+                    }
+                  ]
+                },
+                {
+                  "type": "chapter",
+                  "title": "Expertise",
+                  "id": "chapter2",
+                  "components": [
+                    {
+                      "type": "rich-text",
+                      "markup": "<ul><li>Organizational theory</li><li>Public policy</li><li>Financial aid</li><li>Research methodology</li><li>Latino student experiences</li></ul>"
+                    },
+                    {
+                      "type": "spacer"
+                    }
+                  ]
+                },
+                {
+                  "type": "chapter",
+                  "title": "Appointments",
+                  "id": "chapter3",
+                  "components": [
+                    {
+                      "type": "rich-text",
+                      "markup": "<ul><li>Senior Research Associate, Division of Institutional Research, Planning, and Effectiveness, Broward College, Fort Lauderdale, FL</li><li>Visiting Assistant Director for Research, Project on Academic Success (PAS), Center for Postsecondary Research, Indiana University, Bloomington, IN</li><li>Acting Director, Institute of Hispanic-Latino Cultures, University of Florida, Gainesville, FL</li></ul>"
+                    },
+                    {
+                      "type": "spacer"
+                    }
+                  ]
+                },
+                {
+                  "type": "chapter",
+                  "title": "Education",
+                  "id": "chapter4",
+                  "components": [
+                    {
+                      "type": "rich-text",
+                      "markup": "<p>PhD, Higher Education and Student Affairs, Indiana University-Bloomington"
+                    },
+                    {
+                      "type": "spacer"
+                    }
+                  ]
+                },
+                {
+                  "type": "chapter",
+                  "title": "Selected Publications",
+                  "id": "chapter5",
+                  "components": [
+                    {
+                      "type": "rich-text",
+                      "markup": "<p><strong>Public Scholarship</strong></p><p>Envisioning a more just future. TEDx Talk at Keck Graduate Institute, Claremont Colleges. Available at <a href=\"https://www.youtube.com/watch?v=YiJuEyPvTV4\">https://www.youtube.com/watch?v=YiJuEyPvTV4</a>.</p><p>Remembering instead of forgetting: Considering alternative ways of addressing historical artifacts of oppression. Commission for Social Justice Education Blog: A Blog from the ACPA Commission for Social Justice Educators. Available at <a href=\"https://acpacsje.wordpress.com/\">https://acpacsje.wordpress.com/</a>.</p><p>Research for research’s sake: The value and responsibility of translating research for diverse audiences. AERA Division J Blog. Available at <a href=\"http://aeradivisionj.blogspot.com/\">http://aeradivisionj.blogspot.com/</a>.</p><p>Impacts of prestige seeking in higher education. Academe Blog: The Blog of Academe Magazine. Available at <a href=\"https://academeblog.org/2016/11/04/impacts-of-prestige-seeking-in-higher-education/\">https://academeblog.org/2016/11/04/impacts-of-prestige-seeking-in-higher-education/</a>.</p><p>More than nuance: Recognizing and serving the diversity of the Latina/o community. Hispanic-Serving Institutions Center for Policy and Practice Blog.  Available at <a href=\"http://www.edexcelencia.org/hsi-cp2/your-voice/recognizing-and-serving\">http://www.edexcelencia.org/hsi-cp2/your-voice/recognizing-and-serving</a>.</p><p>The potential role for campus cultural centers for post-traditional students. The PraXis Blog by the California Council of Cultural Centers in Higher Education. Available at <a href=\"http://thepraxisblog.tumblr.com/post/119286968853/the-potential-role-for-campus-cultural-centers-for\">http://thepraxisblog.tumblr.com/post/119286968853/the-potential-role-for-campus-cultural-centers-for</a>.</p><p><strong>Selected Publications</strong></p><p>Zerquera, D. The problem with the prestige pursuit: The effects of striving on access for Black and Latino students at Urban-Serving Research Universities. Review of Higher Education.</p><p>Zerquera, D., Acevedo-Gil, N., Flores, E., & Maranthal, P. (2018). Repositioning trends of Latino enrollments in community colleges. Association of Mexican American Educators Journal, 12(1), 86-106. DOI: <a href=\"http://dx.doi.org/10.24974/amae.12.1.379\">http://dx.doi.org/10.24974/amae.12.1.379</a>.</p><p>Zerquera, D., Ziskin, M., & Torres, V. (2018). Faculty views of non-traditional students: Aligning perspectives for academic success. Journal of College Student Retention: Research, Theory, & Practice, 20(1), 29-46. DOI: 10.1177/1521025116645109.</p><p>erquera, D., Torres, V., Ferguson, T., & McGowan, B. (2017). The burden of debt: Exploring student experiences with debt and educational expenses. College Student Affairs Journal, 35(2), 140-152.</p><p>Zerquera, D., Ballysingh, T.A., & Templeton, E. (2017). A critical look at perspectives of access and mission at diverse urban universities. Association of Mexican American Educators, 11(3), 199-222. DOI: <a href=\"http://dx.doi.org/10.24974/amae.11.3\">http://dx.doi.org/10.24974/amae.11.3</a>.</p><p>Zerquera, D. & Gross, J.P.K. (2017). Context matters: A critical consideration of Latino student success outcomes within different institutional contexts. Journal of Hispanic Higher Education, 16(3), 209-231. DOI: 10.1177/1538192715612915.</p><p>Zerquera, D., Berumen, J.G., & Pender, J. (2017). Assessment for social justice: Employing Participatory Action Research (PAR) as a framework for assessment and evaluation. The Journal of College and University Student Housing, 43(3), 14-27.</p>"
+                    },
+                    {
+                      "type": "spacer"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bottomLayouts": null
+}

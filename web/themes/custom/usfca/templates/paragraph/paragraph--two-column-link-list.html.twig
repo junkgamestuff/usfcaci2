@@ -1,0 +1,16 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% set title = fields.title %}
+  {% if fields.title_highlight %}
+    {% set title = fields.title|replace({(fields.title_highlight): '<strong>' ~ fields.title_highlight ~ '</strong>'}) %}
+  {% endif %}
+
+  {% include "components-two-column-links" with {
+    title: title,
+    description: fields.description,
+    links: fields.links,
+  } only %}
+
+{% endblock content %}

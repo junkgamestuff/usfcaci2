@@ -1,0 +1,42 @@
+{% extends "base-component" %}
+
+{% set name = "horizontal-event-listing" %}
+
+{% block content %}
+
+  {% if title is not empty %}
+    <div class="section-wrapper">
+      {% include "fields-section-title" with { title: title } %}
+    </div>
+  {% endif %}
+
+  {% embed "base-field" with { name: "field-components" } %}
+
+    {% block content %}
+
+      {% for card in cards %}
+
+        {% include "components-horizontal-event-listing-component" with {
+          title: card.title,
+          link: card.link,
+          date: card.date,
+          image: card.image,
+          time: card.time,
+          location: card.location
+        } only %}
+
+      {% endfor %}
+
+    {% endblock content %}
+
+  {% endembed %}
+
+  {% if link is not empty %}
+    {% include "fields-link" with {
+      href: link.href,
+      title: link.cta,
+      aria: link.ariaLabel
+    } only %}
+  {% endif %}
+
+{% endblock %}

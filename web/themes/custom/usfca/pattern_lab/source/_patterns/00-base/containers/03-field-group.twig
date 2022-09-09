@@ -1,0 +1,10 @@
+<div class="fg--field-group fg--{{ name }}">
+
+    {% if wrapper %}<div class="{{ wrapper }}">{% endif %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% if wrapper %}</div>{% endif %}
+
+</div><!-- fg--field-group fg--{{ name }} -->

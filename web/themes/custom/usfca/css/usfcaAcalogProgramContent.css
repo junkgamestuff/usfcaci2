@@ -1,0 +1,15 @@
+.cc--rich-text.acalog-program-content .acalog > * {
+  display: none;
+}
+
+.cc--rich-text.acalog-program-content .acalog > .acalog-program-cores.enabled {
+  display: block;
+}
+
+.cc--rich-text.acalog-program-content .acalog > .acalog-program-cores > .acalog-program-core {
+  display: none;
+}
+
+.cc--rich-text.acalog-program-content .acalog > .acalog-program-cores > .acalog-program-core.enabled {
+  display: block;
+}

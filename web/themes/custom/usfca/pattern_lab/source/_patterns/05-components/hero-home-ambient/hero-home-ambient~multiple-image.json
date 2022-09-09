@@ -1,0 +1,52 @@
+{
+  "slides": [
+    {
+
+      "title": "One Dolor sint nisi laboris enim do amet incididunt ex sunt",
+      "image": {
+        "src": "https://placeimg.com/2400/1350/people",
+        "alt": "Slide Image"
+      },
+      "link": {
+        "url": "#"
+      },
+      "videoSrc": null
+    },
+    {
+
+      "title": "Two Dolor sint nisi laboris enim do amet incididunt ex sunt",
+      "image": {
+        "src": "https://placeimg.com/2400/1350/nature",
+        "alt": "Slide Image"
+      },
+      "link": {
+        "url": "#"
+      },
+      "videoSrc": null
+    },
+    {
+
+      "title": "Three Dolor sint nisi laboris enim do amet incididunt ex sunt",
+      "image": {
+        "src": "https://placeimg.com/2400/1350/people",
+        "alt": "Slide Image"
+      },
+      "link": {
+        "url": "#"
+      },
+      "videoSrc": null
+    },
+    {
+
+      "title": "Four Dolor sint nisi laboris enim do amet incididunt ex sunt",
+      "image": {
+        "src": "https://placeimg.com/2400/1350/nature",
+        "alt": "Slide Image"
+      },
+      "link": {
+        "url": "#"
+      },
+      "videoSrc": null
+    }
+  ]
+}

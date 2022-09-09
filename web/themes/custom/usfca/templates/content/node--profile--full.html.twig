@@ -1,0 +1,108 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+
+  {{ attach_library('usfca/chapter-jump-links') }}
+
+  <div class="content-top">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {% set links = [] %}
+          {% for item in fields.links %}
+            {% set links = links | merge([{
+              url: item.url,
+              title: item.title,
+              ariaLabel: item.attributes.aria_label ?? item.title,
+            }]) %}
+          {% endfor %}
+
+          {% set social = [] %}
+          {% if fields.twitter.url %}
+            {% set social = social | merge([{
+              network: 'twitter',
+              url: fields.twitter.url,
+            }]) %}
+          {% endif %}
+          {% if fields.linkedin.url %}
+            {% set social = social | merge([{
+              network: 'linkedin',
+              url: fields.linkedin.url,
+            }]) %}
+          {% endif %}
+          {% if fields.cv.url %}
+            {% set social = social | merge([{
+              network: 'cv',
+              url: fields.cv.url,
+            }]) %}
+          {% endif %}
+
+          {% set title = fields.title %}
+          {% if fields.suffix %}
+            {% set title = fields.title ~ ', ' ~ fields.suffix %}
+          {% endif %}
+
+          {% include "components-profile-header" with {
+            title: title,
+            position: fields.professional_title,
+            image: fields.image.uri ? {
+              src: fields.image.uri | image_style('1_1_1200x1200'),
+              alt: fields.image.alt,
+              render: drupal_image(fields.image.uri, '1_1_mosaic_large', { alt: fields.image.alt }, responsive=true)
+            } : null,
+            office: roles,
+            contacts: {
+              email: fields.email,
+              location: fields.office,
+              phone: fields.phone,
+              file: fields.ssrn_link ? {
+                title: 'SSRN' | t,
+                url: fields.ssrn_link.url,
+              },
+              links: links,
+            },
+            social: social,
+          } only %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% if jump_link_data %}
+  <div class="content-main">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+          <div class="cc--component-container cc--chapter-content-main ">
+            <div class="c--component c--chapter-content-main">
+              <aside class="content-sidebar">
+                {% include "components-chapter-jump-links" with { chapters: jump_link_data } only %}
+              </aside>
+              <div class="content-main">
+                  {% for data in jump_link_data  %}
+                    <div class="cc--component-container cc--chapter">
+                      <div class="c--component c--chapter">
+                        <span id="{{ data.id }}" class="chaptered-nav-anchor"></span>
+                        {% if data.title is not empty %}
+                          {% include "fields-section-title" with { title: data.title } only %}
+                        {% endif %}
+                        {% set id = data.id|replace({'field_': ''}) %}
+                        {% if attribute(fields, id) is not empty %}
+                          {% include "components-rich-text" with { markup: attribute(fields, id) } only %}
+                          {% include 'components-spacer' %}
+                        {% endif %}
+                      </div>
+                    </div>
+                  {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+{% endblock content %}

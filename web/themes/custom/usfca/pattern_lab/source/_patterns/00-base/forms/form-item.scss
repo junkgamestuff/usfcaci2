@@ -1,0 +1,28 @@
+%form-item,
+.fi--form-item {
+  &:not(:last-child) {
+    @include margin(null null rem(20) null);
+  }
+
+  > label {
+    @extend %font-fira-sans-extra-condensed-semibold;
+    @include font-size(14, 16);
+    @include margin(null null rem(10));
+    display: block;
+    color: $color-black;
+    text-transform: uppercase;
+
+    @include mq($bp768) {
+      @include font-size(16, 21);
+    }
+
+    &.form-required {
+      &::after {
+        @include margin(null null null rem(3));
+        display: inline-block;
+        color: $color-error;
+        content: '*';
+      }
+    }
+  }
+}

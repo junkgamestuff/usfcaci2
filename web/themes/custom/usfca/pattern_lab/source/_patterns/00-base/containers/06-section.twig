@@ -1,0 +1,23 @@
+<section class="sc--section-container"{% if container_aria_label is not empty %} aria-label="{{ container_aria_label }}"{% endif %}>
+
+  <div class="s--section">
+
+    <header class="section-header{% if title_hidden %} visually-hidden{% endif %}">
+
+      {% include "fields-section-title" with { title: title } %}
+
+    </header>
+
+    <div class="section-body">
+
+      {% block content %}
+
+        Section body content...
+
+      {% endblock content %}
+
+    </div>
+
+  </div>
+
+</section>

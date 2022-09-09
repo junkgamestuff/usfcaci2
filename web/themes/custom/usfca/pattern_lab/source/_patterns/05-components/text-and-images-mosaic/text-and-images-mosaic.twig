@@ -1,0 +1,27 @@
+{% extends "base-component" %}
+
+{% set name = "text-and-images-mosaic" %}
+
+{% block content %}
+
+  {% include "fields-section-title" with { title: title } %}
+
+  {% embed "base-field" with { name: "field-components" } %}
+
+    {% block content %}
+
+      {% for card in cards %}
+
+        {% include "components-mosaic-card" with {
+          description: card.description,
+          image: card.image,
+          attribution: card.attribution
+        } only %}
+
+      {% endfor %}
+
+    {% endblock content %}
+
+  {% endembed %}
+
+{% endblock %}

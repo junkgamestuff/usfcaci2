@@ -1,0 +1,25 @@
+{% extends "base-form-item" %}
+
+{% set name = 'form-item-text' %}
+
+{% block content %}
+
+  {% if label %}
+    <label for="{{ name|default("text") }}">
+      {{ label }}{% if required %} *{% endif %}
+    </label>
+  {% endif %}
+
+  <input
+    type="text"
+    name="{{ inputName|default("text") }}"
+    id="{{ name|default("text") }}"
+    {% if disabled %}disabled="disabled"{% endif %}
+    {% if required %}required="required"{% endif %}
+    {% if maxlength %}maxlength="{{ maxlength }}"{% endif %}
+    {% if placeholder %}placeholder="{{ placeholder }}"{% endif %}
+    size="{{ size|default("50") }}"
+    value="{{ value|default("") }}"
+  >
+
+{% endblock %}

@@ -1,0 +1,101 @@
+.cc--search-form {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: rem(305);
+  height: rem(40);
+  background: $color-white;
+  z-index: 100;
+
+  @include mq($bp768) {
+    width: rem(425);
+    height: rem(60);
+  }
+
+  @include mq($bp1024) {
+    height: rem(75);
+  }
+
+  form {
+    display: flex;
+    position: relative;
+    box-shadow: 0 0 rem(8) rgba($color-black, .5);
+  }
+
+  .input-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .fi--form-item {
+    margin: 0;
+
+    label {
+      @include visuallyhidden;
+    }
+
+    input {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(16, 20);
+      height: rem(40);
+      border: 0;
+      background: transparent;
+      color: $color-black;
+
+      @include mq($bp768) {
+        @include padding(null rem(50) null null);
+        @include font-size(24, 36);
+        height: rem(60);
+      }
+
+      @include mq($bp1024) {
+        height: rem(75);
+      }
+
+      &.ui-autocomplete-loading {
+        background-image: none;
+      }
+
+      @include placeholder {
+        @include font-size(16, 20);
+        color: $color-gray-suit;
+        font-family: 'Fira Sans Extra Condensed', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+
+        @include mq($bp768) {
+          @include font-size(24, 36);
+        }
+      }
+    }
+  }
+
+  .button {
+    flex: 1 0 auto;
+    background: $color-white;
+    background-image: url('../images/icons/icon-search.svg');
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 0;
+    border: 0;
+    width: rem(40);
+    height: rem(40);
+
+    @include mq($bp768) {
+      background-size: 45%;
+      width: rem(60);
+      height: rem(60);
+    }
+
+    @include mq($bp1024) {
+      width: rem(75);
+      height: rem(75);
+    }
+  }
+}
+
+ul.ui-widget.ui-widget-content {
+  z-index: 1000;
+}

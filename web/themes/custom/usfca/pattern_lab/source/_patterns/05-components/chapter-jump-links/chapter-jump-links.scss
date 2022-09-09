@@ -1,0 +1,133 @@
+.cc--chapter-jump-links {
+  @include padding(rem(25) null rem(20));
+
+  @include mq($bp768) {
+    @include margin(rem(30) null null);
+    @include padding(rem(35) null rem(40));
+    box-shadow: 0 0 rem(6) rgba($color-black, .25);
+  }
+
+  @include mq($bp1024) {
+    @include padding(rem(35) null null);
+  }
+
+  h3 {
+    @extend %font-fira-sans-extra-condensed-semibold;
+    @include margin(null null rem(12));
+    @include padding(null rem(20));
+    @include font-size(16, 15);
+    color: $color-black;
+    letter-spacing: rem(.3);
+    text-transform: uppercase;
+
+    @include mq($bp768) {
+      @include margin(null null rem(21));
+      @include padding(null 0 null cols(1, 13));
+      @include font-size(16, 16);
+    }
+
+    @include mq($bp1024) {
+      @include padding(null null null cols(1, 11));
+    }
+  }
+
+  .chapter-menu {
+    @include no-bullet;
+    position: relative;
+
+    @include mq($bp768max) {
+      display: flex;
+      flex-wrap: wrap;
+      max-height: rem(50);
+      overflow: hidden;
+      box-shadow: 0 0 rem(3) rgba($color-black, .25);
+
+      &::before {
+        display: inline-block;
+        position: absolute;
+        right: rem(6);
+        top: rem(18);
+        width: rem(12);
+        height: rem(10);
+        background: url('../images/icons-usf/USF_arrow_green.svg') no-repeat right 0;
+        content: '';
+        transform: rotate(90deg);
+      }
+
+      &.open {
+        max-height: rem(400);
+
+        &::before {
+          transform: rotate(0);
+        }
+      }
+    }
+
+    li {
+      @include margin(null null rem(18));
+
+      @include mq($bp768max) {
+        @include padding(null rem(14));
+        order: 1;
+        width: 100%;
+
+        &:first-child,
+        &.active {
+          @include margin(null null rem(5));
+          @include padding(null rem(10));
+          display: flex;
+          align-items: center;
+          order: 0;
+          width: 100%;
+          height: rem(50);
+          border-left: rem(4) solid $color-supernova;
+        }
+      }
+
+      @include mq($bp768) {
+        &:last-child {
+          @include margin(null null 0);
+        }
+      }
+
+      a {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include font-size(20, 25);
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        color: $color-sherpa-blue;
+        text-decoration: none;
+
+        @include hover {
+          color: $color-black;
+        }
+
+        @include mq($bp768) {
+          @include padding(null cols(1, 13));
+        }
+
+        @include mq($bp1024) {
+          @include padding(null cols(1, 11));
+        }
+
+        &.is-active {
+          @extend %font-fira-sans-extra-condensed-semibold;
+          color: $color-sherpa-blue;
+
+          @include mq($bp768) {
+            &::before {
+              display: inline-block;
+              position: absolute;
+              left: 0;
+              width: rem(4);
+              height: 100%;
+              background: $color-supernova;
+              content: '';
+            }
+          }
+        }
+      }
+    }
+  }
+}

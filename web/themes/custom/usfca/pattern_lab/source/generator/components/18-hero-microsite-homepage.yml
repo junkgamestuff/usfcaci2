@@ -1,0 +1,17 @@
+name: "hero-microsite-homepage"
+type: "component"
+markup:
+  content:
+  - type: field
+    name: image
+    with:
+      image: image
+  - type: field
+    name: page-title
+    with:
+      title: title
+data:
+  image:
+    src: "/images/16_9_1600x900.png"
+    alt: "Undergraduate Admissions"
+  title: "Undergraduate Admissions"

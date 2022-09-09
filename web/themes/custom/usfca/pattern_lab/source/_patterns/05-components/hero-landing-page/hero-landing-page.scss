@@ -1,0 +1,191 @@
+// text color
+$text-color: $color-white;
+// gradient overlay
+$overlay-color: rgba($color-black, 0.3);
+$gradient-overlay-color: rgba($color-black, 0.42);
+$background-color-fallback: $color-primary;
+
+.cc--hero-landing-page {
+  position: relative;
+
+  .image-text-container {
+    background: $color-sherpa-blue;
+
+    &:not(.no-image) {
+      background: none;
+
+      .text-container {
+        position: absolute;
+        bottom: 0;
+        min-height: 30%;
+        text-align: left;
+        z-index: 1;
+
+        @include mq($bp1024) {
+          min-height: 40%;
+        }
+
+        &::before {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(180deg, rgba($color-black, 0) 0%, rgba($color-black, .6) 50%);
+          content: '';
+
+          @include mq($bp768) {
+            background: linear-gradient(180deg, rgba($color-black, 0) 0%, rgba($color-black, .3) 50%);
+          }
+        }
+      }
+    }
+
+    &.no-image {
+      @include mq($bp768) {
+        @include padding(rem(30) null null);
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(150) null null);
+      }
+    }
+  }
+
+  .image-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: rem(675);
+    overflow: hidden;
+
+    .f--image {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1 / 1;
+
+      @include mq($bp768) {
+        aspect-ratio: 8 / 7;
+      }
+
+      @include mq($bp1024) {
+        aspect-ratio: 16 / 9;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        background-color: $background-color-fallback;
+        z-index: 1;
+        object-fit: cover;
+      }
+
+      @supports not (aspect-ratio: 1 / 1) { // fallback for aspect ratio
+        position: relative;
+        padding-top: 100%;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        @include mq($bp768) {
+          padding-top: 87.5%;
+        }
+
+        @include mq($bp1024) {
+          padding-top: 56.25%;
+        }
+      }
+    }
+
+    .f--ambient-video {
+      height: rem(400);
+
+      @include mq($bp768) {
+        height: rem(384);
+      }
+
+      @include mq($bp1024) {
+        height: rem(600);
+      }
+    }
+  }
+
+  .text-container {
+    @include padding(null rem(20));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    text-align: center;
+
+    @include mq($bp768) {
+      @include padding(null cols(2) rem(13));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(2) rem(30));
+    }
+
+    .f--category {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include margin(rem(20) null null);
+      @include font-size(14, 14);
+      position: relative;
+      color: $color-white;
+      letter-spacing: rem(-.1);
+
+      @include mq($bp768) {
+        @include margin(0 null rem(20));
+        @include font-size(16, 16);
+        letter-spacing: rem(.1);
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(20));
+      }
+
+      p {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include margin(null null 0);
+        @include font-size(14, 14);
+        color: $color-white;
+        letter-spacing: rem(-.1);
+
+        @include mq($bp768) {
+          @include font-size(16, 16);
+          letter-spacing: rem(.1);
+        }
+      }
+    }
+
+    .f--page-title {
+      @include margin(rem(2) null rem(20));
+      position: relative;
+
+      @include mq($bp768) {
+        @include margin(0 null rem(18));
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null 0);
+      }
+
+      h1 {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include font-size(36, 36);
+        color: $color-white;
+        letter-spacing: rem(-.5);
+        text-transform: none;
+
+        @include mq($bp768) {
+          @include font-size(60, 60);
+          letter-spacing: rem(.4);
+        }
+      }
+    }
+  }
+}

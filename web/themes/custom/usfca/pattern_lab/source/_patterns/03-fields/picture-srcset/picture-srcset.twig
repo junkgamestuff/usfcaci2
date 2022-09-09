@@ -1,0 +1,15 @@
+{% extends "base-field" %}
+
+{% set name = "picture-srcset" %}
+
+{% block content %}
+
+  <picture>
+    {% for image in images %}
+      <source data-srcset="{{ image.srcset }}" media="{{ image.media }}" type="image/jpg">
+    {% endfor %}
+    <img data-src="{{ defaultImage }}" alt="{{ defaultImageAlt }}" class="lazyload">
+  </picture>
+
+{% endblock %}
+

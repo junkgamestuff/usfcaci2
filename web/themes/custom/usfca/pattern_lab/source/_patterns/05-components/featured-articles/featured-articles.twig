@@ -1,0 +1,54 @@
+{% extends "base-component" %}
+
+{% set name = "featured-articles" %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Featured Articles" %}
+
+
+{% block content %}
+
+  {% include "fields-section-title" with { title: title } %}
+
+  <div class="flex-container">
+    {% if cards[0]|length %}
+      <div class="featured-card">
+        {% include "components-news-article-listing-component" with {
+          title: cards[0].title,
+          link: cards[0].link,
+          date: cards[0].date,
+          image: cards[0].image,
+          description: cards[0].description,
+          eyebrow: cards[0].eyebrow,
+          logoExternal: cards[0].logoExternal
+        } only %}
+      </div>
+    {% endif %}
+
+    {% if cards|length > 1 %}
+      <ul class="cards-list">
+        {% for card in cards %}
+          {% if loop.index > 1 %}
+            <li>{% include "components-news-article-listing-component" with {
+              title: card.title,
+              link: card.link,
+              date: card.date,
+              image: card.image,
+              description: card.description,
+              eyebrow: card.eyebrow,
+              logoExternal: card.logoExternal
+            } only %}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+
+  {% if link is not empty %}
+    {% include "fields-link" with {
+      href: link.href,
+      title: link.title,
+      aria: link.aria
+    } only %}
+  {% endif %}
+
+{% endblock %}

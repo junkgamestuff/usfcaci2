@@ -1,0 +1,10 @@
+.f--page-title {
+  h1 {
+    @extend %font-fira-sans-extra-condensed-semibold;
+    @include font-size(36, 36);
+
+    @include mq($bp768) {
+      @include font-size(60, 60);
+    }
+  }
+}

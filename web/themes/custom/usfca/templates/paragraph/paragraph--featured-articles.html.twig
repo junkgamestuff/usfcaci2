@@ -1,0 +1,41 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+
+  {% set cards = [] %}
+  {% for article in fields.articles_x4 %}
+    {% set image_style = key ? '16_9_quarter' : '16_9_two_thirds' %}
+    {% set cards = cards | merge([{
+      title: article.fields.teaser_title ?? article.fields.title,
+      date: article.fields.authored_date|date("U")|format_date("usfca_date"),
+      image: article.fields.teaser_image.uri ? {
+        src: article.fields.teaser_image.url,
+        alt: article.fields.teaser_image.alt,
+        render: drupal_image(article.fields.teaser_image.uri, image_style, {alt: article.fields.teaser_image.alt}, responsive=true),
+      } : {
+        src: '/themes/custom/usfca/pattern_lab/source/images/placeholder-wide.png',
+        alt: 'Presentation only image for ' ~ article.fields.teaser_title ?? item.fields.title,
+      },
+      link: {
+        href: article.fields.link.url ?? article.fields.url,
+      },
+    }])
+    %}
+  {% endfor %}
+
+  {% set title = fields.title %}
+  {% if fields.title_highlight %}
+    {% set title = title|replace({(fields.title_highlight): '<span class="highlight">' ~ fields.title_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% include "components-featured-articles" with {
+    title: title,
+    cards: cards,
+    link: fields.link.url ? {
+      href: fields.link.url,
+      title: fields.link.title,
+      ariaLabel: fields.link.attributes.aria_label ?? fields.link.title,
+    },
+  } only %}
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+{
+  "title": "Change <strong>Healthcare Disparities</strong> from here",
+  "description": "<p>Hero homepage description text</p>",
+  "link": {
+    "cta": "CTA Link",
+    "href": "#",
+    "ariaLabel": "Arial Label for CTA Link"
+  },
+  "image": {
+    "src": "https://placeimg.com/1600/770/nature",
+    "alt": "Alt text for image"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "contactInfo": {
+    "name": "<h1>Person Name</h1>",
+    "title": "<p>Lecturer in Management </p>",
+    "fieldOfInterest": {
+      "label": "Fields of Interest",
+      "text": "Accounting, Communication"
+    },
+    "office": {
+      "label": "Office",
+      "text": "Office Info Goes Here"
+    },
+    "contact": {
+      "label": "Contact",
+      "phone": "123.456.7890",
+      "mail": "email@email.edu"
+    }
+  }
+}

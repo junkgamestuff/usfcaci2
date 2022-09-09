@@ -1,0 +1,27 @@
+{
+  "bodyClass": "home-page transparent-header",
+  "pageTitle": "Homepage Title",
+  "hasNotificationBanner": true,
+  "notificationTitle": "Emergency Alert",
+  "notificationTimestamp": "Monday, September 30, 2021 12:00PM EST",
+  "notificationMarkup" : "<p>Commodo aute officia laborum eiusmod sunt aute et reprehenderit incididunt ea. Eu voluptate ad magna irure occaecat sit veniam nulla sunt do. <a href='#'>Ullamco cupidatat</a> ipsum aliqua in velit pariatur velit laborum officia fugiat minim aute.</p>",
+  "notificationLink": {
+    "cta": "Learn More",
+    "href": "https://www.example.com/",
+    "ariaLabel": "An Example Aria Label for CTA Link"
+  },
+  "components": [
+    { "type": "vertical-tabbed-carousel" },
+    { "type": "text-and-link-listing" },
+    { "type": "manual-cards" },
+    { "type": "quote-and-cta" },
+    { "type": "text-and-images-mosaic" },
+    { "type": "stats" },
+    { "type": "map-with-pins" },
+    { "type": "full-width-cta" },
+    { "type": "featured-articles" },
+    { "type": "event-cards" },
+    { "type": "social-media-feed" },
+    { "type": "spacer" }
+  ]
+}

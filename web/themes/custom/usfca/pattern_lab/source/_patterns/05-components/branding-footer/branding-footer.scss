@@ -1,0 +1,105 @@
+.cc--branding-footer {
+  @include mq($bp768max) {
+    @include padding(null cols(1.5, 39) null null);
+    flex-basis: 50%;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+
+    @include mq($bp768max) {
+      @include margin(null auto);
+    }
+  }
+
+  svg {
+    width: 100%;
+  }
+
+  &#block-footer-sitebranding-schoolofnursing,
+  &#block-footer-sitebranding-schooloflaw,
+  &#block-footer-sitebranding-collegeofartsandsciences,
+  &#block-footer-sitebranding-schoolofmanagement,
+  &#block-footer-sitebranding-schoolofeducation {
+    @include mq($bp768max) {
+      @include margin(null null rem(20));
+      padding: 0;
+      flex-basis: 100%;
+
+      ~ .cc--footer-contact {
+        flex-basis: 100%;
+        padding: 0;
+      }
+    }
+  }
+
+  &#block-footer-sitebranding-schoolofnursing {
+
+    svg {
+      width: rem(275);
+
+      @include mq($bp768) {
+        width: rem(173);
+      }
+
+      @include mq($bp1024) {
+        width: rem(270);
+      }
+    }
+  }
+
+  &#block-footer-sitebranding-schooloflaw {
+    svg {
+      width: rem(245);
+
+      @include mq($bp768) {
+        width: rem(154);
+      }
+
+      @include mq($bp1024) {
+        width: rem(240);
+      }
+    }
+  }
+
+  &#block-footer-sitebranding-collegeofartsandsciences {
+    svg {
+      width: rem(240);
+
+      @include mq($bp768) {
+        width: rem(151);
+      }
+
+      @include mq($bp1024) {
+        width: rem(236);
+      }
+    }
+  }
+
+  &#block-footer-sitebranding-schoolofmanagement {
+    svg {
+      width: rem(232);
+
+      @include mq($bp768) {
+        width: rem(146);
+      }
+
+      @include mq($bp1024) {
+        width: rem(228);
+      }
+    }
+  }
+
+  &#block-footer-sitebranding-schoolofeducation {
+    svg {
+      @include mq($bp768) {
+        width: rem(176);
+      }
+
+      @include mq($bp1024) {
+        width: rem(275);
+      }
+    }
+  }
+}

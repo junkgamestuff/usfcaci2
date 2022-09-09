@@ -1,0 +1,23 @@
+{% extends "base-component" %}
+
+{% set name = "acalog-course-catalogue" %}
+
+{% set container_element = "section" %}
+
+{% block content %}
+
+  {% if title is not empty %}
+    {% include "fields-section-title" with {
+      title: title
+    } only %}
+  {% endif %}
+
+  {% for item in items %}
+    {% include "fields-sub-title" with { title: item.title } only %}
+
+    {% include "components-accordions" with {
+      accordions: item.accordions
+    } only %}
+  {% endfor %}
+
+{% endblock %}

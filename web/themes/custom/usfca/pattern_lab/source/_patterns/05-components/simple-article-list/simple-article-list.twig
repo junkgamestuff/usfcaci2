@@ -1,0 +1,41 @@
+{% extends "base-component" %}
+
+{% set name = "simple-article-list" %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Article List" %}
+
+
+{% block content %}
+  {% if title is not empty %}
+    <header class="simple-article-list-header-container">
+      {% include "fields-section-title" with { title: title } only %}
+    </header>
+  {% endif %}
+
+<div class="views-container">
+  {% for item in items %}
+    <div class="views-row">
+
+      {% if item.link.href starts with '/' %}
+        <div class="f--field f--link">
+          <a href="{{ item.link.href }}">{{ item.title }}</a>
+        </div>
+      {% else %}
+        <div class="f--field f--link">
+          <a class="ext" href="{{ item.link.href }}">
+            {{ item.title }}
+          </a>
+        </div>
+      {% endif %}
+
+      {% if item.pubDate %}
+        <time datetime="{{ item.pubDate|date("m/d/Y") }}">
+          {{ item.pubDate }}
+        </time>
+      {% endif %}
+
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

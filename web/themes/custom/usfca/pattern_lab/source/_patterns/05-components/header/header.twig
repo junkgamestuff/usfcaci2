@@ -1,0 +1,38 @@
+{% extends "base-component" %}
+
+{% set name = "header" %}
+{% set container_element = 'div' %}
+
+{% block content %}
+
+  {% if hasNotificationBanner %}
+    {% include "components-notification-banner" with {
+      markup: notificationMarkup,
+      link: notificationLink
+    } only %}
+  {% endif %}
+
+  <div class="header-wrapper">
+    <div class="desktop-nav">
+      {% include "components-branding-header" %}
+
+      <div class="header-buttons">
+        {% include "components-mobile-menu-hamburger" %}
+        {% include "components-search-widget" with { isClose: true, variant: "search-trigger-button" } %}
+        {% include "components-search-form" %}
+      </div>
+
+      <div class="nav-container">
+        <div class="nav-wrapper">
+          {% include "components-branding-header" %}
+
+          {% include "components-utility-menu" with { menu: utilityMenu } %}
+
+          {% include "components-main-menu" with { menu: mainMenu } %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+

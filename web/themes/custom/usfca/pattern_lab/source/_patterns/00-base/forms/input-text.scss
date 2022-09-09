@@ -1,0 +1,9 @@
+.fi--form-item {
+  input[type='text'] {
+    @extend %input-style;
+
+    @include placeholder {
+      color: $color-secondary;
+    }
+  }
+}
