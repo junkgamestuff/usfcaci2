@@ -77,14 +77,6 @@ jobs:
           paths:
             - bash_env.txt
 
-      - run:
-          name: Install Deps
-          command: cd web/themes/custom/usfca && npm install
-
-      - run:
-          name: Compile Assets
-          command: cd web/themes/custom/usfca && npm ci
-
   static_tests:
     <<: *defaults
 
@@ -113,6 +105,13 @@ jobs:
 
   # If needed, frontend assets compilation or similar steps
   # could be added here.
+      - run:
+          name: Install Deps
+          command: cd web/themes/custom/usfca && npm install
+
+      - run:
+          name: Compile Assets
+          command: cd web/themes/custom/usfca && npm ci
 
   deploy_to_pantheon:
     <<: *defaults
