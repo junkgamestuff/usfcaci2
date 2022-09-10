@@ -1,0 +1,10 @@
+# Assets built during continuous integration:
+# style/**
+# js/**
+# !js/behaviorsBootstrap.js
+# !js/acalogMutationObserver.js
+# !js/usfcaAcalogGlobal.js
+# !js/usfcaAcalogLink.js
+# !js/usfcaAcalogProgramContent.js
+# !js/programSort.js
+# images/**

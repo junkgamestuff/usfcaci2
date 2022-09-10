@@ -113,11 +113,11 @@ jobs:
           name: Compile assets
           command: cd web/themes/custom/usfca && npm ci
 
-      - persist_to_workspace:
-          name: Persist to Workspace
-          root: web/themes/custom/usfca/
-          paths:
-            - pattern_lab/source/css/style.css
+      # - persist_to_workspace:
+      #     name: Persist to Workspace
+      #     root: web/themes/custom/usfca/
+      #     paths:
+      #       - pattern_lab/source/css/style.css
 
 
       # - run:
