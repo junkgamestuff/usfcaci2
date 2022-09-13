@@ -108,8 +108,7 @@ jobs:
       #- run:
       #    name: Install Deps
       #    command: cd web/themes/custom/usfca && npm install
-orbs:
-  pantheon: pantheon-systems/pantheon@0.2.0
+
   npmbuild_and_persist:
     docker:
       - image: 'node:12.16.1'
