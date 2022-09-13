@@ -110,6 +110,7 @@ jobs:
       #    command: cd web/themes/custom/usfca && npm install
 
   npmbuild_and_persist:
+    <<: *defaults
     docker:
       - image: 'node:12.16.1'
     steps:
