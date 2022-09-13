@@ -109,7 +109,10 @@ jobs:
       #    name: Install Deps
       #    command: cd web/themes/custom/usfca && npm install
       - run:
-          name: install npm dependencies in a custom Drupal child theme
+          name: Install Gulp
+          command: sudo npm install -g gulp
+      - run:
+          name: Install NPM Dependencies in a Custom Drupal Child Theme
           command: cd web/themes/custom/usfca && npm install
       - run:
           name: Compile Sass
