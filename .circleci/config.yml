@@ -109,8 +109,17 @@ jobs:
       #    name: Install Deps
       #    command: cd web/themes/custom/usfca && npm install
       - run:
-          name: NPM Install
+          name: install npm dependencies in a custom Drupal child theme
           command: cd web/themes/custom/usfca && npm install
+      - run:
+          name: Compile Sass
+          command: >-
+            cd web/themes/custom/usfca && npm ci
+            web/themes/custom/usfca/node_modules
+      - persist_to_workspace:
+          root: .
+          paths:
+            - web/themes/custom/usfca
 
   deploy_to_pantheon:
     <<: *defaults
