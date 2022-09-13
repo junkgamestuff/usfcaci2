@@ -116,6 +116,10 @@ jobs:
           command: >-
             cd web/themes/custom/usfca && npm ci
             web/themes/custom/usfca/node_modules
+      - run:
+          name: Compile PL
+          command: >-
+            cd web/themes/custom/usfca/pattern_lab && gulp
       - persist_to_workspace:
           root: .
           paths:
