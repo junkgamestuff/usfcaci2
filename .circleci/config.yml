@@ -110,7 +110,7 @@ jobs:
       #    command: cd web/themes/custom/usfca && npm install
 orbs:
   pantheon: pantheon-systems/pantheon@0.2.0
-jobs:  
+jobs2:
   npmbuild_and_persist:
     docker:
       - image: 'node:12.16.1'
