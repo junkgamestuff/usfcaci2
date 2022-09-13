@@ -108,75 +108,9 @@ jobs:
       #- run:
       #    name: Install Deps
       #    command: cd web/themes/custom/usfca && npm install
-  build_theme:
-    <<: *defaults
-    working_directory: ~/example_drops_8_composer/
-    docker:
-      - image: circleci/node:8-stretch-browsers
-
-    steps:
-      - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
-
       - run:
-          name: Install Gulp
-          command: sudo npm install -g gulp
-
-      - run:
-          name: Install Deps
+          name: NPM Install
           command: cd web/themes/custom/usfca && npm install
-
-      - save_cache:
-          key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
-          paths:
-            - ./web/themes/custom/usfca/node_modules
-
-      - run:
-          name: Compile assets
-          command: cd web/themes/custom/usfca && gulp
-
-      - persist_to_workspace:
-          root: web/themes/custom/usfca
-          paths:
-            - pattern_lab/source/css/style.css
-
-
-
-  # build_theme:
-  #   working_directory: ~/example_drops_8_composer/
-  #   steps:
-  #     - checkout
-  #     - restore_cache:
-  #         key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
-  #     - save_cache:
-  #         key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
-  #         paths:
-  #           - ./web/themes/custom/usfca/node_modules
-  #     - run:
-  #         name: Compile assets
-  #         command: cd web/themes/custom/usfca && npm ci
-
-      # - persist_to_workspace:
-      #     name: Persist to Workspace
-      #     root: web/themes/custom/usfca/
-      #     paths:
-      #       - pattern_lab/source/css/style.css
-
-
-      # - run:
-      #     name: Install Deps
-      #     command: cd web/themes/custom/usfca && npm ci
-
-      # - save_cache:
-      #     key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
-      #     paths:
-      #       - ./web/themes/custom/usfca/node_modules
-
-      # - persist_to_workspace:
-      #     root: web/themes/custom/usfca
-      #     paths:
-      #       - pattern_lab/source/css/style.css
 
   deploy_to_pantheon:
     <<: *defaults
