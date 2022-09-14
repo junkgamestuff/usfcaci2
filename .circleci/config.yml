@@ -107,9 +107,11 @@ jobs:
   # could be added here.
 
       - run:
-          rm web/themes/custom/usfca/.gitignore
+          name: Remove USFCA gitignore
+          command: rm web/themes/custom/usfca/.gitignore
       - run:
-          rm web/themes/custom/usfca/pattern_lab/.gitignore
+          name: Remove Pattern Lab gitignore
+          command: rm web/themes/custom/usfca/pattern_lab/.gitignore
       - run:
           name: Compile Sass
           command: >-
@@ -119,7 +121,7 @@ jobs:
           root: .
           paths:
             - web/themes/custom/usfca/pattern_lab/source
-            
+
   deploy_to_pantheon:
     <<: *defaults
     steps:
