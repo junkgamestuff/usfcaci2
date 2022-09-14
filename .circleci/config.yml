@@ -108,7 +108,7 @@ jobs:
 
       - run:
           name: Remove USFCA theme gitignore
-          command: rm /web/themes/custom/usfca/.gitignore
+          command: rm web/themes/custom/usfca/.gitignore
       - run:
           name: Remove Pattern Lab gitignore
           command: rm /web/themes/custom/usfca/pattern_lab/.gitignore
