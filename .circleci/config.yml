@@ -110,16 +110,13 @@ jobs:
           name: Remove USFCA theme gitignore
           command: rm web/themes/custom/usfca/.gitignore
       - run:
-          name: Remove web root gitignore
-          command: rm .gitignore
-      - run:
           name: Remove Pattern Lab gitignore
           command: rm web/themes/custom/usfca/pattern_lab/.gitignore
       - run:
           name: Compile Sass
           command: >-
             cd web/themes/custom/usfca && npm ci
-            web/themes/custom/usfca/node_modules
+            /web/themes/custom/usfca/node_modules
       - persist_to_workspace:
           root: .
           paths:
