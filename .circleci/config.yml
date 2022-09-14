@@ -120,7 +120,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - /web/themes/custom/usfca/pattern_lab/source
+            - web/themes/custom/usfca/pattern_lab/source
 
   deploy_to_pantheon:
     <<: *defaults
