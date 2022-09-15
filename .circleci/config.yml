@@ -115,11 +115,11 @@ jobs:
       - run:
           name: Compile Sass
           command: >-
-            cd web/themes/custom/usfca && npm ci
+            cd web/themes/custom/usfca/pattern_lab && npm ci
       - persist_to_workspace:
           root: .
           paths:
-            - web/themes/custom/usfca/pattern_lab/source
+            - web/themes/custom/usfca/pattern_lab
 
   deploy_to_pantheon:
     <<: *defaults
