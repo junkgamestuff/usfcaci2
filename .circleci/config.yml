@@ -122,9 +122,9 @@ jobs:
       #     key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
       #     paths:
       #       - ./web/themes/custom/usfca/node_modules
-      - run:
-          name: Install Deps
-          command: cd web/themes/custom/usfca && npm install
+      # - run:
+      #     name: Install Deps
+      #     command: cd web/themes/custom/usfca && npm install
 
       - run:
           name: Compile Sass
