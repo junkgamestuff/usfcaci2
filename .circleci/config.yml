@@ -124,7 +124,7 @@ jobs:
       #       - ./web/themes/custom/usfca/node_modules
       - run:
           name: Install Deps
-          command: cd web/themes/custom/usfca && npm install
+          command: cd web/themes/custom/usfca && npm install --force
 
       - run:
           name: Compile Sass
