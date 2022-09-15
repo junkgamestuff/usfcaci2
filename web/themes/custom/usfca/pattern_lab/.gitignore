@@ -6,10 +6,10 @@ public/*
 vendor/*
 node_modules
 
-# source/styleguide/*
+source/styleguide/*
 
-# source/css/*
+source/css/*
 
-# source/js/dist/*
-# source/js/components/*
-# source/js/vendor/*
+source/js/dist/*
+source/js/components/*
+source/js/vendor/*
