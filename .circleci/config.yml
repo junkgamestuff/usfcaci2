@@ -109,8 +109,8 @@ jobs:
   build_theme:
     <<: *defaults
     working_directory: ~/example_drops_8_composer/
-    docker:
-      - image: circleci/node:8-stretch-browsers
+    # docker:
+    #   - image: circleci/node:8-stretch-browsers
 
 
     steps:
