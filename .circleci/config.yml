@@ -115,20 +115,13 @@ jobs:
 
     steps:
       - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
+      # - restore_cache:
+      #     key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
 
-      - run:
-          name: Remove USFCA theme gitignore
-          command: rm web/themes/custom/usfca/.gitignore
-      - run:
-          name: Remove Pattern Lab gitignore
-          command: rm web/themes/custom/usfca/pattern_lab/.gitignore
-
-      - save_cache:
-          key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
-          paths:
-            - ./web/themes/custom/usfca/node_modules
+      # # - save_cache:
+      #     key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
+      #     paths:
+      #       - ./web/themes/custom/usfca/node_modules
       - run:
           name: Compile Sass
           command: >-
