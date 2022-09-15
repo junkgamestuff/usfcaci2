@@ -108,9 +108,15 @@ jobs:
 
   build_theme:
     <<: *defaults
+    working_directory: ~/example_drops_8_composer/
+    docker:
+      - image: circleci/node:8-stretch-browsers
+
 
     steps:
       - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
 
       - run:
           name: Remove USFCA theme gitignore
@@ -118,12 +124,22 @@ jobs:
       - run:
           name: Remove Pattern Lab gitignore
           command: rm web/themes/custom/usfca/pattern_lab/.gitignore
+
+      - save_cache:
+          key: dependency-cache-{{ checksum "web/themes/custom/usfca/package.json" }}
+          paths:
+            - ./web/themes/custom/usfca/node_modules
       - run:
           name: Compile Sass
           command: >-
             cd web/themes/custom/usfca/pattern_lab && npm ci
+
+
       - persist_to_workspace:
-          root: /tmp
+          root: web/themes/custom/usfca
+          paths:
+            - pattern_lab/source/css/style.css
+            - pattern_lab/source/js
 
   deploy_to_pantheon:
     <<: *defaults
@@ -132,7 +148,7 @@ jobs:
 
       # Attach the workspace
       - attach_workspace:
-          at: /tmp
+          at: web/themes/custom/usfca
 
       - run:
           # Set TERMINUS_ENV and related environment variables.
