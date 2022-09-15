@@ -123,10 +123,13 @@ jobs:
       #     paths:
       #       - ./web/themes/custom/usfca/node_modules
       - run:
+          name: Install Deps
+          command: cd web/themes/custom/usfca && npm install
+
+      - run:
           name: Compile Sass
           command: >-
             cd web/themes/custom/usfca/pattern_lab && npm ci
-
 
       - persist_to_workspace:
           root: web/themes/custom/usfca
