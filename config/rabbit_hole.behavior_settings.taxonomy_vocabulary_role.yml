@@ -1,0 +1,14 @@
+uuid: 4217319d-55cb-4ef3-aae3-6c5139bf213f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.role
+id: taxonomy_vocabulary_role
+entity_type_id: taxonomy_vocabulary
+entity_id: role
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

@@ -1,0 +1,97 @@
+uuid: 261496d9-e0d7-43d6-9043-c319c504f8cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slides
+    - paragraphs.paragraphs_type.ribbon_carousel
+    - paragraphs.paragraphs_type.ribbon_carousel_slide
+  module:
+    - entity_reference_revisions
+id: paragraph.ribbon_carousel.field_slides
+field_name: field_slides
+entity_type: paragraph
+bundle: ribbon_carousel
+label: Slides
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ribbon_carousel_slide: ribbon_carousel_slide
+    negate: 0
+    target_bundles_drag_drop:
+      50_50_split_cta:
+        weight: 25
+        enabled: false
+      50_50_split_cta_inset:
+        weight: 26
+        enabled: false
+      event_cards_manual:
+        weight: 27
+        enabled: false
+      featured_articles:
+        weight: 28
+        enabled: false
+      featured_quote:
+        weight: 29
+        enabled: false
+      full_width_cta:
+        weight: 30
+        enabled: false
+      full_width_cta_link:
+        weight: 31
+        enabled: false
+      homepage_hero:
+        weight: 32
+        enabled: false
+      homepage_hero_ambient_video:
+        weight: 33
+        enabled: false
+      homepage_hero_slide:
+        weight: 34
+        enabled: false
+      link_list:
+        weight: 35
+        enabled: false
+      manual_card_cta_card:
+        weight: 36
+        enabled: false
+      manual_cards_w_cta:
+        weight: 37
+        enabled: false
+      map_with_pins:
+        weight: 38
+        enabled: false
+      ribbon_carousel:
+        weight: 24
+        enabled: false
+      ribbon_carousel_slide:
+        weight: 39
+        enabled: true
+      social_link:
+        weight: 40
+        enabled: false
+      social_media_feed:
+        weight: 41
+        enabled: false
+      stats:
+        weight: 42
+        enabled: false
+      text_and_image_mosaic:
+        weight: 43
+        enabled: false
+      text_and_image_mosaic_tile:
+        weight: 44
+        enabled: false
+      vertical_tabbed_carousel:
+        weight: 45
+        enabled: false
+      vertical_tabbed_carousel_slide:
+        weight: 46
+        enabled: false
+field_type: entity_reference_revisions

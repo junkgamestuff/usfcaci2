@@ -1,0 +1,78 @@
+{
+  "title": "Transfer Students",
+  "category": "<p>UNDERGRADUATE ADMISSIONS</p>",
+  "image": {
+    "src": "https://placeimg.com/1200/675/nature",
+    "alt": "Alt text for image"
+  },
+  "intro": {
+    "title": "Are you Ready to <span class=\"highlight\">change the world?</span>",
+    "description": "<p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>"
+  },
+  "menu": {
+    "ariaLabel": "Main Navigation",
+    "name": "main",
+    "items": [
+      { "title": "First Year Students", "href": "#", "submenu": [
+        { "title": "Reinventing Education", "href": "#REPLACE" },
+        { "title": "Agents for Change", "href": "#REPLACE" },
+        { "title": "Temporiam", "href": "#REPLACE" },
+        { "title": "Excepteur Sint Occaecat", "href": "#REPLACE" },
+        { "title": "Voluptate Culpa", "href": "#REPLACE" },
+        { "title": "Estema Delavesta", "href": "#REPLACE" }
+      ]},
+      { "title": "Transfer Students", "href": "#REPLACE", "submenu": [
+        { "title": "Transferring from Community College", "href": "#REPLACE" },
+        { "title": "Transferring from a 4-year College", "href": "#REPLACE" },
+        { "title": "International Transfer", "href": "#REPLACE" },
+        { "title": "Visiting Students", "href": "#REPLACE" }
+      ]},
+      { "title": "International Students", "href": "#REPLACE", "submenu": [
+        { "title": "Agents for Change", "href": "#REPLACE" },
+        { "title": "Tier One", "href": "#REPLACE" },
+        { "title": "Listed as a Tier One", "href": "#REPLACE" },
+        { "title": "Satisfied or strongly satisfied", "href": "#REPLACE" }
+      ]},
+      { "title": "Tuition and Fees", "href": "#REPLACE", "submenu": [
+        { "title": "Undergraduates who were", "href": "#REPLACE" },
+        { "title": "Quisque velit nisi", "href": "#REPLACE" },
+        { "title": "Praesent sapien massa", "href": "#REPLACE" }
+      ]},
+      { "title": "Dates and Dealines", "href": "#REPLACE", "submenu": [
+        { "title": "Vivamus suscipit tortor", "href": "#REPLACE" },
+        { "title": "Pellentesque in ipsum", "href": "#REPLACE" },
+        { "title": "Sed porttitor lectus nibh", "href": "#REPLACE" },
+        { "title": "Quisque velit nisi", "href": "#REPLACE" },
+        { "title": "Link", "href": "#REPLACE" }
+      ]},
+      { "title": "Tools and Resources", "href": "#" }
+    ]
+  },
+  "breadcrumbs": {
+    "homeURL": "/",
+    "items": [
+      {
+        "title": "Academics",
+        "href": "#REPLACE"
+      },
+      {
+        "title": "San Francisco Connection",
+        "href": "#REPLACE"
+      },
+      {
+        "title": "City as a Classroom",
+        "href": "#REPLACE"
+      }
+    ]
+  },
+  "buttons": [
+    {
+      "title": "REQUEST INFO",
+      "url": "#"
+    },
+    {
+      "title": "APPLY NOW",
+      "url": "#"
+    }
+  ]
+}

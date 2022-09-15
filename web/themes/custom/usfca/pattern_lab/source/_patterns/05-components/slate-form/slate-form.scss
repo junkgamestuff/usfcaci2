@@ -1,0 +1,251 @@
+.cc--slate-form {
+  @include maxwidth;
+
+  .c--slate-form {
+    @include padding(rem(30) rem(20));
+
+    @include mq($bp768) {
+      @include padding(rem(50) cols(2));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(8));
+    }
+
+    .l--two-column-reverse & {
+      @include padding(rem(36) rem(20) rem(30));
+      background: $color-white;
+      box-shadow: 0 0 rem(4) rem(1) rgba($color-black, .22);
+
+      @include mq($bp1024) {
+        @include padding(rem(36) cols(1, 22) rem(25));
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(36) cols(1, 15) rem(40));
+      }
+    }
+  }
+
+  .form_p {
+    h2 {
+      @include margin(null null rem(10));
+      @include font-size(36, 48);
+      color: $color-sherpa-blue;
+      letter-spacing: rem(.2);
+
+      @include mq($bp768) {
+        @include margin(null null rem(30));
+        @include font-size(48, 54);
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(32));
+      }
+    }
+  }
+
+  .form_h1 {
+    .form_label {
+      @include font-size(24, 32);
+      color: $color-sherpa-blue;
+
+      @include mq($bp768) {
+        @include font-size(30, 36);
+      }
+    }
+  }
+
+  .form_question {
+    @include margin(null null rem(50));
+  }
+
+  div.form_label {
+    @include margin(null null rem(20));
+  }
+
+  .form_checkbox {
+    .form_response {
+      @extend %checkbox-wrapper;
+    }
+  }
+
+  .form_radio {
+    .form_response {
+      @extend %radio-wrapper;
+    }
+  }
+
+  .form_text {
+    @extend %form-item;
+
+    input {
+      @extend %input-style;
+    }
+  }
+
+  .form_birthdate {
+    .form_label {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(14, 16);
+      @include margin(null null rem(10));
+      display: block;
+      color: $color-black;
+      text-transform: uppercase;
+
+      @include mq($bp768) {
+        @include font-size(16, 21);
+      }
+    }
+
+    .form_responses {
+      display: flex;
+
+      select {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include padding(null rem(35) null rem(10));
+        @include font-size(16, 26);
+        width: 20%;
+        height: rem(50);
+        border: rem(1) solid $color-atlantis;
+        background: transparent;
+        background-image: url('../images/icons-usf/USF_arrow_green_down.svg');
+        background-repeat: no-repeat;
+        background-position: right rem(15) center;
+        color: $color-secondary;
+        box-shadow: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        &::-ms-expand {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .form_select {
+    .form_label {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(14, 16);
+      @include margin(null null rem(10));
+      display: block;
+      color: $color-black;
+      text-transform: uppercase;
+
+      @include mq($bp768) {
+        @include font-size(16, 21);
+      }
+    }
+
+    .form_responses {
+      @extend %select-wrap;
+
+      select {
+        background-image: url('../images/icons-usf/USF_arrow_green_down.svg');
+        background-repeat: no-repeat;
+        background-position: right rem(15) center;
+      }
+    }
+  }
+
+  .form_location_nopostal,
+  .form_address,
+  .form_location {
+    fieldset {
+      > div {
+        @include margin(null null rem(30));
+      }
+    }
+
+    label {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(14, 16);
+      @include margin(null null rem(10));
+      display: block;
+      color: $color-black;
+      text-transform: uppercase;
+
+      @include mq($bp768) {
+        @include font-size(16, 21);
+      }
+
+      &.form-required {
+        &::after {
+          @include margin(null null null rem(3));
+          display: inline-block;
+          color: $color-error;
+          content: '*';
+        }
+      }
+    }
+
+    select {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include padding(null rem(35) null rem(10));
+      @include font-size(16, 26);
+      width: 100%;
+      height: rem(50);
+      border: rem(1) solid $color-atlantis;
+      background: transparent;
+      background-image: url('../images/icons-usf/USF_arrow_green_down.svg');
+      background-repeat: no-repeat;
+      background-position: right rem(15) center;
+      color: $color-secondary;
+      box-shadow: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+
+      &::-ms-expand {
+        display: none;
+      }
+    }
+
+    textarea {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(16, 26);
+      @include padding(rem(10));
+      width: 100%;
+      height: rem(150);
+      border-color: $color-atlantis;
+      background-color: transparent;
+
+      @include mq($bp768) {
+        height: rem(200);
+      }
+
+      @include placeholder {
+        color: $color-secondary;
+      }
+    }
+
+    input[type='text'],
+    input[type='tel'],
+    input[type='email'] {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include padding(null rem(10));
+      @include font-size(16, 26);
+      position: relative;
+      width: 100%;
+      height: rem(50);
+      border: rem(1) solid $color-border;
+      border-radius: 0;
+      background-color: $color-white;
+      color: $color-secondary;
+      appearance: none;
+    }
+  }
+
+  .form_action,
+  .action {
+    .form_button_submit {
+      @include button($secondary: true);
+
+      .l--two-column-reverse & {
+        width: 100%;
+      }
+    }
+  }
+}

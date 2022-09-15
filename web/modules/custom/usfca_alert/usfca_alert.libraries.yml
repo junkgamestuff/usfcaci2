@@ -1,0 +1,7 @@
+alert-banner:
+  js:
+    js/alertBannerLoader.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once

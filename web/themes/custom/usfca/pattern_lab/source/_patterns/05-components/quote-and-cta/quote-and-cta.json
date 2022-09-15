@@ -1,0 +1,17 @@
+{
+  "eyebrow": "The San Francisco <span class=\"highlight\">Advantage</span>",
+  "quote": "<p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, eget tincidunt nibh pulvina.</p>",
+  "attribution": {
+    "attributionTitle": "Jessica MANTANARA",
+    "attributionDescription": "Performing Arts and Social Justice ‘19, minor Peace and Justice Studies"
+  },
+  "image": {
+    "src": "https://placeimg.com/575/904/people",
+    "alt": "Alt 1"
+  },
+  "link": {
+    "cta": "LIVING IN SAN FRANCISCO",
+    "href": "#",
+    "ariaLabel": "Aria Label for a Link"
+  }
+}

@@ -1,0 +1,8 @@
+uuid: 229f81a4-a12f-4332-9940-cca30a031b47
+langcode: en
+status: true
+dependencies: {  }
+id: college-of-arts-and-sciences-uti
+label: 'College of Arts and Sciences Utility'
+description: ''
+locked: false

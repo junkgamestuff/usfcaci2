@@ -1,0 +1,8 @@
+name: DigitalPulp Twig Helper
+type: module
+description: DigitalPulp Twig Helper
+core_version_requirement: ^8.8 || ^9
+package: DigitalPulp
+dependencies:
+  - drupal:field
+  - drupal:views

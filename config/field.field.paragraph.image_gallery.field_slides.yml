@@ -1,0 +1,172 @@
+uuid: ebacb678-1dbb-4994-a67c-38d26eda9d72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slides
+    - paragraphs.paragraphs_type.image_gallery
+    - paragraphs.paragraphs_type.image_gallery_slide
+  module:
+    - entity_reference_revisions
+id: paragraph.image_gallery.field_slides
+field_name: field_slides
+entity_type: paragraph
+bundle: image_gallery
+label: Slides
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image_gallery_slide: image_gallery_slide
+    negate: 0
+    target_bundles_drag_drop:
+      50_50_cta_groupings:
+        weight: 50
+        enabled: false
+      50_50_split_cta:
+        weight: 51
+        enabled: false
+      50_50_split_cta_inset:
+        weight: 52
+        enabled: false
+      acalog_example_curriculum:
+        weight: 53
+        enabled: false
+      acalog_link:
+        weight: 54
+        enabled: false
+      acalog_program_learning_outcomes:
+        weight: 55
+        enabled: false
+      accordion:
+        weight: 56
+        enabled: false
+      accordions:
+        weight: 57
+        enabled: false
+      article_cards_featured:
+        weight: 58
+        enabled: false
+      article_cards_manual:
+        weight: 59
+        enabled: false
+      chapter:
+        weight: 60
+        enabled: false
+      embed:
+        weight: 61
+        enabled: false
+      event_cards_manual:
+        weight: 62
+        enabled: false
+      events_listing:
+        weight: 63
+        enabled: false
+      faculty_directory:
+        weight: 64
+        enabled: false
+      featured_articles:
+        weight: 65
+        enabled: false
+      featured_events:
+        weight: 66
+        enabled: false
+      featured_image:
+        weight: 67
+        enabled: false
+      featured_quote:
+        weight: 68
+        enabled: false
+      full_width_cta:
+        weight: 69
+        enabled: false
+      full_width_cta_link:
+        weight: 70
+        enabled: false
+      homepage_hero:
+        weight: 71
+        enabled: false
+      homepage_hero_ambient_video:
+        weight: 72
+        enabled: false
+      homepage_hero_slide:
+        weight: 73
+        enabled: false
+      image_gallery:
+        weight: 49
+        enabled: false
+      image_gallery_slide:
+        weight: 74
+        enabled: true
+      intro_text:
+        weight: 75
+        enabled: false
+      intro_text_title:
+        weight: 76
+        enabled: false
+      link_list:
+        weight: 77
+        enabled: false
+      manual_card_cta_card:
+        weight: 78
+        enabled: false
+      manual_cards_w_cta:
+        weight: 79
+        enabled: false
+      manual_cta_grid:
+        weight: 80
+        enabled: false
+      manual_cta_grid_card:
+        weight: 81
+        enabled: false
+      map_with_pins:
+        weight: 82
+        enabled: false
+      program_faculty_listing:
+        weight: 83
+        enabled: false
+      ribbon_carousel:
+        weight: 84
+        enabled: false
+      ribbon_carousel_slide:
+        weight: 85
+        enabled: false
+      rich_text:
+        weight: 86
+        enabled: false
+      slate_form_embed:
+        weight: 87
+        enabled: false
+      social_link:
+        weight: 88
+        enabled: false
+      social_media_feed:
+        weight: 89
+        enabled: false
+      stats:
+        weight: 90
+        enabled: false
+      text_and_image_mosaic:
+        weight: 91
+        enabled: false
+      text_and_image_mosaic_tile:
+        weight: 92
+        enabled: false
+      two_column_link_list:
+        weight: 93
+        enabled: false
+      vertical_tabbed_carousel:
+        weight: 94
+        enabled: false
+      vertical_tabbed_carousel_slide:
+        weight: 95
+        enabled: false
+      webform:
+        weight: 96
+        enabled: false
+field_type: entity_reference_revisions

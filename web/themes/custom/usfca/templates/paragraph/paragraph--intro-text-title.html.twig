@@ -1,0 +1,15 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% set title = fields.title %}
+  {% if fields.title_highlight %}
+    {% set title = title|replace({(fields.title_highlight): '<span class="highlight">' ~ fields.title_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% include "components-intro-text" with {
+    title: title,
+    description: fields.description,
+  } only %}
+
+{% endblock content %}

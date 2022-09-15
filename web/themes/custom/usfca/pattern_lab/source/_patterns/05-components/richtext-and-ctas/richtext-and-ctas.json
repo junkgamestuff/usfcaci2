@@ -1,0 +1,16 @@
+{
+  "title": "WYSIWYG and CTAS Title",
+  "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>",
+  "links": [
+    {
+      "href": "https://www.example.com/",
+      "cta": "Example Link One",
+      "ariaLabel": "An Example Aria Label for CTA Link"
+    },
+    {
+      "href": "https://www.example.com/",
+      "cta": "Example Link Two",
+      "ariaLabel": "An Example Aria Label for CTA Link"
+    }
+  ]
+}

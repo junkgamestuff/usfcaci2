@@ -1,0 +1,33 @@
+id: media_image
+label: USFCA — Media — Image
+migration_group: usfca
+source:
+  plugin: usfca_image_reference_field
+  field_name: field_image
+  bundles:
+    - news
+    - magazine
+    - faculty_details
+keys:
+  - fid
+destination:
+  plugin: entity:media
+process:
+  bundle:
+    plugin: default_value
+    default_value: image
+  name: filename
+  'field_media_image/target_id':
+    - plugin: migration_lookup
+      migration: files_image
+      no_stub: true
+      source: fid
+  'field_media_image/alt':
+    plugin: null_coalesce
+    source:
+      - media_alt
+      - alt
+dependencies:
+  enforced:
+    module:
+      - usfca_migrate

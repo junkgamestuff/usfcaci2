@@ -1,0 +1,71 @@
+{% extends "base-component" %}
+
+{% set name = "pager" %}
+{% set variant = [loadMore ? 'load-more' ] %}
+
+{% block content %}
+
+  {% if loadMore %}
+    <ul class="pager__items js-pager__items">
+      <li class="pager__item">
+        <span class="line line-left"></span>
+        <a href="#" class="text">Load More<svg width="12px" height="7px" viewBox="0 0 12 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-388.000000, -10.000000)" fill="#333333"><g><g transform="translate(381.263889, 0.000000)"><polygon points="12.5 14.4387755 16.9387755 10 17.8571429 10.9183673 12.5 16.2755102 7.14285714 10.9183673 8.06122449 10"></polygon></g></g></g></g></svg></a>
+        <span class="line line-right"></span>
+      </li>
+    </ul>
+  {% else %}
+    <nav class="pager" role="navigation" aria-label="Pager Navigation">
+      <ul class="pager__items js-pager__items">
+
+        {% if previous %}
+
+          <li class="pager__item pager__item--previous">
+            <a href="{{ link.href }}" title="Go to previous page" rel="prev">
+              <span class="visually-hidden">Previous page</span>
+              <span aria-hidden="true">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11.7 20" enable-background="new 0 0 11.7 20" xml:space="preserve">
+                <path class="arrow-left" d="M3.4,10l8.3,8.3L10,20L0,10L10,0l1.7,1.7L3.4,10z"></path>
+                </svg>
+              </span>
+            </a>
+          </li>
+
+        {% endif %}
+
+        {% for link in links %}
+
+          <li class="pager__item {% if loop.index == curPage %}is-active{% endif %}">
+
+            {% if link.nolink == true %}
+
+              {{ link.cta }}
+
+            {% else %}
+
+              <a href="{{ link.href }}" aria-label="View page {{ loop.index }}">{{ link.cta }}</a>
+
+            {% endif %}
+
+          </li>
+
+        {% endfor %}
+
+        {% if next %}
+
+          <li class="pager__item pager__item--next" aria-label="View page 1" }}>
+              <a href="{{ link.href }}" rel="next" title="Go to next page">
+                  <span class="visually-hidden">Next page</span>
+                  <span aria-hidden="true">
+                      <svg enable-background="new 0 0 11.7 20" version="1.1" viewbox="0 0 11.7 20" x="0px" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" y="0px">
+                          <path class="arrow-right" d="M8.3,10L0,1.7L1.7,0l10,10l-10,10L0,18.3L8.3,10z"></path>
+                      </svg>
+                  </span>
+              </a>
+          </li>
+
+        {% endif %}
+
+      </ul>
+    </nav>
+  {% endif %}
+{% endblock %}

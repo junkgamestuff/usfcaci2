@@ -1,0 +1,107 @@
+{
+  "title": "A Curriculum That Makes you <span class=\"highlight\">(Re)Think</span>",
+  "description": "<p>Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt.</p>",
+  "slides": [
+    {
+      "image": {
+        "src": "https://placeimg.com/275/250/nature",
+        "alt": "Image Alt Text4"
+      },
+      "link": {
+        "url": "https://www.example.com/"
+      },
+      "title": "Artist as Citizen",
+      "subtitle": "ART 488",
+      "description": "Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt.",
+      "color": "orange"
+    },
+    {
+      "image": {
+        "src": "https://placeimg.com/275/250/people",
+        "alt": "Image Alt Text4"
+      },
+      "title": "Sustainable Design",
+      "subtitle": "ARCH 320",
+      "description": null,
+      "color": "red"
+    },
+    {
+      "image": {
+        "src": "https://placeimg.com/275/250/animals",
+        "alt": "Image Alt Text4"
+      },
+      "link": {
+        "url": "https://www.example.com/"
+      },
+      "title": "Environmental Policy",
+      "subtitle": "ENVS 366",
+      "description": "Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt.",
+      "color": "turquoise"
+    },
+    {
+      "image": {
+        "src": "https://placeimg.com/275/250/arch",
+        "alt": "Image Alt Text4"
+      },
+      "link": {
+        "url": "https://www.example.com/"
+      },
+      "title": "Environmental Policy",
+      "subtitle": "ENVS 366",
+      "description": "Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt.",
+      "color": "yellow"
+    },
+    {
+      "image": {
+        "src": "https://placeimg.com/275/250/tech",
+        "alt": "Image Alt Text4"
+      },
+      "link": {
+        "url": "https://www.example.com/"
+      },
+      "title": "Artist as Citizen",
+      "subtitle": "ART 488",
+      "description": "Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt.",
+      "color": "orange"
+    },
+    {
+      "image": {
+        "src": "https://placeimg.com/275/250/sepia",
+        "alt": "Image Alt Text4"
+      },
+      "link": {
+        "url": "https://www.example.com/"
+      },
+      "title": "Sustainable Design",
+      "subtitle": "ARCH 320",
+      "description": "Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt.",
+      "color": "red"
+    },
+    {
+      "image": {
+        "src": "https://placeimg.com/275/250/animals",
+        "alt": "Image Alt Text4"
+      },
+      "link": {
+        "url": "https://www.example.com/"
+      },
+      "title": "Environmental Policy",
+      "subtitle": "ENVS 366",
+      "description": "Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt.",
+      "color": "turquoise"
+    },
+    {
+      "image": {
+        "src": "https://placeimg.com/275/250/arch",
+        "alt": "Image Alt Text4"
+      },
+      "link": {
+        "url": "https://www.example.com/"
+      },
+      "title": "Environmental Policy",
+      "subtitle": "ENVS 366",
+      "description": "Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt.",
+      "color": "yellow"
+    }
+  ]
+}

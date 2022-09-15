@@ -1,0 +1,18 @@
+{
+  "eyebrow": "UNIVERSITY NEWS",
+  "title": "Latest News Headline Lorem Ipsum Dolor Sit Amet",
+  "description": "<p>Sed porttitor lectus nibh mauris blandit aliquet eli eget tincidunt nibh pulvinar ivamus magna justo lacinia eget consectetur sed</p>",
+  "date": "Sep 06, 2020",
+  "link": {
+    "href": "#"
+  },
+  "ext_link": {
+    "title": "Publication Name",
+    "href": "#",
+    "target": "_blank"
+  },
+  "image": {
+    "src": "https://placeimg.com/300/170/people",
+    "alt": "Alt 1"
+  }
+}

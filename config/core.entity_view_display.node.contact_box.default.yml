@@ -1,0 +1,74 @@
+uuid: 3f82fdbc-0f8e-4842-8a97-dfc2e304c24c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.contact_box.field_campus_addresses
+    - field.field.node.contact_box.field_contact_name
+    - field.field.node.contact_box.field_email
+    - field.field.node.contact_box.field_hours
+    - field.field.node.contact_box.field_phone
+    - field.field.node.contact_box.field_professional_title
+    - node.type.contact_box
+  module:
+    - entity_reference_revisions
+    - telephone
+    - text
+    - user
+id: node.contact_box.default
+targetEntityType: node
+bundle: contact_box
+mode: default
+content:
+  field_campus_addresses:
+    type: entity_reference_revisions_entity_view
+    label: inline
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_contact_name:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_email:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_hours:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_phone:
+    type: telephone_link
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_professional_title:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  content_moderation_control: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

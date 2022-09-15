@@ -1,0 +1,16 @@
+{% extends "base-field" %}
+
+{% set name="button" %}
+
+{% block content %}
+
+  <div class="f--button-wrapper">
+    <button
+      class="button"
+      {% if ariaLabel is not empty %}aria-label="{{ ariaLabel }}"{% endif %}
+    >
+      {{ buttonText }}
+    </button>
+  </div>
+
+{% endblock %}

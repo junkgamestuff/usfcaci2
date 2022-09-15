@@ -1,0 +1,19 @@
+uuid: 19f5bf15-06d9-4654-85d0-f32d1ab957db
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_awards_distinctions
+field_name: field_awards_distinctions
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

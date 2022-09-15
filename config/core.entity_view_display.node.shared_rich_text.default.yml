@@ -1,0 +1,26 @@
+uuid: 9dc3bc6a-f33d-4908-a617-c2effcf837e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.shared_rich_text.body
+    - node.type.shared_rich_text
+  module:
+    - text
+    - user
+id: node.shared_rich_text.default
+targetEntityType: node
+bundle: shared_rich_text
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  links: true
+  search_api_excerpt: true

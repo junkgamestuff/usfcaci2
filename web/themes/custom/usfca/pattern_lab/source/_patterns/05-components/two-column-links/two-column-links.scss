@@ -1,0 +1,158 @@
+.cc--two-column-links {
+  @include margin(null null rem(50));
+  background: $color-sherpa-blue;
+
+  @include mq($bp1024) {
+    @include margin(null null rem(75));
+  }
+
+  .inner-container {
+    @include padding(rem(50) rem(20));
+
+    @include mq($bp768) {
+      @include padding(rem(70) cols(4));
+    }
+  }
+
+  .tc--chaptered-page & {
+    background: $color-white;
+
+    .inner-container {
+      padding: 0;
+    }
+
+    .f--section-title {
+      h2 {
+        color: $color-sherpa-blue;
+        text-align: left;
+      }
+    }
+
+    .f--description {
+      color: $color-black;
+      text-align: left;
+    }
+
+    .columns-container {
+      .f--link {
+        a {
+          color: $color-sherpa-blue;
+
+          @include hover {
+            color: $color-sherpa-blue;
+          }
+        }
+      }
+    }
+  }
+
+  .c--two-column-links {
+    @include maxwidth;
+  }
+
+  .f--section-title {
+    h2 {
+      @extend %h2;
+      @include font-size(36, 36);
+      @include margin(null null rem(9));
+      color: $color-white;
+      letter-spacing: rem(-.5);
+      text-align: center;
+
+      @include mq($bp768) {
+        @include margin(null null rem(32));
+        @include font-size(48, 36);
+      }
+    }
+  }
+
+  .f--description {
+    @extend %font-ibm-plex-serif-regular;
+    @include margin(null null rem(27));
+    @include font-size(14, 18);
+    color: $color-white;
+    text-align: center;
+
+    @include mq($bp768) {
+      @include margin(null null rem(25));
+      @include font-size(16, 24);
+    }
+
+    @include mq($bp1024) {
+      @include margin(null null rem(20));
+    }
+
+    p {
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  .columns-container {
+    display: flex;
+    flex-direction: column;
+
+    @include mq($bp768max) {
+      border-top: rem(1) solid rgba($color-supernova, 1);
+    }
+
+
+    @include mq($bp768) {
+      flex-direction: row;
+    }
+
+    .column {
+      width: 100%;
+
+      @include mq($bp768) {
+        width: cols(21, 44);
+
+        &:nth-child(odd) {
+          @include margin(null cols(1, 44) null null);
+        }
+
+        &:nth-child(even) {
+          @include margin(null null null cols(1, 44));
+        }
+      }
+
+      @include mq($bp1024) {
+        width: cols(18, 40);
+
+        &:nth-child(odd) {
+          @include margin(null cols(2, 40) null null);
+        }
+
+        &:nth-child(even) {
+          @include margin(null null null cols(2, 40));
+        }
+      }
+    }
+
+    .f--link {
+      border-bottom: rem(1) solid rgba($color-supernova, 1);
+
+      a {
+        @extend %font-fira-sans-bold;
+        @include font-size(18, 20);
+        @include padding(rem(20) null);
+        display: block;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        @include mq($bp768) {
+          @include font-size(20, 28);
+          @include padding(rem(22) null);
+        }
+
+        @include hover {
+          color: $color-white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

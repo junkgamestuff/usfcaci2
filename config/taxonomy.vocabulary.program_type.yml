@@ -1,0 +1,8 @@
+uuid: 2fd4abfc-7f43-4896-95a5-8b6ae74081a7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Program Type'
+vid: program_type
+description: 'Undergraduate, Graduate, Dual-degree, etc.'
+weight: 0

@@ -1,0 +1,19 @@
+uuid: c7006133-4822-49c2-a016-abe668125799
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_events_uid
+    - node.type.event_detail
+id: node.event_detail.field_events_uid
+field_name: field_events_uid
+entity_type: node
+bundle: event_detail
+label: 'Event System Unique ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

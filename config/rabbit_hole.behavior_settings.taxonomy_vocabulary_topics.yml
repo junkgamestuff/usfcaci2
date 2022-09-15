@@ -1,0 +1,14 @@
+uuid: 98267918-f4b3-4fe2-b9a9-c6e7610e77b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.topics
+id: taxonomy_vocabulary_topics
+entity_type_id: taxonomy_vocabulary
+entity_id: topics
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

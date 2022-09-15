@@ -1,0 +1,10 @@
+uuid: 42459aed-6cc8-46ea-8040-2c315778320a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.16_9_one_third
+label: '16:9 One-third'
+targetEntityType: media
+cache: true

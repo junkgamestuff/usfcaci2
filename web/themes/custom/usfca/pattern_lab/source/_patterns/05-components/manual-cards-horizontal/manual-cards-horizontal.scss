@@ -1,0 +1,39 @@
+.cc--manual-cards-horizontal {
+  .c--manual-cards-horizontal {
+    @include maxwidth;
+    width: 100%;
+  }
+
+  .f--section-title {
+    h2 {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include margin(null null rem(10));
+      text-align: left;
+      text-transform: none;
+
+      @include mq($bp768) {
+        @include margin(null null rem(40));
+      }
+    }
+  }
+
+  .tc--chaptered-page & {
+    .c--manual-cards-horizontal {
+      width: 100%;
+
+      .inner-wrapper {
+        @include padding(rem(20) 0 null);
+        position: relative;
+        z-index: 1;
+
+        @include mq($bp768) {
+          @include padding(rem(50) 0 null);
+        }
+
+        @include mq($bp1024) {
+          @include padding(0 null);
+        }
+      }
+    }
+  }
+}

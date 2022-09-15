@@ -1,0 +1,31 @@
+uuid: 38329f52-dc1a-4cab-8f84-5d13c4de4166
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - usfca_school_context
+  theme:
+    - usfca
+id: footer_sitebranding_schoolofmanagement
+theme: usfca
+region: footer_branding
+weight: -14
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Footer Site branding - School of Management'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: false
+  use_site_slogan: false
+visibility:
+  usfca_schoool_context_condition:
+    id: usfca_schoool_context_condition
+    schools:
+      'School of Management': 'School of Management'
+    negate: false
+    context_mapping:
+      school: '@usfca_school_context.school_context:school'

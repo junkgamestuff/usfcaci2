@@ -1,0 +1,14 @@
+uuid: f2bdfc23-d3e5-4310-9df5-9c5a17f664c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.contact
+id: taxonomy_vocabulary_contact
+entity_type_id: taxonomy_vocabulary
+entity_id: contact
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

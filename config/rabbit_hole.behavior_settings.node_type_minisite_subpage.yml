@@ -1,0 +1,14 @@
+uuid: 245d2936-b537-4c4e-b9a3-eee17e46f18e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.minisite_subpage
+id: node_type_minisite_subpage
+entity_type_id: node_type
+entity_id: minisite_subpage
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

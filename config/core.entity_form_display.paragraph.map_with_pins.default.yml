@@ -1,0 +1,78 @@
+uuid: d1041469-fb94-4a9c-b9e9-28fa7a7cb8a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map_with_pins.field_eyebrow
+    - field.field.paragraph.map_with_pins.field_eyebrow_highlight
+    - field.field.paragraph.map_with_pins.field_locations
+    - field.field.paragraph.map_with_pins.field_map_center
+    - field.field.paragraph.map_with_pins.field_map_zoom_level
+    - field.field.paragraph.map_with_pins.field_title
+    - field.field.paragraph.map_with_pins.field_title_highlight
+    - paragraphs.paragraphs_type.map_with_pins
+  module:
+    - geolocation
+id: paragraph.map_with_pins.default
+targetEntityType: paragraph
+bundle: map_with_pins
+mode: default
+content:
+  field_eyebrow:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_eyebrow_highlight:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_locations:
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_map_center:
+    type: geolocation_latlng
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_map_zoom_level:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title_highlight:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

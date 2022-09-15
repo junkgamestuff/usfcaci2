@@ -1,0 +1,22 @@
+uuid: 43a0312b-c36f-461b-9d51-be2b1000c209
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - usfca
+_core:
+  default_config_hash: aeqlWs7HwctZeZC7ADcbxfqehJzBRfZKmuZz3DsH3_4
+id: usfca_messages
+theme: usfca
+region: content
+weight: -15
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

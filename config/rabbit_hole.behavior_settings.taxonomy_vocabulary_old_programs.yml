@@ -1,0 +1,14 @@
+uuid: b8aee6d8-273a-403c-82f0-2c6a59dcd683
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.old_programs
+id: taxonomy_vocabulary_old_programs
+entity_type_id: taxonomy_vocabulary
+entity_id: old_programs
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

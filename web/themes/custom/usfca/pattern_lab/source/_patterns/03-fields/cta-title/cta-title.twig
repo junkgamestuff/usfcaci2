@@ -1,0 +1,25 @@
+{% extends "base-field" %}
+
+{% set name = "cta-title" %}
+
+{% set href = href | default(null) %}
+
+{% set url = url | default(href) %}
+
+{% if link is not empty %}
+
+  {% set url = url | default(link.url) %}
+
+{% endif %}
+
+{% block content %}
+
+  <h3>
+    {% if url is not empty %}
+      <a href="{{ url }}">{{ title|raw }}</a>
+    {% else %}
+      {{ title|raw }}
+    {% endif %}
+  </h3>
+
+{% endblock %}

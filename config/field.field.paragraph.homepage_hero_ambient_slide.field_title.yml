@@ -1,0 +1,19 @@
+uuid: e27d4d09-38db-488b-a50c-b103f7c2d2be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.homepage_hero_ambient_slide
+id: paragraph.homepage_hero_ambient_slide.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: homepage_hero_ambient_slide
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

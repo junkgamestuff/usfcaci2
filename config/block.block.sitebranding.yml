@@ -1,0 +1,31 @@
+uuid: 186645f6-5c32-4eaa-94cc-b69d0821f42b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - usfca_school_context
+  theme:
+    - usfca
+id: sitebranding
+theme: usfca
+region: header
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: false
+  use_site_slogan: false
+visibility:
+  usfca_schoool_context_condition:
+    id: usfca_schoool_context_condition
+    schools:
+      no_school_context: no_school_context
+    negate: false
+    context_mapping:
+      school: '@usfca_school_context.school_context:school'

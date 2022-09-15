@@ -1,0 +1,76 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% set displayed_ids = [] %}
+
+{% set cur_role = '' %}
+{% set last_role = '' %}
+
+{% set opened = False %}
+{% set closed = False %}
+
+{% if rows | length > 0 %}
+
+  {% for row in rows %}
+    {% set cur_nid = row.content['#node'].id() %}
+
+    {% if cur_nid not in displayed_ids %}
+      {% for role_item in row.content['#node'].field_school_program_roles if role_item.entity.field_program.entity.id() in program_ids %}
+        {% if role_ids %}
+          {% if role_item.entity.field_role.entity.id() in role_ids %}
+            {% set cur_role = role_item.entity.field_role.entity.label() %}
+          {% endif %}
+        {% else %}
+          {% set cur_role = role_item.entity.field_role.entity.label() %}
+        {% endif %}
+      {% endfor %}
+
+      {% if cur_role != last_role %}
+        {% if last_role != '' %}
+          {% if opened == True and closed == False %}
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endif %}
+        <div class="cc--component-container cc--program-faculty-listing">
+          <div class="c--component c--program-faculty-listing">
+            <div class="f--field f--cta-title">
+              <h3>{{ cur_role }}</h3>
+            </div>
+            <div class="f--field f--field-components">
+        {% set opened = True %}
+        {% set closed = False %}
+      {% endif %}
+
+      {{- row.content -}}
+
+      {% set last_role = cur_role %}
+    {% endif %}
+
+    {% set displayed_ids = displayed_ids | merge([cur_nid]) %}
+
+  {% endfor %}
+
+  {% if opened == True and closed == False %}
+        </div>
+      </div>
+    </div>
+    {% set closed = True %}
+  {% endif %}
+
+{% endif %}

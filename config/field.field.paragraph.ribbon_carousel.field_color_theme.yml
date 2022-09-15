@@ -1,0 +1,23 @@
+uuid: 879f5cf7-1691-465c-90bd-741bed791c4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color_theme
+    - paragraphs.paragraphs_type.ribbon_carousel
+  module:
+    - options
+id: paragraph.ribbon_carousel.field_color_theme
+field_name: field_color_theme
+entity_type: paragraph
+bundle: ribbon_carousel
+label: 'Color Theme'
+description: 'Choose from <em>Alpha</em> or <em>Bravo</em> to apply a different color scheme to the items in the carousel.'
+required: true
+translatable: false
+default_value:
+  -
+    value: alpha
+default_value_callback: ''
+settings: {  }
+field_type: list_string

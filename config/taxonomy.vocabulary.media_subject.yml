@@ -1,0 +1,8 @@
+uuid: 8ac8ff02-63fc-464b-8549-7a80700e99fc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Media Subject'
+vid: media_subject
+description: ''
+weight: 0

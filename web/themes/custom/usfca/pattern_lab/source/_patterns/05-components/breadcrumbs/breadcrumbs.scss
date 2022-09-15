@@ -1,0 +1,99 @@
+.cc--breadcrumbs {
+  @include maxwidth;
+
+  .c--breadcrumbs {
+    @include padding(rem(20) cols(3));
+
+    @include mq($bp768) {
+      @include padding(rem(30) cols(2));
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(30) null rem(30));
+    }
+
+    ol {
+      display: flex;
+    }
+
+    li {
+      position: relative;
+
+      @include mq($bp1024max) {
+        display: none;
+      }
+
+      a,
+      .breadcrumb-nolink {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include font-size(12, 12);
+        display: block;
+        color: $color-dove-gray;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        .ellipsis {
+          @extend %font-fira-sans-extra-condensed-semibold;
+          @include margin(null null null rem(7));
+          @include font-size(12, 12);
+          display: inline-block;
+          color: $color-dove-gray;
+
+          @include mq($bp1024) {
+            display: none;
+          }
+        }
+      }
+
+      &:nth-child(1) {
+        flex-shrink: 0;
+      }
+
+      &:nth-child(1),
+      &:nth-last-of-type(-n+2) {
+        @include mq($bp1024max) {
+          display: block;
+        }
+      }
+
+      &:not(:last-child) {
+        @include margin(null rem(8) null null);
+        @include padding(null rem(10) null null);
+
+        @include mq($bp768) {
+          @include margin(null rem(14) null null);
+          @include padding(null rem(18) null null);
+        }
+
+        &::after {
+          display: block;
+          position: absolute;
+          top: rem(3);
+          right: 0;
+          width: rem(4);
+          height: rem(7);
+          background-image: url('../images/icons-usf/USF_arrow.svg');
+          content: '';
+        }
+      }
+
+      svg {
+        vertical-align: text-top;
+      }
+    }
+  }
+
+  .tc--listing-page & {
+    .c--breadcrumbs {
+      @include padding(rem(20) cols(3));
+
+      @include mq($bp768) {
+        @include padding(rem(30) cols(17) rem(30) cols(2));
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(30) null rem(30));
+      }
+    }
+  }
+}

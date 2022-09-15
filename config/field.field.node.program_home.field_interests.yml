@@ -1,0 +1,29 @@
+uuid: 23895ccb-a799-4840-8f5b-565e0eb2d343
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_interests
+    - node.type.program_home
+    - taxonomy.vocabulary.interests
+id: node.program_home.field_interests
+field_name: field_interests
+entity_type: node
+bundle: program_home
+label: Interests
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      interests: interests
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,47 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+
+  {{ attach_library('usfca/vertical_tabbed_carousel') }}
+
+  {% set title = fields.title %}
+  {% if fields.title_highlight %}
+    {% set title = title|replace({(fields.title_highlight): '<span class="highlight">' ~ fields.title_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% set slides = [] %}
+  {% for item in fields.slides %}
+
+    {% set tabTitle = item.fields.title %}
+    {% if item.fields.title_highlight %}
+      {% set tabTitle = tabTitle|replace({(item.fields.title_highlight): '<span class="highlight">' ~ item.fields.title_highlight ~ '</span>'}) %}
+    {% endif %}
+
+    {% set description = item.fields.description %}
+    {#{% set description = '<span class=\"card-topic\">' ~ item.fields.title ~ ' - </span>' ~ item.fields.description %}#}
+
+    {% set slides = slides | merge([
+      {
+        tabTitle: tabTitle,
+        description: description,
+        image: item.fields.image is not empty ? {
+          render: drupal_image(item.fields.image.uri, '1_1_mosaic_large', { alt: item.fields.image.alt }, responsive=true),
+          src: item.fields.image.uri | image_style('1_1_1536x1536'),
+          alt: item.fields.image.alt,
+        } : [],
+        link: item.fields.link.url ? {
+          url: item.fields.link.url,
+          title: item.fields.link.title,
+          ariaLabel: item.fields.link.attributes.aria_label ?? item.fields.link.title,
+        }
+      }
+    ]) %}
+  {% endfor %}
+
+  {% include "@pattern_lab/components-vertical-tabbed-carousel" with {
+    title: title,
+    titleHighlight: fields.title_highlight,
+    slides: slides,
+  } only %}
+
+{% endblock content %}

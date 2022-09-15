@@ -1,0 +1,19 @@
+uuid: 98edb5e4-cb84-4dba-aac1-6800b0d80b1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_attribution_title
+    - paragraphs.paragraphs_type.featured_quote
+id: paragraph.featured_quote.field_attribution_title
+field_name: field_attribution_title
+entity_type: paragraph
+bundle: featured_quote
+label: 'Attribution Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

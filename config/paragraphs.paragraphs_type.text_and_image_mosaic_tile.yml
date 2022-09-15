@@ -1,0 +1,10 @@
+uuid: b4da4ec5-6249-4b2c-9527-b3f724629f3e
+langcode: en
+status: true
+dependencies: {  }
+id: text_and_image_mosaic_tile
+label: 'Text and Image Mosaic Tile'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

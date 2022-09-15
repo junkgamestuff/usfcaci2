@@ -1,0 +1,13 @@
+{% extends "base-form-item" %}
+
+{% block content %}
+
+    <input
+        type="button"
+        name="{{ name|default("button") }}"
+        {% if disabled %}disabled="disabled"{% endif %}
+        {% if required %}required="required"{% endif %}
+        value="{{ value|default('Read More') }}"
+        class="button">
+
+{% endblock %}

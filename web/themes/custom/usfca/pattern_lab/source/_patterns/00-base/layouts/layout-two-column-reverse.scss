@@ -1,0 +1,39 @@
+.lc--two-column-reverse {
+  .l--two-column-reverse {
+    @include maxwidth;
+
+    .l--two-column-reverse-inner {
+      @include mq($bp768) {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .lr--main {
+        @include padding(null rem(20));
+
+        @include mq($bp768) {
+          @include padding(null cols(2));
+          width: cols(28);
+        }
+
+        @include mq($bp1024) {
+          width: cols(32);
+        }
+      }
+
+      .lr--sidebar {
+        @include padding(rem(50) rem(20));
+
+        @include mq($bp768) {
+          @include padding(0 cols(2) 0 0);
+          width: cols(20);
+        }
+
+        @include mq($bp1024) {
+          @include padding(null cols(1) null null);
+          width: cols(16);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+uuid: 49594462-cda6-49a4-930d-46a5c719b676
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_color_theme
+field_name: field_color_theme
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: alpha
+      label: Alpha
+    -
+      value: bravo
+      label: Bravo
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

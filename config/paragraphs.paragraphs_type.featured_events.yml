@@ -1,0 +1,10 @@
+uuid: 93e4e21c-1f69-4aba-9695-675b63830ee7
+langcode: en
+status: true
+dependencies: {  }
+id: featured_events
+label: 'Featured Events - Automatic'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

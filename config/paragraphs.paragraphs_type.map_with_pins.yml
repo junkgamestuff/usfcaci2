@@ -1,0 +1,10 @@
+uuid: e6536434-1a16-4c5a-9742-ecb4f05e64fb
+langcode: en
+status: true
+dependencies: {  }
+id: map_with_pins
+label: 'Map with Pins'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

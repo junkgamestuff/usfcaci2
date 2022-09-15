@@ -1,0 +1,214 @@
+uuid: 9aa471d0-c765-4227-96bc-e1c1fd344198
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.restricted_html
+    - media.type.image
+    - media.type.remote_video
+    - node.type.article
+    - node.type.basic_page
+    - node.type.chapter_page
+    - node.type.contact_box
+    - node.type.directory
+    - node.type.event_detail
+    - node.type.events
+    - node.type.form_page
+    - node.type.home
+    - node.type.landing
+    - node.type.landing_subpage
+    - node.type.location
+    - node.type.media_mention
+    - node.type.minisite_home
+    - node.type.minisite_subpage
+    - node.type.news
+    - node.type.notification
+    - node.type.profile
+    - node.type.program
+    - node.type.program_home
+    - node.type.program_subpage
+    - node.type.search_results
+    - node.type.stat
+    - taxonomy.vocabulary.article_type
+    - taxonomy.vocabulary.career_goals
+    - taxonomy.vocabulary.category
+    - taxonomy.vocabulary.contact
+    - taxonomy.vocabulary.degree
+    - taxonomy.vocabulary.department
+    - taxonomy.vocabulary.event_category
+    - taxonomy.vocabulary.interests
+    - taxonomy.vocabulary.location
+    - taxonomy.vocabulary.media_department
+    - taxonomy.vocabulary.media_size
+    - taxonomy.vocabulary.media_subject
+    - taxonomy.vocabulary.program
+    - taxonomy.vocabulary.role
+    - taxonomy.vocabulary.school
+    - taxonomy.vocabulary.school_role
+    - taxonomy.vocabulary.section
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.topics
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - contextual
+    - file
+    - filter
+    - media
+    - node
+    - paragraphs
+    - path
+    - pathauto
+    - system
+    - taxonomy
+    - toolbar
+    - workbench_access
+id: editor
+label: Editor
+weight: -8
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'create article content'
+  - 'create basic_page content'
+  - 'create chapter_page content'
+  - 'create contact_box content'
+  - 'create directory content'
+  - 'create event_detail content'
+  - 'create events content'
+  - 'create form_page content'
+  - 'create home content'
+  - 'create image media'
+  - 'create landing content'
+  - 'create landing_subpage content'
+  - 'create location content'
+  - 'create media'
+  - 'create media_mention content'
+  - 'create minisite_home content'
+  - 'create minisite_subpage content'
+  - 'create news content'
+  - 'create notification content'
+  - 'create profile content'
+  - 'create program content'
+  - 'create program_home content'
+  - 'create program_subpage content'
+  - 'create remote_video media'
+  - 'create search_results content'
+  - 'create stat content'
+  - 'create terms in article_type'
+  - 'create terms in career_goals'
+  - 'create terms in category'
+  - 'create terms in contact'
+  - 'create terms in degree'
+  - 'create terms in department'
+  - 'create terms in event_category'
+  - 'create terms in interests'
+  - 'create terms in location'
+  - 'create terms in media_department'
+  - 'create terms in media_size'
+  - 'create terms in media_subject'
+  - 'create terms in program'
+  - 'create terms in role'
+  - 'create terms in school'
+  - 'create terms in school_role'
+  - 'create terms in section'
+  - 'create terms in tags'
+  - 'create terms in topics'
+  - 'create url aliases'
+  - 'edit any article content'
+  - 'edit any basic_page content'
+  - 'edit any chapter_page content'
+  - 'edit any contact_box content'
+  - 'edit any directory content'
+  - 'edit any event_detail content'
+  - 'edit any events content'
+  - 'edit any form_page content'
+  - 'edit any home content'
+  - 'edit any image media'
+  - 'edit any landing content'
+  - 'edit any landing_subpage content'
+  - 'edit any location content'
+  - 'edit any media_mention content'
+  - 'edit any minisite_home content'
+  - 'edit any minisite_subpage content'
+  - 'edit any news content'
+  - 'edit any notification content'
+  - 'edit any profile content'
+  - 'edit any program content'
+  - 'edit any program_home content'
+  - 'edit any program_subpage content'
+  - 'edit any remote_video media'
+  - 'edit any search_results content'
+  - 'edit any stat content'
+  - 'edit own article content'
+  - 'edit own basic_page content'
+  - 'edit own chapter_page content'
+  - 'edit own contact_box content'
+  - 'edit own directory content'
+  - 'edit own event_detail content'
+  - 'edit own events content'
+  - 'edit own form_page content'
+  - 'edit own home content'
+  - 'edit own image media'
+  - 'edit own landing content'
+  - 'edit own landing_subpage content'
+  - 'edit own location content'
+  - 'edit own media_mention content'
+  - 'edit own minisite_home content'
+  - 'edit own minisite_subpage content'
+  - 'edit own news content'
+  - 'edit own notification content'
+  - 'edit own profile content'
+  - 'edit own program content'
+  - 'edit own program_home content'
+  - 'edit own program_subpage content'
+  - 'edit own remote_video media'
+  - 'edit own search_results content'
+  - 'edit own stat content'
+  - 'link to any page'
+  - 'notify of path changes'
+  - 'update any media'
+  - 'update media'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition submit_for_review'
+  - 'use text format basic_html'
+  - 'use text format restricted_html'
+  - 'use workbench access'
+  - 'view any unpublished content'
+  - 'view article revisions'
+  - 'view basic_page revisions'
+  - 'view chapter_page revisions'
+  - 'view contact_box revisions'
+  - 'view directory revisions'
+  - 'view event_detail revisions'
+  - 'view events revisions'
+  - 'view form_page revisions'
+  - 'view home revisions'
+  - 'view landing revisions'
+  - 'view landing_subpage revisions'
+  - 'view latest version'
+  - 'view location revisions'
+  - 'view media_mention revisions'
+  - 'view minisite_home revisions'
+  - 'view minisite_subpage revisions'
+  - 'view news revisions'
+  - 'view notification revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view profile revisions'
+  - 'view program revisions'
+  - 'view program_home revisions'
+  - 'view program_subpage revisions'
+  - 'view search_results revisions'
+  - 'view stat revisions'
+  - 'view the administration theme'
+  - 'view unpublished paragraphs'
+  - 'view workbench access information'

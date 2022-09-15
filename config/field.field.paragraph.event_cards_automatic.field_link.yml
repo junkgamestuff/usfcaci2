@@ -1,0 +1,23 @@
+uuid: 514ec4b6-4987-41a6-9a87-8e81769da6e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.event_cards_automatic
+  module:
+    - link
+id: paragraph.event_cards_automatic.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: event_cards_automatic
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

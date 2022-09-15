@@ -1,0 +1,56 @@
+name: "date-cards"
+type: "component"
+markup:
+  content:
+    - type: "container"
+      class: "text-container"
+      content:
+        - type: field
+          name: "section-title"
+          with: title
+        - type: field
+          name: link
+          with: link
+          condition: link.url
+    - type: repeater
+      for: card
+      in: cards
+      with: card
+      name: date-cards
+      repeat:
+        type: "component"
+        name: "date-card"
+        own: true
+        markup:
+          content:
+            - type: field
+              name: card-date
+              markup: "<span class=\"month\">{{ month }}</span><span class=\"day\">{{ day }}</span>"
+              with:
+                month: month
+                day: day
+            - type: field
+              name: cta-title
+              with: title
+        with:
+          title: title
+          month: month
+          day: day
+data:
+  title: "Important Deadlines"
+  link:
+    url: "/"
+    title: "See Dates & Deadlines"
+  cards:
+    - title: "Early Action Application Deadline"
+      month: "November"
+      day: "25"
+    - title: "Regular Decision Application Deadline"
+      month: "January"
+      day: "15"
+    - title: "FAFSA (Financial Aid) Application Deadline"
+      month: "February"
+      day: "15"
+    - title: "Candidate Reply Deadline"
+      month: "May"
+      day: "1"

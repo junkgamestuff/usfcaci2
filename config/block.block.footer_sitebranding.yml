@@ -1,0 +1,31 @@
+uuid: 16150035-2e88-41ee-a094-d696e9fea948
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - usfca_school_context
+  theme:
+    - usfca
+id: footer_sitebranding
+theme: usfca
+region: footer_branding
+weight: -18
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Footer Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: false
+  use_site_slogan: false
+visibility:
+  usfca_schoool_context_condition:
+    id: usfca_schoool_context_condition
+    schools:
+      no_school_context: no_school_context
+    negate: false
+    context_mapping:
+      school: '@usfca_school_context.school_context:school'

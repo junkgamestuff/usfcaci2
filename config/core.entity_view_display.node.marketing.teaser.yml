@@ -1,0 +1,43 @@
+uuid: c6f485ad-7737-466f-a5df-7b294cd9f8e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.marketing.field_components
+    - field.field.node.marketing.field_components_footer
+    - field.field.node.marketing.field_components_sidebar
+    - field.field.node.marketing.field_eyebrow
+    - field.field.node.marketing.field_image
+    - field.field.node.marketing.field_metatag
+    - field.field.node.marketing.field_school
+    - field.field.node.marketing.field_section
+    - node.type.marketing
+  module:
+    - user
+id: node.marketing.teaser
+targetEntityType: node
+bundle: marketing
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_components: true
+  field_components_footer: true
+  field_components_sidebar: true
+  field_eyebrow: true
+  field_image: true
+  field_metatag: true
+  field_school: true
+  field_section: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: 3ef64388-ba8d-4cbd-b659-0fc8517f9b0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured
+    - node.type.blog_teaser
+id: node.blog_teaser.field_featured
+field_name: field_featured
+entity_type: node
+bundle: blog_teaser
+label: Featured
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

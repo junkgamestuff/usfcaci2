@@ -1,0 +1,61 @@
+uuid: f95e927a-f93b-4b1b-a86d-e5f2ef8a47d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_articles_automatic.field_link
+    - field.field.paragraph.featured_articles_automatic.field_title
+    - field.field.paragraph.featured_articles_automatic.field_title_highlight
+    - field.field.paragraph.featured_articles_automatic.field_views_reference
+    - paragraphs.paragraphs_type.featured_articles_automatic
+  module:
+    - link
+    - viewsreference
+id: paragraph.featured_articles_automatic.default
+targetEntityType: paragraph
+bundle: featured_articles_automatic
+mode: default
+content:
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title_highlight:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_views_reference:
+    type: viewsreference_formatter
+    label: hidden
+    settings:
+      plugin_types:
+        block: block
+        default: 0
+        page: 0
+        feed: 0
+        embed: 0
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

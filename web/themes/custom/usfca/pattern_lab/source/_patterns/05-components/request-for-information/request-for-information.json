@@ -1,0 +1,8 @@
+{
+  "title": "Request For Information",
+  "button": {
+    "text": "Connect With Up",
+    "ariaLabel": "An Example Aria Label for CTA Link"
+  },
+  "formEmbed": "<script type='text/javascript' src='https://riceuniversity.formstack.com/forms/js.php/coachrice_copy_1_copy_1'></script><noscript><a href='https://riceuniversity.formstack.com/forms/coachrice_copy_1_copy_1' title='Online Form'>Online Form - CoachRice RFI Form - New Website</a></noscript><div style='text-align:right; font-size:x-small;'><a href='http://www.formstack.com?utm_source=jsembed&utm_medium=product&utm_campaign=product+branding&fa=h,3939423'></a></div>"
+}

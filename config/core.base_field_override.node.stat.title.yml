@@ -1,0 +1,18 @@
+uuid: 31926047-4790-467b-9321-8bf21725ab46
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.stat
+id: node.stat.title
+field_name: title
+entity_type: node
+bundle: stat
+label: 'Administrative Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

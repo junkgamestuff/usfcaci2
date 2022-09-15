@@ -1,0 +1,29 @@
+uuid: 840be354-2cf4-45b2-8b36-1a2ce7e1d120
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_school
+    - node.type.minisite_home
+    - taxonomy.vocabulary.school
+id: node.minisite_home.field_school
+field_name: field_school
+entity_type: node
+bundle: minisite_home
+label: School
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      school: school
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

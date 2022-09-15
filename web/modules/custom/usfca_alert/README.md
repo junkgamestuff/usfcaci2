@@ -1,0 +1,1 @@
+The USFCA Alert module provides a themable alert banner for the website, including default configuration for an "Alert" node type, and the supporting fields and front-end code to make the banner work.

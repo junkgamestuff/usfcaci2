@@ -1,59 +1,66 @@
-uuid: c3473785-cee5-4099-867e-4e93e9ddb111
+uuid: b0fb0095-cbb4-4e7c-b137-a2b4f0897ee4
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.full_html
   module:
-    - ckeditor5
-_core:
-  default_config_hash: S_YU8XFc_o1J5LGHYcxthJwsTPjHv3xf9322bDSKfeQ
+    - ckeditor
 format: full_html
-editor: ckeditor5
+editor: ckeditor
 settings:
   toolbar:
-    items:
-      - bold
-      - italic
-      - strikethrough
-      - superscript
-      - subscript
-      - removeFormat
-      - '|'
-      - link
-      - '|'
-      - bulletedList
-      - numberedList
-      - '|'
-      - blockQuote
-      - uploadImage
-      - insertTable
-      - horizontalLine
-      - '|'
-      - heading
-      - codeBlock
-      - '|'
-      - sourceEditing
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Strike
+            - Superscript
+            - Subscript
+            - '-'
+            - RemoveFormat
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalMediaLibrary
+            - Table
+            - HorizontalRule
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
+            - Styles
+        -
+          name: Tools
+          items:
+            - ShowBlocks
+            - Source
+            - DrupalLink
+            - DrupalUnlink
   plugins:
-    ckeditor5_heading:
-      enabled_headings:
-        - heading2
-        - heading3
-        - heading4
-        - heading5
-        - heading6
-    ckeditor5_sourceEditing:
-      allowed_tags: {  }
-    ckeditor5_list:
-      reversed: true
-      startIndex: true
-    ckeditor5_imageResize:
-      allow_resize: true
+    drupallink:
+      linkit_enabled: true
+      linkit_profile: default
+    language:
+      language_list: un
+    stylescombo:
+      styles: "a.cta-link|CTA Button Link\r\np.cite|Cite\r\np.clear|Clear\r\np.intro-text|Intro Text\r\np.note|Note\r\nul.twoColumnList|2 Col List\r\nul.twoColumnListNoBullet|2 Col List No Bullet"
+    tokenbrowser:
+      token_types: {  }
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null

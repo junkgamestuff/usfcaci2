@@ -1,0 +1,23 @@
+uuid: 37c692ab-9601-4019-8792-59f46ffbd281
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.acalog_link.field_acalog_link_markup
+    - paragraphs.paragraphs_type.acalog_link
+  module:
+    - text
+id: paragraph.acalog_link.default
+targetEntityType: paragraph
+bundle: acalog_link
+mode: default
+content:
+  field_acalog_link_markup:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

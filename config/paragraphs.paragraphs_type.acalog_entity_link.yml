@@ -1,0 +1,10 @@
+uuid: f6b51b5b-f330-40d6-855b-d43cca983338
+langcode: en
+status: true
+dependencies: {  }
+id: acalog_entity_link
+label: 'Acalog Entity Link'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

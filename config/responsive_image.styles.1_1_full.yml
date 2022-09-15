@@ -1,0 +1,51 @@
+uuid: c1640de1-f127-4c54-be1f-ee5d81bdc855
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.1_1_1152x1152
+    - image.style.1_1_1200x1200
+    - image.style.1_1_1274x1274
+    - image.style.1_1_1350x1350
+    - image.style.1_1_1536x1536
+    - image.style.1_1_1800x1800
+    - image.style.1_1_2000x2000
+    - image.style.1_1_360x360
+    - image.style.1_1_450x450
+    - image.style.1_1_600x600
+    - image.style.1_1_637x637
+    - image.style.1_1_675x675
+    - image.style.1_1_720x720
+    - image.style.1_1_768x768
+    - image.style.1_1_900x900
+    - image.style.1_1_956x956
+_core:
+  default_config_hash: ie_HtEa60usmuuy13KtsfrXz_BN8QB2O8TZF9lYnZqs
+id: 1_1_full
+label: '1:1 Full'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: '(min-width:1200px) 50vw, (min-width:768px) 100vw, 100vw'
+      sizes_image_styles:
+        - 1_1_1152x1152
+        - 1_1_1200x1200
+        - 1_1_1274x1274
+        - 1_1_1350x1350
+        - 1_1_1536x1536
+        - 1_1_1800x1800
+        - 1_1_2000x2000
+        - 1_1_360x360
+        - 1_1_450x450
+        - 1_1_600x600
+        - 1_1_637x637
+        - 1_1_675x675
+        - 1_1_720x720
+        - 1_1_768x768
+        - 1_1_900x900
+        - 1_1_956x956
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+breakpoint_group: responsive_image
+fallback_image_style: 1_1_360x360

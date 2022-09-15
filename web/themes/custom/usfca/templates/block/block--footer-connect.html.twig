@@ -1,0 +1,11 @@
+{% extends "block.html.twig" %}
+{% set component_id = 'footer-menu' %}
+{% block label %}{% endblock %}
+{% block content %}
+  <nav class="mc--menu mc--footer-connect" aria-label="{{ label }} Menu">
+    {% if label %}
+      <h3{{ title_attributes }}>{{ label }}</h3>
+    {% endif %}
+    {{ content }}
+  </nav>
+{% endblock %}

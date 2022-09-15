@@ -1,0 +1,24 @@
+uuid: 1afce944-1d14-4dd9-888c-d71640cda023
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.narrow
+    - field.field.paragraph.contact_box.field_contact_boxes
+    - paragraphs.paragraphs_type.contact_box
+id: paragraph.contact_box.narrow
+targetEntityType: paragraph
+bundle: contact_box
+mode: narrow
+content:
+  field_contact_boxes:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,29 @@
+uuid: db291348-e0e7-4040-9222-4b026ab99231
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faculty_directory.field_views_reference
+    - paragraphs.paragraphs_type.faculty_directory
+  module:
+    - viewsreference
+id: paragraph.faculty_directory.default
+targetEntityType: paragraph
+bundle: faculty_directory
+mode: default
+content:
+  field_views_reference:
+    type: viewsreference_formatter
+    label: hidden
+    settings:
+      plugin_types:
+        default: default
+        page: 0
+        block: 0
+        feed: 0
+        embed: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

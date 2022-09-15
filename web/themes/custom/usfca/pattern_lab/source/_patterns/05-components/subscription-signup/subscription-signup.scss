@@ -1,0 +1,127 @@
+$background-image: url('http://placehold.it/2000x500/');
+
+.cc--subscription-signup {
+  background: $background-image no-repeat center;
+  background-size: cover;
+
+  .c--subscription-signup {
+    @include maxwidth;
+
+    .inner-wrapper {
+      @include padding(rem(40) cols(3));
+
+      @include mq($bp768) {
+        @include padding(rem(52) cols(2));
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(64) null);
+      }
+    }
+  }
+
+  .text-container {
+    @include mq($bp768max) {
+      @include margin(null null rem(30));
+      text-align: center;
+    }
+
+    @include mq($bp768) {
+      flex: 0 0 cols(19, 44);
+      width: cols(19, 44);
+    }
+
+    @include mq($bp1024) {
+      flex: 0 0 cols(23, 44);
+      width: cols(23, 44);
+    }
+
+    h2 {
+      text-transform: uppercase;
+    }
+  }
+
+  .form-wrapper {
+    @include mq($bp768) {
+      flex: 0 0 cols(23, 44);
+      width: cols(23, 44);
+    }
+
+    @include mq($bp1024) {
+      flex: 0 0 cols(19, 44);
+      width: cols(19, 44);
+    }
+
+    form {
+      position: relative;
+    }
+
+    #mce-responses {
+      @include padding(null null rem(8));
+      order: -1;
+      width: 100%;
+    }
+
+    #mc_embed_signup {
+      input.mce_inline_error {
+        border-color: $color-error;
+      }
+
+      div.mce_inline_error {
+        background-color: $color-error;
+      }
+    }
+
+    &-inner {
+      @include mq($bp768) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .mc-field-group {
+        @include mq($bp768) {
+          @include margin(null null 0);
+          @include padding(null cols(1, 23) null null);
+          flex: 0 0 cols(14, 23);
+          width: cols(14, 23);
+        }
+
+        @include mq($bp1024) {
+          @include padding(null cols(1, 19) null null);
+          flex: 0 0 cols(13, 19);
+          width: cols(13, 19);
+        }
+      }
+
+      .response {
+        @include font-size(16, 18);
+
+        a {
+          @include font-size(16, 18);
+        }
+      }
+
+      .form-actions {
+        @include mq($bp768) {
+          flex: 0 0 cols(9, 23);
+          width: cols(9, 23);
+        }
+
+        @include mq($bp1024) {
+          flex: 0 0 cols(6, 19);
+          width: cols(6, 19);
+        }
+
+
+        .button {
+          width: 100%;
+          min-width: auto;
+          height: rem(50);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.cc--footer-links {
+
+  @include mq($bp768max) {
+    flex-basis: 50%;
+  }
+
+  .c--footer-links {
+    @include mq($bp768max) {
+      @include padding(null cols(1.5, 39) null null);
+      flex-basis: 50%;
+    }
+  }
+
+  ul {
+    @include no-bullet;
+
+    @include mq($bp768) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @include mq($bp1024) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+    }
+
+    li {
+      @extend %font-ibm-plex-serif-regular;
+      color: $color-white;
+      line-height: 1;
+
+      &:not(:last-child) {
+
+        @include mq($bp768max) {
+          @include margin(null null rem(5));
+        }
+
+        @include mq($bp768) {
+          &::after {
+            @include margin(null rem(10));
+            display: inline-block;
+            content: '|';
+          }
+        }
+      }
+
+      a {
+        @include font-size(12, 24);
+        color: inherit;
+        font-family: inherit;
+
+        @include hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

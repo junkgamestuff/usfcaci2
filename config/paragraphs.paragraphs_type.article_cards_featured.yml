@@ -1,0 +1,10 @@
+uuid: b8b9fa13-1ff4-4d80-be5c-4f6d11b0e38a
+langcode: en
+status: true
+dependencies: {  }
+id: article_cards_featured
+label: 'Article Cards - Automatic'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,55 @@
+{% extends "base-component" %}
+
+{% set name = "vertical-tabbed-carousel" %}
+
+{% block content %}
+  {% embed 'base-field' with { name: 'slides' } %}
+    {% block content %}
+
+      <div class="left-container">
+        <div class="left-container-inner side-titles">
+
+          {% if title is not empty %}
+            {% include "fields-section-title" with { title: title } only %}
+          {% endif %}
+
+          <div class="select-container">
+            <label class="visually-hidden" for="carousel-{{ title|striptags|lower|replace({' ': '-'}) }}">Select option to display slide</label>
+            <select name="carousel-{{ title|striptags|lower|replace({' ': '-'}) }}">
+              {% for slide in slides %}
+                <option value="{{ loop.index0 }}">{{ slide.tabTitle|striptags }}</option>
+              {% endfor %}
+            </select>
+            <svg width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-10.000000, -14.000000)" fill="#AED136"><polygon points="17.5 20.2142857 23.7142857 14 25 15.2857143 17.5 22.7857143 10 15.2857143 11.2857143 14"></polygon></g></g></svg>
+          </div>
+
+          <div class="side-nav">
+            <div class="side-nav-inner">
+              <ul class="swiper-pagination">
+                {% for slide in slides %}
+                  <li class="swiper-pagination-customs">{{ slide.tabTitle }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-container swiper-no-swiping right-container">
+        <svg class="arrow" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve"><path fill="#00B3D8" fill-rule="evenodd" clip-rule="evenodd" d="M32.5,32.6L3.4,33c0,0-3,0.3-3.1,3.8c-0.1,3.5,3,3.8,3,3.8L40,40.2l0,0l0,0l0.4-36.8c0,0-0.2-3-3.7-3c-3.5,0.1-3.8,3.1-3.8,3.1L32.5,32.6z"/></svg>
+        <div class="swiper-wrapper">
+          {% for slide in slides %}
+            {% include 'components-vertical-tabbed-carousel-slide' with {
+              tabTitle: slide.tabTitle,
+              titleHighlight: slide.titleHighlight,
+              image: slide.image,
+              description: slide.description,
+              link: slide.link,
+              variant: ['cc--side-tab-carousel-slide', 'swiper-slide'],
+            } only %}
+          {% endfor %}
+        </div>
+      </div>
+
+    {% endblock content %}
+  {% endembed %}
+{% endblock %}

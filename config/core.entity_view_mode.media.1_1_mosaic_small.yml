@@ -1,0 +1,10 @@
+uuid: d5091d86-dd62-4b37-852d-fbbbf26300f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.1_1_mosaic_small
+label: '1:1 Mosaic Small'
+targetEntityType: media
+cache: true

@@ -1,0 +1,96 @@
+uuid: 63e25803-bcb6-417b-a4a9-d5b84b7d5258
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.event_category
+  module:
+    - feeds_ex
+    - feeds_tamper
+    - taxonomy
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      e7ab43cd-3cc1-4401-b40e-e81183ca4eb2:
+        find: '&amp;'
+        replace: '&'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: e7ab43cd-3cc1-4401-b40e-e81183ca4eb2
+        plugin: find_replace
+        source: name
+        weight: 0
+        label: 'Find replace'
+      fdc50957-6cb2-4bf1-b6f7-63af877a78c9:
+        find: '&amp;#039;'
+        replace: ''''
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: fdc50957-6cb2-4bf1-b6f7-63af877a78c9
+        plugin: find_replace
+        source: name
+        weight: 1
+        label: 'Find replace'
+      b96c2152-530e-4c53-8ede-e1fb7ed434b4:
+        find: '&#039;s'
+        replace: ''''
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: b96c2152-530e-4c53-8ede-e1fb7ed434b4
+        plugin: find_replace
+        source: name
+        weight: 2
+        label: 'Find replace'
+label: 'Event Category Taxonomy Importer'
+id: event_category_taxonomy_importer
+description: 'Import taxonomy terms from the events site'
+help: ''
+import_period: -1
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: xml
+parser_configuration:
+  context:
+    value: /root/item
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+  use_tidy: false
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  values:
+    vid: event_category
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  name:
+    label: name
+    machine_name: name
+    value: name
+    raw: false
+    inner: false
+    type: xml
+mappings:
+  -
+    target: name
+    map:
+      value: name
+    settings:
+      language: null
+    unique: {  }

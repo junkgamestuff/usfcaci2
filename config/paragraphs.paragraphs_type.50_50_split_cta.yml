@@ -1,0 +1,10 @@
+uuid: f2221efb-72c1-4d8f-9e99-bd44df37b862
+langcode: en
+status: true
+dependencies: {  }
+id: 50_50_split_cta
+label: '50-50 Split CTA'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

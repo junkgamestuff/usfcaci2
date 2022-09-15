@@ -1,0 +1,21 @@
+uuid: 81d24b40-db3a-4732-8063-a1c5b168f06b
+langcode: en
+status: true
+dependencies: {  }
+name: 640_width
+label: '640 Width'
+effects:
+  0e7242f9-4d6a-46e8-8716-9c48dee71b1e:
+    uuid: 0e7242f9-4d6a-46e8-8716-9c48dee71b1e
+    id: image_scale
+    weight: 1
+    data:
+      width: 640
+      height: null
+      upscale: false
+  f9ae0832-6fc5-4bf1-b005-6cf875e34e45:
+    uuid: f9ae0832-6fc5-4bf1-b005-6cf875e34e45
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg

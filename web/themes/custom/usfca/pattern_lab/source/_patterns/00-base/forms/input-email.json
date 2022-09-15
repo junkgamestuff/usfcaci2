@@ -1,0 +1,7 @@
+{
+  "name": "email",
+  "disabled": false,
+  "maxlength": false,
+  "placeholder": false,
+  "label": "Example Email Input"
+}

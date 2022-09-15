@@ -1,0 +1,223 @@
+uuid: e73de609-fec0-49db-a06b-c3373193cb41
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.event_detail.feeds_item
+    - field.field.node.event_detail.field_all_day
+    - field.field.node.event_detail.field_campus
+    - field.field.node.event_detail.field_ems_booking_id
+    - field.field.node.event_detail.field_ems_reservation_id
+    - field.field.node.event_detail.field_end_date
+    - field.field.node.event_detail.field_event_access
+    - field.field.node.event_detail.field_event_address
+    - field.field.node.event_detail.field_event_category
+    - field.field.node.event_detail.field_event_description
+    - field.field.node.event_detail.field_event_location
+    - field.field.node.event_detail.field_events_uid
+    - field.field.node.event_detail.field_featured
+    - field.field.node.event_detail.field_guid
+    - field.field.node.event_detail.field_image
+    - field.field.node.event_detail.field_image_caption
+    - field.field.node.event_detail.field_metatag
+    - field.field.node.event_detail.field_program
+    - field.field.node.event_detail.field_registration_link
+    - field.field.node.event_detail.field_school
+    - field.field.node.event_detail.field_section
+    - field.field.node.event_detail.field_source
+    - field.field.node.event_detail.field_start_date
+    - field.field.node.event_detail.field_teaser_description
+    - field.field.node.event_detail.field_teaser_image
+    - field.field.node.event_detail.field_teaser_title
+    - node.type.event_detail
+  module:
+    - address
+    - link
+    - metatag
+    - text
+    - user
+id: node.event_detail.search_index
+targetEntityType: node
+bundle: event_detail
+mode: search_index
+content:
+  field_campus:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_ems_booking_id:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_ems_reservation_id:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_event_access:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_event_address:
+    type: address_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_event_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_event_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_event_location:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_events_uid:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_guid:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_image_caption:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_metatag:
+    type: metatag_empty_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_program:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_registration_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_school:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_source:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_teaser_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_teaser_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_teaser_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+hidden:
+  content_moderation_control: true
+  feeds_item: true
+  field_all_day: true
+  field_end_date: true
+  field_featured: true
+  field_featured_event: true
+  field_start_date: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

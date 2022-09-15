@@ -1,0 +1,30 @@
+uuid: 4d1eebd9-5142-47c4-8f61-13a50c0660ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.campus_address.field_address
+    - field.field.paragraph.campus_address.field_campus
+    - paragraphs.paragraphs_type.campus_address
+  module:
+    - address
+id: paragraph.campus_address.default
+targetEntityType: paragraph
+bundle: campus_address
+mode: default
+content:
+  field_address:
+    type: address_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_campus:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

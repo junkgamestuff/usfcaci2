@@ -1,0 +1,15 @@
+.DS_Store
+
+export/*
+public/*
+
+vendor/*
+node_modules
+
+source/styleguide/*
+
+source/css/*
+
+source/js/dist/*
+source/js/components/*
+source/js/vendor/*

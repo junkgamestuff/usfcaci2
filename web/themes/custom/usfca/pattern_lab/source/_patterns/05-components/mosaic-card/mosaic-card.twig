@@ -1,0 +1,31 @@
+{% extends "base-component" %}
+
+{% set name = "mosaic-card" %}
+
+{% block content %}
+
+
+<div class="image-container">
+  {% include "fields-image" with {
+    image: image
+  } %}
+</div>
+
+<div class="text-container">
+    <svg version="1.1" class="arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+      y="0px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+    <path fill-rule="evenodd" fill="#FFFFFF" clip-rule="evenodd" d="M32.5,32.6L3.4,33c0,0-3,0.3-3.1,3.8c-0.1,3.5,3,3.8,3,3.8L40,40.2l0,0
+      l0,0l0.4-36.8c0,0-0.2-3-3.7-3c-3.5,0.1-3.8,3.1-3.8,3.1L32.5,32.6z"/>
+    </svg>
+    <div class="text-inner">
+      {% include "fields-description" with {
+        description: description
+      } %}
+      {% include "fields-attribution" with {
+        fullName: attribution.attributionTitle,
+        text: attribution.attributionDescription
+      } %}
+    </div>
+  </div>
+
+{% endblock %}

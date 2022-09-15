@@ -1,0 +1,23 @@
+uuid: 0c3a7d28-80e6-468b-ad9b-31b61c2e7a9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.rfi_rich_text.field_rich_text
+    - paragraphs.paragraphs_type.rfi_rich_text
+  module:
+    - text
+id: paragraph.rfi_rich_text.default
+targetEntityType: paragraph
+bundle: rfi_rich_text
+mode: default
+content:
+  field_rich_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

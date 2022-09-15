@@ -1,0 +1,25 @@
+uuid: 86ba6f5c-0af9-4803-a369-08c9ffcba4d0
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: 5psDUfnqeWO50y8O8tks1SkXCyRCShYlCUcBkvW-TsU
+name: 1_1_720x720
+label: '1:1 (720x720)'
+effects:
+  842a2a04-6e76-4b90-9395-3230cb22ef98:
+    uuid: 842a2a04-6e76-4b90-9395-3230cb22ef98
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 720
+      height: 720
+      crop_type: focal_point
+  6593c1b9-1638-4c7b-93c5-3dcbd8d556cc:
+    uuid: 6593c1b9-1638-4c7b-93c5-3dcbd8d556cc
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg

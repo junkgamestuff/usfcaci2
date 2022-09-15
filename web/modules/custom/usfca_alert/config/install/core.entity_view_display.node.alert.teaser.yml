@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.alert.field_date_time
+    - field.field.node.alert.field_description
+    - field.field.node.alert.field_link
+    - node.type.alert
+  module:
+    - user
+id: node.alert.teaser
+targetEntityType: node
+bundle: alert
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_date_time: true
+  field_description: true
+  field_link: true
+  search_api_excerpt: true

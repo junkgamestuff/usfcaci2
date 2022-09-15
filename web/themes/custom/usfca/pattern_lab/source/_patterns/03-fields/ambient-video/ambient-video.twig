@@ -1,0 +1,18 @@
+{% extends "base-field" %}
+
+{% set name = "ambient-video" %}
+
+{% block content %}
+
+  <video
+    preload="none"
+    role="presentation"
+    tabindex="-1"
+    loop
+    playsinline
+    muted
+  >
+    <source src="{{ videoSrc }}" type="video/mp4">
+  </video>
+
+{% endblock content %}

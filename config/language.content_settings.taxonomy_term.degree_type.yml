@@ -1,0 +1,11 @@
+uuid: 4fab0c36-fe5c-4db4-8fc5-86f8a3595129
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.degree_type
+id: taxonomy_term.degree_type
+target_entity_type_id: taxonomy_term
+target_bundle: degree_type
+default_langcode: site_default
+language_alterable: false

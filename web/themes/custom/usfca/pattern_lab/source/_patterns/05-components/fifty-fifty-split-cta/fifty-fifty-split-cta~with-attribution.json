@@ -1,0 +1,12 @@
+{
+  "withAttribution": true,
+  "attribution": {
+    "attributionTitle" : "MAGICS Lab",
+    "attributionDescription": "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Sed porttitor lectus nibh.",
+    "link": {
+      "title": "Learn More",
+      "url": "http://example.com",
+      "aria": "Learn More about Aria Labels"
+    }
+  }
+}

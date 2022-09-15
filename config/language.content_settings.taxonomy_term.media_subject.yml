@@ -1,0 +1,11 @@
+uuid: ecad5611-2ea1-4655-8829-84d602c2fc5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.media_subject
+id: taxonomy_term.media_subject
+target_entity_type_id: taxonomy_term
+target_bundle: media_subject
+default_langcode: site_default
+language_alterable: false

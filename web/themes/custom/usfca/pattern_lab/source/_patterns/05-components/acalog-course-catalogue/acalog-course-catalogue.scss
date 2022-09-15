@@ -1,0 +1,75 @@
+.cc--acalog-course-catalogue {
+  .f--section-title {
+    @include padding(null rem(20));
+
+    @include mq($bp768) {
+      @include padding(null cols(6));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(8));
+    }
+
+    h2 {
+      @include margin(null null rem(53));
+    }
+  }
+
+  .f--sub-title {
+    @include padding(null rem(20));
+
+    @include mq($bp768) {
+      @include padding(null cols(6));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(8));
+    }
+
+    h3 {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(36, 24);
+      @include margin(null null rem(32));
+      color: $color-chilean-fire;
+      text-transform: uppercase;
+    }
+  }
+
+  .cc--accordions {
+    @include margin(null null rem(58));
+
+    .accordion-panel {
+      h6 {
+        @include margin(null null rem(12));
+      }
+
+      ul {
+        @include padding(null null rem(2));
+
+        li {
+          @include margin(null null rem(20));
+        }
+      }
+    }
+  }
+}
+
+.acalog-program-content {
+  .acalog-program-core {
+    @include margin(null null rem(50));
+  }
+
+  .acalog-program-core-courses {
+    @include margin(null null rem(30));
+
+    li[style='list-style: none;'] {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .acalog-program-core-description {
+    @include margin(null null rem(30));
+  }
+}

@@ -1,0 +1,25 @@
+uuid: 6e70b2ed-ad0c-4a4e-b085-18b23f7d3935
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - usfca
+id: footer_connect
+theme: usfca
+region: footer_menu
+weight: -6
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Connect
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: dfc861d4-d0de-4a8a-beb3-ffef2e89002a
+langcode: en
+status: true
+dependencies: {  }
+id: school-of-law
+label: 'School of Law'
+description: ''
+locked: false

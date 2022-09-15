@@ -1,0 +1,19 @@
+uuid: 0089ce0c-e755-4c58-afc6-5ea970747edf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_display_title
+    - node.type.search_results
+id: node.search_results.field_display_title
+field_name: field_display_title
+entity_type: node
+bundle: search_results
+label: 'Display Title'
+description: 'The title to display on the page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

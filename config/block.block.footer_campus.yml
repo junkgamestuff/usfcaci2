@@ -1,0 +1,25 @@
+uuid: f97e9b8b-8cd9-47e5-a3e4-6a53844e6bd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-campus
+  module:
+    - system
+  theme:
+    - usfca
+id: footer_campus
+theme: usfca
+region: footer_menu
+weight: -4
+provider: null
+plugin: 'system_menu_block:footer-campus'
+settings:
+  id: 'system_menu_block:footer-campus'
+  label: Campus
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

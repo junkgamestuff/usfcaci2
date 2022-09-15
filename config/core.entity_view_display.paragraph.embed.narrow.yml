@@ -1,0 +1,22 @@
+uuid: 820bc142-5232-4350-b7bf-43bd25930092
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.narrow
+    - field.field.paragraph.embed.field_embed_code
+    - paragraphs.paragraphs_type.embed
+id: paragraph.embed.narrow
+targetEntityType: paragraph
+bundle: embed
+mode: narrow
+content:
+  field_embed_code:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

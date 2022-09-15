@@ -1,0 +1,109 @@
+uuid: 78d7736e-5e18-4fa2-accd-5b83588a9e49
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.article.field_section
+    - field.field.node.basic_page.field_section
+    - field.field.node.chapter_page.field_section
+    - field.field.node.directory.field_section
+    - field.field.node.event_detail.field_section
+    - field.field.node.events.field_section
+    - field.field.node.form_page.field_section
+    - field.field.node.home.field_section
+    - field.field.node.landing.field_section
+    - field.field.node.landing_subpage.field_section
+    - field.field.node.media_mention.field_section
+    - field.field.node.minisite_home.field_section
+    - field.field.node.minisite_subpage.field_section
+    - field.field.node.news.field_section
+    - field.field.node.notification.field_section
+    - field.field.node.profile.field_section
+    - field.field.node.program.field_section
+    - field.field.node.program_home.field_section
+    - field.field.node.program_subpage.field_section
+    - taxonomy.vocabulary.section
+id: section
+plural_label: Sections
+label: Section
+scheme: taxonomy
+scheme_settings:
+  vocabularies:
+    - section
+  fields:
+    -
+      entity_type: node
+      bundle: article
+      field: field_section
+    -
+      entity_type: node
+      bundle: basic_page
+      field: field_section
+    -
+      entity_type: node
+      bundle: chapter_page
+      field: field_section
+    -
+      entity_type: node
+      bundle: directory
+      field: field_section
+    -
+      entity_type: node
+      bundle: event_detail
+      field: field_section
+    -
+      entity_type: node
+      bundle: events
+      field: field_section
+    -
+      entity_type: node
+      bundle: program
+      field: field_section
+    -
+      entity_type: node
+      bundle: form_page
+      field: field_section
+    -
+      entity_type: node
+      bundle: home
+      field: field_section
+    -
+      entity_type: node
+      bundle: landing
+      field: field_section
+    -
+      entity_type: node
+      bundle: landing_subpage
+      field: field_section
+    -
+      entity_type: node
+      bundle: minisite_home
+      field: field_section
+    -
+      entity_type: node
+      bundle: minisite_subpage
+      field: field_section
+    -
+      entity_type: node
+      bundle: news
+      field: field_section
+    -
+      entity_type: node
+      bundle: notification
+      field: field_section
+    -
+      entity_type: node
+      bundle: profile
+      field: field_section
+    -
+      entity_type: node
+      bundle: program_home
+      field: field_section
+    -
+      entity_type: node
+      bundle: program_subpage
+      field: field_section
+    -
+      entity_type: node
+      bundle: media_mention
+      field: field_section

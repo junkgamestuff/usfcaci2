@@ -1,0 +1,19 @@
+uuid: 543b8319-4f85-4a84-afd0-e4368dc8d030
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_books
+field_name: field_books
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

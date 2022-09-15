@@ -1,0 +1,37 @@
+uuid: a05eec08-5c81-4c0e-813e-7d8b0e7d905f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.home.field_components
+    - field.field.node.home.field_hero
+    - field.field.node.home.field_metatag
+    - field.field.node.home.field_school
+    - field.field.node.home.field_section
+    - node.type.home
+  module:
+    - user
+id: node.home.teaser
+targetEntityType: node
+bundle: home
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_components: true
+  field_hero: true
+  field_metatag: true
+  field_school: true
+  field_section: true
+  langcode: true
+  search_api_excerpt: true

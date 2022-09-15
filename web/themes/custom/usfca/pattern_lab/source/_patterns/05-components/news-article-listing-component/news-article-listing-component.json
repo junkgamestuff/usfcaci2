@@ -1,0 +1,17 @@
+{
+  "title": "Rich Text and Image",
+  "eyebrow": "Tag goes here",
+  "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>",
+  "logoExternal": {
+    "src": "https://placeimg.com/600/600/people",
+    "alt": "Alt 1"
+  },
+  "image": {
+    "src": "https://placeimg.com/600/600/people",
+    "alt": "Alt 1"
+  },
+  "link": {
+    "href": "#"
+  },
+  "date": "Mar 6"
+}

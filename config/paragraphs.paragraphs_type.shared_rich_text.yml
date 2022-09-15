@@ -1,0 +1,10 @@
+uuid: 8bef3730-340d-479a-8b4e-8c234d965b6a
+langcode: en
+status: true
+dependencies: {  }
+id: shared_rich_text
+label: 'Shared Content - Rich Text'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

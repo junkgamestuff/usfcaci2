@@ -1,0 +1,23 @@
+uuid: 06d107c9-81a9-48cb-bedc-c3b9e23958b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.manual_cards_horizontal_card
+  module:
+    - link
+id: paragraph.manual_cards_horizontal_card.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: manual_cards_horizontal_card
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

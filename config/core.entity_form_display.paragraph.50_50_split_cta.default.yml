@@ -1,0 +1,90 @@
+uuid: 86998ec4-17cd-4354-8e57-e0cfec61765a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.50_50_split_cta.field_description
+    - field.field.paragraph.50_50_split_cta.field_image
+    - field.field.paragraph.50_50_split_cta.field_inset_cta
+    - field.field.paragraph.50_50_split_cta.field_layout
+    - field.field.paragraph.50_50_split_cta.field_link_x2
+    - field.field.paragraph.50_50_split_cta.field_title
+    - field.field.paragraph.50_50_split_cta.field_title_highlight
+    - paragraphs.paragraphs_type.50_50_split_cta
+  module:
+    - link
+    - media_library
+    - paragraphs
+    - text
+id: paragraph.50_50_split_cta.default
+targetEntityType: paragraph
+bundle: 50_50_split_cta
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 4
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_inset_cta:
+    type: paragraphs
+    weight: 6
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_layout:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_link_x2:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title_highlight:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

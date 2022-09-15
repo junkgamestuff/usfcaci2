@@ -1,0 +1,126 @@
+uuid: a1d78ae1-9f5f-465b-9c4d-a6a67cc84622
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.media_mention.field_category
+    - field.field.node.media_mention.field_featured
+    - field.field.node.media_mention.field_link
+    - field.field.node.media_mention.field_publication
+    - field.field.node.media_mention.field_school
+    - field.field.node.media_mention.field_section
+    - field.field.node.media_mention.field_teaser_description
+    - field.field.node.media_mention.field_teaser_image
+    - field.field.node.media_mention.field_teaser_title
+    - field.field.node.media_mention.field_topics
+    - node.type.media_mention
+  module:
+    - link
+    - text
+    - user
+id: node.media_mention.default
+targetEntityType: node
+bundle: media_mention
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_category:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_featured:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_publication:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_school:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_teaser_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_teaser_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_teaser_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_topics:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_featured_event: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: eba0d259-0283-4ed3-a33d-f79224711cda
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+id: taxonomy_term.field_cta_links
+field_name: field_cta_links
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

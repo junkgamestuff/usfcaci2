@@ -1,0 +1,35 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+
+  {% set date = fields.authored_timestamp|date("F j, Y") %}
+
+  {% set publication = null %}
+
+  {% if fields.publication.fields.name is not empty %}
+    {% set publication = {
+      title: fields.publication.fields.name,
+      href: fields.publication.fields.link.url,
+    } %}
+  {% endif %}
+
+  {% include "components-news-listing-item" with {
+    title: fields.teaser_title ?? fields.title,
+    description: fields.teaser_description,
+    image: fields.teaser_image.uri ? {
+      src: fields.teaser_image.uri | image_style('16_9_637x359'),
+      alt: fields.teaser_image.alt,
+      render: drupal_image(fields.teaser_image.uri, '16_9_one_third', { alt: fields.teaser_image.alt }, responsive=true),
+    } : {
+      src: '/themes/custom/usfca/pattern_lab/source/images/placeholder-wide.png',
+      alt: 'Presentation only image for ' ~ fields.teaser_title ?? fields.title,
+    },
+    link: {
+      href: fields.link.url ?? fields.url,
+    },
+    eyebrow: fields.category.label,
+    ext_link: publication,
+    date: date,
+  } only %}
+
+{% endblock content %}

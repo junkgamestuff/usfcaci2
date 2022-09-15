@@ -1,0 +1,95 @@
+uuid: cb0a71b3-eca6-4ff1-8e93-f872a04aa978
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.marketing.field_components
+    - field.field.node.marketing.field_components_footer
+    - field.field.node.marketing.field_components_sidebar
+    - field.field.node.marketing.field_eyebrow
+    - field.field.node.marketing.field_image
+    - field.field.node.marketing.field_metatag
+    - field.field.node.marketing.field_school
+    - field.field.node.marketing.field_section
+    - node.type.marketing
+  module:
+    - entity_reference_revisions
+    - user
+id: node.marketing.default
+targetEntityType: node
+bundle: marketing
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_components_footer:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_components_sidebar:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_eyebrow:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_image:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_school:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_metatag: true
+  langcode: true
+  search_api_excerpt: true

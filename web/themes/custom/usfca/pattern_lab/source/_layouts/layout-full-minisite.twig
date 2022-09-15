@@ -1,0 +1,88 @@
+{% extends "layout.twig" %}
+
+{% set layout_name = "full-minisite" %}
+
+{% block layout_content %}
+
+  <header id="l--main-header">
+    {% block header %}
+
+      {% embed "base-region" with { name: "header" } %}
+
+        {% block content %}
+
+          {% include "components-header" %}
+
+        {% endblock %}
+
+      {% endembed %}
+
+    {% endblock %}
+  </header>
+
+  <main id="main-content">
+
+    <div class="l--content">
+
+      <div class="above-content">
+        {% if loggedIn %}
+
+          {% include "components-admin-tabs" %}
+
+        {% endif %}
+      </div>
+
+      <div class="content">
+
+        {% if variant is iterable %}
+          {% set variant_processed = variant|join(' ') %}
+        {% else %}
+          {% set variant_processed = variant %}
+        {% endif %}
+
+        <div class="tc--template-container tc--{{ template_name }}{{ (variant_processed) ? (' ' ~ variant_processed) : '' }}">
+
+          <div class="t--template t--{{ template_name }}{{ (variant_processed) ? (' ' ~ variant_processed) : '' }}">
+
+            <div class="content-top">
+              {% block top %}
+              {% endblock top %}
+            </div>
+
+            <div class="content-main">
+              {% block content %}
+              {% endblock content %}
+            </div>
+
+            <div class="content-bottom">
+              {% block bottom %}
+              {% endblock bottom %}
+            </div>
+
+          </div><!-- t--template t--{{ template_name }} -->
+
+        </div><!-- tc--template-container tc--{{ template_name }} -->
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer id="l--main-footer">
+    {% block footer %}
+
+      {% embed "base-region" with { name: "footer" } %}
+
+        {% block content %}
+
+          {% include "components-minisite-footer" %}
+
+        {% endblock %}
+
+      {% endembed %}
+
+    {% endblock %}
+  </footer>
+
+{% endblock layout_content %}

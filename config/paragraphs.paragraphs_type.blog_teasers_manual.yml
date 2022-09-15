@@ -1,0 +1,10 @@
+uuid: 4deecd5f-6376-40fa-83b7-f3c7a5b088c0
+langcode: en
+status: true
+dependencies: {  }
+id: blog_teasers_manual
+label: 'Blog Teasers - Manual'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

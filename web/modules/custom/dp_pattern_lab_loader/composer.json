@@ -1,0 +1,13 @@
+{
+  "name": "digitalpulp/dp_pattern_lab_loader",
+  "description": "This module lets you call Pattern Lab twig templates directly from your Drupal theme Twig templates.",
+  "type": "drupal-module",
+  "authors": [
+    {
+      "name": "Sam Thompson",
+      "role": "Maintainer"
+    }
+  ],
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev"
+}

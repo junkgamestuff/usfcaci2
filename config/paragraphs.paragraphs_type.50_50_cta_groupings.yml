@@ -1,0 +1,10 @@
+uuid: 01bbda9f-db89-44a6-ac76-dbe14b0508de
+langcode: en
+status: true
+dependencies: {  }
+id: 50_50_cta_groupings
+label: '50-50 CTA Groupings'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

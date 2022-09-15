@@ -1,0 +1,8 @@
+uuid: c96f381c-78a1-4180-a4fd-1aa4ae9bfd33
+langcode: en
+status: true
+dependencies: {  }
+id: school-of-law-utility
+label: 'School of Law Utility'
+description: ''
+locked: false

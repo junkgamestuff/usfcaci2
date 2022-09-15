@@ -1,0 +1,36 @@
+{
+  "title": "Based on search by",
+  "cards": [
+    {
+      "image": {
+        "src": "https://placeimg.com/800/800/people",
+        "alt": "alt text 1"
+      },
+      "title": "Person Name"
+    },
+    {
+      "image": {
+        "src": "https://placeimg.com/800/800/people",
+        "alt": "alt text 1"
+      },
+      "title": "Person Name",
+      "link": {
+        "href": "#"
+      }
+    },
+    {
+      "image": {
+        "src": "https://placeimg.com/800/800/people",
+        "alt": "alt text 1"
+      },
+      "title": "Personfirstname Personlastname"
+    },
+    {
+      "image": {
+        "src": "https://placeimg.com/800/800/people",
+        "alt": "alt text 1"
+      },
+      "title": "Person Name"
+    }
+  ]
+}

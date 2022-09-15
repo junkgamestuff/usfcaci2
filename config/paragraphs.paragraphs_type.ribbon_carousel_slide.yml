@@ -1,0 +1,10 @@
+uuid: 560a08d2-70e6-4b9c-a0b9-1b152ee99912
+langcode: en
+status: true
+dependencies: {  }
+id: ribbon_carousel_slide
+label: 'Ribbon Carousel Slide'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

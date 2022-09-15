@@ -1,0 +1,23 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {{ attach_library('usfca/accordions') }}
+
+  {% set accordions = [] %}
+
+  {% for item in fields.accordions %}
+    {% set accordions = accordions | merge([{
+      title: item.fields.title,
+      markup: item.fields.description,
+    }]) %}
+  {% endfor %}
+
+  {% include "components-accordions" with {
+    instanceId: 'paragraph-' ~ paragraph.id(),
+    title: fields.title,
+    description: fields.description,
+    accordions: accordions
+  } only %}
+
+{% endblock content %}

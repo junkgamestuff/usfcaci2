@@ -1,0 +1,27 @@
+uuid: bf010afd-9832-4820-8b89-9ce7ae7c60b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program_faculty_listing.field_views_reference
+    - paragraphs.paragraphs_type.program_faculty_listing
+  module:
+    - viewsreference
+id: paragraph.program_faculty_listing.default
+targetEntityType: paragraph
+bundle: program_faculty_listing
+mode: default
+content:
+  field_views_reference:
+    type: viewsreference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

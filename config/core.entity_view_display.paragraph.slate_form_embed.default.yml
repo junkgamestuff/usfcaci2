@@ -1,0 +1,21 @@
+uuid: 5803a048-9f9f-4d12-9470-84b46f2371d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slate_form_embed.field_embed_code
+    - paragraphs.paragraphs_type.slate_form_embed
+id: paragraph.slate_form_embed.default
+targetEntityType: paragraph
+bundle: slate_form_embed
+mode: default
+content:
+  field_embed_code:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,33 @@
+uuid: 17fded98-1a6e-4d14-b266-f34d5a2de3ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.school-of-nursing-utility
+  module:
+    - system
+    - usfca_school_context
+  theme:
+    - usfca
+id: schoolofnursingutility
+theme: usfca
+region: header
+weight: -6
+provider: null
+plugin: 'system_menu_block:school-of-nursing-utility'
+settings:
+  id: 'system_menu_block:school-of-nursing-utility'
+  label: 'School of Nursing Utility'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  usfca_schoool_context_condition:
+    id: usfca_schoool_context_condition
+    schools:
+      'School of Nursing & Health Professions': 'School of Nursing & Health Professions'
+    negate: false
+    context_mapping:
+      school: '@usfca_school_context.school_context:school'

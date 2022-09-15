@@ -1,0 +1,27 @@
+uuid: 6bcff00b-b64f-4bd7-954c-bd736b655783
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.faculty_directory.field_views_reference
+    - paragraphs.paragraphs_type.faculty_directory
+  module:
+    - viewsreference
+id: paragraph.faculty_directory.default
+targetEntityType: paragraph
+bundle: faculty_directory
+mode: default
+content:
+  field_views_reference:
+    type: viewsreference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

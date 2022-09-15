@@ -1,0 +1,81 @@
+name: related-news
+type: component
+markup:
+  content:
+    - type: container
+      class: text-container
+      condition: title
+      content:
+      - type: field
+        name: section-title
+        with:
+          title: title
+      - type: field
+        name: link
+        condition: link
+        with: link
+    - type: repeater
+      for: card
+      in: cards
+      repeat:
+        name: related-news-card
+        own: true
+        markup:
+          content:
+            - type: field
+              name: image
+              condition: image
+              with:
+                image: image
+            - type: container
+              class: "text-container"
+              content:
+              - type: field
+                name: cta-title
+                with:
+                  title: title
+                  link: link
+              - type: field
+                name: description
+                condition: description
+                with:
+                  description: description
+        with:
+          image: image
+          title: title
+          description: description
+          link: link
+data:
+  title: "Related News"
+  link:
+    url: "/news"
+    title: "View All"
+  cards:
+    - image:
+        src: "/images/16_9_320x180.png"
+        alt: "Card Image"
+      title: "Tertiary Headline Lorem Ipsum Dolor Sit Amet"
+      description: "<p>Ut malasuada mattis velit malesuada pharetra. Suspendisse laoreet, turpis a venenatis rutrum.</p>"
+      link:
+        url: "/"
+    - image:
+        src: "/images/16_9_320x180.png"
+        alt: "Card Image"
+      title: "Tertiary Headline Lorem Ipsum Dolor Sit Amet"
+      description: "<p>Ut malasuada mattis velit malesuada pharetra. Suspendisse laoreet, turpis a venenatis rutrum.</p>"
+      link:
+        url: "/"
+    - image:
+        src: "/images/16_9_320x180.png"
+        alt: "Card Image"
+      title: "Tertiary Headline Lorem Ipsum Dolor Sit Amet"
+      description: "<p>Ut malasuada mattis velit malesuada pharetra. Suspendisse laoreet, turpis a venenatis rutrum.</p>"
+      link:
+        url: "/"
+    - image:
+        src: "/images/16_9_320x180.png"
+        alt: "Card Image"
+      title: "Tertiary Headline Lorem Ipsum Dolor Sit Amet"
+      description: "<p>Ut malasuada mattis velit malesuada pharetra. Suspendisse laoreet, turpis a venenatis rutrum.</p>"
+      link:
+        url: "/"

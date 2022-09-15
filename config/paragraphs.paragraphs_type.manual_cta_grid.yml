@@ -1,0 +1,10 @@
+uuid: 5bf9bd7c-17ce-4f79-8068-9f6d8ea0cbea
+langcode: en
+status: true
+dependencies: {  }
+id: manual_cta_grid
+label: 'Manual CTA Grid'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

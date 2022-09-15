@@ -1,0 +1,28 @@
+uuid: 6a179ff4-4018-4a3f-a974-fed58052d01b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 2_1_2400x1200_green
+label: '2:1 (2400x1200) Green'
+effects:
+  1f7944c0-26b8-4be5-97c3-f5212a80d76f:
+    uuid: 1f7944c0-26b8-4be5-97c3-f5212a80d76f
+    id: focal_point_scale_and_crop
+    weight: -10
+    data:
+      width: 2400
+      height: 1000
+      crop_type: focal_point
+  5f8960f8-d7ef-4eb0-9934-9a807e44d77f:
+    uuid: 5f8960f8-d7ef-4eb0-9934-9a807e44d77f
+    id: image_desaturate
+    weight: -8
+    data: {  }
+  acaf9d0e-54ef-428c-bf7e-42cd8a0c1945:
+    uuid: acaf9d0e-54ef-428c-bf7e-42cd8a0c1945
+    id: image_convert
+    weight: -9
+    data:
+      extension: jpeg

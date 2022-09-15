@@ -1,0 +1,216 @@
+.cc--featured-articles {
+  @include maxwidth;
+
+  .c--featured-articles {
+    @include padding(null cols(3));
+
+    @include mq($bp768) {
+      @include padding(null cols(2));
+    }
+  }
+
+  .f--section-title {
+    text-align: center;
+
+    h2 {
+      @include margin(null null rem(38));
+      @include font-size(36, 36);
+
+      @include mq($bp768) {
+        @include margin(null null rem(60));
+        @include font-size(48, 59);
+        letter-spacing: rem(-.4);
+      }
+    }
+  }
+
+  .f--link {
+    @include margin(rem(32) null null);
+    display: flex;
+    justify-content: center;
+
+    @include mq($bp768) {
+      @include margin(rem(65) null null);
+    }
+
+    @include mq($bp1024) {
+      @include margin(rem(60) null null);
+    }
+
+    a {
+      @include button($secondary: true);
+    }
+  }
+
+
+  .flex-container {
+    @include mq($bp1024) {
+      display: flex;
+    }
+  }
+
+  .cc--news-article-listing-component {
+    @include mq($bp768) {
+      @include padding(null null rem(25));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null null rem(40));
+    }
+  }
+
+  .featured-card {
+    @include margin(null null rem(23));
+
+    @include mq($bp768) {
+      @include margin(null null rem(40));
+    }
+
+    @include mq($bp1024) {
+      @include margin(null null 0);
+      flex: 0 0 cols(21, 44);
+      width: cols(21, 44);
+    }
+
+    .cc--news-article-listing-component {
+      @include padding(null null 0);
+
+      .c--news-article-listing-component {
+        display: block;
+
+        @include mq($bp768-1024) {
+          display: flex;
+        }
+
+        .text-container,
+        .image-container {
+          flex: 0 0 100%;
+          width: 100%;
+        }
+
+        .image-container {
+          @include margin(null null rem(20));
+
+          @include mq($bp768-1024) {
+            @include margin(null cols(2, 44) 0 null);
+            flex: 0 0 cols(25, 44);
+            width: cols(25, 44);
+          }
+        }
+
+        .text-container {
+          @include mq($bp768-1024) {
+            flex: 0 0 cols(17, 44);
+            width: cols(17, 44);
+          }
+
+          @include mq($bp1024) {
+            @include padding(null cols(1, 21) null 0);
+          }
+        }
+      }
+    }
+
+    .f--date-string {
+      @include margin(null null rem(3));
+
+      @include mq($bp768) {
+        @include margin(null null rem(15));
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(15));
+      }
+    }
+
+    .f--cta-title {
+      h3 {
+        &,
+        a {
+          @include font-size(24, 30);
+          text-decoration: none;
+
+          @include mq($bp768) {
+            @include font-size(36, 42);
+          }
+
+          @include mq($bp1024) {
+            @include font-size(38, 42);
+          }
+        }
+      }
+    }
+  }
+
+  .cards-list {
+    @include padding(null null null 0);
+    @include margin(null null 0);
+    list-style-type: none;
+
+    @include mq($bp768-1024) {
+      display: flex;
+    }
+
+    @include mq($bp1024) {
+      @include padding(null null null cols(2, 44));
+      flex: 0 0 cols(23, 44);
+      width: cols(23, 44);
+    }
+
+    li {
+      @include mq($bp768-1024) {
+        flex: 0 0 cols(14, 44);
+        width: cols(14, 44);
+      }
+
+      &:not(:last-child) {
+        @include mq($bp768-1024) {
+          @include margin(null cols(1, 44) null null);
+        }
+      }
+
+      &:last-child {
+        .cc--news-article-listing-component {
+          @include padding(null null 0);
+        }
+      }
+    }
+
+    .with-image {
+      .text-container {
+        @include padding(null null null cols(3, 42));
+
+        @include mq($bp768) {
+          @include padding(null 0 null 0);
+        }
+
+        @include mq($bp1024) {
+          @include padding(null null null cols(1, 21));
+          flex: 0 0 cols(11, 21);
+          width: cols(11, 21);
+        }
+      }
+    }
+
+    .image-container {
+      @include mq($bp1024) {
+        flex: 0 0 cols(10, 21);
+        width: cols(10, 21);
+      }
+    }
+
+    .f--cta-title {
+      h3 {
+        &,
+        a {
+          @include font-size(16, 18);
+          text-decoration: none;
+
+          @include mq($bp768) {
+            @include font-size(20, 24);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+uuid: b069c019-38ae-4a98-9160-daa4149bd978
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing.field_components
+    - field.field.node.landing.field_eyebrow
+    - field.field.node.landing.field_image
+    - field.field.node.landing.field_metatag
+    - field.field.node.landing.field_school
+    - field.field.node.landing.field_section
+    - node.type.landing
+  module:
+    - user
+id: node.landing.teaser
+targetEntityType: node
+bundle: landing
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_components: true
+  field_eyebrow: true
+  field_image: true
+  field_metatag: true
+  field_school: true
+  field_section: true
+  langcode: true
+  search_api_excerpt: true

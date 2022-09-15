@@ -1,0 +1,243 @@
+.tc--search-gsc {
+  .f--page-title {
+    @include margin(rem(15) null rem(40));
+
+    @include mq($bp768) {
+      @include margin(rem(30) null rem(50));
+    }
+
+    @include mq($bp1024) {
+      @include margin(rem(60) null rem(70));
+    }
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  .gsc-refinementsArea {
+    @include visuallyhidden;
+  }
+
+  .gs-per-result-labels {
+    @include visuallyhidden;
+  }
+
+  .gsc-control-cse {
+    @include maxwidth;
+    @include padding(0);
+    border: 0;
+    background: none;
+
+    .gsc-control-wrapper-cse {
+      @include padding(null cols(3));
+
+      @include mq($bp768) {
+        @include padding(null cols(2));
+      }
+
+      @include mq($bp1024) {
+        @include padding(null cols(6));
+      }
+    }
+
+    .gsc-above-wrapper-area {
+      @include padding(0);
+      border: 0;
+
+      .resp-table {
+        @include margin(0);
+      }
+
+      table {
+        @include margin(0);
+        border: 0;
+
+        td,
+        tr {
+          @include padding(0);
+          border: 0;
+        }
+      }
+
+      .gsc-result-info {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include padding(0);
+        @include font-size(24, 24);
+        color: $color-black;
+        letter-spacing: rem(-.15);
+
+        b,
+        strong {
+          @extend %font-fira-sans-extra-condensed-semibold;
+          font-size: inherit;
+        }
+      }
+    }
+
+    .gsc-wrapper {
+      @include padding(rem(30) null null);
+
+      .gsc-results {
+        @include margin(null null rem(60));
+        width: 100%;
+
+        @include mq($bp768) {
+          @include margin(null null rem(80));
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+        }
+      }
+
+      // sass-lint:disable class-name-format
+      .gsc-expansionArea {
+        @include margin(null null rem(40));
+        width: 100%;
+
+        @include mq($bp1024) {
+          @include margin(null null rem(60));
+        }
+      }
+
+      .gs-no-results-result {
+        .gs-snippet {
+          &,
+          b,
+          * {
+            @extend %font-ibm-plex-serif-regular;
+            @include font-size(14, 18);
+            @include margin(null null rem(10));
+            color: $color-text-color;
+
+            @include mq($bp768) {
+              @include font-size(16, 24);
+            }
+          }
+
+          b,
+          strong {
+            @extend %font-ibm-plex-serif-bold;
+          }
+        }
+      }
+
+      .gsc-result {
+        @include margin(0 0 rem(20) 0);
+        @include padding(0 0 rem(20) 0);
+        border: 0;
+        border-bottom: rem(2) solid $color-supernova;
+
+        @include mq($bp768) {
+          @include margin(0 0 rem(35) 0);
+          @include padding(0 0 rem(28) 0);
+        }
+
+        &:last-child {
+          @include margin(null null 0 null);
+        }
+
+        .gsc-thumbnail-inside {
+          @include padding(0);
+        }
+
+        .gs-title {
+          @include margin(null null rem(16));
+
+          @include mq($bp768) {
+            @include margin(null null rem(25));
+          }
+
+          .gs-title {
+            @include margin(0);
+          }
+
+          &,
+          a,
+          b,
+          * {
+            @extend %font-fira-sans-extra-condensed-semibold;
+            @include font-size(24, 30);
+            color: $color-sherpa-blue;
+            text-decoration: none;
+
+            @include mq($bp768) {
+              @include font-size(30, 40);
+            }
+
+            @include hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .gsc-url-top {
+          display: none;
+        }
+
+        .gsc-table-result {
+          @include padding(0);
+
+          .gsc-thumbnail {
+            display: none;
+          }
+
+          .gsc-table-cell-snippet-close {
+            @include padding(0);
+          }
+
+          .gs-snippet {
+            @include margin(0);
+
+            &,
+            b,
+            * {
+              @extend %font-ibm-plex-serif-regular;
+              @include margin(null null rem(10));
+              @include font-size(16, 24);
+              color: $color-text-color;
+            }
+
+            b,
+            strong {
+              @extend %font-ibm-plex-serif-bold;
+            }
+          }
+        }
+      }
+
+      .gsc-cursor-box {
+        @include margin(0);
+        width: 100%;
+        text-align: center;
+
+        .gsc-cursor {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .gsc-cursor-page {
+          @extend %font-fira-sans-extra-condensed-regular;
+          @include font-size(24, 24);
+          @include margin(null rem(12.5));
+          color: $color-gray-suit;
+          letter-spacing: rem(-.15);
+
+          &.gsc-cursor-current-page {
+            @extend %font-fira-sans-extra-condensed-semibold;
+            color: $color-sherpa-blue;
+
+            @include hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .gcsc-more-maybe-branding-root {
+        display: none;
+      }
+    }
+  }
+}

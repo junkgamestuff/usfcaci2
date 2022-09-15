@@ -1,0 +1,10 @@
+uuid: 624cfa99-63ad-4756-9819-104519f748c8
+langcode: en
+status: true
+dependencies: {  }
+id: rfi_rich_text
+label: 'RFI Rich Text'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

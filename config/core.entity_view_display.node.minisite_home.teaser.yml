@@ -1,0 +1,48 @@
+uuid: 6e6fdf74-f270-4718-a762-44349799d03d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.minisite_home.field_components
+    - field.field.node.minisite_home.field_eyebrow
+    - field.field.node.minisite_home.field_hero_intro_description
+    - field.field.node.minisite_home.field_hero_intro_title
+    - field.field.node.minisite_home.field_hero_intro_title_highlight
+    - field.field.node.minisite_home.field_image
+    - field.field.node.minisite_home.field_metatag
+    - field.field.node.minisite_home.field_minisite
+    - field.field.node.minisite_home.field_school
+    - field.field.node.minisite_home.field_section
+    - node.type.minisite_home
+  module:
+    - user
+id: node.minisite_home.teaser
+targetEntityType: node
+bundle: minisite_home
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  extra_field_usfca_minisite_nav_children: true
+  field_components: true
+  field_eyebrow: true
+  field_hero_intro_description: true
+  field_hero_intro_title: true
+  field_hero_intro_title_highlight: true
+  field_image: true
+  field_metatag: true
+  field_minisite: true
+  field_school: true
+  field_section: true
+  langcode: true
+  search_api_excerpt: true

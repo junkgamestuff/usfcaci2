@@ -1,0 +1,47 @@
+uuid: 5df0b8e1-7666-4520-91fe-d3b4844a0d93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.minisite.field_cta_links
+    - taxonomy.vocabulary.minisite
+  module:
+    - link
+id: taxonomy_term.minisite.default
+targetEntityType: taxonomy_term
+bundle: minisite
+mode: default
+content:
+  field_cta_links:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

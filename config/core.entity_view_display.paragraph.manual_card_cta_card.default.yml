@@ -1,0 +1,46 @@
+uuid: 9508d779-72e9-409e-abac-ad98e0c06b77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.manual_card_cta_card.field_description
+    - field.field.paragraph.manual_card_cta_card.field_link
+    - field.field.paragraph.manual_card_cta_card.field_title
+    - paragraphs.paragraphs_type.manual_card_cta_card
+  module:
+    - link
+    - text
+id: paragraph.manual_card_cta_card.default
+targetEntityType: paragraph
+bundle: manual_card_cta_card
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

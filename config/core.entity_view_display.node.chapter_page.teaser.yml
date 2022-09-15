@@ -1,0 +1,41 @@
+uuid: 82bcc56c-4a8a-49ee-80d6-c3b8fc91fc81
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.chapter_page.field_components
+    - field.field.node.chapter_page.field_components_footer
+    - field.field.node.chapter_page.field_eyebrow
+    - field.field.node.chapter_page.field_image
+    - field.field.node.chapter_page.field_metatag
+    - field.field.node.chapter_page.field_school
+    - field.field.node.chapter_page.field_section
+    - node.type.chapter_page
+  module:
+    - user
+id: node.chapter_page.teaser
+targetEntityType: node
+bundle: chapter_page
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_components: true
+  field_components_footer: true
+  field_eyebrow: true
+  field_image: true
+  field_metatag: true
+  field_school: true
+  field_section: true
+  langcode: true
+  search_api_excerpt: true

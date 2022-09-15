@@ -1,0 +1,21 @@
+uuid: 9f99a1e7-6628-4c34-b692-b62e68e9968c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.ribbon_carousel
+  module:
+    - text
+id: paragraph.ribbon_carousel.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: ribbon_carousel
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

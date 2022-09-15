@@ -1,0 +1,22 @@
+{% extends "base-component" %}
+
+{% set name = "rfi-hero" %}
+{% set container_element = 'section' %}
+{% set variant = [image ? 'with-image'] %}
+
+{% block content %}
+
+  <div class="image-text-container">
+    {% if image is not empty %}
+      <div class="image-wrapper">
+        {% include "fields-image" with {
+          image: image
+        } only %}
+      </div>
+    {% endif %}
+    <div class="text-wrapper">
+      {% include "fields-page-title" with { title: title } only %}
+    </div>
+  </div>
+
+{% endblock %}

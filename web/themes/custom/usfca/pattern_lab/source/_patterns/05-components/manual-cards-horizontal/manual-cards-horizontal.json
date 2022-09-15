@@ -1,0 +1,89 @@
+{
+  "title": "Manual Cards Horizontal",
+  "cards": [
+    {
+      "title": "An Example of an Article Title",
+      "link": {
+        "cta": "Learn More",
+        "href": "https://www.example.com/",
+        "ariaLabel": "This is an Aria Label"
+      },
+      "image": {
+        "src": "https://placeimg.com/1920/1080/nature",
+        "alt": "Image Alt Text4",
+        "link": "https://www.example.com/"
+      },
+      "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+    },
+    {
+      "title": "An Example of an Article Title",
+      "link": {
+        "cta": "Learn More",
+        "href": "https://www.example.com/",
+        "ariaLabel": "This is an Aria Label"
+      },
+      "image": {
+        "src": "https://placeimg.com/1920/1080/nature",
+        "alt": "Image Alt Text4",
+        "link": "https://www.example.com/"
+      },
+      "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+    },
+    {
+      "title": "An Example of an Article Title",
+      "link": {
+        "cta": "Learn More",
+        "href": "https://www.example.com/",
+        "ariaLabel": "This is an Aria Label"
+      },
+      "image": {
+        "src": "https://placeimg.com/1920/1080/nature",
+        "alt": "Image Alt Text4",
+        "link": "https://www.example.com/"
+      },
+      "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+    },
+    {
+      "title": "An Example of an Article Title",
+      "link": {
+        "cta": "Learn More",
+        "href": "https://www.example.com/",
+        "ariaLabel": "This is an Aria Label"
+      },
+      "image": {
+        "src": "https://placeimg.com/1920/1080/nature",
+        "alt": "Image Alt Text4",
+        "link": "https://www.example.com/"
+      },
+      "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+    },
+    {
+      "title": "An Example of an Article Title",
+      "link": {
+        "cta": "Learn More",
+        "href": "https://www.example.com/",
+        "ariaLabel": "This is an Aria Label"
+      },
+      "image": {
+        "src": "https://placeimg.com/1920/1080/nature",
+        "alt": "Image Alt Text4",
+        "link": "https://www.example.com/"
+      },
+      "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+    },
+    {
+      "title": "An Example of an Article Title",
+      "link": {
+        "cta": "Learn More",
+        "href": "https://www.example.com/",
+        "ariaLabel": "This is an Aria Label"
+      },
+      "image": {
+        "src": "https://placeimg.com/1920/1080/nature",
+        "alt": "Image Alt Text4",
+        "link": "https://www.example.com/"
+      },
+      "description": "<p><a href='#'>Duis aute irure dolor</a> in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+    }
+  ]
+}

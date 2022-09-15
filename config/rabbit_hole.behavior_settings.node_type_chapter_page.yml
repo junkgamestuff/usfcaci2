@@ -1,0 +1,14 @@
+uuid: 4ab2077f-851d-4ac2-920c-b63043ff72e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.chapter_page
+id: node_type_chapter_page
+entity_type_id: node_type
+entity_id: chapter_page
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

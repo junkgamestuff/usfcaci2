@@ -1,0 +1,64 @@
+{% extends "base-component" %}
+
+{% set name = "profile-detail" %}
+
+{% block content %}
+
+  <section class="header-container">
+
+    <div class="title-hero">
+      {% include "fields-text" with {
+        text: contactInfo.name
+      } only %}
+
+      {% include "fields-text" with {
+        text: contactInfo.title
+      } only %}
+    </div>
+
+    <div class="profile-main-metadata">
+      {% if contactInfo.department %}
+        <div class="department">
+          <label>{{ contactInfo.department.label }}</label>
+          <div>{{ contactInfo.department.text }}</div>
+        </div>
+      {% elseif contactInfo.fieldOfInterest %}
+        <div class="field-of-interest">
+          <label>{{ contactInfo.fieldOfInterest.label }}</label>
+          <div>{{ contactInfo.fieldOfInterest.text }}</div>
+        </div>
+      {% elseif contactInfo.areaOfFocus %}
+        <div class="area-of-focus">
+          <label>{{ contactInfo.areaOfFocus.label }}</label>
+          <div>{{ contactInfo.areaOfFocus.text }}</div>
+        </div>
+      {% endif %}
+
+      {% if contactInfo.office %}
+        <div class="office">
+          <label>{{ contactInfo.office.label }}</label>
+          <div>{{ contactInfo.office.text }}</div>
+        </div>
+      {% elseif contactInfo.region %}
+        <div class="region">
+          <label>{{ contactInfo.region.label }}</label>
+          <div>{{ contactInfo.region.text }}</div>
+        </div>
+      {% endif %}
+
+      {% if contactInfo.contact %}
+        <div class="contact">
+          <label>{{ contactInfo.contact.label }}</label>
+          {% if contactInfo.contact.phone is not empty %}
+            <a href="tel:{{ contactInfo.contact.phone }}">{{ contactInfo.contact.phone }}</a>
+          {% endif %}
+          {% if contactInfo.contact.mail is not empty %}
+            <a href="mailto:{{ contactInfo.contact.mail }}">{{ contactInfo.contact.mail }}</a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+  </section>
+
+{% endblock content %}

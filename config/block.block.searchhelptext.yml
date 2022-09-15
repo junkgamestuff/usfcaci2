@@ -1,0 +1,30 @@
+uuid: cce939db-9b38-4541-9ac9-6d5e671c5f0c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:search_help_text:d8c1711e-b01f-43f3-b54c-54a568b103bc'
+  module:
+    - block_content
+    - system
+  theme:
+    - usfca
+id: searchhelptext
+theme: usfca
+region: content
+weight: -17
+provider: null
+plugin: 'block_content:d8c1711e-b01f-43f3-b54c-54a568b103bc'
+settings:
+  id: 'block_content:d8c1711e-b01f-43f3-b54c-54a568b103bc'
+  label: 'Search Help Text'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search

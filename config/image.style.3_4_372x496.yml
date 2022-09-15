@@ -1,0 +1,23 @@
+uuid: 0a4a180f-11b6-4715-af5f-e0f255c4d8aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 3_4_372x496
+label: '3:4 (372x496)'
+effects:
+  4edeba4d-4812-4d37-ad6c-bf677fbd2595:
+    uuid: 4edeba4d-4812-4d37-ad6c-bf677fbd2595
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 372
+      height: 496
+      crop_type: focal_point
+  76de9d2a-f8bd-41bc-88af-fa722ea002d3:
+    uuid: 76de9d2a-f8bd-41bc-88af-fa722ea002d3
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg

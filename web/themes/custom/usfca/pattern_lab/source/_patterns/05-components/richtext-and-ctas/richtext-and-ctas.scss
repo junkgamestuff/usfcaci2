@@ -1,0 +1,74 @@
+$title-color: $color-primary;
+
+.cc--richtext-and-ctas {
+  @include maxwidth;
+  @include margin(null null rem(35));
+
+  @include mq($bp768) {
+    @include margin(null null rem(40));
+  }
+
+  @include mq($bp1024) {
+    @include margin(null null rem(60));
+  }
+
+  .c--richtext-and-ctas {
+    @include padding(null cols(3));
+
+    @include mq($bp768) {
+      @include padding(null cols(2));
+    }
+
+    .tc--basic-page &,
+    .t--left-navigation & {
+      @include padding(null 0);
+    }
+  }
+
+  .f--section-title {
+    h2 {
+      @include margin(null null rem(15));
+      color: $title-color;
+      text-align: left;
+      text-transform: none;
+
+      @include mq($bp1024) {
+        @include margin(null null rem(20));
+      }
+    }
+  }
+
+  .f--wysiwyg {
+
+    &:not(:last-child) {
+      @include margin(null null rem(30));
+
+      @include mq($bp1024) {
+        @include margin(null null rem(40));
+      }
+    }
+  }
+
+  .link-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .f--link {
+      @include margin(null null rem(15) null);
+      width: 100%;
+
+      @include mq($bp768) {
+        @include margin(null rem(32) rem(20) null);
+        width: auto;
+      }
+
+      @include mq($bp1024) {
+        @include margin(null rem(50) null null);
+      }
+
+      &:last-child {
+        @include margin(null 0 null null);
+      }
+    }
+  }
+}

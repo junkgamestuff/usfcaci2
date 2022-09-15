@@ -1,0 +1,19 @@
+{% extends "base-component" %}
+
+{% set name="tab-links" %}
+
+{% set container_element="section" %}
+
+{% block content %}
+
+  <div class="link-container">
+    <ul class="menu">
+      {% for item in items %}
+        <li class="menu-item{% if item.active %} menu-item--active-trail{% endif %}">
+          <a href="{{ item.href }}" {% if item.active %}class="is-active{% endif %}">{{ item.cta }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+{% endblock %}

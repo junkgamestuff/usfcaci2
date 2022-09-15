@@ -1,0 +1,8 @@
+uuid: a94de2f8-9b29-4406-a044-64931375d23b
+langcode: en
+status: true
+dependencies: {  }
+id: search_help_text
+label: 'Search Help Text'
+revision: 0
+description: 'A text area above the site search bar that provides help text'

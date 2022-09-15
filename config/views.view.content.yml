@@ -1,9 +1,14 @@
-uuid: fb331a15-3ebb-47f3-b480-0777b754ed08
+uuid: 7539ae30-83dc-4381-8441-e0ebdfe78095
 langcode: en
 status: true
 dependencies:
+  config:
+    - taxonomy.vocabulary.program
+    - taxonomy.vocabulary.school
+    - taxonomy.vocabulary.section
   module:
     - node
+    - taxonomy
     - user
 _core:
   default_config_hash: vBKWYGGDoAX-tFd1JErB8tZLSxx3lJ0foouVsgpcbB4
@@ -406,35 +411,187 @@ display:
                 title: Unpublished
                 operator: '='
                 value: '0'
-        langcode:
-          id: langcode
+        status_extra:
+          id: status_extra
           table: node_field_data
-          field: langcode
+          field: status_extra
+          entity_type: node
+          plugin_id: node_status
+          operator: '='
+          value: false
+          group: 1
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
+        field_section_target_id:
+          id: field_section_target_id
+          table: node__field_section
+          field: field_section_target_id
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: langcode
-          plugin_id: language
-          operator: in
+          plugin_id: taxonomy_index_tid
+          operator: or
           value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: langcode_op
-            label: Language
+            operator_id: field_section_target_id_op
+            label: Section
             description: ''
             use_operator: false
-            operator: langcode_op
+            operator: field_section_target_id_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: langcode
+            identifier: field_section_target_id
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: section
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_school_target_id:
+          id: field_school_target_id
+          table: node__field_school
+          field: field_school_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_school_target_id_op
+            label: School
+            description: ''
+            use_operator: false
+            operator: field_school_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_school_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: school
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: tid_op
+            label: Program
+            description: ''
+            use_operator: false
+            operator: tid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: tid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: program
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        uid:
+          id: uid
+          table: users_field_data
+          field: uid
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          entity_field: uid
+          plugin_id: user_name
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: uid_op
+            label: Author
+            description: ''
+            use_operator: false
+            operator: uid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: uid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              editor: '0'
+              publisher: '0'
               administrator: '0'
             reduce: false
           is_grouped: false
@@ -449,18 +606,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        status_extra:
-          id: status_extra
-          table: node_field_data
-          field: status_extra
-          entity_type: node
-          plugin_id: node_status
-          operator: '='
-          value: false
-          group: 1
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
       filter_groups:
         operator: AND
         groups:

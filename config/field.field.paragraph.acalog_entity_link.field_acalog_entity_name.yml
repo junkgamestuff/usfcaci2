@@ -1,0 +1,19 @@
+uuid: 49922c65-6f33-4a31-a135-adc721b39555
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_acalog_entity_name
+    - paragraphs.paragraphs_type.acalog_entity_link
+id: paragraph.acalog_entity_link.field_acalog_entity_name
+field_name: field_acalog_entity_name
+entity_type: paragraph
+bundle: acalog_entity_link
+label: 'Acalog Entity Name'
+description: 'Enter the Entity name, exactly as it appears in Acalog. E.g. "Teacher Education".'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

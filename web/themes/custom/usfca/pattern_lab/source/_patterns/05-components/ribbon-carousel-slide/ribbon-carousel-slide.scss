@@ -1,0 +1,70 @@
+.cc--ribbon-carousel-slide {
+  .c--ribbon-carousel-slide {
+    height: 100%;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    > a {
+      display: block;
+      height: 100%;
+
+      @include hover {
+        position: relative;
+        box-shadow: 0 0 rem(16) rem(6) rgba($color-black, 0.3);
+        z-index: 1;
+      }
+    }
+  }
+
+  .text-container {
+    @include padding(rem(17) rem(20) rem(40));
+
+    @include mq($bp768) {
+      @include padding(null cols(1.7, 18) rem(73));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(1, 11));
+    }
+  }
+
+  .f--section-title {
+    h2 {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include margin(null null rem(8));
+      @include font-size(24, 28);
+      letter-spacing: rem(-.5);
+      color: $color-black;
+
+      @include mq($bp768) {
+        @include margin(null null rem(6));
+      }
+    }
+  }
+
+  .f--sub-title {
+    h3 {
+      @extend %font-fira-sans-extra-condensed-medium;
+      @include font-size(20, 20);
+      @include margin(null null rem(14));
+      color: $color-black;
+      text-transform: uppercase;
+
+      @include mq($bp768) {
+        @include margin(null null rem(10));
+      }
+    }
+  }
+
+  .f--description {
+    color: $color-black;
+    letter-spacing: rem(-.7);
+
+    @include mq($bp768max) {
+      @include font-size(14, 18);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.f--section-title {
+  h2 {
+    @extend %font-fira-sans-extra-condensed-regular;
+    @include margin(null null rem(20));
+    @include font-size(36, 36);
+    color: $color-sherpa-blue;
+    letter-spacing: 0.5px;
+
+    @include mq($bp768) {
+      @include margin(null null rem(26));
+    }
+
+    @include mq($bp1024) {
+      @include margin(null null rem(36));
+      @include font-size(48, 50);
+    }
+
+    .highlight {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+uuid: 60217af5-a5d9-4abf-bda2-74ad95613dff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_eyebrow
+    - node.type.program_subpage
+id: node.program_subpage.field_eyebrow
+field_name: field_eyebrow
+entity_type: node
+bundle: program_subpage
+label: 'Hero Subtitle'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

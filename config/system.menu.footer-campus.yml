@@ -1,0 +1,8 @@
+uuid: 54896c14-e480-4b04-bdf9-d01115c73645
+langcode: en
+status: true
+dependencies: {  }
+id: footer-campus
+label: 'Footer - Campus'
+description: ''
+locked: false

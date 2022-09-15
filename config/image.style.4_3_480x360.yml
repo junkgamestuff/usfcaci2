@@ -1,0 +1,23 @@
+uuid: 837eaef7-ddc9-48fc-bfdf-8d5387de3b90
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 4_3_480x360
+label: '4:3 (480x360)'
+effects:
+  425025a0-77e0-417e-9930-a4f86456f52b:
+    uuid: 425025a0-77e0-417e-9930-a4f86456f52b
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 360
+      crop_type: focal_point
+  ee4da937-adc7-48ba-91a1-6b3c9d842a85:
+    uuid: ee4da937-adc7-48ba-91a1-6b3c9d842a85
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg

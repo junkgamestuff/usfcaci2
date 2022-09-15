@@ -1,0 +1,5 @@
+name: USFCA School Context
+type: module
+description: 'Provides condition which allows to modify visibility of the content based on School taxonomy.'
+package: USFCA
+core_version_requirement: ^8.9 || ^9

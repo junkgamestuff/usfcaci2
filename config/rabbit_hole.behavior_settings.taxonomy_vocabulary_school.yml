@@ -1,0 +1,14 @@
+uuid: ff764865-5111-44b1-a452-7e33157816ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.school
+id: taxonomy_vocabulary_school
+entity_type_id: taxonomy_vocabulary
+entity_id: school
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

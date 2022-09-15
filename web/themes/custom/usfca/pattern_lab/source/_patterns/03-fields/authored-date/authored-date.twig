@@ -1,0 +1,27 @@
+{% extends "base-field" %}
+
+{% set name = "authored-date" %}
+
+{% block content %}
+
+  {% set byline = byline ?? true %}
+
+  {% if image is not empty %}
+    <img data-src="{{ image }}" alt="Author Profile Image" class="rounded-image" class="lazyload">
+  {% endif %}
+
+  <div class="text-container">
+    {% if fullname is not empty %}
+      <p>{{ byline ? 'by ' : ''}} <strong>{{ fullname }}</strong></p>
+    {% endif %}
+    {% if fullname is not empty and date is not empty %}
+      <span class="separator"></span>
+    {% endif %}
+    {% if date is not empty %}
+    <time datetime="{{ timestamp|date('c') }}">
+      <span class="date">{{ date|date('F j, Y') }}</span>
+    </time>
+    {% endif %}
+  </div>
+
+{% endblock %}

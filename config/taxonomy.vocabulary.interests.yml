@@ -1,0 +1,8 @@
+uuid: 9634f97e-5604-4de5-b11e-1f49e135a343
+langcode: en
+status: true
+dependencies: {  }
+name: Interests
+vid: interests
+description: ''
+weight: 0

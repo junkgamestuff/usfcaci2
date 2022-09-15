@@ -1,0 +1,21 @@
+uuid: d58f3531-5939-41b4-a1ac-8965e7bf1adf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_appointments
+    - node.type.profile
+  module:
+    - text
+id: node.profile.field_appointments
+field_name: field_appointments
+entity_type: node
+bundle: profile
+label: Appointments
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

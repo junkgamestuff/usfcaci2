@@ -1,0 +1,19 @@
+uuid: fe9c8ed8-bb5d-4795-bf40-37b96789e70f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_acalog_page_name
+    - paragraphs.paragraphs_type.acalog_page_link
+id: paragraph.acalog_page_link.field_acalog_page_name
+field_name: field_acalog_page_name
+entity_type: paragraph
+bundle: acalog_page_link
+label: 'Acalog Page Name'
+description: 'Enter the Page Name exactly as it appears in the Acalog catalog, e.g. "Privacy Information for Students (FERPA)".'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

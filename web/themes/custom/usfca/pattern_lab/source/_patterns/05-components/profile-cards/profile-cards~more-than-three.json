@@ -1,0 +1,60 @@
+{
+  "title": "Featured Faculty",
+  "link": {
+    "href": "https://www.example.com/",
+    "cta": "Example Link One",
+    "ariaLabel": "An Example Aria Label for CTA Link"
+  },
+  "cards": [
+    {
+      "profile_link": "https://www.example.com/1",
+      "title": "Person Name",
+      "subText": "Assistant Director, Faculty Support",
+      "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+      "image": {
+        "src": "https://placeimg.com/700/700/people",
+        "alt": "Image Alt Text4"
+      }
+    },
+    {
+      "title": "Person Name",
+      "profile_link": "https://www.example.com/2",
+      "subText": "Card subtext",
+      "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+      "image": {
+        "src": "https://placeimg.com/700/700/people",
+        "alt": "Image Alt Text4"
+      }
+    },
+    {
+      "title": "Person Name",
+      "profile_link": "https://www.example.com/3",
+      "subText": "Assistant Director, Faculty Support",
+      "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+      "image": {
+        "src": "https://placeimg.com/700/700/people",
+        "alt": "Image Alt Text4"
+      }
+    },
+    {
+      "title": "Person Name",
+      "profile_link": "https://www.example.com/2",
+      "subText": "Card subtext",
+      "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+      "image": {
+        "src": "https://placeimg.com/700/700/people",
+        "alt": "Image Alt Text4"
+      }
+    },
+    {
+      "title": "Person Name",
+      "profile_link": "https://www.example.com/3",
+      "subText": "Assistant Director, Faculty Support",
+      "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+      "image": {
+        "src": "https://placeimg.com/700/700/people",
+        "alt": "Image Alt Text4"
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{% extends "template-default.twig" %}
+
+{% set template_name = 'search' %}
+
+{% block top %}
+
+  {% include "base-layout-list" with { layouts: topLayouts } only %}
+
+{% endblock top %}
+
+{% block content %}
+
+  {% include "base-layout-list" %}
+
+{% endblock content %}
+
+{% block bottom %}
+
+{% endblock bottom %}

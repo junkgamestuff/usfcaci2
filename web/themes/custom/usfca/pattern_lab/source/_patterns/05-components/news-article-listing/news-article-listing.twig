@@ -1,0 +1,34 @@
+{% extends "base-component" %}
+
+{% set name = "news-article-listing" %}
+
+{% block content %}
+
+  {% embed "base-field" with { name: "field-components" } %}
+
+    {% block content %}
+
+      {% for card in cards %}
+
+        {% include "components-news-article-listing-component" with {
+          title: card.title,
+          link: card.link,
+          date: card.date,
+          image: card.image,
+          description: card.description,
+          publicationName: card.publicationName,
+          eyebrow: card.eyebrow
+        } only %}
+
+      {% endfor %}
+
+      {% include "components-pager" with { loadMore: true } %}
+
+      {% include "components-spacer" %}
+      {% include "components-spacer" %}
+
+    {% endblock content %}
+
+  {% endembed %}
+
+{% endblock %}

@@ -1,0 +1,10 @@
+uuid: 3c2d43a8-8e47-4b14-92a8-50a828c7049a
+langcode: en
+status: true
+dependencies: {  }
+id: homepage_hero_slide
+label: 'Homepage Hero Slide'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

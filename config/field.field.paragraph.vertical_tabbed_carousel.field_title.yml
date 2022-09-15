@@ -1,0 +1,19 @@
+uuid: 62f6002a-0812-4367-9352-a1c7891b384b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.vertical_tabbed_carousel
+id: paragraph.vertical_tabbed_carousel.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: vertical_tabbed_carousel
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

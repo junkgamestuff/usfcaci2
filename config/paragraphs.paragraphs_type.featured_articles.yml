@@ -1,0 +1,10 @@
+uuid: 701814a6-680c-4345-a243-52a9f666ea12
+langcode: en
+status: true
+dependencies: {  }
+id: featured_articles
+label: 'Featured Articles - Manual'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,48 @@
+{% extends "base-component" %}
+
+{% set name = "article-cards" %}
+
+{% block content %}
+
+  <div class="inner-wrapper">
+
+    {% if title is not empty %}
+
+      {% include "fields-section-title" with { title: title } %}
+
+    {% endif %}
+
+    {% embed "base-field" with { name: "field-components" } %}
+
+      {% block content %}
+
+        {% for card in cards %}
+
+          {% include "components-article-card" with {
+            eyebrow: card.eyebrow,
+            title: card.title,
+            link: card.link,
+            publicationName: card.publicationName,
+            image: card.image,
+            isVideo: card.isVideo,
+            publication: card.publication
+          } only %}
+
+        {% endfor %}
+
+      {% endblock content %}
+
+    {% endembed %}
+
+    {% if link is not empty %}
+
+      {% include "fields-link" with {
+        href: link.href,
+        cta: link.cta,
+        ariaLabel: link.ariaLabel
+      } only %}
+    {% endif %}
+
+  </div>
+
+{% endblock %}

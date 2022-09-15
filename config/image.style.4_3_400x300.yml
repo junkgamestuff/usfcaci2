@@ -1,0 +1,19 @@
+uuid: 108e0d5c-7e11-479e-9f98-42aec473c7ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: NMKemJRWA88NzBGYFSdL8Gfp3VCEuQxLDI2-weWFB88
+name: 4_3_400x300
+label: '4:3 (400x300)'
+effects:
+  f9983480-2fe7-4a68-8c89-a6663c6bcd7a:
+    uuid: f9983480-2fe7-4a68-8c89-a6663c6bcd7a
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 300
+      crop_type: focal_point

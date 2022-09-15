@@ -1,0 +1,47 @@
+{% extends "base-component" %}
+
+{% set name="search-listing-component" %}
+{% set variant = [image.src ? 'with-image'] %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Body text" %}
+
+{% block content %}
+
+  <div class="text-container">
+
+    {% if eyebrow is not empty %}
+      {% include "fields-category" with {
+        category: eyebrow
+      } only %}
+    {% endif %}
+
+    {% if title is not empty %}
+      {% include "fields-cta-title" with {
+        href: link.href,
+        title: title
+      } only %}
+    {% endif %}
+
+    {% if description is not empty %}
+      {% include "fields-wysiwyg" with { markup: description } only %}
+    {% endif %}
+
+    {% if link.href %}
+      <a href="{{ link.href }}">{{ link.href }}</a>
+    {% endif %}
+
+
+  </div>
+
+  {% if image.src is not empty %}
+    <div class="image-container">
+      <a href="{{ link.href }}" }}>
+        {% include "fields-image" with {
+          image: image
+        } only %}
+      </a>
+    </div>
+  {% endif %}
+
+{% endblock %}
+

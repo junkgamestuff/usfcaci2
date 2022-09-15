@@ -1,0 +1,5 @@
+name: USFCA Twig Helper
+type: module
+description: 'Helper functions for theming USFCA components.'
+package: USFCA
+core_version_requirement: ^8.9 || ^9

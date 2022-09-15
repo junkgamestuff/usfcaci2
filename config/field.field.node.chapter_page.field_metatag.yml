@@ -1,0 +1,21 @@
+uuid: ec84e7fd-8dd8-48f2-8392-1099211f644c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.chapter_page
+  module:
+    - metatag
+id: node.chapter_page.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: chapter_page
+label: Metatag
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

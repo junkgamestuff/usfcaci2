@@ -1,0 +1,13 @@
+{
+  "items": [
+    {
+      "href": "/news",
+      "cta": "News",
+      "active": true
+     },
+     {
+      "href": "/events",
+      "cta": "Events"
+     }
+  ]
+}

@@ -1,0 +1,10 @@
+uuid: 10cce6fb-17bb-47b2-a3fa-393307096480
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.program_faculty_listing
+label: 'Program Faculty Listing'
+targetEntityType: node
+cache: true

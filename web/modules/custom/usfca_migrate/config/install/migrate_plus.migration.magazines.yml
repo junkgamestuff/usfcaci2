@@ -1,0 +1,116 @@
+id: magazines
+label: Magazines
+audit: true
+migration_group: usfca
+migration_tags:
+  - USFCA
+deriver: Drupal\node\Plugin\migrate\D7NodeDeriver
+source:
+  plugin: usfca_migrate_node
+  node_type: magazine
+process:
+  # Base data
+  uid:
+    plugin: default_value
+    default_value: 1
+  type:
+    plugin: default_value
+    default_value: article
+  status: status
+  moderation_state:
+    plugin: static_map
+    source: status
+    map:
+      0: draft
+      1: published
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  created: created
+  changed: changed
+
+  # Path alias
+  path/pathauto:
+    plugin: default_value
+    default_value: 0
+  path/alias: alias
+
+  # Simple fields
+  title: title
+  field_teaser_title:
+    plugin: null_coalesce
+    source:
+      - field_display_title/0/value
+      - title
+  field_subtitle: field_sub_title
+  field_author: field_byline
+  field_teaser_description: 'body/0/summary'
+  'field_teaser_description/format':
+    plugin: default_value
+    default_value: basic_html
+
+  # Taxonomy
+  field_topics:
+    plugin: migration_lookup
+    source: field_news_terms
+    migration: taxonomy_news_terms
+    no_stub: true
+
+  # Trick to provide default taxonomy term
+  field_news_type:
+    -
+      plugin: default_value
+      default_value: 'Magazine'
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      value_key: name
+      bundle_key: vid
+      bundle: article_type
+
+  # Image
+  field_teaser_image/0/target_id:
+    - plugin: migration_lookup
+      migration: media_image
+      source: field_image/0/fid
+      no_stub: true
+  field_image/0/target_id:
+    - plugin: migration_lookup
+      migration: media_image
+      source: field_image/0/fid
+      no_stub: true
+
+  # Paragraphs
+  intro_text:
+    plugin: migration_lookup
+    migration: paragraph_intro_text
+    source: nid
+    no_stub: true
+
+  rich_text:
+    plugin: migration_lookup
+    migration: paragraph_rich_text
+    source: nid
+    no_stub: true
+
+  field_components:
+    plugin: sub_process
+    source: 
+      - '@intro_text'
+      - '@rich_text'
+    process:
+        target_id:
+           -
+             plugin: skip_on_empty
+             method: process
+             message: 'Cannot import empty paragraph'
+             source: '0'
+        target_revision_id:
+           -
+             plugin: skip_on_empty
+             method: process
+             message: 'Cannot import empty paragraph'
+             source: '1'
+
+destination:
+  plugin: entity:node

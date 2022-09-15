@@ -1,0 +1,55 @@
+{% extends "base-component" %}
+
+{% set name = "profile-card-horizontal" %}
+{% set container_element = 'article' %}
+{% set container_aria_label = "Profiles Card" %}
+
+{% block content %}
+
+  <div class="image-container">
+    <a href="{{ profileLink }}">
+      {% include "fields-image" with {
+        image: image
+      } only %}
+    </a>
+  </div>
+
+  <div class="text-container">
+
+    {% include "fields-cta-title" with {
+      href: profileLink,
+      title: title
+    } only %}
+
+    {% include "fields-text" with {
+      text: role
+    } only %}
+
+    {% include "fields-text" with {
+      text: facultyRole
+    } only %}
+
+
+    {% include "fields-text" with {
+      text: departmentLabel
+    } only %}
+
+  </div>
+
+  <div class="data-wrapper">
+    {% if contact.label %}
+      <div class="contact">
+        {% if contact.mail is not empty %}
+          <a href="mailto:{{ contact.mail }}">{{ contact.mail }}</a>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if office.label and office.text %}
+      <div class="office">
+        <div>{{ office.text }}</div>
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}
+

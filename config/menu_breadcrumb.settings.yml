@@ -1,0 +1,121 @@
+_core:
+  default_config_hash: B_6w2RYqF6vEA_QZ8-0LRUI0AqnS4NZuQqlO9rXwfJs
+determine_menu: true
+disable_admin_page: true
+append_current_page: true
+current_page_as_link: false
+stop_on_first_match: false
+append_member_page: false
+member_page_as_link: false
+remove_home: false
+add_home: true
+front_title: 0
+exclude_empty_url: true
+exclude_disabled_menu_items: true
+derived_active_trail: false
+menu_breadcrumb_menus:
+  college-of-arts-and-sciences:
+    enabled: 1
+    weight: -10
+    taxattach: 0
+    langhandle: 0
+  school-of-education:
+    enabled: 1
+    weight: -9
+    taxattach: 0
+    langhandle: 0
+  school-of-law:
+    enabled: 1
+    weight: -8
+    taxattach: 0
+    langhandle: 0
+  school-of-management:
+    enabled: 1
+    weight: -7
+    taxattach: 0
+    langhandle: 0
+  school-of-nursing:
+    enabled: 1
+    weight: -6
+    taxattach: 0
+    langhandle: 0
+  main:
+    enabled: 1
+    weight: -5
+    taxattach: 0
+    langhandle: 0
+  admin:
+    enabled: 0
+    weight: -4
+    taxattach: 0
+    langhandle: 0
+  college-of-arts-and-sciences-uti:
+    enabled: 0
+    weight: -3
+    taxattach: 0
+    langhandle: 0
+  devel:
+    enabled: 0
+    weight: -2
+    taxattach: 0
+    langhandle: 0
+  footer-academics:
+    enabled: 0
+    weight: -1
+    taxattach: 0
+    langhandle: 0
+  footer-campus:
+    enabled: 0
+    weight: 0
+    taxattach: 0
+    langhandle: 0
+  footer:
+    enabled: 0
+    weight: 1
+    taxattach: 0
+    langhandle: 0
+  footer-utility:
+    enabled: 0
+    weight: 2
+    taxattach: 0
+    langhandle: 0
+  footer-links:
+    enabled: 0
+    weight: 3
+    taxattach: 0
+    langhandle: 0
+  school-of-education-utility:
+    enabled: 0
+    weight: 4
+    taxattach: 0
+    langhandle: 0
+  school-of-law-utility:
+    enabled: 0
+    weight: 5
+    taxattach: 0
+    langhandle: 0
+  school-of-management-utility:
+    enabled: 0
+    weight: 6
+    taxattach: 0
+    langhandle: 0
+  school-of-nursing-utility:
+    enabled: 0
+    weight: 7
+    taxattach: 0
+    langhandle: 0
+  tools:
+    enabled: 0
+    weight: 8
+    taxattach: 0
+    langhandle: 0
+  account:
+    enabled: 0
+    weight: 9
+    taxattach: 0
+    langhandle: 0
+  utility:
+    enabled: 0
+    weight: 10
+    taxattach: 0
+    langhandle: 0

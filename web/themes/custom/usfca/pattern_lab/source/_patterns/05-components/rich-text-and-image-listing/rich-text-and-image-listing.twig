@@ -1,0 +1,44 @@
+{% extends "base-component" %}
+
+{% set name = "rich-text-and-image-listing" %}
+
+{% block content %}
+
+  <div class="section-wrapper">
+
+    {% if title is not empty %}
+
+      {% include "fields-section-title" with { title: title } %}
+
+    {% endif %}
+
+    {% if description is not empty %}
+
+      {% include "fields-wysiwyg" with { markup: description } only %}
+
+    {% endif %}
+
+  </div>
+
+  {% embed "base-field" with { name: "field-components" } %}
+
+    {% block content %}
+
+      {% for card in cards %}
+
+        {% include "components-rich-text-and-image" with {
+          title: card.title,
+          link: card.link,
+          date: card.date,
+          image: card.image,
+          description: card.description,
+          isVideo: card.isVideo
+        } only %}
+
+      {% endfor %}
+
+    {% endblock content %}
+
+  {% endembed %}
+
+{% endblock %}

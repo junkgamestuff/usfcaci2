@@ -1,0 +1,48 @@
+{% extends "base-component" %}
+
+{% set name = "hero-home-minisite" %}
+{% set container_element = 'section' %}
+
+{% block content %}
+
+  <div class="image-text-container">
+    <div class="image-wrapper">
+      {% include "fields-image" with {
+        image: image
+      } only %}
+    </div>
+
+    <div class="text-wrapper">
+      {% if category is not empty %}
+        {% include "fields-category" with { category: category } only %}
+      {% endif %}
+
+      {% include "fields-page-title" with { title: title } only %}
+    </div>
+  </div>
+
+  <div class="text-container">
+    <div class="left-wrapper">
+
+      {% if breadcrumbs.render is not empty %}
+        {{ breadcrumbs.render }}
+      {% else %}
+        {% include "components-breadcrumbs" with { homeURL: breadcrumbs.homeURL, items: breadcrumbs.items } %}
+      {% endif %}
+
+      {% if intro is not empty %}
+        {% include "components-intro-text" with { title: intro.title, description: intro.description } %}
+      {% endif %}
+
+    </div>
+
+    {% if menu is not empty %}
+      {% if menu.render is not empty %}
+        {{ menu.render }}
+      {% else %}
+        {% include "components-minisite-home-hero-nav" with { menu: menu } %}
+      {% endif %}
+    {% endif %}
+  </div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{
+  "title": "Rich Text and Image",
+  "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>",
+  "cards": [
+    {
+      "title": "Rich Text and Image",
+      "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>",
+      "image": {
+        "src": "https://placeimg.com/600/600/nature",
+        "alt": "Alt 1"
+      },
+      "link": {
+        "href": "#"
+      },
+      "isVideo": true
+    },
+    {
+      "title": "Rich Text and Image",
+      "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>",
+      "image": {
+        "src": "https://placeimg.com/600/600/people",
+        "alt": "Alt 1"
+      },
+      "link": {
+        "href": "#"
+      }
+    },
+    {
+      "title": "Rich Text and Image",
+      "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>",
+      "image": {
+        "src": "https://placeimg.com/600/600/tech",
+        "alt": "Alt 1"
+      },
+      "link": {
+        "href": "#"
+      }
+    }
+  ]
+}

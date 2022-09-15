@@ -1,0 +1,17 @@
+{% extends "base-component" %}
+
+{% set name = "article-teaser-row" %}
+
+{% block content %}
+
+  {% include "fields-image" with { src: image.src, alt: image.alt } only %}
+
+  <div class="text-container">
+
+    {% include "fields-cta-title" with { title: title } only %}
+
+    {% include "fields-description" with { description: description } only %}
+
+  </div>
+
+{% endblock content %}

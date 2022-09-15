@@ -1,0 +1,69 @@
+{# API spec:
+
+component_background_image_url_container: applies background image to cc-- container.
+lazy_component_background_image_url_container: lazy version
+
+component_background_image_url: applies background image to c-- inner wrapper.
+lazy_component_background_image_url: lazy version
+
+#}
+{% if variant is iterable %}
+  {% set variant_processed = variant|join(' ') %}
+{% else %}
+  {% set variant_processed = variant %}
+{% endif %}
+
+{% if extra_classes is iterable %}
+    {% set extra_classes_processed = extra_classes|join(' ') %}
+{% else %}
+    {% set extra_classes_processed = extra_classes %}
+{% endif %}
+
+{%
+  set container_element = container_element|default('div')
+%}
+
+{# BEGIN support for legacy params #}
+
+{% if background_image_url is not empty %}{% set component_background_image_url_container = background_image_url %}{% endif %}
+
+{% if background_component_image_url %}{% set component_background_image_url = background_component_image_url %}{% endif %}
+
+{# END support for legacy params #}
+
+{% if cq_wrap %}
+<div class="DO-NOT-USE {{ name }}">
+{% endif %}
+
+<{{ container_element }}
+  class="cc--component-container cc--{{ name }} {{ (variant_processed) ? variant_processed : '' }}{{ (extra_classes_processed) ? ' ' ~ extra_classes_processed : '' }}{{ lazy_component_background_image_url_container ? ' ' ~ 'lazyload' : '' }}"
+
+  {% if container_id %} id="{{ container_id }}"{% endif %}
+
+  {% if container_aria_label %} aria-label="{{ container_aria_label }}"{% endif %}
+
+  {% if container_aria_role %} role="{{ container_aria_role }}"{% endif %}
+
+  {% if alert_visible %} style="display: block;"{% endif %}
+
+  {% if container_json_data %} data-json="{{ container_json_data | json_encode }}"{% endif %}
+
+  {% if component_background_image_url_container %} style="background-image: url('{{ component_background_image_url_container }}');"{% endif %}
+
+  {% if lazy_component_background_image_url_container %} data-bg="{{ lazy_component_background_image_url_container }}"{% endif %}
+>
+  <div class="c--component c--{{ name }}{{ lazy_component_background_image_url ? ' ' ~ 'lazyload' : '' }}"
+    {% if component_background_image_url %} style="background-image: url('{{ component_background_image_url }}');"{% endif %}
+
+    {% if lazy_component_background_image_url %} data-bg="{{ lazy_component_background_image_url }}"{% endif %}
+  >
+
+    {% block content %}
+    {% endblock %}
+
+  </div>{# c--component c--{{ name }} #}
+</{{ container_element }}>{# cc--component-container cc--{{ name }} #}
+
+{% if cq_wrap %}
+</div>
+{% endif %}

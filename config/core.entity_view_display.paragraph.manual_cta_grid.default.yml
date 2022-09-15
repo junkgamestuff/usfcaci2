@@ -1,0 +1,52 @@
+uuid: 09fd326f-1af8-4de9-a595-f0e018efb90a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.manual_cta_grid.field_cards
+    - field.field.paragraph.manual_cta_grid.field_description
+    - field.field.paragraph.manual_cta_grid.field_title
+    - field.field.paragraph.manual_cta_grid.field_title_highlight
+    - paragraphs.paragraphs_type.manual_cta_grid
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.manual_cta_grid.default
+targetEntityType: paragraph
+bundle: manual_cta_grid
+mode: default
+content:
+  field_cards:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title_highlight:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

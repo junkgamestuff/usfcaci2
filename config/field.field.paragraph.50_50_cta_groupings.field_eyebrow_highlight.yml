@@ -1,0 +1,19 @@
+uuid: beb14a64-b834-42e5-b988-2dff666a02f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_eyebrow_highlight
+    - paragraphs.paragraphs_type.50_50_cta_groupings
+id: paragraph.50_50_cta_groupings.field_eyebrow_highlight
+field_name: field_eyebrow_highlight
+entity_type: paragraph
+bundle: 50_50_cta_groupings
+label: 'Right Links Title Highlight'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

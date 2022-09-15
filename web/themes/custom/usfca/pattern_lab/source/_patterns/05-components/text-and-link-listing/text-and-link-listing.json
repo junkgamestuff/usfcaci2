@@ -1,0 +1,43 @@
+{
+  "title": "Find your<br/> <strong>program</strong>",
+  "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>",
+  "background_image_url": "https://placeimg.com/1200/500/people/grayscale",
+  "links": [
+    {
+      "url": "https://www.example.com/",
+      "title": "Example Link 1 Example Link 1 Example Link 1 Example Link 1",
+      "ariaLabel": "An Example Aria Label for CTA Link",
+      "hasIcon": false
+    },
+    {
+      "url": "https://www.example.com/",
+      "title": "Example Link 2",
+      "ariaLabel": "An Example Aria Label for CTA Link",
+      "hasIcon": false
+    },
+    {
+      "url": "https://www.example.com/",
+      "title": "Example Link 3",
+      "ariaLabel": "An Example Aria Label for CTA Link",
+      "hasIcon": false
+    },
+    {
+      "url": "https://www.example.com/",
+      "title": "Example Link 4",
+      "ariaLabel": "An Example Aria Label for CTA Link",
+      "hasIcon": false
+    },
+    {
+      "url": "https://www.example.com/",
+      "title": "Example Link 5",
+      "ariaLabel": "An Example Aria Label for CTA Link",
+      "hasIcon": false
+    },
+    {
+      "url": "https://www.example.com/",
+      "title": "Example Link 6",
+      "ariaLabel": "An Example Aria Label for CTA Link",
+      "hasIcon": false
+    }
+  ]
+}

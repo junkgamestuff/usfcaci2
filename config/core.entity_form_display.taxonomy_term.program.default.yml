@@ -1,0 +1,86 @@
+uuid: cd1d1c03-206e-4af3-91b2-3dbdc75a8de9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.program.field_cta_links
+    - field.field.taxonomy_term.program.field_main_page_link
+    - field.field.taxonomy_term.program.field_pages_links
+    - taxonomy.vocabulary.program
+  module:
+    - link_attributes
+id: taxonomy_term.program.default
+targetEntityType: taxonomy_term
+bundle: program
+mode: default
+content:
+  field_cta_links:
+    type: link_attributes
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        aria-label: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        title: false
+    third_party_settings: {  }
+  field_main_page_link:
+    type: link_attributes
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        aria-label: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        title: false
+    third_party_settings: {  }
+  field_pages_links:
+    type: link_attributes
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        aria-label: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        title: false
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true

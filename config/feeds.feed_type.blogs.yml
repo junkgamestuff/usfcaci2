@@ -1,0 +1,204 @@
+uuid: 3de17f7a-94f0-4a8e-870b-e46499ed6443
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blog_teaser.field_blog_category
+    - field.field.node.blog_teaser.field_link
+    - field.field.node.blog_teaser.field_teaser_description
+    - field.field.node.blog_teaser.field_teaser_image
+    - field.field.node.blog_teaser.field_teaser_title
+    - node.type.blog_teaser
+  module:
+    - feeds_ex
+    - feeds_tamper
+    - node
+third_party_settings:
+  feeds_tamper:
+    tampers:
+      cab0550d-5355-49ac-ad22-09cf4fde1a5b:
+        default_value: published
+        only_if_empty: false
+        uuid: cab0550d-5355-49ac-ad22-09cf4fde1a5b
+        plugin: default_value
+        source: published
+        weight: 0
+        label: 'Set value or default value'
+      24a70f8b-9e6f-49e6-8b37-b6637462a5a3:
+        find: '-'
+        replace: ' '
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 24a70f8b-9e6f-49e6-8b37-b6637462a5a3
+        plugin: find_replace
+        source: source
+        weight: 0
+        label: 'Find replace'
+      30b0f6dd-9c2f-43df-a2bb-eba76e3f75a4:
+        find: _
+        replace: ' '
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 30b0f6dd-9c2f-43df-a2bb-eba76e3f75a4
+        plugin: find_replace
+        source: source
+        weight: 1
+        label: 'Find replace'
+      d4c412e5-be50-4d7d-8e99-49ea0477e0fa:
+        find: gleesongleanings
+        replace: 'gleeson gleanings'
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: d4c412e5-be50-4d7d-8e99-49ea0477e0fa
+        plugin: find_replace
+        source: source
+        weight: 2
+        label: 'Find replace'
+      5ac0bcfd-caef-428b-b5b6-cd6949a5bc17:
+        find: coms
+        replace: communications
+        case_sensitive: false
+        word_boundaries: false
+        whole: false
+        uuid: 5ac0bcfd-caef-428b-b5b6-cd6949a5bc17
+        plugin: find_replace
+        source: source
+        weight: 3
+        label: 'Find replace'
+label: Blogs
+id: blogs
+description: ''
+help: ''
+import_period: 3600
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: xml
+parser_configuration:
+  context:
+    value: /usfBlogs/item
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+  use_tidy: false
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: blog_teaser
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  title:
+    label: title
+    machine_name: title
+    value: title
+    raw: false
+    inner: false
+    type: xml
+  excerptplaintext:
+    label: excerptPlainText
+    machine_name: excerptplaintext
+    value: excerptPlainText
+    raw: false
+    inner: false
+    type: xml
+  link:
+    label: link
+    machine_name: link
+    value: link
+    raw: false
+    inner: false
+    type: xml
+  media:
+    label: media
+    machine_name: media
+    value: media
+    raw: false
+    inner: false
+    type: xml
+  source:
+    label: source
+    machine_name: source
+    value: source
+    raw: false
+    inner: false
+    type: xml
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+    type: blank
+  published:
+    value: published
+    label: published
+    machine_name: published
+    type: blank
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique:
+      value: '1'
+  -
+    target: field_teaser_title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_teaser_description
+    map:
+      value: excerptplaintext
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_link
+    map:
+      uri: link
+      title: ''
+    settings:
+      language: null
+  -
+    target: field_teaser_image
+    map:
+      target_id: media
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      feeds_item: false
+  -
+    target: field_blog_category
+    map:
+      target_id: source
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+  -
+    target: moderation_state
+    map:
+      value: published
+    settings:
+      language: null
+    unique: {  }

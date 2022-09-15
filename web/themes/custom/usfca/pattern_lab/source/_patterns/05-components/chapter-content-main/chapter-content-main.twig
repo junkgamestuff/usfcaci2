@@ -1,0 +1,23 @@
+{% extends "base-component" %}
+
+{% set name = "chapter-content-main" %}
+
+{% block content %}
+
+  {% for item in items %}
+
+    {% if item.components|length %}
+      <aside class="content-sidebar">
+        {% include "components-chapter-jump-links" with { chapters: item.components } only %}
+      </aside>
+    {% endif %}
+
+    <div class="content-main">
+      {% for component in item.components %}
+        {% include "components-" ~ component.type with component only %}
+      {% endfor %}
+    </div>
+
+  {% endfor %}
+
+{% endblock content %}

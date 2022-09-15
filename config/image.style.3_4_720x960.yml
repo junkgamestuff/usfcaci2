@@ -1,0 +1,23 @@
+uuid: 348a06e8-e2b0-48bf-9277-c4161f2a937f
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 3_4_720x960
+label: '3:4 (720x960)'
+effects:
+  c73f516c-3854-4092-856f-574d9335b44e:
+    uuid: c73f516c-3854-4092-856f-574d9335b44e
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 720
+      height: 960
+      crop_type: focal_point
+  3f1c9d63-159a-481c-8119-9424d37143cc:
+    uuid: 3f1c9d63-159a-481c-8119-9424d37143cc
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg

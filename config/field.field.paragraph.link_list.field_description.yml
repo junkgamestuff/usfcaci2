@@ -1,0 +1,21 @@
+uuid: 39ea0db5-0a5d-4cde-bc51-3d712297da4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.link_list
+  module:
+    - text
+id: paragraph.link_list.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: link_list
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

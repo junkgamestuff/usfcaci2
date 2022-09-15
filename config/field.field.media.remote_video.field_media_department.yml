@@ -1,0 +1,29 @@
+uuid: 1ddb3b6e-e6aa-4c1b-a2a5-f85e7a114553
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_department
+    - media.type.remote_video
+    - taxonomy.vocabulary.media_department
+id: media.remote_video.field_media_department
+field_name: field_media_department
+entity_type: media
+bundle: remote_video
+label: 'College / Office'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      media_department: media_department
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

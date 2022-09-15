@@ -1,0 +1,23 @@
+uuid: 8ea6ce45-9a03-4016-bc27-66d834b405f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 16_9_480x270
+label: '16:9 (480x270)'
+effects:
+  b05dc84c-3882-455a-b7d2-aea3e7348775:
+    uuid: b05dc84c-3882-455a-b7d2-aea3e7348775
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 480
+      height: 270
+      crop_type: focal_point
+  63384df6-7ddc-4be9-bfeb-25d9603fefd2:
+    uuid: 63384df6-7ddc-4be9-bfeb-25d9603fefd2
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg

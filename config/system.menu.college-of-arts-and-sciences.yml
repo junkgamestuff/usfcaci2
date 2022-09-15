@@ -1,0 +1,8 @@
+uuid: a06cae92-1252-4382-b20a-e4e93e38a5ba
+langcode: en
+status: true
+dependencies: {  }
+id: college-of-arts-and-sciences
+label: 'College of Arts and Sciences'
+description: ''
+locked: false

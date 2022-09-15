@@ -1,0 +1,39 @@
+uuid: 2a784592-2609-4e4d-9b7c-90d05c188c82
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.search_results.field_display_title
+    - field.field.node.search_results.field_gps_context_id
+    - field.field.node.search_results.field_gps_default_refinement
+    - field.field.node.search_results.field_link
+    - field.field.node.search_results.field_metatag
+    - field.field.node.search_results.field_school
+    - node.type.search_results
+  module:
+    - user
+id: node.search_results.teaser
+targetEntityType: node
+bundle: search_results
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_display_title: true
+  field_gps_context_id: true
+  field_gps_default_refinement: true
+  field_link: true
+  field_metatag: true
+  field_school: true
+  langcode: true
+  search_api_excerpt: true

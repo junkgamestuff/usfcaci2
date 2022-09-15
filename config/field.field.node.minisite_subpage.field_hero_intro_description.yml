@@ -1,0 +1,21 @@
+uuid: 40b18526-3ae8-4bbf-bed9-29d5cb49fc5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_intro_description
+    - node.type.minisite_subpage
+  module:
+    - text
+id: node.minisite_subpage.field_hero_intro_description
+field_name: field_hero_intro_description
+entity_type: node
+bundle: minisite_subpage
+label: 'Hero Intro Description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

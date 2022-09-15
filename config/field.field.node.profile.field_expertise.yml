@@ -1,0 +1,21 @@
+uuid: 99b9a4f5-740f-4c8b-b1bf-3c575ed4368f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_expertise
+    - node.type.profile
+  module:
+    - text
+id: node.profile.field_expertise
+field_name: field_expertise
+entity_type: node
+bundle: profile
+label: Expertise
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

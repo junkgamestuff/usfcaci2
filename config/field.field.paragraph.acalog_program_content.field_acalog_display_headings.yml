@@ -1,0 +1,23 @@
+uuid: 01da16fc-ad09-4cc9-9c64-6faa2d6176f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_acalog_display_headings
+    - paragraphs.paragraphs_type.acalog_program_content
+id: paragraph.acalog_program_content.field_acalog_display_headings
+field_name: field_acalog_display_headings
+entity_type: paragraph
+bundle: acalog_program_content
+label: 'Acalog Display Headings'
+description: 'Optionally limit the Acalog <em>Program</em> content displayed to section headings matching a pattern. E.g. "Program Learning Outcomes", "Curriculum Sample".'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Program Learning Outcomes'
+  -
+    value: 'Curriculum Sample'
+default_value_callback: ''
+settings: {  }
+field_type: string

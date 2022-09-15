@@ -1,0 +1,10 @@
+uuid: 4e93ffd5-38d7-4b09-a0b4-3926b0f0a33f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.3_4_profile
+label: '3:4 Profile'
+targetEntityType: media
+cache: true

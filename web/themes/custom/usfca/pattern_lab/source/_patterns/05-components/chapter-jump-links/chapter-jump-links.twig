@@ -1,0 +1,18 @@
+{% extends "base-component" %}
+
+{% set name = "chapter-jump-links" %}
+
+{% block content %}
+  {% if chapters is not empty %}
+    <h3>On This page</h3>
+    <ul class="chapter-menu">
+    {% for chapter in chapters %}
+      {% if chapter.title is not empty %}
+        <li class="chapter-menu-item">
+          {% include "fields-link" with { cta: chapter.title, href: '#' ~ chapter.id, isAlt: true } %}
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endblock content %}

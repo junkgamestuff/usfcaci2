@@ -1,0 +1,19 @@
+uuid: ce2a1927-2591-48ca-972f-9abb25a8bdb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title_highlight
+    - paragraphs.paragraphs_type.map_with_pins
+id: paragraph.map_with_pins.field_title_highlight
+field_name: field_title_highlight
+entity_type: paragraph
+bundle: map_with_pins
+label: 'Title Highlight'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

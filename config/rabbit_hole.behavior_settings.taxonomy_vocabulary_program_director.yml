@@ -1,0 +1,14 @@
+uuid: b781eb0a-d55d-4535-acfb-8fc2de496b7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.program_director
+id: taxonomy_vocabulary_program_director
+entity_type_id: taxonomy_vocabulary
+entity_id: program_director
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

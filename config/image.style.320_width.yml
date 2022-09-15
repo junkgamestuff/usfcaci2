@@ -1,0 +1,21 @@
+uuid: 04eeec31-b923-4cee-b14b-17e96181f452
+langcode: en
+status: true
+dependencies: {  }
+name: 320_width
+label: '320 Width'
+effects:
+  a18b562e-f791-42b4-bb3b-2368c27a96b0:
+    uuid: a18b562e-f791-42b4-bb3b-2368c27a96b0
+    id: image_scale
+    weight: 1
+    data:
+      width: 360
+      height: null
+      upscale: false
+  801a77a0-6d77-4a6a-aaa8-dd7d120af8a0:
+    uuid: 801a77a0-6d77-4a6a-aaa8-dd7d120af8a0
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg

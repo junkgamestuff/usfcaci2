@@ -1,0 +1,23 @@
+.tc--program-page {
+  @include mq($bp1024) {
+    @include margin(rem(-150) null null);
+  }
+}
+
+.program-page {
+  .t--program-page {
+    .content-sidebar-main-wrapper {
+      .content-sidebar-main-wrapper-inner {
+        @include padding(0 null null);
+      }
+    }
+  }
+
+  .content-main {
+    @include maxwidth;
+
+    .lr--main {
+      overflow: visible;
+    }
+  }
+}

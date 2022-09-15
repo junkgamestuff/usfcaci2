@@ -1,0 +1,50 @@
+{
+  "bodyClass": "transparent-header",
+  "pageTitle": "Landing Page",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "hero-landing-page",
+          "title": "Academics",
+          "description": null
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "breadcrumbs",
+          "homeURL": "/",
+          "items": [
+            {
+              "title": "Academics",
+              "href": "#REPLACE"
+            }
+          ]
+        },
+        { "type": "fifty-fifty-split-cta" },
+        { "type": "spacer" },
+        { "type": "text-and-link-listing" },
+        { "type": "spacer" },
+        { "type": "manual-cards" },
+        { "type": "spacer" },
+        { "type": "quote-and-cta" },
+        { "type": "spacer" },
+        { "type": "fifty-fifty-split-cta" },
+        { "type": "spacer" },
+        { "type": "stats" },
+        { "type": "spacer" },
+        { "type": "ribbon-carousel" },
+        { "type": "spacer" },
+        { "type": "manual-cta-grid" },
+        { "type": "spacer" },
+        { "type": "full-width-cta" }
+      ]
+    }
+  ],
+  "bottomLayouts": null
+}

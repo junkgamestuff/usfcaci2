@@ -1,0 +1,9 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% include "components-slate-form" with {
+    text: fields.embed_code,
+  } only %}
+
+{% endblock content %}

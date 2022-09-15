@@ -1,0 +1,17 @@
+uuid: 4ff82f39-58c3-48ec-b1c2-72902f9b37e4
+langcode: en
+status: true
+dependencies: {  }
+id: usfca_site_config
+label: 'USFCA Site Config'
+token: false
+context:
+  show_warning: false
+  group:
+    language: false
+  fallback:
+    language: ''
+menu:
+  path: /admin/config/usfca_site_config
+  weight: 50
+  description: 'USFCA Site Config'

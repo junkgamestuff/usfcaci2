@@ -1,0 +1,56 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+
+  <div class="content-top">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {% include "components-hero-landing-page" with {
+            title: fields.title,
+            category: fields.eyebrow | upper,
+            image: fields.image.uri ? {
+              src: fields.image.uri | image_style('16_9_2400x1350'),
+              alt: fields.image.alt,
+              render: drupal_image(fields.image.uri, '16_9_full', {alt: fields.image.alt}, responsive=true)
+            } : null,
+          } %}
+
+          {{ content_extra }}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-main">
+    <div class="lc--layout-container lc--two-column-reverse">
+      <div class="l--layout l--two-column-reverse">
+        <div class="l--two-column-reverse-inner">
+          <div class="lr--layout-region lr--main">
+            {{ content.field_components }}
+          </div>
+          <aside class="lr--layout-region lr--sidebar">
+            {{ content.field_components_sidebar }}
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-bottom">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {{ content.field_components_footer }}
+
+          {% include 'components-spacer' %}
+          {% include 'components-spacer' %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

@@ -1,0 +1,22 @@
+uuid: ccd84f8d-736f-4e2d-822f-1b73728a5f61
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: profile
+label: Profile
+type: 'canonical_entities:node'
+pattern: 'faculty/[node:title]'
+selection_criteria:
+  0aba4da1-af00-4388-bdfa-c00092ea113f:
+    id: node_type
+    negate: false
+    uuid: 0aba4da1-af00-4388-bdfa-c00092ea113f
+    context_mapping:
+      node: node
+    bundles:
+      profile: profile
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,23 @@
+uuid: 6aaee211-cb8d-4000-ba14-ec792b8e4c02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.media_mention
+  module:
+    - link
+id: node.media_mention.field_link
+field_name: field_link
+entity_type: node
+bundle: media_mention
+label: Url
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

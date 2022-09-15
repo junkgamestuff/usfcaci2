@@ -1,0 +1,8 @@
+uuid: f9961380-654a-42f5-9aac-ac4ae840eeb3
+langcode: en
+status: true
+dependencies: {  }
+id: school-of-management
+label: 'School of Management'
+description: ''
+locked: false

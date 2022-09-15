@@ -1,0 +1,23 @@
+{
+  "profileInfo": {
+    "image": {
+      "src": "https://placeimg.com/700/700/people",
+      "alt": "Alt 1"
+    },
+    "link": {
+      "href": "#",
+      "cta": "View CV"
+    },
+    "details": {
+      "label": "Fields of Interest",
+      "items": [
+        {
+          "text": "Accounting"
+        },
+        {
+          "text": "Communication"
+        }
+      ]
+    }
+  }
+}

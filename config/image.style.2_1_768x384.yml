@@ -1,0 +1,23 @@
+uuid: 1f271885-1bfa-48c6-ac4f-9684d573016b
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 2_1_768x384
+label: '2:1 (768x384)'
+effects:
+  3a07222b-c324-40ed-9c42-b003b618502a:
+    uuid: 3a07222b-c324-40ed-9c42-b003b618502a
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 768
+      height: 384
+      crop_type: focal_point
+  ecf90498-af7f-4a71-a188-d9a02c47d31d:
+    uuid: ecf90498-af7f-4a71-a188-d9a02c47d31d
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg

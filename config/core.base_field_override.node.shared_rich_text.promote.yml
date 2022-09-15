@@ -1,0 +1,22 @@
+uuid: d6306238-af29-40b4-9cbb-d87f46c1af88
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.shared_rich_text
+id: node.shared_rich_text.promote
+field_name: promote
+entity_type: node
+bundle: shared_rich_text
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

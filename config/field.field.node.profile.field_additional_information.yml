@@ -1,0 +1,21 @@
+uuid: 86eb30ec-9563-48e1-978d-bbcf23333326
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_information
+    - node.type.profile
+  module:
+    - text
+id: node.profile.field_additional_information
+field_name: field_additional_information
+entity_type: node
+bundle: profile
+label: 'Additional Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,14 @@
+uuid: 5a2c4cb1-b985-4a02-a03d-de9b0b0309c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.school_role
+id: taxonomy_vocabulary_school_role
+entity_type_id: taxonomy_vocabulary
+entity_id: school_role
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

@@ -1,0 +1,10 @@
+uuid: 13be3741-8f53-4e34-86ab-3490007ccafb
+langcode: en
+status: true
+dependencies: {  }
+id: blog_teasers_automatic
+label: 'Blog Teasers - Automatic'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

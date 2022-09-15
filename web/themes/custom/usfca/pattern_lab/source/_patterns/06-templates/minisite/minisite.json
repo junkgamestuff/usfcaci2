@@ -1,0 +1,30 @@
+{
+  "bodyClass": "home-page-minisite transparent-header",
+  "pageTitle": "Undergraduate Admissions",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "hero-home-minisite"
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "full-width-cta" },
+        { "type": "vertical-tabbed-carousel" },
+        { "type": "stats" },
+        { "type": "full-width-cta" },
+        { "type": "ribbon-carousel" },
+        { "type": "text-and-link-listing" },
+        { "type": "event-cards" },
+        { "type": "fifty-fifty-cta-groupings" }
+      ]
+    }
+  ],
+  "bottomLayouts": null
+}

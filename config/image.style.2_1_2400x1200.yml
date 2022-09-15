@@ -1,0 +1,23 @@
+uuid: b0037890-410c-4561-bbe9-e5e411bfd265
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: 2_1_2400x1200
+label: '2:1 (2400x1200)'
+effects:
+  d115a3b9-cebf-4a9f-8c1e-f3743d8d34fc:
+    uuid: d115a3b9-cebf-4a9f-8c1e-f3743d8d34fc
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 2400
+      height: 1200
+      crop_type: focal_point
+  2ce43a94-03bb-4561-a72d-988fff2e2229:
+    uuid: 2ce43a94-03bb-4561-a72d-988fff2e2229
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg

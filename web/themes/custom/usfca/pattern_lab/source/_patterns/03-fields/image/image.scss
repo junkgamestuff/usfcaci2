@@ -1,0 +1,12 @@
+.f--image {
+  figcaption p {
+    @include font-size(12, 16);
+    color: $color-secondary;
+    font-style: normal;
+    text-align: left;
+
+    @include mq($bp1024) {
+      @include font-size(14, 19);
+    }
+  }
+}

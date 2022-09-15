@@ -1,0 +1,14 @@
+uuid: f641fc5f-55b7-45cb-be18-ac92406c414a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.basic_page
+id: node_type_basic_page
+entity_type_id: node_type
+entity_id: basic_page
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

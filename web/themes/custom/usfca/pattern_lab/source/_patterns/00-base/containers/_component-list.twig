@@ -1,0 +1,21 @@
+{% for component in components %}
+
+  {% if component.type is not empty %}
+
+    {% set component_json = load_component_json(component.type, component.variation) %}
+
+    {% if component_json is not empty %}
+
+      {% set component_merged_props = component_json | merge(component) %}
+
+      {% include 'components-' ~ component.type with component_merged_props %}
+
+    {% else %}
+
+      {% include 'components-' ~ component.type with component %}
+
+    {% endif %}
+
+  {% endif %}
+
+{% endfor %}

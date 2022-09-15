@@ -1,0 +1,39 @@
+
+{% extends "base-component" %}
+
+{% set name = "footer" %}
+{% set container_element = 'div' %}
+
+{% block content %}
+
+  <div class="footer-main">
+    <div class="footer-top">
+      <div class="branding-social-container">
+        {% include "components-branding-footer" with { footerLogo: footerLogo } only %}
+        {% include "components-footer-contact" with {
+          markup: footerContactWysiwyg
+        } %}
+        {% include "components-footer-social" with { label: "Follow Us" } %}
+      </div>
+      <div class="menu-container">
+        {% include "components-footer-menu" with { menu: footerMenuConnect } only %}
+        {% include "components-footer-menu" with { menu: footerMenuAcademics } only %}
+        {% include "components-footer-menu" with { menu: footerMenuCampus } only %}
+        {% include "components-footer-menu" with { menu: footerMenuUtility } only %}
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="info-container">
+        {% include "components-footer-links" %}
+
+        <div class="block-system-branding-block">
+          {% include "fields-wysiwyg" with {
+            markup: footerBottomWysiwyg
+          } %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

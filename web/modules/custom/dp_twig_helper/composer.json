@@ -1,0 +1,13 @@
+{
+  "name": "digitalpulp/dp_twig_helper",
+  "description": "This module makes it easier to work with field variables in Drupal Twig templates.",
+  "type": "drupal-module",
+  "authors": [
+    {
+      "name": "Sam Thompson",
+      "role": "Maintainer"
+    }
+  ],
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev"
+}

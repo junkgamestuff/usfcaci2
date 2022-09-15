@@ -1,0 +1,13 @@
+{% extends "base-component" %}
+
+{% set name = "stat-card" %}
+
+{% block content %}
+
+  {% include "fields-label" with { span: stat } only %}
+
+  {% if description is not empty %}
+    {% include "fields-description" with { description: description } only %}
+  {% endif %}
+
+{% endblock %}

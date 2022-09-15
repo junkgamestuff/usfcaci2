@@ -1,0 +1,17 @@
+{% extends "base-component" %}
+
+{% set name = "intro-text" %}
+{% set variant = [alignLeft ? 'align-left' : ''] %}
+
+{% block content %}
+
+  {% include "fields-section-title" with {
+    title: title
+  } only %}
+
+  {% include "fields-description" with {
+    description: description
+  } only %}
+
+{% endblock %}
+

@@ -1,0 +1,32 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+
+  <button type="button" class="accordion-trigger program" id="heading-" ~ {{ node.id() }} aria-controls="section-" ~ {{ node.id() }} aria-expanded="false" aria-disabled="false">
+
+    <span class="item-title">{{ fields.title }}</span>
+
+    {% if fields.degree_type is not empty %}
+
+      {% set degree_type_text = "" %}
+
+      {% for item in fields.degree_type %}
+        {% set degree_type_text = degree_type_text ~ (loop.index0 > 0 ? ", " : "") ~ item.label %}
+      {% endfor %}
+
+      <div class="f--field f--description">
+        {{ degree_type_text }}
+      </div>
+    {% endif %}
+
+  </button>
+
+  <div id="section-{{ node.id() }}" role="region" aria-labelledby="heading-{{ node.id() }}" class="accordion-panel">
+    {{ fields.teaser_description }}
+
+    <div class="f--field f--link">
+      <a class="link" href="{{ fields.url }}">LEARN MORE<span class="visually-hidden"> about the {{ fields.title }} program</span></a>
+    </div>
+  </div>
+
+{% endblock content %}

@@ -1,0 +1,40 @@
+uuid: b467ceb2-2723-4ec8-bee6-2ccf5bb00f96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.school_program_role.field_program
+    - field.field.paragraph.school_program_role.field_role
+    - field.field.paragraph.school_program_role.field_school
+    - paragraphs.paragraphs_type.school_program_role
+id: paragraph.school_program_role.default
+targetEntityType: paragraph
+bundle: school_program_role
+mode: default
+content:
+  field_program:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_role:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_school:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

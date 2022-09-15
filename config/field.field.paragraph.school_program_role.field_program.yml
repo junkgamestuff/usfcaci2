@@ -1,0 +1,29 @@
+uuid: ba6d3264-cc16-454c-8a51-32e7d7316457
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_program
+    - paragraphs.paragraphs_type.school_program_role
+    - taxonomy.vocabulary.program
+id: paragraph.school_program_role.field_program
+field_name: field_program
+entity_type: paragraph
+bundle: school_program_role
+label: Program
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      program: program
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

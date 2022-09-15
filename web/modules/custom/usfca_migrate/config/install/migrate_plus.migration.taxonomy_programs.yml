@@ -1,0 +1,37 @@
+id: taxonomy_programs
+label: Programs Taxonomy Terms
+migration_group: usfca
+audit: true
+migration_tags:
+  - USFCA
+deriver: Drupal\taxonomy\Plugin\migrate\D7TaxonomyTermDeriver
+source:
+  plugin: d7_taxonomy_term
+  bundle: programs
+process:
+  vid:
+    plugin: default_value
+    default_value: old_programs
+  name: name
+  'description/value': description
+  'description/format':
+    plugin: default_value
+    default_value: basic_html
+  weight: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration: d7_taxonomy_term
+  parent:
+    plugin: default_value
+    default_value: 0
+    source: '@parent_id'
+  forum_container: is_container
+  changed: timestamp
+  langcode: language
+destination:
+  plugin: entity:taxonomy_term

@@ -1,0 +1,126 @@
+{% extends "base-component" %}
+
+{% set name = "login-form" %}
+{% set container_element = 'div' %}
+
+{% block content %}
+    <div class="cc--component-container cc--filter-form">
+      <div class="c--component c--filter-form">
+        <form class="user-login-form filter-form" data-drupal-selector="user-login-form" action="/user/login" method="post" id="user-login-form" accept-charset="UTF-8">
+
+          <!-- THEME DEBUG -->
+          <!-- THEME HOOK: 'form_element' -->
+          <div class="js-form-item form-item js-form-type-textfield form-item-name js-form-item-name fi--form-item">
+
+
+              <!-- THEME DEBUG -->
+              <!-- THEME HOOK: 'form_element_label' -->
+              <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/form-element-label.html.twig' -->
+              <label for="edit-name" class="js-form-required form-required">Username</label>
+              <!-- END OUTPUT from 'core/themes/stable/templates/form/form-element-label.html.twig' -->
+
+
+
+
+              <!-- THEME DEBUG -->
+              <!-- THEME HOOK: 'input__textfield' -->
+              <!-- FILE NAME SUGGESTIONS:
+                * input--textfield.html.twig
+                x input.html.twig
+              -->
+              <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/input.html.twig' -->
+              <input autocorrect="none" autocapitalize="none" spellcheck="false" autofocus="autofocus" data-drupal-selector="edit-name" aria-describedby="edit-name--description" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required" required="required" aria-required="true" type="text">
+
+              <!-- END OUTPUT from 'core/themes/stable/templates/form/input.html.twig' -->
+
+
+              <div id="edit-name--description" class="description">
+                  Enter your username.
+              </div>
+          </div>
+
+
+
+          <!-- THEME DEBUG -->
+          <!-- THEME HOOK: 'form_element' -->
+          <div class="js-form-item form-item js-form-type-password form-item-pass js-form-item-pass fi--form-item">
+
+
+              <!-- THEME DEBUG -->
+              <!-- THEME HOOK: 'form_element_label' -->
+              <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/form-element-label.html.twig' -->
+              <label for="edit-pass" class="js-form-required form-required">Password</label>
+              <!-- END OUTPUT from 'core/themes/stable/templates/form/form-element-label.html.twig' -->
+
+
+
+
+              <!-- THEME DEBUG -->
+              <!-- THEME HOOK: 'input__password' -->
+              <!-- FILE NAME SUGGESTIONS:
+                * input--password.html.twig
+                x input.html.twig
+              -->
+              <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/input.html.twig' -->
+              <input data-drupal-selector="edit-pass" aria-describedby="edit-pass--description" id="edit-pass" name="pass" size="60" maxlength="128" class="form-text required" required="required" aria-required="true" type="password">
+
+              <!-- END OUTPUT from 'core/themes/stable/templates/form/input.html.twig' -->
+
+
+              <div id="edit-pass--description" class="description">
+                  Enter the password that accompanies your username.
+              </div>
+          </div>
+
+
+          <!-- THEME DEBUG -->
+          <!-- THEME HOOK: 'input__hidden' -->
+          <!-- FILE NAME SUGGESTIONS:
+            * input--hidden.html.twig
+            x input.html.twig
+          -->
+          <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/input.html.twig' -->
+          <input autocomplete="off" data-drupal-selector="form-nx6cgjhp0o8u5bckogyvga5g6xntnmxc06gcwrt-b9m" name="form_build_id" value="form-Nx6CGjHP0O8u5BckoGYVgA5g6xNtNMxC06GCWRT-B9M" type="hidden">
+
+          <!-- END OUTPUT from 'core/themes/stable/templates/form/input.html.twig' -->
+
+
+
+          <!-- THEME DEBUG -->
+          <!-- THEME HOOK: 'input__hidden' -->
+          <!-- FILE NAME SUGGESTIONS:
+            * input--hidden.html.twig
+            x input.html.twig
+          -->
+          <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/input.html.twig' -->
+          <input data-drupal-selector="edit-user-login-form" name="form_id" value="user_login_form" type="hidden">
+
+          <!-- END OUTPUT from 'core/themes/stable/templates/form/input.html.twig' -->
+
+
+
+          <!-- THEME DEBUG -->
+          <!-- THEME HOOK: 'container' -->
+          <!-- BEGIN OUTPUT from 'core/themes/stable/templates/form/container.html.twig' -->
+          <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+
+              <!-- THEME DEBUG -->
+              <!-- THEME HOOK: 'input__submit' -->
+              <!-- FILE NAME SUGGESTIONS:
+                x input--submit.html.twig
+                x input--submit.html.twig
+                * input.html.twig
+              -->
+              <div class="fi--form-item fi--submit">
+                  <input data-drupal-selector="edit-submit" id="edit-submit" name="op" value="Log in" class="button js-form-submit form-submit" type="submit">
+              </div>
+
+          </div>
+
+          <!-- END OUTPUT from 'core/themes/stable/templates/form/container.html.twig' -->
+
+
+      </form>
+      </div>
+    </div>
+{% endblock %}

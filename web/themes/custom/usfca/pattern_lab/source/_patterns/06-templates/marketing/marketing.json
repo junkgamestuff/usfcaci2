@@ -1,0 +1,41 @@
+{
+  "bodyClass": "home-page transparent-header",
+  "pageTitle": "Homepage Title",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "hero-home-slider",
+          "slides": [
+            {
+              "align": "center",
+              "title": "<strong>CAMPAIGN TAGLINE</strong><br>Lorem Ipsum Dolor Sit Amet Delavet Isat",
+              "image": {
+                "src": "https://placeimg.com/1200/800/people",
+                "alt": "Slide Image"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "two-column-reverse",
+      "content": [
+        { "type": "rich-text-intro-text" },
+        {
+          "type": "rich-text"
+        }
+      ],
+      "sidebar": [
+        {
+          "type": "slate-form"
+        }
+      ]
+    }
+  ],
+  "bottomLayouts": null
+}

@@ -1,0 +1,57 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% set cards = [] %}
+  {% for card in fields.events_x3 %}
+
+    {% set date = card.fields.start_date.timestamp|date("F j, Y") %}
+    {% if card.fields.start_date.timestamp|date("mdy") != card.fields.end_date.timestamp|date("mdy") %}
+      {% if card.fields.start_date.timestamp|date("Y") != card.fields.end_date.timestamp|date("Y") %}
+        {% set date = card.fields.start_date.timestamp|date('F j, Y') ~ ' – ' ~ card.fields.end_date.timestamp|date('F j, Y') %}
+      {% else %}
+        {% set date = card.fields.start_date.timestamp|date('F j') ~ ' – ' ~ card.fields.end_date.timestamp|date('F j, Y') %}
+      {% endif %}
+    {% endif %}
+
+    {% if card.fields.all_day %}
+      {% set time = 'All Day' %}
+    {% else %}
+      {% set time = card.fields.start_date.timestamp|date("g:iA") ~ ' - ' ~ card.fields.end_date.timestamp|date("g:iA") %}
+    {% endif %}
+
+    {% set cards = cards | merge([{
+      title: card.fields.teaser_title ?? card.fields.title,
+      date: card.fields.start_date ? card.fields.start_date.timestamp|date('F') ~ ' <span>' ~ card.fields.start_date.timestamp|date('j') ~ '</span>',
+      image: card.fields.teaser_image.uri ? {
+        src: card.fields.teaser_image.uri | image_style('16_9_637x359'),
+        alt: card.fields.teaser_image.alt,
+        render: drupal_image(card.fields.teaser_image.uri, '16_9_one_third', {alt: card.fields.teaser_image.alt}, responsive=true),
+      } : {
+        src: '/themes/custom/usfca/pattern_lab/source/images/placeholder-wide.png',
+        alt: 'Presentation only image for ' ~ card.fields.teaser_title ?? card.fields.title,
+      },
+      link: {
+        href: card.fields.source == "Slate" and card.fields.registration_link.url ? card.fields.registration_link.url : card.url,
+      },
+      location: card.fields.event_location,
+      time: date ~ ' ' ~ time,
+    }]) %}
+  {% endfor %}
+
+  {% set title = fields.title %}
+  {% if fields.title_highlight %}
+    {% set title = title|replace({(fields.title_highlight): '<span class="highlight">' ~ fields.title_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% include "components-horizontal-event-listing" with {
+    title: title,
+    link: fields.link.url ? {
+      cta: fields.link.title,
+      href: fields.link.url,
+      ariaLabel: fields.link.attributes.aria_label ?? fields.link.title,
+    },
+    cards: cards,
+  } only %}
+
+{% endblock content %}

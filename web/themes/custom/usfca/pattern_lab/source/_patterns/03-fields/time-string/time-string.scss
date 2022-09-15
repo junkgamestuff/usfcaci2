@@ -1,0 +1,7 @@
+.f--time-string {
+  @include font-size(16, 26);
+
+  @include mq($bp768) {
+    @include font-size(18, 28);
+  }
+}

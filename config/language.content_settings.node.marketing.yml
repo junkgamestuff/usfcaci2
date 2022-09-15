@@ -1,0 +1,11 @@
+uuid: ea6f68de-99e8-48a1-be16-0c69fbede354
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.marketing
+id: node.marketing
+target_entity_type_id: node
+target_bundle: marketing
+default_langcode: site_default
+language_alterable: false

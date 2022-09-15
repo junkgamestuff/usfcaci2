@@ -1,0 +1,23 @@
+uuid: 9e1efb3e-c83f-4886-bbb6-f8c4c2b31011
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - usfca
+id: footer_copyright
+theme: usfca
+region: footer_info
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: Copyright
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

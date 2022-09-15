@@ -1,0 +1,91 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+
+  <div class="content-top">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {% if fields.image is not empty %}
+
+            {% include "components-article-hero-featured" with {
+              bannerImage: fields.image.uri ? {
+                src: fields.image.uri | image_style('16_9_2400x1350'),
+                alt: fields.image.alt,
+                render: drupal_image(fields.image.uri, '16_9_full', {alt: fields.image.alt}, responsive=true)
+              } : null,
+              title: fields.title,
+              category: fields.category.label,
+              description: fields.subtitle,
+              fullname: fields.author,
+              date: fields.authored_date,
+            } only %}
+
+          {% else %}
+
+            {% include "components-article-hero" with {
+              title: fields.title,
+              category: fields.category.label,
+              description: fields.subtitle,
+              fullname: fields.author,
+              date: fields.authored_date,
+            } only %}
+
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-main">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+          {{ attach_library('usfca/add_to_any') }}
+
+          {% include 'components-social-share' with {
+            links: [
+              {
+                "network": "copy"
+              },
+              {
+                "network": "facebook"
+              },
+              {
+                "network": "twitter"
+              },
+              {
+                "network": "linkedin"
+              },
+              {
+                "network": "email"
+              }
+            ]
+          } only %}
+
+          {{ content.field_components }}
+
+          {% include 'components-spacer' %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-bottom">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {{ content.field_components_footer }}
+
+          {% include 'components-spacer' %}
+          {% include 'components-spacer' %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

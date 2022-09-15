@@ -1,0 +1,14 @@
+uuid: b132d8fc-d551-46d8-8989-29935b74c810
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog_teaser
+id: node_type_blog_teaser
+entity_type_id: node_type
+entity_id: blog_teaser
+action: access_denied
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

@@ -1,0 +1,67 @@
+{
+  "eyebrow": "<strong>The Hilltop</strong> and beyond:",
+  "title": "Our Locations",
+  "mapCenter": "44.5, -108",
+  "mapZoomLevel": "8",
+  "locations": [
+    {
+      "title": "Sacramento Campus",
+      "description": "<p>Quisque velit nisi, pretium ut <a href='#'>lacinia in</a></p><ul><li>Elementum id enim.</li><li>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</li></ul><p>Vivamus suscipit tortor <ol><li>Eget felis porttitor volutpat.</li><li>Pellentesque in ipsum id orci porta dapibus.</li></ol>Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>",
+      "link": {
+        "cta": "Learn More",
+        "url": "#",
+        "ariaLabel": "Learn More"
+      },
+      "image": {
+        "url": "https://placeimg.com/352/572/nature",
+        "alt": "Campus background"
+      },
+      "lat": "38.58044154739",
+      "lng": "-121.50595796587"
+    },
+    {
+      "title": "Sacramento Campus",
+      "description": "Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus.",
+      "link": {
+        "cta": "Learn More",
+        "url": "#",
+        "ariaLabel": "Learn More"
+      },
+      "image": {
+        "url": "https://placeimg.com/352/572/nature",
+        "alt": "Campus background"
+      },
+      "lat": "38.62",
+      "lng": "-121.87"
+    },
+    {
+      "title": "Rutgers Campus",
+      "description": "Lorem Ipsum dolor sit amet.",
+      "link": {
+        "cta": "Learn More",
+        "url": "#",
+        "ariaLabel": "Learn More"
+      },
+      "image": {
+        "url": "https://placeimg.com/351/571/nature",
+        "alt": "Campus background"
+      },
+      "lat": "44",
+      "lng": "-107"
+    },
+    {
+      "title": "Harvard",
+      "description": "Some description.",
+      "link": {
+        "cta": "Learn More",
+        "url": "#",
+        "ariaLabel": "Learn More"
+      },
+      "image": {
+        "url": "https://placeimg.com/350/570/nature"
+      },
+      "lat": "43",
+      "lng": "-106"
+    }
+  ]
+}

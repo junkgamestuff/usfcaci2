@@ -1,0 +1,8 @@
+uuid: 6184f6e4-4f69-4245-b638-46864f67d6f0
+langcode: en
+status: true
+dependencies: {  }
+id: school-of-management-utility
+label: 'School of Management Utility'
+description: ''
+locked: false

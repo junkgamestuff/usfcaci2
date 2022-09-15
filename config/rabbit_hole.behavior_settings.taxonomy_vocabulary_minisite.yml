@@ -1,0 +1,14 @@
+uuid: 219fc22a-bc10-4ad2-ae8f-71250fa9a223
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.minisite
+id: taxonomy_vocabulary_minisite
+entity_type_id: taxonomy_vocabulary
+entity_id: minisite
+action: access_denied
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

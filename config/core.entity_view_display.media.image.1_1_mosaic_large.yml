@@ -1,0 +1,40 @@
+uuid: 25c1a38e-9e47-44fb-bbdc-bd2db1b27b70
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.1_1_mosaic_large
+    - field.field.media.image.feeds_item
+    - field.field.media.image.field_media_department
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_size
+    - field.field.media.image.field_media_subject
+    - media.type.image
+    - responsive_image.styles.1_1_mosaic_large
+  module:
+    - responsive_image
+id: media.image.1_1_mosaic_large
+targetEntityType: media
+bundle: image
+mode: 1_1_mosaic_large
+content:
+  field_media_image:
+    type: responsive_image
+    label: visually_hidden
+    settings:
+      responsive_image_style: 1_1_mosaic_large
+      image_link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  feeds_item: true
+  field_media_department: true
+  field_media_size: true
+  field_media_subject: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,8 @@
+uuid: 82cd4eb0-0b21-4a7d-bd42-e8abbb018150
+langcode: en
+status: true
+dependencies: {  }
+id: school-of-education
+label: 'School of Education'
+description: ''
+locked: false

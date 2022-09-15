@@ -1,0 +1,10 @@
+name: hero-column
+type: component
+markup:
+  content:
+    - type: field
+      name: page-title
+      with: title
+data:
+  title: "Columnar Page Title"
+

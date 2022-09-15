@@ -1,0 +1,65 @@
+{
+  "cards": [
+    {
+      "date": "Sep 06, 2020",
+      "title": "Latest News Headline Lorem Ipsum Dolor Sit Amet",
+      "description": "Sed porttitor lectus nibh mauris blandit aliquet eli eget tincidunt nibh pulvinar ivamus magna justo lacinia eget consectetur sed",
+      "time": "10:30AM to 11:30AM",
+      "location": "Online Event",
+      "image": {
+        "src": "https://placeimg.com/300/170/people",
+        "alt": "Alt 1"
+      },
+      "link": {
+        "href": "#"
+      }
+    },
+    {
+      "date": "Sep 06, 2020",
+      "title": "Latest News Headline Lorem Ipsum Dolor Sit Amet",
+      "description": "Sed porttitor lectus nibh mauris blandit aliquet eli eget tincidunt nibh pulvinar ivamus magna justo lacinia eget consectetur sed",
+      "time": "10:30AM to 11:30AM",
+      "location": "Online Event",
+      "image": {
+        "src": "https://placeimg.com/300/170/people",
+        "alt": "Alt 1"
+      },
+      "link": {
+        "href": "#"
+      }
+    },
+    {
+      "date": "Sep 06, 2020",
+      "title": "Latest News Headline Lorem Ipsum Dolor Sit Amet",
+      "description": "Sed porttitor lectus nibh mauris blandit aliquet eli eget tincidunt nibh pulvinar ivamus magna justo lacinia eget consectetur sed",
+      "time": "10:30AM to 11:30AM",
+      "location": "Online Event",
+      "image": {
+        "src": "https://placeimg.com/300/170/people",
+        "alt": "Alt 1"
+      },
+      "link": {
+        "href": "#"
+      }
+    },
+    {
+      "date": "Sep 06, 2020",
+      "title": "Latest News Headline Lorem Ipsum Dolor Sit Amet",
+      "description": "Sed porttitor lectus nibh mauris blandit aliquet eli eget tincidunt nibh pulvinar ivamus magna justo lacinia eget consectetur sed",
+      "time": "10:30AM to 11:30AM",
+      "location": "Online Event",
+      "image": {
+        "src": "https://placeimg.com/300/170/people",
+        "alt": "Alt 1"
+      },
+      "link": {
+        "href": "#"
+      }
+    }
+  ],
+  "link": {
+    "href": "https://www.example.com/",
+    "cta": "Load More",
+    "ariaLabel": "An Example Aria Label for CTA Link"
+  }
+}

@@ -1,0 +1,10 @@
+uuid: 9ea874bd-4592-4b29-bb27-8bd85d48e6c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.16_9_quarter
+label: '16:9 Quarter'
+targetEntityType: media
+cache: true

@@ -1,0 +1,41 @@
+uuid: a7381e3e-2640-446f-8b15-9dd9439e6e3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.article_cards_featured.field_title
+    - field.field.paragraph.article_cards_featured.field_title_highlight
+    - field.field.paragraph.article_cards_featured.field_views_reference
+    - paragraphs.paragraphs_type.article_cards_featured
+  module:
+    - viewsreference
+id: paragraph.article_cards_featured.default
+targetEntityType: paragraph
+bundle: article_cards_featured
+mode: default
+content:
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title_highlight:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_views_reference:
+    type: viewsreference_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

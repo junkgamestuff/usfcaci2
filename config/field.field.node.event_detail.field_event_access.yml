@@ -1,0 +1,19 @@
+uuid: 16631ecd-ebed-4bbc-b9b2-a9fc9e34e4ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_access
+    - node.type.event_detail
+id: node.event_detail.field_event_access
+field_name: field_event_access
+entity_type: node
+bundle: event_detail
+label: 'Event Access'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

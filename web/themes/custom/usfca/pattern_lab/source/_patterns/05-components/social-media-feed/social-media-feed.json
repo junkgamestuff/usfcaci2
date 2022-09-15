@@ -1,0 +1,42 @@
+{
+  "title": "@USFCA",
+  "socialLinks": [
+    {
+      "href": "#",
+      "cta": "facebook",
+      "aria": "facebook",
+      "class": "facebook"
+    },
+    {
+      "href": "#",
+      "cta": "instagram",
+      "aria": "instagram",
+      "class": "instagram"
+    },
+    {
+      "href": "#",
+      "cta": "linkedin",
+      "aria": "linkedin",
+      "class": "linkedin"
+    },
+    {
+      "href": "#",
+      "cta": "twitter",
+      "aria": "twitter",
+      "class": "twitter"
+    },
+    {
+      "href": "#",
+      "cta": "youtube",
+      "aria": "youtube",
+      "class": "youtube"
+    },
+    {
+      "href": "#",
+      "cta": "tiktok",
+      "aria": "tiktok",
+      "class": "tiktok"
+    }
+  ],
+  "markup": "<div id=\"curator-feed-default-feed-layout\"><a href=\"https://curator.io\" target=\"_blank\" class=\"crt-logo crt-tag\">Powered by Curator.io</a></div><script type=\"text/javascript\">(function(){var i,e,d=document,s=\"script\";i=d.createElement(\"script\");i.async=1;i.charset=\"UTF-8\";i.src=\"https://cdn.curator.io/published/f0f01d65-d581-44e8-9729-ca5e87ee7a05.js\";e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);})();</script>"
+}

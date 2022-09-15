@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * For "webform" paragraph we have to disable "catch_cache" implementation to prevent
+ * duplicates of the submissions.
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block content %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ content }}
+  </div>
+{% endblock content %}

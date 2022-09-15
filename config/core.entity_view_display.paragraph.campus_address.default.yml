@@ -1,0 +1,32 @@
+uuid: f742f32d-df3e-4a02-8e56-6697122138e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.campus_address.field_address
+    - field.field.paragraph.campus_address.field_campus
+    - paragraphs.paragraphs_type.campus_address
+  module:
+    - address
+id: paragraph.campus_address.default
+targetEntityType: paragraph
+bundle: campus_address
+mode: default
+content:
+  field_address:
+    type: address_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_campus:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

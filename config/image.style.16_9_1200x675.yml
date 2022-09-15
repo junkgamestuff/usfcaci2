@@ -1,0 +1,25 @@
+uuid: 551f1042-1fd4-477c-a2d5-3566afb2db82
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: t5e2RFLZyb0U-FVq3i-AcuuIIm8J2TMw1WnjzwQxvzQ
+name: 16_9_1200x675
+label: '16:9 (1200x675)'
+effects:
+  28c2cf6e-78d3-4e2a-86f1-873d056da84c:
+    uuid: 28c2cf6e-78d3-4e2a-86f1-873d056da84c
+    id: focal_point_scale_and_crop
+    weight: -10
+    data:
+      width: 1200
+      height: 675
+      crop_type: focal_point
+  48bebeec-1412-46d3-bd53-9f0ba1fd8db5:
+    uuid: 48bebeec-1412-46d3-bd53-9f0ba1fd8db5
+    id: image_convert
+    weight: -9
+    data:
+      extension: jpeg

@@ -1,0 +1,61 @@
+uuid: e353444a-39ab-4bb0-be87-a522f7e7e207
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.16_9_1152x648
+    - image.style.16_9_1170x658
+    - image.style.16_9_1200x675
+    - image.style.16_9_1275x718
+    - image.style.16_9_1536x864
+    - image.style.16_9_1800x1013
+    - image.style.16_9_1992x1120
+    - image.style.16_9_2400x1350
+    - image.style.16_9_2700x1520
+    - image.style.16_9_320x180
+    - image.style.16_9_3600x2026
+    - image.style.16_9_396x223
+    - image.style.16_9_480x270
+    - image.style.16_9_594x334
+    - image.style.16_9_637x359
+    - image.style.16_9_675x380
+    - image.style.16_9_720x405
+    - image.style.16_9_768x432
+    - image.style.16_9_891x501
+    - image.style.16_9_900x506
+    - image.style.16_9_960x540
+    - image.style.16_9_996x560
+id: 16_9_one_third
+label: '16:9 One-third'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: '(min-width:1200px) 33vw, (min-width:768px) 40vw, 83vw'
+      sizes_image_styles:
+        - 16_9_1152x648
+        - 16_9_1170x658
+        - 16_9_1200x675
+        - 16_9_1275x718
+        - 16_9_1536x864
+        - 16_9_1800x1013
+        - 16_9_1992x1120
+        - 16_9_2400x1350
+        - 16_9_2700x1520
+        - 16_9_320x180
+        - 16_9_3600x2026
+        - 16_9_396x223
+        - 16_9_480x270
+        - 16_9_594x334
+        - 16_9_637x359
+        - 16_9_675x380
+        - 16_9_720x405
+        - 16_9_768x432
+        - 16_9_891x501
+        - 16_9_900x506
+        - 16_9_960x540
+        - 16_9_996x560
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+breakpoint_group: responsive_image
+fallback_image_style: 16_9_637x359

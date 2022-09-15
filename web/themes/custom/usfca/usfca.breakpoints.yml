@@ -1,0 +1,27 @@
+usfca.mobile:
+  label: mobile
+  mediaQuery: '(min-width: 0em)'
+  weight: 0
+  multipliers:
+    - 1x
+
+usfca.tablet:
+  label: tablet
+  mediaQuery: 'screen and (min-width: 760px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+usfca.desktop:
+  label: desktop
+  mediaQuery: 'screen and (min-width: 1024px)'
+  weight: 2
+  multipliers:
+  - 1x
+
+usfca.wide:
+  label: wide
+  mediaQuery: 'screen and (min-width: 1600px)'
+  weight: 3
+  multipliers:
+    - 1x

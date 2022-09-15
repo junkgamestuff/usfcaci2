@@ -1,0 +1,19 @@
+uuid: 32c8aa5d-55a3-4be9-a37e-4ac811d4fb98
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_prior_experience
+field_name: field_prior_experience
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

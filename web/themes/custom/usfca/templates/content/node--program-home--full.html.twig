@@ -1,0 +1,80 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+
+  <div class="content-top">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+          {% if fields.image is not empty %}
+
+            {% if logged_in == false %}
+            {{ attach_library('usfca/program_page_header') }}
+            {% endif %}
+
+            {% set links = [] %}
+            {% if fields.program.fields.pages_links %}
+              {% for item in fields.program.fields.pages_links %}
+                {% set links = links | merge([{
+                  url: item.url,
+                  title: item.title,
+                  ariaLabel: item.attributes.aria_label ?? item.title,
+                }]) %}
+              {% endfor %}
+            {% endif %}
+
+            {% set buttons = [] %}
+            {% if fields.program.fields.cta_links %}
+              {% for item in fields.program.fields.cta_links %}
+                {% set buttons = buttons | merge([{
+                  url: item.url,
+                  title: item.title | upper,
+                  ariaLabel: item.attributes.aria_label ?? item.title,
+                }]) %}
+              {% endfor %}
+            {% endif %}
+
+            {% include "components-program-page-header" with {
+              bannerImage: fields.image.uri ? {
+                src: fields.image.uri | image_style('16_9_2400x1350'),
+                alt: fields.image.alt,
+                render: drupal_image(fields.image.uri, '16_9_full', {alt: fields.image.alt}, responsive=true)
+              } : null,
+              title: fields.title,
+              cta_title: fields.program.fields.main_page_link.url is not empty ? {
+                url: fields.program.fields.main_page_link.url,
+                title: node.field_program.entity.name.value,
+              } : null,
+              headline: fields.eyebrow,
+              breadcrumbs: {
+                render: content_extra,
+              },
+              description: fields.hero_description,
+              links: links,
+              buttons: buttons,
+              category: fields.program.fields.name ?? fields.title,
+            } only %}
+
+          {% else %}
+
+            {% include "components-basic-header" with { title: fields.title } only %}
+
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-main">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {{ content.field_components }}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

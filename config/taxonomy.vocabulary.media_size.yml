@@ -1,0 +1,8 @@
+uuid: 4565b975-b221-4daa-be53-c1e791bc3161
+langcode: en
+status: true
+dependencies: {  }
+name: 'Media Size'
+vid: media_size
+description: ''
+weight: 0

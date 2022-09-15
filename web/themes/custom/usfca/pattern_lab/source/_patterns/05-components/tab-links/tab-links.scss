@@ -1,0 +1,44 @@
+$tab-color: $color-secondary;
+$tab-color-active: $color-primary;
+
+.cc--tab-links {
+  @include margin(rem(20) null);
+  border-bottom: rem(1) solid $color-border;
+
+  .c--tab-links {
+    @include maxwidth;
+  }
+
+  .link-container {
+    @include padding(null cols(3));
+
+    @include mq($bp768) {
+      @include padding(null cols(2));
+    }
+  }
+
+  .menu {
+    @include padding(0);
+    @include margin(0);
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+
+    a {
+      @extend %font-fira-sans-semibold;
+      @include padding(rem(20) null);
+      @include margin(null rem(15));
+      @include font-size(18, 26);
+      display: inline-block;
+      border-bottom: rem(6) solid transparent;
+      color: $tab-color;
+      letter-spacing: 0;
+      text-decoration: none;
+
+      &.is-active {
+        border-color: $tab-color-active;
+        color: $tab-color-active;
+      }
+    }
+  }
+}

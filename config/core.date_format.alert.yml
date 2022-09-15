@@ -1,0 +1,10 @@
+uuid: edf2b560-b903-4c62-9805-5c5b84982371
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: uMlIfQSVm-y7RYeTYnUPkWbLvQNcxiy1rrxxOPppqhY
+id: alert
+label: Alert
+locked: false
+pattern: 'l, M d, Y g:ia T'

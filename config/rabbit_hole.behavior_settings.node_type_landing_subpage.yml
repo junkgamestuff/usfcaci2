@@ -1,0 +1,14 @@
+uuid: 31f93071-9fae-4324-81ac-75ec1d9a2e54
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_subpage
+id: node_type_landing_subpage
+entity_type_id: node_type
+entity_id: landing_subpage
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

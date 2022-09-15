@@ -1,0 +1,74 @@
+uuid: 1ca12e8e-363a-4bf5-a1a3-c3c0b24603d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_views_reference
+    - paragraphs.paragraphs_type.event_cards_automatic
+    - views.view.event_cards
+  module:
+    - viewsreference
+id: paragraph.event_cards_automatic.field_views_reference
+field_name: field_views_reference
+entity_type: paragraph
+bundle: event_cards_automatic
+label: 'Event Cards - Automatic'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    options:
+      argument: ''
+    display_id: block_4
+    data: 'a:5:{s:6:"offset";N;s:8:"argument";s:0:"";s:5:"pager";N;s:5:"limit";N;s:5:"title";N;}'
+    target_uuid: 1407df87-b05d-4e14-9d6e-6c118d024eee
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    rest_export: 0
+    page: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    event_cards: event_cards
+    alerts: 0
+    article_cards_featured: 0
+    block_content: 0
+    blog_teasers_automatic: 0
+    content: 0
+    content_recent: 0
+    events_listing: 0
+    faculty_directory: 0
+    featured_articles: 0
+    featured_events: 0
+    feeds_feed: 0
+    files: 0
+    find_your_program: 0
+    frontpage: 0
+    media: 0
+    media_library: 0
+    moderated_content: 0
+    news_listing: 0
+    program_faculty_listing: 0
+    redirect: 0
+    scheduler_scheduled_content: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    argument: argument
+    offset: 0
+    pager: 0
+    limit: 0
+    title: 0
+field_type: viewsreference

@@ -1,0 +1,23 @@
+uuid: 316122d5-f8b4-41fe-a1b2-3e072b22a9c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.320_width
+    - image.style.640_width
+    - image.style.960_width
+id: media_embed
+label: 'Media Embed'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - 320_width
+        - 640_width
+        - 960_width
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+breakpoint_group: responsive_image
+fallback_image_style: 640_width

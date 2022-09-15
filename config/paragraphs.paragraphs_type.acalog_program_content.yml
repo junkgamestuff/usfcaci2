@@ -1,0 +1,10 @@
+uuid: 2ad09d50-ec15-4f36-9656-bb5ce9f47885
+langcode: en
+status: true
+dependencies: {  }
+id: acalog_program_content
+label: 'Acalog Program Content'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

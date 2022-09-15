@@ -1,0 +1,432 @@
+$radius: 0;
+$color-attribution: $color-primary;
+$quote-background-color: $color-white;
+$quote-border-color: $color-primary;
+
+.cc--quote-and-cta {
+  margin: 0;
+
+  .c--quote-and-cta {
+    @include maxwidth;
+  }
+
+  .quote-description {
+    @include margin(null null rem(20));
+
+    @include mq($bp768) {
+      @include margin(null null rem(30));
+    }
+
+    @include mq($bp1024) {
+      @include margin(null null rem(40));
+    }
+  }
+
+  .quote-and-cta-container {
+    @include mq($bp768) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .image-container {
+      position: relative;
+
+      @include mq($bp768) {
+        display: flex;
+        flex: 0 0 cols(24);
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .f--image {
+        @include padding(rem(10) null null);
+        position: relative;
+        background: $color-atlantis;
+        overflow: hidden;
+
+        @include mq($bp768) {
+          @include padding(0 null null cols(1, 24));
+        }
+
+        img {
+          width: 100%;
+          height: rem(482);
+          object-fit: cover;
+
+          @include mq($bp768) {
+            height: rem(904);
+          }
+        }
+
+        &::after {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 78%;
+          background: linear-gradient(to top, rgba($color-black, 0.6) 0%, rgba($color-black, 0));
+          content: '';
+
+          @include mq($bp768) {
+            left: cols(1, 24);
+          }
+        }
+
+        @include mq($bp768) {
+          height: 35%;
+        }
+      }
+
+      .arrow {
+        position: absolute;
+        top: rem(351);
+        left: rem(40);
+        width: rem(25);
+        height: rem(25);
+        transform: rotate(-135deg);
+        background-color: $color-white;
+        z-index: 2;
+
+        @include mq($bp768) {
+          top: rem(120);
+          right: rem(-25);
+          left: auto;
+          width: rem(50);
+          height: rem(50);
+          transform: rotate(135deg);
+        }
+      }
+
+      .f--attribution {
+        position: absolute;
+        bottom: rem(156);
+        left: rem(40);
+        right: rem(40);
+
+        @include mq($bp768) {
+          right: cols(2, 24);
+          bottom: rem(21);
+          left: auto;
+          max-width: rem(250);
+        }
+
+        @include mq($bp1024) {
+          max-width: rem(280);
+        }
+
+        h4 {
+          @extend %font-fira-sans-extra-condensed-semibold;
+          @include font-size(16, 20);
+          color: $color-white;
+          text-transform: uppercase;
+
+          @include mq($bp768) {
+            @include font-size(20, 25);
+          }
+        }
+
+        p {
+          @extend %font-ibm-plex-serif-regular;
+          @include font-size(13, 22);
+          color: $color-white;
+
+          @include mq($bp768) {
+            @include font-size(16, 26);
+          }
+        }
+      }
+    }
+
+    .quote-container {
+      position: relative;
+      background: $color-white;
+
+      @include mq($bp768max) {
+        @include padding(rem(22) rem(20) rem(30));
+        @include margin(rem(-129) rem(20) null);
+        box-shadow: 0 0 rem(4) rgba($color-black, .25);
+      }
+
+      @include mq($bp768) {
+        @include padding(rem(64) cols(3) null);
+        flex-basis: cols(24);
+      }
+
+      .f--sub-title {
+        h3 {
+          @extend %font-fira-sans-extra-condensed-regular;
+          @include font-size(18, 18);
+          color: $color-black;
+          font-weight: 300;
+
+          @include mq($bp768) {
+            @include font-size(24, 24);
+          }
+
+          .highlight {
+            @extend %font-fira-sans-extra-condensed-bold;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .quote-mark {
+        @include margin(rem(20) null rem(8));
+        width: rem(36);
+        height: rem(33);
+
+        @include mq($bp768) {
+          @include margin(rem(50) null rem(30));
+          width: rem(64);
+          height: rem(58);
+        }
+
+        @include mq($bp1024) {
+          @include margin(rem(50) null rem(18));
+        }
+
+        path {
+          fill: $color-atlantis;
+        }
+      }
+
+      .f--description {
+        p {
+          @extend %font-fira-sans-extra-condensed-regular;
+          @include font-size(24, 30);
+          @include margin(null null rem(20));
+          color: $color-sherpa-blue;
+          letter-spacing: rem(-0.25);
+
+          @include mq($bp768) {
+            @include font-size(36, 40);
+            @include margin(null null rem(60));
+          }
+
+          @include mq($bp1024) {
+            @include font-size(48, 52);
+          }
+
+          a {
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+          }
+        }
+      }
+
+      .f--attribution {
+        display: none;
+      }
+
+      .f--link {
+        .link {
+          @extend %font-fira-sans-bold;
+          @include font-size(18, 18);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          max-width: rem(300);
+          height: rem(50);
+          border: rem(2) solid $color-atlantis;
+          text-align: center;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          @include hover {
+            border-width: rem(5);
+          }
+        }
+      }
+    }
+  }
+
+  @include hover {
+    .c--quote-and-cta {
+      .arrow {
+        path {
+          transform: translate3d(rem(6), rem(6), 0);
+        }
+      }
+    }
+  }
+
+  &.image-right {
+    .image-container {
+      order: 2;
+
+      .f--image {
+
+        @include mq($bp768) {
+          @include padding(0 cols(1, 24) null 0);
+        }
+
+        &::after {
+
+          @include mq($bp768) {
+            right: cols(1, 24);
+            left: auto;
+          }
+        }
+      }
+
+      .arrow {
+
+        @include mq($bp768) {
+          top: rem(120);
+          right: auto;
+          left: rem(-25);
+          width: rem(50);
+          height: rem(50);
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    .quote-container {
+      order: 1;
+
+      @include mq($bp768) {
+        @include padding(rem(64) cols(3) null cols(2));
+        flex-basis: cols(24);
+      }
+    }
+
+    .quote-and-cta-container {
+      .image-container {
+        .f--attribution {
+          @include mq($bp768) {
+            left: cols(2, 24);
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .tc--chaptered-page & {
+    .quote-and-cta-container {
+      .image-container {
+
+        .f--image {
+          @include padding(rem(10) null null);
+          background: none;
+
+          @include mq($bp768) {
+            @include padding(0 null null 0);
+          }
+
+          @include mq($bp1024) {
+            @include padding(null null null 0);
+          }
+
+          &::after {
+            display: none;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: none;
+
+            @include mq($bp768) {
+              height: auto;
+            }
+          }
+        }
+
+        .arrow {
+          display: none;
+        }
+
+        .f--attribution {
+          display: none;
+        }
+      }
+
+      .quote-container {
+        @include padding(0 0 null null);
+
+        @include mq($bp768max) {
+          @include padding(rem(20) 0 rem(30));
+          @include margin(0 0 null);
+          box-shadow: none;
+        }
+
+        .quote-mark {
+          @include margin(0 null null);
+          width: rem(36);
+          height: rem(33);
+
+          @include mq($bp768) {
+            width: rem(50);
+            height: rem(45);
+          }
+
+          @include mq($bp1024) {
+            width: rem(50);
+            height: rem(45);
+          }
+        }
+
+        .f--sub-title {
+          @include margin(null null rem(20));
+        }
+
+        .f--description {
+          p {
+
+            @include font-size(24, 30);
+
+
+            @include mq($bp768) {
+              @include font-size(30, 36);
+            }
+          }
+        }
+
+        .f--attribution {
+          display: block;
+
+          h4 {
+            @extend %font-fira-sans-extra-condensed-semibold;
+            @include margin(null null rem(8));
+            @include font-size(18, 18);
+            color: $color-black;
+            text-transform: uppercase;
+
+            @include mq($bp768) {
+              @include font-size(20, 26);
+            }
+          }
+
+          p {
+            @extend %font-ibm-plex-serif-regular;
+            @include font-size(14, 14);
+            color: $color-black;
+
+            @include mq($bp768) {
+              @include font-size(16, 20);
+            }
+          }
+        }
+
+        .f--link {
+          @include margin(rem(20) null null);
+        }
+      }
+    }
+
+    &.image-right {
+      .quote-container {
+        @include mq($bp768) {
+          @include padding(null cols(2) null 0);
+        }
+      }
+    }
+  }
+}

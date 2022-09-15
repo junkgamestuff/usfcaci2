@@ -1,0 +1,34 @@
+id: paragraph_rich_text
+label: USFCA — Paragraph — Rich Text
+migration_group: usfca
+source:
+  plugin: usfca_migrate_node
+  node_type: [news, magazine]
+keys:
+  - nid
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: rich_text
+process:
+  uid:
+    plugin: default_value
+    default_value: 1
+  field_rich_text:
+    plugin: sub_process
+    source: body
+    process:
+      value:
+        - plugin: skip_on_empty
+          method: row
+          source: value
+          message: 'Field body is missing'
+        -
+          plugin: parse_body
+          source: value
+      format:
+        plugin: default_value
+        default_value: full_html
+dependencies:
+  enforced:
+    module:
+      - usfca_migrate

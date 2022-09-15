@@ -1,0 +1,18 @@
+<svg width="8px" height="13px" viewBox="0 0 8 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/arrow/right</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-26.000000, -2879.000000)" fill="#FFFFFF">
+            <g transform="translate(0.000000, 2613.000000)">
+                <g>
+                    <g transform="translate(14.000000, 257.000000)">
+                        <g transform="translate(0.000000, 0.500000)">
+                            <g>
+                                <polygon transform="translate(15.765306, 15.000000) scale(-1, 1) rotate(90.000000) translate(-15.765306, -15.000000) " points="15.7653061 16.5612245 21.0918367 11.2346939 22.1938776 12.3367347 15.7653061 18.7653061 9.33673469 12.3367347 10.4387755 11.2346939"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

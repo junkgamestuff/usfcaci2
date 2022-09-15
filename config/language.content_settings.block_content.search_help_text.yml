@@ -1,0 +1,11 @@
+uuid: 17706432-4148-4361-8150-aafe3df10bb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.search_help_text
+id: block_content.search_help_text
+target_entity_type_id: block_content
+target_bundle: search_help_text
+default_langcode: site_default
+language_alterable: false

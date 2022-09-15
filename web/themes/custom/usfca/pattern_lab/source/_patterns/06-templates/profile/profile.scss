@@ -1,0 +1,11 @@
+.tc--profile {
+  .content-sidebar-main-wrapper {
+    .content-sidebar-main-wrapper-inner {
+      .content-sidebar {
+        @include padding(null 0);
+      }
+    }
+  }
+
+
+}

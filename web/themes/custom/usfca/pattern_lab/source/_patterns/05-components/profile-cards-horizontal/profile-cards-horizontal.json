@@ -1,0 +1,87 @@
+{
+  "title": "Featured Faculty",
+  "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+  "link": {
+    "href": "https://www.example.com/",
+    "cta": "Example Link One",
+    "ariaLabel": "An Example Aria Label for CTA Link"
+  },
+  "cards": [
+    {
+      "profileLink": "https://www.example.com/1",
+      "title": "Jonathan A. Fitzpatrickson III",
+      "role": "Assistant Director, Faculty Support",
+      "facultyRole": "Full-Time Faculty",
+      "departmentLabel": "College of Arts and Sciences",
+      "office": {
+        "label": "Office",
+        "text": "XARTS 004"
+      },
+      "contact": {
+        "label": "Contact",
+        "mail": "email@email.edu"
+      },
+      "image": {
+        "src": "https://placeimg.com/700/700/people",
+        "alt": "Image Alt Text4"
+      }
+    },
+    {
+      "profileLink": "https://www.example.com/1",
+      "title": "Jonathan A. Fitzpatrickson III",
+      "role": "Assistant Director, Faculty Support",
+      "facultyRole": "Full-Time Faculty",
+      "departmentLabel": "College of Arts and Sciences",
+      "office": {
+        "label": "Office",
+        "text": "XARTS 004"
+      },
+      "contact": {
+        "label": "Contact",
+        "mail": "email@email.edu"
+      },
+      "image": {
+        "src": "https://placeimg.com/700/700/people",
+        "alt": "Image Alt Text4"
+      }
+    },
+    {
+      "profileLink": "https://www.example.com/1",
+      "title": "Jonathan A. Fitzpatrickson III",
+      "role": "Assistant Director, Faculty Support",
+      "facultyRole": "Full-Time Faculty",
+      "departmentLabel": "College of Arts and Sciences",
+      "office": {
+        "label": "Office",
+        "text": "XARTS 004"
+      },
+      "contact": {
+        "label": "Contact",
+        "mail": "email@email.edu"
+      },
+      "image": {
+        "src": "https://placeimg.com/700/700/people",
+        "alt": "Image Alt Text4"
+      }
+    },
+    {
+      "profileLink": "https://www.example.com/1",
+      "title": "Jonathan A. Fitzpatrickson III",
+      "role": "Assistant Director, Faculty Support",
+      "facultyRole": "Full-Time Faculty",
+      "departmentLabel": "College of Arts and Sciences",
+      "office": {
+        "label": "Office",
+        "text": "XARTS 004"
+      },
+      "contact": {
+        "label": "Contact",
+        "mail": "email@email.edu"
+      },
+      "image": {
+        "src": "https://placeimg.com/700/700/people",
+        "alt": "Image Alt Text4"
+      }
+    }
+  ]
+}

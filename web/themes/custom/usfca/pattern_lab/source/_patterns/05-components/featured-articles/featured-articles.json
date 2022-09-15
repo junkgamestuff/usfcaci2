@@ -1,0 +1,46 @@
+{
+  "title": "It's Happening <span class=\"highlight\">Here</span>",
+  "cards": [
+    {
+      "title": "Consequat anim sit pariatur deserunt ad laboris excepteur ex enim sunt ullamco reprehenderit non",
+      "date": "March 6, 2021",
+      "link": {
+        "href": "#"
+      }
+    },
+    {
+      "title": "Consequat anim sit pariatur deserunt ad laboris excepteur ex enim sunt ullamco reprehenderit non",
+      "date": "March 6, 2021",
+      "link": {
+        "href": "#"
+      }
+    },
+    {
+      "title": "Consequat anim sit pariatur deserunt ad laboris excepteur ex enim sunt ullamco reprehenderit non",
+      "date": "March 6, 2021",
+      "image": {
+        "src": "https://placeimg.com/600/338/people",
+        "alt": "Alt 1"
+      },
+      "link": {
+        "href": "#"
+      }
+    },
+    {
+      "title": "Consequat anim sit pariatur deserunt ad laboris excepteur ex enim sunt ullamco reprehenderit non",
+      "date": "March 6, 2021",
+      "image": {
+        "src": "https://placeimg.com/600/338/people",
+        "alt": "Alt 1"
+      },
+      "link": {
+        "href": "#"
+      }
+    }
+  ],
+  "link": {
+    "href": "http://www.google.com",
+    "title": "Read More News",
+    "aria": "Read more about aria labels"
+  }
+}

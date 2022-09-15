@@ -1,0 +1,43 @@
+uuid: 7696e39a-09bd-41da-834f-1ba259c41ef2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slides
+    - paragraphs.paragraphs_type.vertical_tabbed_carousel
+    - paragraphs.paragraphs_type.vertical_tabbed_carousel_slide
+  module:
+    - entity_reference_revisions
+id: paragraph.vertical_tabbed_carousel.field_slides
+field_name: field_slides
+entity_type: paragraph
+bundle: vertical_tabbed_carousel
+label: Slides
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      vertical_tabbed_carousel_slide: vertical_tabbed_carousel_slide
+    negate: 0
+    target_bundles_drag_drop:
+      homepage_hero:
+        weight: 7
+        enabled: false
+      homepage_hero_ambient_video:
+        weight: 8
+        enabled: false
+      homepage_hero_slide:
+        weight: 9
+        enabled: false
+      vertical_tabbed_carousel:
+        weight: 6
+        enabled: false
+      vertical_tabbed_carousel_slide:
+        weight: 10
+        enabled: true
+field_type: entity_reference_revisions

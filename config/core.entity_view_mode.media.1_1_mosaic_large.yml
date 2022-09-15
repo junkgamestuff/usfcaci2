@@ -1,0 +1,10 @@
+uuid: c2b59970-2fdc-4b7c-8b6d-caa79c9fd108
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.1_1_mosaic_large
+label: '1:1 Mosaic Large'
+targetEntityType: media
+cache: true

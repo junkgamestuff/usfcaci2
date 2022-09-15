@@ -1,0 +1,33 @@
+uuid: 454b574b-d5a9-47be-9e5f-52e66ccc1112
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.school-of-law-utility
+  module:
+    - system
+    - usfca_school_context
+  theme:
+    - usfca
+id: schooloflawutility
+theme: usfca
+region: header
+weight: -8
+provider: null
+plugin: 'system_menu_block:school-of-law-utility'
+settings:
+  id: 'system_menu_block:school-of-law-utility'
+  label: 'School of Law Utility'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  usfca_schoool_context_condition:
+    id: usfca_schoool_context_condition
+    schools:
+      'School of Law': 'School of Law'
+    negate: false
+    context_mapping:
+      school: '@usfca_school_context.school_context:school'

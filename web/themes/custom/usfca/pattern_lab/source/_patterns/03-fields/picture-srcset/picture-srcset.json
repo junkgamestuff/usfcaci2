@@ -1,0 +1,17 @@
+{
+  "images": [
+    {
+      "srcset": "https://placehold.it/1600x500",
+      "media": "(min-width: 1280px)"
+    },
+    {
+      "srcset": "https://placehold.it/1279x500",
+      "media": "(min-width: 1024px)"
+    },
+    {
+      "srcset": "https://placehold.it/1023x500",
+      "media": "(min-width: 768px)"
+    }
+  ],
+  "defaultImage": "https://placehold.it/767x500"
+}

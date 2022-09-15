@@ -1,0 +1,20 @@
+uuid: e7811356-0dd3-4c72-8581-e2929cb16e35
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_minisite
+field_name: field_minisite
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

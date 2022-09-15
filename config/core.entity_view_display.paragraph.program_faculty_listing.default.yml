@@ -1,0 +1,29 @@
+uuid: 1bc1e9d3-6d51-4fcd-8e89-5f787d1e1604
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.program_faculty_listing.field_views_reference
+    - paragraphs.paragraphs_type.program_faculty_listing
+  module:
+    - viewsreference
+id: paragraph.program_faculty_listing.default
+targetEntityType: paragraph
+bundle: program_faculty_listing
+mode: default
+content:
+  field_views_reference:
+    type: viewsreference_formatter
+    label: hidden
+    settings:
+      plugin_types:
+        default: default
+        page: 0
+        block: 0
+        feed: 0
+        embed: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

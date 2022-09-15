@@ -1,0 +1,11 @@
+uuid: 3abdfd72-5fa9-48ae-bb5d-422b201226b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.form_page
+id: node.form_page
+target_entity_type_id: node
+target_bundle: form_page
+default_langcode: site_default
+language_alterable: false

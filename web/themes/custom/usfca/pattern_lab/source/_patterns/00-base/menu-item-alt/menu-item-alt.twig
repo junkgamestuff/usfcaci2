@@ -1,0 +1,49 @@
+<li {% if item.activeTrail %} class="menu-item menu-item--active-trail" {% else %} class="menu-item" {% endif %} {% if item.submenu|length %} aria-expanded="false" aria-haspopup="true" {% endif %}>
+
+  {% if item.submenu|length %}
+    <div class="utility-button-wrapper">
+
+      <button type="button" class="utility-button information-for-toggle" aria-expanded="false" aria-haspopup="true">
+        <a href="{{ item.href ? item.href : '#'}}">
+          {{ item.title|raw }}<span class="offset"></span>
+          <svg height="9" viewBox="0 0 15 9" width="15" xmlns="http://www.w3.org/2000/svg"><path d="m17.5 20.2142857 5.5714286-5.5714286c.3550402-.3550402.9306741-.3550402 1.2857143 0s.3550402.9306741 0 1.2857143l-6.1500361 6.1500361c-.3905243.3905243-1.0236893.3905243-1.4142136 0l-6.1500361-6.1500361c-.3550402-.3550402-.3550402-.9306741 0-1.2857143s.9306741-.3550402 1.2857143 0z" fill="#671f75" fill-rule="evenodd" transform="translate(-10 -14)"/></svg>
+        </a>
+      </button>
+
+  {% else %}
+
+    <a href="{{ item.href }}"{% if item.offsite %} target="_blank" class="offsite"{% endif %}>
+
+      {% if item.label is not empty %}
+
+        <span class="label">{{ item.label }}</span>
+
+      {% endif %}
+
+      {{ item.title }}
+
+    </a>
+
+  {% endif %}
+
+  {% if item.submenu|length %}
+    <div class="submenus-wrapper">
+      <button class="button-back">
+        <svg height="15" viewBox="0 0 9 15" width="9" xmlns="http://www.w3.org/2000/svg"><path d="m16.5 19.2142857 5.5714286-5.5714286c.3550402-.3550402.9306741-.3550402 1.2857143 0s.3550402.9306741 0 1.2857143l-6.1500361 6.1500361c-.3905243.3905243-1.0236893.3905243-1.4142136 0l-6.15003606-6.1500361c-.35504019-.3550402-.35504019-.9306741 0-1.2857143.3550402-.3550402.93067406-.3550402 1.28571426 0z" fill-rule="evenodd" transform="matrix(0 1 -1 0 21.892857 -9.107143)"/></svg>
+        {{ item.title }}
+      </button>
+
+      <ul class="submenu" aria-hidden="true">
+        {% for subitem in item.submenu %}
+
+          {% include "base-menu-item" with { item: subitem } %}
+
+        {% endfor %}
+      </ul>
+
+    </div>
+
+  </div> <!-- end of utility-button-wrapper -->
+  {% endif %}
+
+</li>

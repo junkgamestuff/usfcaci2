@@ -1,0 +1,96 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+
+  <div class="content-top">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {% set links = [] %}
+
+          {% for link in fields.links %}
+            {% set links = links | merge([{
+              title: link.title,
+              url: link.url,
+              class: link.url == path('<current>') ? 'active' : NULL,
+            }]) %}
+          {% endfor %}
+
+          {% include "components-hero-tabbed-navigation" with {
+            title: fields.title,
+            category: fields.eyebrow | upper,
+            bannerImage: fields.image.uri ? {
+              src: fields.image.uri | image_style('16_9_2400x1350'),
+              alt: fields.image.alt,
+              render: drupal_image(fields.image.uri, '16_9_full', { alt: fields.image.alt }, responsive=true)
+            } : null,
+            links: links,
+          } only %}
+
+          {{ content_extra }}
+
+          {{ attach_library('usfca/interest_matcher') }}
+
+          {% include "components-interest-matcher" with {
+            description: fields.description,
+            items: [
+              {
+                type: 'text',
+                link: {
+                  title: "Browse Full Listing",
+                  url: fields.url,
+                },
+                class: 'active',
+              },
+              {
+                type: 'select',
+                namevalue: 'interest',
+                label: "I'm interested in",
+                name: 'interest-select',
+                options: interests,
+                content: {
+                  title: 'I\'m interested in...',
+                  link: {
+                    url: '#',
+                    title: 'Show Options',
+                  },
+                  label: "RELATED PROGRAMS",
+                },
+              },
+              {
+                type: 'select',
+                namevalue: 'want',
+                label: "I want to be a",
+                name: 'want-select',
+                options: careers,
+                content: {
+                  title: 'I want to be a...',
+                  link: {
+                    url: '#',
+                    title: 'Show Options',
+                  },
+                  label: "RELATED PROGRAMS",
+                },
+              },
+            ]
+          } only %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-main">
+
+    <div class="lc--layout-container lc--two-column">
+      <div class="l--layout l--two-column">
+
+          {{ content.field_views_reference }}
+
+      </div>
+    </div>
+
+  </div>
+
+{% endblock content %}

@@ -1,0 +1,33 @@
+uuid: 0dfaaa63-3e3c-4cde-8e05-1c258e857db3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+    - usfca_school_context
+  theme:
+    - usfca
+id: mainnavigation
+theme: usfca
+region: header
+weight: -17
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 3
+  expand_all_items: true
+visibility:
+  usfca_schoool_context_condition:
+    id: usfca_schoool_context_condition
+    schools:
+      no_school_context: no_school_context
+    negate: false
+    context_mapping:
+      school: '@usfca_school_context.school_context:school'

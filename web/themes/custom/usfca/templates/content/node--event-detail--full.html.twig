@@ -1,0 +1,123 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+
+  <div class="content-top">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {% include "components-basic-header" with {
+            variant: 'event',
+            title: fields.title,
+          } only %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-main">
+    <div class="lc--layout-container lc--two-column">
+      <div class="l--layout l--two-column">
+        <div class="l--two-column-inner">
+          <div class="lr--layout-region lr--sidebar">
+
+            {% set date = fields.start_date.timestamp | date("F j, Y") %}
+
+            {% if fields.end_date is not empty %}
+              {% if fields.start_date.timestamp|date("mdy") != fields.end_date.timestamp|date("mdy") %}
+                {% if fields.start_date.timestamp|date("Y") != fields.end_date.timestamp|date("Y") %}
+                  {% set date = fields.start_date.timestamp|date('F j, Y') ~ ' – ' ~ fields.end_date.timestamp|date('F j, Y') %}
+                {% else %}
+                  {% set date = fields.start_date.timestamp|date('F j') ~ ' – ' ~ fields.end_date.timestamp|date('F j, Y') %}
+                {% endif %}
+              {% endif %}
+            {% endif %}
+
+            {% if fields.all_day %}
+              {% set time = 'All Day' %}
+            {% else %}
+              {% if fields.end_date is not empty and fields.end_date.timestamp | date('mdY') == fields.start_date.timestamp | date('mdY') %}
+                {% set time = fields.start_date.timestamp|date("g:iA") ~ ' - ' ~ fields.end_date.timestamp|date("g:iA") %}
+              {% else %}
+                {% set time = fields.start_date.timestamp|date("g:iA") %}
+              {% endif %}
+            {% endif %}
+
+            {% set link = '' %}
+
+            {% if fields.event_address is not empty %}
+              {% set address = '' %}
+              {% set map_address = fields.event_address %}
+              {% if map_address.address_line1 is not empty %}{% set address = address ~ map_address.address_line1 %}{% endif %}
+              {% if map_address.address_line2 is not empty %}{% set address = address ~ ' ' ~ map_address.address_line2 %}{% endif %}
+              {% if map_address.locality is not empty %}{% set address = address ~ ', ' ~ map_address.locality %}{% endif %}
+              {% if map_address.administrative_area is not empty %}{% set address = address ~ ' ' ~ map_address.administrative_area %}{% endif %}
+              {% if map_address.postal_code is not empty %}{% set address = address ~ ', ' ~ map_address.postal_code %}{% endif %}
+
+              {% if address is not empty %}
+              {% set link = {
+                title: 'View on Google Maps',
+                url: 'https://maps.google.com?q=' ~ address | replace({' ': '%20'}),
+                svg: "<svg width=\"12\" height=\"18\" enable-background=\"new 0 0 28 40.5\" viewBox=\"0 0 28 40.5\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"14\" cy=\"14\" fill=\"#fff\" r=\"7.8\"/><path fill=\"#00543C\" d=\"m14 0c-7.7 0-14 6.3-14 14 0 12.9 12.4 25.5 12.9 26 .6.6 1.6.6 2.2 0 .5-.5 12.9-13.1 12.9-26 0-7.7-6.3-14-14-14zm0 21.8c-4.3 0-7.8-3.5-7.8-7.8s3.5-7.8 7.8-7.8 7.8 3.5 7.8 7.8-3.5 7.8-7.8 7.8z\"/></svg>"
+              } %}
+              {% endif %}
+            {% endif %}
+
+            {% set ctaLinks = [] %}
+
+            {% if fields.registration_link is not empty %}
+              {% set ctaLinks = ctaLinks | merge([{
+                title: 'RSVP',
+                url: fields.registration_link.url,
+              }]) %}
+            {% endif %}
+
+            {{ attach_library('usfca/add_to_any') }}
+
+            {% include "components-event-detail" with {
+              date: '<span>' ~ fields.start_date.timestamp | date('d') ~ '</span>' ~ fields.start_date.timestamp | date('F'),
+              time: time,
+              location: fields.event_location,
+              link: link,
+              description: fields.event_access,
+              ctaLinks: ctaLinks,
+            } only %}
+
+          </div>
+          <div class="lr--layout-region lr--main">
+
+            {% if fields.image is not empty %}
+              {% include "components-featured-image" with {
+                image: fields.image.uri ? {
+                  src: fields.image.uri | image_style('16_9_637x359'),
+                  alt: fields.image.alt,
+                  render: drupal_image(fields.image.uri, '16_9_full', { alt: fields.image.alt }, responsive=true),
+                  caption: fields.image_caption,
+                  wrapFigure: fields.image_caption is not empty,
+                } : null,
+              } only %}
+            {% else %}
+              <div class="hide-for-mobile">
+                {% include "components-spacer" %}
+              </div>
+            {% endif %}
+
+            <div class="hide-for-mobile">
+              {% include "components-spacer" %}
+            </div>
+
+            {% if fields.event_description is not empty %}
+              {% include "components-rich-text" with { markup: fields.event_description } only %}
+            {% endif %}
+
+            {% include "components-spacer" %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

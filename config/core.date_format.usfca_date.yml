@@ -1,0 +1,8 @@
+uuid: badb331a-6f08-4622-bb18-85e6d69f8d80
+langcode: en
+status: true
+dependencies: {  }
+id: usfca_date
+label: 'USFCA date'
+locked: false
+pattern: 'F j, Y'

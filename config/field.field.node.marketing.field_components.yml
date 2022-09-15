@@ -1,0 +1,246 @@
+uuid: a593f22a-0cd1-463f-bb58-aa21a9ad04fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_components
+    - node.type.marketing
+    - paragraphs.paragraphs_type.embed
+    - paragraphs.paragraphs_type.intro_text
+    - paragraphs.paragraphs_type.rich_text
+    - paragraphs.paragraphs_type.shared_rich_text
+    - paragraphs.paragraphs_type.spacer
+  module:
+    - entity_reference_revisions
+id: node.marketing.field_components
+field_name: field_components
+entity_type: node
+bundle: marketing
+label: Components
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      embed: embed
+      intro_text: intro_text
+      rich_text: rich_text
+      shared_rich_text: shared_rich_text
+      spacer: spacer
+    negate: 0
+    target_bundles_drag_drop:
+      50_50_cta_groupings:
+        weight: 67
+        enabled: false
+      50_50_split_cta:
+        weight: 68
+        enabled: false
+      50_50_split_cta_inset:
+        weight: 69
+        enabled: false
+      acalog_course_link:
+        weight: 70
+        enabled: false
+      acalog_entity_link:
+        weight: 71
+        enabled: false
+      acalog_example_curriculum:
+        weight: 72
+        enabled: false
+      acalog_link:
+        weight: 73
+        enabled: false
+      acalog_page_link:
+        weight: 74
+        enabled: false
+      acalog_program_content:
+        weight: 75
+        enabled: false
+      acalog_program_learning_outcomes:
+        weight: 76
+        enabled: false
+      acalog_program_link:
+        weight: 77
+        enabled: false
+      accordion:
+        weight: 78
+        enabled: false
+      accordions:
+        weight: 79
+        enabled: false
+      article_cards_featured:
+        weight: 80
+        enabled: false
+      article_cards_manual:
+        weight: 81
+        enabled: false
+      blog_teasers_automatic:
+        weight: 86
+        enabled: false
+      blog_teasers_manual:
+        weight: 88
+        enabled: false
+      campus_address:
+        weight: 82
+        enabled: false
+      chapter:
+        weight: 83
+        enabled: false
+      contact_box:
+        weight: 84
+        enabled: false
+      embed:
+        weight: 85
+        enabled: true
+      event_cards_automatic:
+        weight: 89
+        enabled: false
+      event_cards_manual:
+        weight: 90
+        enabled: false
+      events_listing:
+        weight: 87
+        enabled: false
+      faculty_directory:
+        weight: 91
+        enabled: false
+      featured_articles:
+        weight: 92
+        enabled: false
+      featured_articles_automatic:
+        weight: 93
+        enabled: false
+      featured_events:
+        weight: 94
+        enabled: false
+      featured_events_manual:
+        weight: 95
+        enabled: false
+      featured_image:
+        weight: 96
+        enabled: false
+      featured_quote:
+        weight: 97
+        enabled: false
+      full_width_cta:
+        weight: 98
+        enabled: false
+      full_width_cta_link:
+        weight: 99
+        enabled: false
+      homepage_hero:
+        weight: 100
+        enabled: false
+      homepage_hero_ambient:
+        weight: 101
+        enabled: false
+      homepage_hero_ambient_slide:
+        weight: 102
+        enabled: false
+      homepage_hero_slide:
+        weight: 103
+        enabled: false
+      image_gallery:
+        weight: 104
+        enabled: false
+      image_gallery_slide:
+        weight: 105
+        enabled: false
+      intro_text:
+        weight: 106
+        enabled: true
+      intro_text_title:
+        weight: 107
+        enabled: false
+      link_list:
+        weight: 108
+        enabled: false
+      manual_card_cta_card:
+        weight: 112
+        enabled: false
+      manual_cards_horizontal:
+        weight: 109
+        enabled: false
+      manual_cards_horizontal_card:
+        weight: 110
+        enabled: false
+      manual_cards_w_cta:
+        weight: 111
+        enabled: false
+      manual_cta_grid:
+        weight: 113
+        enabled: false
+      manual_cta_grid_card:
+        weight: 114
+        enabled: false
+      map_with_pins:
+        weight: 115
+        enabled: false
+      news_listing:
+        weight: 116
+        enabled: false
+      program_faculty_listing:
+        weight: 117
+        enabled: false
+      program_listing_manual:
+        weight: 118
+        enabled: false
+      rfi_rich_text:
+        weight: 124
+        enabled: false
+      ribbon_carousel:
+        weight: 119
+        enabled: false
+      ribbon_carousel_slide:
+        weight: 120
+        enabled: false
+      rich_text:
+        weight: 121
+        enabled: true
+      school_program_role:
+        weight: 122
+        enabled: false
+      shared_rich_text:
+        weight: 127
+        enabled: true
+      slate_form_embed:
+        weight: 123
+        enabled: false
+      social_link:
+        weight: 125
+        enabled: false
+      social_media_feed:
+        weight: 126
+        enabled: false
+      spacer:
+        weight: 128
+        enabled: true
+      stats:
+        weight: 129
+        enabled: false
+      text_and_image_mosaic:
+        weight: 130
+        enabled: false
+      text_and_image_mosaic_tile:
+        weight: 131
+        enabled: false
+      two_column_link_list:
+        weight: 132
+        enabled: false
+      vertical_tabbed_carousel:
+        weight: 133
+        enabled: false
+      vertical_tabbed_carousel_slide:
+        weight: 134
+        enabled: false
+      webform:
+        weight: 135
+        enabled: false
+      youvisit_link:
+        weight: 136
+        enabled: false
+field_type: entity_reference_revisions

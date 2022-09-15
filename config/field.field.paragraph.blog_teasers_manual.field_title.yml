@@ -1,0 +1,19 @@
+uuid: 8a7d9f63-cbb2-4cfb-bc51-03e3b5f77afe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.blog_teasers_manual
+id: paragraph.blog_teasers_manual.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: blog_teasers_manual
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

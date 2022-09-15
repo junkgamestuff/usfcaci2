@@ -1,0 +1,280 @@
+uuid: ce6da111-fd2d-496e-880f-cc3a521362f4
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 9
+template: false
+archive: false
+id: usf_presidio_hill_school_teacher
+title: 'USF & Presidio Hill School Teacher Apprentice Program Application'
+description: ''
+category: ''
+elements: |-
+  first_name:
+    '#type': textfield
+    '#title': 'First Name'
+    '#required': true
+  last_name:
+    '#type': textfield
+    '#title': 'Last Name'
+    '#required': true
+  email_address:
+    '#type': textfield
+    '#title': 'Email Address'
+    '#required': true
+  have_you_submitted_your_application_to_usf_:
+    '#type': radios
+    '#title': 'Have you submitted your application to USF?'
+    '#options':
+      'Yes': 'Yes'
+      'In progress': 'In progress'
+      'No': 'No'
+    '#required': true
+  why_would_you_be_a_good_fit_for_this_program_:
+    '#type': textarea
+    '#title': 'Why would you be a good fit for this program?'
+    '#description': '<strong>Prompt: </strong>The Presidio Hill School partnership with the University of San Francisco is based upon building a foundation in progressive education. Please write about your interest in progressive education &mdash; why you are interested in progressive education, what you know about the topic at this stage in your life and what you hope to learn if you are accepted to this program. Limit your reply to 3000 characters (approximately 1 page single-spaced).'
+    '#required': true
+  release_of_confidential_student_record_information:
+    '#type': radios
+    '#title': 'Release of Confidential Student Record Information'
+    '#description': |-
+      In accordance with the Family Education Rights and Privacy Act of 1974 (as amended), the University of San Francisco does not release a student&rsquo;s educational record information without the written consent of the student, except to certain categories of persons specifically exempted by the law. The USF &amp; Presidio Hill School Teacher Apprentice Program is jointly administered by the University of San Francisco and the Presidio Hill School of San Francisco. Officials from these organizations are involved in all phases of the USF &amp; Presidio Hill School Teacher Apprentice Program.<br />
+      <br />
+      This release must be submitted with the application to the USF &amp; Presidio Hill School Teacher Apprentice Program and must remain in effect for the duration of the student&rsquo;s participation in the program.<br />
+      <br />
+      I authorize the University of San Francisco to release my application and application materials, admissions file, grades, courses taken, academic process, advising information, probation, suspension or dismissal status. This will be in force for the duration of my enrollment in the USF &amp; Presidio Hill School Teacher Apprentice Program.<br />
+      <br />
+      The purpose of this release is to permit the Presidio Hill School to evaluate me as a candidate for the USF &amp; Presidio Hill School Teacher Apprentice Program and to track my academic progress through the Program.
+    '#options':
+      'I understand that selecting this option signifies that I agree to all of the terms below.': 'I understand that selecting this option signifies that I agree to all of the terms below.'
+    '#required': true
+  key:
+    '#type': date
+    '#title': Date
+    '#required': true
+    '#datepicker': true
+    '#date_date_format': m/d/Y
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_title: ''
+  confirmation_message: 'Thank you for your interest in the USF &amp; Presidio Hill School Teacher Apprentice program. We have received your contact information and will be in contact soon.'
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  submission_email:
+    id: email
+    handler_id: submission_email
+    label: 'Submission Email'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: schoolofeducation@usfca.edu
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: 'School of Education Admissions Office'
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

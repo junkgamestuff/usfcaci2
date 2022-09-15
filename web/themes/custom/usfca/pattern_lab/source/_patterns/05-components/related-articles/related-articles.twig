@@ -1,0 +1,46 @@
+{% extends "base-component" %}
+
+{% set name = "related-articles" %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Related Content" %}
+
+{% block content %}
+
+  <div class="inner-wrapper">
+
+    {% if title is not empty %}
+
+      {% include "fields-section-title" with { title: title } %}
+
+    {% endif %}
+
+    {% embed "base-field" with { name: "field-components" } %}
+
+      {% block content %}
+
+        {% for card in cards %}
+
+          {% include "components-related-article" with {
+            eyebrow: card.eyebrow,
+            cardTitle: card.title,
+            link: card.link,
+            subText: card.subText,
+            description: card.description,
+            image: card.image
+          } only %}
+
+        {% endfor %}
+
+      {% endblock content %}
+
+    {% endembed %}
+
+    {% include "fields-link" with {
+      href: link.href,
+      cta: link.cta,
+      ariaLabel: link.ariaLabel
+    } only %}
+
+  </div>
+
+{% endblock %}

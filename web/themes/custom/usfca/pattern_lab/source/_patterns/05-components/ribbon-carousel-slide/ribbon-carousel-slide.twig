@@ -1,0 +1,33 @@
+{% extends "base-component" %}
+
+{% set name = "ribbon-carousel-slide" %}
+
+{% block content %}
+  {% if link is not empty %}
+    <a href="{{ link }}">
+  {% endif %}
+      {% if image is not empty %}
+        {% include "fields-image" with { image: image } only %}
+      {% endif %}
+
+      <div class="text-container">
+
+        {% if title is not empty %}
+          {% include "fields-section-title" with { title: title } only %}
+        {% endif %}
+
+        {% if subtitle is not empty %}
+          {% include "fields-sub-title" with { title: subtitle } only %}
+        {% endif %}
+
+        {% if description is not empty %}
+          {% include "fields-description" with { description: description } only %}
+        {% endif %}
+
+      </div>
+
+  {% if link is not empty %}
+    </a>
+  {% endif %}
+
+{% endblock %}

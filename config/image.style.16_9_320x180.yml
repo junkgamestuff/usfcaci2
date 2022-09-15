@@ -1,0 +1,25 @@
+uuid: eccd22f1-bb84-4325-afee-2482eb1bc7fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+_core:
+  default_config_hash: iyY772LHqKGyM7S4uGhmq6zj_NCVLYFvLY-sWAquE68
+name: 16_9_320x180
+label: '16:9 (320x180)'
+effects:
+  4dc1dafc-5c79-4a1b-a668-8490018163b5:
+    uuid: 4dc1dafc-5c79-4a1b-a668-8490018163b5
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 320
+      height: 180
+      crop_type: focal_point
+  cdb1f6c9-952e-496c-a759-7e71095c33ff:
+    uuid: cdb1f6c9-952e-496c-a759-7e71095c33ff
+    id: image_convert
+    weight: 2
+    data:
+      extension: jpeg

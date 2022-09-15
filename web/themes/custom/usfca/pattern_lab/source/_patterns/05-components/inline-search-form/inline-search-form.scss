@@ -1,0 +1,280 @@
+.cc--inline-search-form {
+  @include maxwidth;
+
+  .c--inline-search-form {
+    @include padding(null cols(3) rem(35));
+
+    @include mq($bp768) {
+      @include padding(null cols(2));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(4) rem(30));
+    }
+  }
+
+  form {
+    @include padding(rem(20) cols(3, 42) rem(30));
+    position: relative;
+    box-shadow: 0 0 rem(6) 0 rgba($color-black, .25);
+
+    @include mq($bp768) {
+      @include padding(rem(30) cols(1, 44));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(1, 40));
+    }
+  }
+
+  .search-form-top {
+    @include mq($bp768) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &.nolink {
+    .search-form-inner {
+      @include mq($bp768) {
+        width: cols(35, 42);
+      }
+
+      @include mq($bp1024) {
+        width: cols(35, 38);
+      }
+    }
+  }
+
+  .search-form-actions {
+    @include mq($bp768) {
+      @include margin(null null null cols(1, 42));
+      width: cols(11, 42);
+    }
+
+    @include mq($bp1024) {
+      @include margin(null null null cols(1, 38));
+      width: cols(7, 38);
+    }
+
+    .button {
+      @include margin(null null rem(30));
+      width: 100%;
+      min-width: auto;
+      border: 1px solid $color-atlantis;
+
+      @include mq($bp768) {
+        @include margin(null null 0);
+      }
+    }
+  }
+
+  .search-form-inner {
+    position: relative;
+
+    @include mq($bp768) {
+      width: cols(20, 42);
+    }
+
+    @include mq($bp1024) {
+      width: cols(20, 38);
+    }
+
+    label {
+      @include visuallyhidden;
+    }
+  }
+
+  .icon-search {
+    @include centered('y');
+    right: rem(10);
+    width: rem(25);
+    height: rem(25);
+
+    @include mq($bp768) {
+      right: rem(18);
+      width: rem(35);
+      height: rem(35);
+    }
+
+    svg {
+      width: rem(15);
+      height: rem(15);
+
+      path {
+        fill: $color-sherpa-blue;
+      }
+
+      @include mq($bp768) {
+        width: rem(21);
+        height: rem(21);
+      }
+    }
+  }
+
+  .fieldset-inner {
+    @include mq($bp768) {
+      display: flex;
+    }
+  }
+
+  .fi--form-item {
+    @include margin(0 0 rem(20));
+
+    @include mq($bp768) {
+      @include margin(null null 0);
+    }
+
+    input {
+      @include padding(rem(11) rem(32) rem(11) rem(10));
+      @include font-size(16, 22);
+      height: auto;
+      border: 1px solid $color-atlantis;
+      background-color: $color-white;
+      color: $color-black;
+
+      @include mq($bp768) {
+        @include padding(rem(11) rem(50) rem(11) rem(25));
+        @include font-size(18, 26);
+      }
+
+      @include placeholder {
+        color: $color-black;
+      }
+    }
+  }
+
+  .f--link {
+    text-align: center;
+
+    @include mq($bp768) {
+      @include margin(null null null cols(1, 42));
+      width: cols(9, 42);
+      text-align: left;
+    }
+
+    @include mq($bp1024) {
+      @include margin(null null null cols(1, 38));
+      width: cols(9, 38);
+    }
+
+    a {
+      @extend %font-fira-sans-bold;
+      @include font-size(18, 18);
+      color: $color-sherpa-blue;
+      text-decoration: none;
+      text-transform: uppercase;
+      white-space: nowrap;
+
+      @include mq($bp768) {
+        @include font-size(16, 16);
+      }
+
+      @include mq($bp1024) {
+        @include font-size(18, 18);
+      }
+
+      svg {
+        @include margin(null null null rem(8));
+        display: inline-block;
+        position: relative;
+        top: rem(2);
+        width: rem(9);
+        height: rem(16);
+        transition: transform $transition-duration-fast $transition-easing-default;
+
+        path {
+          fill: $color-sherpa-blue;
+        }
+
+        @include mq($bp768) {
+          @include margin(null null null rem(6));
+          top: 0;
+          width: rem(7);
+          height: rem(12);
+        }
+
+        @include mq($bp1024) {
+          @include margin(null null null rem(10));
+        }
+      }
+
+      @include hover {
+        color: $color-sherpa-blue;
+        text-decoration: none;
+
+        svg {
+          transform: translate3d(rem(3), 0, 0);
+          transition: transform $transition-duration-fast $transition-easing-default;
+        }
+      }
+    }
+  }
+
+  .search-form-radios {
+    @include margin(rem(30) null null);
+
+    @include mq($bp768) {
+      @include margin(rem(10) null null);
+      display: flex;
+      align-items: center;
+    }
+
+    .form-title {
+      @extend %font-fira-sans-regular;
+      @include margin(null null rem(10) null);
+      @include font-size(20, 20);
+      color: $color-sherpa-blue;
+
+      @include mq($bp768) {
+        @include margin(null rem(28) 0 null);
+      }
+    }
+
+    .fi--form-item {
+      @include padding(rem(10) null);
+      @include margin(null null 0 null);
+
+      @include mq($bp768) {
+        @include margin(null rem(30) null null);
+      }
+
+      [type='radio'] {
+        + label {
+          @extend %font-fira-sans-semibold;
+          @include font-size(20, 20);
+          color: $color-sherpa-blue;
+          text-transform: none;
+
+          &::before,
+          &::after {
+            transform: translateY(4px);
+            border-radius: 0;
+          }
+
+          &::before {
+            width: rem(25);
+            height: rem(25);
+            border-color: $color-sherpa-blue;
+          }
+
+          &::after {
+            margin-top: 1px;
+            margin-left: 1px;
+            width: rem(17);
+            height: rem(17);
+          }
+        }
+
+        &:checked + label {
+          @extend %font-fira-sans-semibold;
+          color: $color-sherpa-blue;
+
+          &::after {
+            background-color: $color-supernova;
+          }
+        }
+      }
+    }
+  }
+}

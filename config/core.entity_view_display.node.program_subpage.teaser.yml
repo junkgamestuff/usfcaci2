@@ -1,0 +1,45 @@
+uuid: 75cedb85-299a-4e4f-9901-70632108efb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program_subpage.field_campus
+    - field.field.node.program_subpage.field_components
+    - field.field.node.program_subpage.field_eyebrow
+    - field.field.node.program_subpage.field_hero_description
+    - field.field.node.program_subpage.field_image
+    - field.field.node.program_subpage.field_metatag
+    - field.field.node.program_subpage.field_program
+    - field.field.node.program_subpage.field_school
+    - field.field.node.program_subpage.field_section
+    - node.type.program_subpage
+  module:
+    - user
+id: node.program_subpage.teaser
+targetEntityType: node
+bundle: program_subpage
+mode: teaser
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_campus: true
+  field_components: true
+  field_eyebrow: true
+  field_hero_description: true
+  field_image: true
+  field_metatag: true
+  field_program: true
+  field_school: true
+  field_section: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,41 @@
+{% extends "base-component" %}
+
+{% set name = "notification-banner" %}
+{% set container_element = 'div' %}
+
+
+{% block content %}
+
+  <div class="notification-banner-inner">
+
+    <div class="left">
+      {% if title is not empty %}
+        <span class="notification-title">{{ title }}</span>
+      {% endif %}
+
+      <div class="notification-timestamp">
+        <span>Updated:</span>
+        {% include "fields-date-string" with { text: timestamp } only %}
+      </div>
+
+    </div>
+
+    <div class="right">
+      {% include "fields-wysiwyg" with { markup: markup } only %}
+
+      {% if link is not empty %}
+
+        {% include "fields-button-link" with {
+          href: link.href,
+          cta: link.cta,
+          aria: link.ariaLabel,
+          isAlt: false
+        } only %}
+
+      {% endif %}
+    </div>
+
+  </div>
+
+
+{% endblock %}

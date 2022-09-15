@@ -1,0 +1,37 @@
+name: "block-multiple-ctas"
+type: "component"
+markup:
+  content:
+  - type: container
+    class: 'text-container'
+    content:
+    - type: field
+      name: section-title
+      with:
+        title: title
+    - type: field
+      name: description
+      condition: description
+      with:
+        description: description
+  - type: container
+    class: 'links-container'
+    content:
+    - type: repeater
+      name: 'links'
+      for: link
+      in: links
+      repeat:
+        type: field
+        name: link
+        with: link
+data:
+  title: "<span class=\"highlight\">Explore </span>Our Programs"
+  description: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut odio et leo vulputate pulvinar at a leo. Suspendisse rutrum diam vitae magna luctus placerat. Nunc iaculis nibh lorem, eu aliquet nulla luctus eu.</p>"
+  links:
+    - url: "//"
+      title: "Undergraduate Programs"
+    - url: "//"
+      title: "Continuing Education"
+    - url: "//"
+      title: "Graduate Programs"

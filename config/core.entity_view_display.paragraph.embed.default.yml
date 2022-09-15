@@ -1,0 +1,21 @@
+uuid: 94a53756-99a2-434b-8da5-53c17b458905
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.embed.field_embed_code
+    - paragraphs.paragraphs_type.embed
+id: paragraph.embed.default
+targetEntityType: paragraph
+bundle: embed
+mode: default
+content:
+  field_embed_code:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

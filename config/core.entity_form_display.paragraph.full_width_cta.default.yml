@@ -1,0 +1,64 @@
+uuid: 2413cfb0-eb65-4946-8365-fc2f9acc8859
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.full_width_cta.field_description
+    - field.field.paragraph.full_width_cta.field_full_width_cta_link
+    - field.field.paragraph.full_width_cta.field_title
+    - field.field.paragraph.full_width_cta.field_title_highlight
+    - paragraphs.paragraphs_type.full_width_cta
+  module:
+    - paragraphs
+    - text
+id: paragraph.full_width_cta.default
+targetEntityType: paragraph
+bundle: full_width_cta
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_full_width_cta_link:
+    type: paragraphs
+    weight: 3
+    region: content
+    settings:
+      title: Link
+      title_plural: Links
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: full_width_cta_link
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title_highlight:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

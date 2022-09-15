@@ -1,0 +1,19 @@
+uuid: 342be14d-2b98-411f-b5f7-186ce2389622
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_intro_title_highlight
+    - node.type.minisite_subpage
+id: node.minisite_subpage.field_hero_intro_title_highlight
+field_name: field_hero_intro_title_highlight
+entity_type: node
+bundle: minisite_subpage
+label: 'Hero Intro Title Highlight'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

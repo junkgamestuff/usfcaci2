@@ -1,0 +1,53 @@
+.lity {
+  .lity-wrap {
+    .lity-container {
+      position: relative;
+      background-color: $color-white;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
+
+      @include mq($bp1024) {
+        max-width: cols(14);
+      }
+
+      .lity-content {
+        @include padding(rem(80) cols(2, 14));
+        transition: none;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .lity-close {
+        @include hide-text;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        color: $color-black;
+
+        &::after {
+          @include centered;
+          display: block;
+          width: 16px;
+          height: 16px;
+          background-image: url('/images/icons/icon-close-blue.svg');
+          content: '';
+        }
+
+        &:focus {
+          @include outline;
+        }
+      }
+
+      h3 {
+        @include font-size(20, 30);
+        @include margin(null null rem(5) null);
+      }
+
+      p {
+        @include font-size(16, 26);
+      }
+    }
+  }
+}

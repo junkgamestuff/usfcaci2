@@ -1,0 +1,89 @@
+{
+  "title": "Filter",
+  "items": [
+    {
+      "type": "text",
+      "label": null,
+      "placeholder": "First Letter / Keyword"
+    },
+    {
+      "type": "select",
+      "namevalue": "by-category",
+      "title": "By Category",
+      "label": "Select label",
+      "name": "name-select",
+      "options": [
+        { "value": "1", "label": "Option One" },
+        { "value": "2", "label": "Option Two" },
+        { "value": "3", "label": "Option Three" }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "namevalue": "by-topic",
+      "title": "By Topic",
+      "options": [
+        {
+          "id": "college-of-arts-sciences",
+          "value": "College of Arts & Sciences",
+          "text": "College of Arts & Sciences"
+        },
+        {
+          "id": "school-of-education",
+          "value": "School of Education",
+          "text": "School of Education"
+        },
+        {
+          "id": "school-of-law",
+          "value": "School of Law",
+          "text": "School of Law"
+        },
+        {
+          "id": "school-of-management",
+          "value": "School of Management",
+          "text": "School of Management"
+        },
+        {
+          "id": "school-of-nursing-health-professions",
+          "value": "School of Nursing & Health Professions",
+          "text": "School of Nursing & Health Professions"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "namevalue": "by-year",
+      "title": "By Year",
+      "options": [
+        {
+          "id": "business-entrepreneurship",
+          "value": "Business & Entrepreneurship",
+          "text": "Business & Entrepreneurship"
+        },
+        {
+          "id": "education",
+          "value": "Education",
+          "text": "Education"
+        },
+        {
+          "id": "environment",
+          "value": "Environment",
+          "text": "Environment"
+        },
+        {
+          "id": "health",
+          "value": "Health",
+          "text": "Health"
+        }
+      ]
+    },
+    {
+      "type": "submit",
+      "value": "Search"
+    },
+    {
+      "type": "reset",
+      "value": "CLEAR SELECTIONS"
+    }
+  ]
+}

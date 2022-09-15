@@ -1,0 +1,45 @@
+{% extends "base-component" %}
+
+{% set name = "search-form-alt" %}
+{% set id = "header-search-form-alt" %}
+{% set container_aria_role = 'dialog' %}
+
+{% block content %}
+
+  <div class="inner-wrapper">
+
+    <h2 class="visually-hidden" id="dialog-title">Enter a Search Term</h2>
+
+    {% embed "base-form" with { name: "search-form", action: "/search" } %}
+
+      {% block content %}
+
+        {# <label class="visually-hidden" for="search">Search for:</label> #}
+        <div class="input-wrapper">
+{#          {% include "base-input-text" with { name: "search", label: "Search:", maxlength: 50, placeholder: "Search the Site" } %}#}
+{#          Please update the base-input-text to acceps the following attributes: #}
+          <div class="fi--form-item fi--search">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              maxlength="50"
+              class="form-autocomplete form-text ui-autocomplete-input"
+              name="search"
+              autocomplete="off"
+              data-autocomplete-path="/search_api_autocomplete/acquia_search?display=page&amp;&amp;filter=search"
+              data-search-api-autocomplete-search="acquia_search"
+              data-drupal-selector="edit-search-2"
+              placeholder="Search the Site"
+              size="50" >
+          </div>
+        </div>
+        {% include "base-input-submit" with { value: "Search" } %}
+
+      {% endblock %}
+
+    {% endembed %}
+
+  </div>
+
+{% endblock %}

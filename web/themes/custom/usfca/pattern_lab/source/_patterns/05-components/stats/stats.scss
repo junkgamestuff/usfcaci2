@@ -1,0 +1,184 @@
+.cc--stats {
+  position: relative;
+  overflow: hidden;
+
+  .c--stats {
+    .inner-wrapper {
+      @include padding(rem(50) cols(1, 12));
+
+      @include mq($bp768) {
+        @include padding(rem(75) cols(4, 48));
+      }
+
+      .cc--stats-card {
+        pointer-events: auto;
+      }
+    }
+  }
+
+  .f--section-title {
+    @include margin(null null rem(15));
+    @include padding(null cols(2));
+    text-align: center;
+
+    @include mq($bp768) {
+      @include margin(null null rem(42));
+    }
+
+    @include mq($bp1024) {
+      @include margin(null null rem(36));
+    }
+
+    h2 {
+      @extend %font-fira-sans-extra-condensed-medium;
+      @include font-size(18, 18);
+      @include margin(null null 0);
+      color: $color-sherpa-blue;
+      font-weight: 300;
+      text-transform: none;
+
+      @include mq($bp768) {
+        @include font-size(36, 48);
+      }
+
+      strong {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .swiper-slide {
+    @include mq($bp768) {
+      width: cols(22);
+      height: auto;
+    }
+
+    @include mq($bp1024) {
+      width: cols(14);
+    }
+  }
+
+  .swiper-controls {
+    @include margin(rem(30) null null);
+    display: none;
+    justify-content: center;
+
+    @include mq($bp1024) {
+      @include margin(rem(60) null null);
+    }
+
+    .swiper-button-wrapper {
+      @include no-bullet;
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: space-between;
+      width: rem(120);
+      height: rem(40);
+
+      @include mq($bp768) {
+        width: rem(150);
+        height: rem(50);
+      }
+    }
+
+    .swiper-nav-button {
+      position: relative;
+      right: auto;
+      left: auto;
+      width: rem(40);
+      height: rem(40);
+      margin: 0;
+      border: rem(2) solid $color-supernova;
+
+      @include mq($bp768) {
+        width: rem(50);
+        height: rem(50);
+      }
+
+      @include hover {
+        border-width: rem(5);
+      }
+
+      &::after {
+        display: none;
+      }
+
+      svg {
+        width: rem(12);
+        height: rem(12);
+
+        @include mq($bp768) {
+          width: rem(15);
+          height: rem(15);
+        }
+      }
+    }
+  }
+
+  .swiper-container {
+
+    &.swiper-initialized {
+      @include mq($bp768max) {
+        @include padding(rem(16) null null);
+        border-right: rem(2) solid $color-supernova;
+        border-left: rem(2) solid $color-supernova;
+      }
+
+      .swiper-slide {
+
+        &:not(.swiper-slide-active) {
+          @include mq($bp768-1024) {
+            opacity: .35;
+          }
+        }
+
+        &:not(.swiper-slide-prev):not(.swiper-slide-next):not(.swiper-slide-active) {
+          opacity: .35;
+        }
+      }
+
+      .swiper-controls {
+        display: flex;
+      }
+    }
+
+    // if there's not enough cards to initialize a carousel
+    &:not(.swiper-initialized) {
+      @include mq($bp768max) {
+        @include padding(null cols(3));
+      }
+
+      .swiper-wrapper {
+        justify-content: center;
+
+        @include mq($bp768max) {
+          flex-wrap: wrap;
+        }
+
+        .swiper-slide {
+          @include mq($bp768) {
+            width: cols(14);
+            height: auto;
+          }
+
+          @include mq($bp1024) {
+            width: cols(14);
+          }
+
+          &:not(:last-child) {
+            @include mq($bp768max) {
+              border-bottom: rem(2) solid $color-supernova;
+            }
+          }
+
+          .c--stat-card {
+            @include mq($bp768max) {
+              @include padding(null null rem(50) null);
+            }
+          }
+        }
+      }
+    }
+  }
+}

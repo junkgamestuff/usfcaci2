@@ -1,0 +1,19 @@
+uuid: a8b0f3a3-e42d-4836-9229-3c85a3206ac8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_acalog_course_code
+    - paragraphs.paragraphs_type.acalog_course_link
+id: paragraph.acalog_course_link.field_acalog_course_code
+field_name: field_acalog_course_code
+entity_type: paragraph
+bundle: acalog_course_link
+label: 'Acalog Course Code'
+description: 'Enter the Course code exactly as it appears in Acalog. E.g. "395".'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

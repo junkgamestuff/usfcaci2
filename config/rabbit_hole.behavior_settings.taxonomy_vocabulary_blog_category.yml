@@ -1,0 +1,14 @@
+uuid: 28e4588a-e9d1-4680-802c-09b862928849
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blog_category
+id: taxonomy_vocabulary_blog_category
+entity_type_id: taxonomy_vocabulary
+entity_id: blog_category
+action: access_denied
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

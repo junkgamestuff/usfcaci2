@@ -1,0 +1,21 @@
+uuid: 30d8fe43-04e0-450a-90b3-bc1b4f080467
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.manual_cards_horizontal_card
+  module:
+    - text
+id: paragraph.manual_cards_horizontal_card.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: manual_cards_horizontal_card
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

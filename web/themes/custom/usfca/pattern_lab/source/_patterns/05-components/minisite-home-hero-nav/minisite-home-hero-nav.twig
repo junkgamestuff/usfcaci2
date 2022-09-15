@@ -1,0 +1,17 @@
+{% extends "base-component" %}
+
+{% set name = "minisite-home-hero-nav" %}
+
+{% block content %}
+
+  {% include "base-menu" with { menu: menu } %}
+
+  {% if buttons is not empty %}
+    <div class="buttons-container">
+      {% for button in buttons %}
+        {% include "fields-link" with { cta: button.title, url: button.url } only %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+{% endblock %}

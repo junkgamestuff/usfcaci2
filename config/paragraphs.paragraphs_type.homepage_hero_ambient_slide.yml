@@ -1,0 +1,10 @@
+uuid: 38fa7b28-b762-4863-956c-e69d608788c8
+langcode: en
+status: true
+dependencies: {  }
+id: homepage_hero_ambient_slide
+label: 'Homepage Hero Ambient Slide'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

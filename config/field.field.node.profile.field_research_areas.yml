@@ -1,0 +1,21 @@
+uuid: 8209d697-03d1-445d-9ee3-00813c38e3e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_research_areas
+    - node.type.profile
+  module:
+    - text
+id: node.profile.field_research_areas
+field_name: field_research_areas
+entity_type: node
+bundle: profile
+label: 'Research Areas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

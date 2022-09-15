@@ -1,0 +1,21 @@
+uuid: 8a59e72b-ca91-4552-89ce-009af47f78fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_map_center
+    - paragraphs.paragraphs_type.map_with_pins
+  module:
+    - geolocation
+id: paragraph.map_with_pins.field_map_center
+field_name: field_map_center
+entity_type: paragraph
+bundle: map_with_pins
+label: 'Map Center'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

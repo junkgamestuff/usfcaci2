@@ -1,0 +1,287 @@
+// text color
+$text-color: $color-white;
+// gradient overlay
+$overlay-color: rgba($color-black, .3);
+$gradient-overlay-color: rgba($color-black, .42);
+$background-color-fallback: $color-primary;
+
+.cc--hero-home-minisite {
+  position: relative;
+
+  .image-text-container {
+    position: relative;
+  }
+
+  .image-wrapper {
+    img {
+      width: 100%;
+      height: 100%;
+      background-color: $background-color-fallback;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+
+      @include mq($bp768) {
+        aspect-ratio: 8 / 7;
+      }
+
+      @include mq($bp1024) {
+        aspect-ratio: 16 / 9;
+      }
+    }
+
+    @supports not (aspect-ratio: 1 / 1) { // fallback for aspect ratio
+      padding-top: 100%;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      @include mq($bp768) {
+        padding-top: 87.5%;
+      }
+
+      @include mq($bp1024) {
+        padding-top: 56.25%;
+      }
+    }
+  }
+
+  .text-wrapper {
+    @include padding(null rem(20) rem(10));
+    @include maxwidth;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: rem(170);
+
+    &::before {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent, $overlay-color);
+      content: '';
+    }
+
+    @include mq($bp768) {
+      @include padding(null cols(22) rem(20) cols(2));
+      height: 23%;
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(18) rem(15) null);
+      height: 30%;
+    }
+
+    .f--category {
+      @include margin(null null rem(10));
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(14, 14);
+      position: relative;
+      color: $color-white;
+      text-shadow: 0 0 rem(25) $color-black;
+      z-index: 11;
+
+      @include mq($bp768) {
+        @include margin(0 null rem(14));
+        @include font-size(16, 16);
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(20));
+      }
+
+      p {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include font-size(14, 14);
+        margin-bottom: 0;
+        color: $color-white;
+
+        @include mq($bp768) {
+          @include font-size(16, 16);
+        }
+      }
+    }
+
+    .f--page-title {
+      @include margin(null null rem(10));
+      position: relative;
+
+      @include mq($bp1024) {
+        @include margin(null null rem(15));
+      }
+
+      h1 {
+        @include font-size(36, 36);
+        color: $color-white;
+        letter-spacing: rem(-.6);
+        text-shadow: 0 0 rem(25) $color-black;
+        text-transform: none;
+
+        @include mq($bp768) {
+          @include font-size(60, 60);
+          letter-spacing: rem(.5);
+        }
+      }
+    }
+
+    .f--description {
+      position: relative;
+
+      p {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include font-size(18, 24);
+        @include margin(0 null rem(12));
+        color: $color-sherpa-blue;
+
+        @include mq($bp768) {
+          @include font-size(24, 24);
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include mq($bp768) {
+      flex-direction: row;
+    }
+
+    .left-wrapper {
+      @include padding(null rem(20));
+      order: 2;
+      width: 100%;
+
+      @include mq($bp768) {
+        @include padding(null cols(2));
+        flex: 1 0 auto;
+        order: unset;
+        width: cols(20);
+      }
+
+      @include mq($bp1024) {
+        @include padding(null cols(2));
+        width: cols(33);
+      }
+
+      .cc--intro-text {
+        width: 100%;
+
+        .c--intro-text {
+          padding: 0;
+        }
+
+        .f--section-title,
+        .f--description {
+          @include padding(null 0);
+          text-align: left;
+        }
+      }
+    }
+
+    .cc--breadcrumbs {
+      margin: 0;
+      width: 100%;
+
+      .c--breadcrumbs {
+        @include padding(null 0);
+      }
+    }
+
+    .cc--minisite-home-hero-nav {
+      order: 1;
+
+      @include mq($bp768) {
+        @include margin(rem(-600) cols(2) null null);
+        position: relative;
+        order: unset;
+        z-index: 10;
+      }
+
+      @include mq($bp1024) {
+        @include margin(null cols(3) null null);
+        flex: 1 0 auto;
+      }
+    }
+
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+
+      @include mq($bp768max) {
+        @include padding(null rem(40) null rem(20));
+        position: fixed;
+        flex-direction: row;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        background: $color-sherpa-blue;
+        width: 100%;
+        z-index: 100;
+
+        .f--link {
+          @include margin(null rem(20) null null);
+
+          .link {
+            @include font-size(14);
+            @include padding(null rem(10));
+            @include margin(rem(15) null);
+          }
+        }
+      }
+
+      @include mq($bp768) {
+        &.fixed {
+          position: fixed;
+          justify-content: center;
+          flex-direction: row;
+          top: 0;
+          left: 0;
+          background: $color-sherpa-blue;
+          width: 100%;
+          z-index: 100;
+
+          .f--link {
+            @include padding(null rem(12));
+          }
+
+          .link {
+            @include margin(rem(20) null);
+            min-width: rem(275);
+          }
+        }
+      }
+
+      .link {
+        @extend %font-fira-sans-bold;
+        @include font-size(18, 18);
+        @include margin(rem(20) null null);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: rem(50);
+        border: rem(2) solid $color-supernova;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        @include hover {
+          box-shadow: inset 0 0 0 rem(3) $color-supernova;
+        }
+      }
+    }
+  }
+}

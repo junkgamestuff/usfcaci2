@@ -1,0 +1,33 @@
+uuid: 8dc29aa6-5f3f-43f2-90ea-1c4339d16856
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.school-of-education
+  module:
+    - system
+    - usfca_school_context
+  theme:
+    - usfca
+id: schoolofeducation
+theme: usfca
+region: header
+weight: -15
+provider: null
+plugin: 'system_menu_block:school-of-education'
+settings:
+  id: 'system_menu_block:school-of-education'
+  label: 'School of Education'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 3
+  expand_all_items: true
+visibility:
+  usfca_schoool_context_condition:
+    id: usfca_schoool_context_condition
+    schools:
+      'School of Education': 'School of Education'
+    negate: false
+    context_mapping:
+      school: '@usfca_school_context.school_context:school'

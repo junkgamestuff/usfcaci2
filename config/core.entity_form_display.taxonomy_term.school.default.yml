@@ -1,0 +1,47 @@
+uuid: 0728a6ca-b0e5-4cbb-93da-5a3e0cb2a538
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.school.field_school_home
+    - field.field.taxonomy_term.school.field_school_search
+    - field.field.taxonomy_term.school.field_url_prefix
+    - taxonomy.vocabulary.school
+id: taxonomy_term.school.default
+targetEntityType: taxonomy_term
+bundle: school
+mode: default
+content:
+  field_school_home:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_school_search:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_url_prefix:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  langcode: true
+  path: true
+  status: true

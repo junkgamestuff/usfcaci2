@@ -1,0 +1,43 @@
+uuid: 9fdc7d5d-bf91-441a-942b-7103061b4f14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stats.field_stats
+    - field.field.paragraph.stats.field_title
+    - field.field.paragraph.stats.field_title_highlight
+    - paragraphs.paragraphs_type.stats
+id: paragraph.stats.default
+targetEntityType: paragraph
+bundle: stats
+mode: default
+content:
+  field_stats:
+    type: entity_reference_autocomplete
+    weight: 2
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title_highlight:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

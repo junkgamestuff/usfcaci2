@@ -1,0 +1,14 @@
+uuid: 1ac54fbe-0304-4e78-a802-3a061e6222c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.narrow
+    - paragraphs.paragraphs_type.spacer
+id: paragraph.spacer.narrow
+targetEntityType: paragraph
+bundle: spacer
+mode: narrow
+content: {  }
+hidden:
+  search_api_excerpt: true

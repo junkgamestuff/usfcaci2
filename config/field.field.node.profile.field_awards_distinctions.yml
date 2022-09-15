@@ -1,0 +1,21 @@
+uuid: 7f6012a5-723e-4d19-90f0-e19d19b5f604
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_awards_distinctions
+    - node.type.profile
+  module:
+    - text
+id: node.profile.field_awards_distinctions
+field_name: field_awards_distinctions
+entity_type: node
+bundle: profile
+label: 'Awards & Distinctions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

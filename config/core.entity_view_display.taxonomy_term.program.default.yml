@@ -1,0 +1,63 @@
+uuid: b5cc1fca-4f37-4c01-abd9-983ad96dbfa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.program.field_cta_links
+    - field.field.taxonomy_term.program.field_main_page_link
+    - field.field.taxonomy_term.program.field_pages_links
+    - taxonomy.vocabulary.program
+  module:
+    - link
+    - text
+id: taxonomy_term.program.default
+targetEntityType: taxonomy_term
+bundle: program
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cta_links:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_main_page_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_pages_links:
+    type: link
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

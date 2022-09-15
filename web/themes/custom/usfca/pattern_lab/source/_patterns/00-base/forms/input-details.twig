@@ -1,0 +1,9 @@
+
+<!-- details does not work on every browser, but it is an option in the designs, so including it here -->
+
+<details data-webform-key="example_details" data-drupal-selector="edit-example-details" id="edit-example-details" class="js-form-wrapper form-wrapper" open="">
+    <summary role="button" aria-controls="edit-example-details" aria-expanded="true" aria-pressed="true">Example Details</summary>
+
+    {% include "base-input-text" with { label: "Example content inside details" } %}
+
+</details>

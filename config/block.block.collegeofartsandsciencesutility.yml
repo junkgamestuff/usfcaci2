@@ -1,0 +1,33 @@
+uuid: 9b98b09d-81ee-4ba6-a371-73b99631c5db
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.college-of-arts-and-sciences-uti
+  module:
+    - system
+    - usfca_school_context
+  theme:
+    - usfca
+id: collegeofartsandsciencesutility
+theme: usfca
+region: header
+weight: -10
+provider: null
+plugin: 'system_menu_block:college-of-arts-and-sciences-uti'
+settings:
+  id: 'system_menu_block:college-of-arts-and-sciences-uti'
+  label: 'College of Arts and Sciences Utility'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  usfca_schoool_context_condition:
+    id: usfca_schoool_context_condition
+    schools:
+      'College of Arts and Sciences': 'College of Arts and Sciences'
+    negate: false
+    context_mapping:
+      school: '@usfca_school_context.school_context:school'

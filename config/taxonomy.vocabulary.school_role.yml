@@ -1,0 +1,8 @@
+uuid: 95d96c6f-a305-42ae-ac4e-3b3ae3354ce4
+langcode: en
+status: true
+dependencies: {  }
+name: 'School Role (To be removed)'
+vid: school_role
+description: ''
+weight: 0

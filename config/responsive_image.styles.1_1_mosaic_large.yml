@@ -1,0 +1,49 @@
+uuid: fa4f958b-5fdf-460f-aaab-cab5098d1937
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.1_1_1152x1152
+    - image.style.1_1_1200x1200
+    - image.style.1_1_1274x1274
+    - image.style.1_1_1350x1350
+    - image.style.1_1_1536x1536
+    - image.style.1_1_1800x1800
+    - image.style.1_1_2400x2400
+    - image.style.1_1_360x360
+    - image.style.1_1_450x450
+    - image.style.1_1_600x600
+    - image.style.1_1_637x637
+    - image.style.1_1_675x675
+    - image.style.1_1_720x720
+    - image.style.1_1_768x768
+    - image.style.1_1_900x900
+    - image.style.1_1_956x956
+id: 1_1_mosaic_large
+label: '1:1 Mosaic Large'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: '(min-width:1200px) 50vw, (min-width:768px) 50vw, 100vw'
+      sizes_image_styles:
+        - 1_1_1152x1152
+        - 1_1_1200x1200
+        - 1_1_1274x1274
+        - 1_1_1350x1350
+        - 1_1_1536x1536
+        - 1_1_1800x1800
+        - 1_1_2400x2400
+        - 1_1_360x360
+        - 1_1_450x450
+        - 1_1_600x600
+        - 1_1_637x637
+        - 1_1_675x675
+        - 1_1_720x720
+        - 1_1_768x768
+        - 1_1_900x900
+        - 1_1_956x956
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+breakpoint_group: responsive_image
+fallback_image_style: 1_1_360x360

@@ -1,0 +1,85 @@
+{% extends "base-component" %}
+
+{% set name = "program-faculty-listing-item" %}
+{% set container_element = 'section' %}
+
+{% if image is empty %}
+  {% set image = {src: '../../images/placeholder.png'} %}
+{% endif %}
+
+{% block content %}
+
+  <div class="image-container">
+    <a href="{{ link.href }}">
+      {% if image is not empty %}
+        {% include "fields-image" with {
+          image: image
+        } only %}
+      {% endif %}
+    </a>
+  </div>
+
+  <div class="text-container">
+
+    {% if title is not empty %}
+      {% include "fields-cta-title" with {
+        href: link.href,
+        title: title
+      } only %}
+    {% endif %}
+
+    {% if position is not empty %}
+      {% include "fields-label" with {
+        span: position
+      } only %}
+    {% endif %}
+
+    {% for role in roles %}
+    {% with { category: role.category, school: role.description } %}
+    {% if category is not empty %}
+      {% include "fields-category" with {
+        category: category
+      } only %}
+    {% endif %}
+
+    {% if school is not empty %}
+      {% include "fields-text" with {
+        text: school
+      } only %}
+    {% endif %}
+    {% endwith %}
+    {% endfor %}
+
+    {% if email is not empty %}
+      {% include "fields-email" with {
+        email: email
+      } only %}
+    {% endif %}
+
+    {% if location is not empty %}
+      {% include "fields-address" with {
+        address: location
+      } only %}
+    {% endif %}
+
+    {% if description is not empty %}
+      {% include "fields-description" with {
+        description: description
+      } %}
+    {% endif %}
+
+    {% if education is not empty %}
+      {% include "fields-wysiwyg" with {
+        markup: education
+      } only %}
+    {% endif %}
+
+    {% if expertise is not empty %}
+      {% include "fields-wysiwyg" with {
+        markup: expertise
+      } only %}
+    {% endif %}
+
+  </div>
+
+{% endblock %}

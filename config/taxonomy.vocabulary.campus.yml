@@ -1,0 +1,8 @@
+uuid: 5053c057-712d-445e-aa85-4ad738216a1b
+langcode: en
+status: true
+dependencies: {  }
+name: Campus
+vid: campus
+description: 'Used to display Campus information for Contact Box content.'
+weight: 0

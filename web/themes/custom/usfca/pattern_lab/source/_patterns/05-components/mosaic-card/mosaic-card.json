@@ -1,0 +1,11 @@
+{
+  "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+  "image": {
+    "src": "https://placeimg.com/1920/1080/nature",
+    "alt": "Image Alt Text4"
+  },
+  "attribution": {
+    "attributionTitle": "Attribution Person Name",
+    "attributionDescription": "Attribution Description Field"
+  }
+}

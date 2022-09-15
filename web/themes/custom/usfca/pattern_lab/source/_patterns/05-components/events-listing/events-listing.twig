@@ -1,0 +1,37 @@
+{% extends "base-component" %}
+
+{% set name = "events-listing" %}
+
+{% block content %}
+
+  {% embed "base-field" with { name: "field-components" } %}
+
+    {% block content %}
+
+      {% for card in cards %}
+
+        {% include "components-events-listing-component" with {
+          date: card.date,
+          title: card.title,
+          link: card.link,
+          image: card.image,
+          time: card.time,
+          description: card.description,
+          location: card.location
+        } only %}
+
+      {% endfor %}
+
+      {% if link is not empty %}
+        {% include "fields-link" with {
+          href: link.href,
+          cta: link.cta,
+          aria: link.ariaLabel
+        } only %}
+      {% endif %}
+
+    {% endblock content %}
+
+  {% endembed %}
+
+{% endblock %}

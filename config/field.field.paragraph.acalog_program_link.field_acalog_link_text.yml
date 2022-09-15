@@ -1,0 +1,19 @@
+uuid: 2c48e8da-ae97-4ce7-9020-5c6596a2781a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_acalog_link_text
+    - paragraphs.paragraphs_type.acalog_program_link
+id: paragraph.acalog_program_link.field_acalog_link_text
+field_name: field_acalog_link_text
+entity_type: paragraph
+bundle: acalog_program_link
+label: 'Acalog Link Text'
+description: 'Optionally enter text to use as the link text. By default the link will use the Program Name as the link text.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

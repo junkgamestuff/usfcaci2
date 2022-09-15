@@ -1,0 +1,6 @@
+services:
+  dp_pattern_lab_loader.loader:
+    class: Drupal\dp_pattern_lab_loader\DPPatternPartialLoader
+    arguments: ['@app.root', '@theme.manager', '@logger.channel.php']
+    tags:
+      - { name: twig.loader, priority: 100 }

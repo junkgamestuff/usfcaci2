@@ -1,0 +1,30 @@
+
+.tc--event {
+  .content-main {
+    .f--page-title {
+      h1 {
+        @include font-size(30, 32);
+        letter-spacing: 0;
+
+        @include mq($bp768) {
+          @include font-size(36, 38);
+        }
+
+        @include mq($bp1024) {
+          @include font-size(48, 52);
+        }
+      }
+    }
+
+    .lc--two-column {
+      .lr--sidebar {
+        @include padding(null null 0);
+
+        @include mq($bp768max) {
+          @include padding(0 null null);
+        }
+      }
+    }
+  }
+
+}

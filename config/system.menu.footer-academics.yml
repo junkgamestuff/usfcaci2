@@ -1,0 +1,8 @@
+uuid: 2795795c-626d-404d-a65e-fad7204b4284
+langcode: en
+status: true
+dependencies: {  }
+id: footer-academics
+label: 'Footer - Academics'
+description: ''
+locked: false

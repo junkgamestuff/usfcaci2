@@ -1,0 +1,71 @@
+uuid: d1034c14-84e0-4c38-8a38-1102410f44c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_views_reference
+    - paragraphs.paragraphs_type.featured_articles_automatic
+    - views.view.featured_articles
+  module:
+    - viewsreference
+id: paragraph.featured_articles_automatic.field_views_reference
+field_name: field_views_reference
+entity_type: paragraph
+bundle: featured_articles_automatic
+label: 'Featured Articles'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    display_id: default
+    data: 'a:5:{s:8:"argument";N;s:5:"limit";N;s:6:"offset";N;s:5:"title";N;s:5:"pager";N;}'
+    target_uuid: 855601fb-3ed6-4b64-84d0-05eff6b6cdd5
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    default: default
+    rest_export: 0
+    block: 0
+    page: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    featured_articles: featured_articles
+    alerts: 0
+    article_cards_featured: 0
+    block_content: 0
+    content: 0
+    content_recent: 0
+    events_listing: 0
+    event_cards: 0
+    faculty_directory: 0
+    featured_events: 0
+    feeds_feed: 0
+    files: 0
+    find_your_program: 0
+    frontpage: 0
+    media: 0
+    media_library: 0
+    moderated_content: 0
+    news_listing: 0
+    program_faculty_listing: 0
+    redirect: 0
+    scheduler_scheduled_content: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+  enabled_settings:
+    argument: argument
+    limit: 0
+    offset: 0
+    title: 0
+    pager: 0
+field_type: viewsreference

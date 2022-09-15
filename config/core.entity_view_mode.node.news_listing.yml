@@ -1,0 +1,10 @@
+uuid: 717893ac-58ed-4019-866a-18e63f1b073d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.news_listing
+label: 'News Listing'
+targetEntityType: node
+cache: true

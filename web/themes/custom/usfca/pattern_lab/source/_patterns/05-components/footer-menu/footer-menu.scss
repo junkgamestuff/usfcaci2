@@ -1,0 +1,180 @@
+.cc--footer-menu {
+  @include margin(rem(20) null null);
+  flex-basis: 100%;
+
+  @include mq($bp768) {
+    @include margin(0 null null);
+    flex-basis: cols(6, 33);
+  }
+
+  @include mq($bp1024) {
+    flex-basis: cols(6, 30);
+  }
+
+  &:not(:first-child) {
+    @include mq($bp768-1024) {
+      @include margin(null null null cols(1, 33));
+    }
+  }
+
+  &:last-child {
+    @include mq($bp768-1024) {
+      @include margin(null null null cols(3, 33));
+      flex-basis: cols(10, 33);
+    }
+  }
+
+  nav {
+    h3 {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include margin(null null rem(7) null);
+      @include font-size(18, 26);
+      color: $color-white;
+      text-transform: uppercase;
+
+      @include mq($bp768) {
+        @include font-size(18, 18);
+        @include margin(null null rem(20) null);
+      }
+    }
+
+    ul {
+      flex: 0 0 cols(19, 42);
+
+      @include mq($bp768max) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      @include mq($bp768) {
+        flex-basis: cols(12, 44);
+      }
+
+      @include mq($bp1024) {
+        flex-basis: cols(6, 14);
+      }
+
+      li {
+        &:not(:last-child) {
+          @include margin(null null rem(8));
+
+          @include mq($bp768) {
+            @include margin(null null rem(20));
+          }
+        }
+
+        &:nth-child(even) {
+          @include mq($bp768max) {
+            @include padding(null null null cols(1.5, 39));
+          }
+        }
+
+        &:nth-child(odd) {
+          @include mq($bp768max) {
+            @include padding(null cols(1.5, 39) null null);
+          }
+        }
+
+        @include mq($bp768max) {
+          flex-basis: 50%;
+        }
+
+        a {
+          @extend %font-fira-sans-extra-condensed-regular;
+          @include font-size(18);
+          color: $color-white;
+          text-decoration: none;
+
+          @include mq($bp768) {
+            @include font-size(16);
+          }
+
+          @include hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    &.mc--footer-utility {
+      ul {
+
+        @include mq($bp768max) {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        li {
+
+          @include mq($bp768max) {
+            flex-basis: 50%;
+          }
+
+          &:nth-child(n + 3) {
+            @include mq($bp768max) {
+              @include margin(rem(20) null null);
+            }
+          }
+
+          &:nth-child(even) {
+            @include mq($bp768max) {
+              @include padding(null null null cols(1.5, 39));
+            }
+          }
+
+          &:nth-child(odd) {
+            @include mq($bp768max) {
+              @include padding(null cols(1.5, 39) null null);
+            }
+          }
+
+          &:not(:last-child) {
+            @include mq($bp768) {
+              @include margin(null null rem(30) null);
+            }
+          }
+
+          a {
+            @extend %font-fira-sans-extra-condensed-semibold;
+            @include font-size(24, 24);
+            display: block;
+            position: relative;
+            text-transform: uppercase;
+
+            &::after {
+              display: inline-block;
+              width: rem(14);
+              height: rem(24);
+              background: url('../images/icons-usf/USF_arrow_yellow.svg') no-repeat center center;
+              content: '';
+
+              @include mq($bp768max) {
+                @include margin(null null null rem(8));
+                vertical-align: sub;
+              }
+
+              @include mq($bp768) {
+                @include centered('y');
+                display: block;
+                right: 0;
+
+              }
+            }
+
+            @include hover {
+
+              &::after {
+                transform: translate3d(rem(3), 0, 0);
+                transition: transform $transition-duration-fast $transition-easing-default;
+
+                @include mq($bp768) {
+                  transform: translate3d(rem(3), rem(-12), 0);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

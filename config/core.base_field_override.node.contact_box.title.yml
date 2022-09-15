@@ -1,0 +1,18 @@
+uuid: ec4b7785-132a-44e3-9843-7c07bdcedcff
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.contact_box
+id: node.contact_box.title
+field_name: title
+entity_type: node
+bundle: contact_box
+label: 'Administrative Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

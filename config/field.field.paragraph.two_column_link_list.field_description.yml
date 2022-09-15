@@ -1,0 +1,21 @@
+uuid: 959f05b5-c4e0-44b9-a66c-b500a81c73ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.two_column_link_list
+  module:
+    - text
+id: paragraph.two_column_link_list.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: two_column_link_list
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

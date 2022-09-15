@@ -1,0 +1,32 @@
+uuid: 90309aa3-87d1-4fc8-a5b5-5b0a134b7948
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.acalog_program_content.field_acalog_display_headings
+    - field.field.paragraph.acalog_program_content.field_acalog_program_name
+    - paragraphs.paragraphs_type.acalog_program_content
+id: paragraph.acalog_program_content.default
+targetEntityType: paragraph
+bundle: acalog_program_content
+mode: default
+content:
+  field_acalog_display_headings:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_acalog_program_name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

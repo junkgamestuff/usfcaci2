@@ -1,0 +1,25 @@
+{% extends "base-form-item" %}
+
+{% block content %}
+
+    {% if label %}
+        <label
+                for="{{ name|default("textarea") }}"
+        >
+            {{ label }}{% if required %} *{% endif %}
+        </label>
+    {% endif %}
+
+    <textarea
+        name="{{ name|default("textarea") }}"
+        id="{{ name|default("textarea") }}"
+        {% if disabled %}disabled="disabled"{% endif %}
+        {% if required %}required="required"{% endif %}
+        {% if maxlength %}maxlength="{{ maxlength }}"{% endif %}
+        {% if placeholder %}placeholder="{{ placeholder }}"{% endif %}
+        rows="{{ rows|default("4") }}"
+        cols="{{ cols|default("50") }}"
+        placeholder="{{ placeholder }}"
+    ></textarea>
+
+{% endblock %}

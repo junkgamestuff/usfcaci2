@@ -1,0 +1,10 @@
+uuid: 3fe897df-1023-48de-9645-f9b84089ce04
+langcode: en
+status: true
+dependencies: {  }
+id: social_media_feed
+label: 'Social Media Feed'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

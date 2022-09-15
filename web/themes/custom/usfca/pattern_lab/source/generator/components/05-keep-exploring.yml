@@ -1,0 +1,31 @@
+name: keep-exploring
+type: component
+markup:
+  content:
+    - type: field
+      name: section-title
+      with:
+        title: title
+    - type: container
+      class: 'links-container'
+      content:
+      - type: repeater
+        name: 'links'
+        for: link
+        in: links
+        repeat:
+          type: field
+          name: link
+          with: link
+data:
+  title: "Take the Next Step"
+  links:
+    - title: "Request Information"
+      url: "/"
+    - title: "Campus Visits"
+      url: "/"
+      aria: "Read more about Campus Visits"
+    - title: "UMass Admissions"
+      url: "https://example.com"
+      aria: "Read more about UMass Admissions"
+      target: "_blank"

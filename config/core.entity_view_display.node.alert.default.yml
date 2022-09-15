@@ -1,0 +1,48 @@
+uuid: 24dbc867-0080-4082-bbf6-a2d8b4acd8f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.alert.field_date_time
+    - field.field.node.alert.field_description
+    - field.field.node.alert.field_link
+    - node.type.alert
+  module:
+    - link
+    - text
+    - user
+_core:
+  default_config_hash: RuO4O00PESdzmCdrHcD8V12msrC1lVAq0IBRr09UpdQ
+id: node.alert.default
+targetEntityType: node
+bundle: alert
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_date_time: true
+  langcode: true
+  search_api_excerpt: true

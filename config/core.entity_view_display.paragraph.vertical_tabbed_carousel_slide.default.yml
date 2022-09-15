@@ -1,0 +1,64 @@
+uuid: 44776326-24f6-462b-8ea0-0f2dc58ccb24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.vertical_tabbed_carousel_slide.field_description
+    - field.field.paragraph.vertical_tabbed_carousel_slide.field_image
+    - field.field.paragraph.vertical_tabbed_carousel_slide.field_link
+    - field.field.paragraph.vertical_tabbed_carousel_slide.field_title
+    - field.field.paragraph.vertical_tabbed_carousel_slide.field_title_highlight
+    - paragraphs.paragraphs_type.vertical_tabbed_carousel_slide
+  module:
+    - link
+    - text
+id: paragraph.vertical_tabbed_carousel_slide.default
+targetEntityType: paragraph
+bundle: vertical_tabbed_carousel_slide
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title_highlight:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

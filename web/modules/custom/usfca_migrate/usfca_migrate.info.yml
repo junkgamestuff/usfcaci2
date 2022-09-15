@@ -1,0 +1,12 @@
+name: 'USFCA Migrate'
+type: module
+description: 'Migrate USFCA D7 content types to D9'
+core_version_requirement: ^8.9 || ^9
+package: 'USFCA'
+dependencies:
+  - migrate
+  - migrate_conditions
+  - migrate_drupal
+  - migrate_plus
+  - migrate_tools
+  - migration_tools

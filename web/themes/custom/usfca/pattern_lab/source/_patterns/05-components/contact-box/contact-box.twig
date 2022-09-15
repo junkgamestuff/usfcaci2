@@ -1,0 +1,39 @@
+{% extends "base-component" %}
+
+{% set name = "contact-box" %}
+
+{% block content %}
+
+  <div class="contact-box-container">
+    <div class="contact-box-header">
+      {% include "fields-sub-title" with { title: title } %}
+      <ul class="locations-list">
+        {% for link in links %}
+          <li class="list-item">
+            {% if link.url is not empty %}
+              {% include "fields-link" with { title: link.title, url: link.url } %}
+            {% else %}
+              <span class="link">{{ link.title }}</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="contact-box-body">
+      <div class="personal-data">
+        {% if text is not empty %}{% include "fields-text" with { text: text } %}{% endif %}
+        {% if email is not empty %}{% include "fields-email" with { email: email } %}{% endif %}
+        {% if phone is not empty %}{% include "fields-phone" with { phone: phone } %}{% endif %}
+      </div>
+      {% if address is not empty %}{% include "fields-address" with { address: address } %}{% endif %}
+      {% if time is not empty %}
+      <div class="hours">
+        <strong>Hours</strong>
+        {% include "fields-time-string" with { text: time } %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock content %}
+

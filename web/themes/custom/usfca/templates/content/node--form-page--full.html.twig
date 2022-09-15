@@ -1,0 +1,30 @@
+{% block content %}
+<div class="content-top">
+  <div class="lc--layout-container lc--full">
+    <div class="l--layout l--full">
+      <div class="lr--layout-region lr--main">
+
+        {% include "components-rfi-hero" with {
+          title: fields.title,
+          image: fields.image.uri ? {
+            src: fields.image.uri | image_style('2_1_2400x1200'),
+            alt: fields.image.alt,
+            render: drupal_image(fields.image.uri, '2_1_full', {alt: fields.image.alt}, responsive=true)
+          } : null,
+        } %}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-main">
+  <div class="lc--layout-container lc--full">
+    <div class="l--layout l--full">
+      <div class="lr--layout-region lr--main">
+        {{ content.field_components }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

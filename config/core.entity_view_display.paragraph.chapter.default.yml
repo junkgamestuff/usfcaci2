@@ -1,0 +1,34 @@
+uuid: 92bc2d9d-e070-4b78-94d0-2afe245313ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.chapter.field_components
+    - field.field.paragraph.chapter.field_title
+    - paragraphs.paragraphs_type.chapter
+  module:
+    - entity_reference_revisions
+id: paragraph.chapter.default
+targetEntityType: paragraph
+bundle: chapter
+mode: default
+content:
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: narrow
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

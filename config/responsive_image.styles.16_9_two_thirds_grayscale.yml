@@ -1,0 +1,23 @@
+uuid: 0a3a7795-1ba6-4ac3-9bfb-655b629b00fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.16_9_1200x675_grayscale
+    - image.style.16_9_1600x900_grayscale
+    - image.style.16_9_320x180_grayscale
+id: 16_9_two_thirds_grayscale
+label: '16:9 Two-thirds Grayscale'
+image_style_mappings:
+  -
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: '(min-width:1200px) 65vw, (min-width:768px) 83vw, 100vw'
+      sizes_image_styles:
+        - 16_9_1200x675_grayscale
+        - 16_9_1600x900_grayscale
+        - 16_9_320x180_grayscale
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+breakpoint_group: responsive_image
+fallback_image_style: 16_9_1200x675_grayscale

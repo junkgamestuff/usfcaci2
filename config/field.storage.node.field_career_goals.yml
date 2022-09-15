@@ -1,0 +1,20 @@
+uuid: 877a98fa-0dda-477e-866b-18fafb09763c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_career_goals
+field_name: field_career_goals
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

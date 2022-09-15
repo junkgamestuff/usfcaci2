@@ -1,0 +1,43 @@
+name: "50-50-video"
+type: component
+markup:
+  content:
+    - type: container
+      class: "text-container"
+      content:
+        - type: field
+          name: section-title
+          with: title
+        - type: field
+          name: description
+          with: description
+          condition: description
+        - type: field
+          name: link
+          with: link
+          condition: link
+    - type: container
+      class: "video-container"
+      condition: 'image or video.embed'
+      content:
+        - type: field
+          name: image
+          with: image
+          condition: image
+        - type: field
+          name: video-lightbox
+          with:
+            embed: 'video.embed'
+          condition: 'video.embed'
+data:
+  title: "<span class=\"highligh\">The UMass </span>Difference"
+  description: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut odio et leo vulputate pulvinar at a leo. Suspendisse rutrum diam vitae magna luctus placerat. Nunc iaculis nibh lorem, eu aliquet nulla luctus eu.</p>"
+  link:
+    url: "https://example.com"
+    title: "Read More"
+    aria: "Read More about The UMass Difference"
+  image:
+    src: "/images/16_9_1600x900.png"
+    alt: "video image"
+  video:
+    embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UDIQwGb-4YQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'

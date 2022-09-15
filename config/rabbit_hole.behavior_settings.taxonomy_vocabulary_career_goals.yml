@@ -1,0 +1,14 @@
+uuid: 132a9462-f083-46ff-b267-02ec2e8181a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.career_goals
+id: taxonomy_vocabulary_career_goals
+entity_type_id: taxonomy_vocabulary
+entity_id: career_goals
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

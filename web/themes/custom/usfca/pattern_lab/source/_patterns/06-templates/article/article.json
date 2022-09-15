@@ -1,0 +1,27 @@
+{
+  "bodyClass": "transparent-header",
+  "pageTitle": "Article Page",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "article-hero" }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "social-share" },
+        { "type": "rich-text-intro-text" },
+        { "type": "rich-text" },
+        { "type": "spacer" },
+        { "type": "article-quote" },
+        { "type": "rich-text" },
+        { "type": "image-gallery" }
+      ]
+    }
+  ],
+  "bottomLayouts": null
+}

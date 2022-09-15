@@ -1,0 +1,76 @@
+uuid: a513cc25-0ec0-41cf-8302-03ed04ee902f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.events.field_components
+    - field.field.node.events.field_components_footer
+    - field.field.node.events.field_metatag
+    - field.field.node.events.field_section
+    - field.field.node.events.field_views_reference
+    - node.type.events
+  module:
+    - entity_reference_revisions
+    - metatag
+    - user
+    - viewsreference
+id: node.events.default
+targetEntityType: node
+bundle: events
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_components_footer:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_metatag:
+    type: metatag_empty_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_views_reference:
+    type: viewsreference_formatter
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

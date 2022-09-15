@@ -1,0 +1,23 @@
+uuid: 95e2a381-3e9e-4c1a-b20e-e6c5efb8270g
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured
+    - node.type.event_detail
+id: node.event_detail.field_featured
+field_name: field_featured
+entity_type: node
+bundle: event_detail
+label: 'Featured Event'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

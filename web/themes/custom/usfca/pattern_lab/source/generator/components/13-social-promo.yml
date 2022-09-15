@@ -1,0 +1,58 @@
+name: social-promo
+type: component
+markup:
+  content:
+    - type: container
+      class: "images-container"
+      content:
+        - type: repeater
+          for: image
+          in: images
+          repeat:
+            type: field
+            name: image
+            with: image
+          with: images
+    - type: container
+      class: "text-container"
+      content:
+        - type: field
+          name: section-title
+          with: title
+        - type: field
+          name: description
+          with: description
+        - type: repeater
+          name: links
+          for: link
+          in: links
+          repeat:
+            type: field
+            name: tktk
+            with: link
+          with: links
+data:
+  images:
+    - src: "/images/1_1_300x300.png"
+      alt: "photo 1"
+    - src: "/images/1_1_300x300.png"
+      alt: "photo 2"
+    - src: "/images/1_1_300x300.png"
+      alt: "photo 3"
+    - src: "/images/1_1_300x300.png"
+      alt: "photo 4"
+  title: "<span class=\"highlight\">Connect </span>with UMass"
+  description: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut odio et leo vulputate pulvinar at a leo.</p>"
+  links:
+    - service: "facebook"
+      url: "https://example.com"
+    - service: "twitter"
+      url: "https://example.com"
+    - service: "snapchat"
+      url: "https://example.com"
+    - service: "youtube"
+      url: "https://example.com"
+    - service: "instagram"
+      url: "https://example.com"
+    - service: "linkedin"
+      url: "https://example.com"

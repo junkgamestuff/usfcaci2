@@ -1,0 +1,22 @@
+uuid: 35d16226-c9da-4a3d-a8b1-79f8f509089b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.narrow
+    - field.field.paragraph.youvisit_link.field_embed_code
+    - paragraphs.paragraphs_type.youvisit_link
+id: paragraph.youvisit_link.narrow
+targetEntityType: paragraph
+bundle: youvisit_link
+mode: narrow
+content:
+  field_embed_code:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

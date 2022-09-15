@@ -1,0 +1,10 @@
+uuid: f1e82aef-0974-4f9c-9c74-ed9b552caefe
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.16_9_full_
+label: '16:9 Full'
+targetEntityType: media
+cache: true

@@ -1,0 +1,19 @@
+uuid: d5dd9fec-2314-46b7-a46a-c3c8eaad84ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_professional_title
+    - node.type.contact_box
+id: node.contact_box.field_professional_title
+field_name: field_professional_title
+entity_type: node
+bundle: contact_box
+label: 'Contact Professional Title'
+description: 'Optional, e.g. "Assistant Director"'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

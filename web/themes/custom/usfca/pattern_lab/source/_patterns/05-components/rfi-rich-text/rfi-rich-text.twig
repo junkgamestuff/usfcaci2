@@ -1,0 +1,11 @@
+{% extends "base-component" %}
+
+{% set name = "rfi-rich-text" %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Body text" %}
+
+{% block content %}
+
+  {% include "fields-description" with { description: markup } only %}
+
+{% endblock %}

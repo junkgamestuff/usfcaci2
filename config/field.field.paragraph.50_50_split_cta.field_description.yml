@@ -1,0 +1,21 @@
+uuid: 8cc11437-ea46-49ec-a2bd-a18537fd69b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.50_50_split_cta
+  module:
+    - text
+id: paragraph.50_50_split_cta.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: 50_50_split_cta
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

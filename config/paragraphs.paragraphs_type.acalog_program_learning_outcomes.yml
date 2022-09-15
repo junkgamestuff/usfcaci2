@@ -1,0 +1,10 @@
+uuid: 4192a250-ea86-49f1-8806-812cb2454dbc
+langcode: en
+status: true
+dependencies: {  }
+id: acalog_program_learning_outcomes
+label: 'Acalog - Program Learning Outcomes'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

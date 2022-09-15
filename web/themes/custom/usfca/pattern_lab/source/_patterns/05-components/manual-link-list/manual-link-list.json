@@ -1,0 +1,27 @@
+{
+  "type": "manual-link-list",
+  "title": "Manual Link List Title",
+  "items": [
+    {
+      "title": "\"Donec suscipit quam in\" tortor ultricies, venenatis consequat augue tristique. Donec tristique sollicitudin facilisis",
+      "taxonomy": "Journal Article",
+      "link": {
+        "href": "/"
+      }
+    },
+    {
+      "title": "Venenatis consequat augue tristique",
+      "taxonomy": "Journal Article",
+      "link": {
+        "href": "#"
+      }
+    },
+    {
+      "title": "Quam in tortor ultricies, venenatis consequat augue",
+      "taxonomy": "Journal Article",
+      "link": {
+        "href": "#"
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+uuid: 9b0f334b-194a-4b68-9d92-2ac81f81e48e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_media_image
+    - media.type.image
+  module:
+    - feeds_ex
+    - media
+label: 'Dons Athletics Media'
+id: dons_athletics_media
+description: ''
+help: ''
+import_period: 3600
+fetcher: http
+fetcher_configuration:
+  auto_detect_feeds: false
+  use_pubsubhubbub: false
+  always_download: false
+  fallback_hub: ''
+  request_timeout: 30
+parser: xml
+parser_configuration:
+  context:
+    value: /rss/channel/item
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+  use_tidy: false
+processor: 'entity:media'
+processor_configuration:
+  values:
+    bundle: image
+  langcode: en
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  authorize: true
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  media_content_url:
+    label: 'media:content/@url'
+    machine_name: media_content_url
+    value: 'media:content/@url'
+    raw: false
+    inner: false
+    type: xml
+mappings:
+  -
+    target: field_media_image
+    map:
+      target_id: media_content_url
+      alt: ''
+      title: ''
+    settings:
+      language: ''
+      reference_by: fid
+      existing: '2'
+      autocreate: 0
+  -
+    target: name
+    map:
+      value: media_content_url
+    settings:
+      language: null
+    unique:
+      value: '1'

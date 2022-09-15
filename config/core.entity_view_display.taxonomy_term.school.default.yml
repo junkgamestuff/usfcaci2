@@ -1,0 +1,28 @@
+uuid: 592abf82-c51c-4be6-a759-f525dbac00cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.school.field_school_home
+    - field.field.taxonomy_term.school.field_school_search
+    - field.field.taxonomy_term.school.field_url_prefix
+    - taxonomy.vocabulary.school
+id: taxonomy_term.school.default
+targetEntityType: taxonomy_term
+bundle: school
+mode: default
+content:
+  field_school_search:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: -4
+    region: content
+hidden:
+  description: true
+  field_school_home: true
+  field_url_prefix: true
+  langcode: true
+  search_api_excerpt: true

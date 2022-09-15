@@ -1,0 +1,92 @@
+uuid: 6b4c9d93-63f8-47c2-865b-63c1266c0dc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.chapter_page.field_components
+    - field.field.node.chapter_page.field_components_footer
+    - field.field.node.chapter_page.field_eyebrow
+    - field.field.node.chapter_page.field_image
+    - field.field.node.chapter_page.field_metatag
+    - field.field.node.chapter_page.field_school
+    - field.field.node.chapter_page.field_section
+    - node.type.chapter_page
+  module:
+    - entity_reference_revisions
+    - metatag
+    - user
+id: node.chapter_page.default
+targetEntityType: node
+bundle: chapter_page
+mode: default
+content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_components_footer:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_eyebrow:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_image:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_metatag:
+    type: metatag_empty_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_school:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_section:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

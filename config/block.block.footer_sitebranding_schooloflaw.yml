@@ -1,0 +1,31 @@
+uuid: ef0dcf6b-51e4-4b73-9e25-19d57bcb49f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - usfca_school_context
+  theme:
+    - usfca
+id: footer_sitebranding_schooloflaw
+theme: usfca
+region: footer_branding
+weight: -15
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Footer Site branding - School of Law'
+  label_display: '0'
+  provider: system
+  use_site_logo: false
+  use_site_name: false
+  use_site_slogan: false
+visibility:
+  usfca_schoool_context_condition:
+    id: usfca_schoool_context_condition
+    schools:
+      'School of Law': 'School of Law'
+    negate: false
+    context_mapping:
+      school: '@usfca_school_context.school_context:school'

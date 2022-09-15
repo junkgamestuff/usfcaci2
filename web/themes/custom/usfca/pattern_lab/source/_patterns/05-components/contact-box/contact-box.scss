@@ -1,0 +1,209 @@
+.cc--contact-box {
+  @include maxwidth;
+
+  .c--contact-box {
+    @include padding(null rem(20));
+
+    @include mq($bp768) {
+      @include padding(null cols(2));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(8));
+    }
+
+    .cc--chapter & {
+      @include padding(null 0);
+    }
+  }
+
+  .contact-box-container {
+    @include padding(null rem(20));
+    background: $color-spanish-white;
+
+    @include mq($bp768) {
+      @include padding(null cols(1, 32));
+    }
+  }
+
+  .contact-box-header {
+    @include padding(rem(25) null rem(15));
+    border-bottom: rem(2) solid $color-sherpa-blue;
+
+    @include mq($bp768) {
+      @include padding(rem(22) null rem(18));
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .f--sub-title {
+      h3 {
+        @include font-size(24, 24);
+
+        @include mq($bp768max) {
+          @include margin(null null rem(18));
+        }
+      }
+    }
+
+    .locations-list {
+      @include no-bullet;
+
+      @include mq($bp768) {
+        display: flex;
+      }
+
+      .list-item {
+        @include padding(null null rem(10));
+        text-transform: uppercase;
+
+        @include mq($bp768) {
+          @include padding(null null 0 rem(5));
+        }
+
+        &:not(:last-child) {
+          a, span {
+            &::after {
+              display: inline-block;
+              color: $color-sherpa-blue;
+              content: ',';
+            }
+          }
+        }
+      }
+
+      .link {
+        @include padding(null null null rem(20));
+        @extend %font-fira-sans-bold;
+        @include font-size(16);
+        background: url('../images/icons-usf/map_pin.svg') no-repeat 0 0;
+        color: $color-sherpa-blue;
+        text-decoration: none;
+
+        @include hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .contact-box-body {
+    @include padding(rem(20) null rem(30));
+
+    @include mq($bp768) {
+      @include padding(null null rem(18));
+      display: flex;
+      width: 100%;
+    }
+
+    .personal-data {
+      @include margin(null null rem(18));
+
+      @include mq($bp768) {
+        @include margin(null null 0);
+        @include padding(null cols(2, 30) null null);
+        width: cols(13, 30);
+      }
+    }
+
+    .f--text {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(18, 24);
+      color: $color-black;
+
+      @include mq($bp768) {
+        @include font-size(20, 30);
+        @include margin(null null rem(3));
+      }
+    }
+
+    .f--email {
+      a {
+        @include font-size(14, 24);
+        color: $color-sherpa-blue;
+
+        @include mq($bp768) {
+          @include font-size(16, 30);
+        }
+
+        @include hover {
+          color: $color-sherpa-blue;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .f--phone {
+      a {
+        @include font-size(14, 24);
+        color: $color-sherpa-blue;
+        text-decoration: underline;
+
+        @include mq($bp768) {
+          @include font-size(16, 30);
+        }
+
+        @include hover {
+          color: $color-sherpa-blue;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .f--address {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include margin(null null rem(19));
+      @include font-size(18, 24);
+
+      @include mq($bp768) {
+        @include margin(null null 0);
+        @include padding(null cols(4, 30) null null);
+        @include font-size(20, 30);
+        width: cols(11, 30);
+      }
+
+      p {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include font-size(18, 24);
+
+        @include mq($bp768) {
+          @include font-size(20, 30);
+        }
+      }
+    }
+
+    .hours {
+      @include mq($bp768) {
+        width: cols(6, 30);
+      }
+
+      strong {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include font-size(18, 24);
+
+        @include mq($bp768) {
+          @include font-size(20, 30);
+        }
+      }
+
+      .f--time-string {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include font-size(18, 24);
+
+        @include mq($bp768) {
+          @include font-size(20, 30);
+        }
+
+        p {
+          @extend %font-fira-sans-extra-condensed-regular;
+          @include font-size(18, 24);
+
+          @include mq($bp768) {
+            @include font-size(20, 30);
+          }
+        }
+      }
+    }
+  }
+}

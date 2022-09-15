@@ -1,0 +1,8 @@
+uuid: eb2bf242-0358-4f6d-bcb8-7dbfa6987395
+langcode: en
+status: true
+dependencies: {  }
+id: school-of-nursing-utility
+label: 'School of Nursing Utility'
+description: ''
+locked: false

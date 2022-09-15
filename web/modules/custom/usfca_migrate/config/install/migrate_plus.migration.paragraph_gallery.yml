@@ -1,0 +1,51 @@
+id: paragraph_gallery
+label: USFCA — Paragraph — Gallery
+migration_group: usfca
+source:
+  plugin: usfca_migrate_node
+  node_type: news
+keys:
+  - nid
+destination:
+  plugin: entity_reference_revisions:paragraph
+  default_bundle: image_gallery
+process:
+  field_type_exists:
+    plugin: skip_on_empty
+    method: row
+    source: field_in_content_carousel_images/0/fid
+    message: 'Field field_in_content_carousel_images is missing'
+
+  uid:
+    plugin: default_value
+    default_value: 1
+
+  field_slides:
+    plugin: sub_process
+    source: field_in_content_carousel_images
+    process:
+      target_id:
+        - 
+          plugin: migration_lookup
+          migration: paragraph_gallery_slide
+          source: fid
+          no_stub: true
+        - 
+          plugin: extract
+          index:
+            - 0
+      target_revision_id:
+        - 
+          plugin: migration_lookup
+          migration: paragraph_gallery_slide
+          source: fid
+          no_stub: true
+        - 
+          plugin: extract
+          index:
+            - 1
+
+dependencies:
+  enforced:
+    module:
+      - usfca_migrate

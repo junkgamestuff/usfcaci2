@@ -1,0 +1,44 @@
+.cc--rich-text {
+  @include maxwidth;
+
+  .c--rich-text {
+    .tc--article &,
+    .tc--landing-page &,
+    .tc--program-page &,
+    .tc--form-page &,
+    .tc--home-page-minisite & {
+      @include padding(null rem(20));
+
+      @include mq($bp768) {
+        @include padding(null cols(6));
+      }
+
+      @include mq($bp1024) {
+        @include padding(null cols(8));
+      }
+    }
+
+    .l--two-column &,
+    .tc--chaptered-page &,
+    .cc--chapter & {
+      @include padding(null 0);
+    }
+  }
+
+  + .cc--multiple-ctas {
+    .c--multiple-ctas {
+      @include padding(0 null null);
+    }
+  }
+
+  .f--wysiwyg {
+    p,
+    ul,
+    ol {
+      &:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

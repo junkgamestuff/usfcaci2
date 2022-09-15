@@ -1,0 +1,45 @@
+uuid: 2f565766-496a-4ed5-a80d-23e3d5a53a40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.chapter.field_components
+    - field.field.paragraph.chapter.field_title
+    - paragraphs.paragraphs_type.chapter
+  module:
+    - paragraphs
+id: paragraph.chapter.default
+targetEntityType: paragraph
+bundle: chapter
+mode: default
+content:
+  field_components:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Chapter
+      title_plural: Chapters
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

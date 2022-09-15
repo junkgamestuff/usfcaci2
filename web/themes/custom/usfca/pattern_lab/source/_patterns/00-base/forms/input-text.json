@@ -1,0 +1,8 @@
+{
+  "name": "text",
+  "disabled": false,
+  "maxlength": false,
+  "placeholder": false,
+  "label": "Example Text Input",
+  "size": "25"
+}

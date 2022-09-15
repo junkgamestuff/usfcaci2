@@ -1,0 +1,43 @@
+uuid: 82becd57-e57d-4f93-a1e0-6b80b1188636
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.intro_text_title.field_description
+    - field.field.paragraph.intro_text_title.field_title
+    - field.field.paragraph.intro_text_title.field_title_highlight
+    - paragraphs.paragraphs_type.intro_text_title
+  module:
+    - text
+id: paragraph.intro_text_title.default
+targetEntityType: paragraph
+bundle: intro_text_title
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title_highlight:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

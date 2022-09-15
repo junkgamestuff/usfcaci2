@@ -1,0 +1,29 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {{ attach_library('usfca/stats') }}
+
+  {% set stats = [] %}
+
+  {% for item in fields.stats %}
+
+    {% set stats = stats | merge([{
+      stat: item.fields.display_title,
+      description: item.fields.description,
+    }]) %}
+
+  {% endfor %}
+
+  {% set title = fields.title %}
+
+  {% if fields.title_highlight is not empty %}
+    {% set title = title | replace({(fields.title_highlight): '<span class="highlight">' ~ fields.title_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% include "components-stats" with {
+    title: title,
+    stats: stats,
+  } only %}
+
+{% endblock content %}

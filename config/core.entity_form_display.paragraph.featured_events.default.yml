@@ -1,0 +1,27 @@
+uuid: 82807fae-d41b-4db6-9a1d-deeb84fd8ca0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_events.field_views_reference
+    - paragraphs.paragraphs_type.featured_events
+  module:
+    - viewsreference
+id: paragraph.featured_events.default
+targetEntityType: paragraph
+bundle: featured_events
+mode: default
+content:
+  field_views_reference:
+    type: viewsreference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

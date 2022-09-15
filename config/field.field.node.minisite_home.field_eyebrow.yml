@@ -1,0 +1,19 @@
+uuid: 042d284e-38cd-4603-b96d-4a1d98747571
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_eyebrow
+    - node.type.minisite_home
+id: node.minisite_home.field_eyebrow
+field_name: field_eyebrow
+entity_type: node
+bundle: minisite_home
+label: 'Hero Eyebrow'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

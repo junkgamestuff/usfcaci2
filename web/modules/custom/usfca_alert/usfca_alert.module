@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Contains custom code for Metamorphic Alert.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function usfca_alert_theme() {
+  return [
+    'alert_banner_block' => [
+      'variables' => [
+        'content' => NULL,
+      ],
+      'render element' => 'children',
+    ],
+  ];
+}

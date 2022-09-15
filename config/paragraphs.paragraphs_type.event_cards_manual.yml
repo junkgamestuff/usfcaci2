@@ -1,0 +1,10 @@
+uuid: 3b9449ba-da04-4fdb-a412-c5ce1e593016
+langcode: en
+status: true
+dependencies: {  }
+id: event_cards_manual
+label: 'Event Cards - Manual'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

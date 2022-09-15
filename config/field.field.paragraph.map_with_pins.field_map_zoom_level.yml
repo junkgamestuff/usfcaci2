@@ -1,0 +1,23 @@
+uuid: 549ffed4-5e68-40c1-823d-233779d68cac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_map_zoom_level
+    - paragraphs.paragraphs_type.map_with_pins
+id: paragraph.map_with_pins.field_map_zoom_level
+field_name: field_map_zoom_level
+entity_type: paragraph
+bundle: map_with_pins
+label: 'Map Zoom Level'
+description: 'Map zoom level: 0 to 18'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 18
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,19 @@
+uuid: b613d2b9-0934-46eb-8032-983c5093ed5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_media_feed_id
+    - paragraphs.paragraphs_type.social_media_feed
+id: paragraph.social_media_feed.field_social_media_feed_id
+field_name: field_social_media_feed_id
+entity_type: paragraph
+bundle: social_media_feed
+label: 'Social Media Feed Id'
+description: 'Place a feed id from the <em>Curator.io</em> service into this field to display that feed.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

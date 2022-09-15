@@ -1,0 +1,61 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+
+  <div class="content-top">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {% if fields.image is not empty %}
+
+          {{ attach_library('usfca/minisite_home_hero_nav') }}
+
+          {% set hero_intro_title = fields.hero_intro_title %}
+
+          {% if fields.hero_intro_title_highlight and fields.hero_intro_title %}
+            {% set hero_intro_title = hero_intro_title|replace({(fields.hero_intro_title_highlight): '<span class="highlight">' ~ fields.hero_intro_title_highlight ~ '</span>'}) %}
+          {% endif %}
+
+          {% include "components-hero-home-minisite" with {
+            title: fields.title,
+            category: fields.eyebrow | upper,
+            image: fields.image.uri ? {
+              src: fields.image.uri | image_style('16_9_2400x1350'),
+              alt: fields.image.alt,
+              render: drupal_image(fields.image.uri, '16_9_full', {alt: fields.image.alt}, responsive=true)
+            } : null,
+            menu: {
+              render: content.extra_field_usfca_minisite_nav_children,
+            },
+            breadcrumbs: {
+              render: content_extra,
+            },
+            intro: {
+              title: hero_intro_title,
+              description: fields.hero_intro_description,
+            },
+          } only %}
+
+          {% else %}
+          {% include "components-basic-header" with { title: fields.title } only %}
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-main">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {{ content.field_components }}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
