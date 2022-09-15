@@ -106,6 +106,12 @@ jobs:
   # If needed, frontend assets compilation or similar steps
   # could be added here.
 
+  build_theme:
+    <<: *defaults
+
+    steps:
+      - checkout
+
       - run:
           name: Remove USFCA theme gitignore
           command: rm web/themes/custom/usfca/.gitignore
@@ -235,6 +241,7 @@ workflows:
     jobs:
       - configure_env_vars
       - static_tests
+      - build_theme
       - deploy_to_pantheon:
           requires:
             - static_tests
