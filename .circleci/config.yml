@@ -129,7 +129,7 @@ jobs:
       # Attach the workspace
       - attach_workspace:
           #at: /tmp
-          at: /web/themes/custom/usfca/pattern_lab
+          at: web/themes/custom/usfca/pattern_lab
 
       - run:
           # Set TERMINUS_ENV and related environment variables.
