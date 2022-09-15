@@ -117,9 +117,9 @@ jobs:
           command: >-
             cd web/themes/custom/usfca/pattern_lab && npm ci
       - persist_to_workspace:
-          root: .
+          root: web/themes/custom/usfca/pattern_lab
           paths:
-            - web/themes/custom/usfca/pattern_lab
+            - source/css
 
   deploy_to_pantheon:
     <<: *defaults
@@ -128,8 +128,7 @@ jobs:
 
       # Attach the workspace
       - attach_workspace:
-          #at: /tmp
-          at: web/themes/custom/usfca/pattern_lab
+          at: /web/themes/custom/usfca/pattern_lab
 
       - run:
           # Set TERMINUS_ENV and related environment variables.
