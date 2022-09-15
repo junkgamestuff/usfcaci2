@@ -124,7 +124,7 @@ jobs:
       #       - ./web/themes/custom/usfca/node_modules
       - run:
           name: Install Deps
-          command: cd web/themes/custom/usfca && npm install --force
+          command: cd web/themes/custom/usfca && npm install
 
       - run:
           name: Compile Sass
@@ -144,8 +144,7 @@ jobs:
 
       # Attach the workspace
       - attach_workspace:
-          at: web/themes/custom/usfca
-
+          at: /tmp
       - run:
           # Set TERMINUS_ENV and related environment variables.
           # https://github.com/pantheon-systems/docker-build-tools-ci/blob/6.x/scripts/set-environment
