@@ -1,0 +1,45 @@
+.tc--listing-page {
+  .lc--two-column .l--two-column .l--two-column-inner {
+    .lr--sidebar {
+      @include margin(null null rem(20));
+      padding: 0;
+
+      @include mq($bp768) {
+        @include margin(null null 0);
+        width: cols(17);
+      }
+
+      @include mq($bp1024) {
+        width: cols(11);
+      }
+    }
+
+    .lr--main {
+      @include mq($bp768) {
+        @include padding(null cols(2));
+        width: cols(31);
+      }
+
+      @include mq($bp1024) {
+        @include padding(null cols(3));
+        width: cols(37);
+      }
+    }
+  }
+
+  .content-top {
+    .f--section-title {
+      h2 {
+        @include margin(rem(12) null rem(35));
+
+        @include mq($bp768) {
+          @include margin(rem(27) null rem(53));
+        }
+
+        @include mq($bp1024) {
+          @include margin(rem(50) null rem(65));
+        }
+      }
+    }
+  }
+}

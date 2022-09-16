@@ -1,0 +1,236 @@
+.cc--map-with-pins {
+  position: relative;
+
+  @include mq($bp768) {
+    @include padding(rem(40) null);
+  }
+
+  #map {
+    width: 100%;
+    height: rem(420);
+
+    @include mq($bp768) {
+      height: rem(800);
+    }
+  }
+
+  .locations-header {
+    @include padding(rem(20));
+    text-align: center;
+
+    @include mq($bp768) {
+      @include padding(rem(40) rem(25));
+      text-align: left;
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(1, 14));
+    }
+
+    .eyebrow {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include margin(null null rem(12));
+      @include font-size(18, 18);
+
+      @include mq($bp768) {
+        @include font-size(24, 24);
+        @include margin(null null rem(15));
+      }
+
+      strong {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        text-transform: uppercase;
+      }
+    }
+
+    h2 {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include margin(null null 0);
+      @include font-size(36, 36);
+
+      @include mq($bp768) {
+        @include font-size(48, 48);
+      }
+    }
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: $color-sherpa-blue;
+
+    @include mq($bp768) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: cols(19);
+      height: 100%;
+      z-index: 9;
+    }
+
+    @include mq($bp1024) {
+      left: cols(3);
+      width: cols(14);
+    }
+
+    * {
+      color: $color-white;
+    }
+  }
+
+  .locations-wrapper {
+    @include mq($bp768) {
+      height: rem(570);
+      margin-top: auto;
+    }
+  }
+
+  .location {
+    display: flex;
+    position: relative;
+    height: 100%;
+
+    @include mq($bp768max) {
+      position: absolute;
+      top: rem(32);
+      right: rem(20);
+      bottom: rem(32);
+      left: rem(20);
+      height: auto;
+      z-index: 9;
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        180deg,
+        rgba($color-black, 0) 0%,
+        rgba($color-black, .6) 62%
+      );
+      content: '';
+      z-index: 1;
+    }
+
+    &.hidden-mob {
+      @include mq($bp768max) {
+        display: none;
+      }
+    }
+
+    &.hidden {
+      display: none;
+    }
+
+    .location-close {
+      @include padding(rem(10));
+      position: absolute;
+      top: rem(10);
+      right: rem(10);
+      z-index: 2;
+      border-radius: 50%;
+      background: rgba($color-black, .3);
+
+      @include mq($bp768) {
+        display: none;
+      }
+
+      svg {
+        display: block;
+      }
+    }
+
+    .text-wrapper {
+      @include padding(rem(20));
+      position: relative;
+      margin-top: auto;
+      z-index: 2;
+
+      @include mq($bp768) {
+        @include padding(rem(40) rem(25));
+      }
+
+      @include mq($bp1024) {
+        @include padding(null cols(1, 14));
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h3 {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(24, 24);
+      @include margin(null null rem(20));
+    }
+
+    .f--description {
+      @include margin(null null rem(20));
+
+      p {
+        @include margin(null null rem(15));
+
+        &:last-child {
+          @include margin(null null 0);
+        }
+      }
+
+      ol,
+      ul {
+        @include padding(0 null);
+        @include margin(null null rem(15));
+
+        li {
+          @include margin(null null rem(10));
+
+          &::before,
+          &::marker {
+            color: $color-white;
+          }
+        }
+      }
+
+      ul li::before {
+        background-color: $color-white;
+      }
+    }
+
+    .f--link {
+      a {
+        @extend %font-fira-sans-extra-condensed-bold;
+        @include font-size(20, 20);
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        @include hover {
+          color: $color-white;
+
+          svg {
+            @include margin(null null null rem(34));
+          }
+        }
+      }
+
+      svg {
+        @include margin(null null null rem(30));
+        position: relative;
+        top: rem(5);
+        width: rem(14);
+        height: auto;
+        transition: margin-left .3s ease;
+        fill: $color-supernova;
+      }
+    }
+  }
+}

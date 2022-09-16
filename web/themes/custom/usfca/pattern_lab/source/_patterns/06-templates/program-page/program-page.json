@@ -1,0 +1,196 @@
+{
+  "bodyClass": "transparent-header",
+  "ariaLabel": "Lorem ipsum dolorsit amet",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "program-page-header" }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "program-faculty-listing",
+          "title": "Program Manager",
+          "cards": [
+            {
+              "image": {
+                "src": "https://placeimg.com/250/250/nature",
+                "alt": "Alt 1"
+              },
+              "title": "JONATHAN A. FITZPATRICKSON III",
+              "category": "Full-Time Faculty",
+              "school": "College of Arts and Sciences",
+              "email": "johnsmith32@usfca.edu",
+              "location": "Harney Science Center 403",
+              "description": "<p><a href=\"#\">Nulla quis lorem</a> ut <strong>libero malesuada</strong> feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>",
+              "education": "<ul><li>PhD History, Stanford University, 1987</li><li>MA, History, Stanford University, 1979</li><li>BA, History, Cornell University, 1971</li></ul>",
+              "link": {
+                "href": "#"
+              }
+            }
+          ]
+        },
+        {
+          "type": "program-faculty-listing",
+          "title": "Full-Time Faculty",
+          "cards": [
+            {
+              "image": {
+                "src": "https://placeimg.com/250/250/people",
+                "alt": "Alt 1"
+              },
+              "title": "OLGA KARPENKO, PHD",
+              "position": "Assistant Professor",
+              "category": "Full-Time Faculty",
+              "school": "College of Arts and Sciences",
+              "email": "johnsmith32@usfca.edu",
+              "location": "Harney Science Center 403",
+              "description": "<p><a href=\"#\">Nulla quis lorem</a> ut <strong>libero malesuada</strong> feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>",
+              "education": "<ul><li>PhD History, Stanford University, 1987</li><li>MA, History, Stanford University, 1979</li><li>BA, History, Cornell University, 1971</li></ul>",
+              "link": {
+                "href": "#"
+              }
+            },
+            {
+              "image": {
+                "src": "https://placeimg.com/250/250/people",
+                "alt": "Alt 1"
+              },
+              "title": "OLGA KARPENKO, PHD",
+              "position": "Assistant Professor",
+              "category": "Full-Time Faculty",
+              "school": "College of Arts and Sciences",
+              "email": "johnsmith32@usfca.edu",
+              "location": "Harney Science Center 403",
+              "description": "<p><a href=\"#\">Nulla quis lorem</a> ut <strong>libero malesuada</strong> feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>",
+              "education": "<ul><li>PhD History, Stanford University, 1987</li><li>MA, History, Stanford University, 1979</li><li>BA, History, Cornell University, 1971</li></ul>",
+              "link": {
+                "href": "#"
+              }
+            },
+            {
+              "image": {
+                "src": "https://placeimg.com/250/250/people",
+                "alt": "Alt 1"
+              },
+              "title": "JONATHAN A. FITZPATRICKSON III",
+              "position": "Assistant Professor",
+              "category": "Full-Time Faculty",
+              "school": "College of Arts and Sciences",
+              "email": "johnsmith32@usfca.edu",
+              "location": "Harney Science Center 403",
+              "description": "<p><a href=\"#\">Nulla quis lorem</a> ut <strong>libero malesuada</strong> feugiat. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>",
+              "education": "<ul><li>PhD History, Stanford University, 1987</li><li>MA, History, Stanford University, 1979</li><li>BA, History, Cornell University, 1971</li></ul>",
+              "link": {
+                "href": "#"
+              }
+            }
+          ]
+        },
+        {
+          "type": "program-listing",
+          "title": "You May Also Be Interested In",
+          "accordions": [
+            {
+              "title": "Accounting",
+              "programType": "Major",
+              "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p><ol><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<ol><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><li>Nulla convallis ante elit, at consequat ipsum ultricies ut.<\/li><li>Vivamus gravida tellus ut lacinia feugiat.<ol><li>Aliquam in varius purus.<\/li><li>Nullam ut sodales ante.<\/li><\/ol><\/li><\/ol><\/li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<\/li><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><\/ol><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<ul><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><li>Nulla convallis ante elit, at consequat ipsum ultricies ut.<\/li><li>Vivamus gravida tellus ut lacinia feugiat.<ul><li>Aliquam in varius purus.<\/li><li>Nullam ut sodales ante.<\/li><\/ul><\/li><\/ul><\/li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<\/li><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><\/ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis tortor bibendum, feugiat tellus sit amet, bibendum libero. Donec congue lectus non velit tristique pharetra. Praesent vulputate, libero at dictum consectetur, ligula sem egestas turpis, vitae consequat risus lacus vitae neque.</p>",
+              "link": {
+                "cta": "LEARN MORE",
+                "url": "#"
+              }
+            },
+            {
+              "title": "Accounting, Public–CPA Preparation",
+              "programType": "Major, Minor",
+              "markup": "<p>Balancing human needs with the preservation of a functional biosphere is an important responsibility for our future. To minimize human impact and move toward more sustainable practices, we must understand the causes of environmental change and the complex interactions within ecosystems, and design effective strategies for restoration. Our curriculum covers environmental monitoring, assessment, regulations, policy implementation, and science application in restoration activities.</p>",
+              "link": {
+                "cta": "LEARN MORE",
+                "url": "#"
+              }
+            },
+            {
+              "title": "Acting for Film, Television, Voice-overs, and Commercials",
+              "programType": "Major",
+              "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p>",
+              "link": {
+                "cta": "LEARN MORE",
+                "url": "#"
+              }
+            },
+            {
+              "title": "Acting",
+              "programType": "Major, Minor",
+              "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p>",
+              "link": {
+                "cta": "LEARN MORE",
+                "url": "#"
+              }
+            },
+            {
+              "title": "Adolescent Education",
+              "programType": "Major",
+              "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p>",
+              "link": {
+                "cta": "LEARN MORE",
+                "url": "#"
+              }
+            },
+            {
+              "title": "American Studies",
+              "programType": "Major",
+              "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p>",
+              "link": {
+                "cta": "LEARN MORE",
+                "url": "#"
+              }
+            },
+            {
+              "title": "Art History",
+              "programType": "Major, Minor",
+              "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p>",
+              "link": {
+                "cta": "LEARN MORE",
+                "url": "#"
+              }
+            }
+          ],
+          "link": null
+        },
+        {
+          "type": "accordion",
+          "title": "Accordions <span class=\"highlight\">title</span>",
+          "description": "<p>Any number of links consectetur adipiscing elit. Maecenas tristique mollis libero ac gravida. Donec euismod tortor eget lacus porta, eu viverra nunc gravida.</p>",
+          "hideTitle": false,
+          "accordions": [
+            {
+              "title": "Accordion One",
+              "markup": "<p>This is the accordion body</p>"
+            },
+            {
+              "title": "Accordion Two",
+              "markup": "<p>This is the accordion body</p>"
+            },
+            {
+              "title": "Accordion Three",
+              "markup": "<p><a href='#'>Cras dignissim mauris bibendum</a> aliquet volutpat. <strong>In venenatis id neque quis</strong> facilisis. In fermentum facilisis arcu eget lacinia. Suspendisse dignissim urna sed libero porttitor, et rhoncus lorem mattis. Vivamus gravida tellus ut lacinia feugiat. Cras dignissim mauris bibendum aliquet volutpat. In venenatis id neque quis facilisis. In fermentum facilisis arcu eget lacinia. Suspendisse dignissim urna sed libero porttitor, et rhoncus lorem mattis. Vivamus gravida tellus ut lacinia feugiat.<\/p><h3>H3 Lorem Ipsum<\/h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href=\"#\">Pellentesque at mi libero.<\/a> Pellentesque tincidunt lacus neque, nec ornare massa porta non. Phasellus risus erat, ornare vel tupis ac, elementum egestas risus. Suspendisse a velit sapien. Curabitur at sodales massa, eu pretium risus. Aenean lectus leo, posuere eget luctus sagittis, mollis eu arcu. Praesent arcu enim, fingilla vel pharetra facilisis.<\/p><h3>H3 Lorem Ipsum<\/h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href=\"#\">Pellentesque at mi libero.<\/a> Pellentesque tincidunt lacus neque, nec ornare massa porta non. Phasellus risus erat, ornare vel tupis ac, elementum egestas risus. Suspendisse a velit sapien. Curabitur at sodales massa, eu pretium risus. Aenean lectus leo, posuere eget luctus sagittis, mollis eu arcu. Praesent arcu enim, fingilla vel pharetra facilisis.<\/p><p><a class='cta-link' href=\"#\">Visit My USF<\/a><\/p><div class='align-center'><div class='video-embed'><iframe width='560' height='315' src='https://www.youtube.com/embed/g2y1rxGQk_M' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen><\/iframe><\/div><\/div><p>Bold, italic, in-line link. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in varius purus. Nullam ut sodales ante. Fusce justo nisi, suscipit a lacus et, posuere sagittus ex. Nulla convallis ante elit, at consequat ipsum ultricies ut. Alliquam erat volputat.<\/p><p>Cras dignissim mauris bibendum aliquet volutpat. In venenatis id neque quis facilisis. In fermentum facilisis arcu eget lacinia. Suspendisse dignissim urna sed libero porttitor, et rhoncus lorem mattis. Vivamus gravida tellus ut lacinia feugiat.<\/p><figure role=\"group\" class=\"align-center\"><article><div><div><a href=\"#\"><picture><img data-src=\"https:\/\/placeimg.com/1200/675/people\" class=\" lazyloaded\" alt=\"Image Alt Text4\" src=\"https://placeimg.com/1200/675/people\"><\/picture><\/a><\/div><\/div><\/article><figcaption>Optional caption for embedded centered image . Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/figcaption><\/figure><h3>H3 Lorem Ipsum<\/h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in varius purus. Nullam ut sodales ante. Fusce justo nisi, suscipit a lacus et, posuere sagittus ex. Nulla convallis ante elit, at consequat ipsum ultricies ut. Suspendisse dignissim urna sed libero porttitor, et rhoncus lorem mattis. Vivamus gravida tellus ut lacinia feugiat.<\/p><figure role=\"group\" class=\"align-left\"><article><div><div><a href=\"#\"><picture><img data-src=\"https:\/\/placeimg.com/700/700/people\" class=\" lazyloaded\" alt=\"Image Alt Text4\" src=\"https://placeimg.com/700/700/people\"><\/picture><\/a></div><\/div><\/article><figcaption>An image floated to the left with optional caption. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/figcaption><\/figure><h3>H3 Lorem Ipsum<\/h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in varius purus. Nullam ut sodales ante. Fusce justo nisi, suscipit a lacus et, posuere sagittus ex. Nulla convallis ante elit, at consequat ipsum ultricies ut. Suspendisse dignissim urna sed libero porttitor, et rhoncus lorem mattis. Vivamus gravida tellus ut lacinia feugiat.<\/p><figure role=\"group\" class=\"align-right\"><article><div><div><a href=\"#\"><picture><img data-src=\"https:\/\/placeimg.com/700/700/people\" class=\" lazyloaded\" alt=\"Image Alt Text4\" src=\"https://placeimg.com/700/700/people\"><\/picture><\/a><\/div><\/div><\/article><figcaption>An image floated to the left with optional caption. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/figcaption><\/figure><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in varius purus. Nullam ut sodales ante. Fusce justo nisi, suscipit a lacus et, posuere sagittus ex. Nulla convallis ante elit, at consequat ipsum ultricies ut. Suspendisse dignissim urna sed libero porttitor, et rhoncus lorem mattis. Vivamus gravida tellus ut lacinia feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in varius purus. Nullam ut sodales ante. Fusce<\/p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in varius purus. Nullam ut sodales ante. Fusce justo nisi, suscipit a lacus et, posuere sagittus ex. Nulla convallis ante elit, at consequat ipsum ultricies ut. Suspendisse dignissim urna sed libero porttitor, et rhoncus lorem mattis. Vivamus gravida tellus ut lacinia feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in varius purus. Nullam ut sodales ante. Fusce justo nisi, suscipit a lacus et, posuere sagittus ex. Nulla convallis ante elit, at consequat ipsum ultricies ut. Suspendisse dignissim urna sed libero porttitor, et rhoncus lorem mattis. Vivamus gravida tellus ut lacinia feugiat.<\/p><h4>H4 Here's an Ordered List<\/h4><ol><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<ol><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><li>Nulla convallis ante elit, at consequat ipsum ultricies ut.<\/li><li>Vivamus gravida tellus ut lacinia feugiat.<ol><li>Aliquam in varius purus.<\/li><li>Nullam ut sodales ante.<\/li><\/ol><\/li><\/ol><\/li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<\/li><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex. Fusce justo nisi, suscipit a lacus et, posuere sagittis ex. Fusce justo nisi, suscipit a lacus et, posuere sagittis ex. Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut lorem dui. Donec ac nunc erat. Curabitur blandit quam ut erat dignissim feugiat.</li><li>Nulla facilisi. Suspendisse mattis ultricies urna, sit amet vulputate erat mattis in. Morbi nisi odio, feugiat nec facilisis ac, tristique volutpat diam.</li><li>Maecenas congue, metus a placerat luctus, libero arcu ullamcorper leo, non sollicitudin quam nisi sed enim.</li><\/ol><h4>H4 Here's an Unordered List<\/h4><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<ul><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><li>Nulla convallis ante elit, at consequat ipsum ultricies ut.<\/li><li>Vivamus gravida tellus ut lacinia feugiat.<ul><li>Aliquam in varius purus.<\/li><li>Nullam ut sodales ante.<\/li><\/ul><\/li><\/ul><\/li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<\/li><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><\/ul><h4>H4 Mixed list<\/h4><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<ol><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><li>Nulla convallis ante elit, at consequat ipsum ultricies ut.<\/li><li>Vivamus gravida tellus ut lacinia feugiat.<ul><li>Aliquam in varius purus.<\/li><li>Nullam ut sodales ante.<\/li><\/ul><\/li><\/ol><\/li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<\/li><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><\/ul><ol><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<ul><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><li>Nulla convallis ante elit, at consequat ipsum ultricies ut.<\/li><li>Vivamus gravida tellus ut lacinia feugiat.<ol><li>Aliquam in varius purus.<\/li><li>Nullam ut sodales ante.<\/li><\/ol><\/li><\/ul><\/li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<ul><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><li>Nulla convallis ante elit, at consequat ipsum ultricies ut.<\/li><li>Vivamus gravida tellus ut lacinia feugiat.<ul><li>Aliquam in varius purus.<\/li><li>Nullam ut sodales ante.<\/li><\/ul><\/li><\/ul><\/li><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><\/ol><h5>H5 Lorem Ipsum Dolor<\/h5><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in varius purus. Nullam ut sodales ante. Fusce justo nisi, suscipit a lacus et, posuere sagittus ex. Nulla convallis ante elit, at consequat ipsum ultricies ut. Suspendisse dignissim urna sed libero porttitor, et rhoncus lorem mattis. Vivamus gravida tellus ut lacinia feugiat.<\/p><h6>H6 Lorem Ipsum Dolor<\/h6><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in varius purus. Nullam ut sodales ante. Fusce justo nisi, suscipit a lacus et, posuere sagittus ex. Nulla convallis ante elit, at consequat ipsum ultricies ut. Suspendisse dignissim urna sed libero porttitor, et rhoncus lorem mattis. Vivamus gravida tellus ut lacinia feugiat.<\/p><blockquote><p>This is a pull quote, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam in varius purus. Nullam ut sodales ante.<\/p><\/blockquote><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td>Test 1<\/td><td>Aliquam in varius purus. Nullam ut sodales ante.<\/td><\/tr><tr><td>Test 2<\/td><td>Fusce justo nisi, suscipit a lacus et, posuere sagittus ex.<\/td><\/tr><tr><td>Test 3</td><td>Ilipsum dolor sit amet, consectetur adipiscing elit.<\/td><\/tr><\/tbody><\/table><h1>H1 Title</h1><h2>H2 Title</h2><h3>H3 Title</h3><h4>H4 Title</h4><h5>H5 Title</h5><div class=\"resp-table\"><table border=\"1\"><caption><h5>Breast Cancer Screening Guidelines for Women with Average&nbsp;Risk</h5></caption><thead><tr><th>Column Title</th><th>Column Title</th><th>Column Title</th><th>Column Title</th><th>Column Title</th></tr></thead><tbody><tr><td style=\"width: 18.9887%;\"><strong>Organization</strong></td><td style=\"width: 22.6966%;\"><strong>Risk Assessment</strong></td><td style=\"width: 19.3259%;\"><strong>Starting Age</strong></td><td style=\"width: 20.6742%;\"><strong>Stopping Age</strong></td><td style=\"width: 16.7416%;\"><strong>Frequency</strong></td></tr><tr><td style=\"width: 18.9887%;\">ACR<sup>32</sup></td><td style=\"width: 22.6966%;\">Age 30, especially minority women to ensure they are not high risk</td><td style=\"width: 19.3259%;\">Age 40</td><td style=\"width: 20.6742%;\">No age limit</td><td style=\"width: 16.7416%;\">Every year</td></tr><tr><td style=\"width: 18.9887%;\">ACOG<sup>49</sup></td><td style=\"width: 22.6966%;\"></td><td style=\"width: 19.3259%;\">Doctor should offer at 45. Start no later than age 50.</td><td style=\"width: 20.6742%;\">Shared decision with your doctor after age 75</td><td style=\"width: 16.7416%;\">Every 1 or 2 years.</td></tr><tr><td style=\"width: 18.9887%;\">ACS<sup>50</sup></td><td style=\"width: 22.6966%;\"></td><td style=\"width: 19.3259%;\">Age 45, but doctor should offer at age 40.</td><td style=\"width: 20.6742%;\">When life expectancy is less than 10 years.</td><td style=\"width: 16.7416%;\">Annual for ages 45–54.<br>Every 1 or 2 years 55 and older.</td></tr></tbody></table></div>"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bottomLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "full-width-cta" }
+      ]
+    }
+  ]
+}

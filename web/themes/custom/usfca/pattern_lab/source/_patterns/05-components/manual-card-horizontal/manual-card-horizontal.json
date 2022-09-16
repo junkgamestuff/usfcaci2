@@ -1,0 +1,13 @@
+{
+  "title": "Card Title",
+  "link": {
+    "cta": "Read More",
+    "href": "https://www.example.com/",
+    "ariaLabel": "This is an Aria Label"
+  },
+  "description": "<p>Lorem ipsum dolor <a href='#'>consectetur adipiscing</a> sit amet, consetetur sadipscing elitr.</p>",
+  "image": {
+    "src": "https://placeimg.com/1920/1080/nature",
+    "alt": "Image Alt Text4"
+  }
+}

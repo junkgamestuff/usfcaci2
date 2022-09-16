@@ -1,0 +1,21 @@
+{
+  "link": {
+    "title": "Course Catalog",
+    "url": "https://catalog.usfca.edu/"
+  },
+  "radios": [
+    {
+      "group": "instances",
+      "id": "refinement-school",
+      "value": "college",
+      "text": "College of Arts and Sciencs",
+      "checked": true
+    },
+    {
+      "group": "instances",
+      "id": "refinement-none",
+      "value": "all",
+      "text": "All USFCA.edu"
+    }
+  ]
+}

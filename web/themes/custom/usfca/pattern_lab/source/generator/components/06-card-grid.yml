@@ -1,0 +1,80 @@
+name: card-grid
+type: component
+markup:
+  content:
+    - type: container
+      class: text-container
+      condition: title
+      content:
+      - type: field
+        name: section-title
+        with:
+          title: title
+      - type: field
+        name: description
+        condition: description
+        with:
+          description: description
+    - type: repeater
+      for: card
+      in: cards
+      repeat:
+        name: card-grid-card
+        own: true
+        markup:
+          content:
+            - type: container
+              class: "text-container"
+              content:
+              - type: field
+                name: cta-title
+                with:
+                  title: title
+              - type: field
+                name: description
+                condition: description
+                with:
+                  description: description
+            - type: field
+              name: image
+              condition: image
+              with:
+                image: image
+        with:
+          title: title
+          description: description
+          image: image
+          link: link
+data:
+  title: "<span class=\"highlight\">Beyond </span>the Classroom"
+  description: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut odio et leo vulputate pulvinar at a leo. Suspendisse rutrum diam vitae magna luctus placerat. Nunc iaculis nibh lorem, eu aliquet nulla luctus eu.</p>"
+  cards:
+    - title: "Study Abroad"
+      description: "<p>Ut malasuada mattis velit malesuada pharetra. Suspendisse laoreet, turpis a venenatis rutrum.</p>"
+      image:
+        src: "/images/16_9_320x180.png"
+        alt: "Card Image"
+      link:
+        url: "/"
+    - title: "Coops & Internships"
+      description: "<p>Ut malasuada mattis velit malesuada pharetra. Suspendisse laoreet, turpis a venenatis rutrum.</p>"
+      image:
+        src: "/images/16_9_320x180.png"
+        alt: "Card Image"
+      link:
+        url: "/"
+        target: "_blank"
+    - title: "Civic Engagement & Service Learning"
+      description: "<p>Ut malasuada mattis velit malesuada pharetra. Suspendisse laoreet, turpis.</p>"
+      image:
+        src: "/images/16_9_320x180.png"
+        alt: "Card Image"
+      link:
+        url: "/"
+    - title: "Precollege & Summer Programs"
+      description: "<p>Ut malasuada mattis velit malesuada pharetra. Suspendisse laoreet.</p>"
+      image:
+        src: "/images/16_9_320x180.png"
+        alt: "Card Image"
+      link:
+        url: "/"

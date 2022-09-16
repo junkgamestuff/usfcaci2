@@ -1,0 +1,54 @@
+{% extends "base-component" %}
+
+{% set name = "article-card" %}
+{% set variant = [isVideo ? 'with-video'] %}
+{% set container_element = 'article' %}
+{% set container_aria_label = "Article Card" %}
+
+{% if image is empty %}
+  {% set image = {src: '../../images/placeholder-wide.png'} %}
+{% endif %}
+
+{% block content %}
+
+  <a href="{{ link.href }}">
+    {% if image is not empty %}
+      {% include "fields-image" with {
+        image: image
+      } only %}
+    {% endif %}
+  </a>
+
+  <div class="text-container">
+
+    {% if eyebrow is not empty %}
+      {% include "fields-category" with {
+        category: eyebrow
+      } only %}
+    {% endif %}
+
+    {% include "fields-cta-title" with {
+      href: link.href,
+      title: title
+    } only %}
+
+    {% if description is not empty %}
+      {% include "fields-description" with {
+        description: description
+      } only %}
+    {% endif %}
+
+    {% if publication is not empty %}
+      {% include "fields-link" with {
+        href: publication.href,
+        cta: publication.publicationName,
+        target: "_blank",
+        svgAfter: "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" width=\"25\" height=\"25\" viewBox=\"0 0 35 35\" enable-background=\"new 0 0 35 35\" xml:space=\"preserve\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" fill=\"#333333\" d=\"M11,9v15h15v2H9V9H11z M26,9v9.5h-2v-5.7l-7,7L15.2,18l7-7h-5.7V9H26z\"/></svg>",
+        field_variant: "publication-link"
+      } only %}
+    {% endif %}
+
+  </div>
+
+{% endblock %}
+

@@ -1,0 +1,423 @@
+// gradient overlay
+$overlay-color: rgba($color-black, .3);
+// turn overlay on and off
+$background-color-fallback: $color-primary;
+
+.cc--program-page-header {
+  @include margin(null null rem(30));
+  position: relative;
+
+  @include mq($bp1024) {
+    @include margin(null null rem(50));
+  }
+
+  .c--program-page-header {
+    @include mq($bp1800) {
+      @include maxwidth;
+    }
+  }
+
+  .image-text-container {
+    @include maxwidth;
+    position: relative;
+  }
+
+  .image-wrapper {
+    @include mq($bp1800) {
+      position: relative;
+      right: 50%;
+      left: 50%;
+      width: 100vw;
+      margin-right: -50vw;
+      margin-left: -50vw;
+    }
+
+    .f--image {
+      max-height: rem(800);
+      overflow: hidden;
+
+      @supports not (aspect-ratio: 1 / 1) { // fallback for aspect ratio
+        position: relative;
+        padding-top: 100%;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        @include mq($bp768) {
+          padding-top: 96%;
+        }
+
+        @include mq($bp1024) {
+          padding-top: 66.6%;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      background-color: $background-color-fallback;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+
+      @include mq($bp768) {
+        aspect-ratio: 768 / 800;
+      }
+
+      @include mq($bp1024) {
+        aspect-ratio: 3 / 2;
+      }
+    }
+  }
+
+  .text-wrapper {
+    @include padding(null rem(20) rem(12));
+    @include maxwidth;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: rem(170);
+
+    &::before {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba($color-black, 0) 0%, rgba($color-black, .6) 30%);
+      content: '';
+
+      @include mq($bp768) {
+        background: linear-gradient(180deg, rgba($color-black, 0) 0%, rgba($color-black, .3) 30%);
+      }
+
+      @include mq($bp1800) {
+        right: 50%;
+        left: 50%;
+        width: 100vw;
+        margin-right: -50vw;
+        margin-left: -50vw;
+      }
+    }
+
+    @include mq($bp768) {
+      @include padding(null cols(22) rem(28) cols(2));
+      bottom: 0;
+      height: 23%;
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(17) rem(20) cols(2));
+      height: 17%;
+    }
+
+    .f--category {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(14, 14);
+      @include margin(rem(20) null null);
+      position: relative;
+      color: $color-white;
+
+      @include mq($bp768) {
+        @include font-size(16, 16);
+        @include margin(0 null rem(14));
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(20));
+      }
+    }
+
+    .f--page-title {
+      @include margin(null null rem(10));
+      position: relative;
+
+      @include mq($bp1024) {
+        @include margin(null null rem(15));
+      }
+
+      h1 {
+        @include font-size(36, 36);
+        color: $color-white;
+        letter-spacing: 0;
+        text-shadow: 0 0 rem(25) $color-black;
+        text-transform: none;
+
+        @include mq($bp768) {
+          @include font-size(48, 48);
+          letter-spacing: rem(.5);
+        }
+
+        @include mq($bp1024) {
+          @include font-size(60, 60);
+        }
+      }
+    }
+
+    .f--description {
+      position: relative;
+
+      &,
+      p {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include font-size(18, 24);
+        margin-bottom: 0;
+        color: $color-white;
+        text-shadow: 0 0 rem(25) $color-black;
+
+        @include mq($bp768) {
+          @include font-size(20, 20);
+          @include margin(null null rem(12));
+        }
+
+        @include mq($bp1024) {
+          @include font-size(24, 24);
+        }
+      }
+
+      a {
+        color: $color-sherpa-blue;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+
+    @include mq($bp768) {
+      @include padding(null cols(2) null null);
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    @include mq($bp768) {
+      @include padding(null cols(3) null null);
+    }
+
+    .left-wrapper {
+      @include padding(null rem(20));
+
+      @include mq($bp768) {
+        @include padding(null cols(2));
+        flex: 1 0 auto;
+        width: cols(20);
+      }
+
+      @include mq($bp1024) {
+        @include padding(null cols(2));
+        align-self: flex-start;
+        width: cols(33);
+      }
+
+      > .f--description {
+        a {
+          color: $color-sherpa-blue;
+          font-family: inherit;
+          font-size: inherit;
+          line-height: inherit;
+        }
+      }
+
+      .cc--breadcrumbs {
+        margin: 0;
+        width: 100%;
+
+        .c--breadcrumbs {
+          @include padding(null 0);
+        }
+      }
+    }
+
+    .links-container {
+      position: relative;
+      width: 100%;
+      background: $color-sherpa-blue;
+      z-index: 10;
+      order: 1;
+
+      @include mq($bp768) {
+        @include padding(rem(31) cols(1) rem(40));
+        @include margin(rem(-600) null null);
+        width: cols(18);
+      }
+
+      @include mq($bp1024) {
+        @include margin(rem(-530) null null);
+        width: cols(13);
+      }
+
+      @include mq($bp1200) {
+        @include margin(rem(-600) null null);
+      }
+
+      .f--cta-title {
+        @include mq($bp768max) {
+          display: none;
+        }
+
+        h3 {
+          @extend %font-fira-sans-extra-condensed-semibold;
+          @include font-size(16, 16);
+          @include margin(null null rem(12));
+          text-transform: uppercase;
+
+          a {
+            color: $color-white;
+
+            @include hover {
+              color: $color-white;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      .list-toggle {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include font-size(16, 16);
+        @include padding(null rem(13) null rem(20));
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: rem(50);
+        margin: 0;
+        color: $color-white;
+        text-align: left;
+        text-transform: uppercase;
+
+        @include mq($bp768) {
+          display: none;
+        }
+
+        &.open {
+          svg {
+            transform: rotate(-90deg);
+          }
+        }
+
+        svg {
+          width: rem(25);
+          height: rem(25);
+        }
+      }
+
+      .nav-links {
+        @include no-bullet;
+        @include margin(null null rem(10));
+
+        @include mq($bp768max) {
+          @include padding(null rem(20) rem(40));
+          display: none;
+          position: absolute;
+          top: rem(50);
+          width: 100%;
+          background: $color-sherpa-blue;
+        }
+
+        .program-nav-item {
+          border-bottom: rem(1) solid $color-supernova;
+          @include padding(rem(13) null);
+
+          .link {
+            @extend %font-fira-sans-extra-condensed-regular;
+            @include font-size(20, 24);
+            color: $color-white;
+            text-decoration: none;
+
+            @include hover {
+              font-weight: 600;
+            }
+
+            &.active {
+              @include padding(null null null rem(18));
+              background: url('../images/icons-usf/USF_arrow_yellow.svg') no-repeat 0 rem(7);
+              background-size: rem(6);
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+      .buttons-container {
+        display: flex;
+        flex-direction: column;
+
+        @include mq($bp768max) {
+          @include padding(null rem(40) null rem(20));
+          position: fixed;
+          top: 0;
+          left: 0;
+          flex-direction: row;
+          justify-content: center;
+          width: 100%;
+          background: $color-sherpa-blue;
+          z-index: 100;
+
+          .f--link {
+            @include margin(null rem(20) null null);
+
+            .link {
+              @include font-size(14);
+              @include padding(null rem(10));
+              @include margin(rem(15) null);
+            }
+          }
+        }
+
+        @include mq($bp768) {
+          &.fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+            background: $color-sherpa-blue;
+            z-index: 100;
+
+            .f--link {
+              @include padding(null rem(12));
+            }
+
+            .link {
+              @include margin(rem(20) null);
+              min-width: rem(275);
+            }
+          }
+        }
+
+        .link {
+          @extend %font-fira-sans-bold;
+          @include font-size(18, 18);
+          @include margin(rem(20) null null);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: rem(50);
+          border: rem(2) solid $color-supernova;
+          color: $color-white;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          @include hover {
+            box-shadow: inset 0 0 0 rem(3) $color-supernova;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+name: "hero-landing"
+type: "component"
+markup:
+  content:
+  - type: field
+    name: image
+    with:
+      image: image
+  - type: field
+    name: page-title
+    with:
+      title: title
+  - type: container
+    class: 'feature-container'
+    condition: featureTitle
+    content:
+      - type: field
+        name: cta-title
+        with:
+          title: featureTitle
+          link: featureLink
+      - type: field
+        name: description
+        with:
+          description: featureDescription
+data:
+  image:
+    src: "/images/16_9_1600x900.png"
+    alt: "Academics"
+  title: "Academics"
+  featureTitle: "Story about academics"
+  featureDescription: "Lorem ipsum dolor sit amet, consect etur adipiscing elit. Pellentesque at mi."
+  featureLink:
+    url: "/news/story-about-academics"

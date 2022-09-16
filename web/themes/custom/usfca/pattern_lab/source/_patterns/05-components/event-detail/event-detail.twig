@@ -1,0 +1,72 @@
+{% extends "base-component" %}
+
+{% set name = "event-detail" %}
+
+{% block content %}
+
+  <div class="text-container">
+
+    <div class="date-wrapper">
+      {% include "fields-date-string" with { text: date } only %}
+    </div>
+
+    {% if time is not empty %}
+      {% include "fields-time-string" with { text: time } only %}
+    {% endif %}
+
+    {% if location is not empty %}
+    <div class="location-wrapper">
+      {% include "fields-text" with { text: location } only %}
+
+      {% if link is not empty and link.url and link.title %}
+        {% include "fields-link" with {
+          href: link.url,
+          cta: link.title,
+          aria: link.ariaLabel,
+          svg: link.svg
+        } only %}
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% include "fields-description" with { description: description } only %}
+
+    {% if ctaLinks|length %}
+
+      <div class="links-container">
+        {% for ctaLink in ctaLinks %}
+          {% include "fields-link" with {
+            href: ctaLink.url,
+            cta: ctaLink.title,
+            isAlt: false,
+            aria: ctaLink.ariaLabel
+          } only %}
+        {% endfor %}
+      </div>
+
+    {% endif %}
+
+  </div>
+
+  <div class="socials-container">
+    {% include "components-social-share" with {
+      "links": [{
+          "network": "copy",
+        },
+        {
+        "network": "facebook",
+        },
+        {
+          "network": "twitter",
+        },
+        {
+          "network": "linkedin",
+        },
+        {
+          "network": "email",
+        }
+      ]}
+    %}
+  </div>
+
+{% endblock content %}

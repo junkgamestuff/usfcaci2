@@ -1,0 +1,84 @@
+{% extends "base-component" %}
+
+{% set name = "social-share" %}
+
+{% block content %}
+
+  <span class="a2a_kit a2a_kit_size_32 addtoany_list" style="line-height: 32px;">
+
+    <span class="title">
+       Share
+    </span>
+
+    {% for link in links %}
+
+      {% if link.network == 'copy' %}
+
+        <a class="a2a_button_copy_link" target="_blank" href="#" rel="nofollow noopener">
+          <span class="a2a_svg a2a_s__default a2a_s_copy">
+            <svg enable-background="new 0 0 22 22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"><path d="m4 4v18h18v-18zm16 16h-14v-14h14zm-18-18v17h-2v-17-1-1h18v2z" fill="#00543C"/></svg>
+          </span>
+          <span class="a2a_label visually-hidden">Copy</span>
+        </a>
+
+      {% elseif link.network == 'facebook' %}
+
+        <a class="a2a_button_facebook" target="_blank" href="/#facebook" rel="nofollow noopener">
+          <span class="a2a_svg a2a_s__default a2a_s_facebook">
+            <svg enable-background="new 0 0 19 19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg"><path d="m18 0h-17c-.5 0-1 .5-1 1v17c0 .6.5 1 1 1h9.1v-7.3h-2.4v-2.9h2.5v-2.1c0-2.5 1.5-3.8 3.7-3.8.7 0 1.5 0 2.2.1v2.6h-1.5c-1.2 0-1.4.6-1.4 1.4v1.8h2.8l-.4 2.9h-2.5v7.3h4.9c.6 0 1-.5 1-1v-17c0-.5-.5-1-1-1z" fill="#00543C"/></svg>
+          </span>
+          <span class="a2a_label visually-hidden">Facebook</span>
+        </a>
+
+      {% elseif link.network == 'twitter' %}
+
+        <a class="a2a_button_twitter" target="_blank" href="/#twitter" rel="nofollow noopener">
+          <span class="a2a_svg a2a_s__default a2a_s_twitter">
+            <svg enable-background="new 0 0 19 15.5" viewBox="0 0 19 15.5" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="m19 1.8c-.7.2-1.4.5-2.2.7.7-.5 1.4-1.3 1.7-2.2-.7.4-1.6.7-2.5.9-.7-.7-1.7-1.2-2.9-1.2-2.2 0-3.9 1.7-3.9 3.9 0 .2 0 .7.2.9-3.3-.2-6.2-1.7-8.2-4.1-.1.6-.5 1.3-.5 2 0 1.3.7 2.6 1.7 3.2-.7 0-1.3-.2-1.8-.5 0 2 1.3 3.6 3.1 3.8-.2.2-.5.3-.9.3-.2 0-.5 0-.7 0 .5 1.6 2 2.6 3.6 2.7-1.3 1.1-3 1.7-4.8 1.7-.4 0-.7 0-.9 0 1.7 1.2 3.8 1.7 5.9 1.7 7.2-.1 11.1-6 11.1-11.1 0-.2 0-.5 0-.5.8-.8 1.5-1.4 2-2.2" fill="#00543C" fill-rule="evenodd"/></svg>
+          </span>
+          <span class="a2a_label visually-hidden">Twitter</span>
+        </a>
+
+      {% elseif link.network == 'linkedin' %}
+
+        <a class="a2a_button_linkedin" target="_blank" href="/#linkedin" rel="nofollow noopener">
+          <span class="a2a_svg a2a_s__default a2a_s_linkedin">
+            <svg enable-background="new 0 0 19 19" viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg"><path d="m15.4 0h-11.8c-2 0-3.6 1.6-3.6 3.6v11.8c0 2 1.6 3.6 3.6 3.6h11.8c2 0 3.6-1.6 3.6-3.6v-11.8c0-2-1.6-3.6-3.6-3.6zm-9.6 15.9h-2.8v-8.6h2.8zm-1.5-9.7c-1 0-1.6-.6-1.5-1.5 0-.9.6-1.5 1.6-1.5.9 0 1.5.6 1.5 1.5s-.6 1.5-1.6 1.5zm11.7 9.7h-2.7v-4.6c0-1.2-.5-2-1.5-2-.9 0-1.4.5-1.5 1-.1.2-.1.5-.1.7v5h-2.8c0-7.8 0-8.6 0-8.6h2.8v1.2c.4-.6 1-1.5 2.5-1.5 2 0 3.3 1.2 3.3 3.8z" fill="#00543C"/></svg>
+          </span>
+          <span class="a2a_label visually-hidden">LinkedIn</span>
+        </a>
+
+      {% elseif link.network == 'email' %}
+
+        <a class="a2a_button_email" target="_blank" href="/#email" rel="nofollow noopener">
+          <span class="a2a_svg a2a_s__default a2a_s_email">
+            <svg enable-background="new 0 0 20 13" viewBox="0 0 20 13" xmlns="http://www.w3.org/2000/svg"><path d="m20 1.3v.2 10c0 .8-.7 1.5-1.5 1.5h-17c-.8 0-1.5-.7-1.5-1.5v-10c0-.1 0-.1 0-.2l8.5 7.4c.9.8 2.2.8 3.1 0zm-9.5 6.2 8.5-7.4c-.1-.1-.3-.1-.5-.1h-17c-.2 0-.4 0-.6.1l8.5 7.4c.4.3.8.3 1.1 0z" fill="#00543C"/></svg>
+          </span>
+          <span class="a2a_label visually-hidden">Email</span>
+        </a>
+
+      {% elseif link.network == 'tiktok' %}
+
+        <a class="a2a_button_tiktok" target="_blank" href="/#tiktok" rel="nofollow noopener">
+          <span class="a2a_svg a2a_s__default a2a_s_tiktok">
+            <svg height="21" viewBox="0 0 18 21" width="18" xmlns="http://www.w3.org/2000/svg"><path d="m6.38852459 7.72103004c-3.54098361.0751073-6.38852459 3.01931326-6.38852459 6.63948496 0 1.8025751.70819672 3.4549356 1.85901639 4.6416309 1.18032787 1.2317597 2.83278689 1.9978541 4.67704918 1.9978541 3.61475413 0 6.53606553-2.9742489 6.53606553-6.639485v-7.33047208c1.3868853 1.00643777 3.0836066 1.60729614 4.9278689 1.60729614v-3.60515022c-.3540984 0-.6934426-.03004292-1.0327869-.10515021-1.0180328-.22532189-1.9327869-.76609442-2.6114754-1.53218884-.7081967-.78111588-1.1803279-1.80257511-1.2688525-2.92918455v-.46566524h-.9737704-2.59672136v14.360515c0 1.667382-1.34262295 3.0343348-2.99508196 3.0343348-.9737705 0-1.8295082-.4656653-2.37540984-1.2017168-.39836066-.525751-.60491803-1.1716738-.60491803-1.8476394 0-1.6824035 1.34262295-3.0343348 2.99508196-3.0343348.30983607 0 .61967213.0450644.9.1351931v-3.66523602c-.35409836-.04506438-.69344262-.0751073-1.04754098-.06008584" fill="#00543C"/></svg>
+          </span>
+          <span class="a2a_label visually-hidden">TikTok</span>
+        </a>
+
+      {% elseif link.network == 'print' %}
+
+        <a class="a2a_button_print" target="_blank" href="/#print" rel="nofollow noopener">
+          <span class="a2a_svg a2a_s__default a2a_s_print">
+            <svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-25.000000, -889.000000)"><g transform="translate(25.000000, 709.000000)"><g transform="translate(0.000000, 180.000000)"><rect fill="#333333" x="0" y="0" width="50" height="50" rx="5"></rect><g transform="translate(10.000000, 10.000000)" fill="#FFFFFF"><path d="M23.6823529,20.092437 C23.6823529,20.3042017 23.4705882,20.410084 23.3647059,20.410084 L21.0352941,20.410084 L21.0352941,22.1042017 C21.0352941,22.6336134 20.6117647,23.1630252 19.9764706,23.1630252 L9.70588235,23.1630252 C9.17647059,23.1630252 8.64705882,22.7394958 8.64705882,22.1042017 L8.64705882,20.410084 L6.31764706,20.410084 C6.10588235,20.410084 6,20.1983193 6,20.092437 L6,15.7512605 C6,14.5865546 6.95294118,13.7394958 8.01176471,13.7394958 L8.64705882,13.7394958 L8.64705882,7.91596639 C8.64705882,7.38655462 9.07058824,6.85714286 9.70588235,6.85714286 L16.8,6.85714286 C17.3294118,6.85714286 18.1764706,7.17478992 18.4941176,7.59831933 L20.0823529,9.18655462 C20.5058824,9.61008403 20.8235294,10.3512605 20.8235294,10.8806723 L20.8235294,13.6336134 L21.4588235,13.6336134 C22.6235294,13.6336134 23.4705882,14.5865546 23.4705882,15.6453782 L23.4705882,20.092437 L23.6823529,20.092437 Z M19.6588235,15.010084 L19.6588235,10.9865546 L17.9647059,10.9865546 C17.4352941,10.9865546 16.9058824,10.5630252 16.9058824,9.92773109 L16.9058824,8.23361345 L10.1294118,8.23361345 L10.1294118,15.010084 L19.6588235,15.010084 Z M19.6588235,21.7865546 L19.6588235,19.0336134 L10.1294118,19.0336134 L10.1294118,21.7865546 L19.6588235,21.7865546 Z M21.6705882,15.010084 C21.2470588,15.010084 21.0352941,15.3277311 21.0352941,15.6453782 C21.0352941,16.0689076 21.3529412,16.2806723 21.6705882,16.2806723 C21.9882353,16.2806723 22.3058824,15.9630252 22.3058824,15.6453782 C22.3058824,15.3277311 21.9882353,15.010084 21.6705882,15.010084 Z"></path></g></g></g></g></g></svg>
+          </span>
+          <span class="a2a_label visually-hidden">Print</span>
+        </a>
+
+      {% endif %}
+
+    {% endfor %}
+
+  </span>
+
+{% endblock %}

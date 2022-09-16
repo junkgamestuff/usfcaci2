@@ -1,0 +1,422 @@
+
+// Miles Colors
+$color-primary-purple: #671f75;
+$color-primary-gold: #eac000;
+$color-secondary-purple: #883a9b;
+$color-divider-gray: #ccc;
+
+// Timing
+$alt-easing: left .2s ease-in-out;
+
+.cc--main-menu-alt {
+  @include padding(null null rem(32));
+
+  @include mq($bp768) {
+    @include padding(null null rem(71));
+  }
+
+  @include mq($bp1024) {
+    @include padding(null null 0);
+  }
+
+  @include mq($bp1024max) {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: $alt-easing;
+    z-index: 102;
+
+    &.is-hidden {
+      left: -100%;
+      transition: $alt-easing;
+    }
+
+    .c--main-menu-alt {
+      height: 100%;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  .mc--main {
+    @include mq($bp1024max) {
+      @include padding(null cols(4));
+    }
+  }
+
+  .m--menu {
+    @include mq($bp1024) {
+      @include padding(null null rem(89));
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      max-width: cols(12, 40);
+    }
+
+    > li {
+      &:not(:last-child) {
+        @include margin(null null rem(15));
+
+        @include mq($bp768) {
+          @include margin(null null rem(16));
+        }
+
+        @include mq($bp1024) {
+          @include margin(null null rem(15));
+        }
+      }
+
+      @include hover {
+        > .link-arrow-wrapper {
+          a {
+            color: $color-primary-purple;
+          }
+        }
+      }
+
+      > .link-arrow-wrapper {
+        > a {
+          @include font-size(16, 22);
+          @include padding(rem(4) null);
+          display: block;
+          position: relative;
+          color: $color-black;
+          text-decoration: none;
+
+          @include mq($bp768) {
+            @include font-size(20, 24);
+            @include padding(rem(10) null);
+          }
+        }
+
+        > .arrow-toggle {
+          svg {
+            width: rem(25);
+            height: rem(25);
+
+            @include mq($bp768) {
+              width: rem(32);
+              height: rem(32);
+            }
+
+            g {
+              fill: $color-primary-purple;
+            }
+
+            @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+              width: rem(10);
+            }
+          }
+        }
+      }
+
+      .submenus-wrapper {
+        display: none;
+
+        @include mq($bp1024max) {
+          @include padding(null cols(4));
+          position: absolute;
+          top: rem(-5);
+          left: 100%;
+          width: 100%;
+          transition: $alt-easing;
+
+          &.is-visible {
+            display: block;
+            left: 100%;
+            transition: $alt-easing;
+          }
+
+          &.is-hidden {
+            left: 0;
+            transition: $alt-easing;
+          }
+        }
+
+        @include mq($bp1024) {
+          position: absolute;
+          top: 0;
+          left: 100%;
+          border-left: rem(1) solid $color-divider-gray;
+        }
+
+        .button-back {
+          @include font-size(14, 19);
+          @include margin(rem(7) null rem(18));
+          display: flex;
+          position: relative;
+          align-items: center;
+          color: $color-link;
+
+          @include mq($bp768) {
+            @include margin(rem(11) null rem(35));
+            @include font-size(15, 15);
+          }
+
+          @include mq($bp1024) {
+            display: none;
+          }
+
+          svg {
+            @include margin(null rem(15) null null);
+            width: rem(9);
+            height: rem(9);
+
+            path {
+              fill: $color-primary-purple;
+            }
+          }
+        }
+
+        .submenus-wrapper-inner {
+          @include mq($bp1024) {
+            width: 100%;
+          }
+
+          // when no link - route:<nolink>
+          span {
+            @include font-size(14, 16);
+            @include margin(rem(30) null 0);
+            display: inline-block;
+            position: relative;
+            color: $color-white;
+
+            @include mq($bp1024) {
+              @include font-size(16, 18);
+              @include margin(0 rem(50) rem(10));
+              display: none;
+            }
+          }
+        }
+      }
+
+      &.is-open {
+        @include mq($bp1024max) {
+          background: $color-light-gray;
+        }
+      }
+
+      &:focus-within,
+      &.ally-focus-within {
+        > .submenus-wrapper {
+          @include mq($bp1024) {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  ul {
+    > li {
+      @include mq($bp1024) {
+        @include hover {
+          > .submenus-wrapper {
+            display: flex;
+          }
+        }
+      }
+
+      .link-arrow-wrapper {
+        display: flex;
+        align-items: center;
+
+        a {
+          flex-grow: 1;
+
+          @include mq($bp1024) {
+            flex-grow: 0;
+          }
+        }
+
+        > .arrow-toggle {
+          @include mq($bp1024max) {
+            @include padding(null rem(2) null null);
+            width: rem(30);
+            height: rem(30);
+            text-align: right;
+
+            svg {
+              g {
+                fill: $color-secondary-purple;
+              }
+            }
+          }
+
+          @include mq($bp1024) {
+            display: none;
+          }
+        }
+      }
+
+      .submenus-wrapper {
+        display: none;
+        width: 100%;
+
+        @include mq($bp1024) {
+          width: cols(15, 12);
+          height: 100%;
+          z-index: 2;
+        }
+
+        .submenus-wrapper-inner {
+          @include margin(null null rem(8));
+
+          @include mq($bp1024) {
+            @include margin(null null 0);
+            width: 100%;
+          }
+
+          > span {
+            @include visuallyhidden;
+          }
+        }
+      }
+
+      ul.submenu {
+        width: 100%;
+
+        > li {
+          @include margin(null null rem(3));
+
+          @include mq($bp768) {
+            @include margin(null null rem(16));
+          }
+
+          @include mq($bp1024) {
+            @include padding(null cols(3, 12));
+            @include margin(null null rem(15));
+            position: static;
+
+            @include hover {
+              > .link-arrow-wrapper {
+                a {
+                  color: $color-primary-purple;
+                }
+              }
+
+              .submenus-wrapper {
+                display: flex;
+                min-height: 100%;
+              }
+            }
+          }
+
+          &.is-open {
+            > .link-arrow-wrapper a {
+              @include mq($bp1024max) {
+                color: $color-primary-purple;
+              }
+            }
+          }
+
+          span,
+          a {
+            @include font-size(16, 22);
+            @include padding(rem(10) null);
+            display: flex;
+            border-bottom: 0;
+            color: $color-black;
+            text-decoration: none;
+
+            @include mq($bp768) {
+              @include font-size(20, 24);
+            }
+
+            @include mq($bp1024) {
+              color: $color-black;
+
+              @include hover {
+                color: $color-primary-purple;
+              }
+            }
+          }
+
+          .link-arrow-wrapper {
+            @include mq($bp1024) {
+              position: relative;
+            }
+
+            .arrow-toggle {
+              @include mq($bp1024) {
+                display: none;
+              }
+            }
+          }
+
+          > .submenus-wrapper {
+            @include mq($bp1024) {
+              position: absolute;
+              top: 0;
+              left: 100%;
+              width: 100%;
+              height: 100%;
+              border-left: rem(1) solid $color-divider-gray;
+            }
+
+            .submenus-wrapper-inner {
+              @include mq($bp1024max) {
+                @include padding(rem(2) rem(16));
+                @include margin(null null 0);
+              }
+
+              ul {
+                li {
+                  a {
+                    @include padding(rem(8) null);
+
+                    @include mq($bp1024) {
+                      @include padding(rem(4) null);
+                    }
+
+                    html[data-whatintent='touch'] & {
+                      @include mq($bp1024) {
+                        pointer-events: auto;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.menu-item--expanded {
+        &:not(.ally-focus-within) {
+          a {
+            html[data-whatintent='touch'] & {
+              @include mq($bp1024) {
+                pointer-events: none;
+              }
+            }
+          }
+        }
+      }
+
+      &.is-open {
+        > .link-arrow-wrapper {
+          > .arrow-toggle {
+            > svg {
+              @include mq($bp1024max) {
+                transform: rotate(-90deg);
+              }
+            }
+          }
+        }
+      }
+
+      &:focus-within,
+      &.ally-focus-within {
+        .link-arrow-wrapper {
+          > a {
+            @include mq($bp1024) {
+              pointer-events: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

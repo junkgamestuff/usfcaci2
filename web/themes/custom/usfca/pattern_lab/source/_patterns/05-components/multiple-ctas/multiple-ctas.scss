@@ -1,0 +1,33 @@
+.cc--multiple-ctas {
+  @include maxwidth;
+
+  .c--multiple-ctas {
+    @include padding(rem(40) cols(3));
+
+    @include mq($bp1024) {
+      @include padding(rem(50) cols(2) rem(80));
+    }
+
+    .link-container {
+      @include mq($bp768) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .f--link {
+        @include mq($bp768) {
+          @include margin(rem(30) null null null);
+        }
+
+        &:not(:first-child) {
+          @include margin(rem(30) null null null);
+
+          @include mq($bp768) {
+            @include margin(null null null rem(50));
+          }
+        }
+      }
+    }
+  }
+}

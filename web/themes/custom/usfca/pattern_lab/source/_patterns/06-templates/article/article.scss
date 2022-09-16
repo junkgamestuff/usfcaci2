@@ -1,0 +1,23 @@
+.tc--article {
+  @include mq($bp1024) {
+    @include margin(rem(-150) null null);
+  }
+
+  .cc--video .c--video,
+  .cc--rich-text .c--rich-text,
+  .cc--rich-text-intro-text .c--rich-text-intro-text {
+    @include padding(null rem(20));
+
+    @include mq($bp768) {
+      @include padding(null cols(6));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(8));
+    }
+  }
+
+  .content-main {
+    position: relative;
+  }
+}

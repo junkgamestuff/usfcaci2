@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Example base "paragraph" template with "catch_cache" implementation.
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block content %}
+  <div{{ attributes.addClass(classes) }}>
+    {{ content }}
+  </div>
+{% endblock content %}
+
+{% block catch_cache %}
+  {% set catch_cache = content|render %}
+{% endblock catch_cache %}

@@ -1,0 +1,75 @@
+// text color
+$text-color: $color-white;
+// gradient overlay
+$overlay-color: rgba($color-black, .3);
+$gradient-overlay-color: rgba($color-black, .42);
+
+.cc--hero-home-slider {
+  @include margin(null null rem(60));
+  position: relative;
+
+  .home-page & {
+    @include mq($bp1024) {
+      @include margin(rem(-150) null null);
+    }
+  }
+
+  .home-page.banner-active & {
+    @include mq($bp1024) {
+      @include margin(rem(-170) null null);
+    }
+
+    @include mq($bp1140) {
+      @include margin(rem(-150) null null);
+    }
+  }
+
+  .swiper-slide {
+    @include mq($bp768max) {
+      height: auto;
+    }
+  }
+
+  .swiper-controls {
+    .swiper-pagination {
+      top: 100vw;
+      right: cols(5);
+      bottom: auto;
+      left: auto;
+      width: auto;
+      transform: translateY(-100%);
+
+      @include mq($bp768) {
+        top: calc(100vh - 134px);
+        right: cols(5);
+      }
+
+      @include mq($bp1024) {
+        top: auto;
+        right: rem(60);
+        bottom: rem(20);
+        margin-top: 0;
+        transform: none;
+      }
+
+      .swiper-pagination-bullet {
+        width: rem(16);
+        height: rem(16);
+        margin-right: 0;
+        margin-left: rem(20);
+        border: rem(2) solid $color-supernova;
+        border-radius: rem(4);
+        background: transparent;
+        opacity: 1;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &.swiper-pagination-bullet-active {
+          background: $color-supernova;
+        }
+      }
+    }
+  }
+}

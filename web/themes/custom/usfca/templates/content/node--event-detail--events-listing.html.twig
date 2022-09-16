@@ -1,0 +1,40 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+
+  {% set date = fields.start_date.timestamp|date("F j, Y") %}
+
+  {% if fields.start_date.timestamp|date("mdy") != fields.end_date.timestamp|date("mdy") %}
+    {% if fields.start_date.timestamp|date("Y") != fields.end_date.timestamp|date("Y") %}
+      {% set date = fields.start_date.timestamp|date('F j, Y') ~ ' – ' ~ fields.end_date.timestamp|date('F j, Y') %}
+    {% else %}
+      {% set date = fields.start_date.timestamp|date('F j') ~ ' – ' ~ fields.end_date.timestamp|date('F j, Y') %}
+    {% endif %}
+  {% endif %}
+
+  {% if fields.all_day %}
+    {% set time = 'All Day' %}
+  {% else %}
+    {% set time = fields.start_date.timestamp|date("g:iA") ~ ' - ' ~ fields.end_date.timestamp|date("g:iA") %}
+  {% endif %}
+
+  {% include "components-events-listing-component" with {
+    title: fields.teaser_title ?? fields.title,
+    description: fields.teaser_description,
+    date: fields.start_date ? fields.start_date.timestamp|date('F') ~ ' <span>' ~ fields.start_date.timestamp|date('j') ~ '</span>',
+    image: fields.teaser_image.uri ? {
+      src: fields.teaser_image.uri | image_style('16_9_637x359'),
+      alt: fields.teaser_image.alt,
+      render: drupal_image(fields.teaser_image.uri, '16_9_one_third', {alt: fields.teaser_image.alt}, responsive=true),
+    } : {
+      src: '/themes/custom/usfca/pattern_lab/source/images/placeholder-wide.png',
+      alt: 'Presentation only image for ' ~ fields.teaser_title ?? fields.title,
+    },
+    link: {
+      href: fields.source == "Slate" and fields.registration_link.url ? fields.registration_link.url : fields.url,
+    },
+    location: fields.event_location,
+    time: date ~ ' ' ~ time,
+  } only %}
+
+{% endblock content %}

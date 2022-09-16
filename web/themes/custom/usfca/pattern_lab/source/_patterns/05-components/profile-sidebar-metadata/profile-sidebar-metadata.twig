@@ -1,0 +1,36 @@
+{% extends "base-component" %}
+
+{% set name = "profile-sidebar-metadata" %}
+{% set container_aria_label = "Profile Sidebar Metadata" %}
+
+{% block content %}
+
+  {% include "fields-image" with {
+    image: profileInfo.image
+  } only %}
+
+  {% if profileInfo.link.href or profileInfo.details %}
+    <div class="data-wrapper">
+      {% if profileInfo.link.href %}
+        {% include "fields-link" with {
+          aria: profileInfo.link.aria,
+          href: profileInfo.link.href,
+          cta: profileInfo.link.cta,
+          isAlt: true
+        } only %}
+      {% endif %}
+
+      {% if profileInfo.details %}
+        <div class="details-wrapper">
+          <label>{{ profileInfo.details.label }}</label>
+          {% for item in profileInfo.details.items %}
+            {% include "fields-text" with {
+              text: item.text
+            } only %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+
+{% endblock %}

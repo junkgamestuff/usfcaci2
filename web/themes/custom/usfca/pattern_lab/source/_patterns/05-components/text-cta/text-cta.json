@@ -1,0 +1,8 @@
+{
+  "title": "Text CTA Title",
+  "link": {
+    "cta": "Text CTA",
+    "href": "#",
+    "ariaLabel": "Aria Label for a Link"
+  }
+}

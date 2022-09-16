@@ -1,0 +1,26 @@
+{
+  "reverse": true,
+  "bgColor": null,
+  "images": [
+    {
+      "srcset": "https://placehold.it/1600x719",
+      "media": "(min-width: 1280px)"
+    },
+    {
+      "srcset": "https://placehold.it/1279x719",
+      "media": "(min-width: 1024px)"
+    },
+    {
+      "srcset": "https://placehold.it/1023x575",
+      "media": "(min-width: 768px)"
+    }
+  ],
+  "defaultImage": "https://placehold.it/767x431",
+  "title": "Split Screen Feature Title",
+  "description": "<p>Nostrud consequat non ad amet occaecat tempor ullamco minim mollit elit veniam.</p>",
+  "link": {
+    "href": "#",
+    "cta": "Learn More",
+    "aria": "Ad irure exercitation."
+  }
+}

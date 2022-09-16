@@ -1,0 +1,145 @@
+.cc--social-share {
+  @include mq($bp768max) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: $color-white;
+    z-index: 1;
+  }
+
+  @include mq($bp768) {
+    position: absolute;
+    top: 0;
+    left: cols(1);
+  }
+
+  @include mq($bp1024) {
+    top: rem(70);
+    left: cols(2);
+  }
+
+  .c--social-share {
+    .addtoany_list {
+      @include padding(0);
+      @include margin(0);
+      display: flex;
+      justify-content: center;
+
+      @include mq($bp768) {
+        flex-direction: column;
+      }
+
+      .title {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include font-size(18, 18);
+        color: $color-sherpa-blue;
+        text-align: center;
+
+        @include mq($bp768max) {
+          @include padding(null rem(17));
+          display: flex;
+          align-items: center;
+          height: rem(50);
+          border: rem(1) solid $color-very-light-grey;
+          border-right: 0;
+        }
+
+        @include mq($bp768) {
+          @include margin(null null rem(13));
+        }
+      }
+    }
+
+    a {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      width: rem(50);
+      height: rem(50);
+      border: rem(1) solid $color-very-light-grey;
+      background: $color-white;
+
+      @include mq($bp768max) {
+        border-right: 0;
+      }
+
+      @include mq($bp768) {
+        border-bottom: 0;
+      }
+
+      &:last-child {
+        @include mq($bp768max) {
+          border-right: rem(1) solid $color-very-light-grey;
+        }
+
+        @include mq($bp768) {
+          border-bottom: rem(1) solid $color-very-light-grey;
+        }
+      }
+
+      @include hover {
+        background: $color-sherpa-blue;
+
+        .a2a_svg,
+        svg {
+          path {
+            fill: $color-white;
+          }
+        }
+      }
+
+      .a2a_svg,
+      svg {
+        width: rem(22);
+        height: rem(22);
+      }
+    }
+  }
+
+  .cc--event-detail & {
+    @include mq($bp768max) {
+      @include margin(0);
+    }
+
+    @include mq($bp768) {
+      @include margin(null null null rem(-12));
+      position: relative;
+    }
+
+    @include mq($bp1024) {
+      top: 0;
+    }
+
+    .c--social-share {
+      .addtoany_list {
+        @include mq($bp768) {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+        }
+
+        .title {
+
+          @include mq($bp768max) {
+            flex-grow: 1;
+          }
+
+          @include mq($bp768) {
+            @include padding(null null null rem(12));
+            display: block;
+            width: 100%;
+            text-align: left;
+          }
+        }
+
+        a {
+          @include mq($bp768) {
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+}

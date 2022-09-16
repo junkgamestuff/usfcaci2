@@ -1,0 +1,16 @@
+{% extends "base-field" %}
+
+{% set name = "attribution" %}
+
+{% block content %}
+    {% if fullName is not empty %}
+      <h4>{{ fullName|raw }}</h4>
+    {% endif %}
+
+
+  {% if text is not empty %}
+  <p>{{ text|raw }}</p>
+  {% endif %}
+
+{% endblock %}
+

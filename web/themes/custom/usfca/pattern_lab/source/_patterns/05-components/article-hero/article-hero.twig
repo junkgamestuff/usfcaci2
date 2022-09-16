@@ -1,0 +1,27 @@
+{% extends "base-component" %}
+
+{% set name = "article-hero" %}
+
+{% block content %}
+
+  <div class="text-wrapper">
+    <div class="text-inner">
+      {% if category is not empty %}
+        {% include "fields-category" with { category: category } only %}
+      {% endif %}
+
+      {% include "fields-page-title" with { title: title } only %}
+
+      {% if description is not empty %}
+        {% include "fields-description" with { description: description } only %}
+      {% endif %}
+
+      {% include "fields-authored-date" with {
+        fullname: fullname,
+        byline: byline,
+        date: date
+      } only %}
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{#
+/**
+* @file
+* Default theme implementation to display a block.
+*
+* @see template_preprocess_block()
+*
+* @ingroup themeable
+*/
+#}
+{% set classes = [
+  'clear-both',
+  'alert-banner-block-container'
+] %}
+{{ attach_library('usfca_alert/alert-banner') }}
+{{ attach_library('usfca/notification_banner') }}
+<div{{ attributes.addClass(classes) }}></div>

@@ -1,0 +1,43 @@
+{% set instanceId = instanceId | default(1) %}
+
+<li {% if item.activeTrail %}class="menu-item menu-item--active-trail" {% else %} class="menu-item"{% endif %}>
+
+  {% if item.submenu|length %}
+
+    <div class="link-arrow-wrapper">
+      <a href="{{ item.href }}">
+        {{ item.title }}
+      </a>
+
+      <button type="button" class="has-submenu arrow-toggle" aria-expanded="false" aria-haspopup="true" aria-label="Display Sub Menu for {{ item.title }}">
+        <svg width="7px" height="11px" viewBox="0 0 7 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-230.000000, -41.000000)" fill="#333333"><g><g><g transform="translate(0.000000, 24.000000)"><g transform="translate(220.000000, 10.000000)"><polygon transform="translate(13.137755, 12.500000) scale(-1, 1) rotate(90.000000) translate(-13.137755, -12.500000) " points="13.1377551 13.8010204 17.5765306 9.3622449 18.494898 10.2806122 13.1377551 15.6377551 7.78061224 10.2806122 8.69897959 9.3622449"></polygon></g></g></g></g></g></g></svg>
+      </button>
+    </div>
+
+  {% else %}
+
+    <a href="{{ item.href }}" class="not-external">
+      {{ item.title }}
+    </a>
+
+  {% endif %}
+
+  {% if item.submenu %}
+    <div class="submenus-wrapper">
+    {% if item.submenu|length %}
+      <div class="submenus-wrapper-inner">
+        <span>{{ item.subMenuTitle }}</span>
+        <ul class="submenu" aria-hidden="true">
+
+            {% for subitem in item.submenu %}
+
+              {% include "base-main-menu-item" with { item: subitem } %}
+
+            {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+    </div>
+  {% endif %}
+
+</li>

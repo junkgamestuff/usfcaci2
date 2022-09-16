@@ -1,0 +1,55 @@
+{% extends "base-component" %}
+
+{% set name = "interest-matcher" %}
+
+{% block content %}
+
+  {% include "fields-description" with {
+    description: description
+  } only %}
+
+  {% set uniqueId = random(1, 10000) %}
+
+  <div class="interest-matcher-tabs">
+    {% for item in items %}
+      <div class="tab-item {{ item.class }} {{ item.namevalue }}">
+        {% if item.type == "text" %}
+
+          {% include "fields-link" with { link: item.link } only %}
+
+        {% elseif item.type == "select" %}
+
+          <div class="form-item-wrapper">
+
+            {% include "base-input-select" with { label: item.label, name: item.name, selectId: item.name, required: item.required, disabled: item.disabled, options: item.options } only %}
+
+          </div>
+
+        {% endif %}
+
+      </div>
+
+      {% if item.content is not null %}
+        <div class="tab-content">
+
+          <div class="first-stage">
+            <h3>{{ item.label }} <span></span></h3>
+            {% if item.content.link is not null %}
+              {% include "fields-link" with { link: item.content.link } only %}
+            {% endif %}
+          </div>
+
+          <div class="second-stage">
+            <h3></h3>
+            {% if item.content.label is not null %}
+              {% include "fields-label" with { span: item.content.label } only %}
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+
+    {% endfor %}
+  </div>
+
+{% endblock %}
+

@@ -1,0 +1,371 @@
+{
+  "items": [
+    {
+      "components": [
+        {
+          "type": "chapter",
+          "title": "Rich Text Chapter 1",
+          "id": "chapter1",
+          "components": [
+            {
+              "type": "rich-text",
+              "markup": "<p>Balancing human needs with the preservation of a functional biosphere is an important responsibility for our future. To minimize human impact and move toward more sustainable practices, we must understand the causes of environmental change and the complex interactions within ecosystems, and design effective strategies for restoration. Our curriculum covers environmental monitoring, assessment, regulations, policy implementation, and science application in restoration activities.</p><p><a class='cta-link' href=\"#\">VISIT MY USF</a></p><figure role=\"group\" class=\"align-center\"><article><div><div><a href=\"#\"><picture><img data-src=\"https://placeimg.com/1200/675/people\" alt=\"Image Alt Text4\" src=\"https://placeimg.com/1200/675/people\"></picture></a></div></div></article><figcaption>Curabitur aliquet quam id dui posuere blandit. Cras ultricies ligula sed magna dictum porta. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat.</figcaption></figure>"
+            },
+            {
+              "type": "spacer"
+            }
+          ]
+        },
+        {
+          "type": "chapter",
+          "title": "Link List",
+          "id": "chapter2",
+          "components": [
+            {
+              "type": "two-column-links",
+              "description": "<p>Any number of links consectetur adipiscing elit. Maecenas tristique mollis libero ac gravida. Donec euismod tortor eget lacus porta, eu viverra nunc gravida.</p>",
+              "hideTitle": false,
+              "links": [
+                {
+                  "title": "Link One",
+                  "url": "#"
+                },
+                {
+                  "title": "Link Two",
+                  "url": "#"
+                },
+                {
+                  "title": "Link Three",
+                  "url": "#"
+                },
+                {
+                  "title": "Link Four",
+                  "url": "#"
+                },
+                {
+                  "title": "Link Five",
+                  "url": "#"
+                },
+                {
+                  "title": "Link Six",
+                  "url": "#"
+                }
+              ]
+            },
+            {
+              "type": "spacer"
+            }
+          ]
+        },
+        {
+          "type": "chapter",
+          "title": "Dates Feature",
+          "id": "chapter3",
+          "components": [
+            {
+              "type": "horizontal-event-listing",
+              "link": {
+                "href": "https://www.example.com/",
+                "cta": "More USF Events",
+                "ariaLabel": "An Example Aria Label for CTA Link"
+              },
+              "cards": [
+                {
+                  "date": "Sep 06, 2020",
+                  "title": "Lorem Ipsum Dolor",
+                  "location": "Student Center",
+                  "time": "10:30AM - 11:30AM",
+                  "image": {
+                    "src": "https://placeimg.com/300/170/people",
+                    "alt": "Alt 1"
+                  },
+                  "link": {
+                    "href": "#"
+                  }
+                },
+                {
+                  "date": "Sep 06, 2020",
+                  "title": "Lorem Ipsum Dolor",
+                  "location": "Student Center",
+                  "time": "10:30AM - 11:30AM",
+                  "image": {
+                    "src": "https://placeimg.com/300/170/people",
+                    "alt": "Alt 1"
+                  },
+                  "link": {
+                    "href": "#"
+                  }
+                },
+                {
+                  "date": "Sep 06, 2020",
+                  "title": "Lorem Ipsum Dolor",
+                  "location": "Student Center",
+                  "time": "10:30AM - 11:30AM",
+                  "image": {
+                    "src": "https://placeimg.com/300/170/people",
+                    "alt": "Alt 1"
+                  },
+                  "link": {
+                    "href": "#"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "spacer"
+            }
+          ]
+        },
+        {
+          "type": "chapter",
+          "title": "Accordions",
+          "id": "chapter4",
+          "components": [
+            {
+              "type": "accordions",
+              "description": "<p>Any number of links consectetur adipiscing elit. Maecenas tristique mollis libero ac gravida. Donec euismod tortor eget lacus porta, eu viverra nunc gravida.</p>",
+              "hideTitle": false,
+              "accordions": [
+                {
+                  "title": "Maecenas tristique mollis libero ac gravida?",
+                  "markup": "<p>Any number of links consectetur adipiscing elit. Maecenas tristique mollis libero ac gravida. Donec euismod tortor eget lacus porta, eu viverra nunc gravida.</p>"
+                },
+                {
+                  "title": "Maecenas tristique mollis libero ac gravida?",
+                  "markup": "<p>Any number of links consectetur adipiscing elit. Maecenas tristique mollis libero ac gravida. Donec euismod tortor eget lacus porta, eu viverra nunc gravida.</p>"
+                },
+                {
+                  "title": "Maecenas tristique mollis libero ac gravida?",
+                  "markup": "<p>Any number of links consectetur adipiscing elit. Maecenas tristique mollis libero ac gravida. Donec euismod tortor eget lacus porta, eu viverra nunc gravida.</p>"
+                }
+              ]
+            },
+            {
+              "type": "spacer"
+            }
+          ]
+        },
+        {
+          "type": "chapter",
+          "title": "Table (Part of Rich Text)",
+          "id": "chapter5",
+          "components": [
+            {
+              "type": "rich-text",
+              "markup": "<table><thead><tr><th>Column Title</th><th>Column Title</th></tr></thead><tbody><tr><td>Main Switchboard</td><td>555-555-5555</td></tr><tr><td>Main Switchboard</td><td>555-555-5555</td></tr><tr><td>Main Switchboard</td><td>555-555-5555</td></tr><tr><td>Main Switchboard</td><td>555-555-5555</td></tr><tr><td>Main Switchboard</td><td>555-555-5555</td></tr><tr><td>Main Switchboard</td><td>555-555-5555</td></tr><tr><td>Main Switchboard</td><td>555-555-5555</td></tr></tbody></table>"
+            },
+            {
+              "type": "spacer"
+            }
+          ]
+        },
+        {
+          "type": "chapter",
+          "title": "Manual Cards Horizontal",
+          "id": "chapter6",
+          "components": [
+            {
+              "type": "manual-cards-horizontal",
+              "cards": [
+                {
+                  "title": "An Example of an article title",
+                  "link": {
+                    "cta": "Learn More",
+                    "href": "https://www.example.com/",
+                    "ariaLabel": "This is an Aria Label"
+                  },
+                  "image": {
+                    "src": "https://placeimg.com/1920/1080/nature",
+                    "alt": "Image Alt Text4",
+                    "link": "https://www.example.com/"
+                  },
+                  "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+                },
+                {
+                  "title": "An Example of an article title",
+                  "link": {
+                    "cta": "Learn More",
+                    "href": "https://www.example.com/",
+                    "ariaLabel": "This is an Aria Label"
+                  },
+                  "image": {
+                    "src": "https://placeimg.com/1920/1080/nature",
+                    "alt": "Image Alt Text4",
+                    "link": "https://www.example.com/"
+                  },
+                  "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+                },
+                {
+                  "title": "An Example of an article title",
+                  "link": {
+                    "cta": "Learn More",
+                    "href": "https://www.example.com/",
+                    "ariaLabel": "This is an Aria Label"
+                  },
+                  "image": {
+                    "src": "https://placeimg.com/1920/1080/nature",
+                    "alt": "Image Alt Text4",
+                    "link": "https://www.example.com/"
+                  },
+                  "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+                },
+                {
+                  "title": "An Example of an article title",
+                  "link": {
+                    "cta": "Learn More",
+                    "href": "https://www.example.com/",
+                    "ariaLabel": "This is an Aria Label"
+                  },
+                  "image": {
+                    "src": "https://placeimg.com/1920/1080/nature",
+                    "alt": "Image Alt Text4",
+                    "link": "https://www.example.com/"
+                  },
+                  "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+                },
+                {
+                  "title": "An Example of an article title",
+                  "link": {
+                    "cta": "Learn More",
+                    "href": "https://www.example.com/",
+                    "ariaLabel": "This is an Aria Label"
+                  },
+                  "image": {
+                    "src": "https://placeimg.com/1920/1080/nature",
+                    "alt": "Image Alt Text4",
+                    "link": "https://www.example.com/"
+                  },
+                  "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+                },
+                {
+                  "title": "An Example of an article title",
+                  "link": {
+                    "cta": "Learn More",
+                    "href": "https://www.example.com/",
+                    "ariaLabel": "This is an Aria Label"
+                  },
+                  "image": {
+                    "src": "https://placeimg.com/1920/1080/nature",
+                    "alt": "Image Alt Text4",
+                    "link": "https://www.example.com/"
+                  },
+                  "description": "<p><a href='#'>Duis aute irure dolor</a> in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+                }
+              ]
+            },
+            {
+              "type": "spacer"
+            }
+          ]
+        },
+        {
+          "type": "chapter",
+          "title": "Quote Chapter 7",
+          "id": "chapter7",
+          "components": [
+            {
+              "type": "quote-and-cta",
+              "description": "<p>Id cillum consectetur Lorem duis consequat incididunt ipsum exercitation amet qui labore elit. Irure pariatur commodo id duis sunt reprehenderit ad consequat ut amet officia exercitation.</p>",
+              "eyebrow": null,
+              "quote": "<p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, eget tincidunt nibh pulvina.</p>",
+              "attribution": {
+                "attributionTitle": "Attribution Person Name",
+                "attributionDescription": "Attribution Description Field"
+              },
+              "image": {
+                "src": "https://placeimg.com/850/850/people",
+                "alt": "Quote and CTA Chapter Page"
+              },
+              "link": null
+            },
+            {
+              "type": "spacer"
+            }
+          ]
+        },
+        {
+          "type": "chapter",
+          "title": "Quote Chapter 8",
+          "id": "chapter8",
+          "components": [
+            {
+              "type": "quote-and-cta",
+              "description": "<p>Id cillum consectetur Lorem duis consequat incididunt ipsum exercitation amet qui labore elit. Irure pariatur commodo id duis sunt reprehenderit ad consequat ut amet officia exercitation.</p>",
+              "eyebrow": null,
+              "quote": "<p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, eget tincidunt nibh pulvina.</p>",
+              "attribution": {
+                "attributionTitle": "Attribution Person Name",
+                "attributionDescription": "Attribution Description Field"
+              },
+              "image": {
+                "src": "https://placeimg.com/850/850/people",
+                "alt": "Quote and CTA Chapter Page"
+              },
+              "link": null,
+              "reverse": true
+            },
+            {
+              "type": "spacer"
+            }
+          ]
+        },
+        {
+          "type": "chapter",
+          "title": "Quote Chapter 9",
+          "id": "chapter9",
+          "components": [
+            {
+              "type": "quote-and-cta",
+              "description": "<p>Id cillum consectetur Lorem duis consequat incididunt ipsum exercitation amet qui labore elit. Irure pariatur commodo id duis sunt reprehenderit ad consequat ut amet officia exercitation.</p>",
+              "eyebrow": "The San Francisco <span class=\"highlight\">Advantage</span>",
+              "quote": "<p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, eget tincidunt nibh pulvina.</p>",
+              "attribution": {
+                "attributionTitle": "Attribution Person Name",
+                "attributionDescription": "Attribution Description Field"
+              },
+              "image": {
+                "src": "https://placeimg.com/850/850/people",
+                "alt": "Quote and CTA Chapter Page"
+              },
+              "link": {
+                "cta": "LIVING IN SAN FRANCISCO",
+                "href": "#",
+                "ariaLabel": "Aria Label for a Link"
+              },
+              "reverse": true
+            },
+            {
+              "type": "spacer"
+            }
+          ]
+        },
+        {
+          "type": "chapter",
+          "title": "Quote Chapter 10",
+          "id": "chapter10",
+          "components": [
+            {
+              "type": "contact-box",
+              "title": "Computer Science MS",
+              "links": [
+                {
+                  "title": "UPTOWN CAMPUS",
+                  "url": "#"
+                },
+                {
+                  "title": "DOWNTOWN CAMPUS",
+                  "url": "#"
+                }
+              ],
+              "text": "Kristen Keihl, Assistant Director",
+              "email": "info@datascience.usfca.edu",
+              "phone": "(415) 422-2966",
+              "address": "<p>USF Downtown Campus<br> 101 Howard Street<br> San Francisco, CA 94105</p>",
+              "time": "Mon-Fri: 9AM-5PM<br> Sat: 9AM-1PM"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

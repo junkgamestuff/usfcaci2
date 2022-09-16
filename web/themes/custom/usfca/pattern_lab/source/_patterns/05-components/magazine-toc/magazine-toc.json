@@ -1,0 +1,106 @@
+{
+  "title": "Spring 2020",
+  "eyebrow": "Table of Contents",
+  "TocFeaturesLabel": "Features",
+  "TocFeatures": [
+    {
+      "cta": "A Table of Contents CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "A table of contents CTA Aria Label",
+      "target": true
+    },
+    {
+      "cta": "A Table of Contents CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "A table of contents CTA Aria Label",
+      "target": null
+    },
+    {
+      "cta": "A Table of Contents CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "A table of contents CTA Aria Label",
+      "target": null
+    },
+    {
+      "cta": "A Table of Contents CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "A table of contents CTA Aria Label",
+      "target": null
+    },
+    {
+      "cta": "A Table of Contents CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "A table of contents CTA Aria Label",
+      "target": null
+    },
+    {
+      "cta": "A Table of Contents CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "A table of contents CTA Aria Label",
+      "target": null
+    },
+    {
+      "cta": "A Table of Contents CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "A table of contents CTA Aria Label",
+      "target": null
+    },
+    {
+      "cta": "A Table of Contents CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "A table of contents CTA Aria Label",
+      "target": null
+    }
+  ],
+  "departmentsLabel": "Departments",
+  "departments": [
+    {
+      "cta": "Departments CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "Departments CTA Aria Label",
+      "target": true
+    },
+    {
+      "cta": "Departments CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "Departments CTA Aria Label",
+      "target": null
+    },
+    {
+      "cta": "Departments CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "Departments CTA Aria Label",
+      "target": null
+    },
+    {
+      "cta": "Departments CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "Departments CTA Aria Label",
+      "target": null
+    },
+    {
+      "cta": "Departments CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "Departments CTA Aria Label",
+      "target": null
+    },
+    {
+      "cta": "Departments CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "Departments CTA Aria Label",
+      "target": null
+    },
+    {
+      "cta": "Departments CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "Departments CTA Aria Label",
+      "target": null
+    },
+    {
+      "cta": "Departments CTA",
+      "href": "http://www.google.com",
+      "ariaLabel": "Departments CTA Aria Label",
+      "target": null
+    }
+  ]
+}

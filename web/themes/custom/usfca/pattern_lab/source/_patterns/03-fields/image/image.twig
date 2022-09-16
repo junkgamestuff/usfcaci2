@@ -1,0 +1,82 @@
+{% extends "base-field" %}
+
+{% set name="image" %}
+
+{# set image.lazy property to false to suppress image lazy loading #}
+{# set image.swiperLazy to true to use swiper lazy-loading instead of lazysizes #}
+{# from e.g. Drupal, pass a render array as image.render to bypass pattern lab render logic entirely #}
+
+{% block content %}
+
+  {# display the image #}
+  {% if image.link is not empty %}
+    <a href="{{ image.link }}">
+  {% endif %}
+
+  {# break for render array if present: #}
+  {% if image.render is empty %}
+
+    {% if image.caption is not empty %}
+    <figure>
+    {% endif %}
+
+    {# set up doLazy #}
+
+    {% set doLazy = imgLazyGlobal | default(true) %}
+
+    {% if image.lazy is defined %}
+      {% set doLazy = image.lazy %}
+    {% endif %}
+
+      <img
+        {% if not doLazy %}
+          {# non-lazy image: #}
+          src="{{ image.src }}"
+          {% if image.srcset is not empty %}srcset="{{ image.srcset }}"{% endif %}
+          {% if image.sizes is not empty %}sizes="{{ image.sizes }}"{% endif %}
+
+        {% else %}
+          {# lazy image: #}
+          data-src="{{ image.src }}"
+          {% if image.srcset is not empty %}data-srcset="{{ image.srcset }}"{% endif %}
+          {% if image.sizes is not empty %}data-sizes="{{ image.sizes }}"{% endif %}
+          class="{% if not image.swiperLazy %}lazyload{% else %}swiper-lazy{% endif %}"
+        {% endif %}
+
+        {% if image.alt is not empty %}alt="{{ image.alt }}"{% endif %}
+
+        {% if image.height is not empty %}height="{{ image.height }}"{% endif %}
+        {% if image.width is not empty %}width="{{ image.width }}"{% endif %}
+        {# experimental: for lazy images with a height and/or width attribute, add also a "blank" image source so that the browser may choose to occupy the space prior to the image loading (reduce pop-in above the fold for hero images): #}
+        {% if doLazy and image.height is not empty or image.width is not empty %}src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="{% endif %}
+      />
+
+    {% if doLazy and image.swiperLazy %}
+      <div class="swiper-lazy-preloader"></div>
+    {% endif %}
+
+    {% if image.caption is not empty %}
+      <figcaption>{{ image.caption | raw }}</figcaption>
+    </figure>
+    {% endif %}
+
+  {% else %}
+
+{% if image.caption is not empty and image.wrapFigure == true %}
+<figure>
+{% endif %}
+
+    {{ image.render | raw }}
+
+{% if image.caption is not empty and image.wrapFigure == true %}
+      <figcaption>{{ image.caption }}</figcaption>
+    </figure>
+{% endif %}
+
+  {% endif %}
+
+  {% if image.link is not empty %}
+    </a>
+  {% endif %}
+
+{% endblock %}

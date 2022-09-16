@@ -1,0 +1,148 @@
+{
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "title-no-image",
+          "title": "Emergency Notice",
+          "eyebrow": null
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "rich-text",
+          "markup": "<h2>A Heading Level 2</h2><p>Irure Lorem nostrud dolor dolor commodo dolore esse labore id deserunt sunt anim tempor nostrud. Et do ipsum esse cillum eiusmod consectetur occaecat ut consequat. Aute magna adipisicing mollit non fugiat nisi do commodo voluptate irure non nostrud. Proident laboris pariatur consectetur ex in nisi excepteur anim nostrud magna tempor. Et aliqua incididunt sint aliqua amet. Ipsum exercitation qui amet reprehenderit velit aliquip. Adipisicing occaecat commodo culpa est proident.</p><p>Ad aliqua amet amet culpa duis fugiat eu aliquip deserunt dolore elit.</p>"
+        },
+        { "type": "spacer" },
+        {
+          "type": "accordions",
+          "title": "Accordions",
+          "description": "<p>Any number of links consectetur adipiscing elit. Maecenas tristique mollis libero ac gravida. Donec euismod tortor eget lacus porta, eu viverra nunc gravida.</p>",
+          "accordions": [
+            {
+              "title": "Maecenas tristique mollis libero ac gravida?",
+              "markup": "<p>This is the accordion body</p>"
+            },
+            {
+              "title": "Maecenas tristique mollis libero ac gravida?",
+              "markup": "<p>This is the accordion body<ul><li>GMAT or GRE test score (no waivers)</li><li>Most recent transcript&nbsp;</li><li>Resume</li><li>2 Letters of Recommendations:<ul><li>1 can be from an academic source</li><li>1 must be from a supervisor from work or extracurricular activity</li></ul></li><li>3 Essays</li><li>Interview</li></ul></p>"
+            },
+            {
+              "title": "Maecenas tristique mollis libero ac gravida?",
+              "markup": "<p>This is the accordion body</p>"
+            }
+          ]
+        },
+        {
+          "type": "rich-text",
+          "markup": "<h2>A Heading Level 2</h2><p>Irure Lorem nostrud dolor dolor commodo dolore esse labore id deserunt sunt anim tempor nostrud. Et do ipsum esse cillum eiusmod consectetur occaecat ut consequat. Aute magna adipisicing mollit non fugiat nisi do commodo voluptate irure non nostrud. Proident laboris pariatur consectetur ex in nisi excepteur anim nostrud magna tempor. Et aliqua incididunt sint aliqua amet.</p>"
+        },
+        { "type": "spacer" },
+        {
+          "type": "manual-cards-horizontal",
+          "title": "Manual Cards Horizontal",
+          "cards": [
+            {
+              "title": "An example of a title of an article",
+              "link": {
+                "cta": "Learn More",
+                "href": "https://www.example.com/",
+                "ariaLabel": "This is an Aria Label"
+              },
+              "image": {
+                "src": "https://placeimg.com/1920/1080/nature",
+                "alt": "Image Alt Text4",
+                "link": "https://www.example.com/"
+              },
+              "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+            },
+            {
+              "title": "An example of a title of an article",
+              "link": {
+                "cta": "Learn More",
+                "href": "https://www.example.com/",
+                "ariaLabel": "This is an Aria Label"
+              },
+              "image": {
+                "src": "https://placeimg.com/1920/1080/nature",
+                "alt": "Image Alt Text4",
+                "link": "https://www.example.com/"
+              },
+              "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+            },
+            {
+              "title": "An example of a title of an article",
+              "link": {
+                "cta": "Learn More",
+                "href": "https://www.example.com/",
+                "ariaLabel": "This is an Aria Label"
+              },
+              "image": {
+                "src": "https://placeimg.com/1920/1080/nature",
+                "alt": "Image Alt Text4",
+                "link": "https://www.example.com/"
+              },
+              "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+            },
+            {
+              "title": "An example of a title of an article",
+              "link": {
+                "cta": "Learn More",
+                "href": "https://www.example.com/",
+                "ariaLabel": "This is an Aria Label"
+              },
+              "image": {
+                "src": "https://placeimg.com/1920/1080/nature",
+                "alt": "Image Alt Text4",
+                "link": "https://www.example.com/"
+              },
+              "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+            },
+            {
+              "title": "An example of a title of an article",
+              "link": {
+                "cta": "Learn More",
+                "href": "https://www.example.com/",
+                "ariaLabel": "This is an Aria Label"
+              },
+              "image": {
+                "src": "https://placeimg.com/1920/1080/nature",
+                "alt": "Image Alt Text4",
+                "link": "https://www.example.com/"
+              },
+              "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+            },
+            {
+              "title": "An example of a title of an article",
+              "link": {
+                "cta": "Learn More",
+                "href": "https://www.example.com/",
+                "ariaLabel": "This is an Aria Label"
+              },
+              "image": {
+                "src": "https://placeimg.com/1920/1080/nature",
+                "alt": "Image Alt Text4",
+                "link": "https://www.example.com/"
+              },
+              "description": "<p><a href='#'>Duis aute irure dolor</a> in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+            }
+          ]
+        },
+        { "type": "spacer" },
+        {
+          "type": "rich-text",
+          "markup": "<h2>A Heading Level 2</h2><p>Irure Lorem nostrud dolor dolor commodo dolore esse labore id deserunt sunt anim tempor nostrud. Et do ipsum esse cillum eiusmod consectetur occaecat ut consequat. Aute magna adipisicing mollit non fugiat nisi do commodo voluptate irure non nostrud. Proident laboris pariatur consectetur ex in nisi excepteur anim nostrud magna tempor. Et aliqua incididunt sint aliqua amet. Ipsum exercitation qui amet reprehenderit velit aliquip. Adipisicing occaecat commodo culpa est proident.</p><p>Ad aliqua amet amet culpa duis fugiat eu aliquip deserunt dolore elit.</p>"
+        },
+        { "type": "spacer" },
+        { "type": "spacer" }
+      ]
+    }
+  ],
+  "bottomLayouts": null
+}

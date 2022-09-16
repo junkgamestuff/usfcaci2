@@ -1,0 +1,12 @@
+{
+  "links": [
+    { "cta": "1", "href": "#" },
+    { "cta": "2", "href": "#" },
+    { "cta": "3", "href": "#" },
+    { "cta": "4", "href": "#" },
+    { "cta": "5", "href": "#" }
+  ],
+  "curPage": "1",
+  "next": true,
+  "previous": true
+}

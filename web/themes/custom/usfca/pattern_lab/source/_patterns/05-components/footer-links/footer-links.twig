@@ -1,0 +1,14 @@
+{% extends "base-component" %}
+
+{% set name = "footer-links" %}
+
+{% block content %}
+  {% if footerLinks is not empty %}
+    <ul>
+      {% for link in footerLinks %}
+        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base-field" %}
+
+{% set name = "time-string" %}
+
+{% set container_element = "time" %}
+
+{% set datetime = text %}
+
+{% block content %}
+
+  {{ text | default('7:00–9:00pm') | raw }}
+
+{% endblock %}

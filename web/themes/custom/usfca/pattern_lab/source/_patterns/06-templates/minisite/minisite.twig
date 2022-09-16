@@ -1,0 +1,21 @@
+{% extends "template-default.twig" %}
+
+{% set template_name = 'home-page-minisite' %}
+
+{% block top %}
+
+  {% include "base-layout-list" with { layouts: topLayouts } only %}
+
+{% endblock top %}
+
+{% block content %}
+
+  {% include "base-layout-list" %}
+
+{% endblock content %}
+
+{% block bottom %}
+
+  {% include "base-layout-list" with { layouts: bottomLayouts } only %}
+
+{% endblock bottom %}

@@ -1,0 +1,15 @@
+{
+  "image": {
+    "src": "https://placeimg.com/600/338/people",
+    "alt": "Alt 1"
+  },
+  "title": "JONATHAN A. FITZPATRICKSON III",
+  "label": "Assistant Professor of Lorem Ipsum",
+  "category": "Full-Time Faculty",
+  "description": "College of Arts and Sciences",
+  "email": "johnsmith32@usfca.edu",
+  "location": "XARTS 004",
+  "link": {
+    "href": "#"
+  }
+}

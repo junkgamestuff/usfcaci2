@@ -1,0 +1,39 @@
+{
+  "pageTitle": "Event",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "basic-header", "title": "Professional MBA Lunch & Learn- Downtown", "variant": "event" }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "two-column",
+      "sidebar": [
+        { "type": "event-detail" }
+      ],
+      "content": [
+        { "type": "rich-text", "markup": "<figure><img src=\"https://placeimg.com/1920/1080/nature\" alt=\"Alt text\"><figcaption>Reef sails six pounders skysail code of conduct sloop.</figcaption></figure>" },
+        { "type": "spacer" },
+        { "type": "rich-text-intro-text", "markup": "<p>Et dolore id voluptate id officia cillum <a href='#'>esse</a> <b>labore</b> <strong>id deserunt</strong> sunt <i>anim</i> tempor <em>nostrud</em>. Cupidatat veniam velit et ea nulla. Esse eu mollit incididunt laboris. Officia magna nostrud labore deserunt irure. Labore magna nulla duis excepteur duis irure aliqua sunt consequat irure dolor culpa.</p>" },
+        { "type": "spacer" },
+        { "type": "rich-text", "markup": "<h2>Mollit sint consectetur anim sint est do</h2><p>Irure Lorem nostrud dolor dolor commodo dolore <a href='#'>esse</a> <b>labore</b> <strong>id deserunt</strong> sunt <i>anim</i> tempor <em>nostrud</em>. Et do ipsum esse cillum eiusmod consectetur occaecat ut consequat. Aute magna adipisicing mollit non fugiat nisi do commodo voluptate irure non nostrud. Proident laboris pariatur consectetur ex in nisi excepteur anim nostrud magna tempor. Et aliqua incididunt sint aliqua amet. Ipsum exercitation qui amet reprehenderit velit aliquip. Adipisicing occaecat commodo culpa est proident.</p>" },
+        { "type": "spacer" }
+      ]
+    }
+  ],
+  "bottomLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "event-cards",
+          "title": "Related <span class=\"highlight\">Events</span>",
+          "variant": "related-events",
+          "link": null
+        }
+      ]
+    }
+  ]
+}

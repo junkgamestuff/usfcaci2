@@ -1,0 +1,37 @@
+{% extends "base-component" %}
+
+{% set name = "breadcrumbs" %}
+
+{% set container_element = "div" %}
+{% set container_aria_label = null %}
+
+{% block content %}
+  <nav aria-label="Breadcrumb">
+    <ol>
+      <li>
+        <a href="{{ homeURL }}">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 13 13" enable-background="new 0 0 13 13" xml:space="preserve" width="13" height="13">
+          <title>Home</title>
+          <path fill="#737373" d="M12.7,4.8L7,0.2c-0.3-0.2-0.7-0.2-1,0L0.3,4.8C0.1,5,0,5.2,0,5.5v6.7C0,12.6,0.4,13,0.8,13H4
+            c0.4,0,0.8-0.4,0.8-0.8V9c0-0.5,0.4-0.8,0.8-0.8h1.8c0.4,0,0.8,0.4,0.8,0.8v3.2C8.2,12.6,8.6,13,9,13h3.1c0.4,0,0.8-0.4,0.8-0.8V5.5
+            C13,5.2,12.9,5,12.7,4.8z"/>
+          </svg>
+
+          {% if items|length > 3 %}
+            <span class="ellipsis">&hellip;</span>
+          {% endif %}
+        </a>
+      </li>
+
+      {% for item in items %}
+        {% if item.href %}
+          <li><a href="{{ item.href }}" {% if loop.last %}aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {% else %}
+          <li><span class="breadcrumb-nolink">{{ item.title }}</span></li>
+        {% endif %}
+      {% endfor %}
+
+    </ol>
+  </nav>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base-component" %}
+
+{% set name = "horizontal-event-listing-component" %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Body text" %}
+
+{% block content %}
+
+  <div class="text-container">
+
+    {% if date is not empty %}
+      {% include "fields-date-string" with { text: date } only %}
+    {% endif %}
+
+    {% include "fields-cta-title" with {
+      href: link.href,
+      title: title
+    } only %}
+
+    {% if location is not empty %}
+      {% include "fields-text" with { text: location } only %}
+    {% endif %}
+
+    {% if time is not empty %}
+      {% include "fields-time-string" with { text: time } only %}
+    {% endif %}
+
+  </div>
+
+  <div class="image-container">
+    <a href="{{ link.href }}">
+      {% include "fields-image" with { image: image } only %}
+    </a>
+  </div>
+
+{% endblock %}
+

@@ -1,0 +1,39 @@
+{% extends "base-component" %}
+
+{% set name = "hero-tabbed-navigation" %}
+
+{% block content %}
+
+  <div class="image-text-container">
+    <div class="image-wrapper">
+      {% include "fields-image" with {
+        image: bannerImage
+      } only %}
+    </div>
+    <div class="text-wrapper">
+      {% if category is not empty %}
+        {% include "fields-category" with { category: category } only %}
+      {% endif %}
+
+      {% include "fields-page-title" with { title: title } only %}
+
+      {% if description is not empty %}
+        {% include "fields-description" with { description: description } only %}
+      {% endif %}
+    </div>
+
+  </div>
+
+    {% if links is not empty %}
+    <div class="links-container">
+      <ul class="nav-links">
+      {% for link in links %}
+        <li class="program-nav-item">
+          {% include "fields-link" with { cta: link.title, url: link.url, class: link.class } %}
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+{% endblock %}

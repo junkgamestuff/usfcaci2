@@ -1,0 +1,9 @@
+.fi--form-item-date {
+  input[type='date'] {
+    @extend %input-style;
+
+    @include placeholder {
+      color: $color-secondary;
+    }
+  }
+}

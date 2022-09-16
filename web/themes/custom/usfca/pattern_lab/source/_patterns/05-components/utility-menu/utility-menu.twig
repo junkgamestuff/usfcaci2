@@ -1,0 +1,10 @@
+{% extends "base-component" %}
+
+{% set name = "utility-menu" %}
+{% set container_element = 'div' %}
+
+{% block content %}
+
+  {% include "base-menu" with { menu: menu } %}
+
+{% endblock %}

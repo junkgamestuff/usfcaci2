@@ -1,0 +1,71 @@
+{% extends "base-component" %}
+
+{% set name = "news-article-listing-component" %}
+{% set variant = 'with-image' %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Body text" %}
+
+{% if image is empty %}
+  {% set image = {src: '../../images/placeholder-wide.png'} %}
+{% endif %}
+
+{% block content %}
+
+  <div class="image-container">
+    <a href="{{ link.href }}" {{ link.target ? 'target="' ~ link.target ~ '"' }}>
+      {% if image is not empty %}
+        {% include "fields-image" with {
+          image: image
+        } only %}
+      {% endif %}
+    </a>
+  </div>
+
+  <div class="text-container">
+
+    {% if eyebrow is not empty %}
+      {% include "fields-category" with {
+        category: eyebrow
+      } only %}
+    {% endif %}
+
+    {% if date is not empty %}
+      <div class="date-wrapper">
+        {% include "fields-date-string" with {
+          text: date
+        } only %}
+      </div>
+    {% endif %}
+
+    {% if title is not empty %}
+      {% include "fields-cta-title" with {
+        href: link.href,
+        title: title,
+        target: link.target
+      } only %}
+    {% endif %}
+
+    {% if description is not empty %}
+      {% include "fields-wysiwyg" with { markup: description } only %}
+    {% endif %}
+
+    {% if publicationName is not empty %}
+      {% include "fields-text" with {
+        text: publicationName
+      } only %}
+    {% endif %}
+
+    {% if logoExternal is not empty %}
+      <div class="logo-container">
+        <a href="{{ logoExternal.link }}" {{ logoExternal.target ? 'target="' ~ logoExternal.target ~ '"' }}>
+          {% include "fields-image" with {
+            image: logoExternal
+          } only %}
+        </a>
+      </div>
+    {% endif %}
+
+  </div>
+
+{% endblock %}
+

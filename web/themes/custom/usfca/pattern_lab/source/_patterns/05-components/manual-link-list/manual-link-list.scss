@@ -1,0 +1,109 @@
+$link-icon: url('../images/icons/icon-external-link.svg') no-repeat center;
+
+.cc--manual-link-list {
+
+  .c--manual-link-list {
+    @include padding(null 0);
+    @include margin(rem(60) null);
+
+    @include mq($bp768) {
+      @include padding(null cols(2));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null 0);
+    }
+
+    .f--section-title {
+      @include margin(null null rem(20));
+
+      @include mq($bp1024) {
+        @include margin(null null rem(40));
+      }
+
+      h2 {
+        @extend %font-fira-sans-extra-condensed-bold;
+        @include font-size(26, 30);
+        letter-spacing: rem(.5);
+        text-align: left;
+
+        @include mq($bp768) {
+          @include font-size(26, 30);
+        }
+
+        @include mq($bp1024) {
+          @include font-size(38, 46);
+        }
+      }
+    }
+
+    .views-container {
+      .views-row {
+        @include padding(rem(30) null);
+        border-top: rem(1) solid $color-grey;
+
+        &:last-child {
+          border-bottom: rem(1) solid $color-grey;
+        }
+
+        @include mq($bp768) {
+          @include padding(rem(20) null);
+        }
+
+        @include mq($bp1024) {
+          @include padding(rem(30) null);
+        }
+
+        .f--link {
+          a {
+            @extend %font-fira-sans-regular;
+            @include font-size(16, 22);
+            display: block;
+            position: relative;
+            color: $color-secondary;
+            text-decoration: none;
+
+
+            @include mq($bp1024) {
+              @include font-size(18, 26);
+            }
+
+            @include hover {
+              text-decoration: underline;
+            }
+
+            &.ext {
+              &::after {
+                @include margin(null null null rem(10));
+                display: inline-block;
+                width: rem(25);
+                height: rem(25);
+                background: $link-icon;
+                background-size: contain;
+                content: '';
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+
+        .f--text {
+          @extend %font-fira-sans-extra-condensed-bold;
+          @include margin(null null rem(8));
+          @include font-size(12, 16);
+          color: $color-primary;
+          letter-spacing: rem(.3);
+          text-transform: uppercase;
+
+          @include mq($bp768) {
+            @include margin(null null rem(8));
+          }
+
+          @include mq($bp1024) {
+            @include margin(null null rem(8));
+          }
+        }
+      }
+    }
+  }
+}

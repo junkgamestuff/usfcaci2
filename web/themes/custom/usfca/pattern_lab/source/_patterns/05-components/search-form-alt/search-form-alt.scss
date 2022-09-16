@@ -1,0 +1,92 @@
+.cc--search-form-alt {
+  display: none;
+  position: absolute;
+  top: rem(50);
+  right: rem(50);
+  bottom: 0;
+  width: 100%;
+  max-width: rem(270);
+  z-index: 100;
+
+  @include mq($bp768) {
+    top: rem(75);
+    right: rem(75);
+    max-width: rem(309);
+  }
+
+  @include mq($bp1024) {
+    max-width: rem(325);
+  }
+
+  .c--search-form-alt {
+    .inner-wrapper {
+      position: relative;
+    }
+  }
+
+  form {
+    position: relative;
+
+    @include mq($bp768) {
+      display: flex;
+    }
+  }
+
+  .input-wrapper {
+    position: relative;
+
+    .icon-search {
+      position: absolute;
+      top: rem(6);
+      right: 0;
+
+      @include mq($bp768) {
+        right: rem(27);
+      }
+    }
+  }
+
+  .fi--form-item {
+    @include margin(0);
+
+    label {
+      @include visuallyhidden;
+    }
+
+    input {
+      @include padding(rem(14) rem(27));
+      @include font-size(16, 20);
+      height: rem(50);
+      border: 0;
+      background: $color-primary-gold;
+      color: $color-primary-purple;
+
+      @include mq($bp768) {
+        @include padding(rem(25) rem(35));
+        @include font-size(20, 25);
+        height: rem(75);
+      }
+
+      &.ui-autocomplete-loading {
+        background-image: none;
+      }
+
+      @include placeholder {
+        @include font-size(16, 20);
+        color: $color-primary-purple;
+
+        @include mq($bp768) {
+          @include font-size(20, 25);
+        }
+      }
+    }
+  }
+
+  .button {
+    @include visuallyhidden;
+  }
+}
+
+ul.ui-widget.ui-widget-content {
+  z-index: 1000;
+}

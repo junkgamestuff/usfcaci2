@@ -1,0 +1,29 @@
+{% extends "base-component" %}
+
+{% set name = "profile-card" %}
+{% set container_element = 'article' %}
+{% set container_aria_label = "Profile Card" %}
+
+{% block content %}
+
+  <a href="{{ profile_link }}">
+    {% include "fields-image" with {
+      image: image
+    } only %}
+  </a>
+
+  <div class="text-container">
+
+    {% include "fields-cta-title" with {
+      href: profile_link,
+      title: title
+    } only %}
+
+    {% include "fields-text" with {
+      text: subText
+    } only %}
+
+  </div>
+
+{% endblock %}
+

@@ -1,0 +1,156 @@
+.cc--manual-card-horizontal {
+  @include margin(null null rem(13));
+  @include padding(null null rem(20));
+  border-bottom: rem(2) solid $color-supernova;
+
+  @include mq($bp768) {
+    @include margin(null null rem(30));
+    @include padding(null null rem(36));
+  }
+
+  @include mq($bp1024) {
+    @include margin(null null rem(30));
+  }
+
+  &:last-child {
+    @include margin(null null 0);
+  }
+
+  .c--manual-card-horizontal {
+    display: flex;
+
+    @include mq($bp768max) {
+      flex-direction: column-reverse;
+    }
+
+    @include mq($bp768) {
+      justify-content: space-between;
+    }
+
+    > a:hover + .text-container {
+      .f--cta-title a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .text-container {
+    width: 100%;
+  }
+
+  .f--image + .text-container {
+    @include mq($bp768) {
+      width: cols(24, 44);
+    }
+
+    @include mq($bp1024) {
+      width: cols(17, 31);
+    }
+  }
+
+  .f--image {
+    @include margin(rem(23) null 0);
+    position: relative;
+
+    @include mq($bp768) {
+      @include margin(0 null 0 cols(2, 44));
+      order: 2;
+      width: cols(20, 44);
+    }
+
+    @include mq($bp1024) {
+      @include padding(null null null cols(2, 31));
+      width: cols(14, 31);
+    }
+
+    img {
+      position: relative;
+    }
+  }
+
+  .f--cta-title {
+    h3 {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(30, 30);
+      @include margin(rem(10) null rem(21));
+      color: $color-sherpa-blue;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .f--description {
+    p {
+      @include font-size(14, 18);
+      @include margin(null null rem(22));
+      color: $color-black;
+
+      @include mq($bp768) {
+        @include font-size(16, 24);
+      }
+
+      a {
+        color: $color-sherpa-blue;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $color-white;
+    }
+  }
+
+  .f--link {
+    a {
+      @extend %font-fira-sans-bold;
+      @include font-size(18, 20);
+      color: $color-sherpa-blue;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      @include mq($bp768) {
+        @include font-size(16, 16);
+      }
+
+      svg {
+        @include margin(null null null rem(8));
+        display: inline-block;
+        width: rem(9);
+        height: rem(16);
+        transition: transform $transition-duration-fast $transition-easing-default;
+
+        @include mq($bp768) {
+          @include margin(null null null rem(10));
+          width: rem(7);
+          height: rem(12);
+        }
+      }
+
+      @include hover {
+        text-decoration: underline;
+
+        svg {
+          transform: translate3d(rem(3), 0, 0);
+          transition: transform $transition-duration-fast $transition-easing-default;
+        }
+      }
+    }
+  }
+}

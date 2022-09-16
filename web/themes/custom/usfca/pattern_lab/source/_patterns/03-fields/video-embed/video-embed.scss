@@ -1,0 +1,15 @@
+.f--video-embed {
+  position: relative;
+  padding-top: 56.25%;
+
+  .video-container {
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}
+

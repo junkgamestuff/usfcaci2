@@ -1,0 +1,57 @@
+{% extends "base-component" %}
+
+{% set name = "news-listing-item" %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Body text" %}
+
+{% if image is empty %}
+  {% set image = {src: '../../images/placeholder-wide.png'} %}
+{% endif %}
+
+{% block content %}
+
+  <div class="image-container">
+    <a href="{{ link.href }}" {{ link.target ? 'target="' ~ link.target ~ '"' }}>
+      {% if image is not empty %}
+        {% include "fields-image" with {
+          image: image
+        } only %}
+      {% endif %}
+    </a>
+  </div>
+
+  <div class="text-container">
+    {% if eyebrow is not empty %}
+      {% include "fields-category" with {
+        category: eyebrow
+      } only %}
+    {% endif %}
+
+    {% if title is not empty %}
+      {% include "fields-cta-title" with {
+        href: link.href,
+        title: title
+      } only %}
+    {% endif %}
+
+    {% if description is not empty %}
+      {% include "fields-wysiwyg" with { markup: description } only %}
+    {% endif %}
+
+    {% if date is not empty %}
+      {% include "fields-date-string" with {
+        text: date
+      } only %}
+    {% endif %}
+
+    {% if ext_link is not empty %}
+      {% include "fields-link" with {
+        title: ext_link.title,
+        target: ext_link.target,
+        url: ext_link.url
+      } only %}
+    {% endif %}
+
+  </div>
+
+{% endblock %}

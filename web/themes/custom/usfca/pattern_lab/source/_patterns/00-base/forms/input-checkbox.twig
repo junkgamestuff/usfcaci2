@@ -1,0 +1,20 @@
+{% extends "base-form-item" %}
+
+{% set name = 'form-item-checkbox' %}
+
+{% block content %}
+
+  {% if title %}
+    <p class="group-title">
+      {{ title }}{% if required %}*{% endif %}
+    </p>
+  {% endif %}
+
+  {% for option in options %}
+    <div class="checkbox-wrapper">
+      <input type="checkbox" name="{{ namevalue|default('gender') }}" id="{{ option.id|default('gender') }}" value="{{ option.value|default('male') }}">
+      <label for="{{ option.id|default('gender') }}">{{ option.text|default('Male') }}</label>
+    </div>
+  {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "base-component" %}
+
+{% set name = "faculty-directory-listing-item" %}
+{% set container_element = 'section' %}
+
+{% if image is empty %}
+  {% set image = {src: '../../images/placeholder.png'} %}
+{% endif %}
+
+{% block content %}
+
+  <div class="image-container">
+    <a href="{{ link.href }}">
+      {% if image is not empty %}
+        {% include "fields-image" with {
+          image: image
+        } only %}
+      {% endif %}
+    </a>
+  </div>
+
+  <div class="text-container">
+
+    {% if title is not empty %}
+      {% include "fields-cta-title" with {
+        href: link.href,
+        title: title
+      } only %}
+    {% endif %}
+
+    {% if label is not empty %}
+      {% include "fields-label" with {
+        span: label
+      } only %}
+    {% endif %}
+
+    {% for role in roles %}
+    {% if role.category is not empty %}
+      {% include "fields-category" with {
+        category: role.category
+      } only %}
+    {% endif %}
+
+    {% if role.description is not empty %}
+    {% include "fields-description" with {
+      description: role.description
+    } %}
+    {% endif %}
+    {% endfor %}
+
+    {% if email is not empty %}
+      {% include "fields-email" with {
+        email: email
+      } only %}
+    {% endif %}
+
+    {% if location is not empty %}
+      {% include "fields-text" with {
+        text: location
+      } only %}
+    {% endif %}
+
+  </div>
+
+{% endblock %}
+

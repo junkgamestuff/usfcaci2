@@ -1,0 +1,10 @@
+@mixin outline($color: $color-focus) {
+  html[data-whatinput="keyboard"] & {
+    outline: 3px solid $color;
+  }
+
+  html[data-whatinput="mouse"] & {
+    outline: none;
+  }
+}
+

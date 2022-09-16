@@ -1,0 +1,120 @@
+/* FIXME: remove this logic when you fix FD in Pattern Lab. */
+.cc--minisite-home-hero-nav {
+  .m--menu > .menu-item {
+    .submenu {
+      display: none;
+    }
+  }
+
+  .m--menu > .menu-item.menu-item--active-trail {
+    .submenu {
+      display: block;
+    }
+  }
+}
+
+.cc--minisite-home-hero-nav {
+  @include padding(null rem(20) rem(30));
+  width: 100%;
+  background: $color-sherpa-blue;
+
+  @include mq($bp768) {
+    @include padding(rem(30) cols(1) rem(50));
+    width: cols(18);
+  }
+
+  @include mq($bp1024) {
+    width: cols(12);
+  }
+
+  .m--menu {
+    > .menu-item {
+      border-bottom: rem(1) solid $color-supernova;
+
+      &.is-open,
+      &.menu-item--active-trail {
+        a {
+          font-weight: 600;
+
+          @include hover {
+            font-weight: 600;
+          }
+        }
+
+        .utility-button {
+          svg {
+            transform: none;
+          }
+        }
+      }
+
+      .utility-button-wrapper {
+        position: relative;
+      }
+
+      button {
+        @include margin(rem(5) null null);
+        width: 100%;
+        text-align: left;
+      }
+
+      a {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include font-size(20, 20);
+        @include padding(rem(15) rem(4) rem(15) null);
+        display: inline-block;
+        max-width: 89%;
+        color: $color-white;
+        letter-spacing: rem(.2);
+        text-decoration: none;
+
+        @include hover {
+          color: $color-white;
+          font-weight: 600;
+        }
+      }
+
+      .utility-button {
+        position: absolute;
+        top: rem(6);
+        width: rem(30);
+        height: rem(30);
+
+        svg {
+          @include margin(null null rem(3) rem(6));
+          width: rem(10);
+          height: rem(8);
+          transform: rotate(-90deg);
+
+          path {
+            fill: $color-supernova;
+          }
+        }
+      }
+
+      .submenu {
+        @include padding(rem(2) null rem(7) rem(10));
+
+        &[aria-hidden='true'] {
+          display: none;
+        }
+
+        .menu-item {
+          a {
+            @extend %font-fira-sans-extra-condensed-regular;
+            @include font-size(16, 16);
+            color: $color-white;
+            letter-spacing: 0;
+            text-decoration: none;
+          }
+
+          &.menu-item--active-trail {
+            a {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}

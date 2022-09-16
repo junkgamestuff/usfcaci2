@@ -1,0 +1,102 @@
+$text-color: $color-secondary;
+
+.cc--pager {
+  @include padding(rem(30) cols(3) null);
+
+  @include mq($bp768) {
+    @include padding(null cols(2));
+  }
+
+  .cc--component-container & {
+    @include padding(null 0)
+  }
+
+  .c--pager {
+    ul {
+      @include no-bullet;
+      text-align: center;
+
+      li {
+        @include margin(null rem(10) null null);
+        display: inline-block;
+
+        @include mq($bp768) {
+          @include margin(null rem(30) null null);
+        }
+
+        a {
+          @include padding(rem(7) rem(10));
+          @include font-size(16, 16);
+          display: block;
+          width: rem(30);
+          height: rem(30);
+          color: $color-black;
+          text-decoration: none;
+
+          span {
+            @include font-size(16, 16);
+          }
+        }
+
+        &.is-active {
+          a {
+            background-color: $color-primary;
+            color: $color-white;
+            text-decoration: none;
+          }
+        }
+
+        &.pager__item--next,
+        &.pager__item--previous {
+          a {
+            text-decoration: none;
+
+            svg {
+              height: rem(14);
+              fill: $color-black;
+            }
+          }
+        }
+
+        &.pager__item--ellipsis {
+          color: $color-black;
+        }
+
+        &.pager__item--first,
+        &.pager__item--last {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.load-more {
+    .pager__item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+
+      .line {
+        flex: 1 0 auto;
+        height: rem(1);
+        background: $color-border;
+      }
+
+      svg {
+        @include margin(null null null rem(15));
+      }
+
+      .text {
+        @extend %font-fira-sans-regular;
+        @include margin(null rem(30) null);
+        @include font-size(14, 20);
+        padding: 0;
+        width: auto;
+        height: auto;
+        color: $text-color;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.cc--featured-events {
+  @include maxwidth;
+
+  .c--featured-events {
+    @include mq($bp768) {
+      @include padding(null cols(2));
+    }
+  }
+
+  .f--section-title {
+    text-align: center;
+
+    h2 {
+      @include margin(null null rem(38));
+      @include font-size(36, 36);
+
+      @include mq($bp768) {
+        @include margin(null null rem(60));
+        @include font-size(48, 59);
+        letter-spacing: rem(-.4);
+      }
+    }
+  }
+
+  .flex-container {
+    @include margin(null null rem(62));
+
+    @include mq($bp768) {
+      display: flex;
+    }
+
+    @include mq($bp1024) {
+      @include margin(null null rem(90));
+    }
+  }
+
+  .cc--events-listing-component {
+    @include mq($bp768) {
+      @include padding(null null rem(25));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null null rem(40));
+    }
+  }
+
+  .featured-card {
+    @include margin(null null rem(30));
+
+    @include mq($bp768) {
+      @include margin(null null 0);
+      width: 100%;
+    }
+
+    .cc--featured-event-card {
+      @include padding(null null 0);
+
+      .c--featured-event-card {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+
+        @include mq($bp768) {
+          flex-direction: row-reverse;
+          flex-wrap: nowrap;
+        }
+
+        .text-container,
+        .image-container {
+          @include mq($bp768max) {
+            flex: 0 0 100%;
+            width: 100%;
+          }
+        }
+
+        .image-container {
+          @include margin(null null rem(44));
+          position: relative;
+
+          @include mq($bp768) {
+            @include margin(null null 0);
+            flex: 1 0 cols(25, 44);
+            width: cols(25, 44);
+          }
+
+          @include mq($bp1024) {
+            flex: 1 0 cols(28, 44);
+            width: cols(28, 44);
+          }
+        }
+
+        .text-container {
+          @include padding(null cols(3));
+          flex-shrink: 1;
+
+          @include mq($bp768) {
+            @include padding(rem(20) 0 null cols(2, 44));
+          }
+
+          @include mq($bp1024) {
+            @include padding(rem(60) null null);
+          }
+        }
+      }
+    }
+
+    .f--cta-title {
+      h3 {
+        &,
+        a {
+          @include font-size(26, 29);
+
+          @include mq($bp768) {
+            @include font-size(28, 30);
+          }
+
+          @include mq($bp1024) {
+            @include font-size(38, 42);
+          }
+        }
+      }
+    }
+  }
+
+  .cc--event-cards {
+    .c--event-cards {
+      .inner-wrapper {
+        @include mq($bp768) {
+          @include padding(0);
+        }
+      }
+    }
+  }
+}

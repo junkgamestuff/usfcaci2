@@ -1,0 +1,105 @@
+.cc--fifty-fifty-cta-groupings {
+  @include maxwidth;
+
+  .c--fifty-fifty-cta-groupings {
+    @include padding(rem(22) cols(3) null);
+
+    @include mq($bp768) {
+      @include padding(null cols(2));
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .links-left,
+    .links-right {
+      @include padding(rem(23) rem(14) rem(34));
+      position: relative;
+      border: rem(6) solid $color-caribbean-green;
+
+      @include mq($bp768) {
+        @include padding(rem(44) cols(2, 44) rem(60) cols(2, 44));
+        flex-basis: cols(21, 44);
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(42) cols(3, 44) rem(63) cols(3, 44));
+        flex-basis: cols(20, 44);
+      }
+    }
+
+    .links-right {
+      border: rem(6) solid $color-carrot-orange;
+
+      @include mq($bp768max) {
+        @include margin(rem(57) null null);
+      }
+    }
+
+    .links-inner {
+
+      @include mq($bp768) {
+        @include margin(null rem(-6));
+      }
+
+
+      .f--section-title {
+        @include margin(null rem(30));
+        @include padding(null rem(10));
+        position: absolute;
+        top: rem(-18);
+        left: rem(-6);
+        background-color: $color-white;
+
+        @include mq($bp768) {
+          @include margin(null cols(2, 21));
+          @include padding(null cols(1, 21));
+          top: rem(-21);
+          left: rem(-6);
+        }
+
+        @include mq($bp1024) {
+          @include margin(null cols(2, 20));
+          @include padding(null cols(1, 20));
+        }
+
+        h2 {
+          @include font-size(24, 24);
+          @include margin(0);
+
+          @include mq($bp768) {
+            @include font-size(30, 30);
+
+          }
+        }
+      }
+
+      .f--link {
+        width: 100%;
+        border-bottom: 1px solid rgba($color-supernova, 1);
+
+        a {
+          @extend %font-fira-sans-bold;
+          @include font-size(18, 18);
+          @include padding(rem(20) null);
+          display: block;
+          color: $color-sherpa-blue;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          @include mq($bp768) {
+            @include font-size(20, 23);
+            @include padding(rem(25) null);
+          }
+
+          @include mq($bp1024) {
+            @include padding(rem(20) null);
+          }
+
+          @include hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

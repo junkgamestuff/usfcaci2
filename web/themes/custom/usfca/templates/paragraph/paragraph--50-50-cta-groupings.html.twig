@@ -1,0 +1,44 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% set title = fields.title %}
+  {% if fields.title_highlight %}
+    {% set title = fields.title|replace({(fields.title_highlight): '<span class="highlight">' ~ fields.title_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% set links = [] %}
+  {% for item in fields.links_a %}
+    {% set links = links | merge([{
+      url: item.url,
+      title: item.title,
+      ariaLabel: item.attributes.aria_label ?? item.title,
+    }]) %}
+  {% endfor %}
+
+  {% set right_title = fields.eyebrow %}
+  {% if fields.eyebrow_highlight %}
+    {% set right_title = right_title|replace({(fields.eyebrow_highlight): '<span class="highlight">' ~ fields.eyebrow_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% set right_links = [] %}
+  {% for item in fields.links_b %}
+    {% set right_links = right_links | merge([{
+      url: item.url,
+      title: item.title,
+      ariaLabel: item.attributes.aria_label ?? item.title,
+    }]) %}
+  {% endfor %}
+
+  {% include "components-fifty-fifty-cta-groupings" with {
+    linksLeft: {
+      title: title,
+      links: links,
+    },
+    linksRight: {
+      title: right_title,
+      links: right_links,
+    },
+  } only %}
+
+{% endblock content %}

@@ -1,0 +1,20 @@
+image: php:7.4-cli
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Compress pattern lab to dist folder
+          script:
+            -  'rm -rf dist && mkdir -p dist && tar -czvf dist/metamorphic-pattern-lab.tar.gz --exclude "./dist" --exclude "./.git" .'
+          artifacts:
+            - dist/**
+      - step:
+          name: Deploy compressed file to Heroku
+          script:
+            - pipe: atlassian/heroku-deploy:1.2.1
+              variables:
+                HEROKU_API_KEY: $HEROKU_API_KEY
+                HEROKU_APP_NAME: 'metamorphic-pattern-lab'
+                ZIP_FILE: 'dist/metamorphic-pattern-lab.tar.gz'
+                WAIT: 'true'
+                DEBUG: 'false'

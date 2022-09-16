@@ -1,0 +1,38 @@
+{
+  "title": "Our <span class=\"highlight\">USF</span>",
+  "cards": [
+    {
+      "description": "<p>International synergy among researchers, students & industry is the best way to improve research and develop new technologies.</p>",
+      "image": {
+        "src": "https://placeimg.com/800/800/nature",
+        "alt": "Image Alt Text4"
+      },
+      "attribution": {
+        "attributionTitle": "Attribution Person Name",
+        "attributionDescription": "Chair, Faculty Advisory Board on Internationalization"
+      }
+    },
+    {
+      "description": "<p>International synergy among researchers, students & industry is the best way to improve research and develop new technologies.</p>",
+      "image": {
+        "src": "https://placeimg.com/800/800/nature",
+        "alt": "Image Alt Text4"
+      },
+      "attribution": {
+        "attributionTitle": "Attribution Person Name",
+        "attributionDescription": "Chair, Faculty Advisory Board on Internationalization"
+      }
+    },
+    {
+      "description": "<p>International synergy among researchers, students & industry is the best way to improve research and develop new technologies.</p>",
+      "image": {
+        "src": "https://placeimg.com/800/800/nature",
+        "alt": "Image Alt Text4"
+      },
+      "attribution": {
+        "attributionTitle": "Attribution Person Name",
+        "attributionDescription": "Chair, Faculty Advisory Board on Internationalization"
+      }
+    }
+  ]
+}

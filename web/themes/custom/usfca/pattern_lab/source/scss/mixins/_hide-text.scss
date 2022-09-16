@@ -1,0 +1,10 @@
+/**
+* Hide Text
+*/
+@mixin hide-text {
+  overflow: hidden;
+  text-indent: 101%;
+  white-space: nowrap;
+  font-size: 0;
+  line-height: 0;
+}

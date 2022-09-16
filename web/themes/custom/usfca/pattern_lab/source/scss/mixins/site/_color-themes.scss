@@ -1,0 +1,47 @@
+/*  Color Theme Mixin
+*
+*   @param {Name} $name - class name for theme pattern
+*   @param {Colors} $colors - key/value pair with name for color and hex value
+*
+*   Example Usage:
+*
+*     .@include color-theme(
+*       $name: 'theme-a',
+*       $colors: (
+*         'silver': #C0C0C0,
+*         'red': #FF0000,
+*         'yellow': #FFFF00,
+*         'olive': #808000,
+*         'lime': #00FF00
+*         'blue': #0000FF
+*       )
+*     );
+*
+*/
+
+@mixin color-theme($name, $colors) {
+
+  &.#{$name} {
+    > div {
+      @each $name, $color in $colors {
+        &:nth-child(#{length($colors)}n + #{index(($colors), ($name $color))}) {
+          background-color: $color;
+        }
+      }
+    }
+  }
+}
+
+@mixin color-swatch($colors) {
+  @each $name, $color in $colors {
+    &.#{$name} {
+      background-color: $color;
+
+      svg {
+        path {
+          fill: $color;
+        }
+      }
+    }
+  }
+}

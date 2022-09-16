@@ -1,0 +1,21 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  <div class="cc--component-container cc--chapter">
+    <div class="c--component c--chapter">
+
+      <span id="{{ id }}" class="chaptered-nav-anchor"></span>
+
+      {% if fields.title is not empty %}
+        {% include "fields-section-title" with { title: fields.title } only %}
+      {% endif %}
+
+      {{ content.field_components }}
+
+      {% include "components-spacer" %}
+
+    </div>
+  </div>
+
+{% endblock content %}

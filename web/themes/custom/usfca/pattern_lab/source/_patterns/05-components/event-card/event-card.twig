@@ -1,0 +1,61 @@
+{% extends "base-component" %}
+
+{% set name = "event-card" %}
+{% set container_element = 'article' %}
+{% set container_aria_label = "Event Card" %}
+
+{% if image is empty %}
+  {% set image = {src: '../../images/placeholder-wide.png'} %}
+{% endif %}
+
+{% block content %}
+
+  <div class="image-container">
+    {% if date is not empty %}
+      <div class="date-wrapper">
+        {% include "fields-date-string" with {
+          text: date
+        } only %}
+      </div>
+    {% endif %}
+
+    <a href="{{ link.href }}">
+      {% if image is not empty %}
+        {% include "fields-image" with {
+          image: image
+        } only %}
+      {% endif %}
+    </a>
+
+  </div>
+
+  <div class="text-container">
+
+    {% include "fields-cta-title" with {
+      href: link.href,
+      title: title
+    } only %}
+
+    {% if description is not empty %}
+      {% include "fields-description" with {
+        description: description
+      } only %}
+    {% endif %}
+
+    {% if time is not empty %}
+      {% include "fields-time-string" with {
+        text: time
+      } only %}
+    {% endif %}
+
+    {% if location is not empty %}
+      {% include "fields-text" with {
+        text: location,
+        field_variant: 'event-location'
+      } only %}
+    {% endif %}
+
+  </div
+
+{% endblock %}
+

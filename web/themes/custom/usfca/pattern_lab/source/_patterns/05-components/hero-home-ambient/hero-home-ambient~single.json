@@ -1,0 +1,16 @@
+{
+  "slides": [
+    {
+      
+      "title": "Dolor sint nisi laboris enim do amet incididunt ex sunt",
+      "image": {
+        "src": "https://placeimg.com/2400/1350/people",
+        "alt": "Slide Image"
+      },
+      "link": {
+        "url": "#"
+      },
+      "videoSrc": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+    }, null, null
+  ]
+}

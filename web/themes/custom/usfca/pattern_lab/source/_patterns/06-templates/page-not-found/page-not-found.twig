@@ -1,0 +1,19 @@
+{% extends "template-default.twig" %}
+
+{% set template_name = 'page-not-found' %}
+
+{% block top %}
+
+  {% include "base-layout-list" with { layouts: topLayouts } only %}
+
+{% endblock top %}
+
+{% block content %}
+
+{% endblock content %}
+
+{% block bottom %}
+
+  {% include "base-layout-list" with { layouts: bottomLayouts } only %}
+
+{% endblock bottom %}

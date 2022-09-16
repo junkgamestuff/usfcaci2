@@ -1,0 +1,289 @@
+{
+  "title": "News & Events",
+  "hasBasicHeader": false,
+  "section_title": "More <span class=\"highlight\">USF News</span>",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "title-no-image",
+          "title": "USF News"
+        },
+        {
+          "type": "featured-articles",
+          "title": "",
+          "cards": [
+            {
+              "title": "Rich Text and Image",
+              "isVideo": true,
+              "description": null,
+              "image": {
+                "src": "https://placeimg.com/600/338/people",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              },
+              "date": "Mar 6, 2022"
+            },
+            {
+              "title": "Rich Text and Image",
+              "description": null,
+              "image": {
+                "src": "https://placeimg.com/600/338/animals",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#",
+                "target": "_blank"
+              },
+              "date": "Mar 6, 2022"
+            },
+            {
+              "title": "Rich Text and Image",
+              "description": null,
+              "image": {
+                "src": "https://placeimg.com/600/338/random",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              },
+              "date": "Mar 6, 2022"
+            },
+            {
+              "title": "Rich Text and Image",
+              "description": null,
+              "image": {
+                "src": "https://placeimg.com/600/338/tech",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              },
+              "date": "Mar 6, 2022"
+            }
+          ]
+        },
+        {
+          "type": "article-cards",
+          "title": "In the <span class=\"highlight\">Media</span>",
+          "link": null
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "two-column",
+      "sidebar": [
+        {
+          "type": "filter-form",
+          "title": "Filter",
+          "items": [
+            {
+              "type": "text",
+              "label": null,
+              "placeholder": "First Letter / Keyword"
+            },
+            {
+              "type": "select",
+              "namevalue": "by-category",
+              "title": "By Category",
+              "label": "Select label",
+              "name": "name-select",
+              "options": [
+                { "value": "1", "label": "Option One" },
+                { "value": "2", "label": "Option Two" },
+                { "value": "3", "label": "Option Three" }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "namevalue": "by-topic",
+              "title": "By Topic",
+              "options": [
+                {
+                  "id": "college-of-arts-sciences",
+                  "value": "College of Arts & Sciences",
+                  "text": "College of Arts & Sciences"
+                },
+                {
+                  "id": "school-of-education",
+                  "value": "School of Education",
+                  "text": "School of Education"
+                },
+                {
+                  "id": "school-of-law",
+                  "value": "School of Law",
+                  "text": "School of Law"
+                },
+                {
+                  "id": "school-of-management",
+                  "value": "School of Management",
+                  "text": "School of Management"
+                },
+                {
+                  "id": "school-of-nursing-health-professions",
+                  "value": "School of Nursing & Health Professions",
+                  "text": "School of Nursing & Health Professions"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "namevalue": "by-year",
+              "title": "By Year",
+              "options": [
+                {
+                  "id": "business-entrepreneurship",
+                  "value": "Business & Entrepreneurship",
+                  "text": "Business & Entrepreneurship"
+                },
+                {
+                  "id": "education",
+                  "value": "Education",
+                  "text": "Education"
+                },
+                {
+                  "id": "environment",
+                  "value": "Environment",
+                  "text": "Environment"
+                },
+                {
+                  "id": "health",
+                  "value": "Health",
+                  "text": "Health"
+                }
+              ]
+            },
+            {
+              "type": "submit",
+              "value": "Search"
+            },
+            {
+              "type": "reset",
+              "value": "CLEAR SELECTIONS"
+            }
+          ]
+        }
+      ],
+      "content": [
+        {
+          "type": "news-listing",
+          "cards": [
+            {
+              "eyebrow": "UNIVERSITY NEWS",
+              "title": "Latest News Headline Lorem Ipsum Dolor Sit Amet",
+              "description": "<p>Sed porttitor lectus nibh mauris blandit aliquet eli eget tincidunt nibh pulvinar ivamus magna justo lacinia eget consectetur sed</p>",
+              "date": "Sep 06, 2020",
+              "link": {
+                "href": "#"
+              },
+              "image": null,
+              "ext_link": {
+                "title": "Publication Name",
+                "href": "#",
+                "target": "_blank"
+              }
+            },
+            {
+              "eyebrow": "PRESS RELEASE",
+              "title": "Latest News Headline Lorem Ipsum Dolor Sit Amet",
+              "description": "<p>Sed porttitor lectus nibh mauris blandit aliquet eli eget tincidunt nibh pulvinar ivamus magna justo lacinia eget consectetur sed</p>",
+              "date": "Sep 06, 2020",
+              "link": {
+                "href": "#"
+              },
+              "image": {
+                "src": "https://placeimg.com/300/170/people",
+                "alt": "Alt 1"
+              }
+            },
+            {
+              "eyebrow": "UNIVERSITY NEWS",
+              "title": "Latest News Headline Lorem Ipsum Dolor Sit Amet",
+              "description": "<p>Sed porttitor lectus nibh mauris blandit aliquet eli eget tincidunt nibh pulvinar ivamus magna justo lacinia eget consectetur sed</p>",
+              "date": "Sep 06, 2020",
+              "link": {
+                "href": "#"
+              },
+              "ext_link": {
+                "title": "Publication Name",
+                "href": "#",
+                "target": "_blank"
+              },
+              "image": {
+                "src": "https://placeimg.com/300/170/people",
+                "alt": "Alt 1"
+              }
+            },
+            {
+              "eyebrow": "PRESS RELEASE",
+              "title": "Latest News Headline Lorem Ipsum Dolor Sit Amet",
+              "description": "<p>Sed porttitor lectus nibh mauris blandit aliquet eli eget tincidunt nibh pulvinar ivamus magna justo lacinia eget consectetur sed</p>",
+              "date": "Sep 06, 2020",
+              "link": {
+                "href": "#"
+              },
+              "image": {
+                "src": "https://placeimg.com/300/170/people",
+                "alt": "Alt 1"
+              }
+            },
+            {
+              "eyebrow": "UNIVERSITY NEWS",
+              "title": "Latest News Headline Lorem Ipsum Dolor Sit Amet",
+              "description": "<p>Sed porttitor lectus nibh mauris blandit aliquet eli eget tincidunt nibh pulvinar ivamus magna justo lacinia eget consectetur sed</p>",
+              "date": "Sep 06, 2020",
+              "link": {
+                "href": "#"
+              },
+              "ext_link": {
+                "title": "Publication Name",
+                "href": "#",
+                "target": "_blank"
+              },
+              "image": {
+                "src": "https://placeimg.com/300/170/people",
+                "alt": "Alt 1"
+              }
+            },
+            {
+              "eyebrow": "UNIVERSITY NEWS",
+              "title": "Latest News Headline Lorem Ipsum Dolor Sit Amet",
+              "description": "<p>Sed porttitor lectus nibh mauris blandit aliquet eli eget tincidunt nibh pulvinar ivamus magna justo lacinia eget consectetur sed</p>",
+              "date": "Sep 06, 2020",
+              "link": {
+                "href": "#"
+              },
+              "ext_link": {
+                "title": "Publication Name",
+                "href": "#",
+                "target": "_blank"
+              },
+              "image": {
+                "src": "https://placeimg.com/300/170/people",
+                "alt": "Alt 1"
+              }
+            }
+          ],
+          "link": {
+            "href": "https://www.example.com/",
+            "cta": "Load More",
+            "ariaLabel": "An Example Aria Label for CTA Link"
+          }
+        }
+      ]
+    }
+  ],
+  "bottomLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "social-media-feed" }
+      ]
+    }
+  ]
+}

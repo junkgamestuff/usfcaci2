@@ -1,0 +1,17 @@
+{% if href is not empty %}
+  {% set url = href %}
+{% endif %}
+
+{% if cta is not empty %}
+  {% set title = cta %}
+{% endif %}
+
+{% if link is not empty %}
+  {% set url = link.url %}
+  {% set title = link.title %}
+  {% set aria = link.aria %}
+  {% set svg = link.svg %}
+  {% set target = link.target %}
+  {% set class = link.class %}
+{% endif %}
+<a class="link {{ class }}" href={{ url }} {% if target is not empty %}target="{{target}}"{% endif %} {% if aria is not empty %}aria-label="{{ aria }}"{% endif %}>{% if svg is not empty %}{{ svg|raw }}{% endif %}{{ title }}{% if svgAfter is not empty %}{{ svgAfter|raw }}{% endif %}</a>

@@ -1,0 +1,24 @@
+nav#toolbar-bar {
+  z-index: 9999999 !important;
+}
+
+body.user-logged-in {
+
+  .cc--header {
+    position: relative;
+  }
+}
+
+.block-local-tasks-block {
+  ul {
+    @include no-bullet;
+    @include padding(null rem(10));
+    display: flex;
+
+    li {
+      &:not(:last-child) {
+        @include margin(null rem(5) null null);
+      }
+    }
+  }
+}

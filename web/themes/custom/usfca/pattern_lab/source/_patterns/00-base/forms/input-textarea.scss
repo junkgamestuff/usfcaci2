@@ -1,0 +1,19 @@
+.fi--form-item {
+  textarea {
+    @extend %font-fira-sans-extra-condensed-regular;
+    @include font-size(16, 26);
+    @include padding(rem(10));
+    width: 100%;
+    height: rem(150);
+    border-color: $color-atlantis;
+    background-color: transparent;
+
+    @include mq($bp768) {
+      height: rem(200);
+    }
+
+    @include placeholder {
+      color: $color-secondary;
+    }
+  }
+}

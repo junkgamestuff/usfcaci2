@@ -1,0 +1,6 @@
+{
+  "name": "search",
+  "disabled": false,
+  "required": false,
+  "label": "Example Search Input"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Simple Article List Title",
+  "items": [
+    {
+      "title": "Donec suscipit quam in tortor ultricies, venenatis consequat augue tristique. Donec tristique sollicitudin facilisis",
+      "link": {
+        "href": "/"
+      },
+      "pubDate": "March 13, 2020"
+    },
+    {
+      "title": "Venenatis consequat augue tristique",
+      "link": {
+        "href": "#"
+      },
+      "pubDate": "March 13, 2020"
+    },
+    {
+      "title": "Quam in tortor ultricies, venenatis consequat augue",
+      "link": {
+        "href": "#"
+      },
+      "pubDate": "March 13, 2020"
+    }
+  ]
+}

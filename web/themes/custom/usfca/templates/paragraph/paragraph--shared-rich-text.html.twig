@@ -1,0 +1,7 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% include "components-rich-text" with { markup: paragraph.field_shared_content.0.entity.body.value } only %}
+
+{% endblock content %}

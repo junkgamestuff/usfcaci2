@@ -1,0 +1,40 @@
+.cc--rich-text-and-image-listing {
+  @include maxwidth;
+
+  .c--rich-text-and-image-listing {
+    @include padding(null cols(3) rem(20));
+
+    @include mq($bp768) {
+      @include padding(null cols(2) rem(30));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null null rem(50));
+    }
+
+    .tc--basic-page &,
+    .t--left-navigation & {
+      @include padding(null 0);
+    }
+  }
+
+  .section-wrapper {
+    @include margin(null null rem(50));
+
+    h2 {
+      @include margin(null null rem(13));
+      @include font-size(26, 30);
+      text-align: left;
+
+      @include mq($bp768) {
+        @include margin(null null rem(15));
+        @include font-size(28, 30);
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(20));
+        @include font-size(38, 46);
+      }
+    }
+  }
+}

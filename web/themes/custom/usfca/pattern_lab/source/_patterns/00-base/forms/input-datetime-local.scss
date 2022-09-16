@@ -1,0 +1,5 @@
+.fi--form-item {
+  input[type='datetime-local'] {
+    @extend %input-style;
+  }
+}

@@ -1,0 +1,13 @@
+<nav class="mc--menu mc--{{ menu.name }}" aria-label="Mobile Menu">
+    <ul class="m--menu m--{{ menu.name }}">
+        {% block content %}
+
+        {% for item in menu.items %}
+
+            {% include "base-menu-item" with { item: item } %}
+
+        {% endfor %}
+
+        {% endblock %}
+    </ul><!-- m--menu -->
+</nav>

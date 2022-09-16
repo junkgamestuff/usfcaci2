@@ -1,0 +1,160 @@
+.cc--faculty-directory-listing-item {
+  .c--faculty-directory-listing-item {
+    @include mq($bp768) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .image-container {
+    @include mq($bp768max) {
+      @include margin(null null rem(30));
+    }
+
+    @include mq($bp768) {
+      @include padding(null cols(1, 27) null null);
+      width: cols(11, 27);
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(2, 31) null null);
+      width: cols(12, 31);
+    }
+
+    .f--image {
+      aspect-ratio: 1 / 1;
+
+      @supports not (aspect-ratio: 16 / 9) { // fallback for aspect ratio
+        padding-top: 100%;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .text-container {
+    @include mq($bp768) {
+      width: cols(16, 27);
+    }
+
+    @include mq($bp1024) {
+      width: cols(19, 31);
+    }
+
+    .f--cta-title {
+      @include margin(null null rem(10));
+
+      @include mq($bp768) {
+        @include margin(null null rem(6));
+      }
+
+      h3 {
+        @include font-size(24, 24);
+        letter-spacing: rem(.4);
+
+        @include mq($bp768) {
+          @include font-size(30, 30);
+          letter-spacing: rem(.7);
+        }
+
+        @include mq($bp1024) {
+          @include font-size(36, 36);
+        }
+
+        a {
+          color: $color-sherpa-blue;
+          text-decoration: none;
+
+          @include hover {
+            color: $color-sherpa-blue;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .f--label {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include margin(null null rem(20));
+      @include font-size(18, 18);
+
+      @include mq($bp768) {
+        @include margin(null null rem(13));
+        @include font-size(20, 20);
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(27));
+        @include font-size(24, 24);
+      }
+    }
+
+    .f--category {
+      @extend %font-ibm-plex-serif-regular-italic;
+      @include font-size(14, 14);
+      @include margin(null null rem(10));
+      text-transform: none;
+
+      @include mq($bp768) {
+        @include font-size(14, 24);
+        margin-bottom: 0;
+      }
+
+      @include mq($bp1024) {
+        @include font-size(16, 24);
+      }
+    }
+
+    .f--description {
+      @include font-size(14, 14);
+      @include margin(null null rem(15));
+
+      @include mq($bp768) {
+        @include margin(null null rem(19));
+        @include font-size(14, 24);
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(25));
+        @include font-size(16, 24);
+      }
+    }
+
+    .f--email {
+      @include padding(null null null rem(35));
+      @include margin(null null rem(10));
+      background: url('../images/icons-usf/email.svg') no-repeat 0 center;
+      background-size: rem(20);
+
+      a {
+        @include font-size(14, 24);
+        color: $color-sherpa-blue;
+
+        @include mq($bp768) {
+          @include font-size(16, 24);
+        }
+
+        @include hover {
+          color: $color-sherpa-blue;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .f--text {
+      @include font-size(14, 24);
+      @include padding(null null null rem(35));
+      background: url('../images/icons-usf/map_pin.svg') no-repeat left rem(3) center;
+      background-size: rem(12);
+
+      @include mq($bp768) {
+        @include font-size(16, 24);
+      }
+    }
+  }
+}

@@ -1,0 +1,180 @@
+.cc--branding-header {
+  .c--branding-header {
+    @include padding(rem(13) null rem(13) rem(20));
+    height: rem(80);
+
+    @include mq($bp1024max) {
+      display: flex;
+      align-items: center;
+    }
+
+    @include mq($bp768) {
+      @include padding(rem(19) null rem(19) cols(1, 24));
+      height: rem(120);
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(40) null 0 cols(2, 20));
+      height: rem(150);
+    }
+  }
+
+  &#block-sitebranding-collegeofartsandsciences,
+  &#block-sitebranding-schoolofeducation,
+  &#block-sitebranding-schooloflaw,
+  &#block-sitebranding-schoolofmanagement,
+  &#block-sitebranding-schoolofnursing {
+    @include mq($bp768max) {
+      a {
+        max-width: rem(260);
+      }
+    }
+
+    @include mq($bp1024) {
+      svg {
+        path[fill='#00543C'],
+        path[fill='#8A8C8E'],
+        rect {
+          fill: $color-white;
+        }
+      }
+    }
+  }
+
+  &#block-sitebranding-collegeofartsandsciences {
+    a {
+      svg {
+        width: rem(206);
+
+        @include mq($bp768) {
+          width: rem(393);
+        }
+
+        @include mq($bp1024) {
+          width: rem(315);
+        }
+
+        @include mq($bp1200) {
+          width: rem(393);
+        }
+      }
+    }
+  }
+
+  &#block-sitebranding-schoolofeducation {
+    a {
+      svg {
+        width: rem(240);
+
+        @include mq($bp768) {
+          width: rem(458);
+        }
+
+        @include mq($bp1024) {
+          width: rem(380);
+        }
+
+        @include mq($bp1200) {
+          width: rem(458);
+        }
+      }
+    }
+  }
+
+  &#block-sitebranding-schooloflaw {
+    a {
+      svg {
+        width: rem(210);
+
+        @include mq($bp768) {
+          width: rem(400);
+        }
+
+        @include mq($bp1024) {
+          width: rem(322);
+        }
+
+        @include mq($bp1200) {
+          width: rem(400);
+        }
+      }
+    }
+  }
+
+  &#block-sitebranding-schoolofmanagement {
+    a {
+      svg {
+        width: rem(199);
+
+        @include mq($bp768) {
+          width: rem(379);
+        }
+
+        @include mq($bp1024) {
+          width: rem(301);
+        }
+
+        @include mq($bp1200) {
+          width: rem(379);
+        }
+      }
+    }
+  }
+
+  &#block-sitebranding-schoolofnursing {
+    a {
+      svg {
+        width: rem(237);
+
+        @include mq($bp768) {
+          width: rem(450);
+        }
+
+        @include mq($bp1024) {
+          width: rem(372);
+        }
+
+        @include mq($bp1200) {
+          width: rem(450);
+        }
+      }
+    }
+  }
+
+  a {
+    display: block;
+    font-size: 0;
+    line-height: 1;
+    text-decoration: none;
+
+    svg {
+      width: rem(240);
+      height: auto;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        height: rem(30);
+      }
+
+      @media screen and (-ms-high-contrast: active) and (min-width: 1024px), (-ms-high-contrast: none) and (min-width: 1024px) {
+        height: rem(44);
+      }
+
+      @include mq($bp1024max) {
+        g[fill='#fff'] {
+          path {
+            fill: $color-sherpa-blue;
+          }
+        }
+      }
+
+      @include mq($bp768) {
+        width: rem(368);
+      }
+
+      @include mq($bp1024) {
+        width: rem(300);
+        max-width: 100%;
+      }
+    }
+  }
+}

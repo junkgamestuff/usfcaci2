@@ -1,0 +1,16 @@
+{
+  "footerLinks": [
+    {
+      "url": "https://www.example.com/",
+      "title": "Consumer Information"
+    },
+    {
+      "url": "https://www.example.com/",
+      "title": "Privacy Note"
+    },
+    {
+      "url": "https://www.example.com/",
+      "title": "Web Accessibility"
+    }
+  ]
+}

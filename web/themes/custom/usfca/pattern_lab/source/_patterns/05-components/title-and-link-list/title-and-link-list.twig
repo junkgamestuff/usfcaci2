@@ -1,0 +1,20 @@
+{% extends "base-component" %}
+
+{% set name = "title-and-link-list" %}
+{% set container_element = 'section' %}
+{% set variant = [reverse ? 'text-left' : 'text-right'] %}
+{% set container_aria_label = "List of Links" %}
+
+{% block content %}
+
+  <div class="header-container">
+    {% include "fields-section-title" with {
+      title: title
+    } only %}
+  </div>
+
+  <div class="link-container">
+    {% include "components-text-and-link-listing" with { links: links } only %}
+  </div>
+
+{% endblock %}

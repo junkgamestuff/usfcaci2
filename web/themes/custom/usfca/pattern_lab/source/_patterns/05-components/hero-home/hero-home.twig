@@ -1,0 +1,55 @@
+{% extends "base-component" %}
+
+{% set name = "hero-home" %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Homepage Hero" %}
+
+{% set variant = [] %}
+{% set variant = (alignBottom) ? variant|merge(['align-bottom']): variant %}
+{% set variant = (hasOverlay) ? variant|merge(['has-overlay']) : variant %}
+
+{% block content %}
+
+  <div class="image-video">
+    {% if videoUrl %}
+      {% include "fields-ambient-video" with {
+        videoSrc: videoSrc
+      } only %}
+      {% include "fields-image" with {
+        image: image
+      } only %}
+    {% else %}
+      {% include "fields-image" with {
+        image: image
+      } only %}
+    {% endif %}
+  </div>
+
+  <div class="text-container">
+    <div class="text-container-inner">
+
+      {% if title %}
+        {% include "fields-page-title" with {
+          title: title,
+          field_variant: (hideTitle) ? 'visually-hidden': ''
+        } %}
+      {% endif %}
+
+      {% if videoUrl %}
+        {% include "components-video-controls" %}
+      {% endif %}
+
+      {% include "fields-description" with {
+        description: description
+      } only %}
+
+      {% if link.href is not empty %}
+        {% include "fields-link" with {
+          href: link.href,
+          cta: link.cta
+        } only %}
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock %}

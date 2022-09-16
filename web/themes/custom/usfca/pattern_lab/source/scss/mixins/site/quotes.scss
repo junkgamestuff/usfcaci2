@@ -1,0 +1,12 @@
+@mixin quotes {
+  quotes: '\201C''\201D''\2018''\2019';
+
+  &::before {
+    text-align: center;
+    content: open-quote;
+  }
+
+  &::after {
+    content: close-quote;
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "slides": [
+    {
+      
+      "title": "Dolor sint nisi laboris enim do amet incididunt ex sunt",
+      "image": {
+        "src": "https://placeimg.com/2400/1350/people",
+        "alt": "Slide Image"
+      },
+      "link": {
+        "url": "#"
+      },
+      "videoSrc": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+    },
+    {
+      
+      "title": "Tempor esse adipisicing nostrud eiusmod cillum",
+      "image": {
+        "src": "https://placeimg.com/2400/1350/people",
+        "alt": "Slide Image"
+      },
+      "link": {
+        "url": "#"
+      },
+      "videoSrc": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    },
+    {
+      
+      "title": "Laborum cupidatat cupidatat est ullamco incididunt qui ex eu",
+      "image": {
+        "src": "https://placeimg.com/2400/1350/people",
+        "alt": "Slide Image"
+      },
+      "link": {
+        "url": "#"
+      },
+      "videoSrc": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+    }
+  ]
+}

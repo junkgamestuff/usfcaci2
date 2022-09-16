@@ -1,0 +1,24 @@
+{% extends "base-component" %}
+
+{% set name="subscription-signup" %}
+
+{% set container_element="section" %}
+
+{% block content %}
+
+  <div class="inner-wrapper">
+
+    <div class="text-container">
+
+      <div class="f--category">{{ subscriptionSignup.eyebrow }}</div>
+      <h2>{{ subscriptionSignup.title }}</h2>
+
+    </div>
+
+    <div class="form-wrapper">
+      {{ subscriptionSignup.markup|raw }}
+    </div>
+
+  </div>
+
+{% endblock %}

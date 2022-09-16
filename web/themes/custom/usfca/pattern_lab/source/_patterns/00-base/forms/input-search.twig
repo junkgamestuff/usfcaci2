@@ -1,0 +1,21 @@
+{% extends "base-form-item" %}
+
+{% block content %}
+
+    {% if label %}
+        <label
+                for="{{ name|default("search") }}"
+        >
+            {{ label }}{% if required %} *{% endif %}
+        </label>
+    {% endif %}
+
+    <input
+            type="search"
+            name="{{ name|default('search') }}"
+            id="{{ name|default('search') }}"
+            {% if disabled %}disabled="disabled"{% endif %}
+            {% if required %}required="required"{% endif %}
+    >
+
+{% endblock %}

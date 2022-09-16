@@ -1,0 +1,32 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% set cards = [] %}
+
+  {% for item in fields.cards %}
+
+    {% set cards = cards | merge([{
+      title: item.fields.title,
+      description: item.fields.description,
+      link: item.fields.link is not empty ? {
+        cta: item.fields.link.title,
+        href: item.fields.link.url,
+        ariaLabel: item.fields.link.attributes.aria_label ?? item.fields.link.title,
+      } : null,
+      image: item.fields.image is not empty ? {
+        render: drupal_image(item.fields.image.uri, '16_9_one_third', { alt: item.fields.image.alt }, responsive=true),
+        src: item.fields.image.uri | image_style('16_9_675x380'),
+        alt: item.fields.image.alt,
+        link: item.fields.link.url,
+      } : [],
+    }]) %}
+
+  {% endfor %}
+
+  {% include "components-manual-cards-horizontal" with {
+    title: fields.title,
+    cards: cards,
+  } only %}
+
+{% endblock content %}

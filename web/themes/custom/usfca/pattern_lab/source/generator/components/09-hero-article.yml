@@ -1,0 +1,27 @@
+name: "hero-article"
+type: "component"
+markup:
+  content:
+  - type: field
+    name: image
+    with:
+      image: image
+    condition: image.src
+  - type: container
+    class: "text-container"
+    content:
+      - type: field
+        name: eyebrow
+        with:
+          text: eyebrow
+        condition: eyebrow
+      - type: field
+        name: page-title
+        with:
+          title: title
+data:
+  image:
+    src: "/images/16_9_1600x900.png"
+    alt: "Article Hero"
+  eyebrow: "Scholar Spotlight"
+  title: "Fighting to Build a Just Society"

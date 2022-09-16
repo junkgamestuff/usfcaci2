@@ -1,0 +1,150 @@
+.cc--webform-form {
+  @include maxwidth;
+
+  .c--webform-form {
+    @include padding(rem(30) rem(20));
+
+    @include mq($bp768) {
+      @include padding(rem(50) cols(2));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(8));
+    }
+
+    .l--two-column-reverse & {
+      @include padding(rem(36) rem(20) rem(30));
+      background: $color-white;
+      box-shadow: 0 0 rem(4) rem(1) rgba($color-black, .22);
+
+      @include mq($bp1024) {
+        @include padding(rem(36) cols(1, 22) rem(25));
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(36) cols(1, 15) rem(40));
+      }
+    }
+  }
+
+  .checkbox-wrapper > label,
+  .radio-wrapper > label,
+  .checkboxes--wrapper > legend,
+  .radios--wrapper legend {
+    @extend %font-fira-sans-extra-condensed-semibold;
+    @include font-size(14, 16);
+    @include margin(null null rem(10));
+    display: block;
+    color: $color-black;
+    text-transform: uppercase;
+    float: none;
+
+    @include mq($bp768) {
+      @include font-size(16, 21);
+    }
+
+    .form-required,
+    &.form-required {
+      &::after {
+        @include margin(null null null rem(3));
+        display: inline-block;
+        color: $color-error;
+        content: '*';
+      }
+    }
+  }
+
+  .checkbox-wrapper {
+    input[type='checkbox'] {
+      + label {
+        &::after {
+          position: static;
+          display: inline;
+          opacity: 1;
+          transform: none;
+        }
+
+        &::before {
+          padding: 3px;
+          background-clip: content-box;
+        }
+      }
+
+      &:checked + label {
+        &::before {
+          background-color: $color-supernova;
+        }
+
+        &::after {
+          border: 0;
+          background: none;
+        }
+      }
+    }
+  }
+
+  .form-wrapper,
+  .description {
+    @include margin(null null rem(30));
+  }
+
+  .checkbox-wrapper,
+  .radio-wrapper {
+    @include padding(rem(3) null null);
+
+    > label {
+      color: $color-sherpa-blue;
+      text-transform: none;
+    }
+
+    .description {
+      margin-bottom: 0;
+    }
+  }
+
+  input[type='radio'] {
+    &:focus {
+      + label {
+        &::before {
+          @include outline;
+        }
+      }
+    }
+  }
+
+  input[type='email'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='number'],
+  input[type='text'] {
+    border-color: $color-atlantis;
+  }
+
+  input[type='file'] {
+    @include padding(rem(10));
+    border: 2px solid $color-atlantis;
+  }
+
+  input[type='submit'] {
+    @include margin(rem(30) null null);
+    @include button;
+    @include button($secondary: true);
+    border-color: $color-atlantis;
+
+    @include hover {
+      border-color: $color-atlantis;
+      box-shadow: inset 0 0 0 0.1875rem $color-atlantis;
+    }
+  }
+
+  p,
+  .description {
+    a {
+      color: $color-sherpa-blue;
+
+      @include hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

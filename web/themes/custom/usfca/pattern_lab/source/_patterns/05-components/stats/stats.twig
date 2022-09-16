@@ -1,0 +1,47 @@
+{% extends "base-component" %}
+
+{% set name = "stats" %}
+{% set instanceId = instanceId | default(random(1, 10000)) %}
+{% set container_element = 'section' %}
+{% set container_id = "stats-" ~ instanceId %}
+
+{% block content %}
+
+  {% if title is not empty %}
+    {% include "fields-section-title" with {
+      title: title
+    } only %}
+  {% endif %}
+
+  <div class="swiper-container stats-container">
+    <div class="swiper-wrapper">
+
+      {% for stat in stats %}
+        {% embed "components-stat-card" with { stat: stat.stat, description: stat.description, variant: 'swiper-slide' } only %}{% endembed %}
+      {% endfor %}
+
+    </div>
+
+    <div class="swiper-controls">
+      <ul class="swiper-button-wrapper">
+        <li>
+          <button type="button" class="swiper-nav-button swiper-button-prev" aria-controls="{{ container_id }}">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 10.6 18" enable-background="new 0 0 10.6 18" xml:space="preserve">
+            <polygon points="0,9 9,0 10.6,1.6 3.2,9 10.6,16.4 9,18 "/>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="swiper-nav-button swiper-button-next" aria-controls="{{ container_id }}">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+              y="0px" viewBox="0 0 10.6 18" enable-background="new 0 0 10.6 18" xml:space="preserve">
+            <polygon points="10.6,9 1.6,0 0,1.6 7.4,9 0,16.4 1.6,18 "/>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+{% endblock %}

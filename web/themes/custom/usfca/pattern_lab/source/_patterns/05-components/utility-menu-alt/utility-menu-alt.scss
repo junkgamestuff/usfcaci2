@@ -1,0 +1,226 @@
+// Miles Colors
+$color-pure-black: #000;
+
+// Timing
+$alt-easing: left .2s ease-in-out;
+
+$last-link-background: url('../images/icons/icon-link-highlight.svg');
+
+.cc--utility-menu-alt {
+  position: relative;
+  border-top: rem(1) solid $color-divider-gray;
+
+  @include mq($bp1024max) {
+    @include margin(null cols(4));
+  }
+
+  .c--utility-menu-alt {
+    @include padding(rem(26) null null);
+
+    @include mq($bp768) {
+      @include padding(rem(35) null null);
+    }
+  }
+
+  .m--menu {
+    @include mq($bp1024) {
+      display: flex;
+      align-items: center;
+    }
+
+    a {
+      @include padding(rem(4) null rem(6));
+      @include font-size(16, 20);
+      display: block;
+      color: $color-pure-black;
+      text-decoration: none;
+
+      @include hover {
+        text-decoration: underline;
+      }
+
+      svg {
+        @include margin(null null null rem(5));
+        width: rem(8);
+      }
+    }
+
+    > li {
+      @include mq($bp1024max) {
+        @include margin(null 0 rem(15));
+        display: inline-block;
+        width: 49%;
+
+        &:first-child {
+          @include margin(null null rem(29));
+          display: block;
+          width: 100%;
+        }
+      }
+
+      @include mq($bp768max) {
+        @include margin(null 0 rem(13));
+        width: 40%;
+
+        &:first-child {
+          @include margin(null null rem(23));
+        }
+
+        &:nth-child(even) {
+          @include margin(null rem(50) null null);
+        }
+      }
+
+      @include mq($bp1024) {
+        position: relative;
+
+        &:not(:last-child) {
+          @include margin(null rem(26) null null);
+        }
+
+        @include hover {
+          a {
+            svg {
+              transform: rotate(-90deg);
+            }
+          }
+
+          .submenus-wrapper {
+            display: block;
+          }
+        }
+      }
+
+      &:first-child {
+        @include margin(null rem(35) null null);
+
+        a {
+          @include padding(rem(17) null);
+          display: inline-block;
+          position: relative;
+          width: 100%;
+          color: $color-white;
+          text-align: center;
+          background: $color-primary-purple;
+
+          @include mq($bp768) {
+            @include padding(rem(15) null);
+            width: rem(150);
+          }
+
+          @include hover {
+            background: $color-secondary-purple;
+            text-decoration: none;
+          }
+
+          &::before {
+            display: block;
+            position: absolute;
+            top: rem(-30);
+            right: 0;
+            bottom: rem(-24);
+            left: 0;
+            background: $last-link-background no-repeat top center;
+            content: '';
+            z-index: -1;
+          }
+        }
+      }
+
+      .submenus-wrapper {
+        display: none;
+        position: absolute;
+
+        @include mq($bp1024max) {
+          left: calc(100% + #{cols(4, 40)});
+          width: 100%;
+          transition: $alt-easing;
+
+          &.is-visible {
+            display: block;
+            left: 0;
+            transition: $alt-easing;
+          }
+
+          &.is-hidden {
+            left: 100%;
+            transition: $alt-easing;
+          }
+        }
+
+        @include mq($bp1024) {
+          @include padding(rem(25));
+          bottom: rem(-20);
+          right: rem(-180);
+          min-width: rem(160);
+          background: $color-light-gray;
+
+          .button-back {
+            display: none;
+          }
+        }
+
+        .button-back {
+          @include font-size(14, 19);
+          @include margin(rem(7) null rem(18));
+          display: flex;
+          position: relative;
+          align-items: center;
+          color: $color-link;
+
+          @include mq($bp768) {
+            @include margin(rem(11) null rem(35));
+            @include font-size(15, 15);
+          }
+
+          @include mq($bp1024) {
+            display: none;
+          }
+
+          svg {
+            @include margin(null rem(15) null null);
+            width: rem(9);
+            height: rem(9);
+
+            path {
+              fill: $color-primary-purple;
+            }
+          }
+        }
+
+        .menu-item {
+          @include margin(null null rem(3));
+
+          @include mq($bp768) {
+            @include margin(null null rem(16));
+          }
+
+          a {
+            @include font-size(16, 22);
+            @include padding(rem(10) null);
+            display: block;
+            position: relative;
+            color: $color-black;
+            text-decoration: none;
+
+            @include mq($bp768) {
+              @include font-size(20, 24);
+            }
+
+            @include mq($bp1024) {
+              @include padding(0 null rem(12));
+              @include font-size(14, 18);
+              color: $color-pure-black;
+            }
+          }
+
+          &:last-child {
+            a {
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

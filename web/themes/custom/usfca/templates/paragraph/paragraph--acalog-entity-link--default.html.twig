@@ -1,0 +1,19 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% if fields.acalog_entity_name is not empty %}
+
+  {{ attach_library('usfca/acalog_link') }}
+
+  {% set acalog_link_text = fields.acalog_link_text is not empty ? fields.acalog_link_text : fields.acalog_entity_name %}
+
+  {% include "components-rich-text" with {
+    variant: 'acalog-link',
+    markup: '<a class="acalog" target="_blank" rel="noopener noreferrer" data-acalog-catalog-type="Catalog" data-acalog-data="entities" data-acalog-link-text="' ~ acalog_link_text ~ '" data-acalog-entity-name="' ~ fields.acalog_entity_name ~ '">' ~ acalog_link_text ~ '</a>',
+    container_id: 'acalog-link-' ~ paragraph.id(),
+  } only %}
+
+  {% endif %}
+
+{% endblock content %}

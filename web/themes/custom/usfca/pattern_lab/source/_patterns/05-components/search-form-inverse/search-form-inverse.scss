@@ -1,0 +1,76 @@
+.cc--search-form-inverse {
+  @include maxwidth;
+
+  .c--search-form-inverse {
+    @include padding(rem(30) cols(3));
+
+    @include mq($bp768) {
+      @include padding(null cols(10));
+    }
+
+    .inner-wrapper {
+      position: relative;
+    }
+  }
+
+  form {
+    position: relative;
+
+    @include mq($bp768) {
+      display: flex;
+    }
+  }
+
+  .input-wrapper {
+    position: relative;
+    flex: 1 0 auto;
+
+    @include mq($bp768max) {
+      @include margin(null null rem(25));
+    }
+
+    @include mq($bp768) {
+      @include padding(null rem(16) null null);
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(1, 28) null null);
+      flex: 0 0 cols(22, 28);
+      width: cols(22, 28);
+    }
+  }
+
+  .fi--form-item {
+    @include margin(0);
+
+    label {
+      @include visuallyhidden;
+    }
+
+    input {
+      @include padding(null rem(50) null null);
+      @include font-size(16, 24);
+      border: 1px solid $color-border;
+      background: transparent;
+
+      &.ui-autocomplete-loading {
+        background-image: none;
+      }
+
+      @include placeholder {
+        @include font-size(16, 24);
+      }
+    }
+  }
+
+  .button {
+    min-width: rem(135);
+    height: rem(50);
+
+    @include mq($bp1024) {
+      flex: 0 0 cols(6, 28);
+      width: cols(6, 28);
+      min-width: auto;
+    }
+  }
+}

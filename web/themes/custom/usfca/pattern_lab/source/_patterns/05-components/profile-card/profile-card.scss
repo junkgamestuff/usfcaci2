@@ -1,0 +1,66 @@
+$image-border-radius: 0;
+$category-color: $color-primary;
+$description-color: $color-secondary;
+
+.cc--profile-card {
+  @include mq($bp768max) {
+    + .cc--profile-card {
+      @include margin(rem(30) null null);
+    }
+  }
+
+  @include mq($bp768) {
+    &:nth-of-type(3) ~ .cc--profile-card {
+      @include margin(rem(30) null null);
+    }
+  }
+
+  @include mq($bp1024) {
+    &:nth-of-type(3) ~ .cc--profile-card {
+      @include margin(rem(40) null null);
+    }
+  }
+
+  .f--image {
+    @include margin(null null rem(20));
+
+    @include mq($bp768max) {
+      @include padding(null cols(8, 42));
+    }
+
+    @include mq($bp1024) {
+      @include margin(null null rem(25));
+    }
+
+    img {
+      border-radius: $image-border-radius;
+    }
+  }
+
+  .text-container {
+    @include mq($bp768max) {
+      text-align: center;
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(1, 14));
+      text-align: center;
+    }
+  }
+
+  .f--cta-title {
+    a {
+      text-decoration: none;
+
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .f--text {
+    @include margin(null null rem(10));
+    @include font-size(14, 22);
+    color: $description-color;
+  }
+}

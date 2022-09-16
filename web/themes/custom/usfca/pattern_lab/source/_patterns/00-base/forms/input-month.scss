@@ -1,0 +1,5 @@
+.fi--form-item {
+  input[type='month'] {
+    @extend %input-style;
+  }
+}

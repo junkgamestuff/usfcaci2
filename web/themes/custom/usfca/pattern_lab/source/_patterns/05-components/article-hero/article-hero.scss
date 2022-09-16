@@ -1,0 +1,214 @@
+$category-color: $color-primary;
+$authored-color: $color-secondary;
+$radius: 0;
+
+.cc--article-hero {
+  .c--article-hero {
+    @include maxwidth;
+  }
+
+  .text-wrapper {
+    @include margin(null null rem(30));
+    background: $color-sherpa-blue;
+
+    @include mq($bp1024) {
+      @include margin(null null rem(40));
+    }
+
+    .text-inner {
+      @include padding(rem(30) rem(20));
+
+      @include mq($bp768) {
+        @include padding(rem(40) cols(2));
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(167) cols(8) rem(40));
+      }
+    }
+  }
+
+  .f--page-title {
+    h1 {
+      @include margin(null null rem(10));
+      @include font-size(30, 36);
+      color: $color-white;
+      letter-spacing: rem(.5);
+      text-transform: none;
+
+      @include mq($bp768) {
+        @include margin(null null rem(7));
+        @include font-size(48, 56);
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(19));
+        @include font-size(60, 72);
+      }
+    }
+  }
+
+  .f--description {
+    @include margin(null null rem(20));
+    @extend %font-fira-sans-extra-condensed-regular;
+    @include font-size(18, 24);
+    letter-spacing: rem(.2);
+    color: $color-white;
+
+    @include mq($bp768) {
+      @include margin(null null rem(25));
+      @include font-size(24, 24);
+    }
+
+    p {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(18, 24);
+      letter-spacing: rem(.2);
+      color: $color-white;
+
+      @include mq($bp768) {
+        @include font-size(24, 30);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .f--category {
+    @include margin(null null rem(20));
+    @extend %font-fira-sans-extra-condensed-semibold;
+    @include font-size(14, 14);
+    color: $color-white;
+
+    @include mq($bp768) {
+      @include margin(null null rem(14));
+      @include font-size(16, 16);
+    }
+
+    @include mq($bp1024) {
+      @include margin(null null rem(30));
+    }
+
+    p {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(14, 14);
+      color: $color-white;
+
+      @include mq($bp768) {
+        @include font-size(16, 16);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .f--authored-date {
+    &,
+    .text-container {
+      display: flex;
+    }
+
+    .text-container {
+      p {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include font-size(12, 12);
+        display: block;
+        color: $color-white;
+
+        @include mq($bp768) {
+          @include font-size(16, 23);
+        }
+
+        strong {
+          text-transform: uppercase;
+        }
+      }
+
+      p::after {
+        display: none;
+      }
+
+      .separator {
+        display: flex;
+        align-items: center;
+
+        &::before {
+          @include margin(null rem(10));
+          display: inline-block;
+          height: rem(10);
+          border-left: rem(1) solid $color-supernova;
+          content: '';
+
+          @include mq($bp768) {
+            @include margin(null rem(20));
+            height: rem(20);
+          }
+        }
+      }
+
+      time {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include font-size(12, 12);
+        display: flex;
+        align-items: center;
+        color: $color-white;
+
+        @include mq($bp768) {
+          @include font-size(16, 23);
+        }
+      }
+    }
+  }
+
+  .f--image {
+    img {
+      border-radius: $radius;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    @supports not (aspect-ratio: 16 / 9) { // fallback for aspect ratio
+      position: relative;
+      padding-top: 56.25%;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    figure {
+      @include margin(null null 0);
+
+      figcaption {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include font-size(14, 18);
+        @include margin(rem(8) null null);
+        color: $color-black;
+        text-transform: none;
+
+        @include mq($bp768) {
+          @include margin(rem(20) null null);
+        }
+      }
+    }
+  }
+
+  .image-container {
+    @include padding(null rem(20));
+    position: relative;
+
+    @include mq($bp768) {
+      @include padding(null cols(6) rem(32));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(8) rem(80));
+    }
+  }
+}

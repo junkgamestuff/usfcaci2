@@ -1,0 +1,31 @@
+{
+  "name": "usfca",
+  "version": "1.0.0",
+  "description": "A local development toolset developed with the support of [Digital Pulp](https://www.digitalpulp.com).",
+  "main": "gulpfile.js",
+  "engines": {
+    "node": "16.13.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/digitalpulp/usfca-site.git"
+  },
+  "keywords": [
+    "drupal"
+  ],
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "last 2 version",
+    "IE >= 11"
+  ],
+  "homepage": "https://bitbucket.org/digitalpulp/usfca-site#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-shell": "^0.7.1"
+  }
+}

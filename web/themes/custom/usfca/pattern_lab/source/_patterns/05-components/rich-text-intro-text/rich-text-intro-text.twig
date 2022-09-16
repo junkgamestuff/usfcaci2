@@ -1,0 +1,13 @@
+
+{% extends "base-component" %}
+
+{% set name="rich-text-intro-text" %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Intro Text" %}
+
+{% block content %}
+
+  {% include "fields-wysiwyg" with { markup: markup } only %}
+
+{% endblock %}
+

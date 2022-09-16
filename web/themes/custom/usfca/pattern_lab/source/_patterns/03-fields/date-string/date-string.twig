@@ -1,0 +1,9 @@
+{% extends "base-field" %}
+
+{% set name = "date-string" %}
+
+{% block content %}
+
+  {{ text | default('July 5, 2018') | raw }}
+
+{% endblock %}

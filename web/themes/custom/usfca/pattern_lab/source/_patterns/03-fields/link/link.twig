@@ -1,0 +1,40 @@
+{% extends "base-field" %}
+
+{% set name = "link" %}
+
+{% set title = title | default(cta) %}
+
+{% set url = url | default(href) %}
+
+{% if link is not empty %}
+
+  {% set title = link.title %}
+
+  {% set url = link.url %}
+
+  {% set aria = link.aria %}
+
+  {% set isAlt = link.isAlt %}
+
+  {% set hasIcon = link.hasIcon %}
+
+  {% set svg = link.svg %}
+
+  {% set target = link.target %}
+
+{% endif %}
+
+{% block content %}
+
+  {% include "base-link" with {
+    "title": title,
+    "url": url,
+    "aria": aria,
+    "isAlt": isAlt,
+    "hasIcon": hasIcon,
+    "svg": svg,
+    "target": target,
+    "class": class
+  } %}
+
+{% endblock %}

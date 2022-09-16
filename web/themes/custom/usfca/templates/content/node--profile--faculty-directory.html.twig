@@ -1,0 +1,38 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+
+  {% set title = fields.first_name ~ (fields.middle_name is not empty ? ' ' ~ fields.middle_name : '') ~ ' ' ~ fields.last_name ~ (fields.suffix is not empty ? ' ' ~ fields.suffix : '') %}
+
+  {% set roles = [] %}
+
+  {% for item in fields.school_program_roles %}
+    {% set roles = roles | merge([{
+      category: item.fields.role,
+      description: item.fields.school,
+    }]) %}
+  {% endfor %}
+
+  {# per usf request: suppress roles from output: #}
+  {% set roles = NULL %}
+
+  {% include "components-faculty-directory-listing-item" with {
+    title: title,
+    label: fields.professional_title,
+    email: fields.email,
+    location: fields.office,
+    image: fields.image.uri ? {
+      src: fields.image.uri | image_style('1_1_1152x1152'),
+      alt: fields.image.alt,
+      render: drupal_image(fields.image.uri, '1_1_mosaic_small', { alt: fields.image.alt }, responsive=true),
+    } : {
+      src: '/themes/custom/usfca/pattern_lab/source/images/faculty_placeholder.png',
+      alt: 'Presentation only image for ' ~ title,
+    },
+    link: {
+      href: fields.url,
+    },
+    roles: roles,
+  } only %}
+
+{% endblock content %}

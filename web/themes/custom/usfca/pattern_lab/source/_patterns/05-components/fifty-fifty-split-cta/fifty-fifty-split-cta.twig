@@ -1,0 +1,82 @@
+{% extends "base-component" %}
+
+{% set name = "fifty-fifty-split-cta" %}
+{% set variant = [] %}
+{% set variant = (reverse) ? variant|merge(['image-left']) : variant %}
+
+{% block content %}
+
+  <div class="text-image-container">
+    <div class="text-container">
+
+      {% if title is not empty %}
+        {% include "fields-section-title" with {
+          title: title
+        } only %}
+      {% endif %}
+
+      {% if description is not empty %}
+        {% include "fields-description" with {
+          description: description
+        } only %}
+      {% endif %}
+
+      {% if items is not empty %}
+        <div class="link-list">
+          {% for item in items %}
+            {% include "fields-link" with {
+              url: item.url,
+              title: item.title,
+              aria: item.aria,
+              hasIcon: item.hasIcon,
+              svg: item.svg
+            } only %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if image is not empty %}
+      <div class="image-container">
+        {% include "fields-image" with {
+          image: image
+        } only %}
+
+        {% if withAttribution %}
+          {% if attribution.attributionTitle is not empty or attribution.attributionDescription is not empty or attribution.link is not empty %}
+            <div class="attribution-container">
+
+              {% if attribution.attributionTitle is not empty %}
+
+              <span class="attribution-name">{{ attribution.attributionTitle}}</span>
+
+              {% endif %}
+
+
+              {% if attribution.attributionDescription is not empty %}
+
+                <span class="attribution-description">{{ attribution.attributionDescription }}</span>
+
+              {% endif %}
+
+              {% if attribution.link is not empty %}
+
+                {% include "fields-link" with {
+                  url: attribution.link.url,
+                  title: attribution.link.title,
+                  aria: attribution.link.aria
+                } only %}
+
+              {% endif %}
+
+            </div>
+
+          {% endif %}
+
+        {% endif %}
+
+      </div>
+    {% endif %}
+  </div>
+
+{% endblock %}

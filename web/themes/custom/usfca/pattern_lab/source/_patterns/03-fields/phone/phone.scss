@@ -1,0 +1,12 @@
+.f--phone {
+  a {
+    @extend %font-ibm-plex-serif-regular;
+    @include font-size(18, 24);
+    color: $color-black;
+    text-decoration: none;
+
+    @include hover {
+      color: $color-orange;
+    }
+  }
+}

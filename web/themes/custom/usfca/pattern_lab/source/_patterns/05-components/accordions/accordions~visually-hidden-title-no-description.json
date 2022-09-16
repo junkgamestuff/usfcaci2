@@ -1,0 +1,19 @@
+{
+  "title": "Accordions",
+  "description": null,
+  "hideTitle": true,
+  "accordions": [
+    {
+      "title": "Accordion One",
+      "markup": "<p>This is the accordion body</p>"
+    },
+    {
+      "title": "Accordion Two",
+      "markup": "<p>This is the accordion body</p>"
+    },
+    {
+      "title": "Accordion Three",
+      "markup": "<p>This is the accordion body</p>"
+    }
+  ]
+}

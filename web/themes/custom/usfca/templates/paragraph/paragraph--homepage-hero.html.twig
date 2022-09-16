@@ -1,0 +1,39 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+
+  {{ attach_library('usfca/homepage_hero') }}
+
+  {% set slides = [] %}
+
+  {% for item in fields.slides %}
+
+    {% set title = item.fields.title %}
+
+    {% if item.fields.title_highlight %}
+      {% set title = title | replace({(item.fields.title_highlight): '<span class="highlight">' ~ item.fields.title_highlight ~ '</span>'}) %}
+    {% endif %}
+
+    {% set slides = slides | merge([
+      {
+        title: title,
+        image: item.fields.image is not empty ? {
+          render: drupal_image(item.fields.image.uri, '1_1_full', { alt: item.fields.image.alt }, responsive=true),
+          src: item.fields.image.uri | image_style('1_1_720x720'),
+          alt: item.fields.image.alt,
+        } : [],
+        description: item.fields.description,
+        link: item.fields.link is not empty ? {
+          href: item.fields.link.url,
+          cta: item.fields.link.title,
+        } : null,
+        videoSrc: item.fields.ambient_video_url.url,
+      }
+    ]) %}
+  {% endfor %}
+
+  {% include "@pattern_lab/components-hero-home-slider" with {
+    slides: slides,
+  } only %}
+
+{% endblock content %}

@@ -1,0 +1,59 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+
+  <div class="content-top">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {% include "components-title-no-image" with {
+            title: fields.title,
+          } only %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-main">
+
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {{content.field_components}}
+
+        </div>
+      </div>
+    </div>
+
+    <div class="lc--layout-container lc--two-column">
+      <div class="l--layout l--two-column">
+
+          {{ content.field_views_reference }}
+
+      </div>
+    </div>
+
+  </div>
+
+  {% if content.field_components_footer | render | trim is not empty %}
+  <div class="content-bottom">
+
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {{ content.field_components_footer }}
+
+          {% include 'components-spacer' %}
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  {% endif %}
+
+{% endblock content %}

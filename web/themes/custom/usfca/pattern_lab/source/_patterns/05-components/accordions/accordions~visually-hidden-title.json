@@ -1,0 +1,19 @@
+{
+  "title": "Accordions",
+  "description": "<p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id</p>",
+  "hideTitle": true,
+  "accordions": [
+    {
+      "title": "Accordion One",
+      "markup": "<p>This is the accordion body</p>"
+    },
+    {
+      "title": "Accordion Two",
+      "markup": "<p>This is the accordion body</p>"
+    },
+    {
+      "title": "Accordion Three",
+      "markup": "<p>This is the accordion body</p>"
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+.cc--profile-header {
+  .top-wrapper {
+    @include padding(rem(20));
+    background: $color-sherpa-blue;
+
+    @include mq($bp768) {
+      @include padding(rem(40) cols(2) 0);
+      display: flex;
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(210) null null);
+      @include margin(rem(-150) null null);
+    }
+
+    .f--image {
+      @include margin(null null rem(19));
+
+      @include mq($bp768) {
+        @include margin(null null rem(-133));
+        width: cols(15, 44);
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(-210));
+      }
+    }
+
+    .profile-main {
+      @include mq($bp768) {
+        @include padding(null null null cols(2, 44));
+        width: cols(29, 44);
+      }
+
+      @include mq($bp1200) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .f--page-title {
+        @include margin(null rem(7) null null);
+        display: inline;
+
+        h1 {
+          @include margin(null null rem(11));
+          @include font-size(30, 30);
+          display: inline;
+          color: $color-white;
+          letter-spacing: 0;
+          text-transform: none;
+
+          @include mq($bp768) {
+            @include margin(rem(3) null rem(15));
+            @include font-size(36, 36);
+            letter-spacing: rem(.3);
+          }
+
+          @include mq($bp1024) {
+            @include margin(rem(6) null rem(20));
+            @include font-size(60, 60);
+          }
+        }
+      }
+
+      .f--sub-title {
+        @include margin(rem(9) null rem(10));
+
+        @include mq($bp768) {
+          @include margin(rem(13) null rem(30));
+        }
+
+        @include mq($bp1024) {
+          @include margin(rem(20) null rem(43));
+        }
+
+        h3 {
+          @extend %font-fira-sans-extra-condensed-regular;
+          @include font-size(20, 20);
+          color: $color-white;
+          letter-spacing: rem(.3);
+
+          @include mq($bp1024) {
+            @include font-size(36, 36);
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-wrapper {
+    @include padding(rem(21) rem(20));
+
+    @include mq($bp768) {
+      @include padding(0 cols(2) null);
+      display: flex;
+      flex-wrap: wrap;
+      min-height: rem(133);
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(27) cols(2) null cols(19));
+      min-height: rem(210);
+    }
+
+    .office-wrapper {
+      @include mq($bp768) {
+        @include padding(rem(30) cols(1, 44) null null);
+        order: 2;
+        width: cols(14, 44);
+      }
+
+      @include mq($bp1024) {
+        @include padding(0 cols(1, 27) null null);
+        order: 1;
+        width: cols(12, 27);
+      }
+
+      .f--label {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include font-size(18, 18);
+        @include margin(null null rem(16));
+
+        @include mq($bp1024) {
+          @include font-size(20, 20);
+          @include margin(null null rem(15));
+        }
+      }
+
+      .places-list {
+        @include no-bullet;
+
+        li {
+          @extend %font-fira-sans-extra-condensed-regular;
+          @include font-size(18, 18);
+          @include margin(null null rem(16));
+
+          @include mq($bp1024) {
+            @include margin(null null rem(14));
+            @include font-size(20, 20);
+          }
+        }
+      }
+    }
+
+    .contacts-wrapper {
+      @include padding(rem(14) null null);
+
+      @include mq($bp768) {
+        @include padding(rem(23) null null);
+        order: 3;
+        width: cols(13, 44);
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(6) null null);
+        order: 2;
+        width: cols(11, 27);
+      }
+
+      .f--email {
+        @include padding(null null null rem(36));
+        @include margin(null null rem(15));
+        background: url('../images/icons-usf/email.svg') no-repeat 0 center;
+        background-size: rem(20);
+
+        @include mq($bp768) {
+          @include padding(null null null rem(31));
+        }
+
+        @include mq($bp1024) {
+          @include padding(null null null rem(50));
+        }
+
+        a {
+          @include font-size(14, 24);
+          color: $color-sherpa-blue;
+          word-break: break-word;
+
+          @include mq($bp1024) {
+            @include font-size(16, 24);
+          }
+
+          @include hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      .f--address {
+        @include padding(null null null rem(36));
+        @include margin(null null rem(10));
+        @include font-size(14, 24);
+        background: url('../images/icons-usf/map_pin.svg') no-repeat 0 center;
+        background-size: rem(12);
+
+        @include mq($bp768) {
+          @include margin(null null rem(21));
+          @include padding(null null null rem(31));
+        }
+
+        @include mq($bp1024) {
+          @include font-size(16, 24);
+          @include margin(null null rem(18));
+          @include padding(null null null rem(50));
+        }
+      }
+
+      .f--phone {
+        @include padding(null null null rem(36));
+        @include margin(null null rem(15));
+        background: url('../images/icons-usf/phone_icon.svg') no-repeat 0 center;
+        background-size: rem(19);
+
+        @include mq($bp768) {
+          @include margin(null null rem(21));
+          @include padding(null null null rem(31));
+        }
+
+        @include mq($bp1024) {
+          @include margin(null null rem(16));
+          @include padding(null null null rem(50));
+        }
+
+        a {
+          @include font-size(14, 24);
+          color: $color-sherpa-blue;
+          text-decoration: underline;
+
+          @include mq($bp1024) {
+            @include font-size(16, 30);
+          }
+
+          @include hover {
+            color: $color-sherpa-blue;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .file-field-wrapper {
+        .f--link {
+          @include padding(null null null rem(36));
+          @include margin(null null rem(15));
+          background: url('../images/icons-usf/SSRN_icon.svg') no-repeat 0 center;
+          background-size: rem(17);
+
+          @include mq($bp768) {
+            @include padding(null null null rem(31));
+            @include margin(null null rem(22));
+          }
+
+          @include mq($bp1024) {
+            @include padding(null null null rem(50));
+            @include margin(null null rem(15));
+          }
+
+          a {
+            @include font-size(14, 24);
+            color: $color-sherpa-blue;
+            text-decoration: underline;
+
+            @include mq($bp1024) {
+              @include font-size(16, 30);
+            }
+
+            @include hover {
+              color: $color-sherpa-blue;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .contact-links {
+        @include no-bullet;
+        @include padding(null null null rem(36));
+        @include margin(null null rem(30));
+        background: url('../images/icons-usf/website_icon.svg') no-repeat 0 rem(7);
+        background-size: rem(20);
+
+        @include mq($bp768) {
+          @include margin(null null rem(19));
+          @include padding(null null null rem(31));
+        }
+
+        @include mq($bp1024) {
+          @include padding(null null null rem(50));
+        }
+
+        .f--link {
+          @include margin(null null rem(15));
+
+          @include mq($bp768) {
+            @include margin(null null rem(21));
+          }
+
+          @include mq($bp1024) {
+            @include margin(null null rem(16));
+          }
+
+          .link {
+            @include font-size(14, 24);
+            color: $color-sherpa-blue;
+            text-decoration: underline;
+            word-break: break-word;
+
+            @include mq($bp1024) {
+              @include font-size(16, 30);
+            }
+
+            @include hover {
+              color: $color-sherpa-blue;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .socials-container {
+      @include mq($bp768-1024) {
+        @include padding(23% cols(2, 44) null null);
+        flex-direction: column;
+      }
+
+      @include mq($bp768) {
+        display: flex;
+        order: 1;
+        width: cols(17, 44);
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(13) null null);
+        justify-content: flex-end;
+        order: 3;
+        width: cols(4, 27);
+      }
+
+      .social-links {
+        @include no-bullet;
+        display: flex;
+
+        @include mq($bp1024) {
+          flex-direction: column;
+        }
+
+        li {
+          &:last-child {
+            a {
+              @include mq($bp1024max) {
+                border-right: rem(1) solid $color-very-light-grey;
+              }
+
+              @include mq($bp1024) {
+                border-bottom: rem(1) solid $color-very-light-grey;
+              }
+            }
+          }
+        }
+
+        a {
+          display: flex;
+          position: relative;
+          align-items: center;
+          justify-content: center;
+          width: rem(50);
+          height: rem(50);
+          border: rem(1) solid $color-very-light-grey;
+          background: $color-white;
+
+          @include mq($bp1024max) {
+            border-right: 0;
+          }
+
+          @include mq($bp1024) {
+            border-bottom: 0;
+          }
+
+          @include hover {
+            background: $color-sherpa-blue;
+
+            svg {
+              path {
+                fill: $color-white;
+              }
+            }
+          }
+
+          svg {
+            width: rem(22);
+            height: rem(22);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "title": null,
+  "slides": [
+    {
+      "image": {
+        "src": "https://via.placeholder.com/1024x576/0000FF/FFFFFF",
+        "alt": "alt text 1"
+      },
+      "description": "<p>Curabitur aliquet quam id dui posuere blandit. Cras ultricies ligula sed magna dictum porta. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus.</p>"
+    },
+    {
+      "image": {
+        "src": "https://via.placeholder.com/1024x576/008080/FFFFFF",
+        "alt": "alt text 2"
+      },
+      "description": "<p>Phasellus aliquam elementum iaculis. Nulla facilisi. Nulla nec orci euismod metus mattis aliquet. Integer posuere, tortor a malesuada vehicula, tellus nunc pulvinar nisl, ac interdum ex nunc et risus. Curabitur vehicula tristique purus, ut gravida nibh porttitor ac. Etiam viverra ex nibh, nec.</p>"
+    },
+    {
+      "image": {
+        "src": "https://via.placeholder.com/1024x576/3B3B71/FFFFFF",
+        "alt": "alt text 3"
+      },
+      "description": "<p>Nulla mollis orci sed diam feugiat sodales. Donec diam sapien, ultricies eleifend lacus et, molestie ornare quam. In aliquet efficitur maximus. Duis fermentum purus eget metus porta, et fermentum augue accumsan. Aliquam pellentesque enim suscipit nunc elementum commodo.</p>"
+    },
+    {
+      "image": {
+        "src": "https://via.placeholder.com/1024x576/D11000/FFFFFF",
+        "alt": "alt text 4"
+      },
+      "description": "<p>Nunc at sem eu lectus volutpat sollicitudin et at nulla. Aenean ut mi id turpis varius varius accumsan non lectus. Suspendisse porttitor, diam vitae efficitur scelerisque, nisl dolor euismod nulla, fermentum varius lectus diam vel orci.</p>"
+    }
+  ]
+}

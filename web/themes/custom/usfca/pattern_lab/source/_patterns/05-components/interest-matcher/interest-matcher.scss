@@ -1,0 +1,305 @@
+.cc--interest-matcher {
+  @include mq($bp768) {
+    @include padding(rem(26) null null);
+  }
+
+  @include mq($bp1024) {
+    @include padding(rem(66) null null);
+  }
+
+  .f--description {
+    @extend %font-fira-sans-extra-condensed-regular;
+    @include maxwidth(800px);
+    @include padding(null rem(20));
+    @include margin(null null rem(27));
+    @include font-size(24, 30);
+    color: $color-sherpa-blue;
+    letter-spacing: rem(.2);
+    text-align: center;
+
+    @include mq($bp768) {
+      @include maxwidth(1080px);
+      @include font-size(30, 36);
+      @include padding(null cols(3));
+      @include margin(null null rem(63));
+    }
+
+    p {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(24, 30);
+      color: $color-sherpa-blue;
+      letter-spacing: rem(.2);
+
+      @include mq($bp768) {
+        @include font-size(30, 36);
+      }
+    }
+
+    a {
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  .interest-matcher-tabs {
+    @include no-bullet;
+    position: relative;
+
+    @include mq($bp768) {
+      @include padding(null cols(2));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &::before {
+        display: block;
+        position: absolute;
+        top: rem(91);
+        left: 0;
+        width: 100%;
+        border-bottom: rem(1) solid $color-sherpa-blue;
+        content: '';
+      }
+    }
+
+    .tab-item {
+      @include padding(rem(20));
+      background: $color-light-grey;
+
+      &:first-child {
+        background: none;
+      }
+
+      @include mq($bp768) {
+        @include padding(rem(21) cols(1, 44) rem(20));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: cols(14, 44);
+        order: 0;
+      }
+
+      &:first-child {
+        position: relative;
+        border: rem(1) solid $color-sherpa-blue;
+        border-bottom-color: $color-white;
+        background: $color-white;
+
+        @include mq($bp768max) {
+          @include padding(rem(15) null);
+          @include margin(null rem(20) rem(20));
+
+          &::before {
+            display: block;
+            position: absolute;
+            left: rem(-20);
+            bottom: 0;
+            width: rem(20);
+            border-bottom: rem(1) solid $color-sherpa-blue;
+            content: ''
+          }
+
+          &::after {
+            display: block;
+            position: absolute;
+            right: rem(-20);
+            bottom: 0;
+            width: rem(20);
+            border-bottom: rem(1) solid $color-sherpa-blue;
+            content: ''
+          }
+        }
+
+        @include mq($bp768) {
+          @include margin(null null rem(-1));
+        }
+
+        &.active {
+          border: rem(1) solid $color-sherpa-blue;
+          border-bottom-color: $color-white;
+          background: $color-white;
+
+          @include mq($bp768max) {
+            @include margin(null null rem(20));
+          }
+        }
+      }
+
+      &.active {
+        background: $color-sherpa-blue;
+
+        .f--label {
+          color: $color-white;
+        }
+      }
+
+      .f--link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        .link {
+          @extend %font-fira-sans-extra-condensed-semibold;
+          @include font-size(18, 20);
+          display: block;
+          color: $color-sherpa-blue;
+          text-align: center;
+          text-transform: uppercase;
+          text-decoration: none;
+
+          @include mq($bp768) {
+            @include font-size(20, 20);
+          }
+
+          @include hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .f--label {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include font-size(12, 12);
+        display: block;
+        color: $color-dove-gray;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        @include hover {
+          text-decoration: underline;
+        }
+
+        @include mq($bp768) {
+          display: none;
+        }
+      }
+
+      .form-item-wrapper {
+        width: 100%;
+      }
+
+      .fi--form-item-select {
+        @include mq($bp768) {
+          display: block;
+        }
+
+        label {
+          display: none;
+        }
+
+        .select-wrap {
+          border: rem(1) solid $color-sherpa-blue;
+
+          select {
+            @extend %font-fira-sans-extra-condensed-semibold;
+            @include font-size(20, 20);
+            @include padding(null rem(35) null rem(20));
+            height: rem(48);
+            color: $color-sherpa-blue;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    @include padding(rem(30) rem(20));
+    display: none;
+    position: relative;
+    width: 100vw;
+    background: $color-sherpa-blue;
+    text-align: center;
+    z-index: 10;
+
+    @include mq($bp768) {
+      @include padding(rem(43) cols(5) rem(40));
+      @include margin(null cols(-2, 44));
+      order: 1;
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(54) null);
+    }
+
+    .first-stage {
+      @include mq($bp768max) {
+        display: none;
+      }
+
+      h3 {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include font-size(30, 30);
+        display: inline-block;
+        color: $color-white;
+        vertical-align: top;
+
+        @include mq($bp768) {
+          @include font-size(36, 36);
+          @include margin(null null rem(24));
+        }
+
+        @include mq($bp1024) {
+          @include font-size(48, 48);
+        }
+      }
+
+      .f--link {
+        @include margin(rem(30) null null);
+
+        @include mq($bp768) {
+          @include margin(0 rem(50) null);
+          display: inline-block;
+        }
+
+        a {
+          @include button($secondary: true);
+          background: none;
+          color: $color-white;
+
+          @include hover {
+            background: none;
+            color: $color-white;
+          }
+        }
+      }
+    }
+
+    .second-stage {
+      display: none;
+
+      h3 {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include font-size(30, 30);
+        color: $color-white;
+        vertical-align: top;
+
+        @include mq($bp768) {
+          @include font-size(36, 36);
+          @include margin(null null rem(24));
+        }
+
+        @include mq($bp1024) {
+          @include font-size(48, 48);
+        }
+      }
+
+      .f--label {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include font-size(14, 16);
+        @include margin(rem(11) null null);
+        color: $color-white;
+        text-transform: uppercase;
+
+        @include mq($bp768) {
+          @include margin(rem(15) null null);
+          @include font-size(16, 16);
+        }
+      }
+    }
+  }
+}

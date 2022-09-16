@@ -1,0 +1,44 @@
+{% extends "base-component" %}
+
+{% set name = "header-alt" %}
+{% set container_element = 'div' %}
+
+{% block content %}
+
+  {% if hasNotificationBanner %}
+    {% include "components-notification-banner" with {
+      markup: notificationMarkup,
+      link: notificationLink
+    } only %}
+  {% endif %}
+
+  <div class="header-wrapper">
+    <div class="header-inner">
+      <div class="desktop-nav">
+        {% include "components-branding-header-alt" %}
+
+        <div class="header-buttons">
+          {% include "components-mobile-menu-hamburger" %}
+          {% include "components-search-widget" with { isClose: true, variant: "search-trigger-button" } %}
+        </div>
+
+        <div class="nav-container">
+          <div class="branding-mainmenu-container">
+            <div class="branding-mainmenu-container-inner">
+              {% include "components-main-menu-alt" with { menu: mainMenuAlt } %}
+            </div>
+          </div>
+
+          {# full screen view of the form #}
+
+          {% include "components-utility-menu-alt" with { menu: utilityMenuAlt } %}
+        </div>
+      </div>
+
+      {% include "components-search-form-alt" %}
+
+    </div>
+  </div>
+
+{% endblock %}
+

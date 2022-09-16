@@ -1,0 +1,283 @@
+{
+  "title": "News & Events",
+  "hasBasicHeader": true,
+  "description": null,
+  "section_title": "More <span class=\"highlight\">USF Events</span>",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "title-no-image",
+          "title": "Events"
+        },
+        {
+          "type": "featured-events",
+          "cards": [
+            {
+              "title": "Really High Profile Featured Event",
+              "date": "<span>6</span>March",
+              "time": "7:00pm to 9:00pm",
+              "description": "<p>Sit deserunt Lorem sint sit ex non cupidatat ullamco dolore proident laboris dolor ad. Ad adipisicing est nostrud commodo aliqua adipisicing.</p>",
+              "location": "At the best location possible",
+              "isVideo": false,
+              "image": {
+                "src": "https://placeimg.com/600/338/people",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              }
+            },
+            {
+              "title": "Two Rich Text and Image",
+              "date": "<span>6</span>March",
+              "time": "7:00pm to 9:00pm",
+              "description": "<p>Sit deserunt Lorem sint sit ex non cupidatat ullamco dolore proident laboris dolor ad. Ad adipisicing est nostrud commodo aliqua adipisicing.</p>",
+              "location": "At the best location possible",
+              "isVideo": false,
+              "image": {
+                "src": "https://placeimg.com/600/338/people",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              }
+            },
+            {
+              "title": "Three Rich Text and Image",
+              "date": "<span>6</span>March",
+              "time": "7:00pm to 9:00pm",
+              "description": "<p>Sit deserunt Lorem sint sit ex non cupidatat ullamco dolore proident laboris dolor ad. Ad adipisicing est nostrud commodo aliqua adipisicing.</p>",
+              "location": "At the best location possible",
+              "isVideo": false,
+              "image": {
+                "src": "https://placeimg.com/600/338/people",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              }
+            },
+            {
+              "title": "Four Rich Text and Image",
+              "date": "<span>6</span>March",
+              "time": "7:00pm to 9:00pm",
+              "description": "<p>Sit deserunt Lorem sint sit ex non cupidatat ullamco dolore proident laboris dolor ad. Ad adipisicing est nostrud commodo aliqua adipisicing.</p>",
+              "location": "At the best location possible",
+              "isVideo": false,
+              "image": {
+                "src": "https://placeimg.com/600/338/people",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              }
+            },
+            {
+              "title": "Four Rich Text and Image",
+              "date": "<span>6</span>March",
+              "time": "7:00pm to 9:00pm",
+              "description": "<p>Sit deserunt Lorem sint sit ex non cupidatat ullamco dolore proident laboris dolor ad. Ad adipisicing est nostrud commodo aliqua adipisicing.</p>",
+              "location": "At the best location possible",
+              "isVideo": false,
+              "image": {
+                "src": "https://placeimg.com/600/338/people",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              }
+            },
+            {
+              "title": "Four Rich Text and Image",
+              "date": "<span>6</span>March",
+              "time": "7:00pm to 9:00pm",
+              "description": "<p>Sit deserunt Lorem sint sit ex non cupidatat ullamco dolore proident laboris dolor ad. Ad adipisicing est nostrud commodo aliqua adipisicing.</p>",
+              "location": "At the best location possible",
+              "isVideo": false,
+              "image": {
+                "src": "https://placeimg.com/600/338/people",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "two-column",
+      "sidebar": [
+        {
+          "type": "filter-form",
+          "title": "Filter",
+          "items": [
+            {
+              "type": "text",
+              "label": null,
+              "placeholder": "First Letter / Keyword"
+            },
+            {
+              "type": "checkbox",
+              "namevalue": "by-category",
+              "title": "By Category",
+              "options": [
+                {
+                  "id": "college-of-arts-sciences",
+                  "value": "College of Arts & Sciences",
+                  "text": "College of Arts & Sciences"
+                },
+                {
+                  "id": "school-of-education",
+                  "value": "School of Education",
+                  "text": "School of Education"
+                },
+                {
+                  "id": "school-of-law",
+                  "value": "School of Law",
+                  "text": "School of Law"
+                },
+                {
+                  "id": "school-of-management",
+                  "value": "School of Management",
+                  "text": "School of Management"
+                },
+                {
+                  "id": "school-of-nursing-health-professions",
+                  "value": "School of Nursing & Health Professions",
+                  "text": "School of Nursing & Health Professions"
+                }
+              ]
+            },
+            {
+              "type": "date",
+              "namevalue": "by-date",
+              "title": "By Date",
+              "date_from": {
+                "name": "date-from",
+                "value": "01/04/2022",
+                "placeholder": "DD/MM/YYYY"
+              },
+              "date_to": {
+                "name": "date-to",
+                "value": "02/05/2022",
+                "placeholder": "DD/MM/YYYY"
+              }
+            },
+            {
+              "type": "checkbox",
+              "namevalue": "by-location",
+              "title": "By Location",
+              "options": [
+                {
+                  "id": "business-entrepreneurship",
+                  "value": "Business & Entrepreneurship",
+                  "text": "Business & Entrepreneurship"
+                },
+                {
+                  "id": "education",
+                  "value": "Education",
+                  "text": "Education"
+                },
+                {
+                  "id": "environment",
+                  "value": "Environment",
+                  "text": "Environment"
+                },
+                {
+                  "id": "health",
+                  "value": "Health",
+                  "text": "Health"
+                }
+              ]
+            },
+            {
+              "type": "submit",
+              "value": "Search"
+            },
+            {
+              "type": "reset",
+              "value": "CLEAR SELECTIONS"
+            }
+          ]
+        }
+      ],
+      "content": [
+        {
+          "type": "events-listing",
+          "cards": [
+            {
+              "date": "Sep 06, 2020",
+              "title": "Latest News Headline Lorem Ipsum Dolor Sit Amet",
+              "description": "<a href='#'>Sed</a> porttitor lectus <b>nibh</b> mauris <strong>blandit</strong> aliquet <i>eli</i> eget <em>tincidunt</em> nibh pulvinar ivamus magna justo lacinia eget consectetur sed",
+              "time": "10:30AM to 11:30AM",
+              "location": "Online Event",
+              "image": {
+                "src": "https://placeimg.com/300/170/people",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              }
+            },
+            {
+              "date": "Sep 06, 2020",
+              "title": "Latest News Headline Lorem Ipsum Dolor Sit Amet",
+              "description": "<p><a href='#'>Sed</a> porttitor lectus <b>nibh</b> mauris <strong>blandit</strong> aliquet <i>eli</i> eget <em>tincidunt</em> nibh pulvinar ivamus magna justo lacinia eget consectetur sed</p>",
+              "time": "10:30AM to 11:30AM",
+              "location": "Online Event",
+              "image": {
+                "src": "https://placeimg.com/300/170/people",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              }
+            },
+            {
+              "date": "Sep 06, 2020",
+              "title": "Latest News Headline Lorem Ipsum Dolor Sit Amet",
+              "description": "Sed porttitor lectus nibh mauris blandit aliquet eli eget tincidunt nibh pulvinar ivamus magna justo lacinia eget consectetur sed",
+              "time": "10:30AM to 11:30AM",
+              "location": "Online Event",
+              "image": {
+                "src": "https://placeimg.com/300/170/people",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              }
+            },
+            {
+              "date": "Sep 06, 2020",
+              "title": "Latest News Headline Lorem Ipsum Dolor Sit Amet",
+              "description": "Sed porttitor lectus nibh mauris blandit aliquet eli eget tincidunt nibh pulvinar ivamus magna justo lacinia eget consectetur sed",
+              "time": "10:30AM to 11:30AM",
+              "location": "Online Event",
+              "image": {
+                "src": "https://placeimg.com/300/170/people",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bottomLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "fifty-fifty-cta-groupings" }
+      ]
+    }
+  ]
+}

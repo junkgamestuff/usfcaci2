@@ -1,0 +1,25 @@
+{% extends "base-layout" %}
+
+{% set layout_name = "two-column" %}
+
+{% block layout_content %}
+
+  <div class="l--two-column-inner">
+
+    {% if section_title is not empty %}
+      {% include "fields-section-title" with { title: section_title } %}
+    {% endif %}
+
+    <aside class="lr--layout-region lr--sidebar">
+      {% block sidebar %}
+      {% endblock sidebar %}
+    </aside>
+
+    <div class="lr--layout-region lr--main">
+      {% block content %}
+      {% endblock content %}
+    </div>
+
+  </div>
+
+{% endblock layout_content %}

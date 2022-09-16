@@ -1,0 +1,51 @@
+{
+  "bodyClass": "transparent-header",
+  "pageTitle": "Landing Page Subpage",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "hero-landing-page",
+          "title": "City as Classroom",
+          "description": null
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "breadcrumbs",
+          "homeURL": "/",
+          "items": [
+            {
+              "title": "Academics",
+              "href": "#REPLACE"
+            },
+            {
+              "title": "San Francisco Connection",
+              "href": "#REPLACE"
+            },
+            {
+              "title": "City as a Classroom",
+              "href": "#REPLACE"
+            }
+          ]
+        },
+        { "type": "rich-text" },
+        { "type": "stats" },
+        { "type": "ribbon-carousel" },
+        { "type": "rich-text" },
+        { "type": "quote-and-cta" },
+        { "type": "rich-text" },
+        { "type": "map-with-pins" },
+        { "type": "fifty-fifty-cta-groupings" },
+        null,
+        null
+      ]
+    }
+  ],
+  "bottomLayouts": null
+}

@@ -1,0 +1,92 @@
+{
+  "title": "Filter",
+  "items": [
+    {
+      "type": "text",
+      "label": null,
+      "placeholder": "First Letter / Keyword"
+    },
+    {
+      "type": "checkbox",
+      "namevalue": "by-category",
+      "title": "By Category",
+      "options": [
+        {
+          "id": "college-of-arts-sciences",
+          "value": "College of Arts & Sciences",
+          "text": "College of Arts & Sciences"
+        },
+        {
+          "id": "school-of-education",
+          "value": "School of Education",
+          "text": "School of Education"
+        },
+        {
+          "id": "school-of-law",
+          "value": "School of Law",
+          "text": "School of Law"
+        },
+        {
+          "id": "school-of-management",
+          "value": "School of Management",
+          "text": "School of Management"
+        },
+        {
+          "id": "school-of-nursing-health-professions",
+          "value": "School of Nursing & Health Professions",
+          "text": "School of Nursing & Health Professions"
+        }
+      ]
+    },
+    {
+      "type": "date",
+      "namevalue": "by-date",
+      "title": "By Date",
+      "date_from": {
+        "name": "date-from",
+        "value": "01/04/2022",
+        "placeholder": "DD/MM/YYYY"
+      },
+      "date_to": {
+        "name": "date-to",
+        "value": "02/05/2022",
+        "placeholder": "DD/MM/YYYY"
+      }
+    },
+    {
+      "type": "checkbox",
+      "namevalue": "by-location",
+      "title": "By Location",
+      "options": [
+        {
+          "id": "business-entrepreneurship",
+          "value": "Business & Entrepreneurship",
+          "text": "Business & Entrepreneurship"
+        },
+        {
+          "id": "education",
+          "value": "Education",
+          "text": "Education"
+        },
+        {
+          "id": "environment",
+          "value": "Environment",
+          "text": "Environment"
+        },
+        {
+          "id": "health",
+          "value": "Health",
+          "text": "Health"
+        }
+      ]
+    },
+    {
+      "type": "submit",
+      "value": "Search"
+    },
+    {
+      "type": "reset",
+      "value": "CLEAR SELECTIONS"
+    }
+  ]
+}

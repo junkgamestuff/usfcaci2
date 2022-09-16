@@ -1,0 +1,111 @@
+{% extends "base-component" %}
+
+{% set name = "magazine-toc" %}
+
+{% block content %}
+
+  <div class="inner-wrapper">
+    <div class="header-container">
+      <div class="header-inner">
+        <span class="eyebrow">{{ eyebrow }}</span>
+        {% include "fields-section-title" with {
+          title: title
+        } only %}
+      </div>
+    </div>
+
+    <div class="toc-wrapper" aria-hidden="true" aria-expanded="false">
+      <div class="toc-container">
+        <div class="features">
+          <h3>{{ TocFeaturesLabel }}</h3>
+          <nav aria-label="Featured Magazine Articles">
+
+            {% set featuresCount = TocFeatures|length %}
+            {% set featuresHalfCount = featuresCount/2|round %}
+
+            <ul role="menu">
+              {% for item in TocFeatures|slice(0, featuresHalfCount) %}
+                <li>
+                  <a
+                    href="{{ item.href }}"
+                    role="menuitem"
+                    tabindex="-1"
+                    {% if item.ariaLabel is not empty %}aria-label="{{ item.ariaLabel }}"{% endif %}
+                    {% if item.target %}target="_blank"{% endif %}
+                  >{{ item.cta}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+
+            {% if featuresHalfCount %}
+              <ul role="menu">
+                  {% for item in TocFeatures|slice(featuresHalfCount, featuresCount) %}
+                    <li>
+                      <a
+                        href="{{ item.href }}"
+                        role="menuitem"
+                        tabindex="-1"
+                        {% if item.ariaLabel is not empty %}aria-label="{{ item.ariaLabel }}"{% endif %}
+                        {% if item.target %}target="_blank"{% endif %}
+                      >{{ item.cta}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+              </ul>
+            {% endif %}
+
+          </nav>
+        </div>
+
+        <div class="departments">
+          <h3>{{ departmentsLabel }}</h3>
+          <nav aria-label="Departments Magazine Articles">
+
+            {% set departmentsCount = departments|length %}
+            {% set departmentsHalfCount = departmentsCount/2|round %}
+
+            <ul role="menu">
+              {% for item in departments|slice(0, departmentsHalfCount) %}
+                <li>
+                  <a
+                    href="{{ item.href }}"
+                    role="menuitem"
+                    tabindex="-1"
+                    {% if item.ariaLabel is not empty %}aria-label="{{ item.ariaLabel }}"{% endif %}
+                    {% if item.target %}target="_blank"{% endif %}
+                  >{{ item.cta}}</a>
+                </li>
+              {% endfor %}
+            </ul>
+
+            {% if departmentsHalfCount %}
+              <ul role="menu">
+                  {% for item in departments|slice(departmentsHalfCount, departmentsCount) %}
+                    <li>
+                      <a
+                        href="{{ item.href }}"
+                        role="menuitem"
+                        tabindex="-1"
+                        {% if item.ariaLabel is not empty %}aria-label="{{ item.ariaLabel }}"{% endif %}
+                        {% if item.target %}target="_blank"{% endif %}
+                      >{{ item.cta}}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+              </ul>
+            {% endif %}
+
+          </nav>
+
+        </div>
+      </div>
+    </div>
+
+    {% include "fields-button" with {
+      buttonText: "Explore",
+      ariaLabel: "Explore the table of contents."
+    } %}
+
+  </div>
+
+{% endblock %}

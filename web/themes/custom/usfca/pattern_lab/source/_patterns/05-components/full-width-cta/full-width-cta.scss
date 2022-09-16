@@ -1,0 +1,194 @@
+$section-color: transparent;
+
+.cc--full-width-cta {
+  @include maxwidth;
+  background: $section-color;
+
+  .c--full-width-cta {
+    @include padding(rem(52) cols(3));
+
+    @include mq($bp768) {
+      @include padding(rem(72) cols(1) rem(68));
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(93) cols(3) rem(91));
+    }
+
+    .header-container {
+      @include margin(null null rem(28));
+      text-align: center;
+
+      @include mq($bp768) {
+        @include margin(null null rem(50));
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(50));
+      }
+
+      .f--section-title {
+        h2 {
+          @extend %h2;
+          @include font-size(36, 36);
+          @include margin(null null 0);
+          color: $color-sherpa-blue;
+
+          @include mq($bp768) {
+            @include font-size(36, 36);
+          }
+
+          @include mq($bp1024) {
+            @include font-size(48, 62);
+            @include margin(null null 0);
+          }
+        }
+      }
+
+      .f--description {
+        @include margin(rem(28) null null);
+
+        @include mq($bp1024) {
+          @include margin(rem(38) null null);
+        }
+        @include mq($bp1024) {
+          @include margin(rem(47) null null);
+          @include padding(null cols(7, 42));
+        }
+
+        p {
+          @include font-size(16, 24);
+          color: $color-black;
+
+          @include mq($bp768) {
+            @include font-size(16, 24);
+          }
+        }
+
+        a {
+          color: $color-sherpa-blue;
+          font-family: inherit;
+          font-size: inherit;
+          line-height: inherit;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .links-container {
+      display: flex;
+      flex-direction: column;
+
+      @include mq($bp768) {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .f--link {
+        @include mq($bp768) {
+          flex-basis: cols(14, 46);
+          flex-grow: 0;
+          flex-shrink: 0;
+        }
+
+        @include mq($bp1024) {
+          flex-basis: cols(12, 42);
+        }
+
+        &:not(:last-child) {
+          @include margin(null null rem(20));
+
+          @include mq($bp768) {
+            @include margin(null cols(2, 46) 0 null);
+          }
+
+          @include mq($bp1024) {
+            @include margin(null cols(3, 42) null null);
+          }
+        }
+
+        a {
+          @extend %font-fira-sans-extra-condensed-semibold;
+          @include padding(null cols(1, 12) null cols(2, 12));
+          @include font-size(30, 30);
+          display: flex;
+          position: relative;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          color: $color-black;
+          letter-spacing: rem(-.53);
+          text-align: center;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          @include mq($bp768max) {
+            min-height: rem(96);
+          }
+
+          @include mq($bp768) {
+            @include padding(null cols(1, 14) null cols(2, 14));
+            min-height: rem(96);
+          }
+
+          @include mq($bp1024) {
+            @include padding(null cols(1, 12) null cols(2, 12));
+            @include font-size(36, 48);
+            min-height: rem(150);
+          }
+
+          svg {
+            position: absolute;
+            top: calc(50% - 12px);
+            left: rem(-12);
+            width: rem(25);
+            height: rem(25);
+            transform: rotate(-45deg) translateY(calc(-50% + 12px));
+            background-color: $color-white;
+
+            @include mq($bp1024) {
+              top: calc(50% - 16px);
+              left: rem(-16);
+              width: rem(50);
+              height: rem(50);
+            }
+          }
+
+          @include hover {
+            path {
+              transform: translate3d(rem(6), rem(6), 0px);
+            }
+          }
+        }
+
+        @include color-swatch(
+          $colors: (
+            'lime': $color-atlantis,
+            'blue': $color-iris-blue,
+            'green': $color-sherpa-blue,
+            'yellow': $color-supernova,
+            'beige': $color-spanish-white,
+            'tan': $color-putty,
+            'moss': $color-wasabi,
+            'red': $color-chilean-fire,
+            'orange': $color-carrot-orange,
+            'gray': $color-gray-suit,
+            'turquoise': $color-caribbean-green,
+            'purple': $color-dark-purple
+          )
+        )
+
+        &.green {
+          a {
+            color: $color-white;
+          }
+        }
+      }
+    }
+  }
+}

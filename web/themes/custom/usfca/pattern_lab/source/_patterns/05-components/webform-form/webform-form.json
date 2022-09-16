@@ -1,0 +1,69 @@
+{
+  "items": [
+
+    {
+      "type": "pager",
+      "items": [
+        { "title": "First Page", "isActive": true },
+        { "title": "Second Page" },
+        { "title": "Third Page" }
+      ]
+    },
+
+    {
+      "type": "title",
+      "title": "Your Information"
+    },
+
+    {
+      "type": "text",
+      "label": "First Name"
+    },
+
+    {
+      "type": "select",
+      "label": "Dropdown Field",
+      "options": [
+        { "value": "1", "label": "All" },
+        { "value": "2", "label": "First Category" },
+        { "value": "3", "label": "Second Category" }
+      ]
+    },
+
+    {
+      "type": "date",
+      "label": "By Start Date"
+    },
+
+    {
+      "type": "text",
+      "label": "By Location",
+      "size": "10"
+    },
+
+    {
+      "type": "checkbox",
+      "label": "Confirm Selection",
+      "value": "A Checkbox"
+    },
+
+    {
+      "type": "radio"
+    },
+
+    {
+      "type": "textarea",
+      "label": "Your Note"
+    },
+
+    {
+      "type": "details"
+    },
+
+    {
+      "type": "button",
+      "value": "Submit"
+    }
+
+  ]
+}

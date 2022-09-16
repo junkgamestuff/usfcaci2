@@ -1,0 +1,24 @@
+{% extends "base-component" %}
+
+{% set name="sticky-cta" %}
+
+{% set container_element="section" %}
+
+{% block content %}
+
+  <div class="inner-wrapper">
+    {% if title %}
+      <h3>{{ title }}</h3>
+    {% endif %}
+
+    {% if link.href %}
+      {% include "fields-link" with {
+        href: link.href,
+        cta: link.cta,
+        ariaLabel: link.ariaLabel,
+        isAlt: true
+      } only %}
+    {% endif %}
+  </div>
+
+{% endblock %}
