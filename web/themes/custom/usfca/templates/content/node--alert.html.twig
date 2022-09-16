@@ -1,0 +1,16 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+
+  {% include "components-notification-banner" with {
+    title: fields.title,
+    timestamp: fields.authored_timestamp|date('F j, Y \\a\\t g:ia'),
+    markup: fields.description,
+    link: fields.link.url ? {
+      cta: fields.link.title,
+      href: fields.link.url,
+      ariaLabel: fields.link.attributes.aria_label ?? fields.link.title,
+    },
+  } only %}
+
+{% endblock content %}

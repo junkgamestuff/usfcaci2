@@ -1,0 +1,40 @@
+{
+  "bodyClass": "transparent-header",
+  "pageTitle": "Featured Article Page",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "article-hero-featured" }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "social-share" },
+        { "type": "rich-text-intro-text" },
+        { "type": "rich-text" },
+        { "type": "spacer" },
+        { "type": "article-quote" },
+        { "type": "rich-text" },
+        { "type": "image-gallery" },
+        null
+      ]
+    }
+  ],
+  "bottomLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "spacer"},
+        { "type": "related-articles" },
+        { "type": "spacer" },
+        { "type": "spacer" },
+        { "type": "subscription-signup" },
+        null
+      ]
+    }
+  ]
+}

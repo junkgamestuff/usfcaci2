@@ -1,0 +1,70 @@
+.f--description {
+  p {
+    @extend %font-ibm-plex-serif-regular;
+    @include margin(null null rem(30));
+    @include font-size(14, 18);
+    color: $color-primary;
+
+    @include mq($bp768) {
+      @include font-size(16, 24);
+    }
+  }
+
+  ul,
+  ol {
+    @include padding(rem(20) null rem(20) 0);
+    list-style: none;
+
+
+    li {
+      @include font-size(16, 26);
+      @include padding(null null null rem(25));
+      @include margin(null null rem(15));
+      position: relative;
+
+      @include mq($bp768) {
+        @include padding(null null null rem(30));
+      }
+
+      @include mq($bp1024) {
+        @include font-size(18, 28);
+      }
+
+      a {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+
+  ul {
+    li {
+      &::before {
+        display: block;
+        position: absolute;
+        top: rem(11);
+        left: 0;
+        width: rem(5);
+        height: rem(5);
+        border-radius: 50%;
+        background: $color-primary;
+        content: '';
+      }
+    }
+  }
+
+  ol {
+    counter-reset: li;
+
+    li::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $color-primary;
+      content: counter(li) '. ';
+      counter-increment: li;
+    }
+  }
+}

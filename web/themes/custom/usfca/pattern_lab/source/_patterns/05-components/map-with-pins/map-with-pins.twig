@@ -1,0 +1,53 @@
+{% extends "base-component" %}
+
+{% set name = "map-with-pins" %}
+
+{% block content %}
+
+  <div class="content-wrapper">
+    <div class="locations-header">
+      <div class="eyebrow">{{ eyebrow|raw }}</div>
+      {% include "fields-section-title" with { title: title } %}
+    </div>
+
+    <div class="locations-wrapper" data-center="{{ mapCenter }}" data-zoom="{{ mapZoomLevel }}">
+      {% for location in locations %}
+        <div class="location {{ loop.index0 != 0 ? 'hidden hidden-mob' : 'hidden-mob' }} id-{{ loop.index0 }}"
+          data-title="{{ location.title }}"
+          data-lng="{{ location.lng }}"
+          data-lat="{{ location.lat }}">
+
+          <button class="location-close">
+            <span class="visually-hidden">Close</span>
+            <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>close</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-9.000000, -9.000000)" fill="#ffffff"><path d="M25.4719587,9.08885563 L26.8861723,10.5030692 L19.4018556,17.9878556 L26.8861723,25.4719587 L25.4719587,26.8861723 L17.9878556,19.4018556 L10.5030692,26.8861723 L9.08885563,25.4719587 L16.5738556,17.9878556 L9.08885563,10.5030692 L10.5030692,9.08885563 L17.9878556,16.5738556 L25.4719587,9.08885563 Z"></path></g></g></svg>
+          </button>
+          <div class="text-wrapper">
+            {% if location.title is not empty %}
+              {% include "fields-cta-title" with {
+                title: location.title
+              } only %}
+            {% endif %}
+
+            {% if location.description is not empty %}
+              {% include "fields-description" with { description: location.description } only %}
+            {% endif %}
+
+            {% if location.link and location.link.url %}
+              {% include "fields-link" with {
+                cta: location.link.cta|default('Learn More'),
+                url: location.link.url,
+                aria: location.link.ariaLabel,
+                svgAfter: "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 31.7 54\" enable-background=\"new 0 0 31.7 54\" xml:space=\"preserve\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M21,27L0.7,47.8c0,0-1.9,2.3,0.5,4.9C3.6,55.2,6,53.3,6,53.3L31.7,27l0,0l0,0L6,0.7c0,0-2.3-2-4.8,0.5c-2.4,2.5-0.5,4.9-0.5,4.9L21,27z\"/></svg>"
+              } only %}
+            {% endif %}
+          </div>
+          {% if location.image and location.image.url %}
+            <img src="{{ location.image.url }}" alt="{{ location.image.alt|default("Campus") }}">
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div id="map"></div>
+{% endblock %}

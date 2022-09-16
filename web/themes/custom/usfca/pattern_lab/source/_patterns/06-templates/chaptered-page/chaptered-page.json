@@ -1,0 +1,49 @@
+{
+  "bodyClass": "chaptered-page transparent-header",
+  "title": "Chaptered Page",
+  "ariaLabel": "Lorem ipsum dolorsit amet",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "hero-landing-page",
+          "category": "<p>Computer science MS</p>",
+          "title": "Chapter Page with Hero Image"
+         },
+        { "type": "breadcrumbs",
+          "homeURL": "/",
+          "items": [
+            {
+              "title": "Admissions & Aid",
+              "href": "#REPLACE"
+            },
+            {
+              "title": "Undergraduate Admissions",
+              "href": "#REPLACE"
+            },
+            {
+              "title": "Current Students",
+              "href": "#REPLACE"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "chapter-content-main" }
+      ]
+    }
+  ],
+  "bottomLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "full-width-cta" }
+      ]
+    }
+  ]
+}

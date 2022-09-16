@@ -1,0 +1,60 @@
+.cc--profile-cards {
+  @include maxwidth;
+
+  .c--profile-cards {
+    @include padding(null cols(3));
+
+    @include mq($bp768) {
+      @include padding(null cols(2));
+    }
+  }
+
+  .f--field-components {
+    @include mq($bp768) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .f--section-title {
+    h2 {
+      @include margin(null null rem(20));
+
+      @include mq($bp768) {
+        @include margin(null null rem(30));
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(40));
+      }
+    }
+  }
+
+  .f--link {
+    text-align: center;
+
+    .button {
+      @include margin(rem(30) null null);
+
+      @include mq($bp1024) {
+        @include margin(rem(40) null null);
+      }
+    }
+  }
+
+  .cc--profile-card {
+    @include mq($bp768) {
+      @include margin(null cols(1, 44) null null);
+      flex: 0 0 cols(14, 44);
+      width: cols(14, 44);
+    }
+
+    &:last-child,
+    &:nth-of-type(3n) {
+      @include mq($bp768) {
+        margin-right: 0;
+      }
+    }
+  }
+}

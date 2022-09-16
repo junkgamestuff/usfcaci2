@@ -1,0 +1,227 @@
+.cc--split-screen-feature {
+  position: relative;
+
+  &.sidebar-right {
+    &.red {
+      .flex-container {
+        background-color: $color-orange;
+
+        @include mq($bp768) {
+          right: 0;
+        }
+
+        &::before {
+          @include mq($bp768) {
+            @include svg-angled-edge(432, $color-orange, (100 0, 100 0, 100 432, 10 432));
+            top: 0;
+            right: inherit;
+            left: rem(-100);
+            width: rem(100);
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    &.yellow {
+      .flex-container {
+        background-color: $color-orange;
+
+        @include mq($bp768) {
+          right: 0;
+        }
+
+        &::before {
+          @include mq($bp768) {
+            @include svg-angled-edge(432, $color-orange, (100 0, 100 0, 100 432, 10 432));
+            top: 0;
+            right: inherit;
+            left: rem(-100);
+            width: rem(100);
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    &.teal {
+      .flex-container {
+        background-color: $color-grey;
+
+        @include mq($bp768) {
+          right: 0;
+        }
+
+        &::before {
+          @include mq($bp768) {
+            @include svg-angled-edge(432, $color-grey, (100 0, 100 0, 100 432, 10 432));
+            top: 0;
+            right: inherit;
+            left: rem(-100);
+            width: rem(100);
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &.red {
+    .flex-container {
+      background-color: $color-orange;
+
+      &::before {
+        @include svg-angled-edge(60, $color-orange, (0, 35 100, 35 100, 0));
+        top: rem(-35);
+
+        @include mq($bp768) {
+          @include svg-angled-edge(432, $color-orange, (0 0, 100 0, 10 432, 0 432));
+          top: 0;
+          right: rem(-100);
+          left: inherit;
+          width: rem(100);
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &.yellow {
+    .flex-container {
+      background-color: $color-orange;
+
+      &::before {
+        @include svg-angled-edge(60, $color-orange, (0, 35 100, 35 100, 0));
+        top: rem(-35);
+
+        @include mq($bp768) {
+          @include svg-angled-edge(432, $color-orange, (0 0, 100 0, 10 432, 0 432));
+          top: 0;
+          right: rem(-100);
+          left: inherit;
+          width: rem(100);
+          height: 100%;
+        }
+      }
+    }
+
+    .header-container {
+      .f--section-title {
+        h2 {
+          color: $color-black;
+        }
+      }
+
+      .f--description {
+        p {
+          color: $color-black;
+        }
+      }
+
+      .f--link {
+        a {
+          @include button($black: true);
+        }
+      }
+    }
+  }
+
+  &.teal {
+    .flex-container {
+      background-color: $color-grey;
+
+      &::before {
+        @include svg-angled-edge(60, $color-grey, (0, 35 100, 35 100, 0));
+        top: rem(-35);
+
+        @include mq($bp768) {
+          @include svg-angled-edge(432, $color-grey, (0 0, 100 0, 10 432, 0 432));
+          top: 0;
+          right: rem(-100);
+          left: inherit;
+          width: rem(100);
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .flex-container {
+    position: relative;
+    background-color: $color-orange;
+
+    @include mq($bp768) {
+      display: flex;
+      position: absolute;
+      top: 0;
+      align-items: center;
+      width: cols(18);
+      height: 100%;
+      opacity: .9;
+    }
+  }
+
+  .header-container {
+    @include padding(rem(30) cols(1, 40));
+
+    @include mq($bp768) {
+      @include padding(rem(59) cols(2, 21) rem(53) cols(1, 21));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(5, 21) null cols(2, 21));
+    }
+
+    .f--section-title {
+      h2 {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include font-size(24, 30);
+        @include margin(null null rem(20));
+        color: $color-white;
+        text-align: left;
+        text-transform: none;
+
+        @include mq($bp768) {
+          @include font-size(24, 30);
+        }
+
+        @include mq($bp1024) {
+          @include font-size(36, 36);
+          @include margin(null null rem(27));
+        }
+      }
+    }
+
+    .f--description {
+      p {
+        @include margin(null null rem(20));
+        color: $color-white;
+        text-align: left;
+
+        @include mq($bp768) {
+          @include font-size(16, 26);
+          @include margin(null null rem(25));
+        }
+
+        @include mq($bp1024) {
+          @include font-size(18, 24);
+          @include margin(null null rem(30));
+        }
+      }
+    }
+
+    .f--link {
+      a {
+        @include button($white: true);
+
+        @include mq($bp768) {
+          width: cols(11, 18);
+        }
+
+        @include mq($bp1024) {
+          width: cols(7, 14);
+        }
+      }
+    }
+  }
+}

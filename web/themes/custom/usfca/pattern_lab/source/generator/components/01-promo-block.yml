@@ -1,0 +1,61 @@
+name: "promo-block"
+type: "component"
+markup:
+  content:
+    - type: container
+      class: 'text-container'
+      content:
+      - type: field
+        name: cta-title
+        with:
+          title: title
+          virtual: virtualTitle
+          link: 'null'
+      - type: field
+        name: description
+        with:
+          description: description
+      - type: field
+        name: link
+        with:
+          link: link
+    - type: container
+      class: 'image-container'
+      content:
+      - type: field
+        name: image
+        with:
+          image: image
+      - type: container
+        class: 'profile-container'
+        condition: profileName
+        content:
+          - type: field
+            name: name
+            markup: '{{ text }}'
+            with: 
+              text: profileName
+          - type: field
+            name: degree
+            markup: '{{ text }}'
+            with:
+              text: profileDegree
+          - type: field
+            name: profile-title
+            markup: '{{ title }}'
+            with:
+              title: profileTitle
+data:
+  title: "Fieldwork in Focus: Empowering Women Involved in Human Trafficking"
+  virtualTitle: false
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at finibus nisl, vitae ornare lacus. Praesent ex orci, molestie sit amet velit sit amet, pharetra volutpat risus."
+  link:
+    url: "/news/empowering"
+    title: "Read Patrice's Story"
+  image:
+    src: "/images/1_1_300x300.png"
+    alt: "Fieldwork in Focus"
+style:
+  - selector: '.c--promo-block'
+    grid:
+      across: 2

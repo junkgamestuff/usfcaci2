@@ -1,0 +1,182 @@
+// text color
+$text-color: $color-white;
+// gradient overlay
+$overlay-color: rgba($color-black, 0.3);
+$gradient-overlay-color: rgba($color-black, 0.42);
+$background-color-fallback: $color-primary;
+
+.cc--hero-home {
+  position: relative;
+
+  .image-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .f--image {
+      height: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      background-color: $background-color-fallback;
+      z-index: 1;
+      object-fit: cover;
+    }
+
+    .f--ambient-video {
+      display: none;
+      height: rem(450);
+
+      @include mq($bp768) {
+        height: rem(432);
+      }
+
+      @include mq($bp1024) {
+        display: block;
+        height: rem(675);
+
+        + .f--image {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .text-container {
+    @include maxwidth;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    min-height: rem(450);
+    z-index: 2;
+
+    @include mq($bp768) {
+      min-height: rem(432);
+    }
+
+    @include mq($bp1024) {
+      min-height: rem(675);
+    }
+
+    .text-container-inner {
+      @include padding(rem(30) cols(3) rem(20));
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+
+      @include mq($bp768) {
+        @include margin(0 null null);
+        @include padding(rem(30) cols(7));
+      }
+    }
+
+    .f--page-title {
+      @include margin(null null rem(15) null);
+
+      @include mq($bp768) {
+        @include margin(null null rem(20) null);
+      }
+
+      h1 {
+        @extend %font-fira-sans-extra-condensed-bold;
+        @include font-size(50, 50);
+        color: $text-color;
+        letter-spacing: rem(.5);
+
+        @include mq($bp768) {
+          @include font-size(65, 65);
+          letter-spacing: rem(1);
+        }
+
+        @include mq($bp1024) {
+          @include font-size(90, 90);
+        }
+      }
+    }
+
+    .f--description {
+      p {
+        @extend %font-fira-sans-regular;
+        @include font-size(18, 28);
+        margin: 0;
+        color: $text-color;
+
+        @include mq($bp768) {
+          @include font-size(20, 34);
+        }
+
+        @include mq($bp1024) {
+          @include font-size(24, 36);
+        }
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+
+    .f--link {
+      @include margin(rem(30) null null null);
+      min-width: rem(200);
+
+      @include mq($bp1024) {
+        @include margin(rem(40) null null null);
+      }
+    }
+  }
+
+  &.align-bottom {
+    .text-container {
+      .text-container-inner {
+        @include padding(null null rem(30));
+        justify-content: flex-end;
+
+        @include mq($bp768) {
+          @include padding(null null rem(40));
+        }
+
+        @include mq($bp1024) {
+          @include padding(null null rem(50));
+        }
+      }
+    }
+  }
+
+  &.has-overlay {
+    .image-video {
+      &::before {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $overlay-color;
+        content: '';
+        z-index: 1;
+      }
+    }
+
+    &.align-bottom {
+      .image-video {
+        &::before {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          background-image: linear-gradient(to top, $gradient-overlay-color 0, rgba(255, 0, 0, 0) 50%);
+          content: '';
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+name: abundance-grid
+type: component
+markup:
+  content:
+    - type: container
+      class: "abundance-container abundance-container-text"
+      content:
+        - type: field
+          name: section-title
+          with:
+            title: title
+        - type: field
+          name: description
+          with:
+            description: description
+        - type: field
+          name: link
+          with:
+            link: link
+    - type: container
+      class: "abundance-container abundance-container-large"
+    - type: container
+      class: "abundance-container abundance-container-large"
+    - type: container
+      class: "abundance-container abundance-container-small"
+      content:
+        - markup: '<span class-"abundance-button-shuffle"></span>'
+data:
+  title: "In the Classroom"
+  description: "<p>Features randomly selected instances of content manually created for this component—here, fun courses. Content refreshes on page load or manual refresh.</p>"
+  link:
+    url: "//home"
+    title: "View Course Catalogue"
+  items:
+    - eyebrow: "English"
+      title: "(Dis)ability and Literature"
+      description: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+      image:
+        src: "/images/1_1_300x300.png"
+        alt: "An Image"
+      link:
+        url: "https://example.com"
+        target: "_blank"
+    - eyebrow: "Anthropology"
+      title: "Games, Culture, and Power"
+      description: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+      image:
+        src: "/images/1_1_300x300.png"
+        alt: "An Image"
+      video:
+        embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UDIQwGb-4YQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      link:
+        url: "https://example.com"
+        target: "_blank"
+    - eyebrow: "Mathematics"
+      title: "Topology and Geometry of Singular Spaces"
+      link:
+        url: "https://example.com"
+        target: "_blank"
+    - eyebrow: "Physics"
+      title: "Einstein's Dice"
+      link:
+        url: "https://example.com"
+        target: "_blank"
+    - eyebrow: "Film Studies"
+      title: "Alien Encounters"
+      link:
+        url: "https://example.com"
+        target: "_blank"
+    - eyebrow: "Large"
+      title: "Another large grid item"
+      description: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>"
+      image:
+        src: "/images/1_1_300x300.png"
+        alt: "An Image"
+      link:
+        url: "https://example.com"
+        target: "_blank"
+    - eyebrow: "Small"
+      title: "Another small grid item"
+      link:
+        url: "https://example.com"
+        target: "_blank"

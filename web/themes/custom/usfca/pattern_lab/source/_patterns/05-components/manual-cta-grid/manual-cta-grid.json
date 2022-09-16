@@ -1,0 +1,78 @@
+{
+  "title": "Schools & <span class=\"highlight\">Colleges</span>",
+  "description": "<p>Id tempor irure aliquip ex nisi consequat cupidatat laboris pariatur. Amet dolore laboris sit ex proident cillum Lorem laborum occaecat ut dolor. Cillum culpa quis cupidatat nostrud excepteur elit. Consectetur magna officia aliqua elit voluptate aliquip culpa in ex labore occaecat qui ad.</p>",
+  "cards": [
+    {
+      "title": "Manual CTA Grid Card One",
+      "image": {
+        "src": "https://placeimg.com/700/394/nature",
+        "alt": "Image Alt Text4",
+        "link": "https://www.example.com/"
+      },
+      "link": {
+        "href": "https://www.example.com/"
+      },
+      "description": "<p>Duis aute irure dolor <i>in reprehenderit</i> in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+    },
+    {
+      "title": "Manual CTA Grid Card Two",
+      "image": {
+        "src": "https://placeimg.com/700/394/nature",
+        "alt": "Image Alt Text4",
+        "link": "https://www.example.com/"
+      },
+      "link": {
+        "href": "https://www.example.com/"
+      },
+      "description": "<p>Duis aute irure dolor in <strong>reprehenderit</strong> in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+    },
+    {
+      "title": "Manual CTA Grid Card Three",
+      "image": {
+        "src": "https://placeimg.com/700/394/nature",
+        "alt": "Image Alt Text4",
+        "link": "https://www.example.com/"
+      },
+      "link": {
+        "href": "https://www.example.com/"
+      },
+      "description": "<p>Duis aute irure <em>dolor in reprehenderit</em> in <b>voluptate</b> velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+    },
+    {
+      "title": "Manual CTA Grid Card Four",
+      "image": {
+        "src": "https://placeimg.com/700/394/nature",
+        "alt": "Image Alt Text4",
+        "link": "https://www.example.com/"
+      },
+      "link": {
+        "href": "https://www.example.com/"
+      },
+      "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+    },
+    {
+      "title": "Manual CTA Grid Card Five",
+      "image": {
+        "src": "https://placeimg.com/700/394/nature",
+        "alt": "Image Alt Text4",
+        "link": "https://www.example.com/"
+      },
+      "link": {
+        "href": "https://www.example.com/"
+      },
+      "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+    },
+    {
+      "title": "Manual CTA Grid Card Six",
+      "image": {
+        "src": "https://placeimg.com/700/394/nature",
+        "alt": "Image Alt Text4",
+        "link": "https://www.example.com/"
+      },
+      "link": {
+        "href": "https://www.example.com/"
+      },
+      "description": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit. </p>"
+    }
+  ]
+}

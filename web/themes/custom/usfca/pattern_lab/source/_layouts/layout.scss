@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  #l--main-header {
+    height: rem(80);
+
+    @include mq($bp768) {
+      height: rem(120);
+    }
+
+    @include mq($bp1024) {
+      height: rem(150);
+    }
+  }
+
+  &.maintenance-page {
+    header {
+      @include padding(rem(50) rem(40) rem(20));
+
+      svg {
+        max-width: rem(300);
+      }
+    }
+
+    main {
+      @include padding(null rem(40));
+
+      h1 {
+        @extend %font-fira-sans-extra-condensed-bold;
+        @include margin(null null rem(30));
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &.search-is-open,
+  &.mobile-menu-open {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}

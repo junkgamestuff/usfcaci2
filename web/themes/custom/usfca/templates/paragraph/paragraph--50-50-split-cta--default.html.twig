@@ -1,0 +1,43 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% set title = fields.title %}
+
+  {% if fields.title_highlight %}
+    {% set title = title|replace({(fields.title_highlight): '<span class="highlight">' ~ fields.title_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% set links = [] %}
+
+  {% for item in fields.link_x2 %}
+    {% set links = links | merge([{
+      title: item.title,
+      url: item.url,
+      ariaLabel: item.attributes.aria_label ?? item.title
+    }]) %}
+  {% endfor %}
+
+  {% include "components-fifty-fifty-split-cta" with {
+    title: title,
+    description: fields.description,
+    image: fields.image.uri ? {
+      src: fields.image.uri | image_style('16_9_637x359'),
+      alt: fields.image.alt,
+      render: drupal_image(fields.image.uri, '1_1_full', {alt: fields.image.alt}, responsive=true),
+    } : null,
+    items: links,
+    withAttribution: fields.inset_cta.fields.title is not empty,
+    attribution: fields.inset_cta.fields.title is not empty ? {
+      attributionTitle : fields.inset_cta.fields.title,
+      attributionDescription: fields.inset_cta.fields.description,
+      link: fields.inset_cta.fields.link is not empty ? {
+        title: fields.inset_cta.fields.link.title,
+        url: fields.inset_cta.fields.link.url,
+        ariaLabel: fields.inset_cta.fields.link.attributes.aria_label,
+      } : null,
+    } : null,
+    reverse: fields.layout == 'reverse' ? false : true,
+  } only %}
+
+{% endblock content %}

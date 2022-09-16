@@ -1,0 +1,12 @@
+{
+  "topLayouts": null,
+  "layouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "login-form" }
+      ]
+    }
+  ],
+  "bottomLayouts": null
+}

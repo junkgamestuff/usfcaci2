@@ -1,0 +1,289 @@
+$color-text: $color-black;
+
+.cc--fifty-fifty-split-cta {
+  .c--fifty-fifty-split-cta {
+    @include maxwidth;
+
+    .text-image-container {
+      display: flex;
+      flex-direction: column;
+
+      @include mq($bp768) {
+        flex-direction: row;
+      }
+
+      .image-container {
+        position: relative;
+        order: 1;
+
+        @include mq($bp768) {
+          order: 2;
+          width: cols(24);
+        }
+
+        .f--image {
+          position: relative;
+
+          @include mq($bp768) {
+            height: 100%;
+          }
+
+          @include mq($bp1024) {
+            @include padding(null null 0);
+          }
+
+          &::before {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 66%;
+            background: linear-gradient(to bottom, transparent, rgba($color-black, .6));
+            content: '';
+            z-index: 1;
+          }
+        }
+
+        .f--image img {
+          position: relative;
+
+          @include mq($bp768) {
+            position: relative;
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+          }
+        }
+      }
+
+      .attribution-container {
+        @include padding(rem(15) rem(20));
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+
+        @include mq($bp768) {
+          @include padding(null cols(2, 24) rem(16));
+        }
+
+        @include mq($bp1024) {
+          @include padding(null 0 rem(35) cols(1, 24));
+          max-width: cols(14, 24);
+        }
+
+        .attribution-name {
+          @extend %font-fira-sans-extra-condensed-semibold;
+          @include margin(null null rem(10));
+          @include font-size(24, 26);
+          display: block;
+          color: $color-white;
+
+          @include mq($bp768) {
+            @include margin(null null rem(7));
+          }
+
+          @include mq($bp1024) {
+            @include margin(null null rem(5));
+          }
+        }
+
+        .attribution-description {
+          @extend %font-ibm-plex-serif-regular;
+          @include font-size(14, 18);
+          @include margin(null null rem(10));
+          display: block;
+          color: $color-white;
+
+          @include mq($bp768) {
+            @include margin(null null rem(23));
+          }
+
+          @include mq($bp1024) {
+            @include margin(null null rem(25));
+            @include font-size(16, 24);
+          }
+
+          p {
+            @extend %font-ibm-plex-serif-regular;
+            @include font-size(14, 18);
+            color: $color-white;
+
+            @include mq($bp1024) {
+              @include font-size(16, 24);
+            }
+          }
+
+          a {
+            color: $color-white;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+
+        .f--link a {
+          @extend %font-fira-sans-bold;
+          @include font-size(18, 19);
+          position: relative;
+          color: $color-white;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          @include mq($bp768) {
+            @include font-size(20, 19);
+          }
+
+          &::after {
+            display: inline-block;
+            position: absolute;
+            top: rem(2);
+            right: rem(-21);
+            width: rem(10);
+            height: rem(17);
+            background: url('../images/icons/icon-yellow-arrow.svg') no-repeat 0 0;
+            background-size: cover;
+            content: '';
+
+            @include mq($bp768) {
+              top: rem(0);
+              right: rem(-25);
+              width: rem(14);
+              height: rem(24);
+            }
+          }
+
+          @include hover {
+            text-decoration: underline;
+
+            &::after {
+              transform: translate3d(rem(3), 0, 0);
+              transition: transform $transition-duration-fast $transition-easing-default;
+            }
+          }
+        }
+
+        .button--alt {
+          @include hover {
+            border-color: $color-white;
+          }
+        }
+      }
+
+      .text-container {
+        @include padding(rem(12) rem(20) rem(12));
+        order: 2;
+        color: $color-text;
+
+        @include mq($bp768) {
+          @include padding(rem(24) cols(2));
+          display: flex;
+          flex-direction: column;
+          order: 1;
+          width: cols(24);
+        }
+
+        @include mq($bp1024) {
+          justify-content: center;
+        }
+
+        .f--category {
+          @include margin(null null rem(20));
+        }
+
+        .f--section-title {
+          h2 {
+            @include font-size(36, 36);
+            @include margin(null null rem(20));
+            color: $color-sherpa-blue;
+            text-align: left;
+
+            @include mq($bp768) {
+              @include font-size(48, 50);
+            }
+          }
+        }
+
+        .f--description {
+          p {
+            @include margin(null null rem(15));
+            @include font-size(14, 18);
+            color: $color-text;
+
+            @include mq($bp768) {
+              @include font-size(16, 24);
+              @include margin(null null rem(5));
+            }
+
+            @include mq($bp1024) {
+              @include margin(null null rem(40));
+            }
+
+            &:last-child {
+              @include margin(null null 0);
+            }
+
+            a {
+              color: $color-sherpa-blue;
+              font-family: inherit;
+              font-size: inherit;
+              line-height: inherit;
+
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+
+        .link-list {
+          @include margin(rem(15) null null);
+
+          @include mq($bp768) {
+            @include margin(rem(30) null null);
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+          }
+        }
+
+        .f--link {
+          @include margin(null null rem(10));
+
+          &:last-child {
+            @include margin(null 0 0);
+          }
+
+          a {
+            @include button($secondary: true);
+            white-space: normal;
+
+            @include mq($bp768) {
+              width: rem(325);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.image-left {
+    .text-image-container {
+      .image-container {
+        @include mq($bp768) {
+          order: 1;
+        }
+      }
+
+      .text-container {
+        @include mq($bp768) {
+          order: 2;
+        }
+      }
+    }
+  }
+}

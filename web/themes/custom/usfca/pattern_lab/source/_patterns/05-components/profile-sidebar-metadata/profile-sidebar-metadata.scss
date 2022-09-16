@@ -1,0 +1,66 @@
+$sidebar-bg-color: $color-light-grey;
+$radius: 0;
+
+.cc--profile-sidebar-metadata {
+  @include mq($bp768) {
+    border-radius: 0 $radius $radius 0;
+    overflow: hidden;
+  }
+
+  &.mobile {
+    @include margin(null cols(-3, 42) rem(50));
+
+    @include mq($bp768) {
+      display: none;
+    }
+  }
+
+  &.desktop {
+    @include mq($bp768max) {
+      display: none;
+    }
+  }
+
+  .data-wrapper {
+    @include padding(rem(30) cols(3, 42) rem(30));
+    background: $sidebar-bg-color;
+
+    @include mq($bp768) {
+      @include padding(rem(25) cols(2, 15) rem(40));
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(45) cols(2, 13) rem(50));
+    }
+  }
+
+  .f--link {
+    @include margin(null null rem(30));
+  }
+
+  .details-wrapper {
+    label {
+      @extend %font-fira-sans-extra-condensed-bold;
+      @include margin(null null rem(10));
+      @include font-size(22, 26);
+      display: block;
+      text-transform: uppercase;
+
+      @include mq($bp768) {
+        @include font-size(20, 23);
+      }
+
+      @include mq($bp1024) {
+        @include font-size(22, 28);
+      }
+    }
+
+    .f--text {
+      @include font-size(16, 28);
+
+      @include mq($bp1024) {
+        @include font-size(18, 32);
+      }
+    }
+  }
+}

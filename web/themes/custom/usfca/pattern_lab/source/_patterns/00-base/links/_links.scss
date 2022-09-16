@@ -1,0 +1,26 @@
+%link,
+.lc--layout-container a {
+  @extend %font-ibm-plex-serif-regular;
+  @include font-size(16, 28);
+  color: $color-link;
+  text-decoration: $link-default-decoration;
+
+  @include hover {
+    color: $color-link-hover;
+    text-decoration: $link-default-hover-decoration;
+  }
+
+  @include mq($bp1024) {
+    @include font-size(18, 32);
+  }
+}
+
+.link {
+  @extend %link;
+}
+
+%link-alt {
+  @include margin(null null null rem(5));
+  display: inline-block;
+  content: '>';
+}

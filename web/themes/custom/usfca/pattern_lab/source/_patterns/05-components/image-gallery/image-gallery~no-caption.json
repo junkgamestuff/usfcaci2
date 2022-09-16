@@ -1,0 +1,33 @@
+{
+  "title": null,
+  "slides": [
+    {
+      "image": {
+        "src": "https://via.placeholder.com/1024x576/0000FF/FFFFFF",
+        "alt": "alt text 1"
+      },
+      "description": ""
+    },
+    {
+      "image": {
+        "src": "https://via.placeholder.com/1024x576/008080/FFFFFF",
+        "alt": "alt text 2"
+      },
+      "description": ""
+    },
+    {
+      "image": {
+        "src": "https://via.placeholder.com/1024x576/3B3B71/FFFFFF",
+        "alt": "alt text 3"
+      },
+      "description": ""
+    },
+    {
+      "image": {
+        "src": "https://via.placeholder.com/1024x576/D11000/FFFFFF",
+        "alt": "alt text 4"
+      },
+      "description": ""
+    }
+  ]
+}

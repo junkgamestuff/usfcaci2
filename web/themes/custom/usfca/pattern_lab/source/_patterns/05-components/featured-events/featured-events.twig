@@ -1,0 +1,44 @@
+{% extends "base-component" %}
+
+{% set name = "featured-events" %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Featured Events" %}
+
+
+{% block content %}
+  {% include "fields-section-title" with { title: title } %}
+
+  <div class="flex-container">
+    {% if cards[0]|length %}
+      <div class="featured-card">
+        {% include "components-featured-event-card" with {
+          title: cards[0].title,
+          link: cards[0].link,
+          image: cards[0].image,
+          time: cards[0].time,
+          location: cards[0].location,
+          description: cards[0].description,
+          date: cards[0].date,
+          isVideo: cards[0].isVideo
+        } only %}
+      </div>
+    {% endif %}
+
+  </div>
+
+  {% set cardsArray = [] %}
+
+  {% for card in cards %}
+    {% if loop.index > 1 %}
+      {% set cardsArray = cardsArray|merge([card]) %}
+    {% endif %}
+  {% endfor %}
+
+  {% include "components-event-cards" with {
+    cards: cardsArray,
+    title: null,
+    link: null,
+    container_element: 'div'
+  } %}
+
+{% endblock %}

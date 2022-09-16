@@ -1,0 +1,76 @@
+{
+  "title": "Get more <span class=\"highlight\">than&nbsp;a&nbsp;degree</span>",
+  "titleHighlight": "than a degree",
+  "slides": [
+    {
+      "tabTitle": "Learn to <span class=\"highlight\">create impact</span>",
+      "titleHighlight": "create impact",
+      "image": {
+        "src": "https://placeimg.com/1500/1300/people",
+        "alt": "Image Alt Text"
+      },
+      "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>",
+      "link": {
+        "title": "More Information",
+        "url": "https://www.example.com/",
+        "ariaLabel": "An Example Aria Label for CTA Link"
+      }
+    },
+    {
+      "tabTitle": "Learn to <span class=\"highlight\">question yourself</span>",
+      "titleHighlight": "question yourself",
+      "image": {
+        "src": "https://placeimg.com/1500/1300/animals",
+        "alt": "Image Alt Text"
+      },
+      "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>",
+      "link": {
+        "title": "More Information",
+        "url": "https://www.example.com/",
+        "ariaLabel": "An Example Aria Label for CTA Link"
+      }
+    },
+    {
+      "tabTitle": "Learn <span class=\"highlight\">from the city</span>",
+      "titleHighlight": "from the city",
+      "image": {
+        "src": "https://placeimg.com/1500/1300/city",
+        "alt": "Image Alt Text"
+      },
+      "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>",
+      "link": {
+        "title": "More Information",
+        "url": "https://www.example.com/",
+        "ariaLabel": "An Example Aria Label for CTA Link"
+      }
+    },
+    {
+      "tabTitle": "Learn <span class=\"highlight\">by doing</span>",
+      "titleHighlight": "by doing",
+      "image": {
+        "src": "https://placeimg.com/1500/1300/nature",
+        "alt": "Image Alt Text"
+      },
+      "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>",
+      "link": {
+        "title": "More Information",
+        "url": "https://www.example.com/",
+        "ariaLabel": "An Example Aria Label for CTA Link"
+      }
+    },
+    {
+      "tabTitle": "Learn <span class=\"highlight\">global perspectives</span>",
+      "titleHighlight": "global perspectives",
+      "image": {
+        "src": "https://placeimg.com/1500/1300/people",
+        "alt": "Image Alt Text"
+      },
+      "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>",
+      "link": {
+        "title": "More Information",
+        "url": "https://www.example.com/",
+        "ariaLabel": "An Example Aria Label for CTA Link"
+      }
+    }
+  ]
+}

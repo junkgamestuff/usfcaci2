@@ -1,0 +1,37 @@
+.tc--basic-page {
+  .content-main {
+    @include padding(null cols(3));
+
+    @include mq($bp768) {
+      @include padding(null cols(2));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(8));
+    }
+  }
+
+  .header-container {
+    @include margin(rem(20) null);
+
+    @include mq($bp768) {
+      @include margin(rem(50) null rem(30));
+    }
+  }
+
+  &.emergency {
+    .cc--title-no-image {
+      @include margin(0 null rem(75));
+      @include padding(rem(40) null rem(40));
+      background-color: $color-chestnut;
+
+      @include mq($bp1024) {
+        @include padding(rem(18) null rem(47));
+      }
+
+      h1 {
+        color: $color-white;
+      }
+    }
+  }
+}

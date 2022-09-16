@@ -1,0 +1,58 @@
+.cc--rich-text-intro-text {
+  @include maxwidth;
+
+  .c--rich-text-intro-text {
+    @include padding(null cols(3));
+    @include margin(null null rem(20));
+
+    @include mq($bp768) {
+      @include margin(null null rem(30));
+      @include padding(null cols(4));
+    }
+
+    .l--two-column &,
+    .l--two-column-reverse & {
+      @include padding(null 0);
+    }
+  }
+
+  .f--wysiwyg {
+    p {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(24, 30);
+      color: $color-sherpa-blue;
+
+      @include mq($bp768) {
+        @include font-size(30, 36);
+      }
+
+      a {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+}
+
+.cc--component-container {
+  .c--component {
+    .f--field {
+      .intro-text {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include font-size(24, 30);
+        color: $color-sherpa-blue;
+      
+        @include mq($bp768) {
+          @include font-size(30, 36);
+        }
+      
+        a {
+          font-family: inherit;
+          font-size: inherit;
+          line-height: inherit;
+        }
+      }
+    }
+  }
+}

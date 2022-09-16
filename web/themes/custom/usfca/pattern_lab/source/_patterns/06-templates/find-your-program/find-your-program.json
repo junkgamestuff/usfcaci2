@@ -1,0 +1,216 @@
+{
+  "bodyClass": "transparent-header",
+  "title": "Undergraduate Majors & Minors",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "hero-tabbed-navigation" },
+        {
+          "type": "breadcrumbs",
+          "homeURL": "/",
+          "items": [
+            {
+              "title": "Admissions & Aid",
+              "href": "#REPLACE"
+            },
+            {
+              "title": "Undergraduate Admissions",
+              "href": "#REPLACE"
+            },
+            {
+              "title": "Current Students",
+              "href": "#REPLACE"
+            }
+          ]
+        },
+        {
+          "type": "interest-matcher"
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "two-column",
+      "sidebar": [
+        {
+          "type": "filter-form",
+          "title": "Filter",
+          "items": [
+            {
+              "type": "text",
+              "label": null,
+              "placeholder": "First Letter / Keyword"
+            },
+            {
+              "type": "checkbox",
+              "namevalue": "degree",
+              "title": "Degree",
+              "options": [
+                {
+                  "id": "major",
+                  "value": "Major",
+                  "text": "Major"
+                },
+                {
+                  "id": "minor",
+                  "value": "Minor",
+                  "text": "Minor"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "namevalue": "school",
+              "title": "School",
+              "options": [
+                {
+                  "id": "college-of-arts-sciences",
+                  "value": "College of Arts & Sciences",
+                  "text": "College of Arts & Sciences"
+                },
+                {
+                  "id": "school-of-education",
+                  "value": "School of Education",
+                  "text": "School of Education"
+                },
+                {
+                  "id": "school-of-law",
+                  "value": "School of Law",
+                  "text": "School of Law"
+                },
+                {
+                  "id": "school-of-management",
+                  "value": "School of Management",
+                  "text": "School of Management"
+                },
+                {
+                  "id": "school-of-nursing-health-professions",
+                  "value": "School of Nursing & Health Professions",
+                  "text": "School of Nursing & Health Professions"
+                }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "namevalue": "location",
+              "title": "Location",
+              "options": [
+                {
+                  "id": "business-entrepreneurship",
+                  "value": "Business & Entrepreneurship",
+                  "text": "Business & Entrepreneurship"
+                },
+                {
+                  "id": "education",
+                  "value": "Education",
+                  "text": "Education"
+                },
+                {
+                  "id": "environment",
+                  "value": "Environment",
+                  "text": "Environment"
+                },
+                {
+                  "id": "health",
+                  "value": "Health",
+                  "text": "Health"
+                }
+              ]
+            },
+            {
+              "type": "submit",
+              "value": "Search"
+            },
+            {
+              "type": "reset",
+              "value": "CLEAR SELECTIONS"
+            }
+          ]
+        }
+      ],
+      "content": [
+        {
+          "type": "program-listing",
+          "accordions": [
+            {
+              "title": "Accounting",
+              "programType": "Major",
+              "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p><ol><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<ol><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><li>Nulla convallis ante elit, at consequat ipsum ultricies ut.<\/li><li>Vivamus gravida tellus ut lacinia feugiat.<ol><li>Aliquam in varius purus.<\/li><li>Nullam ut sodales ante.<\/li><\/ol><\/li><\/ol><\/li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<\/li><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><\/ol><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<ul><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><li>Nulla convallis ante elit, at consequat ipsum ultricies ut.<\/li><li>Vivamus gravida tellus ut lacinia feugiat.<ul><li>Aliquam in varius purus.<\/li><li>Nullam ut sodales ante.<\/li><\/ul><\/li><\/ul><\/li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<\/li><li>Aliquam in varius purus. Nullam ut sodales ante.<\/li><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.<\/li><\/ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis tortor bibendum, feugiat tellus sit amet, bibendum libero. Donec congue lectus non velit tristique pharetra. Praesent vulputate, libero at dictum consectetur, ligula sem egestas turpis, vitae consequat risus lacus vitae neque.</p>",
+              "link": {
+                "cta": "LEARN MORE",
+                "url": "#"
+              }
+            },
+            {
+              "title": "Accounting, Public–CPA Preparation",
+              "programType": "Major, Minor",
+              "markup": "<p>Balancing human needs with the preservation of a functional biosphere is an important responsibility for our future. To minimize human impact and move toward more sustainable practices, we must understand the causes of environmental change and the complex interactions within ecosystems, and design effective strategies for restoration. Our curriculum covers environmental monitoring, assessment, regulations, policy implementation, and science application in restoration activities.</p>",
+              "link": {
+                "cta": "LEARN MORE",
+                "url": "#"
+              }
+            },
+            {
+              "title": "Acting for Film, Television, Voice-overs, and Commercials",
+              "programType": "Major",
+              "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p>",
+              "link": {
+                "cta": "LEARN MORE",
+                "url": "#"
+              }
+            },
+            {
+              "title": "Acting",
+              "programType": "Major, Minor",
+              "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p>",
+              "link": {
+                "cta": "LEARN MORE",
+                "url": "#"
+              }
+            },
+            {
+              "title": "Adolescent Education",
+              "programType": "Major",
+              "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p>",
+              "link": {
+                "cta": "LEARN MORE",
+                "url": "#"
+              }
+            },
+            {
+              "title": "American Studies",
+              "programType": "Major",
+              "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p>",
+              "link": {
+                "cta": "LEARN MORE",
+                "url": "#"
+              }
+            },
+            {
+              "title": "Art History",
+              "programType": "Major, Minor",
+              "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p>",
+              "link": {
+                "cta": "LEARN MORE",
+                "url": "#"
+              }
+            }
+          ],
+          "link": {
+            "href": "https://www.example.com/",
+            "cta": "More Events",
+            "ariaLabel": "An Example Aria Label for CTA Link"
+          }
+        }
+      ]
+    }
+  ],
+  "bottomLayouts": [
+    {
+      "name": "full",
+      "content": null
+    }
+  ]
+}

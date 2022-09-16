@@ -1,0 +1,71 @@
+{% extends "base-component" %}
+
+{% set name = "ribbon-carousel" %}
+{% set instanceId = instanceId | default(1) %}
+{% set container_element = 'section' %}
+{% set container_id = "ribbon-" ~ instanceId %}
+
+{% block content %}
+
+  <div class="text-container">
+    {% if title is not empty %}
+      {% include "fields-section-title" with { title: title } only %}
+    {% endif %}
+
+    {% include "fields-description" with { description: description } only %}
+
+    <div class="swiper-controls">
+      <ul class="swiper-button-wrapper">
+        <li>
+          <button type="button" class="swiper-nav-button swiper-button-prev" aria-controls="{{ container_id }}">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="0 0 10.6 18" enable-background="new 0 0 10.6 18" xml:space="preserve">
+            <polygon points="0,9 9,0 10.6,1.6 3.2,9 10.6,16.4 9,18 "/>
+            </svg>
+            <span class="visually-hidden">{{'Previous slide'}}</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="swiper-nav-button swiper-button-next" aria-controls="{{ container_id }}">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+              y="0px" viewBox="0 0 10.6 18" enable-background="new 0 0 10.6 18" xml:space="preserve">
+            <polygon points="10.6,9 1.6,0 0,1.6 7.4,9 0,16.4 1.6,18 "/>
+            </svg>
+            <span class="visually-hidden">{{'Next slide'}}</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="swiper-container ribbon-container">
+    <div class="swiper-wrapper">
+
+      {% for slide in slides %}
+        {% embed "components-ribbon-carousel-slide" with {
+          link: slide.link.url,
+          image: slide.image,
+          title: slide.title,
+          subtitle: slide.subtitle,
+          description: slide.description,
+          variant: 'swiper-slide ' ~ slide.color
+        } only %}{% endembed %}
+      {% endfor %}
+
+      {% if slides|length == 3 %}
+        {% for slide in slides %}
+          {% embed "components-ribbon-carousel-slide" with {
+            link: slide.link.url,
+            image: slide.image,
+            title: slide.title,
+            subtitle: slide.subtitle,
+            description: slide.description,
+            variant: 'swiper-slide ' ~ slide.color
+          } only %}{% endembed %}
+        {% endfor %}
+      {% endif %}
+
+    </div>
+  </div>
+
+{% endblock %}

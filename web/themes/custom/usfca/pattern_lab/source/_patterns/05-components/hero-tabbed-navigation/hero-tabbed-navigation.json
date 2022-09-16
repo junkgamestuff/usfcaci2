@@ -1,0 +1,31 @@
+{
+  "category": "<p>FIND YOUR PROGRAM</p>",
+  "title": "Undergraduate Majors & Minors",
+  "bannerImage": {
+    "src": "https://placeimg.com/1200/675/nature",
+    "alt": "Alt text for image"
+  },
+  "links": [
+    {
+      "title": "Undergraduate Majors & Minors",
+      "url": "#",
+      "class": "active"
+    },
+    {
+      "title": "Graduate Programs",
+      "url": "#"
+    },
+    {
+      "title": "Dual Degree Programs",
+      "url": "#"
+    },
+    {
+      "title": "Executive Education Programs",
+      "url": "#"
+    },
+    {
+      "title": "Certificate Programs ",
+      "url": "#"
+    }
+  ]
+}

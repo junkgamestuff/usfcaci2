@@ -1,0 +1,25 @@
+{% extends "base-component" %}
+
+{% set name = "authors-card" %}
+{% set container_element = 'div' %}
+
+{% block content %}
+
+  {% if link.href %}
+    <a href="{{ link.href }}">
+  {% endif %}
+  {% if image %}
+    {% include "fields-image" with {
+      image: image
+    } only %}
+  {% endif %}
+  {% if link.href %}
+    </a>
+  {% endif %}
+
+  {% include "fields-cta-title" with {
+    href: link.href,
+    title: title
+  } only %}
+
+{% endblock %}

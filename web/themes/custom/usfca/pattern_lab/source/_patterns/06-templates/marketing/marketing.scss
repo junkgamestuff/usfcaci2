@@ -1,0 +1,9 @@
+.t--marketing {
+  .content-bottom {
+    @include padding(null rem(20));
+
+    @include mq($bp768) {
+      @include padding(rem(60) cols(2));
+    }
+  }
+}

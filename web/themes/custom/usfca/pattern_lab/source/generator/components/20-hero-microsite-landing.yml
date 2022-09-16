@@ -1,0 +1,25 @@
+name: "hero-microsite-landing"
+type: "component"
+markup:
+  content:
+  - type: field
+    name: image
+    with:
+      image: image
+  - type: container
+    class: "text-container"
+    content:
+      - type: field
+        name: eyebrow
+        with:
+          text: eyebrow
+      - type: field
+        name: page-title
+        with:
+          title: title
+data:
+  image:
+    src: "/images/16_9_1600x900.png"
+    alt: "Apply"
+  eyebrow: "Undergraduate Admissions"
+  title: "Apply"

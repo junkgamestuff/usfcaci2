@@ -1,0 +1,244 @@
+$play-btn: $color-white;
+$top-gradient: linear-gradient(to top, transparent, rgba($color-black, 1));
+
+.cc--hero-home-ambient-slide {
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 31%;
+    background-image: url('../images/header-shadow.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    content: '';
+    z-index: 1;
+  }
+
+  .c--hero-home-ambient-slide {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+
+    &::after {
+      @include mq($bp768) {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 35%;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 50%);
+        content: '';
+        z-index: 1;
+      }
+    }
+  }
+
+  .image-video {
+    width: 100%;
+    height: rem(180);
+    overflow: hidden;
+
+    @include mq($bp768max) {
+      position: relative;
+    }
+
+    @include mq($bp768) {
+      height: rem(408);
+    }
+
+    @include mq($bp1024) {
+      height: rem(675);
+    }
+
+    .f--image {
+      @include mq($bp768max) {
+        position: relative;
+        height: 100%;
+
+        &::after {
+
+          @include mq($bp768) {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: rem(100);
+            background-image: linear-gradient(
+              to top,
+              $background-color-fallback 0,
+              rgba($background-color-fallback, 0) 100%
+            );
+            content: '';
+            z-index: 1;
+          }
+        }
+      }
+
+      @include mq($bp768) {
+        height: 100%;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      background-color: $background-color-fallback;
+      z-index: 1;
+      object-fit: cover;
+
+      @include mq($bp768max) {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .f--ambient-video {
+      display: none;
+      height: rem(450);
+
+      @include mq($bp768) {
+        display: block;
+        height: rem(432);
+      }
+
+      @include mq($bp1024) {
+        height: rem(675);
+
+        + .f--image {
+          display: none;
+        }
+      }
+    }
+
+    .video-controls {
+      bottom: 0;
+      width: 100%;
+      z-index: 205;
+
+      @include mq($bp768) {
+        display: block;
+        right: auto;
+        left: auto;
+      }
+
+      .video-controls-inner {
+        @include maxwidth;
+        justify-content: flex-end;
+
+        @include mq($bp768) {
+          @include padding(null rem(120) rem(25) null);
+        }
+
+        @include mq($bp1024) {
+          @include padding(null rem(120) rem(25) null);
+        }
+      }
+
+      .video-button {
+        width: rem(35);
+        height: rem(35);
+
+        &:not(:last-child) {
+          @include margin(null rem(10) null null);
+        }
+      }
+
+      .video-pause-button {
+        svg {
+          path {
+            fill: $play-btn;
+          }
+
+          rect {
+            fill: transparent;
+          }
+        }
+      }
+
+      .video-play-button {
+        svg {
+          rect {
+            fill: $play-btn;
+          }
+        }
+      }
+    }
+  }
+
+  .text-container-wrapper {
+    @include maxwidth;
+    position: relative;
+    width: 100%;
+    z-index: 200;
+
+    @include mq($bp768) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
+    }
+  }
+
+  .text-container {
+    @include maxwidth;
+    @include padding(rem(12) cols(3));
+    display: flex;
+    position: relative;
+    bottom: 0;
+    align-items: baseline;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+
+    @include mq($bp768) {
+      @include padding(null cols(12) rem(28) cols(1));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(19) rem(40) cols(2));
+    }
+
+    .f--section-title {
+
+      h2 {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include margin(0);
+        @include font-size(26, 32);
+        color: $color-sherpa-blue;
+        letter-spacing: 0;
+        text-transform: none;
+
+        a {
+          color: $color-white;
+        }
+
+        @include mq($bp768) {
+          @include font-size(36, 48);
+          color: $color-white;
+          letter-spacing: rem(-.3);
+        }
+      }
+    }
+  }
+
+  &.swiper-slide-active {
+    .f--image img {
+      position: absolute;
+      animation: move 40s ease;
+    }
+  }
+}
+
+@-webkit-keyframes move {
+  0% {
+    transform: scale(1);
+    transform-origin: bottom left;
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}

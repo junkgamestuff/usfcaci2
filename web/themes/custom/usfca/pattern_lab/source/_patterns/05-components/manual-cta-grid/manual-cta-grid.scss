@@ -1,0 +1,156 @@
+.cc--manual-cta-grid {
+  @include maxwidth;
+
+  .c--manual-cta-grid {
+    @include padding(null cols(3));
+
+    @include mq($bp768) {
+      @include padding(null cols(2));
+    }
+
+    .header-container {
+      @include margin(null null rem(20) null);
+
+      @include mq($bp768) {
+        @include margin(null null rem(30) null);
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(40) null);
+      }
+
+      .f--section-title {
+        @include mq($bp768) {
+          flex-basis: cols(21, 44);
+          flex-shrink: 0;
+        }
+
+        @include mq($bp1024) {
+          flex-basis: cols(19, 44);
+        }
+
+        h2 {
+          @include margin(0);
+        }
+      }
+
+      .f--description {
+
+        @include mq($bp768max) {
+          @include margin(rem(28) null null);
+        }
+
+        @include mq($bp768) {
+          flex-basis: cols(21, 44);
+          flex-shrink: 0;
+        }
+
+        @include mq($bp1024) {
+          flex-basis: cols(18, 44);
+          flex-shrink: 0;
+        }
+
+        p {
+          @include margin(0);
+        }
+      }
+    }
+
+    .f--cta-grid {
+
+      @include mq($bp768) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      // Color Theme
+      @include color-theme(
+        $name: 'default-theme',
+        $colors: (
+          'chilean-fire': $color-chilean-fire,
+          'supernova': $color-supernova,
+          'iris-blue': $color-iris-blue,
+          'caribbean-green': $color-caribbean-green,
+          'atlantis': $color-atlantis,
+          'wasabi': $color-wasabi
+        )
+      );
+
+      .cc--manual-card {
+
+        @include mq($bp768) {
+          flex-basis: cols(21, 44);
+          flex-shrink: 0;
+        }
+
+        @include mq($bp1024) {
+          flex-basis: cols(14, 44);
+          flex-shrink: 0;
+        }
+
+        &:not(:first-child) {
+          @include mq($bp768max) {
+            @include margin(rem(20) null null);
+          }
+        }
+
+        &:nth-child(n + 3) {
+          @include mq($bp768-1024) {
+            @include margin(rem(32) null null);
+          }
+        }
+
+        &:nth-child(n + 4) {
+          @include mq($bp1024) {
+            @include margin(rem(30) null null);
+          }
+        }
+
+        &:nth-child(odd) {
+          @include mq($bp768-1024) {
+            @include margin(null cols(2, 44) null null);
+          }
+        }
+
+        &:nth-child(3n + 2) {
+          @include mq($bp1024) {
+            @include margin(null cols(1, 44));
+          }
+        }
+
+        .text-container {
+          @include padding(rem(14) cols(3) rem(30));
+
+          @include mq($bp768) {
+            @include padding(rem(28) cols(1, 21) rem(85));
+          }
+
+          @include mq($bp1024) {
+            @include padding(rem(35) cols(1, 14) rem(95));
+          }
+
+          .f--cta-title {
+            h3 {
+              text-transform: none;
+
+              a {
+                color: $color-black;
+                text-decoration: none;
+
+                @include hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+
+        @include hover {
+          box-shadow: 0 0 rem(10) 0 rgba($color-black, .5);
+        }
+      }
+    }
+  }
+}

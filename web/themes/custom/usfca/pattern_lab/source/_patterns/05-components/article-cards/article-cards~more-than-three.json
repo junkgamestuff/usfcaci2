@@ -1,0 +1,58 @@
+{
+  "title": "In the <span class=\"highlight\">Media</span>",
+  "link": {
+    "href": "https://www.example.com/",
+    "cta": "Example Link One",
+    "ariaLabel": "An Example Aria Label for CTA Link"
+  },
+  "cards": [
+    {
+      "title": "Article Title",
+      "eyebrow": "Article Tag",
+      "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+      "image": {
+        "src": "https://placeimg.com/700/394/nature",
+        "alt": "Alt 4"
+      },
+      "link": {
+        "href": "https://www.example.com/"
+      }
+    },
+    {
+      "title": "Article Title",
+      "eyebrow": "Article Tag",
+      "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+      "image": {
+        "src": "https://placeimg.com/700/394/nature",
+        "alt": "Alt 4"
+      },
+      "link": {
+        "href": "https://www.example.com/"
+      }
+    },
+    {
+      "title": "Article Title Anim pariatur pariatur veniam id esse minim.",
+      "eyebrow": "Article Tag",
+      "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+      "image": {
+        "src": "https://placeimg.com/700/394/nature",
+        "alt": "Alt 4"
+      },
+      "link": {
+        "href": "https://www.example.com/"
+      }
+    },
+    {
+      "title": "Article Title",
+      "eyebrow": "Article Tag",
+      "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+      "image": {
+        "src": "https://placeimg.com/700/394/nature",
+        "alt": "Alt 4"
+      },
+      "link": {
+        "href": "https://www.example.com/"
+      }
+    }
+  ]
+}

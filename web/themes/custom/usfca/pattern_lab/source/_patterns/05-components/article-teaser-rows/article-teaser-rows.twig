@@ -1,0 +1,23 @@
+{% extends "base-component" %}
+
+{% set name = "article-teaser-rows" %}
+
+{% block content %}
+
+  {% include "fields-description" with { description: description } only %}
+
+  {% embed "base-field" with { name: "field-components" } %}
+
+    {% block content %}
+
+      {% for article in articles %}
+
+        {% include "components-article-teaser-row" with { title: article.title, description: article.description, image: article.image } only %}
+
+      {% endfor %}
+
+    {% endblock content %}
+
+  {% endembed %}
+
+{% endblock content %}

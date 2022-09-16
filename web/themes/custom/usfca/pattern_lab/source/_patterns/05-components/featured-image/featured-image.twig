@@ -1,0 +1,11 @@
+{% extends "base-component" %}
+
+{% set name = 'featured-image' %}
+
+{% block content %}
+
+  {% include "fields-image" with {
+    image: image,
+  } only %}
+
+{% endblock content %}

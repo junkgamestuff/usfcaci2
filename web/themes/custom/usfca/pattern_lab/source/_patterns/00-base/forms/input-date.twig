@@ -1,0 +1,27 @@
+{% extends "base-form-item" %}
+
+{% set name = 'form-item-date' %}
+
+{% block content %}
+
+  {% if label %}
+    <label for="{{ name|default("text") }}">
+      {{ label }}{% if required %} *{% endif %}
+    </label>
+  {% endif %}
+
+  <input
+    type="date"
+    name="{{ name|default("day") }}"
+    id="{{ name|default("day") }}"
+    {% if disabled %}disabled="disabled"{% endif %}
+    {% if required %}required="required"{% endif %}
+    {% if maxlength %}maxlength="{{ maxlength }}"{% endif %}
+    {% if placeholder %}placeholder="{{ placeholder }}"{% endif %}
+    value="{{ value }}"
+    {% if min_date %}min="{{ min_date|default("2018-01-01") }}"{% endif %}
+    {% if max_date %}max="{{ max_date|default("2022-12-31") }}"{% endif %}
+    size="{{ size|default("50") }}"
+  >
+
+{% endblock %}

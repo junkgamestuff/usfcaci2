@@ -1,0 +1,120 @@
+<?php
+
+/**
+ * @file
+ * Theme hooks for USFCA.
+ */
+
+include_once __DIR__ . '/inc/theme_suggestions_alter.inc';
+include_once __DIR__ . '/inc/preprocess.inc';
+
+use Drupal\Component\Utility\Html;
+use Drupal\paragraphs\ParagraphInterface;
+
+/**
+ * Helper function to generate consistent chapter ids.
+ *
+ * @param \Drupal\paragraphs\ParagraphInterface $paragraph
+ *   The paragraph entity.
+ *
+ * @return string
+ *   The unqiue chapter identifier.
+ */
+function usfca_get_chapter_id(ParagraphInterface $paragraph) {
+  $parts = [
+    'chapter',
+    $paragraph->id(),
+  ];
+
+  if ($paragraph->hasField('field_title') && !$paragraph->field_title->isEmpty()) {
+    $parts[] = Html::cleanCssIdentifier($paragraph->field_title->value);
+  }
+
+  return implode('-', $parts);
+}
+
+/**
+ * Utility function for consistent node pattern values.
+ *
+ * @param string $bundle
+ *   The node bundle value.
+ *
+ * @return string
+ *   The mapped pattern lab class. Empty string if pattern not found.
+ */
+function usfca_get_node_template_patterns($bundle) {
+  $patterns = [
+    'landing' => 'landing-page',
+    'landing_subpage' => 'landing-page',
+    'article' => 'article',
+    'form_page' => 'form-page',
+    'home' => 'home-page',
+    'page' => 'basic-page',
+    'program_home' => 'program-page',
+    'program_subpage' => 'program-page',
+    'event_detail' => 'event',
+    'chapter_page' => 'chaptered-page',
+    'profile' => 'profile',
+    'webform' => 'form-page',
+    'stat' => 'basic-page',
+    'minisite_home' => 'home-page-minisite home-page-minsite',
+    'minisite_subpage' => 'home-page-minisite home-page-minsite',
+    'basic_page' => 'basic-page',
+    'notification' => 'basic-page emergency',
+    'news' => 'listing-page',
+    'events' => 'listing-page',
+    'directory' => 'listing-page',
+    'program' => 'find-your-program',
+    'marketing' => 'marketing',
+    'search_results' => 'search-gsc',
+  ];
+  return $patterns[$bundle] ?? '';
+}
+
+/**
+ * Utility function for consistent view pattern values.
+ *
+ * @param string $view_id
+ *   The view id.
+ *
+ * @return string
+ *   The mapped pattern lab class. Empty string if pattern not found.
+ */
+function usfca_get_views_template_patterns($view_id) {
+  $patterns = [
+    'news_listing' => 'news',
+    'program_listing' => 'program-listing',
+    'profile_listing' => 'directory',
+  ];
+  return $patterns[$view_id] ?? '';
+}
+
+/**
+ * Helper function adds content_extra variables to content.
+ *
+ * @see http://atendesigngroup.com/blog/making-region-content-available-node-templates-drupal-8
+ */
+function _usfca_add_content_extra_to_content(&$variables, $block_id = NULL) {
+  $blocks = \Drupal::entityTypeManager()
+    ->getStorage('block')
+    ->loadByProperties([
+      'theme' => 'usfca',
+      'region' => 'content_extra',
+    ]);
+
+  if (!empty($blocks)) {
+    @uasort($blocks, 'Drupal\block\Entity\Block::sort');
+
+    foreach ($blocks as $key => $block) {
+      if (!empty($block_id) && $block->id() !== $block_id) {
+        continue;
+      }
+
+      if ($block->access('view')) {
+        $builder = \Drupal::entityTypeManager()->getViewBuilder('block');
+
+        $variables['content_extra'][$key] = $builder->view($block, 'block');
+      }
+    }
+  }
+}

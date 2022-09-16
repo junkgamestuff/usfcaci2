@@ -1,0 +1,34 @@
+{% extends "base-component" %}
+
+{% set name="richtext-and-ctas" %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Body text" %}
+
+
+{% block content %}
+
+  {% if title is not empty %}
+    {% include "fields-section-title" with {
+      title: title
+    } only %}
+  {% endif %}
+
+  {% if description is not empty %}
+    {% include "fields-wysiwyg" with { markup: description } only %}
+  {% endif %}
+
+
+  {% if links|length > 0 %}
+    <div class="link-container">
+      {% for link in links %}
+        {% include "fields-link" with {
+          href: link.href,
+          cta: link.cta,
+          ariaLabel: link.ariaLabel
+        } only %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+{% endblock %}
+

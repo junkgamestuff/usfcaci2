@@ -1,0 +1,20 @@
+{
+  "title": "<span class=\"highlight\">PUBLISH</span> with your Professor",
+  "description": "<p>Quisque velit nisi, pretium ut <a href='#'>lacinia in</a>, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut <a href='#'>lacinia in</a>, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut <a href='#'>lacinia in</a>, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus suscipit tortor eget felis porttitor volutpat.</p>",
+  "items": [
+    {
+      "title": "Example CTA",
+      "url": "https://www.example.com/",
+      "aria": "An Example Aria Label for CTA Link"
+    },
+    {
+      "title": "This is an Example CTA Link",
+      "url": "https://www.example.com/",
+      "aria": "An Example Aria Label for CTA Link"
+    }
+  ],
+  "image": {
+    "src": "https://placeimg.com/1200/1200/nature",
+    "alt": "Alt 4"
+  }
+}

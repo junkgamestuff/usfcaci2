@@ -1,0 +1,38 @@
+.lc--two-column-reverse {
+  .content-sidebar-main-wrapper {
+    @include maxwidth;
+
+    .content-sidebar-main-wrapper-inner {
+      @include mq($bp768) {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .content-main {
+        @include mq($bp768) {
+          width: cols(32);
+        }
+
+        @include mq($bp1024) {
+          @include padding(null cols(2));
+          width: cols(34);
+        }
+      }
+
+      .content-sidebar {
+        @include padding(rem(50) cols(1, 40));
+        background-color: $color-grey;
+
+        @include mq($bp768) {
+          @include padding(rem(40) cols(1));
+          width: cols(16);
+        }
+
+        @include mq($bp1024) {
+          @include padding(rem(80) cols(1));
+          width: cols(14);
+        }
+      }
+    }
+  }
+}

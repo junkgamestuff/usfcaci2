@@ -1,0 +1,22 @@
+{
+  "links": [
+    {
+      "network": "copy"
+    },
+    {
+      "network": "facebook"
+    },
+    {
+      "network": "twitter"
+    },
+    {
+      "network": "linkedin"
+    },
+    {
+      "network": "email"
+    },
+    {
+      "network": "cv"
+    }
+  ]
+}

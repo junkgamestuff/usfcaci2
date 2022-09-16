@@ -1,0 +1,52 @@
+{% extends "base-component" %}
+
+{% set name = "chapter" %}
+
+{% block content %}
+
+	{# this nav anchor is above the title, so that the title is still visible after navigating to it: #}
+
+	<span id="{{ id }}" class="chaptered-nav-anchor"></span>
+
+	{% if title is not empty %}
+		{% include "fields-section-title" with { title: title } only %}
+	{% endif %}
+
+	{% for component in components %}
+
+		{% include 'components-' ~ component.type with {
+
+      title: component.title,
+      description: component.description,
+      markup: component.markup,
+      links: component.links,
+      link: component.link,
+      ctas: component.ctas,
+      card: component.cards,
+      cards: component.cards,
+      items: component.items,
+      slides: component.slides,
+      text: component.text,
+      image: component.image,
+      images: component.images,
+      variant: component.variant,
+      sections: component.sections,
+      reverse: component.reverse,
+      accordions: component.accordions,
+      component: component.component,
+      articles: component.articles,
+      id: component.id,
+      eyebrow: component.eyebrow,
+      quote: component.quote,
+      attribution: component.attribution,
+      email: component.email,
+      phone: component.phone,
+      address: component.address,
+      time: component.time
+
+    } only %}
+
+	{% endfor %}
+
+{% endblock content %}
+

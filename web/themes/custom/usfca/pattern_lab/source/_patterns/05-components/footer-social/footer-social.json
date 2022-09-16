@@ -1,0 +1,24 @@
+{
+  "footerSocialLinks": [
+    {
+      "network": "facebook",
+      "url": "http://www.facebook.com"
+    },
+    {
+      "network": "instagram",
+      "url": "http://www.instagram.com"
+    },
+    {
+      "network": "linkedin",
+      "url": "http://www.linkedin.com"
+    },
+    {
+      "network": "twitter",
+      "url": "http://www.twitter.com"
+    },
+    {
+      "network": "youtube",
+      "url": "http://www.youtube.com"
+    }
+  ]
+}

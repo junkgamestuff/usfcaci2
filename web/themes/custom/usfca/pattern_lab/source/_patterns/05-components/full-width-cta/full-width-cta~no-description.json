@@ -1,0 +1,24 @@
+{
+  "title": "Interested in <span class=\"highlight\">USF?</span>",
+  "description": null,
+  "links": [
+    {
+      "href": "https://www.example.com/",
+      "cta": "Request Info",
+      "ariaLabel": "An Example Aria Label for CTA Link",
+      "color": "lime"
+    },
+    {
+      "href": "https://www.example.com/",
+      "cta": "Visit Us",
+      "ariaLabel": "An Example Aria Label for CTA Link",
+      "color": "blue"
+    },
+    {
+      "href": "https://www.example.com/",
+      "cta": "Connect with Admissions",
+      "ariaLabel": "An Example Aria Label for CTA Link",
+      "color": "beige"
+    }
+  ]
+}

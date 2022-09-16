@@ -1,0 +1,40 @@
+.tc--contact-page {
+  .lc--two-column-reverse {
+    .l--two-column-reverse {
+      .lr--main {
+        @include padding(rem(50) cols(1, 40));
+
+        @include mq($bp768) {
+          @include padding(rem(40) cols(2));
+          border-right: 1px solid $color-grey;
+        }
+
+        @include mq($bp1024) {
+          @include padding(rem(80) cols(4));
+        }
+
+        .text-container {
+          @include padding(null null rem(18));
+          @include margin(null null rem(18));
+          border-bottom: 1px solid $color-orange;
+        }
+      }
+
+      .lr--sidebar {
+        background: transparent;
+      }
+    }
+  }
+
+  .cc--basic-header  {
+    .c--basic-header {
+      @include padding(0 null);
+    }
+  }
+
+  .f--page-title {
+    h1 {
+      @include margin(rem(55) null rem(25));
+    }
+  }
+}

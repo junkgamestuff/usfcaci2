@@ -1,0 +1,43 @@
+{
+  "title": "You May Also Like",
+  "link": {
+    "href": "https://www.example.com/",
+    "cta": "Example Link One",
+    "ariaLabel": "An Example Aria Label for CTA Link"
+  },
+  "cards": [
+    {
+      "eyebrow": "Eyebrow",
+      "title": "Card Title",
+      "link": "https://www.example.com/",
+      "subText": "Card subtext",
+      "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+      "image": {
+        "src": "https://placeimg.com/1920/1080/nature",
+        "alt": "Image Alt Text4"
+      }
+    },
+    {
+      "eyebrow": "<a href=\"#\">Performance</a>",
+      "title": "Card Title",
+      "link": "https://www.example.com/",
+      "subText": "Card subtext",
+      "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+      "image": {
+        "src": "https://placeimg.com/1920/1080/nature",
+        "alt": "Image Alt Text4"
+      }
+    },
+    {
+      "eyebrow": "Eyebrow",
+      "title": "Card Title",
+      "link": "https://www.example.com/",
+      "subText": "Card subtext",
+      "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+      "image": {
+        "src": "https://placeimg.com/1920/1080/nature",
+        "alt": "Image Alt Text4"
+      }
+    }
+  ]
+}

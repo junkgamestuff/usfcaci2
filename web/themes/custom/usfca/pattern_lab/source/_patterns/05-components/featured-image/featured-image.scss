@@ -1,0 +1,61 @@
+.cc--featured-image {
+  @include maxwidth;
+  @include clearfix;
+
+  .c--featured-image {
+    .tc--article &,
+    .tc--program-page &,
+    .tc--home-page-minisite & {
+      @include padding(null rem(20));
+
+      @include mq($bp768) {
+        @include padding(null cols(6));
+      }
+
+      @include mq($bp1024) {
+        @include padding(null cols(8));
+      }
+    }
+  }
+
+  figure,
+  img {
+    @include margin(null null rem(10));
+
+    @include mq($bp768) {
+      @include margin(null null rem(15))
+    }
+  }
+
+  img {
+    @include margin(null null rem(10));
+    display: block;
+    width: auto;
+    max-width: 100%;
+
+    @include mq($bp1024) {
+      @include margin(null null rem(30));
+    }
+  }
+
+  figure {
+    @include margin(null null rem(35));
+
+    @include mq($bp768) {
+      @include margin(null null rem(70));
+    }
+
+    figcaption {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(14, 18);
+      color: $color-black;
+      font-style: normal;
+      text-align: left;
+      text-transform: none;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

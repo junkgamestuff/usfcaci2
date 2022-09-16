@@ -1,0 +1,61 @@
+{% extends "base-component" %}
+
+{% set name = "profile-cards-horizontal" %}
+
+{% block content %}
+
+  {% if title is not empty or description is not empty %}
+
+    <div class="section-wrapper">
+
+      {% if title is not empty %}
+
+        {% include "fields-section-title" with { title: title } %}
+
+      {% endif %}
+
+      {% if description is not empty %}
+
+        {% include "fields-wysiwyg" with { markup: description } only %}
+
+      {% endif %}
+
+    </div>
+
+  {% endif %}
+
+  {% embed "base-field" with { name: "field-components" } %}
+
+    {% block content %}
+
+      {% for card in cards %}
+
+        {% include "components-profile-card-horizontal" with {
+          profileLink: card.profileLink,
+          title: card.title,
+          role: card.role,
+          facultyRole: card.facultyRole,
+          image: card.image,
+          departmentLabel: card.departmentLabel,
+          departments: card.departments,
+          office: card.office,
+          contact: card.contact,
+        } only %}
+
+      {% endfor %}
+
+    {% endblock content %}
+
+  {% endembed %}
+
+  {% if link.href %}
+
+    {% include "fields-link" with {
+      href: link.href,
+      cta: link.cta,
+      ariaLabel: link.ariaLabel
+    } only %}
+
+  {% endif %}
+
+{% endblock %}

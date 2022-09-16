@@ -1,0 +1,234 @@
+$border-color: $color-orange;
+$border-radius: 0;
+$section-color: $color-white;
+$expand-svg: '../images/icons/icon-arrow-down-white.svg';
+$close-svg: '../images/icons/icon-close-white.svg';
+
+.cc--magazine-toc {
+  @include maxwidth;
+  @include margin(null null rem(30) null);
+  @include padding(null null rem(15) null);
+  background: $section-color;
+
+  @include mq($bp768) {
+    @include margin(null null rem(40) null);
+    @include padding(null null 0 null);
+  }
+
+  @include mq($bp1024) {
+    @include margin(null null rem(50) null);
+    @include padding(null null rem(20) null);
+  }
+
+  .c--magazine-toc {
+    @include margin(null null rem(35));
+    @include padding(rem(30) cols(3) null);
+
+    @include mq($bp768) {
+      @include margin(null null rem(50));
+      @include padding(rem(50) cols(2) null);
+    }
+
+    @include mq($bp1024) {
+      @include margin(null null rem(40));
+      @include padding(rem(60) null null);
+    }
+
+    .inner-wrapper {
+      @include padding(null cols(3, 42) rem(30));
+      border: rem(1) solid $border-color;
+      border-radius: $border-radius;
+
+      @include mq($bp768) {
+        @include padding(null cols(6, 44));
+      }
+
+      @include mq($bp1024) {
+        @include padding(null cols(2, 44));
+      }
+    }
+
+    .header-container {
+      text-align: center;
+
+      .header-inner {
+        display: inline-block;
+        transform: translateY(-50%);
+        background: $section-color;
+      }
+
+      .eyebrow {
+        @extend %font-fira-sans-extra-condensed-bold;
+        @include font-size(12, 16);
+        color: $color-primary;
+        letter-spacing: rem(.3);
+        text-transform: uppercase;
+      }
+
+      .f--section-title {
+        margin: 0;
+
+        h2 {
+          @include padding(null rem(15));
+          margin: 0;
+
+
+          @include mq($bp768) {
+            @include padding(null rem(32));
+          }
+
+          @include mq($bp1024) {
+            @include padding(null rem(75));
+          }
+        }
+      }
+    }
+
+    .toc-wrapper {
+      height: 0;
+      overflow: hidden;
+    }
+
+    .toc-container {
+      @include margin(null null rem(30));
+
+      @include mq($bp1024) {
+        @include margin(null null rem(40));
+        position: relative;
+      }
+
+      &::after {
+        @include mq($bp1024) {
+          @include centered('x');
+          top: 0;
+          width: rem(1);
+          height: 100%;
+          background-color: $color-grey;
+          content: '';
+        }
+      }
+
+      @include mq($bp1024) {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .features,
+      .departments {
+
+        @include mq($bp768max) {
+          text-align: center;
+        }
+
+        @include mq($bp1024) {
+          flex-basis: cols(17, 40);
+        }
+
+        h3 {
+          @extend %font-fira-sans-extra-condensed-bold;
+          @include margin(null null rem(16));
+          @include font-size(12, 16);
+          color: $color-primary;
+          letter-spacing: rem(.3);
+          text-transform: uppercase;
+        }
+
+        nav {
+          @include mq($bp768) {
+            display: flex;
+            justify-content: space-between;
+          }
+
+          ul {
+            @include mq($bp768) {
+              flex-basis: cols(15, 32);
+            }
+
+            @include mq($bp1024) {
+              flex-basis: cols(8, 17);
+            }
+
+            &:first-child {
+              @include mq($bp768max) {
+                @include margin(null null rem(17));
+              }
+            }
+
+            li {
+              &:not(:last-child) {
+                @include margin(null null rem(17));
+
+                @include mq($bp768) {
+                  @include margin(null null rem(20));
+
+                }
+
+                @include mq($bp1024) {
+                  @include margin(null null rem(22));
+
+                }
+              }
+            }
+
+            a {
+              @extend %font-fira-sans-bold;
+              @include font-size(16, 20);
+              color: $color-secondary;
+              text-decoration: none;
+
+              @include hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      .features {
+        @include mq($bp1024max) {
+          @include margin(null null rem(30));
+          @include padding(null null rem(30));
+          border-bottom: rem(1) solid $color-grey;
+        }
+      }
+    }
+
+    .f--button {
+      .f--button-wrapper {
+        display: flex;
+        justify-content: center;
+
+        .button {
+          @include padding(null rem(16) null);
+          width: rem(105);
+          min-width: auto;
+
+          @include hover {
+            background-color: $color-primary;
+            color: $color-white;
+          }
+
+          &:focus {
+            background-color: $color-primary;
+            color: $color-white;
+          }
+
+          &::after {
+            display: block;
+            width: rem(25);
+            height: rem(25);
+            background-image: url($expand-svg);
+            background-size: rem(25) rem(25);
+            content: '';
+          }
+
+          &.is-open {
+            &::after {
+              background-image: url($close-svg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

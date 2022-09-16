@@ -1,0 +1,54 @@
+.cc--stat-card {
+  text-align: center;
+
+  .c--stat-card {
+    @include padding(rem(50) cols(1, 14) null);
+    height: 100%;
+
+    @include mq($bp768) {
+      @include padding(null cols(2, 22) null);
+      border-right: rem(1) solid $color-supernova;
+      border-left: rem(1) solid $color-supernova;
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(1, 14));
+    }
+  }
+
+  .f--label {
+    @extend %font-fira-sans-extra-condensed-semibold;
+    @include font-size(48, 40);
+    @include margin(null null rem(27));
+    color: $color-sherpa-blue;
+
+    @include mq($bp768) {
+      @include font-size(72, 72);
+    }
+  }
+
+  .f--description {
+    p {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(24, 30);
+      @include margin(null null 0);
+      color: $color-black;
+
+      @include mq($bp768) {
+        @include font-size(30, 36);
+        @include margin(null null rem(50));
+      }
+
+      a {
+        color: $color-sherpa-blue;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

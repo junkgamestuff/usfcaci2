@@ -1,0 +1,162 @@
+.cc--ribbon-carousel {
+  position: relative;
+  overflow: hidden;
+
+  .c--ribbon-carousel {
+    @include mq($bp768) {
+      display: flex;
+    }
+
+    > .text-container {
+      @include padding(rem(30) rem(20));
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      background: $color-sherpa-blue;
+      z-index: 2;
+
+      @include mq($bp768) {
+        @include padding(rem(58) cols(1.5) rem(40));
+        width: cols(20);
+      }
+
+      @include mq($bp1024) {
+        @include padding(null cols(1));
+        width: cols(13);
+      }
+
+      .f--section-title {
+        @include margin(null null rem(20));
+
+        h2 {
+          @extend %font-fira-sans-extra-condensed-medium;
+          @include font-size(36, 36);
+          @include margin(null null 0);
+          color: $color-white;
+          font-weight: 300;
+          text-transform: none;
+
+          @include mq($bp768) {
+            @include font-size(48, 48);
+          }
+        }
+      }
+
+      .f--description {
+        flex-grow: 1;
+
+        p {
+          margin-bottom: 0;
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  .ribbon-container {
+    @include mq($bp768) {
+      @include margin(rem(40) null);
+      width: cols(28);
+    }
+
+    @include mq($bp1024) {
+      width: cols(35);
+    }
+  }
+
+  .swiper-slide {
+    height: auto;
+    width: 86%;
+
+    @include mq($bp768) {
+      width: cols(17, 28);
+    }
+
+    @include mq($bp1024) {
+      width: cols(11, 35);
+    }
+  }
+
+  .swiper-controls {
+    display: none;
+
+    @include mq($bp768) {
+      @include margin(rem(30) null null);
+      display: flex;
+      align-self: flex-end;
+      justify-content: center;
+    }
+
+    @include mq($bp1024) {
+      @include margin(rem(60) null null);
+    }
+
+    &.hidden {
+      display: none;
+    }
+
+    .swiper-button-wrapper {
+      @include no-bullet;
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: space-between;
+      width: rem(120);
+      height: rem(40);
+
+      @include mq($bp768) {
+        width: rem(125);
+        height: rem(50);
+      }
+    }
+
+    .swiper-nav-button {
+      position: relative;
+      right: auto;
+      left: auto;
+      width: rem(40);
+      height: rem(40);
+      margin: 0;
+      border: rem(2) solid $color-supernova;
+
+      @include mq($bp768) {
+        width: rem(50);
+        height: rem(50);
+      }
+
+      @include hover {
+        border-width: rem(5);
+      }
+
+      &::after {
+        display: none;
+      }
+
+      svg {
+        width: rem(12);
+        height: rem(12);
+
+        polygon {
+          fill: $color-white;
+        }
+
+        @include mq($bp768) {
+          width: rem(15);
+          height: rem(15);
+        }
+      }
+    }
+  }
+}
+
+@include color-swatch(
+  $colors: (
+    "lime": $color-atlantis,
+    "blue": $color-iris-blue,
+    "yellow": $color-supernova,
+    "moss": $color-wasabi,
+    "red": $color-chilean-fire,
+    "orange": $color-carrot-orange,
+    "turquoise": $color-caribbean-green,
+  )
+);

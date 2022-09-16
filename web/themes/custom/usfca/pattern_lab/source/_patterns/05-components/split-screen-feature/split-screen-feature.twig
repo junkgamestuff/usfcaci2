@@ -1,0 +1,41 @@
+{% extends "base-component" %}
+
+{% set name = "split-screen-feature" %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Split Screen Content" %}
+
+{% set variant = [] %}
+{% set variant = variant | merge([reverse ? 'sidebar-left' : 'sidebar-right']) %}
+{% set variant = variant | merge([bgColor ? bgColor : 'red']) %}
+
+{% block content %}
+
+  <div class="image-container">
+    {% if image is not empty %}
+      {% include "fields-image" with {
+        render: image.render
+      } only %}
+    {% endif %}
+  </div>
+
+  <div class="flex-container">
+    <div class="header-container">
+      {% include "fields-section-title" with {
+        title: title
+      } only %}
+
+      {% include "fields-description" with {
+        description: description
+      } only %}
+
+      {% if link.href is not empty %}
+        {% include "fields-link" with {
+          href: link.href,
+          cta: link.cta,
+          aria: link.aria
+        } only %}
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock %}

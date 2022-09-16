@@ -1,0 +1,63 @@
+{% for layout in layouts %}
+
+  {% if layout.name == 'full' %}
+
+    {# BEGIN full layout #}
+
+    {% embed 'base-layout-full' %}
+
+      {% block content %}
+
+        {% include "base-component-list" with { name: 'content', components: layout.content } %}
+
+      {% endblock content %}
+
+    {% endembed %}
+
+  {% endif %}
+
+  {% if layout.name == 'two-column' %}
+
+    {# BEGIN two-column layout #}
+
+    {% embed 'base-layout-two-column' %}
+
+      {% block sidebar %}
+
+        {% include "base-component-list" with { name: 'sidebar', components: layout.sidebar } %}
+
+      {% endblock sidebar %}
+
+      {% block content %}
+
+        {% include "base-component-list" with { name: 'content', components: layout.content } %}
+
+      {% endblock content %}
+
+    {% endembed %}
+
+  {% endif %}
+
+  {% if layout.name == 'two-column-reverse' %}
+
+    {# BEGIN two-column-reverse layout #}
+
+    {% embed 'base-layout-two-column-reverse' %}
+
+      {% block content %}
+
+        {% include "base-component-list" with { name: 'content', components: layout.content } %}
+
+      {% endblock content %}
+
+      {% block sidebar %}
+
+        {% include "base-component-list" with { name: 'sidebar', components: layout.sidebar } %}
+
+      {% endblock sidebar %}
+
+    {% endembed %}
+
+  {% endif %}
+
+{% endfor %}

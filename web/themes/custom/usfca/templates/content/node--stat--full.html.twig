@@ -1,0 +1,29 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+
+  <div class="content-top">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {% include "components-basic-header" with { title: fields.display_title } only %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-main">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {% include "components-rich-text" with { markup: fields.description } only %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

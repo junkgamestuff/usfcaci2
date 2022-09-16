@@ -1,0 +1,20 @@
+{% extends "base-component" %}
+
+{% set name="multiple-ctas" %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Multiple CTA" %}
+
+{% block content %}
+
+  <div class="link-container">
+    {% for link in links %}
+      {% include "fields-link" with {
+        href: link.href,
+        cta: link.cta,
+        ariaLabel: link.ariaLabel
+      } only %}
+    {% endfor %}
+  </div>
+
+{% endblock %}
+

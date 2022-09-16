@@ -1,0 +1,14 @@
+{
+  "title": "Rich Text and Image",
+  "eyebrow": "Mar 6",
+  "time": "7:00pm to 9:00pm",
+  "location": "At the best location possible",
+  "image": {
+    "src": "https://placeimg.com/600/338/people",
+    "alt": "Alt 1"
+  },
+  "link": {
+    "href": "#"
+  },
+  "isVideo": true
+}

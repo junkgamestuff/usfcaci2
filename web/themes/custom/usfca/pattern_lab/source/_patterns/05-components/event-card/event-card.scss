@@ -1,0 +1,164 @@
+$image-border-radius: 0;
+$date-color: $color-black;
+$description-color: $color-black;
+
+.cc--event-card {
+  @include mq($bp768max) {
+    + .cc--event-card {
+      @include margin(rem(60) null null);
+    }
+  }
+
+  @include mq($bp768) {
+    &:nth-of-type(3n) ~ .cc--event-card {
+      @include margin(rem(30) null null);
+    }
+  }
+
+  @include mq($bp1024) {
+    &:nth-of-type(3n) ~ .cc--event-card {
+      @include margin(rem(40) null null);
+    }
+  }
+
+  .c--event-card {
+    > a:hover + .text-container {
+      .f--cta-title a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .image-container {
+    position: relative;
+
+    a {
+      display: block;
+    }
+
+    .f--image {
+      @include margin(null null rem(8));
+
+      @include mq($bp768) {
+        @include margin(null null rem(14));
+      }
+
+      img {
+        border-radius: $image-border-radius;
+      }
+    }
+  }
+
+  &:nth-child(3n + 1) .date-wrapper {
+    background-color: $color-atlantis;
+  }
+
+  &:nth-child(3n + 2) .date-wrapper {
+    background-color: $color-carrot-orange;
+  }
+
+  &:nth-child(3n + 3) .date-wrapper {
+    background-color: $color-caribbean-green;
+  }
+
+  .date-wrapper {
+    @include padding(rem(10));
+    display: flex;
+    position: absolute;
+    top: rem(-28);
+    left: cols(3, 42);
+    align-items: center;
+    justify-content: center;
+    min-width: cols(9, 42);
+
+    @include mq($bp768) {
+      top: rem(-28);
+      left: cols(1, 14);
+      min-width: cols(4, 14);
+    }
+
+    @include mq($bp768) {
+      top: rem(-40);
+    }
+
+    .f--date-string {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(12, 12);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $date-color;
+      text-transform: uppercase;
+      justify-items: center;
+
+      @include mq($bp768) {
+        @include font-size(16, 16);
+      }
+
+      span {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include margin(null null rem(2) null);
+        @include font-size(36, 36);
+        display: block;
+
+        @include mq($bp768) {
+          @include margin(null null rem(5) null);
+          @include font-size(24, 30);
+        }
+
+        @include mq($bp1024) {
+          @include margin(null null 0);
+          @include font-size(48, 48);
+        }
+      }
+    }
+  }
+
+  .f--cta-title {
+    @include margin(null null rem(12));
+
+    @include mq($bp768) {
+      @include margin(null null rem(20));
+    }
+
+    @include mq($bp768) {
+      @include margin(null null rem(22));
+    }
+
+    a {
+      @include font-size(24, 26);
+      color: $color-sherpa-blue;
+      text-decoration: none;
+
+      @include mq($bp768) {
+        @include font-size(24, 24);
+      }
+
+      @include mq($bp1024) {
+        @include font-size(30, 30);
+      }
+
+      @include hover {
+        color: $color-sherpa-blue;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .event-location,
+  .f--time-string {
+    @extend %font-fira-sans-extra-condensed-regular;
+    @include font-size(18, 24);
+    color: $description-color;
+
+    @include mq($bp768) {
+      @include font-size(20, 24);
+    }
+
+    a {
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{% if field_variant is iterable %}
+    {% set variant_processed = field_variant | join(' ') %}
+{% else %}
+    {% set variant_processed = field_variant %}
+{% endif %}
+
+<div class="f--field f--{{ name }}{{ (variant_processed) ? (' ' ~ variant_processed) : '' }}{{ hide_field ? ' visually-hidden' }}">
+
+    {% block content %}
+
+    {% endblock %}
+
+</div>

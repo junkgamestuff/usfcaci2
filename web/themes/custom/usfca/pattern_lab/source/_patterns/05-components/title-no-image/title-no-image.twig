@@ -1,0 +1,13 @@
+{% extends "base-component" %}
+
+{% set name = "title-no-image" %}
+
+{% block content %}
+
+  {% if eyebrow is not empty %}
+    {% include "fields-category" with { category: eyebrow } only %}
+  {% endif %}
+
+  {% include "fields-page-title" with { title: title } only %}
+
+{% endblock %}

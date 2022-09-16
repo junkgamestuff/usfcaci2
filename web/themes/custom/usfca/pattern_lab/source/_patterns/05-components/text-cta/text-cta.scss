@@ -1,0 +1,73 @@
+.cc--text-cta {
+  .inner-wrapper {
+    @include mq($bp768max) {
+      @include padding(rem(20) null null);
+      border-top: 1px solid $color-border;
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(30) null null);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid $color-border;
+    }
+  }
+
+  .f--section-title {
+    h2 {
+      @include margin(null null rem(20));
+      @include font-size(26, 30);
+      text-align: left;
+
+      @include mq($bp768) {
+        @include font-size(28, 30);
+      }
+
+      @include mq($bp1024) {
+        @include padding(null rem(25) null null);
+        @include margin(null null 0);
+        @include font-size(38, 46);
+      }
+    }
+  }
+
+  .tc--basic-page &,
+  .t--left-navigation & {
+    @include margin(null null rem(50));
+
+    @include mq($bp768) {
+      @include margin(null null rem(60));
+    }
+
+    @include mq($bp1024) {
+      @include margin(null null rem(80));
+    }
+  }
+
+  .tc--article &,
+  .tc--landing-page & {
+    @include padding(null cols(3));
+
+    @include mq($bp768) {
+      @include padding(null cols(4));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(10));
+    }
+  }
+
+  .lc--full & {
+    @include maxwidth;
+    @include padding(null 0);
+
+    .c--text-cta {
+      @include padding(null cols(3));
+
+      @include mq($bp768) {
+        @include padding(null cols(2));
+      }
+    }
+  }
+}

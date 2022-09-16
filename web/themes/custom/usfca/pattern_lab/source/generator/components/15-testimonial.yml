@@ -1,0 +1,26 @@
+name: testimonial
+type: component
+markup:
+  content:
+    - type: field
+      name: image
+      with: image
+      condition: image.src
+    - type: container
+      class: "text-container"
+      content:
+        - type: field
+          name: quote
+          with: quote
+        - type: field
+          name: attribution
+          with:
+            text: attribution
+          condition: attribution
+data:
+  image:
+    src: "/images/1_1_300x300.png"
+    alt: "attribution image"
+  quote: "<p>This is a testimonial block. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at mi libero. Phasellus risus erat, ornare vel turpis ac.</p>"
+  attribution: "Optional Attribution"
+

@@ -1,0 +1,299 @@
+{
+  "pageTitle": "Faculty",
+  "title": "Faculty",
+  "description": "Lorem ipsum dolor sit consectetur adipiscing elit curabitur non nulla sit amet nisl. Lorem ipsum dolor sit consectetur adipiscing elit curabitur non nulla sit amet nisl. Lorem ipsum dolor sit consectetur adipiscing elit curabitur non nulla sit amet nisl.",
+  "hasBasicHeader": false,
+  "section_title": "<span class=\"highlight\">Faculty</span> Directory",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "title-no-image",
+          "title": "Our Faculty"
+        },
+        {
+          "type": "featured-articles",
+          "title": "<span class='highlight'>Faculty</span> in the News",
+          "cards": [
+            {
+              "title": "Rich Text and Image",
+              "eyebrow": "Tag goes here",
+              "isVideo": true,
+              "description": null,
+              "image": {
+                "src": "https://placeimg.com/600/338/people",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              },
+              "date": "Mar 6, 2020"
+            },
+            {
+              "title": "Rich Text and Image",
+              "eyebrow": "Tag goes here",
+              "description": null,
+              "image": {
+                "src": "https://placeimg.com/600/338/animals",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#",
+                "target": "_blank"
+              },
+              "date": "Mar 6, 2020"
+            },
+            {
+              "title": "Rich Text and Image",
+              "eyebrow": "Tag goes here",
+              "description": null,
+              "image": {
+                "src": "https://placeimg.com/600/338/random",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              },
+              "date": "Mar 6, 2020"
+            },
+            {
+              "title": "Rich Text and Image",
+              "eyebrow": "Tag goes here",
+              "description": null,
+              "image": {
+                "src": "https://placeimg.com/600/338/tech",
+                "alt": "Alt 1"
+              },
+              "link": {
+                "href": "#"
+              },
+              "date": "Mar 6, 2020"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "two-column",
+      "sidebar": [
+        {
+          "type": "filter-form",
+          "title": "search by name/keyword",
+          "items": [
+            {
+              "type": "text",
+              "label": null,
+              "placeholder": "First Letter / Keyword"
+            },
+            {
+              "type": "checkbox",
+              "namevalue": "by-school",
+              "title": "By School",
+              "options": [
+                {
+                  "id": "major",
+                  "value": "Major",
+                  "text": "Major"
+                },
+                {
+                  "id": "minor",
+                  "value": "Minor",
+                  "text": "Minor"
+                }
+              ]
+            },
+            {
+              "type": "select",
+              "namevalue": "by-school",
+              "title": "By School",
+              "label": "Select label",
+              "name": "name-select",
+              "options": [
+                { "value": "1", "label": "Option One" },
+                { "value": "2", "label": "Option Two" },
+                { "value": "3", "label": "Option Three" },
+                { "value": "4", "label": "Option Four" },
+                { "value": "5", "label": "Option Five" },
+                { "value": "6", "label": "Option Six" },
+                { "value": "7", "label": "Option Seven" },
+                { "value": "8", "label": "Option Eight" },
+                { "value": "9", "label": "Option Nine" },
+                { "value": "10", "label": "Option Ten" },
+                { "value": "11", "label": "Option 11" },
+                { "value": "12", "label": "Option 12" },
+                { "value": "13", "label": "Option 13" },
+                { "value": "14", "label": "Option 14" },
+                { "value": "15", "label": "Option 15" },
+                { "value": "16", "label": "Option 16" },
+                { "value": "17", "label": "Option 17" },
+                { "value": "18", "label": "Option 18" },
+                { "value": "19", "label": "Option 19" },
+                { "value": "20", "label": "Option 20" },
+                { "value": "21", "label": "Option 21" },
+                { "value": "22", "label": "Option 22" },
+                { "value": "23", "label": "Option 23" },
+                { "value": "24", "label": "Option 24" },
+                { "value": "25", "label": "Option 25" },
+                { "value": "26", "label": "Option 26" },
+                { "value": "27", "label": "Option 27" },
+                { "value": "28", "label": "Option 28" },
+                { "value": "29", "label": "Option 29" },
+                { "value": "30", "label": "Option 30" },
+                { "value": "31", "label": "Option 31" },
+                { "value": "32", "label": "Option 32" },
+                { "value": "33", "label": "Option 33" },
+                { "value": "34", "label": "Option 34" },
+                { "value": "35", "label": "Option 35" },
+                { "value": "36", "label": "Option 36" },
+                { "value": "37", "label": "Option 37" },
+                { "value": "38", "label": "Option 38" },
+                { "value": "39", "label": "Option 39" },
+                { "value": "40", "label": "Option 40" }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "namevalue": "by-faculty",
+              "title": "By faculty",
+              "options": [
+                {
+                  "id": "business-entrepreneurship",
+                  "value": "Business & Entrepreneurship",
+                  "text": "Business & Entrepreneurship"
+                },
+                {
+                  "id": "education",
+                  "value": "Education",
+                  "text": "Education"
+                },
+                {
+                  "id": "environment",
+                  "value": "Environment",
+                  "text": "Environment"
+                },
+                {
+                  "id": "health",
+                  "value": "Health",
+                  "text": "Health"
+                }
+              ]
+            },
+            {
+              "type": "submit",
+              "value": "Search"
+            },
+            {
+              "type": "reset",
+              "value": "CLEAR SELECTIONS"
+            }
+          ]
+        }
+      ],
+      "content": [
+        {
+          "type": "faculty-directory-listing",
+          "cards": [
+            {
+              "image": null,
+              "title": "JONATHAN A. FITZPATRICKSON",
+              "label": "Assistant Professor of Lorem Ipsum",
+              "category": "Full-Time Faculty",
+              "description": "College of Arts and Sciences",
+              "email": "johnsmith32@usfca.edu",
+              "location": "XARTS 004",
+              "link": {
+                "href": "#"
+              }
+            },
+            {
+              "image": {
+                "src": "https://placeimg.com/250/250/people",
+                "alt": "Alt 1"
+              },
+              "title": "JONATHAN A. FITZPATRICKSON III",
+              "label": "Assistant Professor of Lorem Ipsum",
+              "category": "Full-Time Faculty",
+              "description": "College of Arts and Sciences",
+              "email": "johnsmith32@usfca.edu",
+              "location": "XARTS 004",
+              "link": {
+                "href": "#"
+              }
+            },
+            {
+              "image": {
+                "src": "https://placeimg.com/250/250/people",
+                "alt": "Alt 1"
+              },
+              "title": "JONATHAN A. FITZPATRICKSON III",
+              "label": "Assistant Professor of Lorem Ipsum",
+              "category": "Full-Time Faculty",
+              "description": "College of Arts and Sciences",
+              "email": "johnsmith32@usfca.edu",
+              "location": "XARTS 004",
+              "link": {
+                "href": "#"
+              }
+            },
+            {
+              "image": {
+                "src": "https://placeimg.com/250/250/people",
+                "alt": "Alt 1"
+              },
+              "title": "JONATHAN A. FITZPATRICKSON III",
+              "label": "Assistant Professor of Lorem Ipsum",
+              "category": "Full-Time Faculty",
+              "description": "College of Arts and Sciences",
+              "email": "johnsmith32@usfca.edu",
+              "location": "XARTS 004",
+              "link": {
+                "href": "#"
+              }
+            },
+            {
+              "image": {
+                "src": "https://placeimg.com/250/250/people",
+                "alt": "Alt 1"
+              },
+              "title": "JONATHAN A. FITZPATRICKSON III",
+              "label": "Assistant Professor of Lorem Ipsum",
+              "category": "Full-Time Faculty",
+              "description": "College of Arts and Sciences",
+              "email": "johnsmith32@usfca.edu",
+              "location": "XARTS 004",
+              "link": {
+                "href": "#"
+              }
+            },
+            {
+              "image": {
+                "src": "https://placeimg.com/250/250/people",
+                "alt": "Alt 1"
+              },
+              "title": "JONATHAN A. FITZPATRICKSON III",
+              "label": "Assistant Professor of Lorem Ipsum",
+              "category": "Full-Time Faculty",
+              "description": "College of Arts and Sciences",
+              "email": "johnsmith32@usfca.edu",
+              "location": "XARTS 004",
+              "link": {
+                "href": "#"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "bottomLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "fifty-fifty-cta-groupings" }
+      ]
+    }
+  ]
+}

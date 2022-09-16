@@ -1,0 +1,9 @@
+{
+  "title": "Card Title",
+  "profile_link": "https://www.example.com/",
+  "subText": "Card subtext",
+  "image": {
+    "src": "https://placeimg.com/700/700/people",
+    "alt": "Image Alt Text4"
+  }
+}

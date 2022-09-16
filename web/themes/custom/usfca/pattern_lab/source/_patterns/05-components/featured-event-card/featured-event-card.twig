@@ -1,0 +1,64 @@
+{% extends "base-component" %}
+
+{% set name = "featured-event-card" %}
+{% set variant = [image.src ? 'with-image', isVideo ? 'with-video'] %}
+{% set container_element = 'div' %}
+
+{% if image is empty %}
+  {% set image = {src: '../../images/placeholder-wide.png'} %}
+{% endif %}
+
+{% block content %}
+
+  <div class="text-container">
+    {% if title is not empty %}
+      {% include "fields-cta-title" with {
+        href: link.href,
+        title: title
+      } only %}
+    {% endif %}
+
+    {% if description is not empty %}
+      {% include "fields-description" with {
+        description: description
+      } %}
+    {% endif %}
+
+    {% if time is not empty %}
+      <div class="time-wrapper">
+        {% include "fields-time-string" with {
+          text: time
+        } only %}
+      </div>
+    {% endif %}
+
+    {% if location is not empty %}
+      {% include "fields-text" with {
+        text: location,
+        field_variant: 'event-location'
+      } only %}
+    {% endif %}
+
+  </div>
+
+  <div class="image-container">
+
+  {% if date is not empty %}
+    <div class="date-wrapper">
+      {% include "fields-date-string" with {
+        text: date
+      } only %}
+    </div>
+  {% endif %}
+
+    <a href="{{ link.href }}">
+      {% if image is not empty %}
+        {% include "fields-image" with {
+          image: image
+        } only %}
+      {% endif %}
+    </a>
+  </div>
+
+{% endblock %}
+

@@ -1,0 +1,13 @@
+{
+  "eyebrow": null,
+  "title": "Card Title",
+  "link": {
+    "href": "https://www.example.com/",
+    "cta": "More",
+    "ariaLabel": "This is an Aria Label"
+
+  },
+  "subText": null,
+  "description": "<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>",
+  "image": null
+}

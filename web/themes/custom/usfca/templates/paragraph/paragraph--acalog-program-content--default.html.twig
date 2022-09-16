@@ -1,0 +1,22 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% if fields.acalog_program_name is not empty %}
+
+  {{ attach_library('usfca/acalog_program_content') }}
+
+  {% set acalog_catalog_name = acalog_catalog_name | default('2021-2022 Catalog') %}
+
+  {% include "components-rich-text" with {
+    variant: 'acalog-program-content',
+    markup: '<div class="acalog" data-acalog-data="programs" data-acalog-catalog-type="Catalog" data-acalog-program-name="' ~ fields.acalog_program_name ~ '">Loading...</div>',
+    container_json_data: {
+      acalog_display_headings: fields.acalog_display_headings,
+    },
+    container_id: 'acalog-program-content-' ~ paragraph.id(),
+  } only %}
+
+  {% endif %}
+
+{% endblock content %}

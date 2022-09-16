@@ -1,0 +1,19 @@
+{% extends "base-field" %}
+
+{% set name = "video-embed" %}
+
+{% block content %}
+
+  <div class="video-container">
+
+    {% if videoId is not empty %}
+      <div class="youtube-video" data-video-id="{{ videoId }}"></div>
+    {% endif %}
+
+    {% if vimeoId is not empty %}
+      <div class="vimeo-video" data-vimeo-id="{{ vimeoId }}"></div>
+    {% endif %}
+
+  </div>
+
+{% endblock %}

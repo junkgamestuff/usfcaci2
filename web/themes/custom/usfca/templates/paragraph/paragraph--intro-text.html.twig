@@ -1,0 +1,9 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% include "components-rich-text-intro-text" with {
+    markup: fields.intro_text,
+  } only %}
+
+{% endblock content %}

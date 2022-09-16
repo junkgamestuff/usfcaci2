@@ -1,0 +1,26 @@
+.f--button-link {
+  .button-link {
+    @include font-size(18, 22);
+    position: relative;
+    color: $color-black;
+    letter-spacing: .5px;
+    text-decoration: none;
+
+    @include hover {
+      color: $color-orange;
+      text-decoration: underline;
+    }
+
+    svg {
+      display: inline-block;
+      position: relative;
+      top: rem(9);
+      width: rem(30);
+      height: rem(30);
+
+      polygon {
+        fill: $color-black;
+      }
+    }
+  }
+}

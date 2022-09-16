@@ -1,0 +1,90 @@
+.cc--event-cards {
+  .c--event-cards {
+    @include maxwidth;
+
+    .inner-wrapper {
+      @include padding(null cols(3) rem(28));
+
+      @include mq($bp768) {
+        @include padding(null cols(2) rem(30));
+      }
+
+      @include mq($bp1200) {
+        @include padding(null cols(2) rem(22));
+      }
+    }
+
+    .f--field-components {
+      @include mq($bp768) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .f--section-title {
+    text-align: center;
+
+    h2 {
+      @include margin(null null rem(56));
+      @include font-size(36, 36);
+
+      @include mq($bp768) {
+        @include margin(null null rem(80));
+        @include font-size(48, 59);
+        letter-spacing: rem(-.4);
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(100));
+      }
+    }
+  }
+
+  .f--link {
+    @include margin(rem(32) null null);
+    display: flex;
+    justify-content: center;
+
+    @include mq($bp768) {
+      @include margin(rem(65) null null);
+    }
+
+    @include mq($bp1024) {
+      @include margin(rem(60) null null);
+    }
+
+    a {
+      @include button($secondary: true);
+    }
+  }
+
+  .cc--event-card {
+    @include mq($bp768) {
+      @include margin(null cols(1, 44) null null);
+      flex: 0 0 cols(14, 44);
+      width: cols(14, 44);
+
+      &:nth-of-type(3n) {
+        margin-right: 0;
+
+        ~ .cc--event-card {
+          @include padding(rem(40) null null null);
+        }
+      }
+    }
+  }
+
+  &.related-events {
+    @include padding(rem(32) null rem(45));
+    background-color: $color-spanish-white;
+
+    @include mq($bp768) {
+      @include padding(rem(28) null null);
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(50) null rem(85));
+    }
+  }
+}

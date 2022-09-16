@@ -1,0 +1,95 @@
+$play-button: url('../images/icons/icon-play.svg') no-repeat center center / 42px 42px;
+$image-border-radius: 0;
+$title-color: $color-black;
+$description-color: $color-black;
+
+.cc--manual-card {
+
+  .c--manual-card {
+
+    > a:hover + .text-container {
+      .f--cta-title a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .f--cta-title {
+    @include margin(null null rem(16));
+    color: $title-color;
+
+    @include mq($bp768) {
+      @include margin(null null rem(28));
+    }
+
+    h3 {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(24, 24);
+      color: inherit;
+      text-transform: uppercase;
+
+      @include mq($bp768) {
+        @include font-size(30, 30);
+      }
+    }
+  }
+
+  .f--description {
+    p {
+      @include font-size(14, 18);
+      color: $description-color;
+
+      @include mq($bp768) {
+        @include font-size(16, 24);
+      }
+
+      &:last-child {
+        @include margin(null null 0);
+      }
+    }
+  }
+
+  .f--link {
+    @include margin(rem(10) null null);
+    text-align: right;
+
+    @include mq($bp768) {
+      @include margin(rem(45) null null);
+    }
+
+    a {
+      @extend %font-fira-sans-bold;
+      @include font-size(18, 18);
+      text-decoration: none;
+      text-transform: uppercase;
+
+      @include mq($bp768) {
+        @include font-size(20, 20);
+      }
+
+      svg {
+        @include margin(null null null rem(8));
+        display: inline-block;
+        width: rem(8);
+        height: rem(14);
+        transition: transform $transition-duration-fast $transition-easing-default;
+
+        @include mq($bp768) {
+          @include margin(null null null rem(10));
+          width: rem(14);
+          height: rem(24);
+          vertical-align: top;
+        }
+      }
+
+      @include hover {
+        text-decoration: underline;
+
+        svg {
+          transform: translate3d(rem(3), 0, 0);
+          transition: transform $transition-duration-fast $transition-easing-default;
+        }
+      }
+    }
+  }
+}

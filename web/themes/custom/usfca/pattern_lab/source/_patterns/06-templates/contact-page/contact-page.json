@@ -1,0 +1,72 @@
+{
+  "pageTitle": "Contact Us",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "basic-header", "title": "Contact Us" }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "two-column-reverse",
+      "content": [
+        {
+          "type": "webform-form",
+          "items": [
+            {
+              "type": "title",
+              "title": "Your Information"
+            },
+            {
+              "type": "text",
+              "label": "First Name",
+              "placeholder": "First Name"
+            },
+            {
+              "type": "textarea",
+              "label": "Your Note",
+              "placeholder": "Type Your Message"
+            },
+            {
+              "type": "select",
+              "label": "Dropdown Field",
+              "options": [
+                { "value": "1", "label": "All" },
+                { "value": "2", "label": "First Category" },
+                { "value": "3", "label": "Second Category" }
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "checkbox",
+              "label": "Confirm Selection",
+              "value": "checkbox"
+            },
+            {
+              "type": "radio",
+              "namevalue": "radio",
+              "value": "1",
+              "text": "Male"
+            },
+            {
+              "type": "radio",
+              "namevalue": "radio",
+              "value": "2",
+              "text": "Female"
+            },
+            {
+              "type": "button",
+              "value": "Submit"
+            }
+          ]
+        }
+      ],
+      "sidebar": [
+        { "type": "contact-sidebar" }
+      ]
+    }
+  ],
+  "bottomLayouts": null
+}

@@ -1,0 +1,24 @@
+.tc--page-not-found {
+  .cc--basic-header .c--basic-header .flex-container {
+
+    @include mq($bp1024) {
+      @include padding(null cols(10));
+    }
+
+    .header-container .f--page-title {
+      h1 {
+        @include font-size(30, 32);
+        letter-spacing: rem(.5);
+
+        @include mq($bp768) {
+          @include font-size(36, 38);
+        }
+
+        @include mq($bp1024) {
+          @include font-size(48, 52);
+          letter-spacing: normal;
+        }
+      }
+    }
+  }
+}

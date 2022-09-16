@@ -1,0 +1,14 @@
+// Basic breakpoints
+$bp768: 'screen and (min-width: 768px)';
+$bp1024: 'screen and (min-width: 1024px)';
+$bp1140: 'screen and (min-width: 1140px)';
+$bp1200: 'screen and (min-width: 1200px)';
+$bp1400: 'screen and (min-width: 1400px)';
+$bp1800: 'screen and (min-width: 1800px)';
+
+$bp768max: 'screen and (max-width: 767px)';
+$bp1024max: 'screen and (max-width: 1023px)';
+$bp1200max: 'screen and (max-width: 1199px)';
+
+// Min/Max Width Breakpoints
+$bp768-1024: 'screen and (min-width: 768px) and (max-width: 1023px)';

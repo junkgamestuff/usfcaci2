@@ -1,0 +1,21 @@
+.tc--search {
+  .cc--basic-header  {
+    .c--basic-header {
+      @include padding(0 null);
+
+      .header-container {
+        .f--page-title {
+          @include margin(rem(15) null rem(40));
+
+          @include mq($bp768) {
+            @include margin(rem(30) null rem(50));
+          }
+
+          @include mq($bp1024) {
+            @include margin(rem(60) null rem(50));
+          }
+        }
+      }
+    }
+  }
+}

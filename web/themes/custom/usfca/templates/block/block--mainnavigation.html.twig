@@ -1,0 +1,25 @@
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'cc--component-container',
+    'cc--main-menu',
+  ]
+%}
+
+<div{{ attributes.addClass(classes).removeAttribute('id') }}>
+  <div class="c--component c--main-menu">
+    {% block content %}
+      <nav class="mc--menu mc--main" aria-label="{{ label }} Menu">
+        {% if label %}
+          <h3{{ title_attributes }}>{{ label }}</h3>
+        {% endif %}
+        {{ content }}
+      </nav>
+    {% endblock %}
+  </div>
+</div>
+
+
+

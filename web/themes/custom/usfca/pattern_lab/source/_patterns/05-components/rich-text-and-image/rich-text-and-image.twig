@@ -1,0 +1,29 @@
+{% extends "base-component" %}
+
+{% set name="rich-text-and-image" %}
+{% set variant = [isVideo ? 'with-video'] %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Body text" %}
+
+
+{% block content %}
+
+  <div class="text-container">
+    {% include "fields-cta-title" with {
+      href: link.href,
+      title: title
+    } only %}
+
+    {% include "fields-wysiwyg" with { markup: description } only %}
+  </div>
+
+  <div class="image-container">
+    <a href="{{ link.href }}">
+      {% include "fields-image" with {
+        image: image
+      } only %}
+    </a>
+  </div>
+
+{% endblock %}
+

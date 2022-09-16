@@ -1,0 +1,30 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+
+  {{ attach_library('usfca/homepage_hero_ambient') }}
+
+  {% set slides = [] %}
+
+  {% for item in fields.slides %}
+
+    {% set title = item.fields.title %}
+
+    {% set slides = slides | merge([
+      {
+        title: title,
+        image: item.fields.image is not empty ? {
+          render: drupal_image(item.fields.image.uri, '16_9_full', { alt: item.fields.image.alt }, responsive=true),
+          src: item.fields.image.uri | image_style('16_9_720x405'),
+          alt: item.fields.image.alt,
+        } : [],
+        videoSrc: item.fields.ambient_video_url.url,
+      }
+    ]) %}
+  {% endfor %}
+
+  {% include "@pattern_lab/components-hero-home-ambient" with {
+    slides: slides,
+  } only %}
+
+{% endblock content %}

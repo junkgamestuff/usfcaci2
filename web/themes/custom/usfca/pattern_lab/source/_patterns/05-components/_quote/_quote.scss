@@ -1,0 +1,148 @@
+.cc--quote {
+  @include margin(null 0 rem(95));
+  @include padding(rem(20) cols(2, 38) rem(50));
+  position: relative;
+  border: rem(1) solid $color-secondary;
+
+  @include mq($bp768) {
+    @include padding(0);
+    @include margin(rem(10) 0 0);
+  }
+
+  @include mq($bp768max) {
+    &:first-child {
+      @include margin(rem(60) null null);
+    }
+  }
+
+  @include mq($bp1024) {
+    @include margin(rem(30) null null);
+  }
+
+  .c--quote {
+    > .f--image {
+      @include mq($bp768) {
+        position: relative;
+      }
+
+      img {
+        display: none;
+
+        @include mq($bp768) {
+          display: block;
+        }
+      }
+
+      &::before {
+        display: block;
+        position: absolute;
+        top: rem(-40);
+        left: cols(1, 38);
+        width: rem(90);
+        height: rem(55);
+        background-color: $color-white;
+        background-image: url('../images/icons/icon-testimonial-quote.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: rem(70);
+        content: '';
+
+        @include mq($bp768) {
+          top: auto;
+          bottom: rem(-20);
+          left: cols(1, 14);
+          width: rem(60);
+          background-color: transparent;
+          background-size: 100%;
+        }
+
+        @include mq($bp1024) {
+          width: rem(90);
+          height: rem(75);
+        }
+      }
+    }
+
+    .f--description {
+      @include mq($bp768) {
+        @include padding(rem(35) cols(1, 14) rem(45));
+      }
+
+      @include mq($bp768) {
+        @include padding(rem(40) null rem(70));
+      }
+
+      p {
+        @include margin(null null 0);
+        text-align: left;
+
+        @include mq($bp768) {
+          @include font-size(16, 24);
+        }
+
+        @include mq($bp1024) {
+          @include font-size(18, 22);
+        }
+      }
+    }
+
+    footer {
+      @include padding(null cols(1, 38));
+      display: flex;
+      position: absolute;
+      bottom: rem(-30);
+      left: cols(1, 38);
+      width: cols(36, 38);
+      background: $color-white;
+
+      @include mq($bp768) {
+        @include padding(null cols(1, 28));
+        left: cols(1, 28);
+        width: cols(12, 14);
+      }
+
+      .f--image {
+        @include margin(null rem(10) null null);
+
+        img {
+          display: block;
+          width: rem(55);
+          height: rem(55);
+          border-radius: 50%;
+        }
+      }
+
+      .f--attribution {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h4 {
+          @extend %font-fira-sans-extra-condensed-bold;
+          @include font-size(16, 21);
+
+          @include mq($bp768) {
+            @include font-size(14, 19);
+          }
+
+          @include mq($bp1024) {
+            @include font-size(18, 24);
+          }
+        }
+
+        p {
+          @extend %font-fira-sans-extra-condensed-regular-italic;
+          @include font-size(14, 22);
+
+          @include mq($bp768) {
+            @include font-size(12, 16);
+          }
+
+          @include mq($bp1024) {
+            @include font-size(16, 21);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+// utility extend headings
+%h1,
+h1 {
+  @extend %font-fira-sans-extra-condensed-semibold;
+  @include font-size(36, 36);
+  color: $color-black;
+
+  @include mq($bp768) {
+    @include font-size(60, 60);
+    letter-spacing: rem(.5);
+  }
+}
+
+%h2,
+h2 {
+  @extend %font-fira-sans-extra-condensed-regular;
+  @include font-size(36, 36);
+  color: $color-black;
+  letter-spacing: rem(.5);
+
+  @include mq($bp768) {
+    @include font-size(48, 59);
+  }
+
+  strong {
+    @extend %font-fira-sans-extra-condensed-semibold;
+  }
+}
+
+%h3,
+h3 {
+  @extend %font-fira-sans-extra-condensed-semibold;
+  @include font-size(22, 26);
+  color: $color-black;
+
+  @include mq($bp768) {
+    @include font-size(24, 29);
+  }
+
+  @include mq($bp1024) {
+    @include font-size(36, 38);
+  }
+}
+
+%h4,
+h4 {
+  @extend %font-fira-sans-extra-condensed-regular;
+  @include font-size(18, 26);
+  color: $color-black;
+
+  @include mq($bp768) {
+    @include font-size(20, 23);
+  }
+
+  @include mq($bp1024) {
+    @include font-size(36, 34);
+  }
+}
+
+%h5,
+h5 {
+  @extend %font-fira-sans-extra-condensed-semibold;
+  @include font-size(22, 32);
+  color: $color-black;
+
+  @include mq($bp1024) {
+    @include font-size(30, 32);
+  }
+}
+
+%h6,
+h6 {
+  @extend %font-fira-sans-extra-condensed-regular;
+  @include font-size(18, 28);
+  color: $color-sherpa-blue;
+  letter-spacing: rem(.3);
+
+  @include mq($bp768) {
+    @include font-size(24, 32);
+  }
+}
+
+.lc--layout-container {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    strong {
+      font-family: inherit;
+    }
+
+    a {
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      text-decoration: none;
+
+      @include hover {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.lc--layout-container li,
+.lc--layout-container li::before,
+.lc--layout-container p {
+  @extend %font-ibm-plex-serif-regular;
+  @include font-size(14, 18);
+  color: $color-black;
+
+  @include mq($bp768) {
+    @include font-size(16, 24);
+  }
+}
+
+.lc--layout-container p {
+  @include margin(null null rem(30));
+}
+
+.lc--layout-container b,
+.lc--layout-container strong {
+  font-weight: 700;
+}
+
+div.ivy-main.ivy-pos-bottom-right.ivy-t-circle div.ivy-circle {
+  right: rem(35);
+  bottom: rem(60);
+}

@@ -1,0 +1,22 @@
+{% extends "base-component" %}
+
+{% set name = "program-listing" %}
+
+{% set container_element = "section" %}
+
+{% block content %}
+
+  {% include "components-accordions" with {
+    title: title,
+    accordions: accordions
+  } only %}
+
+  {% if link is not empty %}
+    {% include "fields-link" with {
+      href: link.href,
+      cta: link.cta,
+      aria: link.ariaLabel
+    } only %}
+  {% endif %}
+
+{% endblock %}

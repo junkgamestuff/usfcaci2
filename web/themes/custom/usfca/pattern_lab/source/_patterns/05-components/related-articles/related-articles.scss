@@ -1,0 +1,83 @@
+$line-color: $color-primary;
+$section-color: $color-white;
+
+.cc--related-articles {
+  background-color: $section-color;
+
+  .c--related-articles {
+    @include maxwidth;
+
+    .inner-wrapper {
+      @include padding(null cols(3));
+
+      @include mq($bp768) {
+        @include padding(null cols(2));
+      }
+    }
+
+    .f--field-components {
+      @include mq($bp768) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .f--section-title {
+    @include mq($bp768) {
+      position: relative;
+
+      &::before {
+        display: block;
+        position: absolute;
+        right: 50%;
+        bottom: 50%;
+        width: 100vw;
+        height: 1px;
+        transform: translateX(50%);
+        background-color: $line-color;
+        content: '';
+        z-index: 0;
+      }
+    }
+
+    h2 {
+      @include margin(null null rem(20));
+      background-color: $section-color;
+
+      @include mq($bp768) {
+        @include padding(null cols(1, 44));
+        @include margin(null cols(4, 44) rem(25));
+        position: relative;
+      }
+
+      @include mq($bp1024) {
+        @include margin(null cols(8, 44) rem(40));
+      }
+    }
+  }
+
+  .f--link {
+    text-align: center;
+
+    .button {
+      @include margin(rem(30) null null);
+
+      @include mq($bp1024) {
+        @include margin(rem(40) null null);
+      }
+    }
+  }
+
+  .cc--related-article {
+    @include mq($bp768) {
+      @include margin(null cols(1, 44) null null);
+      flex: 0 0 cols(14, 44);
+      width: cols(14, 44);
+
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

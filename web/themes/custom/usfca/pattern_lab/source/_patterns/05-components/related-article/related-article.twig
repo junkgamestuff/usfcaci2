@@ -1,0 +1,36 @@
+{% extends "base-component" %}
+
+{% set name = "related-article" %}
+{% set container_element = 'article' %}
+{% set container_aria_label = "Related Article" %}
+
+{% block content %}
+
+  <a href="{{ link }}">
+    {% include "fields-image" with {
+      image: image
+    } only %}
+  </a>
+
+  <div class="text-container">
+
+    {% include "fields-category" with {
+      category: eyebrow
+    } only %}
+
+    {% include "fields-cta-title" with {
+      href: link,
+      title: cardTitle
+    } only %}
+
+    {% include "fields-text" with {
+      text: subText
+    } only %}
+
+    {% include "fields-description" with {
+      description: description
+    } only %}
+
+  </div>
+
+{% endblock %}

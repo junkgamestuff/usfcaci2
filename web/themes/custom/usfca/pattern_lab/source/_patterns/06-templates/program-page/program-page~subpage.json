@@ -1,0 +1,100 @@
+{
+  "bodyClass": "transparent-header",
+  "ariaLabel": "Lorem ipsum dolorsit amet",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "program-page-header",
+          "eyebrow": "Computer Science MS",
+          "title": "Full Time Program",
+          "headline": "Class and Practicum in the Beating Heart of the Tech World",
+          "description": "<p>The program requires two years (four semesters) of full-time study, and follows a cohort model during the first year in which all students take the same set of core courses. During the second year, students may choose from a rotating selection of graduate electives based on their interests and goals. Students develop several large software projects throughout their degree, including a substantial capstone project during their second year.</p>",
+          "bannerImage": {
+            "src": "https://placeimg.com/800/800/people",
+            "alt": "Alt text for image"
+          },
+          "links": [
+            {
+              "title": "Full Time Program",
+              "url": "#",
+              "class": "active"
+            },
+            {
+              "title": "Part Time Program",
+              "url": "#"
+            },
+            {
+              "title": "Masters Project",
+              "url": "#"
+            },
+            {
+              "title": "Class Profile",
+              "url": "#"
+            },
+            {
+              "title": "Faculty & Staff",
+              "url": "#"
+            },
+            {
+              "title": "Our Alumni",
+              "url": "#"
+            },
+            {
+              "title": "Careers",
+              "url": "#"
+            },
+            {
+              "title": "Tuition & Financial Aid",
+              "url": "#"
+            },
+            {
+              "title": "How to Apply",
+              "url": "#"
+            },
+            {
+              "title": "FAQ",
+              "url": "#"
+            },
+            {
+              "title": "Contact Us",
+              "url": "#"
+            }
+          ],
+          "buttons": [
+            {
+              "title": "REQUEST INFO",
+              "url": "#"
+            },
+            {
+              "title": "APPLY NOW",
+              "url": "#"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "contact-box"
+        },
+        {
+          "type": "acalog-course-catalogue"
+        }
+      ]
+    }
+  ],
+  "bottomLayouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "full-width-cta" }
+      ]
+    }
+  ]
+}

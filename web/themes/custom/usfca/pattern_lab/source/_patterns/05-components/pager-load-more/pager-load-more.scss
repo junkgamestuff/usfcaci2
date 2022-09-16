@@ -1,0 +1,26 @@
+.cc--pager-load-more {
+  @include margin(rem(32) null null);
+  display: flex;
+  justify-content: center;
+
+  @include mq($bp768) {
+    @include margin(rem(65) null null);
+  }
+
+  @include mq($bp1024) {
+    @include margin(rem(60) null null);
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .f--link {
+    a {
+      @include button($secondary: true);
+      @extend %font-fira-sans-bold;
+      color: $color-black;
+    }
+  }
+}

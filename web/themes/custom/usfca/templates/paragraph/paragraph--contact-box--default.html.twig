@@ -1,0 +1,54 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% for item in fields.contact_boxes %}
+
+    {% set address_text = '' %}
+    {% set campus_links = [] %}
+
+    {% for campus_address in item.fields.campus_addresses %}
+
+      {% set current_address_text = '' %}
+
+      {% set address = campus_address.fields.address %}
+
+      {% if address.address_line1 is not empty %}{% set current_address_text = current_address_text ~ address.address_line1 %}{% endif %}
+      {% if address.address_line2 is not empty %}{% set current_address_text = current_address_text ~ '<br/>' ~ address.address_line2 %}{% endif %}
+      {% if address.locality is not empty %}{% set current_address_text = current_address_text ~ '<br/>' ~ address.locality %}{% endif %}
+      {% if address.administrative_area is not empty %}{% set current_address_text = current_address_text ~ ', ' ~ address.administrative_area %}{% endif %}
+      {% if address.postal_code is not empty %}{% set current_address_text = current_address_text ~ ' ' ~ address.postal_code %}{% endif %}
+
+      {% set campus_links = campus_links | merge([{
+        title: campus_address.fields.campus,
+        url: 'https://maps.google.com/?q=' ~ current_address_text | replace({ ' ': '%20', '<br/>': '%20' }),
+      }]) %}
+
+      {% set address_text = address_text is not empty ? address_text ~ '<br/><br/>' ~ current_address_text : current_address_text %}
+
+    {% endfor %}
+
+    {% if campus_links|length > 2 %}
+      {% set campus_links = [{
+        title: 'Multiple Locations',
+      }] %}
+    {% endif %}
+
+    {% set contact_name = item.fields.contact_name %}
+    {% if item.fields.professional_title %}
+      {% set contact_name = item.fields.contact_name ~ ', ' ~ item.fields.professional_title %}
+    {% endif %}
+
+    {% include "components-contact-box" with {
+      title: program_name,
+      text: contact_name,
+      email: item.fields.email,
+      phone: item.fields.phone,
+      address: address_text,
+      time: item.fields.hours,
+      links: campus_links,
+    } only %}
+
+  {% endfor %}
+
+{% endblock content %}

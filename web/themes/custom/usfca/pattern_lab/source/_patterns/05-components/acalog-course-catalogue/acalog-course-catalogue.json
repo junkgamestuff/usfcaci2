@@ -1,0 +1,35 @@
+{
+  "title": "Sample Course Sequence",
+  "items": [
+    {
+      "title": "Year One",
+      "accordions": [
+        {
+          "title": "Fall",
+          "markup": "<h6>Systems Course (choose one)</h6><ul><li>Systems Foundations</li><li>Network Programming</li></ul><h6>Development Course (choose one)</h6><ul><li>Big Data</li><li>Data Processing in the Cloud</li><li>Distributed Software Development</li></ul>"
+        },
+        {
+          "title": "Spring",
+          "markup": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec feugiat metus. Aenean sagittis nibh risus, ut efficitur libero placerat sit amet. Quisque pharetra, est et imperdiet interdum, nunc neque mollis eros, sit amet aliquam tellus felis vel tortor. Vestibulum vel nisl quam. Mauris porttitor felis ut consequat aliquam. Donec gravida lacinia eros vel vestibulum. Nulla elementum dictum eros et rhoncus. Cras cursus felis laoreet malesuada volutpat. Curabitur nec eros eu quam pellentesque finibus.</p>"
+        },
+        {
+          "title": "Summer",
+          "markup": "<p>Vivamus ornare quam scelerisque, fermentum mi eu, ultrices sem. Aenean eu faucibus ligula. In ultrices ex est, at venenatis ex congue sed. Praesent quam ante, vehicula id dictum sed, varius sit amet dui. Fusce eros nunc, commodo sed maximus vitae, iaculis sit amet eros. Nullam volutpat finibus tortor non varius. Mauris elit leo, sodales hendrerit metus ac, rhoncus porta nulla. Etiam iaculis libero nec lorem ullamcorper sollicitudin. Integer ac orci ultrices nisi lacinia euismod. Nunc lacinia mattis ante eget sollicitudin.</p>"
+        }
+      ]
+    },
+    {
+      "title": "Year Two",
+      "accordions": [
+        {
+          "title": "Master’s Project",
+          "markup": "<p>This is the accordion body</p>"
+        },
+        {
+          "title": "Graduate Electives",
+          "markup": "<p>This is the accordion body</p>"
+        }
+      ]
+    }
+  ]
+}

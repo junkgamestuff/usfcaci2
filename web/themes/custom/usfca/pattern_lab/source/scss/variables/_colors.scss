@@ -1,0 +1,95 @@
+// http://www.color-blindness.com/color-name-hue/
+// http://chir.ag/projects/name-that-color
+
+// https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
+
+// Primary
+// Secondary
+// Accent
+// Error
+// Status
+
+$color-white: #FFF;
+$color-black: #000;
+
+// Primary & Secondary
+$color-primary: #000;
+$color-secondary: #505151;
+
+// grey
+$color-grey: #CCC;
+$color-light-grey: #EBEBEB;
+$color-bright-grey: #F0F0F0;
+$color-shadow-grey: #DDD;
+$color-grey-light: #D7D7D7;
+$color-very-light-grey: #C8C8C8;
+$color-shadow-grey-dark: #4B4B4B;
+$color-gainsboro: #E1E1E1;
+$color-nevada: #6E6F6F;
+$color-dove-gray: #737373;
+$color-aluminium: #8A8C8E;
+
+
+// USF Colors
+$color-supernova: #FDBB30;
+$color-sherpa-blue: #00543C;
+$color-wasabi: #73973F;
+$color-atlantis: #AED136;
+$color-putty: #CCAF74;
+$color-carrot-orange: #EB821E;
+$color-chilean-fire: #CD542C;
+$color-dark-purple: #A8228E;
+$color-caribbean-green: #02B8A0;
+$color-iris-blue: #00B3D8;
+$color-spanish-white: #DED5B4;
+$color-gray-suit: #919194;
+$color-empress: #737373;
+$color-chestnut: #B84242;
+
+// Orange
+$color-orange: $color-shadow-grey-dark;
+
+
+// Interface
+$color-focus: #00A1CA;
+$color-error: #D50032;
+$color-border: #D8D8D8;
+
+// Gadients
+$color-gradient-primary: #0069BA;
+
+// Globals
+$color-body-bg: $color-white;
+$color-text-color: $color-black;
+$color-input-placeholder: $color-grey;
+
+// Links
+$color-link: $color-primary;
+$color-link-hover: $color-primary;
+
+$color-link-light: $color-white;
+
+$link-default-decoration: underline;
+$link-default-hover-decoration: none;
+
+$link-primary-decoration: none;
+$link-primary-hover-decoration: underline;
+
+// Buttons
+$button-default-bg: $color-primary;
+$button-default-color: $color-white;
+$button-default-border: transparent;
+$button-default-hover-bg: $color-white;
+$button-default-hover-color: $color-primary;
+$button-default-hover-border: $color-primary;
+
+$button-secondary-bg: $color-white;
+$button-secondary-color: $color-black;
+$button-secondary-border: $color-supernova;
+$button-secondary-hover-bg: $color-white;
+$button-secondary-hover-color: $color-black;
+$button-secondary-hover-border: $color-supernova;
+
+$button-primary-bg: transparent;
+$button-primary-color: $color-white;
+$button-primary-hover-color: $color-white;

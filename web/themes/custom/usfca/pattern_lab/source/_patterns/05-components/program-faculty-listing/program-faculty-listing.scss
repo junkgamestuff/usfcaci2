@@ -1,0 +1,66 @@
+.cc--program-faculty-listing {
+  @include margin(null null rem(60));
+  @include padding(null rem(20));
+
+  @include mq($bp768) {
+    @include padding(null cols(2));
+  }
+
+  @include mq($bp1024) {
+    @include padding(null cols(8));
+  }
+
+  .f--cta-title {
+    @include margin(null null rem(20));
+
+    @include mq($bp768) {
+      @include margin(null null rem(40));
+    }
+
+    h3 {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(36, 36);
+      color: $color-sherpa-blue;
+
+      @include mq($bp768) {
+        @include font-size(48, 40);
+      }
+    }
+  }
+
+  .f--field-components {
+    .c--program-faculty-listing-item {
+      @include padding(null null rem(20));
+      @include margin(null null rem(20));
+      border-bottom: rem(2) solid $color-supernova;
+
+      @include mq($bp768) {
+        @include padding(null null rem(30));
+        @include margin(null null rem(30));
+      }
+
+      @include mq($bp1024) {
+        @include padding(null null rem(40));
+        @include margin(null null rem(40));
+      }
+    }
+  }
+
+  .f--link {
+    @include margin(rem(32) null null);
+    display: flex;
+    justify-content: center;
+
+    @include mq($bp768) {
+      @include margin(rem(65) null null);
+    }
+
+    @include mq($bp1024) {
+      @include margin(rem(60) null null);
+    }
+
+    a {
+      @include button($secondary: true);
+    }
+  }
+}

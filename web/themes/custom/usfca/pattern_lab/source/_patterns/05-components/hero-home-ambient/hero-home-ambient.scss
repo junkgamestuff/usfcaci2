@@ -1,0 +1,128 @@
+// text color
+$text-color: $color-white;
+// gradient overlay
+$overlay-color: rgba($color-black, .3);
+$gradient-overlay-color: rgba($color-black, .42);
+
+.cc--hero-home-ambient {
+  position: relative;
+
+  .home-page & {
+    @include mq($bp1024) {
+      @include margin(rem(-150) null null);
+    }
+  }
+
+  .home-page.banner-active & {
+    @include mq($bp1024) {
+      @include margin(rem(-170) null null);
+    }
+
+    @include mq($bp1140) {
+      @include margin(rem(-146) null null);
+    }
+  }
+
+  .swiper-slide {
+    @include mq($bp768max) {
+      height: auto;
+    }
+  }
+
+  .swiper-controls {
+    position: absolute;
+    top: rem(210);
+    width: 100%;
+
+    @include mq($bp768) {
+      top: auto;
+      bottom: 0;
+    }
+
+    @include mq($bp1800) {
+      @include maxwidth;
+      @include centered(x);
+      z-index: 100;
+    }
+
+    .button-container {
+      position: absolute;
+      right: rem(10);
+      bottom: rem(40);
+      width: rem(60);
+      height: rem(25);
+      z-index: 1;
+
+      @include mq($bp768) {
+        @include centered(x);
+        right: cols(1);
+        bottom: rem(25);
+        left: auto;
+        width: rem(80);
+        height: rem(35);
+        transform: translate(0);
+      }
+
+      @include mq($bp1024) {
+        right: rem(25);
+        bottom: rem(25);
+      }
+    }
+
+    .swiper-button-wrapper {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      button {
+        top: auto;
+        width: rem(25);
+        height: rem(25);
+        margin: 0;
+        background: none;
+
+        &::after {
+          display: none;
+        }
+
+        @include mq($bp768) {
+          width: rem(35);
+          height: rem(35);
+        }
+
+        &.swiper-button-prev {
+          right: auto;
+          left: 0;
+
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+
+        &.swiper-button-next {
+          right: 0;
+          left: auto;
+        }
+
+        svg {
+          width: rem(9);
+          height: rem(15);
+
+          @include mq($bp768max) {
+            width: rem(7);
+          }
+        }
+
+        @include hover {
+          background-color: $color-supernova;
+
+          svg {
+            path {
+              fill: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

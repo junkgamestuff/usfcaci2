@@ -1,0 +1,48 @@
+{
+  "linksLeft": {
+    "title": "Keep <span class=\"highlight\">Exploring</span>",
+    "links": [
+      {
+        "url": "https://www.example.com/",
+        "title": "Example Link 1 Example Link 1 Example Link 1 Example Link 1",
+        "ariaLabel": "An Example Aria Label for CTA Link",
+        "hasIcon": false
+      },
+      {
+        "url": "https://www.example.com/",
+        "title": "Example Link 2",
+        "ariaLabel": "An Example Aria Label for CTA Link",
+        "hasIcon": false
+      },
+      {
+        "url": "https://www.example.com/",
+        "title": "Example Link 3",
+        "ariaLabel": "An Example Aria Label for CTA Link",
+        "hasIcon": false
+      }
+    ]
+  },
+  "linksRight": {
+    "title": "Take the <span class=\"highlight\">Next Step</span>",
+    "links": [
+      {
+        "url": "https://www.example.com/",
+        "title": "Example Link 1 Example Link 1 Example Link 1 Example Link 1",
+        "ariaLabel": "An Example Aria Label for CTA Link",
+        "hasIcon": false
+      },
+      {
+        "url": "https://www.example.com/",
+        "title": "Example Link 2",
+        "ariaLabel": "An Example Aria Label for CTA Link",
+        "hasIcon": false
+      },
+      {
+        "url": "https://www.example.com/",
+        "title": "Example Link 3",
+        "ariaLabel": "An Example Aria Label for CTA Link",
+        "hasIcon": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,409 @@
+.cc--header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform $transition-duration-default $transition-easing-default;
+  background-color: $color-sherpa-blue;
+  z-index: 999;
+
+  @include mq($bp1024) {
+    background-image: url('../images/header-shadow.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  @include mq($bp1024max) {
+    background-color: $color-white;
+  }
+
+  &.scroll-down {
+    transform: translate3d(0, -100%, 0);
+    background: none;
+    box-shadow: none;
+
+    .header-buttons {
+      transform: translate3d(0);
+      transition: transform $transition-duration-default $transition-easing-default;
+    }
+
+    .cc--main-menu .m--menu > li .submenus-wrapper {
+      display: none;
+    }
+
+    .cc--branding-header {
+      visibility: hidden;
+
+      .main-menu-open & {
+        visibility: visible;
+      }
+    }
+  }
+
+  &.scroll-up {
+    transform: translate3d(0, -100%, 0);
+    background: none;
+
+    .header-buttons {
+      height: rem(80);
+      transform: translate3d(0, rem(80), 0);
+
+      @include mq($bp768) {
+        height: rem(120);
+        transform: translate3d(0, rem(120), 0);
+      }
+
+      @include mq($bp1024) {
+        height: rem(150);
+        transform: translate3d(0, rem(150), 0);
+      }
+    }
+
+    .cc--branding-header {
+      visibility: hidden;
+
+      .main-menu-open & {
+        visibility: visible;
+      }
+    }
+
+    .nav-container {
+      top: rem(80);
+
+      @include mq($bp768) {
+        top: rem(120);
+      }
+
+      @include mq($bp1024) {
+        top: rem(150);
+      }
+    }
+  }
+
+  .transparent-header & {
+    background-color: transparent;
+    box-shadow: none;
+
+    @include mq($bp1024max) {
+      background-color: $color-white;
+    }
+  }
+
+  .c--header {
+    .header-wrapper {
+      @include maxwidth;
+      position: relative;
+    }
+  }
+
+  .nav-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    left: 50%;
+    width: 100vw;
+    max-height: 100vh;
+    margin-right: -50vw;
+    margin-left: -50vw;
+    background-color: $color-white;
+    overflow: auto;
+
+    @include mq($bp1024max) {
+      height: 100vh;
+    }
+
+    .nav-wrapper {
+      @include maxwidth;
+      display: flex;
+      flex-wrap: wrap;
+
+      @include mq($bp1024max) {
+        @include padding(null null rem(65));
+        flex-direction: column;
+
+        .cc--branding-header {
+          order: 0;
+        }
+
+        .cc--main-menu {
+          order: 1;
+        }
+
+        .cc--utility-menu {
+          order: 2;
+        }
+      }
+    }
+
+    .cc--branding-header {
+      height: rem(80);
+
+      @include mq($bp768) {
+        height: rem(120);
+      }
+
+      @include mq($bp1024) {
+        flex-grow: 0;
+        width: cols(19, 48);
+        height: auto;
+      }
+
+      @include mq($bp1200) {
+        flex-grow: 0;
+        width: cols(18, 48);
+        height: auto;
+      }
+
+      .c--branding-header {
+        @include padding(null null null rem(20));
+
+        @include mq($bp768) {
+          @include padding(null null null cols(1, 48));
+        }
+
+        @include mq($bp1024) {
+          @include padding(null null null cols(2, 20));
+        }
+
+        svg {
+          g[fill='#fff'] {
+            path {
+              fill: $color-sherpa-blue;
+            }
+          }
+        }
+      }
+
+      &#block-sitebranding-collegeofartsandsciences,
+      &#block-sitebranding-schoolofeducation,
+      &#block-sitebranding-schooloflaw,
+      &#block-sitebranding-schoolofmanagement,
+      &#block-sitebranding-schoolofnursing {
+        svg {
+          path[fill='#00543C'] {
+            fill: $color-sherpa-blue;
+          }
+
+          path[fill='#8A8C8E'],
+          rect {
+            fill: $color-aluminium;
+          }
+        }
+      }
+    }
+
+    .cc--utility-menu {
+      @include mq($bp1024) {
+        flex-grow: 1;
+        width: cols(29, 48);
+      }
+
+      @include mq($bp1200) {
+        flex-grow: 1;
+        width: cols(30, 48);
+      }
+    }
+
+    .cc--main-menu {
+      @include padding(null null rem(28));
+      width: 100%;
+
+      @include mq($bp768) {
+        @include padding(rem(19) null rem(28));
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(35) cols(2) rem(50));
+      }
+    }
+  }
+
+  .search-trigger-button {
+    width: rem(40);
+    height: rem(40);
+    background: $color-sherpa-blue;
+
+    @include mq($bp768) {
+      width: rem(60);
+      height: rem(60);
+    }
+
+    @include mq($bp1024) {
+      width: rem(75);
+      height: rem(75);
+    }
+
+    svg {
+      width: rem(16);
+      height: rem(16);
+
+      @include mq($bp768) {
+        width: rem(27);
+        height: rem(27);
+      }
+
+      path {
+        fill: $color-white;
+      }
+    }
+
+    .search-close {
+      display: none;
+      width: rem(16);
+      height: rem(16);
+
+      @include mq($bp768) {
+        width: rem(32);
+        height: rem(32);
+      }
+    }
+
+    &.is-active {
+      background: $color-white;
+
+      .search-open {
+        display: none;
+      }
+
+      .search-close {
+        display: inline-block;
+
+        path {
+          fill: $color-sherpa-blue;
+        }
+      }
+    }
+  }
+
+  .desktop-nav {
+    display: flex;
+    justify-content: space-between;
+
+    > .cc--branding-header {
+      flex-basis: cols(24, 48);
+
+      @include mq($bp1024) {
+        flex-basis: cols(20, 48);
+      }
+    }
+
+    .header-buttons {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      transition: transform $transition-duration-default $transition-easing-default;
+      z-index: 10;
+    }
+
+    .mobile-menu-trigger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(40);
+      height: rem(40);
+      background: $color-sherpa-blue;
+
+      @include mq($bp768) {
+        width: rem(60);
+        height: rem(60);
+      }
+
+      @include mq($bp1024) {
+        width: rem(75);
+        height: rem(75);
+      }
+
+      svg {
+        width: rem(19);
+        height: rem(13);
+
+        @include mq($bp768) {
+          width: rem(29);
+          height: rem(20);
+        }
+
+        @include mq($bp1024) {
+          width: rem(35);
+          height: rem(25);
+        }
+
+        &.icon-close {
+          width: rem(16);
+          height: rem(16);
+
+          @include mq($bp768) {
+            width: rem(32);
+            height: rem(32);
+          }
+
+          path {
+            fill: $color-sherpa-blue;
+          }
+        }
+      }
+
+      .search-close,
+      .icon-close {
+        display: none;
+      }
+
+      &.is-active {
+        background: none;
+
+        .search-open,
+        .icon-hamburger {
+          display: none;
+        }
+
+        .search-close,
+        .icon-close {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .mobile-nav {
+    @include mq($bp1024) {
+      display: none;
+    }
+
+    &-topbar-container {
+      @include padding(rem(15) null);
+      display: flex;
+      justify-content: space-between;
+      height: rem(60);
+
+      .mobile-buttons {
+        display: flex;
+      }
+    }
+
+    &-menu-container {
+      display: none;
+      position: fixed;
+      top: rem(60);
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% - #{rem(60)});
+      background-color: rgba($color-black, .8);
+      overflow: auto;
+      z-index: 99;
+    }
+  }
+
+  &.emergency {
+    @include mq($bp1024) {
+      background-color: $color-chestnut;
+    }
+  }
+}
+
+.main-menu-open {
+  body {
+    overflow: hidden;
+  }
+}

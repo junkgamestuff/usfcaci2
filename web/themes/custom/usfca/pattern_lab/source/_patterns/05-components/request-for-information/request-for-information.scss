@@ -1,0 +1,447 @@
+$border-color: $color-orange;
+$border-radius: 0;
+$button-radius: 0;
+$section-color: $color-white;
+$label-color: $color-secondary;
+$box-border-color-selected: $color-primary;
+$check-icon: url('../images/icons/icon-check.svg');
+$select-icon: url('../images/icons/icon-select-arrow.svg') no-repeat center;
+
+.cc--request-for-information {
+  @include maxwidth;
+  @include margin(null null rem(60));
+  background: $section-color;
+
+  @include mq($bp1024) {
+    @include margin(null null rem(100));
+  }
+
+  .c--request-for-information {
+    @include padding(rem(35) cols(3) null);
+
+    @include mq($bp768) {
+      @include padding(rem(50) cols(2) null);
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(40) cols(5) null);
+    }
+
+    .header-container {
+      text-align: center;
+
+      .f--section-title {
+        @include margin(null null rem(30));
+
+        @include mq($bp1024) {
+          @include margin(null null rem(50));
+        }
+
+        h2 {
+          @include padding(null rem(15));
+          @include margin(null null 0);
+          display: inline-block;
+          transform: translateY(-50%);
+          background: $section-color;
+
+          @include mq($bp768) {
+            @include padding(null rem(32));
+          }
+
+          @include mq($bp1024) {
+            @include padding(null rem(75));
+          }
+        }
+      }
+
+      .f--description {
+        @include margin(null null rem(30));
+      }
+    }
+
+    .inner-wrapper {
+      @include padding(null cols(3, 42) rem(30));
+      border: rem(1) solid $border-color;
+      border-radius: $border-radius;
+
+      @include mq($bp768) {
+        @include padding(null cols(3, 44) rem(40));
+      }
+
+      @include mq($bp1024) {
+        @include padding(null cols(3, 38) rem(60));
+      }
+    }
+
+    .f--button {
+      @include mq($bp768) {
+        display: flex;
+        justify-content: center;
+      }
+
+      .f--button-wrapper {
+        &:not(:last-child) {
+          @include margin(null null rem(20));
+
+          @include mq($bp768) {
+            @include margin(null rem(20) 0 null);
+            @include padding(null rem(20) null null);
+            border-right: rem(2) solid rgba($color-black, .2);
+          }
+        }
+      }
+    }
+  }
+
+  &.expanded .form-embed-wrapper {
+    display: block;
+
+    .hbspt-form,
+    .action {
+      @include margin(null null 0);
+    }
+
+    .fsBody .fsForm {
+      @include padding(null null 0);
+    }
+  }
+
+  .btn-hide .button--alt,
+  .form-embed-wrapper {
+    display: none;
+  }
+
+  .btn-hide {
+    text-align: center;
+  }
+
+  .button--alt {
+    @extend %font-fira-sans-semibold;
+    @include font-size(16, 16);
+    border: 0;
+
+    svg {
+      @include margin(null null null rem(3));
+      top: rem(2);
+    }
+  }
+
+  .form-embed-wrapper {
+    @include mq($bp768) {
+      @include padding(null cols(3, 38));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(6, 32));
+    }
+  }
+
+  // FS form
+  .fsBody {
+    &,
+    .fsForm {
+      @include padding(0);
+      @include margin(0);
+    }
+
+    .fsForm {
+      @include padding(null null rem(50));
+    }
+
+    .fsLabel {
+      &,
+      span {
+        @extend %font-fira-sans-semibold;
+        @include margin(null null rem(5));
+        @include font-size(12, 22);
+        color: $label-color;
+      }
+    }
+
+    legend.fsLabel {
+      span {
+        @extend %font-fira-sans-regular;
+        @include font-size(14, 14);
+      }
+    }
+
+    .fsOptionLabel {
+      &,
+      span {
+        @extend %font-fira-sans-regular;
+        @include padding(0);
+        @include font-size(12, 26);
+        border: 0;
+        background: none;
+        color: $label-color;
+        letter-spacing: 0;
+      }
+    }
+
+    .fsRowBody {
+      @include mq($bp1024) {
+        @include padding(null null rem(10));
+      }
+    }
+
+    select,
+    input[type='tel'],
+    input[type='email'],
+    input[type='text'] {
+      @extend %input-style;
+      @include padding(rem(12) rem(25));
+
+      @include placeholder {
+        color: $color-secondary;
+      }
+    }
+
+    input[type='radio'],
+    input[type='checkbox'] {
+      @include margin(null rem(10) null null);
+      top: rem(2);
+      width: rem(20);
+      height: rem(20);
+
+      &:checked::before,
+      &::before {
+        @include margin(null rem(10) null null);
+        width: rem(20);
+        height: rem(20);
+        border: rem(1) solid $color-border;
+        background-color: $color-white;
+      }
+    }
+
+    input[type='radio']:checked::before,
+    input[type='checkbox']:checked::before {
+      border-color: $box-border-color-selected;
+      background-image: $check-icon;
+    }
+
+    .fsSubmitButton {
+      @include button;
+      @include font-size(16, 22);
+      border-radius: $button-radius !important;
+      font-size: rem(16) !important;
+
+      @include hover {
+        border-color: $button-default-hover-border !important;
+        background-color: $button-default-hover-bg !important;
+        color: $button-default-hover-color !important;
+      }
+    }
+
+    .fsSubmit {
+      @include padding(rem(10) null rem(15));
+      @include margin(0 null null);
+    }
+
+    .fsSubFieldGroup {
+      @include mq($bp768) {
+        display: flex;
+      }
+
+      .fsSubField {
+        @include margin(0);
+
+        &.fsNameFirst {
+          @include mq($bp768max) {
+            @include margin(null null rem(20));
+          }
+        }
+
+        @include mq($bp768) {
+          flex: 0 0 cols(16, 32);
+          width: cols(16, 32);
+
+          &:nth-child(odd) {
+            @include padding(null cols(1, 32) null null);
+          }
+
+          &:nth-child(even) {
+            @include padding(null null null cols(1, 32));
+          }
+        }
+
+        @include mq($bp1024) {
+          flex: 0 0 cols(10, 20);
+          width: cols(10, 20);
+
+          &:nth-child(odd) {
+            @include padding(null cols(1, 20) null null);
+          }
+
+          &:nth-child(even) {
+            @include padding(null null null cols(1, 20));
+          }
+        }
+      }
+    }
+  }
+
+  // form_page
+  .form_page {
+    display: flex;
+    flex-wrap: wrap;
+
+    > * {
+      width: 100%;
+    }
+
+    div.form_question {
+      @include margin(null null rem(20));
+
+      @include mq($bp768) {
+        @include margin(null null rem(30));
+      }
+    }
+
+    select,
+    input[type='tel'],
+    input[type='email'],
+    input[type='text'] {
+      @extend %input-style;
+
+      @include placeholder {
+        color: $color-secondary;
+      }
+    }
+
+    input[type='checkbox'] {
+      @include margin(0 rem(10) 0 0);
+      position: absolute;
+      top: rem(2);
+      width: rem(20);
+      height: rem(20);
+      opacity: 0;
+
+      + label {
+        @include margin(0);
+        @include font-size(14, 17);
+        display: block;
+      }
+
+      &:checked + label::before,
+      + label::before {
+        @include margin(null rem(10) null null);
+        display: inline-block;
+        position: relative;
+        top: rem(4);
+        width: rem(20);
+        height: rem(20);
+        border: 1px solid $color-border;
+        background-color: $color-white;
+        content: '';
+      }
+    }
+
+    input[type='checkbox']:checked + label::before {
+      border-color: $box-border-color-selected;
+      background: $check-icon no-repeat center;
+    }
+
+    .form_label {
+      @include margin(null null rem(5));
+
+      &,
+      a,
+      span {
+        @extend %font-fira-sans-semibold;
+        @include font-size(12, 22);
+        color: $label-color;
+        font-size: rem(12) !important;
+
+        span {
+          font-family: inherit !important;
+        }
+      }
+    }
+
+    [data-export='sys:first'] {
+      @include mq($bp768max) {
+        @include margin(null null rem(20));
+      }
+
+      @include mq($bp768) {
+        @include padding(null cols(1, 32) null null);
+        flex: 0 0 cols(16, 32);
+        width: cols(16, 32);
+      }
+
+      @include mq($bp1024) {
+        @include padding(null cols(1, 20) null null);
+        flex: 0 0 cols(10, 20);
+        width: cols(10, 20);
+      }
+    }
+
+    [data-export='sys:last'] {
+      @include mq($bp768max) {
+        @include margin(null null rem(20));
+      }
+
+      @include mq($bp768) {
+        @include padding(null null null cols(1, 32));
+        flex: 0 0 cols(16, 32);
+        width: cols(16, 32);
+      }
+
+      @include mq($bp1024) {
+        @include padding(null null null cols(1, 20));
+        flex: 0 0 cols(10, 20);
+        width: cols(10, 20);
+      }
+    }
+
+    .form_select {
+      .form_responses {
+        position: relative;
+
+        &::after {
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: rem(15);
+          width: rem(10);
+          height: rem(6);
+          transform: translateY(-50%);
+          background: $select-icon;
+          background-size: 100% auto;
+          content: '';
+          pointer-events: none;
+        }
+      }
+    }
+
+    .form_p {
+      text-align: center;
+
+      .form_label {
+        @extend %font-fira-sans-regular;
+        @include font-size(10, 12);
+
+        a,
+        span {
+          font-family: inherit;
+          font-size: inherit !important;
+          font-weight: inherit;
+        }
+      }
+    }
+  }
+
+  .action {
+    @include margin(null null rem(50));
+    text-align: center;
+
+    button {
+      @include button;
+    }
+  }
+
+  // hbspt-form
+  .hbspt-form {
+    @include margin(null null rem(50));
+  }
+}

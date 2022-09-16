@@ -1,0 +1,44 @@
+{
+  "description": "If you know what you want to major in, that’s great — go ahead and browse our listings. But it’s OK not to know, too. We’ll help you find a good match.",
+  "items": [
+    {
+      "type": "text",
+      "link": {
+        "url": "/patterns/05-components-interest-matcher-interest-matcher/05-components-interest-matcher-interest-matcher.html",
+        "title": "BROWSE FULL LISTING"
+      },
+      "class": null
+    },
+    {
+      "type": "select",
+      "namevalue": "interest",
+      "label": "I’M INTERESTED IN",
+      "name": "interest-select",
+      "options": [
+        { "value": "1", "label": "I’M INTERESTED IN" },
+        { "value": "2", "label": "Science & Environment" },
+        { "value": "3", "label": "Computer Science" }
+      ],
+      "class": "active",
+      "content":  {
+        "title": "I’m Interested in Science & Environment",
+        "link": {
+          "url": "#",
+          "title": "SHOW OPTIONS"
+        }
+      }
+    },
+    {
+      "type": "select",
+      "namevalue": "want",
+      "label": "I WANT TO BE A",
+      "name": "want-select",
+      "options": [
+        { "value": "1", "label": "I WANT TO BE A" },
+        { "value": "2", "label": "QA" },
+        { "value": "3", "label": "Frontend" },
+        { "value": "3", "label": "Backend" }
+      ]
+    }
+  ]
+}

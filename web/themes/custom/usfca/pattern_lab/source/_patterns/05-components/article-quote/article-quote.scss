@@ -1,0 +1,114 @@
+$quote-border-color: $color-orange;
+$quote-background-color: $color-white;
+$radius: 0;
+$color-attribution: $color-secondary;
+
+.cc--article-quote {
+  @include maxwidth;
+  @include margin(null null rem(50));
+
+  @include mq($bp768) {
+    @include margin(null null rem(60));
+  }
+
+  @include mq($bp1024) {
+    @include margin(null null rem(80));
+  }
+
+  .c--article-quote {
+    @include padding(null cols(3));
+
+    @include mq($bp768) {
+      @include padding(null cols(4));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(10));
+    }
+
+    .quote-container {
+      @include margin(rem(21) null null);
+      @include padding(rem(45) cols(3, 42) rem(30));
+      position: relative;
+      border: rem(1) solid $quote-border-color;
+      border-radius: $radius;
+      background-color: $quote-background-color;
+
+      @include mq($bp768) {
+        @include margin(rem(16) null null);
+        @include padding(rem(50) cols(2, 40) rem(40));
+      }
+
+      @include mq($bp1024) {
+        @include margin(rem(27) null null);
+        @include padding(null cols(2, 28));
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: cols(3, 42);
+        width: rem(60);
+        height: rem(42);
+        transform: translateY(-50%);
+        background-color: $quote-background-color;
+
+        @include mq($bp768) {
+          left: cols(2, 40);
+          width: rem(46);
+          height: rem(34);
+        }
+
+        @include mq($bp1024) {
+          left: cols(2, 28);
+          width: rem(76);
+          height: rem(56);
+        }
+      }
+    }
+
+    .f--description {
+      position: relative;
+
+      p {
+        @extend %font-fira-sans-extra-condensed-semibold;
+        @include margin(null null 0);
+        @include font-size(28, 38);
+
+        @include mq($bp768) {
+          @include font-size(26, 36);
+        }
+
+        @include mq($bp1024) {
+          @include font-size(38, 53);
+        }
+      }
+    }
+
+    .f--attribution {
+      @include margin(rem(15) null null);
+
+      h4 {
+        @extend %font-fira-sans-extra-condensed-bold;
+      }
+
+      p,
+      h4 {
+        @include font-size(14, 22);
+        color: $color-attribution;
+
+        @include mq($bp1024) {
+          @include font-size(16, 23);
+        }
+      }
+    }
+
+    .f--link {
+      @include margin(rem(30) null null);
+
+      @include mq($bp768) {
+        @include margin(rem(40) null null);
+      }
+    }
+  }
+}

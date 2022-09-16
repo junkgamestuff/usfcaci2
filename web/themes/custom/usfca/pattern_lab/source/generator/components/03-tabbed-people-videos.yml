@@ -1,0 +1,114 @@
+name: "tabbed-people-videos"
+type: "component"
+markup:
+  content:
+    - type: field
+      name: section-title
+      with:
+        title: title
+    - markup: '<span class="tab-carousel-pagination-wrapper"><span class="tab-carousel-pagination"></span></span>'
+    - type: repeater
+      swiper: true
+      swiper_controls: false
+      for: tab
+      in: tabs
+      repeat:
+        name: tabbed-people-videos-item
+        own: true
+        markup:
+          content:
+            - type: field
+              name: label
+              own: true
+              markup: '{{ label }}'
+              with:
+                label: label
+            - type: container
+              class: 'text-container'
+              content:
+              - type: field
+                name: cta-title
+                with:
+                  title: title
+              - type: field
+                name: description
+                with:
+                  description: description
+              - type: field
+                name: link
+                condition: link.title
+                with:
+                  link: link
+            - type: container
+              class: 'image-container'
+              content:
+              - type: field
+                name: image
+                condition: image.src
+                with:
+                  image: image
+              - type: field
+                name: video-embed
+                own: true
+                markup: '{{ embed | raw }}'
+                condition: video.embed
+                with:
+                  embed: video.embed
+                data:
+                  embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UDIQwGb-4YQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        with:
+          label: label
+          title: title
+          description: description
+          link: link
+          image: image
+          video: video
+data:
+  title: "My UMass Experience"
+  tabs:
+    - label: "Undergrad"
+      title: "Chloe, Class of '92"
+      description: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut odio et leo vulputate pulvinar at a leo. Suspendisse rutrum diam vitae magna luctus placerat. Nunc iaculis nibh lorem, eu aliquet.</p>"
+      link:
+        url: "https://example.com"
+        title: "The Undergrad Experience"
+        aria: "Read more about The Undergrad Experience"
+      image:
+        src: "/images/9_16_900x1600.png"
+        alt: "An image"
+        swiperLazy: true
+      video:
+        embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UDIQwGb-4YQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    - label: "Graduate"
+      title: "Chloe, Class of '92"
+      description: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut odio et leo vulputate pulvinar at a leo. Suspendisse rutrum diam vitae magna luctus placerat. Nunc iaculis nibh lorem, eu aliquet.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut odio et leo vulputate pulvinar at a leo. Suspendisse rutrum diam vitae magna luctus placerat. Nunc iaculis nibh lorem, eu aliquet.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut odio et leo vulputate pulvinar at a leo. Suspendisse rutrum diam vitae magna luctus placerat. Nunc iaculis nibh lorem, eu aliquet.</p>"
+      link:
+        url: "https://example.com"
+        title: "The Undergrad Experience"
+        aria: "Read more about The Undergrad Experience"
+      image:
+        src: "/images/9_16_900x1600.png"
+        alt: "An image"
+        swiperLazy: true
+    - label: "Online"
+      title: "Chloe, Class of '92"
+      description: "<p>Lorem ipsum dolor sit amet</p>"
+      image:
+        src: "/images/9_16_900x1600.png"
+        alt: "An image"
+        swiperLazy: true
+      video:
+        embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UDIQwGb-4YQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    - label: "Continuing Ed"
+      title: "Chloe, Class of '92"
+      description: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut odio et leo vulputate pulvinar at a leo. Suspendisse rutrum diam vitae magna luctus placerat. Nunc iaculis nibh lorem, eu aliquet.</p>"
+      link:
+        url: "https://example.com"
+        title: "The Undergrad Experience"
+        aria: "Read more about The Undergrad Experience"
+      image:
+        src: "/images/9_16_900x1600.png"
+        alt: "An image"
+        swiperLazy: true
+      video:
+        embed: '<iframe width="560" height="315" src="https://www.youtube.com/embed/UDIQwGb-4YQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'

@@ -1,0 +1,14 @@
+
+{% extends "base-form-item" %}
+
+{% block content %}
+
+{% if label %}
+<label for="{{ name|default("email") }}">
+  {{ label }}{% if required %} *{% endif %}
+</label>
+{% endif %}
+
+<input type="month" name="{{ name|default('month') }}">
+
+{% endblock %}

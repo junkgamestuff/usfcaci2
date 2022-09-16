@@ -1,0 +1,85 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+
+  <div class="content-top">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+          {% include "components-page-title" with {
+            title: fields.display_title | default(fields.title),
+          } only %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-main">
+    <div class="lc--layout-container lc--full">
+      <div class="l--layout l--full">
+        <div class="lr--layout-region lr--main">
+
+          {% include "components-inline-search-form" with {
+            link: {
+              title: fields.link.title,
+              url: fields.link.url,
+            },
+            formAction: url('<current>'),
+            parameterName: 'q',
+            inputValue: inputValue,
+            radios: fields.gps_default_refinement is not empty ? [
+              {
+                "id": "refinement-school",
+                "group": "gps_refinement",
+                "value": "school",
+                "text": fields.gps_default_refinement,
+                "checked": activeRefinement == 'school',
+              },
+              {
+                "id": "refinement-none",
+                "group": "gps_refinement",
+                "value": "all",
+                "text": "All of USFCA.edu",
+                "checked": activeRefinement != 'school',
+              }
+            ] : NULL,
+          } only %}
+
+          <div class="cc--component-container cc--rich-text">
+            <div class="c--component c--rich-text">
+
+              <div
+                class="gcse-searchresults-only"
+                {% if fields.gps_default_refinement is not empty and activeRefinement == 'school' %} data-defaultToRefinement="{{ fields.gps_default_refinement }}"{% endif %}
+                ></div>
+
+              <script>
+                window.__gcse || (window.__gcse = {});
+                window.__gcse.searchCallbacks = {
+                  web: {
+                    rendered: function (gname, query, promoElts, resultElts) {
+                      const arr = document.getElementsByClassName('gsc-result-info');
+                      const results_count = resultElts.length;
+                      for (var i = 0; i < arr.length; i++) {
+                        let default_text = arr[i].innerHTML;
+                        default_text = default_text.replace(/\s*\(.*?\)$/gm, '');
+                        const matches = default_text.match(/\d/g);
+                        if (matches) {
+                          arr[i].innerHTML = `Showing <b>${results_count} of ${matches.join('')}</b> Results`;
+                        }
+                      }
+                    },
+                  },
+                };
+              </script>
+              <script async src="https://cse.google.com/cse.js?cx={{ fields.gps_context_id }}"></script>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}

@@ -1,0 +1,251 @@
+.cc--image-gallery {
+  @include padding(rem(40) null rem(35));
+  position: relative;
+
+  @include mq($bp768) {
+    @include padding(null null rem(78));
+  }
+
+  @include mq($bp1024) {
+    @include padding(rem(60) null);
+  }
+
+  // section-header
+  .section-header {
+    .inner-wrapper {
+      @include maxwidth(267px);
+
+      @include mq($bp768) {
+        @include maxwidth(640px);
+      }
+
+      @include mq($bp1024) {
+        @include maxwidth(900px);
+      }
+
+      @include mq($bp1400) {
+        @include maxwidth(1025px);
+      }
+    }
+
+    .f--section-title {
+      h2 {
+        @include font-size(40, 36);
+        @include margin(null null rem(15));
+        color: $color-white;
+
+        @include mq($bp768) {
+          @include font-size(70, 60);
+        }
+      }
+    }
+  }
+
+  .gallery-top {
+    position: relative;
+    overflow: hidden;
+
+    .cc--image-gallery-slide {
+      &.swiper-slide {
+        @include margin(0 auto);
+        width: auto;
+
+        &.swiper-slide-active {
+          img {
+            opacity: 1;
+          }
+        }
+
+        &.swiper-slide-prev,
+        &.swiper-slide-next {
+          img {
+            opacity: .5;
+          }
+        }
+      }
+    }
+
+    img {
+      width: rem(280);
+      max-width: rem(280);
+      height: rem(158);
+
+      @include mq($bp768) {
+        width: rem(575);
+        max-width: rem(575);
+        height: rem(323);
+      }
+
+      @include mq($bp1024) {
+        width: rem(800);
+        max-width: rem(800);
+        height: rem(450);
+      }
+
+      @include mq($bp1400) {
+        width: rem(1050);
+        max-width: rem(1050);
+        height: rem(590);
+      }
+    }
+  }
+
+  .gallery-text-bottom {
+    position: relative;
+    max-width: rem(280);
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include mq($bp768) {
+      max-width: rem(575);
+      min-height: rem(80);
+    }
+
+    @include mq($bp1024) {
+      max-width: rem(800);
+    }
+
+    @include mq($bp1400) {
+      max-width: rem(1025);
+    }
+
+    .swiper-wrapper {
+      @include mq($bp768) {
+        position: relative;
+      }
+    }
+
+    .swiper-slide-next {
+      @include mq($bp768) {
+        opacity: 0;
+      }
+    }
+
+    .swiper-button-wrapper {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      height: rem(40);
+      z-index: 1;
+
+      @include mq($bp768) {
+        position: absolute;
+        justify-content: space-between;
+        right: 0;
+        top: rem(30);
+        width: rem(125);
+        height: rem(50);
+      }
+
+      &.hidden {
+        display: none;
+      }
+
+      // <button>
+      .swiper-button-prev,
+      .swiper-button-next {
+        @include margin(0 rem(20));
+        display: flex;
+        position: relative;
+        top: 50%;
+        align-items: center;
+        justify-content: center;
+        width: rem(40);
+        height: rem(40);
+        transform: translateY(-50%);
+        background-image: none;
+        background-color: $color-white;
+        border: rem(2) solid $color-supernova;
+
+        &::after {
+          display: none;
+        }
+
+        @include mq($bp768) {
+          margin: 0;
+          width: rem(50);
+          height: rem(50);
+        }
+
+        @include hover {
+          border-width: rem(5);
+        }
+
+        svg {
+          width: rem(9);
+          height: rem(13);
+          fill: $color-black;
+
+          @include mq($bp768) {
+            width: rem(9);
+            height: rem(16);
+          }
+        }
+      }
+
+      .swiper-button-prev {
+        left: auto;
+      }
+
+      .swiper-button-next {
+        right: auto;
+
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .f--description {
+      @include margin(null null rem(20));
+      @include padding(rem(19) null null);
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(14, 16);
+      color: $color-black;
+
+      @include mq($bp768) {
+        @include margin(null null 0);
+        @include padding(rem(30) rem(160) rem(5) null);
+        @include font-size(14, 18);
+      }
+
+      @include mq($bp1024) {
+        @include margin(rem(30) null null);
+        @include padding(0 rem(175) 0 null);
+      }
+
+      p {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include font-size(14, 16);
+        color: $color-black;
+
+        @include mq($bp768) {
+          @include font-size(14, 18);
+        }
+      }
+
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $color-white;
+      }
+
+      a {
+        color: $color-black;
+
+        @include hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .swiper-wrapper {
+    &.hidden {
+      transform: translate3d(0px, 0, 0) !important;
+    }
+  }
+}
+

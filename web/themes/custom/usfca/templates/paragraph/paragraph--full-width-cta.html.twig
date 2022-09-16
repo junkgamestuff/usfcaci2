@@ -1,0 +1,26 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% set links = [] %}
+  {% for item in fields.full_width_cta_link %}
+    {% set links = links | merge([{
+      href: item.fields.link.url,
+      cta: item.fields.link.title,
+      ariaLabel: item.fields.link.attributes.aria_label ?? item.fields.link.title,
+      color: item.fields.color,
+    }]) %}
+  {% endfor %}
+
+  {% set title = fields.title %}
+  {% if fields.title_highlight %}
+    {% set title = fields.title|replace({(fields.title_highlight): '<span class="highlight">' ~ fields.title_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% include "components-full-width-cta" with {
+    title: title,
+    description: fields.description,
+    links: links,
+  } only %}
+
+{% endblock content %}

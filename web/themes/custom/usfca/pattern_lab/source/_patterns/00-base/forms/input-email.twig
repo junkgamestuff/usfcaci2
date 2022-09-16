@@ -1,0 +1,21 @@
+{% extends "base-form-item" %}
+
+{% block content %}
+
+  {% if label %}
+    <label for="{{ name|default("email") }}">
+     {{ label }}{% if required %} *{% endif %}
+    </label>
+{% endif %}
+<input
+        type="email"
+        name="{{ name|default('email') }}"
+        id="{{ name|default('email') }}"
+        {% if disabled %}disabled="disabled"{% endif %}
+        {% if maxlength %}maxlength="{{ maxlength }}"{% endif %}
+        {% if required %}required="required"{% endif %}
+        {% if placeholder %}placeholder="{{ placeholder }}"{% endif %}
+>
+
+
+{% endblock %}

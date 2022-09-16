@@ -1,0 +1,24 @@
+{
+  "links": [
+    {
+      "href": "http://www.google.com",
+      "cta": "Go Here Now",
+      "ariaLabel": "Learn more about go here now"
+    },
+    {
+      "href": "http://www.google.com",
+      "cta": "Go Here Now",
+      "ariaLabel": "Learn more about go here now"
+    },
+    {
+      "href": "http://www.google.com",
+      "cta": "Go Here Now",
+      "ariaLabel": "Learn more about go here now"
+    },
+    {
+      "href": "http://www.google.com",
+      "cta": "Go Here Now",
+      "ariaLabel": "Learn more about go here now"
+    }
+  ]
+}

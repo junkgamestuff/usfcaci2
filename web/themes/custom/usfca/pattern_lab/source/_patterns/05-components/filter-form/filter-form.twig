@@ -1,0 +1,107 @@
+{% extends "base-component" %}
+
+{% set name = "filter-form" %}
+{% set container_element = 'div' %}
+
+{% block content %}
+  {% if title is not empty %}
+    <div class="filter-form-header">
+      <h3 class="filter-title">{{ title }}</h3>
+      <button type="button" class="filter-button">
+        {{ title }}
+        <svg class="icon icon-filter" enable-background="new 0 0 20 19.7" viewBox="0 0 20 19.7" xmlns="http://www.w3.org/2000/svg"><path d="m10.8 2.4v-1.6c0-.5-.4-.8-.8-.8s-.8.3-.8.8v1.6c-1.2.4-2 1.5-2 2.7 0 1.3.8 2.4 2.1 2.7v11.2c0 .4.3.8.8.8.4 0 .8-.3.8-.8v-11.2c1.2-.3 2.1-1.4 2.1-2.7-.2-1.2-1-2.3-2.2-2.7zm-.8 4c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3 1.3.6 1.3 1.3-.6 1.3-1.3 1.3zm-6.4 5.5v-11.1c0-.5-.4-.8-.8-.8s-.7.3-.7.8v11.1c-1.3.3-2.1 1.5-2.1 2.7 0 1.3.8 2.4 2.1 2.7v1.7c0 .4.3.8.8.8.4 0 .8-.3.8-.8v-1.6c1.2-.3 2-1.4 2.1-2.7-.2-1.3-1-2.5-2.2-2.8zm-.8 4c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3 1.3.6 1.3 1.3-.6 1.3-1.3 1.3zm15.1-4v-11.1c0-.4-.3-.8-.8-.8-.4 0-.8.3-.8.8v11.1c-1.2.3-2.1 1.4-2.1 2.7s.8 2.4 2.1 2.7v1.7c0 .3.1.5.4.7.2.1.5.1.8 0 .2-.1.4-.4.4-.7v-1.6c1.2-.3 2-1.4 2.1-2.7 0-1.3-.8-2.5-2.1-2.8zm-.7 4c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3 1.3.6 1.3 1.3-.6 1.3-1.3 1.3z" fill="#00543C"/></svg>
+        <svg class="icon icon-filter-close" enable-background="new 0 0 25.6 25.6" viewBox="0 0 25.6 25.6" xmlns="http://www.w3.org/2000/svg"><path d="m14.9 12.8 10.3-10.2c.6-.6.6-1.5 0-2.1s-1.5-.6-2.1 0l-10.3 10.2-10.2-10.3c-.6-.5-1.6-.5-2.2 0-.5.6-.5 1.6 0 2.2l10.3 10.3-10.3 10.2c-.6.6-.6 1.5 0 2.1s1.5.6 2.1 0l10.3-10.3 10.3 10.3c.6.6 1.5.6 2.1 0s.6-1.5 0-2.1z" fill="#00543C"/></svg>
+      </button>
+    </div>
+  {% endif %}
+
+  <form class="filter-form-content">
+    <div class="fields-container">
+
+      {% for item in items %}
+
+        {% if item.type == "text" %}
+
+          {% include "base-input-text" with { label: item.label, placeholder: item.placeholder } only %}
+
+        {% elseif item.type == "checkbox" %}
+
+          <div class="form-item-wrapper">
+
+            {% if item.title is not empty %}
+              <h4>{{ item.title }}</h4>
+            {% endif %}
+
+            {% include "base-input-checkbox" with { namevalue: item.namevalue, options: item.options, required: item.required } only %}
+
+          </div>
+
+        {% elseif item.type == "select" %}
+
+          <div class="form-item-wrapper">
+
+            {% if item.title is not empty %}
+              <h4>{{ item.title }}</h4>
+            {% endif %}
+
+            {% include "base-input-select" with { label: item.label, name: item.name, required: item.required, disabled: item.disabled, options: item.options } only %}
+
+          </div>
+
+        {% elseif item.type == "date" %}
+
+          <div class="form-item-wrapper">
+
+            {% if item.title is not empty %}
+              <h4>{{ item.title }}</h4>
+            {% endif %}
+
+            <div class="form-group">
+              {% include "base-input-date" with {
+                label: item.date_from.label,
+                name: item.date_from.name,
+                value: item.date_from.value,
+                placeholder: item.date_from.placeholder
+              } only %}
+              <span>to</span>
+              {% include "base-input-date" with {
+                label: item.date_to.label,
+                name: item.date_to.name,
+                value: item.date_to.value,
+                placeholder: item.date_to.placeholder
+              } only %}
+            </div>
+
+          </div>
+
+        {% endif %}
+
+      {% endfor %}
+
+    </div>
+
+    <div class="button-container">
+      {% for item in items %}
+
+        {% if item.type == "button" %}
+          <div class="submit-wrapper">
+            {% include "base-input-button" with { value: item.value } only %}
+          </div>
+        {% elseif item.type == "submit" %}
+          <div class="submit-wrapper">
+            {% include "base-input-submit" with { value: item.value } only %}
+          </div>
+        {% endif %}
+
+        {% if item.type == "reset" %}
+          <div class="reset-wrapper">
+            {% include "base-input-reset" with { value: item.value } only %}
+          </div>
+        {% endif %}
+
+      {% endfor %}
+    </div>
+
+  </form>
+
+{% endblock %}

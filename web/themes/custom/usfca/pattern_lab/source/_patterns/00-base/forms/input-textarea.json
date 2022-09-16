@@ -1,0 +1,8 @@
+{
+  "name": "textarea",
+  "rows": "4",
+  "cols": "50",
+  "disabled": false,
+  "maxlength": false,
+  "label": "Example Textarea Input"
+}

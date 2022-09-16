@@ -1,0 +1,33 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% set cards = [] %}
+  {% for card in fields.cards %}
+    {% set cards = cards | merge([{
+      title: card.fields.title,
+      description: card.fields.description,
+      link: card.fields.link.url ? {
+        href: card.fields.link.url,
+      },
+      image: card.fields.image.uri ? {
+        src: card.fields.image.uri | image_style('16_9_637x359'),
+        alt: card.fields.image.alt,
+        render: drupal_image(card.fields.image.uri, '16_9_one_third', {alt: card.fields.image.alt}, responsive=true),
+        link: card.fields.link.url,
+      } : null,
+    }]) %}
+  {% endfor %}
+
+  {% set title = fields.title %}
+  {% if fields.title_highlight %}
+    {% set title = title|replace({(fields.title_highlight): '<span class="highlight">' ~ fields.title_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% include "components-manual-cta-grid" with {
+    title: title,
+    description: fields.description,
+    cards: cards,
+  } only %}
+
+{% endblock content %}

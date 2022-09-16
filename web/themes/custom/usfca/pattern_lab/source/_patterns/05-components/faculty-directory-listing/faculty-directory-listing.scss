@@ -1,0 +1,36 @@
+.cc--faculty-directory-listing {
+  .f--field-components {
+    .cc--faculty-directory-listing-item {
+      @include padding(null null rem(20));
+      @include margin(null null rem(30));
+      border-bottom: rem(2) solid $color-supernova;
+
+      @include mq($bp768) {
+        @include padding(null null rem(30));
+      }
+
+      @include mq($bp1024) {
+        @include padding(null null rem(40));
+        @include margin(null null rem(40));
+      }
+    }
+  }
+
+  .f--link {
+    @include margin(rem(32) null null);
+    display: flex;
+    justify-content: center;
+
+    @include mq($bp768) {
+      @include margin(rem(65) null null);
+    }
+
+    @include mq($bp1024) {
+      @include margin(rem(60) null null);
+    }
+
+    a {
+      @include button($secondary: true);
+    }
+  }
+}

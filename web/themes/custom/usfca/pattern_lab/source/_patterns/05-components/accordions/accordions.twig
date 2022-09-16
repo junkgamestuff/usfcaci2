@@ -1,0 +1,63 @@
+{% extends "base-component" %}
+
+{% set name = "accordions" %}
+
+{% set container_element = "section" %}
+
+{% set instanceId = instanceId | default(1) %}
+
+{% set variant = variants %}
+
+{% set randomWord = [] %}
+{% set alpha = 'abcdefghijklmnopqrstuvwxyz' %}
+{% set numbers = '0123456789' %}
+
+{% set container_aria_label = "Content Accordions" %}
+
+{% for i in 1..10 %}
+  {% set randomCharacter = random(alpha ~ alpha|upper ~ numbers ~ '-_') %}
+  {% set randomWord = randomWord|merge([randomCharacter]) %}
+{% endfor %}
+{% set randomWord = randomWord|join %}
+
+{% block content %}
+
+  {% if title is not empty %}
+    {% include "fields-section-title" with {
+      title: title,
+      field_variant: (hideTitle) ? 'visually-hidden': ''
+    } only %}
+  {% endif %}
+
+  {% if description is not empty %}
+    {% include "fields-description" with { description: description } only %}
+  {% endif %}
+
+  {% if accordions is not empty %}
+    <ul>
+      {% for accordion in accordions %}
+        <li>
+          <button type="button" class="accordion-trigger {{ accordion.programType|length ? 'program' }}" id="heading-{{ instanceId }}-{{ loop.index }}-{{ randomWord }}" aria-controls="section-{{ instanceId }}-{{ loop.index }}-{{ randomWord }}" aria-expanded="false" aria-disabled="false">
+            {% if accordion.title is not empty %}
+              <span class="item-title">{{ accordion.title }}</span>
+            {% endif %}
+
+            {% if accordion.programType is not empty %}
+              {% include "fields-description" with { description: accordion.programType } only %}
+            {% endif %}
+          </button>
+
+          <div id="section-{{ instanceId }}-{{ loop.index }}-{{ randomWord }}" role="region" aria-labelledby="heading-{{ instanceId }}-{{ loop.index }}-{{ randomWord }}" class="accordion-panel">
+            {{ accordion.markup|raw }}
+
+            {% if accordion.link is not empty %}
+              {% include "fields-link" with { cta: accordion.link.cta, url: accordion.link.url } only %}
+            {% endif %}
+          </div>
+        </li>
+
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+{% endblock %}

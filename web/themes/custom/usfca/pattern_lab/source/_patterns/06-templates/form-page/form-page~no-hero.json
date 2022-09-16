@@ -1,0 +1,19 @@
+{
+  "bodyClass": null,
+  "topLayouts": null,
+  "layouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "rfi-hero",
+          "title": "Request Information",
+          "image": null
+        },
+        { "type": "rfi-rich-text" },
+        { "type": "slate-form" }
+      ]
+    }
+  ],
+  "bottomLayouts": null
+}

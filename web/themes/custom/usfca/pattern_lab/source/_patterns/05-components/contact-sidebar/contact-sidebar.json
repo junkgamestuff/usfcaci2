@@ -1,0 +1,14 @@
+{
+  "title": "Non commodo esse nisi non laboris aliquip",
+  "description": "<p>220 East 23rd Street, Suite 900<br>New York, NY 10010<br><a href='tel:+123456789'>212-123-4567</a></p>",
+  "links": [
+    {
+      "cta": "Visit Our Office",
+      "href": "#"
+    },
+    {
+      "cta": "Media Inquiries",
+      "href": "#"
+    }
+  ]
+}

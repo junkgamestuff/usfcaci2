@@ -1,0 +1,14 @@
+{% extends "base-field" %}
+
+{% set name = "image-srcset" %}
+
+{% block content %}
+
+  <img srcset="{{ srcset }}" data-src="{{ src }}" alt="Alt Text Goes Here" class="lazyload" >
+
+{% endblock %}
+
+
+
+
+

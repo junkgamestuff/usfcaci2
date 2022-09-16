@@ -1,0 +1,11 @@
+.cc--search-listing {
+  @include maxwidth;
+
+  .c--search-listing {
+    @include padding(null cols(3));
+
+    @include mq($bp768) {
+      @include padding(null cols(10));
+    }
+  }
+}

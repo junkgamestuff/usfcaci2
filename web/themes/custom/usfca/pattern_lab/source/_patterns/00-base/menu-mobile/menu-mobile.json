@@ -1,0 +1,27 @@
+{
+  "menu": {
+    "name": "Menu Name",
+    "items": [
+      {
+        "title": "Menu Item 1",
+        "href": "https://example.com",
+        "submenu": [
+          {
+            "title": "Menu Subitem 1",
+            "href": "https://example.com"
+          },
+          {
+            "title": "Menu Subitem 2",
+            "href": "https://example.com"
+          },
+          {
+            "title": "Menu Subitem 3",
+            "href": "https://example.com"
+          }
+        ]
+      },
+      { "title": "Menu Item 2", "href": "https://example.com" },
+      { "title": "Menu Item 3", "href": "https://example.com" }
+    ]
+  }
+}

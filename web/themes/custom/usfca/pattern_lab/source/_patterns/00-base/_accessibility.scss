@@ -1,0 +1,18 @@
+*:focus {
+  @include outline;
+}
+
+.visually-hidden {
+  @include visuallyhidden;
+}
+
+.skip-link {
+  position: absolute;
+  left: rem(20);
+  color: $color-white;
+  z-index: 101;
+
+  &:not(:focus) {
+    @include visuallyhidden;
+  }
+}

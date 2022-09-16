@@ -1,0 +1,16 @@
+<nav
+  class="mc--menu mc--{{ menu.name }}"
+  {% if menu.ariaLabel is not empty %}aria-label="{{ menu.ariaLabel|default('Footer Navigation') }}"{% endif %}
+>
+
+{% if menu.label is not null %}
+  <h3>{{ menu.label }}</h3>
+{% endif %}
+
+  <ul class="m--menu m--{{ menu.name }}">
+    {% for item in menu.items %}
+      {% include "base-menu-item" with { item: item } %}
+    {% endfor %}
+  </ul><!-- m--menu -->
+
+</nav>

@@ -1,0 +1,52 @@
+{% extends "base-component" %}
+
+{% set name = "hero-home-ambient" %}
+
+{% block content %}
+
+  {% if heroLogo is not empty %}
+    {{ heroLogo|raw}}
+  {% endif %}
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      {% for slide in slides %}
+        {% include 'components-hero-home-ambient-slide' with {
+          align: slide.align,
+          title: slide.title,
+          url: slide.link.url,
+          description: slide.description,
+          image: slide.image,
+          videoSrc: slide.videoSrc,
+          variant: 'swiper-slide'
+        } only %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="swiper-controls">
+    <div class="button-container">
+      <ul class="swiper-button-wrapper">
+        <li>
+          <button type="button" aria-label="Previous Slide" class="swiper-button-prev" aria-controls="{{ container_id }}">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 31.7 54" enable-background="new 0 0 31.7 54" xml:space="preserve">
+<path fill="#FFFFFF" fill-rule="evenodd" clip-rule="evenodd" d="M21,27L0.7,47.8c0,0-1.9,2.3,0.5,4.9C3.6,55.2,6,53.3,6,53.3L31.7,27l0,0
+	l0,0L6,0.7c0,0-2.3-2-4.8,0.5c-2.4,2.5-0.5,4.9-0.5,4.9L21,27z"/>
+</svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" aria-label="Next Slide" class="swiper-button-next" aria-controls="{{ container_id }}">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 31.7 54" enable-background="new 0 0 31.7 54" xml:space="preserve">
+<path fill="#FFFFFF" fill-rule="evenodd" clip-rule="evenodd" d="M21,27L0.7,47.8c0,0-1.9,2.3,0.5,4.9C3.6,55.2,6,53.3,6,53.3L31.7,27l0,0
+	l0,0L6,0.7c0,0-2.3-2-4.8,0.5c-2.4,2.5-0.5,4.9-0.5,4.9L21,27z"/>
+</svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+{% endblock %}

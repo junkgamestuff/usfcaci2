@@ -1,0 +1,86 @@
+{
+  "title": "Computer Science MS",
+  "headline": "Class and Practicum in the Beating Heart of the Tech World",
+  "description": "<p>The Master of Science in Computer Science (MSCS) <a href='#'>full-time</a> & part-time programs provides students with a broad background in software development and other core disciplines of computer science, ranging from systems, networking, and distributed programming to algorithms and theory.</p>",
+  "cta_title": {
+    "url": "#",
+    "title": "COMPUTER SCIENCE MS"
+  },
+  "bannerImage": {
+    "src": "https://placeimg.com/800/800/nature",
+    "alt": "Alt text for image"
+  },
+  "links": [
+    {
+      "title": "Full Time Program",
+      "url": "#"
+    },
+    {
+      "title": "Part Time Program",
+      "url": "#"
+    },
+    {
+      "title": "Masters Project",
+      "url": "#"
+    },
+    {
+      "title": "Class Profile",
+      "url": "#"
+    },
+    {
+      "title": "Faculty & Staff",
+      "url": "#"
+    },
+    {
+      "title": "Our Alumni",
+      "url": "#"
+    },
+    {
+      "title": "Careers",
+      "url": "#"
+    },
+    {
+      "title": "Tuition & Financial Aid",
+      "url": "#"
+    },
+    {
+      "title": "How to Apply",
+      "url": "#"
+    },
+    {
+      "title": "FAQ",
+      "url": "#"
+    },
+    {
+      "title": "Contact Us",
+      "url": "#"
+    }
+  ],
+  "buttons": [
+    {
+      "title": "REQUEST INFO",
+      "url": "#"
+    },
+    {
+      "title": "APPLY NOW",
+      "url": "#"
+    }
+  ],
+  "breadcrumbs": {
+    "homeURL": "/",
+    "items": [
+      {
+        "title": "Academics",
+        "href": "#REPLACE"
+      },
+      {
+        "title": "San Francisco Connection",
+        "href": "#REPLACE"
+      },
+      {
+        "title": "City as a Classroom",
+        "href": "#REPLACE"
+      }
+    ]
+  }
+}

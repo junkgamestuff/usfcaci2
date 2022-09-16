@@ -1,0 +1,11 @@
+{% extends "base-field" %}
+
+{% set name = "date" %}
+
+{% block content %}
+
+  <time datetime="{{ authored_date }}">
+    {{ date|raw }}
+  </time>
+
+{% endblock %}

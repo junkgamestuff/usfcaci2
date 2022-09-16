@@ -1,0 +1,48 @@
+{% extends "base-component" %}
+
+{% set name = "manual-cta-grid" %}
+
+{% block content %}
+
+  <div class="inner-wrapper">
+
+    {% if (title is not empty) or (description is not empty) %}
+      <div class="header-container">
+        {% if title is not empty %}
+
+          {% include "fields-section-title" with { title: title } %}
+
+        {% endif %}
+
+        {% if description is not empty %}
+
+          {% include "fields-description" with { description: description } %}
+
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% embed "base-field" with { name: "cta-grid", field_variant: 'default-theme' } %}
+
+      {% block content %}
+
+        {% for card in cards %}
+
+          {% include "components-manual-card" with {
+            image: card.image,
+            title: card.title,
+            link: card.link,
+            description: card.description,
+            hideCta: true,
+            linkTitle: true
+          } only %}
+
+        {% endfor %}
+
+      {% endblock content %}
+
+    {% endembed %}
+
+  </div>
+
+{% endblock %}

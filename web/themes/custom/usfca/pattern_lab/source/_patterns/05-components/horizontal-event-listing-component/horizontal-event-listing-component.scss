@@ -1,0 +1,98 @@
+$radius: 0;
+$date-color: $color-primary;
+
+.cc--horizontal-event-listing-component {
+  @include padding(null null rem(20));
+  @include margin(null null rem(20));
+  border-bottom: rem(1) solid $color-supernova;
+
+  @include mq($bp768) {
+    @include padding(null null rem(33));
+    @include margin(null null rem(32));
+    border-bottom: rem(2) solid $color-supernova;
+  }
+
+  @include mq($bp1024) {
+    @include padding(null null rem(30));
+    @include margin(null null rem(30));
+  }
+
+  .c--horizontal-event-listing-component {
+    @include mq($bp768) {
+      display: flex;
+    }
+  }
+
+  .text-container {
+    @include mq($bp768) {
+      @include padding(null cols(2, 31) null null);
+      width: cols(19, 31);
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(22) null null);
+    }
+  }
+
+  .image-container {
+    @include margin(rem(15) null null);
+
+    @include mq($bp768) {
+      @include margin(rem(0) null null);
+      width: cols(12, 31);
+    }
+  }
+
+  .f--date-string {
+    @extend %font-fira-sans-extra-condensed-semibold;
+    @include margin(null null rem(12));
+    @include font-size(16, 16);
+    color: $color-black;
+
+    @include mq($bp768) {
+      @include font-size(18, 18);
+      @include margin(null null rem(6));
+    }
+  }
+
+  .f--cta-title {
+    @include margin(null null rem(8));
+
+    @include mq($bp768) {
+      @include margin(null null rem(21));
+    }
+
+    a {
+      @include font-size(30, 30);
+      color: $color-sherpa-blue;
+
+      @include mq($bp768) {
+        @include font-size(36, 36);
+      }
+
+      @include hover {
+        color: $color-sherpa-blue;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .f--text {
+    @extend %font-fira-sans-extra-condensed-regular;
+    @include font-size(16, 24);
+
+    @include mq($bp768) {
+      @include margin(null null rem(6));
+      @include font-size(18, 18);
+    }
+  }
+
+  .f--time-string {
+    @extend %font-fira-sans-extra-condensed-regular;
+    @include font-size(16, 24);
+
+    @include mq($bp768) {
+      @include font-size(18, 18);
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{% extends "base-component" %}
+
+{% set name = "two-column-links" %}
+{% set container_element = 'section' %}
+
+{% block content %}
+
+<div class="inner-container">
+
+  {% if title is not empty %}
+    {% include "fields-section-title" with { title: title } only %}
+  {% endif %}
+
+  {% if description is not empty %}
+    {% include "fields-description" with { description: description } only %}
+  {% endif %}
+
+  <div class="columns-container">
+
+    {% set columnsNumber = 2 %}
+    {% set linksInColumn = (links | length / columnsNumber) | round %}
+    {% set j = 0 %}
+
+    {% for i in 0..columnsNumber-1 %}
+
+      <div class="column">
+
+        {% for link in links[j: linksInColumn] %}
+
+          {% include "fields-link" with { title: link.cta, href: link.href, isAlt: true } %}
+          {% set j = j + 1 %}
+
+        {% endfor %}
+
+      </div>
+
+      {% set i = i + linksInColumn %}
+
+    {% endfor %}
+
+  </div>
+
+</div>
+
+{% endblock %}

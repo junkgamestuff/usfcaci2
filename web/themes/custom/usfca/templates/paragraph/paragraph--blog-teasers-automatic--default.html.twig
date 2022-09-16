@@ -1,0 +1,44 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {% set title = fields.title %}
+
+  {% if fields.title_highlight %}
+    {% set title = title|replace({(fields.title_highlight): '<span class="highlight">' ~ fields.title_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% set cards = [] %}
+
+  {% for item in fields.views_reference.entities %}
+    {% set cards = cards | merge([{
+      title: item.fields.teaser_title ?? item.fields.title,
+      image: item.fields.teaser_image.uri ? {
+        src: item.fields.teaser_image.uri | image_style('16_9_637x359'),
+        alt: item.fields.teaser_image.alt,
+        render: drupal_image(item.fields.teaser_image.uri, '16_9_one_third', { alt: item.fields.teaser_image.alt }, responsive=true),
+      } : {
+        src: '/themes/custom/usfca/pattern_lab/source/images/placeholder-wide.png',
+        alt: 'Presentation only image for ' ~ item.fields.teaser_title ?? item.fields.title,
+      },
+      link: {
+        href: item.fields.link.url ?? item.url,
+      },
+      eyebrow: item.fields.blog_category.label,
+      publicationName: NULL,
+      publication: NULL,
+    }]) %}
+
+  {% endfor %}
+
+  {% include "components-article-cards" with {
+    title: title,
+    link: fields.link.url ? {
+      cta: fields.link.title,
+      href: fields.link.url,
+      ariaLabel: fields.link.attributes.aria_label ?? fields.link.title,
+    },
+    cards: cards,
+  } only %}
+
+{% endblock content %}

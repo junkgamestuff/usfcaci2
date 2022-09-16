@@ -1,0 +1,178 @@
+name: filterable-staff-view
+type: component
+markup:
+  content:
+    - type: container
+      class: text-container
+      content:
+        - type: field
+          name: section-title
+          with: title
+        - type: field
+          name: description
+          with: description
+    - type: component
+      name: filter-form
+      with:
+        title: 'null'
+        items: filterItems
+      condition: filterItems
+    - type: repeater
+      name: cards
+      for: card
+      in: cards
+      with: card
+      repeat:
+        type: component
+        name: staff-card
+        own: true
+        with:
+          image: image
+          title: title
+          affiliation: affiliation
+          email: email
+          phone: phone
+          description: description
+        markup:
+          content:
+            - type: field
+              name: image
+              with: image
+              condition: image
+            - type: container
+              class: "text-container"
+              content:
+                - type: field
+                  name: cta-title
+                  with: title
+                - type: field
+                  name: affiliation
+                  with: affiliation
+                  condition: affiliation
+                - type: field
+                  name: email
+                  with: email
+                  condition: email
+                - type: field
+                  name: phone
+                  with: phone
+                  condition: phone
+                - type: field
+                  name: description
+                  with: description
+                  condition: description
+data:
+  title: "Meet our Counselors"
+  description: "<p>Lorem ipsum dolor sit amet.</p>"
+  filterItems:
+    - type: "select"
+      options:
+        - value: "all"
+          label: "Specializations"
+        - value: "first"
+          label: "Option 1"
+        - value: "second"
+          label: "Option 2"
+        - value: "third"
+          label: "Option 3"
+    - type: "select"
+      options:
+        - value: "all"
+          label: "Another Filter"
+        - value: "first"
+          label: "Option 1"
+        - value: "second"
+          label: "Option 2"
+        - value: "third"
+          label: "Option 3"
+    - type: "select"
+      options:
+        - value: "all"
+          label: "Third Filter"
+        - value: "first"
+          label: "Option 1"
+        - value: "second"
+          label: "Option 2"
+        - value: "third"
+          label: "Option 3"
+  cards:
+    - image:
+        src: "/images/1_1_300x300.png"
+        alt: "staff image"
+      title: "Firstname Last"
+      affiliation: "Title or Affiliations, or Maybe Even a Line of Copy"
+      email: "name@umass.edu"
+      phone: "555-555-5555"
+      description: "<p><em>Massachusetts (Barnstable, Bristol, Dukes, Nantucket, Plymouth and Suffolk Country), Rhode Island, New York (Long Island)</em></p>"
+    - image:
+        src: "/images/1_1_300x300.png"
+        alt: "staff image"
+      title: "Firstname Last"
+      affiliation: "Title or Affiliations, or Maybe Even a Line of Copy"
+      email: "name@umass.edu"
+      phone: "555-555-5555"
+      description: "<p><em>Massachusetts (Barnstable, Bristol, Dukes, Nantucket, Plymouth and Suffolk Country), Rhode Island, New York (Long Island)</em></p>"
+    - image:
+        src: "/images/1_1_300x300.png"
+        alt: "staff image"
+      title: "Firstname Last"
+      affiliation: "Title or Affiliations, or Maybe Even a Line of Copy"
+      email: "name@umass.edu"
+      phone: "555-555-5555"
+      description: "<p><em>Massachusetts (Barnstable, Bristol, Dukes, Nantucket, Plymouth and Suffolk Country), Rhode Island, New York (Long Island)</em></p>"
+    - image:
+        src: "/images/1_1_300x300.png"
+        alt: "staff image"
+      title: "Firstname Last"
+      affiliation: "Title or Affiliations, or Maybe Even a Line of Copy"
+      email: "name@umass.edu"
+      phone: "555-555-5555"
+      description: "<p><em>Massachusetts (Barnstable, Bristol, Dukes, Nantucket, Plymouth and Suffolk Country), Rhode Island, New York (Long Island)</em></p>"
+    - image:
+        src: "/images/1_1_300x300.png"
+        alt: "staff image"
+      title: "Firstname Last"
+      affiliation: "Title or Affiliations, or Maybe Even a Line of Copy"
+      email: "name@umass.edu"
+      phone: "555-555-5555"
+      description: "<p><em>Massachusetts (Barnstable, Bristol, Dukes, Nantucket, Plymouth and Suffolk Country), Rhode Island, New York (Long Island)</em></p>"
+    - image:
+        src: "/images/1_1_300x300.png"
+        alt: "staff image"
+      title: "Firstname Last"
+      affiliation: "Title or Affiliations, or Maybe Even a Line of Copy"
+      email: "name@umass.edu"
+      phone: "555-555-5555"
+      description: "<p><em>Massachusetts (Barnstable, Bristol, Dukes, Nantucket, Plymouth and Suffolk Country), Rhode Island, New York (Long Island)</em></p>"
+    - image:
+        src: "/images/1_1_300x300.png"
+        alt: "staff image"
+      title: "Firstname Last"
+      affiliation: "Title or Affiliations, or Maybe Even a Line of Copy"
+      email: "name@umass.edu"
+      phone: "555-555-5555"
+      description: "<p><em>Massachusetts (Barnstable, Bristol, Dukes, Nantucket, Plymouth and Suffolk Country), Rhode Island, New York (Long Island)</em></p>"
+    - image:
+        src: "/images/1_1_300x300.png"
+        alt: "staff image"
+      title: "Firstname Last"
+      affiliation: "Title or Affiliations, or Maybe Even a Line of Copy"
+      email: "name@umass.edu"
+      phone: "555-555-5555"
+      description: "<p><em>Massachusetts (Barnstable, Bristol, Dukes, Nantucket, Plymouth and Suffolk Country), Rhode Island, New York (Long Island)</em></p>"
+    - image:
+        src: "/images/1_1_300x300.png"
+        alt: "staff image"
+      title: "Firstname Last"
+      affiliation: "Title or Affiliations, or Maybe Even a Line of Copy"
+      email: "name@umass.edu"
+      phone: "555-555-5555"
+      description: "<p><em>Massachusetts (Barnstable, Bristol, Dukes, Nantucket, Plymouth and Suffolk Country), Rhode Island, New York (Long Island)</em></p>"
+    - image:
+        src: "/images/1_1_300x300.png"
+        alt: "staff image"
+      title: "Firstname Last"
+      affiliation: "Title or Affiliations, or Maybe Even a Line of Copy"
+      email: "name@umass.edu"
+      phone: "555-555-5555"
+      description: "<p><em>Massachusetts (Barnstable, Bristol, Dukes, Nantucket, Plymouth and Suffolk Country), Rhode Island, New York (Long Island)</em></p>"

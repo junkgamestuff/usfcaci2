@@ -1,0 +1,40 @@
+name: USFCA Base Theme
+type: theme
+description: USFCA Base Theme
+package: USFCA
+version: 1.x
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: stable
+libraries:
+  - usfca/behaviors-bootstrap
+  - usfca/pattern-lab-styling
+  - usfca/overrides
+  - usfca/lazy_sizes
+  - usfca/images_loaded
+  - usfca/lazy_config
+  - usfca/swiper
+  - usfca/what-input
+  - usfca/ally
+  - usfca/formstone
+  - usfca/formstone_mediaquery
+  - usfca/lity
+  - usfca/hover_intent
+  - usfca/header_with_search
+  - usfca/rich_text
+  - usfca/acalog_global
+  - usfca/youvisit
+  - usfca/siteimprove
+regions:
+  header: 'Header'
+  navigation: 'Navigation'
+  content: 'Content'
+  content_extra: 'Content Extra'
+  footer_branding: 'Footer - Branding'
+  footer_menu: 'Footer - Menu'
+  footer_info: 'Footer - Info'
+  hidden: 'Hidden'
+stylesheets-remove:
+  - 'core/themes/stable/css/system/components/align.module.css'
+ckeditor_stylesheets:
+  - pattern_lab/source/css/style.css

@@ -1,0 +1,39 @@
+name: gallery
+type: component
+markup:
+  content:
+    - type: field
+      name: section-title
+      with: title
+      condition: title
+    - type: repeater
+      for: image
+      in: images
+      swiper: true
+      repeat:
+        type: component
+        name: gallery-slide
+        own: true
+        markup:
+          content:
+            - type: field
+              name: image
+              with: image
+        with: image
+data:
+  title: "Image Gallery"
+  images:
+    - src: "/images/16_9_1600x900.png"
+      alt: "alt 1"
+      caption: "Captions, etc, for this slide in the gallery. This content changes with every slide."
+    - src: "/images/16_9_1600x900.png"
+      alt: "alt 1"
+      caption: "<p>With or without &lt;p&gt; tag.</p>"
+    - src: "/images/16_9_1600x900.png"
+      alt: "alt 2"
+      caption: "Slide 3."
+    - src: "/images/16_9_1600x900.png"
+      alt: "no caption"
+    - src: "/images/16_9_1600x900.png"
+      alt: "alt 4"
+      caption: "Captions, etc, for this slide in the gallery. This content changes with every slide."

@@ -1,0 +1,137 @@
+// The Color of the H1 in the basic header
+$color-title: $color-black;
+
+.cc--basic-header {
+  @include maxwidth;
+  background-color: $color-white;
+
+  &.notification {
+    background-color: $color-chestnut;
+
+    .c--basic-header {
+      h1 {
+        color: $color-white !important;
+      }
+    }
+  }
+
+  .c--basic-header {
+    @include padding(rem(22) null rem(38));
+
+    @include mq($bp768) {
+      @include padding(rem(26) null rem(54));
+    }
+
+    @include mq($bp1024) {
+      @include padding(rem(161) null rem(54));
+    }
+
+    .flex-container {
+      @include padding(null cols(3));
+
+      @include mq($bp768) {
+        @include padding(null cols(8));
+      }
+
+      .header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .chevron {
+          @include margin(null null rem(15) null);
+
+          @include mq($bp768) {
+            @include margin(null null rem(20) null);
+          }
+        }
+
+        .f--page-title {
+          @include margin(0);
+
+          h1 {
+            @include padding(0);
+            @include font-size(30, 30);
+            color: $color-title;
+            letter-spacing: rem(-.5);
+            text-align: center;
+
+            @include mq($bp768) {
+              @include font-size(36, 42);
+              letter-spacing: 0;
+            }
+
+            @include mq($bp1024) {
+              @include font-size(48, 54);
+            }
+
+            .highlight {
+              @extend %font-fira-sans-extra-condensed-semibold;
+              text-transform: uppercase;
+            }
+          }
+        }
+
+        .f--description {
+          @include margin(rem(15) null null);
+          text-align: center;
+
+          @include mq($bp768) {
+            @include margin(rem(20) null null);
+          }
+        }
+      }
+    }
+  }
+
+  &.event {
+    max-width: 100%;
+    background-color: $color-sherpa-blue;
+
+    .c--basic-header {
+      @include maxwidth;
+      @include padding(rem(22) null rem(70));
+
+      @include mq($bp768) {
+        @include padding(rem(26) null rem(54));
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(25) null rem(100));
+      }
+
+      .flex-container {
+        @include padding(null cols(3));
+
+        @include mq($bp768) {
+          @include padding(null cols(2) null cols(13));
+        }
+
+        @include mq($bp1024) {
+          @include padding(null cols(3) null cols(13));
+        }
+
+        .header-container {
+          display: block;
+
+          .f--page-title {
+            h1 {
+              color: $color-white;
+              text-align: left;
+              text-transform: none;
+
+              @include mq($bp768) {
+                @include font-size(36, 42);
+              }
+
+              @include mq($bp1024) {
+                @include font-size(48, 54);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

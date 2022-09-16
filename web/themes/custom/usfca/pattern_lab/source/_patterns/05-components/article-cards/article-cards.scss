@@ -1,0 +1,62 @@
+.cc--article-cards {
+  @include padding(rem(34) null null);
+
+  @include mq($bp768) {
+    background-size: rem(384) auto;
+  }
+
+  @include mq($bp1024) {
+    @include padding(rem(88) null null);
+    background-size: auto;
+  }
+
+  .c--article-cards {
+    @include maxwidth;
+
+    .inner-wrapper {
+      @include padding(null cols(3));
+
+      @include mq($bp768) {
+        @include padding(null cols(2));
+      }
+    }
+
+    .f--field-components {
+      @include mq($bp768) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  .f--section-title {
+    text-align: center;
+
+    h2 {
+      @include margin(null null rem(28));
+      @include font-size(36, 36);
+
+      @include mq($bp768) {
+        @include margin(null null rem(42));
+        @include font-size(48, 59);
+        letter-spacing: rem(-.4);
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null rem(50));
+      }
+    }
+  }
+
+  .cc--article-card {
+    @include mq($bp768) {
+      @include margin(null cols(1, 44) null null);
+      flex: 0 0 cols(14, 44);
+      width: cols(14, 44);
+
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

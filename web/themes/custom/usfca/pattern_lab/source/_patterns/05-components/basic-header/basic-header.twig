@@ -1,0 +1,30 @@
+{% extends "base-component" %}
+
+{% set name = "basic-header" %}
+{% set container_element = 'div' %}
+
+{% block content %}
+
+  <div class="flex-container">
+    <div class="flex-container-inner">
+      <div class="header-container">
+
+        {% if title %}
+
+          {% include "fields-page-title" with {
+            title: title
+          } only %}
+
+        {% endif %}
+
+        {% if description %}
+          {% include "fields-description" with {
+            description: description
+          } only %}
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

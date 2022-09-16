@@ -1,0 +1,33 @@
+{% extends "base-component" %}
+
+{% set name = "authors-list" %}
+{% set container_element = 'section' %}
+{% set container_aria_label = "Authors List" %}
+
+{% block content %}
+
+  <div class="section-title-wrapper"><h6>{{ title }}</h6></div>
+
+  <div class="inner-wrapper">
+
+    {% embed "base-field" with { name: "field-components" } %}
+
+      {% block content %}
+
+        {% for card in cards %}
+
+          {% include "components-author-card" with {
+            image: card.image,
+            title: card.title,
+            link: card.link
+          } only %}
+
+        {% endfor %}
+
+      {% endblock content %}
+
+    {% endembed %}
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,128 @@
+.cc--notification-banner {
+  background-color: $color-chestnut;
+
+  .mobile-menu-open & {
+    display: none;
+  }
+
+  .c--notification-banner {
+    @include maxwidth;
+
+    .notification-banner-inner {
+      @include padding(rem(15) cols(3) rem(30));
+
+      @include mq($bp768) {
+        @include padding(rem(30) cols(2));
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(50) null);
+      }
+    }
+
+    .left {
+
+      @include mq($bp768) {
+        width: cols(13, 44);
+      }
+
+      @include mq($bp1024) {
+        width: cols(12, 44);
+      }
+    }
+
+    .right {
+
+      @include mq($bp768) {
+        width: cols(29, 44);
+      }
+
+      @include mq($bp1024) {
+        display: flex;
+        justify-content: space-between;
+        width: cols(30, 44);
+      }
+    }
+
+    .notification-title {
+      @extend %font-fira-sans-extra-condensed-semibold;
+      @include font-size(24, 24);
+      color: $color-white;
+      text-transform: uppercase;
+
+      @include mq($bp768) {
+        @include font-size(30, 36);
+      }
+
+      @include mq($bp1024) {
+        @include font-size(36, 36);
+      }
+    }
+
+    .notification-timestamp {
+      @extend %font-ibm-plex-serif-regular;
+      @include margin(rem(18) null null);
+      @include font-size(14, 18);
+      color: $color-white;
+
+      @include mq($bp1024) {
+        @include font-size(18, 24);
+      }
+
+      .f--date-string {
+        @extend %font-ibm-plex-serif-bold;
+      }
+    }
+
+    .f--button-link {
+      @include mq($bp1024max) {
+        @include margin(rem(20) null null);
+      }
+
+      @include mq($bp1024) {
+        @include margin(null null null cols(2, 30));
+      }
+
+      a {
+        @include button($white: true);
+        color: $color-white;
+
+        @include mq($bp1024) {
+          flex-basis: cols(7, 30);
+        }
+      }
+    }
+
+    .f--wysiwyg {
+      @include mq($bp768max) {
+        @include margin(rem(20) null null);
+      }
+
+      @include mq($bp1024) {
+        flex-basis: cols(20, 30);
+        flex-grow: 1;
+      }
+
+      p {
+        @extend %font-ibm-plex-serif-regular;
+        @include font-size(14, 18);
+        color: $color-white;
+
+        @include mq($bp1024) {
+          @include font-size(18, 26);
+        }
+
+        a {
+          color: $color-white;
+          text-decoration: underline;
+
+          @include hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

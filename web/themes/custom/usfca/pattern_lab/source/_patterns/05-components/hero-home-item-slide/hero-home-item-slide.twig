@@ -1,0 +1,48 @@
+{% extends "base-component" %}
+
+{% set name = "hero-home-item-slide" %}
+
+{% block content %}
+  <div class="image-video">
+    {% if videoSrc %}
+      {% include "fields-ambient-video" with { videoSrc: videoSrc } only %}
+      {% include "fields-image" with { image: image} only %}
+    {% else %}
+      {% include "fields-image" with { image: image } only %}
+    {% endif %}
+  </div>
+
+  <div class="text-container-wrapper">
+    <div class="text-container">
+      <div class="text-container-inner">
+        <div class="arrow">
+          <svg width="33px" height="55px" viewBox="0 0 33 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>USF_arrow_icon_wht</title><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-783.000000, -166.000000)" fill="#FFFFFF"><g><g transform="translate(783.000000, 166.000000)"><path d="M10.833121,27.4945976 L31.4980606,6.2992598 C31.4980606,6.2992598 33.4819844,3.92165751 30.9675197,1.29307545 C28.5371196,-1.25503982 26.0880384,0.748966622 26.0880384,0.748966622 L0.00186810157,27.4831023 L0.0112086094,27.4926817 L0,27.5060928 L26.0843022,54.2363967 C26.0843022,54.2363967 28.4082206,56.2729731 30.9675197,53.6942038 C33.455831,51.1959013 31.4980606,48.6822718 31.4980606,48.6822718 L10.833121,27.4945976 Z"></path></g></g></g></g></svg>
+        </div>
+
+        {% if title %}
+          {% include "fields-section-title" with {
+            title: title,
+            url: url
+          } %}
+        {% endif %}
+
+        <div class="content-wrapper">
+          {% include "fields-description" with {
+            description: description
+          } only %}
+
+          {% if link.href is not empty %}
+            {% include "fields-link" with {
+              href: link.href,
+              cta: link.cta
+            } only %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% if videoSrc %}
+      {% include "components-video-controls" %}
+    {% endif %}
+  </div>
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{
+  "title": "All Majors and Minors",
+  "hideTitle": false,
+  "accordions": [
+    {
+      "title": "Accounting",
+      "programType": "Major",
+      "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p><ol><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>Aliquam in varius purus. Nullam ut sodales ante.<ol><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.</li><li>Nulla convallis ante elit, at consequat ipsum ultricies ut.</li><li>Vivamus gravida tellus ut lacinia feugiat.<ol><li>Aliquam in varius purus.</li><li>Nullam ut sodales ante.</li></ol></li></ol></li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>Aliquam in varius purus. Nullam ut sodales ante.</li><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.</li></ol><ul><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>Aliquam in varius purus. Nullam ut sodales ante.<ul><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.</li><li>Nulla convallis ante elit, at consequat ipsum ultricies ut.</li><li>Vivamus gravida tellus ut lacinia feugiat.<ul><li>Aliquam in varius purus.</li><li>Nullam ut sodales ante.</li></ul></li></ul></li><li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li>Aliquam in varius purus. Nullam ut sodales ante.</li><li>Fusce justo nisi, suscipit a lacus et, posuere sagittis ex.</li></ul><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis tortor bibendum, feugiat tellus sit amet, bibendum libero. Donec congue lectus non velit tristique pharetra. Praesent vulputate, libero at dictum consectetur, ligula sem egestas turpis, vitae consequat risus lacus vitae neque.</p>",
+      "link": {
+        "cta": "LEARN MORE",
+        "url": "#"
+      }
+    },
+    {
+      "title": "Accounting, Public–CPA Preparation",
+      "programType": "Major, Minor",
+      "markup": "<p>Balancing human needs with the preservation of a functional biosphere is an important responsibility for our future. To minimize human impact and move toward more sustainable practices, we must understand the causes of environmental change and the complex interactions within ecosystems, and design effective strategies for restoration. Our curriculum covers environmental monitoring, assessment, regulations, policy implementation, and science application in restoration activities.</p>",
+      "link": {
+        "cta": "LEARN MORE",
+        "url": "#"
+      }
+    },
+    {
+      "title": "Acting for Film, Television, Voice-overs, and Commercials",
+      "programType": "Major",
+      "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p>",
+      "link": {
+        "cta": "LEARN MORE",
+        "url": "#"
+      }
+    },
+    {
+      "title": "Acting",
+      "programType": "Major, Minor",
+      "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p>",
+      "link": {
+        "cta": "LEARN MORE",
+        "url": "#"
+      }
+    },
+    {
+      "title": "Adolescent Education",
+      "programType": "Major",
+      "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p>",
+      "link": {
+        "cta": "LEARN MORE",
+        "url": "#"
+      }
+    },
+    {
+      "title": "American Studies",
+      "programType": "Major",
+      "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p>",
+      "link": {
+        "cta": "LEARN MORE",
+        "url": "#"
+      }
+    },
+    {
+      "title": "Art History",
+      "programType": "Major, Minor",
+      "markup": "<p>Accounting gives you a thorough understanding of how financial information is used by management, the government, and the public. This Intro text now should be a lttle more general about why to study this subject, rather than the benefits of a particular degree  (which will be covered on the program page.)</p>",
+      "link": {
+        "cta": "LEARN MORE",
+        "url": "#"
+      }
+    }
+  ],
+  "link": {
+    "href": "https://www.example.com/",
+    "cta": "More Events",
+    "ariaLabel": "An Example Aria Label for CTA Link"
+  }
+}

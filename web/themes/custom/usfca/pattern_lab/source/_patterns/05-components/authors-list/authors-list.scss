@@ -1,0 +1,89 @@
+$section-color: $color-white;
+$title-color: $color-secondary;
+$border-color: $color-orange;
+$radius: 0;
+
+.cc--authors-list {
+  @include maxwidth;
+  @include margin(null null rem(60));
+
+  .c--authors-list {
+    @include padding(null cols(3));
+
+    @include mq($bp768) {
+      @include padding(null cols(2));
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(8));
+    }
+  }
+
+  img {
+    border-radius: $radius;
+  }
+
+  .inner-wrapper {
+    @include padding(rem(30) rem(50) rem(30));
+    border: rem(1) solid $border-color;
+    border-radius: $radius;
+    background-color: $section-color;
+
+    @include mq($bp768) {
+      @include padding(rem(40) cols(2, 44) null);
+    }
+
+    @include mq($bp1024) {
+      @include padding(null cols(2, 32) null);
+    }
+  }
+
+  .section-title-wrapper {
+    transform: translateY(50%);
+    line-height: 1;
+    text-align: center;
+
+    h6 {
+      @extend %font-fira-sans-extra-condensed-bold;
+      @include padding(rem(10) rem(40));
+      display: inline-block;
+      background-color: $color-white;
+      color: $title-color;
+      text-transform: uppercase;
+    }
+  }
+
+  .f--field-components {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    .cc--authors-card {
+      @include mq($bp768max) {
+        ~ .cc--authors-card {
+          @include margin(rem(30) null null);
+        }
+      }
+
+      @include mq($bp768) {
+        @include margin(null cols(2, 40) null null);
+        flex: 0 0 cols(12, 40);
+        width: cols(12, 40);
+      }
+
+      @include mq($bp1024) {
+        @include margin(null cols(2, 28) null null);
+        flex: 0 0 cols(8, 28);
+        width: cols(8, 28);
+      }
+
+      &:nth-child(3n) {
+        @include margin(null 0 null null);
+      }
+
+      &:nth-child(n + 4) {
+        @include margin(rem(40) null null);
+      }
+    }
+  }
+}

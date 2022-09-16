@@ -1,0 +1,28 @@
+{% extends "base-component" %}
+
+{% set name = "hero-home-slider" %}
+
+{% block content %}
+
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      {% for slide in slides %}
+        {% include 'components-hero-home-item-slide' with {
+          align: slide.align,
+          title: slide.title,
+          url: slide.link.url,
+          link: slide.link,
+          description: slide.description,
+          image: slide.image,
+          videoSrc: slide.videoSrc,
+          variant: 'swiper-slide'
+        } only %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="swiper-controls">
+    <div class="swiper-pagination"></div>
+  </div>
+
+{% endblock %}

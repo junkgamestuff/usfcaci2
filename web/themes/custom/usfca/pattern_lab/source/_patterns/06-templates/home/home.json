@@ -1,0 +1,45 @@
+{
+  "bodyClass": "home-page transparent-header",
+  "pageTitle": "Homepage Title",
+  "topLayouts": [
+    {
+      "name": "full",
+      "content": [
+        {
+          "type": "hero-home-slider"
+        }
+      ]
+    }
+  ],
+  "layouts": [
+    {
+      "name": "full",
+      "content": [
+        { "type": "vertical-tabbed-carousel" },
+        { "type": "spacer" },
+        { "type": "text-and-link-listing" },
+        { "type": "manual-cards" },
+        { "type": "spacer" },
+        { "type": "quote-and-cta" },
+        { "type": "two-column-links" },
+        { "type": "spacer" },
+        { "type": "text-and-images-mosaic" },
+        { "type": "spacer" },
+        { "type": "stats" },
+        { "type": "spacer" },
+        { "type": "stats" },
+        { "type": "spacer" },
+        { "type": "map-with-pins" },
+        { "type": "full-width-cta" },
+        { "type": "spacer" },
+        { "type": "featured-articles" },
+        { "type": "spacer" },
+        { "type": "event-cards" },
+        { "type": "spacer" },
+        { "type": "social-media-feed" },
+        { "type": "spacer" }
+      ]
+    }
+  ],
+  "bottomLayouts": null
+}

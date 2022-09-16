@@ -1,0 +1,222 @@
+$sidebar-bg-color: $color-primary;
+
+.cc--vertical-tabbed-carousel-slide {
+  .c--vertical-tabbed-carousel-slide {
+    position: relative;
+    height: 100%;
+
+    .tab-title {
+      display: none;
+    }
+
+    .f--image {
+      position: relative;
+      height: 100%;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background: linear-gradient(to top, rgba($color-black, .6) 0, rgba($color-black, 0) 100%);
+        content: '';
+      }
+    }
+
+    .text-container {
+      @include mq($bp768) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    .text-container-inner {
+      @include padding(rem(23) cols(4) rem(50));
+
+      @include mq($bp768) {
+        @include padding(rem(25) cols(2, 44) rem(50));
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @include mq($bp1024) {
+        @include padding(rem(35) cols(1, 30) rem(55) cols(3, 30));
+      }
+    }
+
+    .tab-caption {
+      @extend %font-fira-sans-extra-condensed-regular;
+      @include font-size(16, 25);
+      color: $color-white;
+      text-transform: uppercase;
+
+      &::after {
+        @extend %font-fira-sans-extra-condensed-regular;
+        @include margin(null rem(5));
+        content: '/';
+      }
+    }
+
+    .f--description {
+      @extend %font-ibm-plex-serif-regular;
+
+      @include mq($bp768max) {
+        text-align: center;
+      }
+
+      @include mq($bp768) {
+        flex: 0 1 cols(26, 40);
+      }
+
+      @include mq($bp1024) {
+        flex: 0 1 cols(17, 26);
+      }
+
+      p {
+        @include margin(null null rem(4));
+        @include font-size(14, 18);
+        display: inline;
+        color: $color-black;
+
+        @include mq($bp768) {
+          @include font-size(16, 23);
+          color: $color-white;
+
+          &:last-child {
+            @include margin(null null 0);
+          }
+        }
+
+        @include mq($bp1024) {
+          @include font-size(16, 24);
+        }
+
+        a {
+          color: $color-black;
+          font-family: inherit;
+          font-size: inherit;
+          line-height: inherit;
+
+          @include mq($bp768) {
+            color: $color-white;
+          }
+        }
+
+      }
+
+      .card-topic {
+        @extend %font-ibm-plex-serif-bold;
+        color: $color-black;
+        text-transform: capitalize;
+
+        @include mq($bp768) {
+          color: $color-white;
+        }
+      }
+    }
+
+    ol {
+      @include mq($bp768max) {
+        @include padding(0 null);
+        @include margin(0 null);
+      }
+
+      &:last-child {
+        @include margin(null null 0 null);
+      }
+
+      li {
+        @include margin(null null rem(10) null);
+
+        @include mq($bp768max) {
+          display: inline-block;
+        }
+
+        &::before {
+          color: $color-white;
+        }
+      }
+    }
+
+    .f--link {
+      @include margin(rem(16) null null);
+      text-align: center;
+
+      @include mq($bp768) {
+        @include margin(rem(15) null null);
+        flex: 0 0 cols(11, 40);
+        text-align: left;
+      }
+
+      @include mq($bp1024) {
+        flex: 0 0 cols(7, 26);
+      }
+
+      a {
+        @extend %font-fira-sans-bold;
+        @include padding(null rem(24) null null);
+        @include font-size(18, 18);
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
+
+        @include mq($bp768) {
+          @include font-size(20, 20);
+          display: block;
+          color: $color-white;
+        }
+
+        @include mq($bp1024) {
+          @include padding(null cols(1, 7) null null);
+        }
+
+        svg {
+          @include margin(null null null rem(8));
+          display: inline-block;
+          width: rem(8);
+          height: rem(14);
+          transition: transform $transition-duration-fast $transition-easing-default;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          position: absolute;
+          top: 50%;
+          right: 0;
+
+          @include mq($bp768max) {
+            path {
+              fill: $color-black;
+            }
+          }
+
+          @include mq($bp768) {
+            @include margin(null null null rem(10));
+            width: rem(14);
+            height: rem(24);
+            vertical-align: top;
+          }
+        }
+
+        @include hover {
+          text-decoration: underline;
+
+          @include mq($bp768) {
+            color: $color-white;
+          }
+
+          svg {
+            transform: translate3d(rem(3), -50%, 0);
+            transition: transform $transition-duration-fast $transition-easing-default;
+          }
+        }
+      }
+    }
+  }
+}

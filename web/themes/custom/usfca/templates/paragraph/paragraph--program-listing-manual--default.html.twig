@@ -1,0 +1,40 @@
+{% extends 'paragraph.html.twig' %}
+
+{% block content %}
+
+  {{ attach_library('usfca/accordions') }}
+
+  {% set accordions = [] %}
+
+  {% for item in fields.programs %}
+    {% set degree_type_text = "" %}
+
+    {% if item.fields.degree_type is not empty %}
+      {% for dt in item.fields.degree_type %}
+        {% set degree_type_text = degree_type_text ~ (loop.index0 > 0 ? ", " : "") ~ dt.label %}
+      {% endfor %}
+    {% endif %}
+
+    {% set accordions = accordions | merge([{
+      title: item.fields.title,
+      programType: degree_type_text,
+      markup: item.fields.teaser_description,
+      link: {
+        'cta': 'Learn More',
+        url: item.url,
+        aria: 'Learn More<span class="visually-hidden"> about ' ~ item.fields.title ~ '</span>',
+      }
+    }]) %}
+  {% endfor %}
+
+  {% set title = fields.title %}
+  {% if fields.title_highlight %}
+    {% set title = title|replace({(fields.title_highlight): '<span class="highlight">' ~ fields.title_highlight ~ '</span>'}) %}
+  {% endif %}
+
+  {% include "components-program-listing" with {
+    title: title,
+    accordions: accordions,
+  } only %}
+
+{% endblock content %}

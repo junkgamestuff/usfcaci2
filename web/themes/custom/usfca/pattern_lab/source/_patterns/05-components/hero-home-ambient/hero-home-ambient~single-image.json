@@ -1,0 +1,16 @@
+{
+  "slides": [
+    {
+      
+      "title": "Dolor sint nisi laboris enim do amet incididunt ex sunt",
+      "image": {
+        "src": "https://placeimg.com/2400/1350/people",
+        "alt": "Slide Image"
+      },
+      "link": {
+        "url": "#"
+      },
+      "videoSrc": null
+    }
+  ]
+}
